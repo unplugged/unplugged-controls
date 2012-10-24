@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xc:unpHeader search="true" viewsButton="true" title="Employees"></xc:unpHeader>
+	<xc:unpViewsList></xc:unpViewsList>
+	<xc:unpFlatView insetData="false" detailColumn="DOB"
+		summaryColumn="Name" title="Employees" viewName="Employees"
+		xpageDoc="Employee.xsp">
+	</xc:unpFlatView>
+	<xc:unpFooter newDocTarget="Employee.xsp"></xc:unpFooter>
+</xp:view>

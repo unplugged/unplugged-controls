@@ -19,6 +19,9 @@
       <display-name>view</display-name>
       <property-extension>
         <required>true</required>
+        <designer-extension>
+          <editor>com.ibm.xsp.extlib.designer.tooling.editor.ViewNameEditor</editor>
+        </designer-extension>
       </property-extension>
       <description>Alias of Categorized View - first column only must be categorized </description>
     </property>

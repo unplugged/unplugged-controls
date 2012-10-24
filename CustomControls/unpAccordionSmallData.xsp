@@ -8,6 +8,15 @@
 	</xp:this.data>
 
 	<xp:this.resources>
+		<xp:metaData name="viewport"
+			content="width=device-width, initial-scale=2.3, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		</xp:metaData>
+		<xp:metaData name="apple-mobile-web-app-status-bar-style"
+			content="black-translucent">
+		</xp:metaData>
+		<xp:metaData name="apple-mobile-web-app-capable" content="yes">
+		</xp:metaData>
+
 		<xp:script src="/unpAccordianSmallData.js" clientSide="true"></xp:script>
 		<xp:styleSheet href="/unpAccordianSmallData.css"></xp:styleSheet>
 	</xp:this.resources>

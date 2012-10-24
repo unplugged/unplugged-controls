@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core">
 	<xp:this.resources>
+		<xp:metaData name="viewport"
+			content="width=device-width, initial-scale=2.3, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		</xp:metaData>
+		<xp:metaData name="apple-mobile-web-app-status-bar-style"
+			content="black-translucent">
+		</xp:metaData>
+		<xp:metaData name="apple-mobile-web-app-capable"
+			content="yes">
+		</xp:metaData>
 		<xp:styleSheet href="/unpHeaderFooter.css"></xp:styleSheet>
 	</xp:this.resources>
 	<xp:panel styleClass="footer black">

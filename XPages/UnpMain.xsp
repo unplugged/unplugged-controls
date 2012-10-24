@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:link escape="true" id="link4" value="/unpws.unp/" text="Workspace"
+		style="font-size:18pt">
+	</xp:link>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
 
 	<xp:link escape="true" text="Header / Footer" id="HeaderFooterLink"
-		value="/UnpDemoHeaderFooter.xsp"></xp:link>
+		value="/UnpDemoHeaderFooter.xsp" style="font-size:18pt"></xp:link>
 	<xp:br></xp:br>
 	<xp:br></xp:br>
 	<xp:link escape="true" text="FlatView" id="FlatViewLink"
-		value="/UnpDemoFlatView.xsp"></xp:link>
+		value="/UnpDemoFlatView.xsp" style="font-size:18pt"></xp:link>
 	<xp:br></xp:br>
 	<xp:br></xp:br>
 	<xp:link escape="true" text="Views List" id="link1"
-		value="/UnpDemoViewsList.xsp"></xp:link>
+		value="/UnpDemoViewsList.xsp" style="font-size:18pt"></xp:link>
 	<xp:br></xp:br>
 	<xp:br></xp:br>
 	<xp:link escape="true" text="Accordian Small Data Set" id="link2"
-		value="/UnpDemoAccordianSmallData.xsp">
+		value="/UnpDemoAccordianSmallData.xsp" style="font-size:18pt">
 	</xp:link>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:link escape="true" text="Demo of all widgets" id="link3"
+		style="font-size:18pt" value="/UnpDemoWidgets.xsp"></xp:link>
 </xp:view>

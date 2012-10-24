@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core"
 	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:link escape="true" text="Home" id="link1" value="/UnpMain.xsp">
+	</xp:link><xp:br></xp:br>
 
 	<xp:label value="Click Me To Show Menu" id="label1" styleClass="viewsButton">
 	</xp:label>
