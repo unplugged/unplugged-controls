@@ -11,4 +11,9 @@
 	<xp:br></xp:br>
 	<xp:link escape="true" text="Views List" id="link1"
 		value="/UnpDemoViewsList.xsp"></xp:link>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:link escape="true" text="Accordian Small Data Set" id="link2"
+		value="/UnpDemoAccordianSmallData.xsp">
+	</xp:link>
 </xp:view>
