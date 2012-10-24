@@ -45,7 +45,7 @@ The footer custom control *unpFooter* works for both phone and tablet screen res
 
 * * *
 
-## Teamstudio Unplugged View Custom Controls
+## View Controls
 
 ### Flat View Control
 -May not be required-
