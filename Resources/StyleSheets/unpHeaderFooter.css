@@ -164,6 +164,7 @@
 		margin-top: 18px;
 	}
 	.viewsButton {
+		display: none !important;
 		position: absolute;
 		width: 90px;
 		top: 9px;
@@ -251,7 +252,7 @@
 		margin-top: 12px;
 	}
 	.companyLogo {
-		display: block;
+		display: none;
 		margin: 12px 0px 0px 4px;
 	}
 	.footer {
@@ -262,16 +263,18 @@
 	}
 	.viewsButton {
 		position: absolute;
-		width: 90px;
-		top: 9px;
-		left: 10px;
-		height: 38px;
+		display: block;
+		top: 3px;
+		left: 5px;
+		width: 40px;
+		height: 26px;
+		padding: 10px 6px 0px 14px;
 		border-color: #0d0d0d rgba(0, 0, 0, 0.2) #0d0d0d
 			rgba(255, 255, 255, 0.2);
-		-webkit-border-radius: 6px;
-		background: url(left-arrow-trans-white.png) 7% 54% no-repeat,
-			-webkit-gradient(linear, 0 0, 0 100%, from(#767676),
-			color-stop(0.5, #595959), color-stop(0.5, #4f4f4f), to(#2f2f2f) );
+		background: url(backSmall.png) no-repeat;
+		-webkit-background-size: 100%;
+		color: white;
+		font-weight: bold;
 	}
 	.viewsButton a {
 		display: block;
@@ -287,7 +290,7 @@
 	.viewsButton span {
 		position: absolute;
 		font-weight: bold;
-		padding-top: 4px;
+		/*padding-top: 4px;*/
 	}
 	.backButton {
 		display: none;
