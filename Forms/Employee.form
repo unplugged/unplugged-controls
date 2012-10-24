@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE form SYSTEM 'xmlschemas/domino_8_5_3.dtd'>
+<form name='Employee' alias='Employee' xmlns='http://www.lotus.com/dxl' version='8.5'
+ maintenanceversion='3.0' replicaid='80257AA1002D0DF3' publicaccess='false'
+ designerversion='8.5.3' renderpassthrough='true'>
+<noteinfo noteid='1de' unid='68A9AC9F691F850380257AA10031435F' sequence='1'>
+<created><datetime dst='true'>20121024T095805,11+01</datetime></created>
+<modified><datetime dst='true'>20121024T095805,13+01</datetime></modified>
+<revised><datetime dst='true'>20121024T095805,12+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20121024T095805,13+01</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20121024T095805,13+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Richard Sharpe/O=Teamstudio</name><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><code event='querysave'><lotusscript
+>Sub Querysave(Source As Notesuidocument, Continue As Variant)
+	
+End Sub</lotusscript></code>
+<actionbar bgcolor='#f0f0f0' bordercolor='black'>
+<actionbuttonstyle bgcolor='#f0f0f0'/><font color='system'/><border style='solid'
+ width='0px 0px 1px'/>
+<action title='Save and Close' icon='10'><code event='click'><formula>@Command([FileSave]);@Command([FileCloseWindow])</formula></code></action></actionbar>
+<body><richtext>
+<pardef id='1'/>
+<par def='1'>Name: <field type='text' kind='editable' name='Name'/><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='7' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par>
+<par def='1'>D.O.B: <field type='datetime' kind='editable' name='Birthday'><datetimeformat
+ show='date' date='yearmonthday' fourdigityearfor21stcentury='true' zone='never'
+ dateformat='weekdaymonthdayyear' dayformat='twodigitday' monthformat='twodigitmonth'
+ yearformat='fourdigityear' weekdayformat='shortname' dateseparator1=' ' dateseparator2='/'
+ dateseparator3='/' timeseparator=':' preference='usersetting'/></field></par>
+<par def='1'>Email: <field type='text' kind='editable' name='email'/><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par>
+<par def='1'>Start Month:<field type='datetime' kind='editable' name='StartDate'><datetimeformat
+ show='date' date='yearmonth' fourdigityearfor21stcentury='true' zone='never'
+ dateformat='weekdaymonthdayyear' dayformat='twodigitday' monthformat='twodigitmonth'
+ yearformat='fourdigityear' weekdayformat='shortname' dateseparator1=' ' dateseparator2='/'
+ dateseparator3='/' timeseparator=':' preference='usersetting'/></field></par>
+<par def='1'>Manager:<field type='text' kind='editable' name='Manager'/><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par>
+<par def='1'>Dept:<field usenotesstyle='false' height='0.2500in' width='1in'
+ multiline='true' borderstyle='inset' lookupeachchar='false' lookupaddressonrefresh='false'
+ type='keyword' kind='editable' name='Dept'><keywords helperbutton='false'
+ columns='1' ui='combobox'><textlist><text>Accounts</text><text>Board</text><text
+>IT</text><text>Marketing</text><text>Sales</text><text>Snr Mgt</text></textlist></keywords></field></par>
+<par def='1'>Countries Visited: <field type='text' allowmultivalues='true'
+ kind='editable' name='Countries' listinputseparators='semicolon' listdisplayseparator='semicolon'/><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par>
+<par def='1'><field type='text' kind='computed' name='DispBirthday'><code
+ event='defaultvalue'><formula>@Text(@Year(Birthday) )+ "-" + @Right("0" + @Text(@Month(Birthday));2)+ "-" +  @Right("0" + @Text(@Day(Birthday));2)</formula></code></field><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par>
+<par def='1'>Description:<field type='richtext' kind='editable' name='Description'/><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAEAAAA=
+</compositedata></par>
+<par def='1'>Additional Desc:<field type='text' kind='editable' name='Add_Desc'/><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par>
+<par def='1'><run><font color='red'/><field type='text' kind='computed' name='Desc_Text'><code
+ event='defaultvalue'><formula>@Abstract([TextOnly];512;" ";"Description")</formula></code></field></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par>
+<par def='1'/></richtext></body>
+<item name='$$ScriptName' summary='false' sign='true'><text>Employee</text></item></form>
+

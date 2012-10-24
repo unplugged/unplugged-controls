@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:link escape="true" text="Header / Footer" id="HeaderFooterLink"
+		value="/UnpDemoHeaderFooter.xsp"></xp:link>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:link escape="true" text="FlatView" id="FlatViewLink"
+		value="/UnpDemoFlatView.xsp"></xp:link>
+</xp:view>
