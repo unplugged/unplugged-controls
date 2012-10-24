@@ -7,4 +7,8 @@
 	<xp:br></xp:br>
 	<xp:link escape="true" text="FlatView" id="FlatViewLink"
 		value="/UnpDemoFlatView.xsp"></xp:link>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:link escape="true" text="Views List" id="link1"
+		value="/UnpDemoViewsList.xsp"></xp:link>
 </xp:view>

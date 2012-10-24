@@ -1,0 +1,57 @@
+#menuPane {
+  z-index:11;
+  height: 100%;
+  border-right: 1px solid #999999;
+  background:rgb(59,59,59);
+}
+
+.icon{
+  float:right;
+  padding-right:30px;
+}
+
+
+#navScrollArea ul{
+  padding: 0px;
+  margin: 0px;
+  
+}
+
+#navScrollArea ul li{
+  border-bottom: 1px solid #999999;
+  color: #222222;
+  display:block;
+  height:40px;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 24px 0px 10px 20px;
+  text-decoration:none;
+  -webkit-tap-highlight-color:blue;
+}
+
+@media screen and (min-width: 1001px) {
+  #menuPane{
+    width:30%;
+  }
+}
+
+@media screen and (min-width: 701px) {
+  #menuPane {
+    position:absolute;
+    left: -700px;
+    display:block;
+    width:30%;
+    margin-top:60px;
+  	margin-bottom: 50px;
+  }	
+}
+
+@media screen and (max-width: 700px) {
+  #menuPane {
+    position:absolute;
+    left: -700px;
+    display:block;
+    width:100%;
+    margin-bottom: 70px;
+  }	
+}

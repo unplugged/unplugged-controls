@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+  <faces-config-extension>
+    <namespace-uri>http://www.ibm.com/xsp/custom</namespace-uri>
+    <default-prefix>xc</default-prefix>
+  </faces-config-extension>
+  <composite-component>
+    <component-type>unpViewsList</component-type>
+    <composite-name>unpViewsList</composite-name>
+    <composite-file>/unpViewsList.xsp</composite-file>
+    <composite-extension>
+      <designer-extension>
+        <in-palette>true</in-palette>
+      </designer-extension>
+    </composite-extension>
+    <property>
+      <property-name>menuItem</property-name>
+      <property-class>java.util.Collection</property-class>
+      <display-name>Menu list item</display-name>
+      <property-extension>
+        <property-item-class>string</property-item-class>
+        <collection-property>true</collection-property>
+        <designer-extension>
+          <editor/>
+        </designer-extension>
+      </property-extension>
+      <description>Give menu item name for view list and taget XPage name to produce the results, separated by a comma. E.g:&#xd;
+By Date, docsByDate.xsp</description>
+    </property>
+  </composite-component>
+</faces-config>
