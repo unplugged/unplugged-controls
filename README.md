@@ -1,6 +1,3 @@
-UnpluggedCustomControlsLibrary
-==============================
-
 Teamstudio Unplugged Header and Footer Custom Controls
 ============
 
@@ -48,6 +45,7 @@ Tablet Interface
   * **Sync** button (with a larger, green sync icon, like the one we use at the top left of the Unplugged workspace) is always bottom left, and triggers a sync.
   * **New Form** button (same appearance as "New email" button in iOS Mail template) is always bottom right, and opens up a blank form in edit mode with same data structure as the forms items contained in the View above the Footer bar.
 
+* * *
 
 Teamstudio Unplugged View Custom Controls
 ============
@@ -69,3 +67,23 @@ Individual View Categories can be expanded and collapsed with a server round tri
 Views Slide-In
 ============
 Tap on the button on the top left of the Header Bar and a panel showing all the available Views slides in from the left.
+
+Form controls
+============
+  * Form viewer - read mode
+  * Form viewer - edit mode
+
+Search controls
+============
+  * Search on Screen control
+Search function that searches data within the currently displayed screen.
+  * Search Local Database
+Search function that searches data on the local Domino server
+  * Search Remote Database
+Search function that goes off and searches on the full remote Domino database.
+
+Dialog box
+============
+
+SwipeView photo carousel
+============
