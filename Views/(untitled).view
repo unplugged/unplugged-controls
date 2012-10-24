@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE view SYSTEM 'xmlschemas/domino_8_5_3.dtd'>
+<view xmlns='http://www.lotus.com/dxl' version='8.5' maintenanceversion='3.0'
+ replicaid='80257AA1002D0DF3' showinmenu='true' publicaccess='false' default='true'
+ noviewformat='true'>
+<noteinfo noteid='116' unid='E6C01AEC0808320680257AA1002D0DF4' sequence='1'>
+<created><datetime dst='true'>20121024T091206,92+01</datetime></created>
+<modified><datetime dst='true'>20121024T091206,94+01</datetime></modified>
+<revised><datetime dst='true'>20121024T091206,93+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20121024T091206,94+01</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20121024T091206,94+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby><code event='selection'><formula
+>SELECT @All</formula></code>
+<item name='$FormulaClass'><text>1</text></item></view>
+
