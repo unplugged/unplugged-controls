@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:this.resources>
+		<xp:styleSheet href="/unpHeaderFooter.css"></xp:styleSheet>
+		<xp:script src="unp/jquery-1.7.2.min.js" clientSide="true">
+		</xp:script>
+	</xp:this.resources>
+	<xp:panel styleClass="iHeader black">
+		<xp:image styleClass="companyLogo" url="/unplugged_logo.png"
+			id="image2"></xp:image>
+		<xp:panel styleClass="backButton blackBackButton">
+			<xp:link escape="true" id="link2"
+				value="#{javascript:compositeData.backButtonURL}" text="#{javascript:compositeData.backButtonText}">
+				<xp:this.rendered><![CDATA[#{javascript:if(compositeData.backButtonText == ''){
+	return false;
+}
+else{ return true;
+}}]]></xp:this.rendered>
+
+			</xp:link>
+		</xp:panel>
+		<xp:panel styleClass="viewsButton">
+			<xp:this.rendered><![CDATA[#{javascript:compositeData.viewsButton;}]]></xp:this.rendered>
+			<xp:label value="Views" id="label2"
+				style="font-weight:bold;">
+			</xp:label>
+		</xp:panel>
+		
+		<xp:label styleClass="title" id="label1" value="#{javascript:compositeData.title}">
+		</xp:label>
+		<xp:panel  id="image1"
+			rendered="#{javascript:compositeData.search}" styleClass="searchButton">
+		</xp:panel>
+		<xp:link escape="true" id="link1" value="/unpws.unp/"
+			styleClass="homeButton">
+		</xp:link>
+
+	</xp:panel>
+	<div id="input-search-frame">
+		<input placeholder="Search..." id="input-search"
+			class="hidden">
+		</input>
+	</div>
+	<script>
+		$(document).ready(function() {
+
+		$('.searchButton').click(function (event){
+		if($("#input-search").hasClass("hidden")){
+		$("#input-search").removeClass("hidden").addClass("input-search");
+		}
+		else{
+		$("#input-search").removeClass("input-search").addClass("hidden");
+		}
+		$('#input-search > input').focus(); }); });
+	</script>
+</xp:view>

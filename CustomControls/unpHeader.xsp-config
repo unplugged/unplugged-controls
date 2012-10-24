@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+  <faces-config-extension>
+    <namespace-uri>http://www.ibm.com/xsp/custom</namespace-uri>
+    <default-prefix>xc</default-prefix>
+  </faces-config-extension>
+  <composite-component>
+    <component-type>unpHeader</component-type>
+    <composite-name>unpHeader</composite-name>
+    <composite-file>/unpHeader.xsp</composite-file>
+    <composite-extension>
+      <designer-extension>
+        <in-palette>true</in-palette>
+      </designer-extension>
+    </composite-extension>
+    <property>
+      <property-name>title</property-name>
+      <property-class>string</property-class>
+      <display-name>title of page</display-name>
+    </property>
+    <property>
+      <property-name>backButtonText</property-name>
+      <property-class>string</property-class>
+      <display-name>Text for back button</display-name>
+      <property-extension>
+        <designer-extension>
+          <validation-formula/>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>backButtonURL</property-name>
+      <property-class>string</property-class>
+      <display-name>URL for back button</display-name>
+    </property>
+    <property>
+      <property-name>search</property-name>
+      <property-class>boolean</property-class>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.std.Boolean</editor>
+          <default-value>false</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>viewsButton</property-name>
+      <property-class>boolean</property-class>
+      <display-name>View Button</display-name>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.std.Boolean</editor>
+          <default-value>false</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
+  </composite-component>
+</faces-config>
