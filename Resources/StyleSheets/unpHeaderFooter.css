@@ -1,3 +1,8 @@
+body {
+	padding-top: 0px;
+	padding-bottom: 45px;
+}
+
 .iHeader {
 	z-index: 12;
 	-webkit-box-sizing: border-box;
@@ -143,6 +148,10 @@
 }
 
 @media screen and (min-width: 1001px) {
+	body {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
 	.iHeader {
 		height: 60px;
 	}
@@ -158,7 +167,7 @@
 		margin: 12px 0px 0px 4px;
 	}
 	.footer {
-		height: 54px;
+		height: 60px;
 	}
 	.footer>span {
 		margin-top: 18px;
@@ -244,6 +253,10 @@
 }
 
 @media screen and (min-width: 701px) {
+	body {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
 	.iHeader {
 		height: 60px;
 	}
@@ -256,7 +269,7 @@
 		margin: 12px 0px 0px 4px;
 	}
 	.footer {
-		height: 54px;
+		height: 60px;
 	}
 	.footer>span {
 		margin-top: 18px;
@@ -343,6 +356,10 @@
 }
 
 @media screen and (max-width: 700px) {
+	body {
+		padding-top: 0px;
+		padding-bottom: 45px;
+	}
 	.iHeader {
 		height: 45px;
 	}
@@ -354,7 +371,7 @@
 		display: none;
 	}
 	.footer {
-		height: 54px;
+		height: 45px;
 	}
 	.footer>span {
 		margin-top: 16px;
