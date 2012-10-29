@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="1ca" sequence="7" unid="BAEE0077D949166F80257AA1002EC7B7">
+<noteinfo noteid="1ca" sequence="52" unid="BAEE0077D949166F80257AA1002EC7B7">
 <created><datetime dst="true">20121024T093057,83+01</datetime></created>
-<modified><datetime dst="true">20121024T093344,32+01</datetime></modified>
-<revised><datetime dst="true">20121024T093344,31+01</datetime></revised>
-<lastaccessed><datetime dst="true">20121024T093344,32+01</datetime></lastaccessed>
+<modified><datetime>20121029T104303,57+00</datetime></modified>
+<revised><datetime>20121029T104303,56+00</datetime></revised>
+<lastaccessed><datetime>20121029T104303,57+00</datetime></lastaccessed>
 <addedtofile><datetime dst="true">20121024T093057,84+01</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
 <item name="$Flags"><text>gC~4K</text></item>
-<item name="$TITLE"><text>UnpDemoHeaderFooter.xsp</text></item>
+<item name="$TITLE" sign="true"><text>UnpDemoHeaderFooterViewsButton.xsp</text></item>
 <item name="$DesignerVersion"><text>8.5</text></item>
 
 
@@ -17,4 +17,4 @@
 
 
 
-<item name="$FileNames" sign="true"><text>UnpDemoHeaderFooter.xsp</text></item></note>
+<item name="$FileNames" sign="true"><text>UnpDemoHeaderFooterViewsButton.xsp</text></item></note>

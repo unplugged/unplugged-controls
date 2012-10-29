@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xc:unpHeader backButtonText="" title="Header / Footer Demo"
+		search="true" viewsButton="true">
+	</xc:unpHeader>
+
+	<xc:unpScrollableArea>
+		<xp:this.facets>
+			<xp:panel xp:key="facet_1">
+				<div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+						eu
+						velit ante, ut accumsan nisi. Duis nec diam quis sapien accumsan
+						scelerisque et vitae massa. Proin nec massa ligula, et pretium
+						erat.
+						Vivamus sed ante quis tellus congue feugiat. In venenatis dui
+						massa,
+						ac condimentum quam. Aliquam eu dolor gravida lectus tempor
+						scelerisque. Sed tortor metus, suscipit quis pretium non, ultrices
+						quis augue.</p>
+
+					<p>In lacinia euismod sem eget pulvinar. Fusce dapibus cursus
+						diam,
+						nec
+						mattis velit ornare eu. Aliquam lorem risus, sollicitudin
+						eget
+						ornare
+						non, mattis non nulla. Nullam dignissim suscipit
+						porttitor.
+						Etiam
+						consequat tempor mauris, sit amet pharetra purus
+						sodales et.
+						Integer
+						aliquam laoreet pulvinar. Maecenas commodo dui
+						nec neque
+						egestas et
+						convallis leo convallis. Nam nec volutpat nisi.
+					</p>
+
+					<p>Sed tincidunt consequat blandit. Donec magna ipsum, mattis ut
+						scelerisque sit amet, faucibus sed sem. Curabitur convallis
+						iaculis
+						ornare. Etiam vel dui purus, eleifend ultrices tortor.
+						Class aptent
+						taciti sociosqu ad litora torquent per conubia nostra,
+						per
+						inceptos
+						himenaeos. Suspendisse convallis, dui congue euismod
+						placerat, urna
+						turpis posuere tortor, a cursus nisi mi eget nisi.
+						Pellentesque eu
+						ligula arcu, sed pulvinar diam. Aenean posuere
+						lorem id lorem
+						pulvinar venenatis. Duis condimentum, quam et
+						tincidunt
+						consectetur,
+						felis ligula ornare magna, non placerat
+						tellus nunc id dolor. Etiam
+						suscipit lacinia neque sed luctus.
+						Praesent auctor sem id libero
+						vehicula non scelerisque nisl
+						facilisis. Aliquam erat volutpat.
+						Morbi
+						placerat vestibulum ipsum,
+						nec faucibus arcu luctus vel.</p>
+
+					<p>Etiam non tempus lacus. Curabitur vel nibh nisi. Nulla
+						porta
+						molestie est,
+						id vulputate augue commodo vel. Sed sit amet
+						nibh a
+						felis condimentum
+						consequat. In sed risus mauris, at posuere
+						augue.
+						Vestibulum luctus
+						congue volutpat. Vivamus id cursus sapien.
+						Vestibulum ante ipsum
+						primis in faucibus orci luctus et ultrices
+						posuere cubilia Curae;
+						Phasellus non felis sem, quis mattis urna.
+						Suspendisse at mi ligula.
+						Curabitur sed velit eget odio hendrerit
+						congue ac sit amet magna.</p>
+
+					<p>Quisque adipiscing velit et orci pretium ultrices. Fusce
+						nisl lectus,
+						adipiscing eu rhoncus sed, pharetra et nibh. Etiam
+						fringilla nisi
+						quis ante tincidunt tincidunt condimentum arcu
+						varius.
+						Curabitur
+						augue lectus, commodo laoreet hendrerit in,
+						lacinia nec
+						lectus. Nulla
+						imperdiet, turpis nec dapibus semper, erat
+						metus dapibus
+						massa, non
+						consectetur enim erat faucibus turpis.
+						Phasellus fringilla,
+						ligula ut
+						viverra congue, nisi mi fringilla
+						tortor, id pharetra magna
+						sapien
+						pretium ligula. In rutrum, metus ut
+						aliquet pharetra, felis
+						lorem
+						commodo nisi, sit amet mollis arcu
+						arcu id lorem. Curabitur vel
+						lectus sit amet urna ullamcorper
+						adipiscing. Integer rutrum, enim id
+						ullamcorper cursus, metus
+						tellus ullamcorper ipsum, vel rhoncus mi
+						mi
+						vitae enim. Vivamus ut
+						dui nec enim euismod cursus. Praesent
+						elementum euismod lacus, eget
+						dignissim metus mollis quis. Duis
+						blandit, nisl nec fringilla
+						egestas, arcu neque aliquet odio, in
+						facilisis libero dui at ante.
+						Duis pulvinar accumsan libero eu
+						volutpat. Nam ultrices purus vitae
+						elit tincidunt sit amet egestas
+						urna viverra.</p>
+
+					<p>Phasellus et orci lectus, ac aliquet quam. Pellentesque
+						aliquam massa vel nibh
+						tempus et ullamcorper felis placerat. Etiam
+						eget quam nec risus
+						viverra sagittis. Maecenas malesuada erat
+						dolor,
+						fermentum suscipit
+						ante. In quis interdum lacus. Etiam a
+						nulla sit
+						amet est fringilla
+						varius. Fusce sollicitudin vehicula
+						orci sed
+						consequat. Nunc
+						porttitor ullamcorper malesuada. Donec
+						tempus congue
+						tellus, quis
+						congue turpis condimentum ac. Sed pretium
+						volutpat
+						consectetur. Sed
+						commodo interdum vulputate. Nunc mollis
+						massa sit
+						amet neque laoreet
+						at porta metus egestas. In hac
+						habitasse platea
+						dictumst. Suspendisse
+						varius sagittis urna, et
+						porta dui pellentesque
+						quis. Vestibulum at
+						sapien in dui aliquet
+						ornare. Quisque ut urna
+						diam.</p>
+
+					<p>Sed quis magna lorem. Donec vehicula nisi quis justo molestie
+						sollicitudin. Ut laoreet dui ut erat fringilla auctor. Fusce risus
+						ante, vestibulum sed ultrices nec, fringilla ut lectus. Ut
+						placerat,
+						tellus ac varius consectetur, sapien ligula congue
+						ligula, eget
+						ultrices massa metus et ante. Nulla at augue eu augue
+						egestas
+						sollicitudin. Nunc accumsan dapibus felis ac egestas.
+						Curabitur a
+						euismod tortor. Sed vel ligula dui, quis malesuada
+						urna. Fusce
+						venenatis massa vitae felis elementum bibendum. Duis
+						nec purus
+						ultricies magna venenatis rhoncus. Mauris porttitor
+						venenatis
+						fringilla. Aenean eget lectus eget odio sollicitudin
+						tincidunt
+						vitae
+						vel massa. Nam tincidunt congue lobortis. Praesent
+						dapibus auctor mi
+						at feugiat. Fusce eu est et felis porta
+						scelerisque vel quis
+						turpis.
+		</p>
+
+					<p>Donec porta, leo eu semper dictum, est lacus consequat
+						lacus,
+						nec
+						rutrum nulla purus quis lectus. Donec ornare nulla sed
+						lectus
+						euismod
+						dictum. Mauris vel felis a sem varius egestas. In
+						dignissim,
+						justo
+						vitae fermentum molestie, risus nisi venenatis
+						augue, a lacinia
+						dui
+						nulla ut ligula. Pellentesque a orci nisl, id
+						cursus eros. Cras id
+						elit non nisl pulvinar bibendum vel at erat.
+						Lorem ipsum dolor sit
+						amet, consectetur adipiscing elit.</p>
+
+					<p>Sed eu dui a ipsum vehicula tempor. Donec massa augue,
+						fermentum
+						ac
+						tincidunt in, dignissim quis urna. In at massa dui,
+						aliquam
+						molestie
+						lectus. Aenean vulputate cursus volutpat.
+						Pellentesque sed
+						sapien
+						est. Integer eros lacus, auctor sit amet
+						porta eu, blandit at
+						augue.
+						Cras quis dui mi. Suspendisse potenti.
+						Fusce ornare ornare
+						accumsan.
+						Ut in velit vehicula nisi interdum
+						adipiscing.</p>
+
+					<p>Aliquam erat volutpat. Ut at neque arcu. Aliquam erat
+						volutpat. Pellentesque
+						sed velit velit, eget varius enim. Phasellus
+						bibendum, ante ac
+						euismod tincidunt, nunc erat condimentum mi, eget
+						pulvinar est nibh
+						at dolor. Nulla scelerisque velit et quam
+						faucibus
+						nec sagittis ipsum
+						semper. Aliquam et ante magna. Nulla
+						libero augue,
+						dapibus vel tempor
+						eu, pharetra ut nisl. Nulla
+						blandit, ipsum eget
+						eleifend semper,
+						lacus neque pharetra ligula, in
+						scelerisque libero
+						ligula at arcu.
+						Donec viverra massa eu massa
+						rutrum ac gravida magna
+						convallis.
+						Aliquam dictum cursus dolor ac
+						porttitor. Cras interdum
+						fermentum
+						facilisis. Sed ac est est, vitae
+						accumsan diam. Praesent
+						pharetra
+						faucibus urna at dictum. Nulla odio
+						neque, tincidunt vel
+						porttitor
+						vestibulum, lobortis id massa.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+						eu
+						velit ante, ut accumsan nisi. Duis nec diam quis sapien accumsan
+						scelerisque et vitae massa. Proin nec massa ligula, et pretium
+						erat.
+						Vivamus sed ante quis tellus congue feugiat. In venenatis dui
+						massa,
+						ac condimentum quam. Aliquam eu dolor gravida lectus tempor
+						scelerisque. Sed tortor metus, suscipit quis pretium non, ultrices
+						quis augue.</p>
+
+					<p>In lacinia euismod sem eget pulvinar. Fusce dapibus cursus
+						diam,
+						nec
+						mattis velit ornare eu. Aliquam lorem risus, sollicitudin
+						eget
+						ornare
+						non, mattis non nulla. Nullam dignissim suscipit
+						porttitor.
+						Etiam
+						consequat tempor mauris, sit amet pharetra purus
+						sodales et.
+						Integer
+						aliquam laoreet pulvinar. Maecenas commodo dui
+						nec neque
+						egestas et
+						convallis leo convallis. Nam nec volutpat nisi.
+					</p>
+
+					<p>Sed tincidunt consequat blandit. Donec magna ipsum, mattis ut
+						scelerisque sit amet, faucibus sed sem. Curabitur convallis
+						iaculis
+						ornare. Etiam vel dui purus, eleifend ultrices tortor.
+						Class aptent
+						taciti sociosqu ad litora torquent per conubia nostra,
+						per
+						inceptos
+						himenaeos. Suspendisse convallis, dui congue euismod
+						placerat, urna
+						turpis posuere tortor, a cursus nisi mi eget nisi.
+						Pellentesque eu
+						ligula arcu, sed pulvinar diam. Aenean posuere
+						lorem id lorem
+						pulvinar venenatis. Duis condimentum, quam et
+						tincidunt
+						consectetur,
+						felis ligula ornare magna, non placerat
+						tellus nunc id dolor. Etiam
+						suscipit lacinia neque sed luctus.
+						Praesent auctor sem id libero
+						vehicula non scelerisque nisl
+						facilisis. Aliquam erat volutpat.
+						Morbi
+						placerat vestibulum ipsum,
+						nec faucibus arcu luctus vel.</p>
+
+					<p>Etiam non tempus lacus. Curabitur vel nibh nisi. Nulla
+						porta
+						molestie est,
+						id vulputate augue commodo vel. Sed sit amet
+						nibh a
+						felis condimentum
+						consequat. In sed risus mauris, at posuere
+						augue.
+						Vestibulum luctus
+						congue volutpat. Vivamus id cursus sapien.
+						Vestibulum ante ipsum
+						primis in faucibus orci luctus et ultrices
+						posuere cubilia Curae;
+						Phasellus non felis sem, quis mattis urna.
+						Suspendisse at mi ligula.
+						Curabitur sed velit eget odio hendrerit
+						congue ac sit amet magna.</p>
+
+					<p>Quisque adipiscing velit et orci pretium ultrices. Fusce
+						nisl lectus,
+						adipiscing eu rhoncus sed, pharetra et nibh. Etiam
+						fringilla nisi
+						quis ante tincidunt tincidunt condimentum arcu
+						varius.
+						Curabitur
+						augue lectus, commodo laoreet hendrerit in,
+						lacinia nec
+						lectus. Nulla
+						imperdiet, turpis nec dapibus semper, erat
+						metus dapibus
+						massa, non
+						consectetur enim erat faucibus turpis.
+						Phasellus fringilla,
+						ligula ut
+						viverra congue, nisi mi fringilla
+						tortor, id pharetra magna
+						sapien
+						pretium ligula. In rutrum, metus ut
+						aliquet pharetra, felis
+						lorem
+						commodo nisi, sit amet mollis arcu
+						arcu id lorem. Curabitur vel
+						lectus sit amet urna ullamcorper
+						adipiscing. Integer rutrum, enim id
+						ullamcorper cursus, metus
+						tellus ullamcorper ipsum, vel rhoncus mi
+						mi
+						vitae enim. Vivamus ut
+						dui nec enim euismod cursus. Praesent
+						elementum euismod lacus, eget
+						dignissim metus mollis quis. Duis
+						blandit, nisl nec fringilla
+						egestas, arcu neque aliquet odio, in
+						facilisis libero dui at ante.
+						Duis pulvinar accumsan libero eu
+						volutpat. Nam ultrices purus vitae
+						elit tincidunt sit amet egestas
+						urna viverra.</p>
+
+					<p>Phasellus et orci lectus, ac aliquet quam. Pellentesque
+						aliquam massa vel nibh
+						tempus et ullamcorper felis placerat. Etiam
+						eget quam nec risus
+						viverra sagittis. Maecenas malesuada erat
+						dolor,
+						fermentum suscipit
+						ante. In quis interdum lacus. Etiam a
+						nulla sit
+						amet est fringilla
+						varius. Fusce sollicitudin vehicula
+						orci sed
+						consequat. Nunc
+						porttitor ullamcorper malesuada. Donec
+						tempus congue
+						tellus, quis
+						congue turpis condimentum ac. Sed pretium
+						volutpat
+						consectetur. Sed
+						commodo interdum vulputate. Nunc mollis
+						massa sit
+						amet neque laoreet
+						at porta metus egestas. In hac
+						habitasse platea
+						dictumst. Suspendisse
+						varius sagittis urna, et
+						porta dui pellentesque
+						quis. Vestibulum at
+						sapien in dui aliquet
+						ornare. Quisque ut urna
+						diam.</p>
+
+					<p>Sed quis magna lorem. Donec vehicula nisi quis justo molestie
+						sollicitudin. Ut laoreet dui ut erat fringilla auctor. Fusce risus
+						ante, vestibulum sed ultrices nec, fringilla ut lectus. Ut
+						placerat,
+						tellus ac varius consectetur, sapien ligula congue
+						ligula, eget
+						ultrices massa metus et ante. Nulla at augue eu augue
+						egestas
+						sollicitudin. Nunc accumsan dapibus felis ac egestas.
+						Curabitur a
+						euismod tortor. Sed vel ligula dui, quis malesuada
+						urna. Fusce
+						venenatis massa vitae felis elementum bibendum. Duis
+						nec purus
+						ultricies magna venenatis rhoncus. Mauris porttitor
+						venenatis
+						fringilla. Aenean eget lectus eget odio sollicitudin
+						tincidunt
+						vitae
+						vel massa. Nam tincidunt congue lobortis. Praesent
+						dapibus auctor mi
+						at feugiat. Fusce eu est et felis porta
+						scelerisque vel quis
+						turpis.
+		</p>
+
+					<p>Donec porta, leo eu semper dictum, est lacus consequat
+						lacus,
+						nec
+						rutrum nulla purus quis lectus. Donec ornare nulla sed
+						lectus
+						euismod
+						dictum. Mauris vel felis a sem varius egestas. In
+						dignissim,
+						justo
+						vitae fermentum molestie, risus nisi venenatis
+						augue, a lacinia
+						dui
+						nulla ut ligula. Pellentesque a orci nisl, id
+						cursus eros. Cras id
+						elit non nisl pulvinar bibendum vel at erat.
+						Lorem ipsum dolor sit
+						amet, consectetur adipiscing elit.</p>
+
+					<p>Sed eu dui a ipsum vehicula tempor. Donec massa augue,
+						fermentum
+						ac
+						tincidunt in, dignissim quis urna. In at massa dui,
+						aliquam
+						molestie
+						lectus. Aenean vulputate cursus volutpat.
+						Pellentesque sed
+						sapien
+						est. Integer eros lacus, auctor sit amet
+						porta eu, blandit at
+						augue.
+						Cras quis dui mi. Suspendisse potenti.
+						Fusce ornare ornare
+						accumsan.
+						Ut in velit vehicula nisi interdum
+						adipiscing.</p>
+
+					<p>Aliquam erat volutpat. Ut at neque arcu. Aliquam erat
+						volutpat. Pellentesque
+						sed velit velit, eget varius enim. Phasellus
+						bibendum, ante ac
+						euismod tincidunt, nunc erat condimentum mi, eget
+						pulvinar est nibh
+						at dolor. Nulla scelerisque velit et quam
+						faucibus
+						nec sagittis ipsum
+						semper. Aliquam et ante magna. Nulla
+						libero augue,
+						dapibus vel tempor
+						eu, pharetra ut nisl. Nulla
+						blandit, ipsum eget
+						eleifend semper,
+						lacus neque pharetra ligula, in
+						scelerisque libero
+						ligula at arcu.
+						Donec viverra massa eu massa
+						rutrum ac gravida magna
+						convallis.
+						Aliquam dictum cursus dolor ac
+						porttitor. Cras interdum
+						fermentum
+						facilisis. Sed ac est est, vitae
+						accumsan diam. Praesent
+						pharetra
+						faucibus urna at dictum. Nulla odio
+						neque, tincidunt vel
+						porttitor
+						vestibulum, lobortis id massa.</p>
+				</div>
+			</xp:panel>
+		</xp:this.facets>
+	</xc:unpScrollableArea>
+
+	<xc:unpFooter newDocTarget="NewDoc.xsp"></xc:unpFooter>
+</xp:view>

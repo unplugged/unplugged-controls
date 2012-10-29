@@ -16,7 +16,7 @@
 	&lt;div style="border: 2px solid #A9A9A9; padding: 3px; margin: 5px;"&gt;&#xd;
 	&lt;h1&gt;unpHeader&lt;/h1&gt;&#xd;
 	&lt;div&gt;&#xd;
-		To use this custom control make sure you have set the Custom Properties. If you set the "viewsButton" property to true then the "backButton" will never show.&#xd;
+		To use this custom control make sure you have set the Custom Properties. If you set the "viewsButton" property to true then the "backButtonText" must be blank for the Views Button to show.&#xd;
 	&lt;/div&gt;&#xd;
 	&lt;hr /&gt;&#xd;
 	&lt;div&gt; &#xd;
