@@ -27,8 +27,10 @@ body {
 	padding: 0px;
 	text-decoration: none;
 	text-align: center;
+	text-overflow: ellipsis;
 }
 
+/*
 .backButton {
 	position: absolute;
 	top: 7px;
@@ -46,8 +48,9 @@ body {
 	border-width: 0 8px 0 14px;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+*/
 
-.viewslabel {
+.viewslabel, .backlabel {
 	font-weight: bold;
 }
 
@@ -172,7 +175,7 @@ body {
 	.footer>span {
 		margin-top: 18px;
 	}
-	.viewsButton {
+	.viewsButton, .backButton {
 		display: none !important;
 		position: absolute;
 		width: 90px;
@@ -186,7 +189,7 @@ body {
 			-webkit-gradient(linear, 0 0, 0 100%, from(#767676),
 			color-stop(0.5, #595959), color-stop(0.5, #4f4f4f), to(#2f2f2f) );
 	}
-	.viewsButton a {
+	.viewsButton a, .backButton a {
 		display: block;
 		text-decoration: none;
 		width: 70px;
@@ -197,7 +200,11 @@ body {
 		padding-top: 8px;
 		padding-left: 26px;
 	}
-	.viewsButton span {
+	.backButton a{
+		padding-top: 0px;
+		padding-left: 0px;
+	}
+	.viewsButton span, .backButton span {
 		position: absolute;
 		font-weight: bold;
 		padding-top: 4px;
@@ -263,6 +270,7 @@ body {
 	.title {
 		font-size: 26px;
 		margin-top: 12px;
+		margin-right: 100px;
 	}
 	.companyLogo {
 		display: none;
@@ -274,10 +282,10 @@ body {
 	.footer>span {
 		margin-top: 18px;
 	}
-	.viewsButton {
+	.viewsButton, .backButton {
 		position: absolute;
 		display: block;
-		top: 3px;
+		top: 12px;
 		left: 5px;
 		width: 40px;
 		height: 26px;
@@ -289,24 +297,18 @@ body {
 		color: white;
 		font-weight: bold;
 	}
-	.viewsButton a {
+	.viewsButton a, .backButton a {
 		display: block;
 		text-decoration: none;
 		width: 70px;
 		height: 26px;
-		font-size: 14pt;
-		pont-weight: bold;
+		font-weight: bold;
 		color: white;
-		padding-top: 8px;
-		padding-left: 26px;
 	}
-	.viewsButton span {
+	.viewsButton span, backButton span {
 		position: absolute;
 		font-weight: bold;
 		/*padding-top: 4px;*/
-	}
-	.backButton {
-		display: none;
 	}
 	.syncButton {
 		border: 1px solid silver;
@@ -364,7 +366,8 @@ body {
 		height: 45px;
 	}
 	.title {
-		font-size: 20px;
+		font-size: 16px;
+		font-weight: bold;
 		margin-top: 10px;
 	}
 	.companyLogo {
@@ -376,7 +379,7 @@ body {
 	.footer>span {
 		margin-top: 16px;
 	}
-	.viewsButton {
+	.viewsButton, .backButton {
 		position: absolute;
 		display: block;
 		top: 3px;

@@ -16,9 +16,11 @@
 	<xp:panel styleClass="iHeader black">
 		<xp:image styleClass="companyLogo" url="/unplugged_logo.png"
 			id="companyLogo"></xp:image>
-		<xp:panel styleClass="backButton blackBackButton">
-			<xp:link escape="true" id="backlink"
-				value="#{javascript:compositeData.backButtonURL}" text="#{javascript:compositeData.backButtonText}">
+		<xp:panel styleClass="backButton"
+			rendered="#{javascript:!compositeData.viewsButton}">
+			<xp:link escape="true" id="backlink" styleClass="backlabel"
+				value="#{javascript:compositeData.backButtonURL}"
+				text="#{javascript:compositeData.backButtonText}">
 				<xp:this.rendered><![CDATA[#{javascript:if(compositeData.backButtonText == ''){
 	return false;
 }

@@ -11,6 +11,37 @@
     <composite-extension>
       <designer-extension>
         <in-palette>true</in-palette>
+        <render-markup>&lt;?xml version="1.0" encoding="UTF-8"?&gt; &#xd;
+&lt;xp:view xmlns:xp="http://www.ibm.com/xsp/core"&gt; &#xd;
+	&lt;div style="border: 2px solid #A9A9A9; padding: 3px; margin: 5px;"&gt;&#xd;
+	&lt;h1&gt;unpHeader&lt;/h1&gt;&#xd;
+	&lt;div&gt;&#xd;
+		To use this custom control make sure you have set the Custom Properties. If you set the "viewsButton" property to true then the "backButton" will never show.&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;hr /&gt;&#xd;
+	&lt;div&gt; &#xd;
+		Header Bar with Title &lt;strong&gt;&lt;%=this.title %&gt;&lt;/strong&gt;&lt;br /&gt;&#xd;
+		&lt;br /&gt;&#xd;
+		Show Views Button = &lt;%=this.viewsButton %&gt;&#xd;
+		&lt;br /&gt;&#xd;
+		The Back Button label is set to &lt;strong&gt;&lt;%=this.backButtonText %&gt;&lt;/strong&gt; and will take the user to &lt;strong&gt;&lt;%=this.backButtonURL %&gt;&lt;/strong&gt;&lt;br /&gt;&#xd;
+		&lt;br /&gt;&#xd;
+		Show Search function = &lt;strong&gt;&lt;%=this.search %&gt;&lt;/strong&gt;&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;hr /&gt;&#xd;
+	&lt;div&gt;&#xd;
+		To use this custom control, make sure that you have copied across the following design elements to your database:&lt;br /&gt;&#xd;
+		&lt;ul&gt;&#xd;
+			&lt;li&gt;unpHeaderFooter.css&lt;/li&gt;&#xd;
+			&lt;li&gt;unp/jquery-1.7.2.min.js&lt;/li&gt;&#xd;
+			&lt;li&gt;unplugged_logo.png&lt;/li&gt;&#xd;
+			&lt;li&gt;search.png&lt;/li&gt;&#xd;
+			&lt;li&gt;blackBackButton.png&lt;/li&gt;&#xd;
+			&lt;li&gt;home.png&lt;/li&gt;&#xd;
+		&lt;/ul&gt;&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;/div&gt;&#xd;
+&lt;/xp:view&gt;</render-markup>
       </designer-extension>
     </composite-extension>
     <property>
