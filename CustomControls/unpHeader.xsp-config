@@ -69,11 +69,14 @@
     </property>
     <property>
       <property-name>search</property-name>
-      <property-class>boolean</property-class>
+      <property-class>string</property-class>
       <property-extension>
         <designer-extension>
-          <editor>com.ibm.std.Boolean</editor>
-          <default-value>false</default-value>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <default-value>none</default-value>
+          <editor-parameter>none&#xd;
+local&#xd;
+database</editor-parameter>
         </designer-extension>
       </property-extension>
     </property>

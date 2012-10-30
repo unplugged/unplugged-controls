@@ -100,7 +100,7 @@ body {
 		color-stop(0.5, #595959), color-stop(0.5, #4f4f4f), to(#2f2f2f) );
 }
 
-#input-search-frame {
+.input-search-frame {
 	padding-top: 50px;
 	padding-left: 7px;
 }
@@ -208,7 +208,7 @@ body {
 	.searchButton {
 		display: none;
 	}
-	#input-search-frame {
+	.input-search-frame {
 		z-index: 15;
 		position: fixed;
 		top: -36px;
@@ -216,7 +216,7 @@ body {
 		width: 180px;
 		height: 30px;
 	}
-	#input-search-frame>.hidden {
+	.input-search-frame>.hidden {
 		-webkit-box-sizing: border-box;
 		display: block;
 		width: 100%;
@@ -305,7 +305,7 @@ body {
 	.searchButton {
 		display: none;
 	}
-	#input-search-frame {
+	.input-search-frame {
 		z-index: 15;
 		position: fixed;
 		top: -36px;
@@ -313,7 +313,7 @@ body {
 		width: 180px;
 		height: 30px;
 	}
-	#input-search-frame>.hidden {
+	.input-search-frame>.hidden {
 		-webkit-box-sizing: border-box;
 		display: block;
 		width: 100%;

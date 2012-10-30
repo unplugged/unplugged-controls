@@ -35,7 +35,7 @@ else{ return true;
 		<xp:label styleClass="title" id="title"
 			value="#{javascript:compositeData.title}">
 		</xp:label>
-		<xp:panel id="searchbutton" rendered="#{javascript:compositeData.search}"
+		<xp:panel id="searchbutton" rendered="#{javascript:compositeData.search != 'none'}"
 			styleClass="searchButton">
 		</xp:panel>
 		<xp:link escape="true" id="homebutton" value="/unpws.unp/"
@@ -43,10 +43,11 @@ else{ return true;
 		</xp:link>
 
 	</xp:panel>
-	<div id="input-search-frame">
+	<xp:div id="input-search-frame" styleClass="input-search-frame"
+		rendered="#{javascript:compositeData.search != 'none'}">
 		<input placeholder="Search..." id="input-search" class="hidden">
 		</input>
-	</div>
+	</xp:div>
 	<script>
 		$(document).ready(function() {
 		$('.searchButton').click(function (event){
@@ -58,4 +59,17 @@ else{ return true;
 		$('#input-search > input').focus(); });
 		});
 	</script>
+	<xp:panel id="searchscript" tagName="script">
+		<xp:this.attrs>
+			<xp:attr name="type" value="text/javascript"></xp:attr>
+			<xp:attr name="src">
+				<xp:this.value><![CDATA[#{javascript:if (compositeData.search == "local"){
+	return "unpSearchLocal.js";
+}else if (compositeData.search == "database"){
+	return "unpSearchDatabase.js";
+}}]]></xp:this.value>
+			</xp:attr>
+		</xp:this.attrs>
+		<xp:this.rendered><![CDATA[#{javascript:compositeData.search != "none"}]]></xp:this.rendered>
+	</xp:panel>
 </xp:view>

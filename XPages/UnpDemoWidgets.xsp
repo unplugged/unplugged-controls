@@ -2,7 +2,7 @@
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core"
 	xmlns:xc="http://www.ibm.com/xsp/custom">
 
-	<xc:unpHeader search="true" viewsButton="true" title="Employees"></xc:unpHeader>
+	<xc:unpHeader search="local" viewsButton="true" title="Employees"></xc:unpHeader>
 	<xc:unpViewsList></xc:unpViewsList>
 	<xc:unpFlatView insetData="false" detailColumn="DOB"
 		summaryColumn="Name" title="Employees" viewName="Employees"
