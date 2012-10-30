@@ -37,7 +37,8 @@ If required then further work can be undertaken to make the custom controls work
 * Back button in the top left which will replace either the Logo or the Views button if the developer enables it
 * The bar will always be fixed to the top of the page and push the top of any content to be below it.
 * When switching between orientations the bar will automatically reconfigure itself.
-Footer Custom Control
+
+###Footer Custom Control
 * Grey / Black gradient as per existing Unplugged templates
 * In the bottom left will be a button which will sync the current application. For tablets this button will include text, for phones it will just be an icon
 * In the bottom right will be a button which will take the user to a new document as specified by the developer

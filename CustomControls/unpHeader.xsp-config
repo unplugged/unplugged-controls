@@ -91,5 +91,14 @@ database</editor-parameter>
         </designer-extension>
       </property-extension>
     </property>
+    <property>
+      <property-name>searchPage</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <default-value>UnpSearch.xsp</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
   </composite-component>
 </faces-config>

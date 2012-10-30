@@ -72,4 +72,11 @@ else{ return true;
 		</xp:this.attrs>
 		<xp:this.rendered><![CDATA[#{javascript:compositeData.search != "none"}]]></xp:this.rendered>
 	</xp:panel>
+	<xp:text id="searchvars" tagName="script" escape="false">
+		<xp:this.rendered><![CDATA[#{javascript:compositeData.search == "database"}]]></xp:this.rendered>
+		<xp:this.attrs>
+			<xp:attr name="type" value="text/javascript"></xp:attr>
+		</xp:this.attrs>
+		<xp:this.value><![CDATA[#{javascript:"var searchPage = \"" + compositeData.searchPage + "\";"}]]></xp:this.value>
+	</xp:text>
 </xp:view>
