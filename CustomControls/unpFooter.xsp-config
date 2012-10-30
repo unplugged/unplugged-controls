@@ -11,6 +11,28 @@
     <composite-extension>
       <designer-extension>
         <in-palette>true</in-palette>
+        <render-markup>&lt;?xml version="1.0" encoding="UTF-8"?&gt; &#xd;
+&lt;xp:view xmlns:xp="http://www.ibm.com/xsp/core"&gt; &#xd;
+	&lt;div style="border: 2px solid #A9A9A9; padding: 3px; margin: 5px;"&gt;&#xd;
+	&lt;h1&gt;unpFooter&lt;/h1&gt;&#xd;
+	&lt;hr /&gt;&#xd;
+	&lt;div&gt; &#xd;
+		New Button Goes to &lt;strong&gt;&lt;%=this.newDocTarget %&gt;&lt;/strong&gt;&lt;br /&gt;&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;hr /&gt;&#xd;
+	&lt;div&gt;&#xd;
+		To use this custom control, make sure that you have copied across the following design elements to your database:&lt;br /&gt;&#xd;
+		&lt;ul&gt;&#xd;
+			&lt;li&gt;unpHeaderFooter.css&lt;/li&gt;&#xd;
+			&lt;li&gt;ic_action_refresh.png&lt;/li&gt;&#xd;
+			&lt;li&gt;new.png&lt;/li&gt;&#xd;
+			&lt;li&gt;icon_19.png&lt;/li&gt;&#xd;
+			&lt;li&gt;syncIcon.png&lt;/li&gt;&#xd;
+			&lt;li&gt;new.png&lt;/li&gt;&#xd;
+		&lt;/ul&gt;&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;/div&gt;&#xd;
+&lt;/xp:view&gt;</render-markup>
       </designer-extension>
     </composite-extension>
     <property>

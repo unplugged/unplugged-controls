@@ -18,6 +18,9 @@
 	&lt;div&gt;&#xd;
 		To use this custom control make sure you have set the Custom Properties. If you set the "viewsButton" property to true then the "backButtonText" must be blank for the Views Button to show.&#xd;
 	&lt;/div&gt;&#xd;
+	&lt;div&gt;&#xd;
+		If you enable the views button then you must also make use of the unpViewsList Custom Control.&#xd;
+	&lt;/div&gt;&#xd;
 	&lt;hr /&gt;&#xd;
 	&lt;div&gt; &#xd;
 		Header Bar with Title &lt;strong&gt;&lt;%=this.title %&gt;&lt;/strong&gt;&lt;br /&gt;&#xd;
