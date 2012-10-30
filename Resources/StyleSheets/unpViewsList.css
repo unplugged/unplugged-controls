@@ -10,16 +10,11 @@
   padding-right:30px;
 }
 
-
-#navScrollArea ul{
-  padding: 0px;
-  margin: 0px;
-  
-}
-
 #navScrollArea ul li{
-  border-bottom: 1px solid #999999;
-  color: #222222;
+  border: 1px solid #999999;
+  text-align:left;
+  color:rgb(0,0,0);
+  background-color:black;
   display:block;
   height:40px;
   font-size: 17px;
@@ -28,6 +23,7 @@
   text-decoration:none;
   -webkit-tap-highlight-color:blue;
 }
+
 
 @media screen and (min-width: 1001px) {
   #menuPane{
@@ -44,6 +40,10 @@
     margin-top:60px;
   	margin-bottom: 50px;
   }	
+  #navScrollArea ul{
+    padding: 0px;
+    margin: 0px;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -54,4 +54,20 @@
     width:100%;
     margin-bottom: 70px;
   }	
+  
+  #navScrollArea ul{
+    padding: 0px;
+    margin: 20px;
+  }
+
+  #navScrollArea ul li:first-child{
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+  }
+
+  #navScrollArea ul li:last-child{
+    -webkit-border-bottom-left-radius: 8px;
+    -webkit-border-bottom-right-radius: 8px;
+  }
+
 }

@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="mag_glass_black.png" maintenanceversion="3.0" name="mag_glass.png" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="192" sequence="1" unid="29F0C4F6D495D25080257AA1002EB6EC">
+<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="mag_glass_black.png" maintenanceversion="3.0" name="unp/mag_glass.png" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="192" sequence="2" unid="29F0C4F6D495D25080257AA1002EB6EC">
 <created><datetime dst="true">20121024T093014,84+01</datetime></created>
-<modified><datetime dst="true">20121024T093014,96+01</datetime></modified>
-<revised><datetime dst="true">20121024T093014,95+01</datetime></revised>
-<lastaccessed><datetime dst="true">20121024T093014,96+01</datetime></lastaccessed>
+<modified><datetime>20121030T082808,00+00</datetime></modified>
+<revised><datetime>20121030T082807,99+00</datetime></revised>
+<lastaccessed><datetime>20121030T082808,00+00</datetime></lastaccessed>
 <addedtofile><datetime dst="true">20121024T093014,96+01</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Richard Sharpe/O=Teamstudio</name><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
+<updatedby><name>CN=Richard Sharpe/O=Teamstudio</name><name>CN=Matt White/O=Exhilarate</name></updatedby><jpeg>
 iVBORw0KGgoAAAANSUhEUgAAABwAAAAaCAIAAAArNqveAAAAK3RFWHRDcmVhdGlvbiBUaW1lAFNh
 dCA2IE9jdCAyMDEyIDIwOjA4OjQxIC0wNTAwp+0I1QAAAAd0SU1FB9wKBwAJAzaEvB8AAAAJcEhZ
 cwAATiAAAE4gARZ9md4AAAAEZ0FNQQAAsY8L/GEFAAACmUlEQVR42rWVzUsqYRTGx28URMRWtslN

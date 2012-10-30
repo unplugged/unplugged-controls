@@ -42,9 +42,9 @@
       <property-extension>
         <designer-extension>
           <editor/>
-          <validation-formula>//Add .xsp extension !! &#xd;
-return newDocTarget.indexOf(".xsp") &gt;= 0;</validation-formula>
+          <validation-formula/>
         </designer-extension>
+        <required>false</required>
       </property-extension>
     </property>
   </composite-component>

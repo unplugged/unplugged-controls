@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="06-magnify.png" maintenanceversion="3.0" name="searchIcon.png" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="1aa" sequence="1" unid="F178C5C945A2CAF980257AA1002EB6F2">
+<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="06-magnify.png" maintenanceversion="3.0" name="unp/searchIcon.png" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1aa" sequence="2" unid="F178C5C945A2CAF980257AA1002EB6F2">
 <created><datetime dst="true">20121024T093014,90+01</datetime></created>
-<modified><datetime dst="true">20121024T093015,08+01</datetime></modified>
-<revised><datetime dst="true">20121024T093015,07+01</datetime></revised>
-<lastaccessed><datetime dst="true">20121024T093015,08+01</datetime></lastaccessed>
+<modified><datetime>20121030T082836,64+00</datetime></modified>
+<revised><datetime>20121030T082836,63+00</datetime></revised>
+<lastaccessed><datetime>20121030T082836,64+00</datetime></lastaccessed>
 <addedtofile><datetime dst="true">20121024T093015,08+01</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Richard Sharpe/O=Teamstudio</name><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
+<updatedby><name>CN=Richard Sharpe/O=Teamstudio</name><name>CN=Matt White/O=Exhilarate</name></updatedby><jpeg>
 iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAK
 T2lDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjanVNnVFPpFj333vRCS4iAlEtvUhUIIFJCi4AU
 kSYqIQkQSoghodkVUcERRUUEG8igiAOOjoCMFVEsDIoK2AfkIaKOg6OIisr74Xuja9a89+bN/rXX

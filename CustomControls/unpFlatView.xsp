@@ -41,7 +41,7 @@
 									value="#{javascript:thisRowData.getColumnValue(compositeData.summaryColumn);}"
 										style="color:rgb(0,128,255)">
 								</xp:label>
-								<xp:image url="/right-arrow-circle.png" id="image1"
+								<xp:image url="/unp/right-arrow-circle.png" id="image1"
 										styleClass="#{javascript:if(compositeData.detailColumn == null){ return 'icon';} else {return 'multiLineIcon';}}">
 								</xp:image>
 								<xp:panel tagName="div">

@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
-	xmlns:xc="http://www.ibm.com/xsp/custom">
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
 	<xp:link escape="true" text="Home" id="link1" value="/UnpMain.xsp">
-	</xp:link><xp:br></xp:br>
+	</xp:link>
+	<xp:br></xp:br>
 
-	<xp:label value="Click Me To Show Menu" id="label1" styleClass="viewsButton">
+	<xp:label value="Click Me To Show Menu" id="label1"
+		styleClass="viewsButton">
 	</xp:label>
 	<xp:br></xp:br>
 	<xp:br></xp:br>
-	<xc:unpViewsList></xc:unpViewsList>
+	<xc:unpViewsList>
+		<xc:this.menuItem>
+			<xp:value>All Documents,all.xsp</xp:value>
+			<xp:value>By Date,date.xsp</xp:value>
+			<xp:value>By Person,person.xsp</xp:value>
+			<xp:value>By Customer,customer.xsp</xp:value>
+		</xc:this.menuItem>
+	</xc:unpViewsList>
 </xp:view>

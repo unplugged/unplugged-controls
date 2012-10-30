@@ -16,53 +16,21 @@
 	</xp:this.resources>
 	<div id="menuPane" class="offScreen">
 		<div id="navScrollArea">
-			<ul>
+		<ul>
+			<xp:repeat id="repeat1" rows="30" disableOutputTag="true"
+				var="menuItem"
+				value="#{javascript:compositeData.menuItem;}">
 				<li class="veiwMenuItem">
 					<xp:text escape="true" id="computedField2"
-						value="All Documents"
-						style="font-weight:bold;font-family:Helvetica;font-size:12pt;color:rgb(255,255,255)">
+						style="font-weight:bold;font-family:Helvetica;font-size:12pt;color:rgb(255,255,255)"
+						value="#{javascript:menuItem.slice(0, menuItem.indexOf(','));}">
 					</xp:text>
-					<xp:image url="/right_arrow_black_trans.png" id="image1"
-						styleClass="icon">
+					<xp:image url="/unp/right-arrow-trans-white-large.png"
+						id="image1" styleClass="icon">
 					</xp:image>
 				</li>
-				<li class="veiwMenuItem">
-					<xp:text escape="true" id="computedField1"
-						value="By Category"
-						style="font-weight:bold;font-family:Helvetica;font-size:12pt;color:rgb(255,255,255)">
-					</xp:text>
-					<xp:image url="/right_arrow_black_trans.png" id="image2"
-						styleClass="icon">
-					</xp:image>
-				</li>
-				<li class="veiwMenuItem">
-					<xp:text escape="true" id="computedField3"
-						value="All Documents"
-						style="font-weight:bold;font-family:Helvetica;font-size:12pt;color:rgb(255,255,255)">
-					</xp:text>
-					<xp:image url="/right_arrow_black_trans.png" id="image3"
-						styleClass="icon">
-					</xp:image>
-				</li>
-				<li class="veiwMenuItem">
-					<xp:text escape="true" id="computedField4"
-						value="By Date"
-						style="font-weight:bold;font-family:Helvetica;font-size:12pt;color:rgb(255,255,255)">
-					</xp:text>
-					<xp:image url="/right_arrow_black_trans.png" id="image4"
-						styleClass="icon">
-					</xp:image>
-				</li>
-				<li class="veiwMenuItem">
-					<xp:text escape="true" id="computedField5"
-						value="By Customer"
-						style="font-weight:bold;font-family:Helvetica;font-size:12pt;color:rgb(255,255,255)">
-					</xp:text>
-					<xp:image url="/right_arrow_black_trans.png" id="image5"
-						styleClass="icon">
-					</xp:image>
-				</li>
-			</ul>
+			</xp:repeat>
+		</ul>
 		</div>
 	</div>
 	<script>

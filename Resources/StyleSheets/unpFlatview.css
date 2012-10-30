@@ -38,6 +38,7 @@
   font-size: 17px;
   font-weight: bold;  
   text-decoration:none;
+  height:80px;
 }
 
 #flatViewRowSet > li a{
