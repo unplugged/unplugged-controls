@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
 
 	<xp:this.resources>
 		<xp:metaData name="viewport"
@@ -8,46 +8,57 @@
 		<xp:metaData name="apple-mobile-web-app-status-bar-style"
 			content="black-translucent">
 		</xp:metaData>
-		<xp:metaData name="apple-mobile-web-app-capable"
-			content="yes">
+		<xp:metaData name="apple-mobile-web-app-capable" content="yes">
 		</xp:metaData>
 		<xp:styleSheet href="/unpViewsList.css"></xp:styleSheet>
 		<xp:script src="/unp/jquery-1.7.2.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/iScroll.js" clientSide="true"></xp:script>
 	</xp:this.resources>
 	<div id="menuPane" class="offScreen">
-		<div id="navScrollArea">
-		<ul>
-			<xp:repeat id="repeat1" rows="30" disableOutputTag="true"
-				var="menuItem"
-				value="#{javascript:compositeData.menuItem;}">
-				<li class="veiwMenuItem">
-					<xp:text escape="true" id="computedField2"
-						style="font-weight:bold;font-family:Helvetica;font-size:12pt;color:rgb(255,255,255)"
-						value="#{javascript:menuItem.slice(0, menuItem.indexOf(','));}">
-					</xp:text>
-					<xp:image url="/unp/right-arrow-trans-white-large.png"
-						id="image1" styleClass="icon">
-					</xp:image>
-				</li>
-			</xp:repeat>
-		</ul>
-		</div>
+		<xp:panel styleClass="navScrollArea" id="navScrollArea">
+			<ul>
+				<xp:repeat id="repeat1" rows="30" disableOutputTag="true"
+					var="menuItem" value="#{javascript:compositeData.menuItem;}">
+					<li class="viewMenuItem">
+						<xp:panel id="menulink" tagName="a" styleClass="menulink">
+							<xp:this.attrs>
+								<xp:attr name="href"
+									value="#{javascript:menuItem.slice(menuItem.indexOf(',') + 1);}">
+								</xp:attr>
+							</xp:this.attrs>
+							<xp:text id="menutext" styleClass="menutext"
+								value="#{javascript:menuItem.slice(0, menuItem.indexOf(','));}">
+							</xp:text>
+							<xp:image url="/unp/right-arrow-trans-white-large.png"
+								id="image1" styleClass="icon">
+							</xp:image>
+						</xp:panel>
+					</li>
+				</xp:repeat>
+			</ul>
+		</xp:panel>
 	</div>
 	<script>
-		$(document).ready(function() {
-
-		  $('.viewsButton').click(function (event){
-		     
-		   if($("#menuPane").hasClass("offScreen")){
-		      $("#menuPane").removeClass("offScreen").addClass("onScreen");
-		      $("#menuPane").animate({"left": "+=700px"}, "slow");
-		    }
-		    else{
-		      $("#menuPane").removeClass("onScreen").addClass("offScreen");
-		      $("#menuPane").animate({"left": "-=700px"}, "slow");
-		    }
-		  });
-	   });
+		$(document).ready(function() { $('.viewsButton').click(function
+		(event){ toggleViewsMenu(); }); }); function toggleViewsMenu(){
+		if($("#menuPane").hasClass("offScreen")){
+		$("#menuPane").removeClass("offScreen").addClass("onScreen");
+		$("#menuPane").animate({"left": "+=700px"}, "slow"); }else{
+		$("#menuPane").removeClass("onScreen").addClass("offScreen");
+		$("#menuPane").animate({"left": "-=700px"}, "slow"); } }
 	</script>
-	
+	<xp:text escape="false" id="iscroll" tagName="script">
+		<xp:this.attrs>
+			<xp:attr name="type" value="text/javascript"></xp:attr>
+		</xp:this.attrs>
+		<xp:this.value><![CDATA[#{javascript:var functionname = "iscrollloaded_" + @ReplaceSubstring(getClientId("navScrollArea"), [":", "_"], "");
+var out = "var scrollContent, scrollNav;\n";
+out += "function " + functionname + "() {\n";
+out += "scrollContent = new iScroll('" + getClientId("navScrollArea") + "');\n";
+out += "}\n";
+out += "document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);\n";
+out += "document.addEventListener('DOMContentLoaded', " + functionname + ", false);"
+return out;}]]></xp:this.value>
+	</xp:text>
+
 </xp:view>

@@ -1,4 +1,5 @@
 body {
+	background-color: #464646;
 	padding-top: 0px;
 	padding-bottom: 45px;
 }
@@ -101,7 +102,7 @@ body {
 }
 
 .input-search-frame {
-	padding-top: 50px;
+	padding-top: 45px;
 	padding-left: 7px;
 }
 

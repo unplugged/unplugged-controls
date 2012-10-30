@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
-	xmlns:xc="http://www.ibm.com/xsp/custom">
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
 
 	<xc:unpHeader search="local" viewsButton="true" title="Employees"></xc:unpHeader>
-	<xc:unpViewsList></xc:unpViewsList>
-	<xc:unpFlatView insetData="false" detailColumn="DOB"
-		summaryColumn="Name" title="Employees" viewName="Employees"
-		xpageDoc="Employee.xsp">
-	</xc:unpFlatView>
+	<xc:unpViewsList>
+		<xc:this.menuItem>
+			<xp:value>All Documents,all.xsp</xp:value>
+			<xp:value>By Department,bydept.xsp</xp:value>
+			<xp:value>By Country,bycountry.xsp</xp:value>
+			<xp:value>By Year,byyear.xsp</xp:value>
+		</xc:this.menuItem>
+	</xc:unpViewsList>
+	<xc:unpScrollableArea>
+		<xp:this.facets>
+			<xc:unpFlatView insetData="true" detailColumn="DOB"
+				summaryColumn="Name" title="Employees" viewName="Employees"
+				xpageDoc="Employee.xsp" xp:key="facet_1">
+			</xc:unpFlatView>
+		</xp:this.facets>
+	</xc:unpScrollableArea>
+
 	<xc:unpFooter newDocTarget="Employee.xsp"></xc:unpFooter>
 </xp:view>

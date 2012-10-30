@@ -21,6 +21,9 @@
 	&lt;div&gt;&#xd;
 		If you enable the views button then you must also make use of the unpViewsList Custom Control.&#xd;
 	&lt;/div&gt;&#xd;
+	&lt;div&gt;&#xd;
+		If you set the search to be "database" you must also set the name of the page to open when searching the database, default is UnpSearch.xsp&#xd;
+	&lt;/div&gt;&#xd;
 	&lt;hr /&gt;&#xd;
 	&lt;div&gt; &#xd;
 		Header Bar with Title &lt;strong&gt;&lt;%=this.title %&gt;&lt;/strong&gt;&lt;br /&gt;&#xd;
@@ -29,7 +32,8 @@
 		&lt;br /&gt;&#xd;
 		The Back Button label is set to &lt;strong&gt;&lt;%=this.backButtonText %&gt;&lt;/strong&gt; and will take the user to &lt;strong&gt;&lt;%=this.backButtonURL %&gt;&lt;/strong&gt;&lt;br /&gt;&#xd;
 		&lt;br /&gt;&#xd;
-		Show Search function = &lt;strong&gt;&lt;%=this.search %&gt;&lt;/strong&gt;&#xd;
+		Search function = &lt;strong&gt;&lt;%=this.search %&gt;&lt;/strong&gt;&lt;br /&gt;&#xd;
+		&lt;br /&gt;&#xd;
 	&lt;/div&gt;&#xd;
 	&lt;hr /&gt;&#xd;
 	&lt;div&gt;&#xd;
@@ -37,21 +41,16 @@
 		&lt;ul&gt;&#xd;
 			&lt;li&gt;unpHeaderFooter.css&lt;/li&gt;&#xd;
 			&lt;li&gt;unp/jquery-1.7.2.min.js&lt;/li&gt;&#xd;
-			&lt;li&gt;unplugged_logo.png&lt;/li&gt;&#xd;
-			&lt;li&gt;search.png&lt;/li&gt;&#xd;
-			&lt;li&gt;blackBackButton.png&lt;/li&gt;&#xd;
-			&lt;li&gt;home.png&lt;/li&gt;&#xd;
+			&lt;li&gt;unp/unplugged_logo.png&lt;/li&gt;&#xd;
+			&lt;li&gt;unp/search.png&lt;/li&gt;&#xd;
+			&lt;li&gt;unp/blackBackButton.png&lt;/li&gt;&#xd;
+			&lt;li&gt;unp/home.png&lt;/li&gt;&#xd;
 		&lt;/ul&gt;&#xd;
 	&lt;/div&gt;&#xd;
 	&lt;/div&gt;&#xd;
 &lt;/xp:view&gt;</render-markup>
       </designer-extension>
     </composite-extension>
-    <property>
-      <property-name>title</property-name>
-      <property-class>string</property-class>
-      <display-name>title of page</display-name>
-    </property>
     <property>
       <property-name>backButtonText</property-name>
       <property-class>string</property-class>
@@ -81,6 +80,20 @@ database</editor-parameter>
       </property-extension>
     </property>
     <property>
+      <property-name>searchPage</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <default-value>UnpSearch.xsp</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>title</property-name>
+      <property-class>string</property-class>
+      <display-name>title of page</display-name>
+    </property>
+    <property>
       <property-name>viewsButton</property-name>
       <property-class>boolean</property-class>
       <display-name>View Button</display-name>
@@ -88,15 +101,6 @@ database</editor-parameter>
         <designer-extension>
           <editor>com.ibm.std.Boolean</editor>
           <default-value>false</default-value>
-        </designer-extension>
-      </property-extension>
-    </property>
-    <property>
-      <property-name>searchPage</property-name>
-      <property-class>string</property-class>
-      <property-extension>
-        <designer-extension>
-          <default-value>UnpSearch.xsp</default-value>
         </designer-extension>
       </property-extension>
     </property>
