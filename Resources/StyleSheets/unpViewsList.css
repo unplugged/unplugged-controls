@@ -112,7 +112,7 @@ a.menulink {
 	}
 	.navScrollArea ul {
 		padding: 0px;
-		margin: 20px;
+		margin-top: 0px;
 	}
 	.navScrollArea ul li:first-child {
 		-webkit-border-top-left-radius: 8px;
