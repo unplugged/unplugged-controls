@@ -28,6 +28,11 @@
 	</xp:link>
 	<xp:br></xp:br>
 	<xp:br></xp:br>
+	<xp:link escape="true" text="Accordian Large Data Set" id="link6"
+		value="/UnpDemoAccordianLargeData.xsp" style="font-size:18pt">
+	</xp:link>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
 	<xp:link escape="true" text="Demo of all widgets" id="link3"
 		style="font-size:18pt" value="/UnpDemoWidgets.xsp"></xp:link>
 </xp:view>
