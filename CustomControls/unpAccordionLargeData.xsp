@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:this.beforeRenderResponse><![CDATA[#{javascript:if(!(applicationScope.containsKey('PATH'))){
+	applicationScope.put('PATH', facesContext.getExternalContext().getRequestContextPath());
+}
+}]]></xp:this.beforeRenderResponse>
+	<xp:this.resources>
+		<xp:styleSheet href="/unpaccordianlarge.css"></xp:styleSheet>
+		<xp:script src="/unpAccordionLarge.js" clientSide="true"></xp:script>
+	</xp:this.resources>
+
+	<div>	
+		<ul id="summaryList">
+			<xp:repeat id="repeat2" rows="999" 
+				value="#{javascript:@Unique(@DbColumn(@DbName(), compositeData.viewName, 1))}"
+				var="rowData">
+				<li class="categoryRow" onClick="javascript:fetchDetails(this,'#{javascript:compositeData.viewName;}','#{rowData}')">
+					<xp:text escape="true" id="computedField2" value="#{rowData}"
+						style="font-weight:bold;font-size:16pt;margin-left:5.0px">
+					</xp:text>
+				</li>
+		  		<div class="summaryDataRow"></div>
+			</xp:repeat>
+		</ul>
+	</div>
+</xp:view>
