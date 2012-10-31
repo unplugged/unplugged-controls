@@ -2,13 +2,14 @@
 <!DOCTYPE note SYSTEM 'xmlschemas/domino_8_5_3.dtd'>
 <note default='true' class='icon' xmlns='http://www.lotus.com/dxl' version='8.5'
  maintenanceversion='3.0' replicaid='80257AA1002D0DF3'>
-<noteinfo noteid='11a' unid='4468461EE129B1F780257AA1002D0DF5' sequence='3'>
+<noteinfo noteid='11a' unid='4468461EE129B1F780257AA1002D0DF5' sequence='6'>
 <created><datetime dst='true'>20121024T091206,93+01</datetime></created>
-<modified><datetime dst='true'>20121024T091207,00+01</datetime></modified>
-<revised><datetime dst='true'>20121024T091206,99+01</datetime></revised>
-<lastaccessed><datetime dst='true'>20121024T091207,00+01</datetime></lastaccessed>
+<modified><datetime>20121031T075625,35+00</datetime></modified>
+<revised><datetime>20121031T075625,34+00</datetime></revised>
+<lastaccessed><datetime>20121031T075625,35+00</datetime></lastaccessed>
 <addedtofile><datetime dst='true'>20121024T091206,96+01</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
 <item name='IconBitmap' summary='true'>
 <rawitemdata type='6'>
 AiAgAQAA///////wD///gAH//gAAf/wAAD/4AAAf8AAAD+AAAAfgAAAHwAAAA8AAAAPAAAADgAAA
@@ -24,7 +25,8 @@ L2ZvgAAACMZmZmZmZmZmZmZmbIAAAACMZmZmZmZmZmZmZsgAAAAACMZmZmZmZmZmZmyAAAAAAACM
 9mZmZmZmZm/IAAAAAAAACIz2ZmZmZm/IgAAAAAAAAAAIiMZmZmyIgAAAAAAAAAAAAACIiIiIAAAA
 AAAAUEECICABAAD/////+A4DgA==
 </rawitemdata></item>
-<item name='$Flags'><text>J</text></item>
 <item name='$Daos'><text>0</text></item>
-<item name='$TITLE'><text>Unplugged Custom Controls Library</text></item></note>
+<item name='$TITLE'><text>Unplugged Custom Controls Library</text></item>
+<item name='$Flags'><text>J</text></item>
+<item name='$FlagsNoRefresh'><text>rv</text></item></note>
 
