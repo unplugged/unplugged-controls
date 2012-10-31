@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE agent SYSTEM 'xmlschemas/domino_8_5_3.dtd'>
+<agent name='Import People' xmlns='http://www.lotus.com/dxl' version='8.5'
+ maintenanceversion='3.0' replicaid='80257AA1002D0DF3' hide='v3' publicaccess='false'
+ designerversion='8.5.3'>
+<noteinfo noteid='114a' unid='6120F412C3D1EFCC80257AA8003672C0' sequence='11'>
+<created><datetime>20121031T095443,20+00</datetime></created>
+<modified><datetime>20121031T100434,15+00</datetime></modified>
+<revised><datetime>20121031T100434,14+00</datetime></revised>
+<lastaccessed><datetime>20121031T100434,15+00</datetime></lastaccessed>
+<addedtofile><datetime>20121031T095443,23+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<designchange><datetime>20121031T100436,23+00</datetime></designchange>
+<trigger type='actionsmenu'/>
+<documentset type='runonce'/><code event='options'><lotusscript>%REM
+	Agent Import People
+	Created Oct 31, 2012 by Matt White/Exhilarate
+	Description: Comments for Agent
+%END REM
+Option Public
+Option Declare
+
+
+</lotusscript></code><code event='initialize'><lotusscript>Sub Initialize
+	On Error GoTo err_run
+	Dim session As New NotesSession
+	Dim db As NotesDatabase
+	Set db = session.CurrentDatabase
+	Dim uiws As New NotesUIWorkspace
+	Dim fileCSV As Variant
+	'Declare variables to hold data
+	Dim counter As Integer
+	Dim filenum
+	Dim country As String
+	Dim ou As NotesDocument
+	Dim city As String
+	Dim address1, address2
+	Dim zip As String
+	Dim phone
+	counter =0
+	filenum = FreeFile
+	Dim strLine As Variant
+	fileCSV = "Z:\Downloads\workbook2.csv"
+	'If the user chose a file then process
+	Open fileCSV For Input As filenum
+	Do Until EOF(filenum)
+		'Read a line of data
+		'Input #filenum%, country, address1, address2, city, zip, phone
+		Line Input #filenum, strLine
+		strLine = Split(strLine, ",")
+		Set ou = db.createdocument
+		ou.Form = "Employee"
+		ou.name = strLine(0)
+		ou.birthday = strLine(1)
+		ou.email = strLine(2)
+		ou.startdate = strLine(3)
+		ou.manager = strLine(4)
+		ou.dept = strLine(5)
+		ou.countries = strLine(6)
+		ou.description = strLine(7)
+		ou.add_desc = strLine(8)
+		Call ou.Computewithform(false, false)
+		Call ou.save(False, False)
+		counter = counter +1
+	Loop
+	MsgBox "You imported " &amp; counter &amp; " records."
+	Exit Sub
+err_run:
+	Print Error &amp; " at " &amp; Erl
+	Exit Sub
+End Sub</lotusscript></code>
+<rundata processeddocs='0' exitcode='0' agentdata='B8999980E5FE63F380257AA800375FFF'>
+<agentmodified><datetime>20121031T100434,15+00</datetime></agentmodified>
+<agentrun><datetime>20121031T100559,20+00</datetime></agentrun>
+<runlog>Started running agent 'Import People' on 31/10/2012 10:05:57
+Ran LotusScript code
+Done running agent 'Import People' on 31/10/2012 10:05:59
+</runlog></rundata></agent>
+
