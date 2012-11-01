@@ -6,7 +6,7 @@
 
 	<xc:unpScrollableArea>
 		<xp:this.facets>
-			<xp:panel xp:key="facet_1">
+			<xp:panel xp:key="facet_1" style="background-color:rgb(255,255,255)">
 				<div>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
 						eu
