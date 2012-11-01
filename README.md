@@ -1,8 +1,4 @@
-# Unplugged Custom Controls Library
-You can see a demonstration of the custom controls at [unp.londc.com](http://unp.londc.com/ "unp.londc.com").
-
-* * *
-
+# Unplugged Templates 2 Project
 ## Introduction
 This project will create a suite of re-usable and performant custom controls which are tailored towards use in the Teamstudio Unplugged mobile application. The custom controls will perform common tasks with the aim of making developing a mobile interface to an existing Notes or Domino application a simple process which does not require specialist mobile development knowledge.
 
@@ -11,7 +7,7 @@ The project is split into two stages; stage one will see the creation of the cus
 The code for the project will be made available via four projects on Github, one containing the custom controls and then one each for the template which are developed using the custom controls. Once the project has been completed the custom controls will be released to OpenNTF and made available to the Importer and Exporter project which allows tighter integration to Domino Designer for developers.
 
 The custom controls will be developed to work with the following different browsers:
-* iOS 5 (for iPhone 4+ and iPad 2+)
+* iOS 5 and iOS6 (for iPhone 4+ and iPad 2+)
 * Android 3.x
 * Android 4.x
 * Chrome (Desktop)
@@ -19,24 +15,29 @@ The custom controls will be developed to work with the following different brows
 
 If required then further work can be undertaken to make the custom controls work in Firefox and Internet Explorer, however the templates which we are developing already have a (sometimes basic) web interface already defined. Our suggestion is that this project be aimed entirely at Webkit based browsers (i.e. the mobile browsers plus Safari and Chrome on the desktop).
 
+You can see a demonstration of the custom controls at [unp.londc.com](http://unp.londc.com/ "unp.londc.com").
+
 ## Deliverables
 
 ### Header Custom Control
 * Grey / Black gradient as per existing Unplugged templates
 * Unplugged Logo in top left corner for tablets in landscape mode
-* Home button in top right
+* Home button in top right	
 * Search box in top right for tablet devices
 * Search button in top right for phones
-* The developer will specify the type of search being executed (a database search or a local search). 
-* If the search is against the database, the developer will specify the name of the XPage which the user will be taken to to display search results
+* The developer will specify the type of search being executed (a database search or a local search or no search at all). 
+* If the search is against the database, the developer will specify the name of the XPage which the user will be taken to to display search results.
+* If the search is against the database, the developer must also then create a search results XPage with which to display results (see search results custom control).
+* If the search is local then the content on the page which will be search will be tables or lists which have content items with the data-row class associated with them.
 * It will be possible for the developer to disable the search button / box function
 * Title text in the centre of the bar
 * The bar will differ will be deeper for tablet devices
-* For devices with less than 1000px width, a “Views” button will be available which will integrate with the Views List custom control
+* For all devices except tablets in landscape, a “Views” button will be available which will integrate with the Views List custom control
 * It will be possible for the developer to disable the views button
 * Back button in the top left which will replace either the Logo or the Views button if the developer enables it
 * The bar will always be fixed to the top of the page and push the top of any content to be below it.
 * When switching between orientations the bar will automatically reconfigure itself.
+
 
 ###Footer Custom Control
 * Grey / Black gradient as per existing Unplugged templates
@@ -52,7 +53,7 @@ This custom control will handle the navigation between views in the application.
 
 * The custom control will allow the developer to pass in a list of menu items which will be displayed in the application
 * If the user is on a phone or portrait tablet, the list will be hidden by default and will only show when then user presses the “Views” button in the header bar
-* If the user is on a landscape tablet (i.e. screen resolution is greater than 1000px wide) the list will automatically display
+* If the user is on a landscape tablet the list will automatically display
 * The list will not scroll if the content portion of the page scrolls
 * The list of items will be independently scrollable if it is taller than the screen
 
@@ -71,6 +72,7 @@ This custom control will display the contents of a non-categorised view. The vie
 * The developer will specify which XPage will be opened when the user clicks a document in the view
 * The developer will specify whether the view should fill the entire contents of the page or whether it will be slightly inset with rounded corners
 * The developer will specify how many rows of data to load initially and then whether more data is loaded using “Load More” button which the user must press or whether the next chunk of data is loaded as the user scrolls down the page (i.e. infinite scrolling)
+* The developer will be able to restrict the view to a single category, if no category is specified then all data will be displayed.
 
 
 ### Search Results Custom Control
@@ -83,18 +85,9 @@ This custom control will be used by the developer if they have enabled the datab
 * The developer will specify the maximum rows of data to be returned in the search results
 
 
-### Accordion (Small Data) Custom Control
-This custom control will be used to display categorised views for small data sets (which is taken to be less than 100 rows of data). Each category will be displayed as an accordion item. When the view is opened initially all categories will be collapsed.
 
-* All data will be loaded when the page loads
-* The developer will pass in the name of the view
-* As with the flat view, the control will display data from two columns in the view, the main description and then sub description.
-* The developer will specify which XPage is opened when a document is clicked.
-* When a category is clicked it will expand and any open category will be collapsed
-
-
-### Accordion (Large Data) Custom Control
-This custom control will be used to display categorised views for large data sets (more than 100 documents). Each category will be displayed as an accordion item. When the view is opened initially all categories will be collapsed.
+### Accordion Custom Control
+This custom control will be used to display categorised views. Each category will be displayed as an accordion item. When the view is opened initially all categories will be collapsed.
 
 * Only category names will be loaded when the page loads initially.
 * The developer will pass in the name of the view
@@ -110,7 +103,7 @@ This custom control provides a simple wrapper into which fields can be added by 
 * The wrapper will have a border defined
 * There will be documentation and examples of how to add fields of different types in read mode
 * Text
-* Textarea
+* Text area
 * Date
 * Time
 * Number
@@ -120,6 +113,8 @@ This custom control provides a simple wrapper into which fields can be added by 
 * List Box
 * Rich Text (read only)
 * File Attachment
+* CSS will be created which will style individual input controls (such as buttons, labels and input fields)
+* Where configuration is required to make use of the native input controls (for example the date picker in iOS) this will be documented in detail.
 * The wrapper will contain an Edit button which switches the current document to use the Form Editor Custom Control
 * To support the Edit button the developer will specify the name of the XPage to open for edit mode
 
@@ -175,6 +170,8 @@ The Swipe View control will allow the developer to quickly display all images wh
 Each of the templates will use the custom controls as defined above, there will not be any code changes made to the custom controls themselves. Any custom code (such as the form designs or any extra views) will be created in different design elements.
 #### Document Library Template
 A new set of views will be created to be used by the Custom Controls, and new Custom Controls will be created to display individual documents.
+
+The design of the application will be based upon the standard Document Library which ships with Domino 8.5.3, not the existing Document Library template produced in the first iteration of this project.
 #### Teamroom Template
 A new set of views will be created to be used by the Custom Controls, and new Custom Controls will be created to display individual documents.
 #### Journal Template
@@ -196,6 +193,10 @@ By default we are only going to test browsers for the desktop which are based on
 ## Definitions
 ### Performant
 The aim for all page loads is that they will happen within one second of the user performing an operation. This is based upon the iOS platform using an iPhone 4 as the test case (on the assumption that more recent hardware will be the same or faster). The tests will be run against the three sample templates. Performance for larger custom forms may not stay within these targets depending upon the device being used and the size of the screens being loaded.
+
+The target for one second response times will be tested against applications which contain a minimum of 100 records.
+
+Testing will also be performed with data sets of 1,000 records to make sure that performance is still acceptable with a large data set.
 
 ### Phone vs Tablet
 We are calling devices phones or tablets based upon the screen resolutions.
