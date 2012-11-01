@@ -1,41 +1,39 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>Unplugged Controls by unplugged</title>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Unplugged Controls : " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Unplugged Controls</title>
   </head>
 
   <body>
-    <div id="container">
-      <div class="inner">
 
-        <header>
-          <h1>Unplugged Controls</h1>
-          <h2></h2>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/unplugged/unplugged-controls">View on GitHub</a>
+
+          <h1 id="project_title">Unplugged Controls</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/unplugged/unplugged-controls/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/unplugged/unplugged-controls/tarball/master">Download this project as a tar.gz file</a>
+            </section>
         </header>
+    </div>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/unplugged/unplugged-controls/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/unplugged/unplugged-controls/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/unplugged/unplugged-controls" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>Unplugged Templates 2 Project</h1>
 
-        <hr>
-
-        <section id="main_content">
-          <h1>Unplugged Custom Controls Library</h1>
-
-<p>You can see a demonstration of the custom controls at <a href="http://unp.londc.com/" title="unp.londc.com">unp.londc.com</a>.</p>
-
-<hr><h2>Introduction</h2>
+<h2>Introduction</h2>
 
 <p>This project will create a suite of re-usable and performant custom controls which are tailored towards use in the Teamstudio Unplugged mobile application. The custom controls will perform common tasks with the aim of making developing a mobile interface to an existing Notes or Domino application a simple process which does not require specialist mobile development knowledge.</p>
 
@@ -46,12 +44,14 @@
 <p>The custom controls will be developed to work with the following different browsers:</p>
 
 <ul>
-<li>iOS 5 (for iPhone 4+ and iPad 2+)</li>
+<li>iOS 5 and iOS6 (for iPhone 4+ and iPad 2+)</li>
 <li>Android 3.x</li>
 <li>Android 4.x</li>
 <li>Chrome (Desktop)</li>
 <li>Safari (Desktop)</li>
 </ul><p>If required then further work can be undertaken to make the custom controls work in Firefox and Internet Explorer, however the templates which we are developing already have a (sometimes basic) web interface already defined. Our suggestion is that this project be aimed entirely at Webkit based browsers (i.e. the mobile browsers plus Safari and Chrome on the desktop).</p>
+
+<p>You can see a demonstration of the custom controls at <a href="http://unp.londc.com/" title="unp.londc.com">unp.londc.com</a>.</p>
 
 <h2>Deliverables</h2>
 
@@ -60,20 +60,25 @@
 <ul>
 <li>Grey / Black gradient as per existing Unplugged templates</li>
 <li>Unplugged Logo in top left corner for tablets in landscape mode</li>
-<li>Home button in top right</li>
+<li>Home button in top right<br>
+</li>
 <li>Search box in top right for tablet devices</li>
 <li>Search button in top right for phones</li>
-<li>The developer will specify the type of search being executed (a database search or a local search). </li>
-<li>If the search is against the database, the developer will specify the name of the XPage which the user will be taken to to display search results</li>
+<li>The developer will specify the type of search being executed (a database search or a local search or no search at all). </li>
+<li>If the search is against the database, the developer will specify the name of the XPage which the user will be taken to to display search results.</li>
+<li>If the search is against the database, the developer must also then create a search results XPage with which to display results (see search results custom control).</li>
+<li>If the search is local then the content on the page which will be search will be tables or lists which have content items with the data-row class associated with them.</li>
 <li>It will be possible for the developer to disable the search button / box function</li>
 <li>Title text in the centre of the bar</li>
 <li>The bar will differ will be deeper for tablet devices</li>
-<li>For devices with less than 1000px width, a “Views” button will be available which will integrate with the Views List custom control</li>
+<li>For all devices except tablets in landscape, a “Views” button will be available which will integrate with the Views List custom control</li>
 <li>It will be possible for the developer to disable the views button</li>
 <li>Back button in the top left which will replace either the Logo or the Views button if the developer enables it</li>
 <li>The bar will always be fixed to the top of the page and push the top of any content to be below it.</li>
-<li>When switching between orientations the bar will automatically reconfigure itself.
-Footer Custom Control</li>
+<li>When switching between orientations the bar will automatically reconfigure itself.</li>
+</ul><h3>Footer Custom Control</h3>
+
+<ul>
 <li>Grey / Black gradient as per existing Unplugged templates</li>
 <li>In the bottom left will be a button which will sync the current application. For tablets this button will include text, for phones it will just be an icon</li>
 <li>In the bottom right will be a button which will take the user to a new document as specified by the developer</li>
@@ -88,7 +93,7 @@ Footer Custom Control</li>
 <ul>
 <li>The custom control will allow the developer to pass in a list of menu items which will be displayed in the application</li>
 <li>If the user is on a phone or portrait tablet, the list will be hidden by default and will only show when then user presses the “Views” button in the header bar</li>
-<li>If the user is on a landscape tablet (i.e. screen resolution is greater than 1000px wide) the list will automatically display</li>
+<li>If the user is on a landscape tablet the list will automatically display</li>
 <li>The list will not scroll if the content portion of the page scrolls</li>
 <li>The list of items will be independently scrollable if it is taller than the screen</li>
 </ul><h3>Scrollable Area Custom Control</h3>
@@ -107,6 +112,7 @@ Footer Custom Control</li>
 <li>The developer will specify which XPage will be opened when the user clicks a document in the view</li>
 <li>The developer will specify whether the view should fill the entire contents of the page or whether it will be slightly inset with rounded corners</li>
 <li>The developer will specify how many rows of data to load initially and then whether more data is loaded using “Load More” button which the user must press or whether the next chunk of data is loaded as the user scrolls down the page (i.e. infinite scrolling)</li>
+<li>The developer will be able to restrict the view to a single category, if no category is specified then all data will be displayed.</li>
 </ul><h3>Search Results Custom Control</h3>
 
 <p>This custom control will be used by the developer if they have enabled the database search from the header bar. The custom control will expect a URL parameter containing the search query.</p>
@@ -117,19 +123,9 @@ Footer Custom Control</li>
 <li>The developer will specify which XPage will be opened when the user clicks a document in the view</li>
 <li>The developer will specify whether the view should fill the entire contents of the page or whether it will be slightly inset with rounded corners</li>
 <li>The developer will specify the maximum rows of data to be returned in the search results</li>
-</ul><h3>Accordion (Small Data) Custom Control</h3>
+</ul><h3>Accordion Custom Control</h3>
 
-<p>This custom control will be used to display categorised views for small data sets (which is taken to be less than 100 rows of data). Each category will be displayed as an accordion item. When the view is opened initially all categories will be collapsed.</p>
-
-<ul>
-<li>All data will be loaded when the page loads</li>
-<li>The developer will pass in the name of the view</li>
-<li>As with the flat view, the control will display data from two columns in the view, the main description and then sub description.</li>
-<li>The developer will specify which XPage is opened when a document is clicked.</li>
-<li>When a category is clicked it will expand and any open category will be collapsed</li>
-</ul><h3>Accordion (Large Data) Custom Control</h3>
-
-<p>This custom control will be used to display categorised views for large data sets (more than 100 documents). Each category will be displayed as an accordion item. When the view is opened initially all categories will be collapsed.</p>
+<p>This custom control will be used to display categorised views. Each category will be displayed as an accordion item. When the view is opened initially all categories will be collapsed.</p>
 
 <ul>
 <li>Only category names will be loaded when the page loads initially.</li>
@@ -146,7 +142,7 @@ Footer Custom Control</li>
 <li>The wrapper will have a border defined</li>
 <li>There will be documentation and examples of how to add fields of different types in read mode</li>
 <li>Text</li>
-<li>Textarea</li>
+<li>Text area</li>
 <li>Date</li>
 <li>Time</li>
 <li>Number</li>
@@ -156,6 +152,8 @@ Footer Custom Control</li>
 <li>List Box</li>
 <li>Rich Text (read only)</li>
 <li>File Attachment</li>
+<li>CSS will be created which will style individual input controls (such as buttons, labels and input fields)</li>
+<li>Where configuration is required to make use of the native input controls (for example the date picker in iOS) this will be documented in detail.</li>
 <li>The wrapper will contain an Edit button which switches the current document to use the Form Editor Custom Control</li>
 <li>To support the Edit button the developer will specify the name of the XPage to open for edit mode</li>
 </ul><h3>Form Editor Custom Control</h3>
@@ -213,6 +211,8 @@ Footer Custom Control</li>
 
 <p>A new set of views will be created to be used by the Custom Controls, and new Custom Controls will be created to display individual documents.</p>
 
+<p>The design of the application will be based upon the standard Document Library which ships with Domino 8.5.3, not the existing Document Library template produced in the first iteration of this project.</p>
+
 <h4>Teamroom Template</h4>
 
 <p>A new set of views will be created to be used by the Custom Controls, and new Custom Controls will be created to display individual documents.</p>
@@ -244,6 +244,10 @@ Footer Custom Control</li>
 
 <p>The aim for all page loads is that they will happen within one second of the user performing an operation. This is based upon the iOS platform using an iPhone 4 as the test case (on the assumption that more recent hardware will be the same or faster). The tests will be run against the three sample templates. Performance for larger custom forms may not stay within these targets depending upon the device being used and the size of the screens being loaded.</p>
 
+<p>The target for one second response times will be tested against applications which contain a minimum of 100 records.</p>
+
+<p>Testing will also be performed with data sets of 1,000 records to make sure that performance is still acceptable with a large data set.</p>
+
 <h3>Phone vs Tablet</h3>
 
 <p>We are calling devices phones or tablets based upon the screen resolutions.</p>
@@ -254,15 +258,18 @@ Footer Custom Control</li>
 <li>A screen width of less than 700px but greater than or equal to 480px is taken to be a phone in landscape mode</li>
 <li>A screen width of less than 480px is taken to be a phone in portrait mode</li>
 </ul><p>It’s worth noting that retina iOS devices physically have more pixels than they report to me the developer, so all the above figures are based on the reported pixels as opposed to the physical number of pixels.</p>
-        </section>
-
-        <footer>
-          Unplugged Controls is maintained by <a href="https://github.com/unplugged">unplugged</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-        
-      </div>
+      </section>
     </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Unplugged Controls maintained by <a href="https://github.com/unplugged">unplugged</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
   </body>
 </html>
