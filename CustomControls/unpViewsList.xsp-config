@@ -30,19 +30,34 @@
 &lt;/xp:view&gt;</render-markup>
       </designer-extension>
     </composite-extension>
-    <property>
+    <property-type>
       <property-name>menuItem</property-name>
-      <property-class>java.util.Collection</property-class>
-      <display-name>Menu list item</display-name>
+      <property>
+        <property-name>label</property-name>
+        <property-class>string</property-class>
+      </property>
       <property-extension>
-        <property-item-class>string</property-item-class>
+        <container-class>java.util.Collection</container-class>
         <collection-property>true</collection-property>
-        <designer-extension>
-          <editor/>
-        </designer-extension>
       </property-extension>
-      <description>Give menu item name for view list and taget XPage name to produce the results, separated by a comma. E.g:&#xd;
-By Date, docsByDate.xsp</description>
-    </property>
+      <property>
+        <property-name>page</property-name>
+        <property-class>string</property-class>
+        <property-extension>
+          <designer-extension>
+            <editor>com.ibm.workplace.designer.property.editors.PagePicker</editor>
+          </designer-extension>
+        </property-extension>
+      </property>
+      <property>
+        <property-name>icon</property-name>
+        <property-class>string</property-class>
+        <property-extension>
+          <designer-extension>
+            <editor/>
+          </designer-extension>
+        </property-extension>
+      </property>
+    </property-type>
   </composite-component>
 </faces-config>

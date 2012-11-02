@@ -9,6 +9,11 @@
 	padding-right: 30px;
 }
 
+.iconleft {
+	float: left;
+	padding-right: 30px;
+}
+
 a.menulink {
 	padding-right: 100%;
 	padding-top: 20px;
@@ -17,6 +22,11 @@ a.menulink {
 	font-family: Helvetica;
 	font-size: 12pt;
 	color: rgb(255, 255, 255)
+}
+
+.menutext {
+	position: relative;
+	top: 5px;	
 }
 
 .navScrollArea {
@@ -48,8 +58,21 @@ a.menulink {
 	background-image:    -moz-linear-gradient( #323232 /*{a-bup-background-start}*/, #151515 /*{a-bup-background-end}*/); /* FF3.6 */
 	background-image:     -ms-linear-gradient( #323232 /*{a-bup-background-start}*/, #151515 /*{a-bup-background-end}*/); /* IE10 */
 	background-image:      -o-linear-gradient( #323232 /*{a-bup-background-start}*/, #151515 /*{a-bup-background-end}*/); /* Opera 11.10+ */
-	background-image:         linear-gradient( #323232 /*{a-bup-background-start}*/, #151515 /*{a-bup-background-end}*/);
-	
+	background-image:         linear-gradient( #323232 /*{a-bup-background-start}*/, #151515 /*{a-bup-background-end}*/);	
+}
+
+.navScrollArea ul li.viewMenuItemSelected {
+	border: 1px solid #111111 /*{d-bup-border}*/;
+	background: #387bbe /*{d-bup-background-color}*/;
+	font-weight: bold;
+	color: #fefffe /*{d-bup-color}*/;
+	text-shadow: 0 /*{d-bup-shadow-x}*/ 1px /*{d-bup-shadow-y}*/ 0 /*{d-bup-shadow-radius}*/ #000 /*{d-bup-shadow-color}*/;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #387bbe /*{d-bup-background-start}*/), to( #387bbe /*{d-bup-background-end}*/)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient( #387bbe /*{d-bup-background-start}*/, #387bbe /*{d-bup-background-end}*/); /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #387bbe /*{d-bup-background-start}*/, #387bbe /*{d-bup-background-end}*/); /* FF3.6 */
+	background-image:     -ms-linear-gradient( #387bbe /*{d-bup-background-start}*/, #387bbe /*{d-bup-background-end}*/); /* IE10 */
+	background-image:      -o-linear-gradient( #387bbe /*{d-bup-background-start}*/, #387bbe /*{d-bup-background-end}*/); /* Opera 11.10+ */
+	background-image:         linear-gradient( #387bbe /*{d-bup-background-start}*/, #387bbe /*{d-bup-background-end}*/);	
 }
 
 .navScrollArea ul li:first-child {

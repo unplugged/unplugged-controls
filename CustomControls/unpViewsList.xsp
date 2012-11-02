@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
-
 	<xp:this.resources>
 		<xp:metaData name="viewport"
 			content="width=device-width, initial-scale=2.3, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
@@ -8,32 +7,45 @@
 		<xp:metaData name="apple-mobile-web-app-status-bar-style"
 			content="black-translucent">
 		</xp:metaData>
-		<xp:metaData name="apple-mobile-web-app-capable" content="yes">
+		<xp:metaData name="apple-mobile-web-app-capable"
+			content="yes">
 		</xp:metaData>
 		<xp:styleSheet href="/unpViewsList.css"></xp:styleSheet>
 		<xp:script src="/unp/jquery-1.7.2.min.js" clientSide="true"></xp:script>
 		<xp:script src="/unp/iScroll.js" clientSide="true"></xp:script>
+		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 	</xp:this.resources>
 	<div id="menuPane" class="offScreen">
 		<xp:panel styleClass="navScrollArea" id="navScrollArea">
 			<ul>
 				<xp:repeat id="repeat1" rows="30" disableOutputTag="true"
 					var="menuItem" value="#{javascript:compositeData.menuItem;}">
-					<li class="viewMenuItem">
-						<xp:panel id="menulink" tagName="a" styleClass="menulink">
+					<xp:panel id="viewMenuItem" tagName="li">
+						<xp:this.styleClass><![CDATA[#{javascript:if (("/" + getCurrentXPage()) == menuItem.page){
+	return "viewMenuItemSelected";
+}else{
+	return "viewMenuItem";
+}}]]></xp:this.styleClass>
+						<xp:panel id="menulink" tagName="a"
+							styleClass="menulink">
 							<xp:this.attrs>
 								<xp:attr name="href"
-									value="#{javascript:menuItem.slice(menuItem.indexOf(',') + 1);}">
+									value="#{javascript:getDbPath() + menuItem.page;}">
 								</xp:attr>
 							</xp:this.attrs>
+							<xp:image url="#{javascript:menuItem.icon}"
+								id="image2" styleClass="iconleft">
+								<xp:this.rendered><![CDATA[#{javascript:menuItem.icon != null && menuItem.icon != ""}]]></xp:this.rendered>
+							</xp:image>
 							<xp:text id="menutext" styleClass="menutext"
-								value="#{javascript:menuItem.slice(0, menuItem.indexOf(','));}">
+								value="#{javascript:menuItem.label;}">
 							</xp:text>
-							<xp:image url="/unp/right-arrow-trans-white-large.png"
-								id="image1" styleClass="icon">
+							<xp:image
+								url="/unp/right-arrow-trans-white-large.png" id="image1"
+								styleClass="icon">
 							</xp:image>
 						</xp:panel>
-					</li>
+					</xp:panel>
 				</xp:repeat>
 			</ul>
 		</xp:panel>
