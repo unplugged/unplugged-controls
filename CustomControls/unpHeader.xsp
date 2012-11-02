@@ -17,7 +17,7 @@
 		<xp:image styleClass="companyLogo" url="/unp/unplugged_logo.png"
 			id="companyLogo"></xp:image>
 		<xp:panel styleClass="backButton">
-			<xp:this.rendered><![CDATA[#{javascript:if(compositeData.backButtonText == ''){
+			<xp:this.rendered><![CDATA[#{javascript:if(compositeData.backButtonText == '' || compositeData.backButtonText == null){
 	return false;
 }
 else{ return true;
@@ -27,12 +27,10 @@ else{ return true;
 			</xp:link>
 		</xp:panel>
 		<xp:panel styleClass="viewsButton">
-			<xp:this.rendered><![CDATA[#{javascript:if (compositeData.backButtonText != ""){
+			<xp:this.rendered><![CDATA[#{javascript:if (compositeData.backButtonText != "" && compositeData.backButtonText != null){
 	return false;
-}else if(compositeData.viewsButton == true){
-	return true;
 }else{
-	return false;
+	return compositeData.viewsButton;
 }}]]></xp:this.rendered>
 			<xp:label value="Views" id="viewslabel"
 				styleClass="viewslabel">

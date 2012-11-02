@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="vehicles_ship_front.png" maintenanceversion="3.0" name="icons/vehicles_ship_front.png" noquery="true" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="34ca" sequence="2" unid="D649AC51224CB6A980257AAA00404804">
+<created><datetime>20121102T114207,40+00</datetime></created>
+<modified><datetime>20121102T120250,61+00</datetime></modified>
+<revised><datetime>20121102T120250,60+00</datetime></revised>
+<lastaccessed><datetime>20121102T120250,61+00</datetime></lastaccessed>
+<addedtofile><datetime>20121102T114210,24+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
+iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
+bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
+eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0
+MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
+dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
+dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEu
+MC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVz
+b3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1N
+Ok9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo2RDY4NTFDQjA5MjA2ODExOEMxNEE5MjM2Njg3
+REM3QyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0Mzk5QjU0NDg5RjkxMUUxQkNENzlCMkUy
+MUQ4Qjg1NSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0Mzk5QjU0Mzg5RjkxMUUxQkNENzlC
+MkUyMUQ4Qjg1NSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgTWFjaW50
+b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OTQ2RDU4
+RDc2QzIxNjgxMTg3MUY4N0RFODAyNTA3QjMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NkQ2
+ODUxQ0IwOTIwNjgxMThDMTRBOTIzNjY4N0RDN0MiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRm
+OlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz40GEFvAAAC8klEQVR42mL8//8/
+AzGAkZERTK/dsKUfJhYc4FMIookxg4WBRPD+40cGcgDJFr169YYsixhxeRsWVOQAbGYS9BEwTs4Q
+awEwzkwo8hHQMl8iLNlMkY9A4N///+VEKNtMVmKAuQrks2fPX4CYnUBcjodmwJfUMSxat3ErhqIP
+Hz52QpmEaJQgR7YUw6KXr169EBcTE0eKHwyLHz99tl5WWioQLdGgm/MSSEngtujli4zff/5GEyol
+njx7vgZftL5/+2YWsgATugpNTa0NQOoYA2XgWENt5V68cfTnzx+GN69fHVBUVOpmY2NlxmbK4ydP
+T8jKSFtgk/v06fP3T58+FqCLY/jo79+/DCoqKuefPHl8FMTGhv/9/ceJSw4YNSsrSgqeEkx1v4E+
+AruAmTn685cv9zg4OFgx89U/Fpg6lAL3/YePgkLC+dh8yoQt6EBYRETkyYsXL3bB+Mj4379/nOhi
+v3//Bgbbx6n5WamfiMpHv38jXMrOzp4MDPNHnJycbCjB++8fG7I6EHj77t0rERHRZlypA6ePQJiH
+h/flmzdvMHwFzIisyPxfv3//Z/j/rxHo0x9EF0HoLuXh4U758uXrI6Dv4L76/+8/io/ev3//UEJC
+fN7Pn78YyPIRCLOwsL18/+7dSbQ4YkGKm/+cnBwtX79++/EHSwLBaREoNaHjz18+VQGDB84HluYs
+MPbHjx8/8PPzL4XxiQ46UF5oqilDFz5SXFn3hpubRwSmD6QOBL59+3YOmNJ+ECoqsAYdNvDm1avw
+N69fnwIFFRAww4Lu27evq8hqnADDH85OSE4zkpaVmycoKKTx7+/f32/fvT338tnTVG4+vhYuLm5x
+YOHK+OXzp63EWIRZBEEtCo+KZeXk4nJ6/fJl37Wrl21v3boRDrTsm6a21iSGv3+Wvn75zKGjqYaR
+m4tTKDUzJyw9Oz+TrBp25bLFv4FUD5rwtuS0LCdBIaEiUXHx8OaOHiZgUH75/PHjSWB+y8FnEUCA
+AQCZuAvifhLPXwAAAABJRU5ErkJggg==
+</jpeg>
+
+<item name="$FileModDT" sign="true"><datetime>20121102T113951,00+00</datetime></item></imageresource>
