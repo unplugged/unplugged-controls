@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core">
-	<xp:this.beforeRenderResponse><![CDATA[#{javascript:if(!(applicationScope.containsKey('PATH'))){
-	applicationScope.put('PATH', facesContext.getExternalContext().getRequestContextPath());
-}
-}]]></xp:this.beforeRenderResponse>
+	<xp:this.data>
+		<xp:dominoView var="view1"
+			viewName="#{javascript:compositeData.viewName;}">
+		</xp:dominoView>
+	</xp:this.data>
 	<xp:this.resources>
-		<xp:styleSheet href="/unpaccordianlarge.css"></xp:styleSheet>
+		<xp:styleSheet href="/unpAccordianlarge.css"></xp:styleSheet>
 		<xp:script src="/unpAccordionLarge.js" clientSide="true"></xp:script>
 	</xp:this.resources>
 
-	<div>	
+	<div>
 		<ul id="summaryList">
-			<xp:repeat id="repeat2" rows="999" 
-				value="#{javascript:@Unique(@DbColumn(@DbName(), compositeData.viewName, 1))}"
-				var="rowData">
-				<li class="categoryRow" onClick="javascript:fetchDetails(this,'#{javascript:compositeData.viewName;}','#{rowData}')">
-					<xp:text escape="true" id="computedField2" value="#{rowData}"
-						style="font-weight:bold;font-size:16pt;margin-left:5.0px">
-					</xp:text>
-				</li>
-		  		<div class="summaryDataRow"></div>
+			<xp:repeat id="repeat2" rows="999" var="rowData"
+				value="#{view1}" disableOutputTag="true">
+				<xp:panel disableOutputTag="true"
+					rendered="#{javascript:rowData.isCategory();}">
+					<li class="categoryRow"
+						onClick="javascript:fetchDetails(this,'#{javascript:compositeData.viewName;}','#{javascript:rowData.getColumnValues()[0];}')">
+						<xp:text escape="true" id="computedField2"
+							value="#{javascript:rowData.getColumnValues()[0];}"
+							styleClass="catLabel">
+						</xp:text>
+						<xp:text escape="true" id="computedField1"
+							styleClass="numDocsLabel"
+							value="#{javascript:rowData.getDescendantCount().toString();}">
+						</xp:text>
+					</li>
+				
+				<div class="summaryDataRow"></div>
+				</xp:panel>
 			</xp:repeat>
 		</ul>
 	</div>

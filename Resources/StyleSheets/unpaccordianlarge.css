@@ -151,3 +151,19 @@
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+
+.catLabel{
+	font-weight:bold;
+	font-size:12pt;
+	margin-left:5px;
+}
+.numDocsLabel{
+	font-weight:bold;
+	font-size:12pt;
+	float:right;
+	background-color:white;
+	border-radius: 8px;	
+	padding:4px 10px;
+	margin-top:9px;
+	line-height:22px;
+}

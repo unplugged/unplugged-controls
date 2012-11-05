@@ -1,17 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="85257AA7004CE5B7" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="2aa" sequence="2" unid="930C40F088CAA4AF85257AA800123006">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="85257AAD004BBC1D" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="18e" sequence="5" unid="930C40F088CAA4AF85257AA800123006">
 <created><datetime dst="true">20121030T231839,42-04</datetime></created>
-<modified><datetime dst="true">20121030T231903,15-04</datetime></modified>
-<revised><datetime dst="true">20121030T231903,14-04</datetime></revised>
-<lastaccessed><datetime dst="true">20121030T231903,15-04</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20121030T231839,50-04</datetime></addedtofile></noteinfo>
+<modified><datetime>20121105T143629,61-05</datetime></modified>
+<revised><datetime>20121105T143629,60-05</datetime></revised>
+<lastaccessed><datetime>20121105T143629,61-05</datetime></lastaccessed>
+<addedtofile><datetime>20121105T084717,69-05</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Richard Sharpe/O=Teamstudio</name></updatedby>
+<wassignedby><name>CN=Richard Sharpe/O=Teamstudio</name></wassignedby>
 <item name="$MimeCharSet"><text>UTF-8</text></item>
 <item name="$FileModDT" sign="true"><datetime dst="true">20121030T100129,47-04</datetime></item>
 <item name="$Flags"><text>=34QC</text></item>
 <item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$TITLE" sign="true"><text>unpAccordianlarge.css</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
 
 
-<item name="$FileNames" sign="true"><text>unpAccordianSmallData.css</text></item>
-<item name="$TITLE" sign="true"><textlist><text>unpaccordianlarge.css</text></textlist></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item></note>
+<item name="$FileNames" sign="true"><text>unpAccordianlarge.css</text></item></note>

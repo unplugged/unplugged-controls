@@ -11,6 +11,18 @@
     <composite-extension>
       <designer-extension>
         <in-palette>true</in-palette>
+        <render-markup>&lt;?xml version="1.0" encoding="UTF-8"?&gt; &#xd;
+&lt;xp:view xmlns:xp="http://www.ibm.com/xsp/core"&gt; &#xd;
+	&lt;div style="border: 2px solid #A9A9A9; padding: 3px; margin: 5px;"&gt;&#xd;
+	&lt;h1&gt;unpAccordion&lt;/h1&gt;&#xd;
+	&lt;div&gt;&#xd;
+		To use this custom control make sure you have set the Custom Properties.&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;div&gt;&#xd;
+		The 'viewName' is the name of the categorized view you want displayed.&#xd;
+The view must have only the first column categorized and then have a maximum of 2 other columns with the data you wish to be displayed. The second (flat) column will be displayed in larger blue font while the third column will be displayed in small black font (These styles can be changed in the CSS file). &#xd;
+&lt;/div&gt;&lt;/div&gt;&#xd;
+&lt;/xp:view&gt;</render-markup>
       </designer-extension>
     </composite-extension>
     <property>
