@@ -14,23 +14,39 @@
 		<xp:script src="/unp/jquery-1.7.2.min.js" clientSide="true"></xp:script>
 		<xp:script src="/unp/iScroll.js" clientSide="true"></xp:script>
 		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
+		<xp:script src="/unpViewsList.js" clientSide="true"></xp:script>
 	</xp:this.resources>
 	<div id="menuPane" class="offScreen">
 		<xp:panel styleClass="navScrollArea" id="navScrollArea">
-			<ul>
-				<xp:repeat id="repeat1" rows="30" disableOutputTag="true"
-					var="menuItem" value="#{javascript:compositeData.menuItem;}">
+			<ul id="menuitems">
+				<xp:repeat id="repeat1" rows="30"
+					disableOutputTag="true" var="menuItem"
+					value="#{javascript:compositeData.menuItem;}">
 					<xp:panel id="viewMenuItem" tagName="li">
-						<xp:this.styleClass><![CDATA[#{javascript:if (("/" + getCurrentXPage()) == menuItem.page){
-	return "viewMenuItemSelected";
+						<xp:this.styleClass><![CDATA[#{javascript:if (viewScope.menuItemIndex == null){
+	viewScope.menuItemIndex = 0;
 }else{
-	return "viewMenuItem";
+	viewScope.menuItemIndex = viewScope.menuItemIndex + 1;
+}
+if (("/" + getCurrentXPage()) == menuItem.page){
+	return "menuitem" + viewScope.menuItemIndex + " viewMenuItemSelected";
+}else{
+	return "menuitem" + viewScope.menuItemIndex + " viewMenuItem";
 }}]]></xp:this.styleClass>
 						<xp:panel id="menulink" tagName="a"
 							styleClass="menulink">
 							<xp:this.attrs>
-								<xp:attr name="href"
-									value="#{javascript:getDbPath() + menuItem.page;}">
+								<xp:attr>
+									<xp:this.name><![CDATA[#{javascript:if (menuItem.ajaxloadid != null && menuItem.ajaxloadid != ""){
+	return "onclick";
+}else{
+	return "href";
+}}]]></xp:this.name>
+									<xp:this.value><![CDATA[#{javascript:if (menuItem.ajaxloadid != null && menuItem.ajaxloadid != ""){
+	return "loadPage('" + getDbPath() + menuItem.page + " #" + menuItem.ajaxloadid + "', '" + menuItem.ajaxtargetid + "', " + viewScope.menuItemIndex + ");";
+}else{
+		return getDbPath() + menuItem.page;
+}}]]></xp:this.value>
 								</xp:attr>
 							</xp:this.attrs>
 							<xp:image url="#{javascript:menuItem.icon}"

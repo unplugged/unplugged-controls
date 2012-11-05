@@ -21,13 +21,6 @@
 		</xp:script>
 		<xp:script src="/unpViewGetMore.js" clientSide="true"></xp:script>
 	</xp:this.resources>
-	<xp:text id="script" tagName="script" escape="false">
-		<xp:this.attrs>
-			<xp:attr name="type" value="text/javascript"></xp:attr>
-		</xp:this.attrs>
-		<xp:this.value><![CDATA[#{javascript:"var viewName='" + compositeData.viewName + "';";}]]></xp:this.value>
-	</xp:text>
-
 	<div id="results">
 		<xp:panel tagName="div">
 			<xp:this.styleClass><![CDATA[#{javascript:if(compositeData.insetData) {return "bordered";}}]]>
@@ -48,8 +41,7 @@
 								rendered="#{javascript:thisRowData.getDocument() != undefined;}">
 								<xp:this.value><![CDATA[#{javascript:"/" + compositeData.xpageDoc + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID()}]]></xp:this.value>
 								<xp:label id="label2"
-									value="#{javascript:thisRowData.getColumnValue(compositeData.summaryColumn);}"
-									>
+									value="#{javascript:thisRowData.getColumnValue(compositeData.summaryColumn);}">
 								</xp:label>
 								<xp:image url="/unp/right-arrow-circle.png" id="image1"
 									styleClass="#{javascript:if(compositeData.detailColumn == null){ return 'icon';} else {return 'multiLineIcon';}}">
@@ -73,9 +65,11 @@ else {return true;}}]]></xp:this.rendered>
 				<div class="summaryDataRow"></div>
 				<div id="loadmorelink">
 					<xp:button value="Load More..." id="button1">
-						<xp:eventHandler event="onclick" submit="false">
-							<xp:this.script><![CDATA[loadmore()]]></xp:this.script>
-						</xp:eventHandler>
+						<xp:this.attrs>
+							<xp:attr name="onclick">
+								<xp:this.value><![CDATA[#{javascript:"loadmore('" + compositeData.viewName + "', '" + compositeData.summaryColumn + "', '" + compositeData.detailColumn + "')"}]]></xp:this.value>
+							</xp:attr>
+						</xp:this.attrs>
 					</xp:button>
 				</div>
 

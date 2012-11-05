@@ -7,10 +7,10 @@
 	<xc:unpViewsList>
 		<xc:this.menuItem>
 			<xc:menuItem icon="/icons/house.png" label="Test Page 1"
-				page="/UnpDemoViewsList.xsp">
+				page="/UnpDemoViewsList.xsp" ajaxloadid="newcontent" ajaxtargetid="results">
 			</xc:menuItem>
 			<xc:menuItem icon="/icons/id_card.png" label="Test Page 2"
-				page="/UnpDemoViewsListPage2.xsp">
+				page="/UnpDemoViewsListPage2.xsp" ajaxloadid="newcontent" ajaxtargetid="results">
 			</xc:menuItem>
 			<xc:menuItem icon="/icons/id_tag.png" label="Test Page 3"
 				page="/UnpDemoViewsListPage3.xsp">
@@ -41,5 +41,8 @@
 			</xc:menuItem>
 		</xc:this.menuItem>
 	</xc:unpViewsList>
+	<div id="results" style="background-color: white;">
+		<div id="newcontent">UnpDemoViewsList</div>
+	</div>
 	<xc:unpFooter></xc:unpFooter>
 </xp:view>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!DOCTYPE view SYSTEM 'xmlschemas/domino_8_5_3.dtd'>
-<view name='Employees by dept' xmlns='http://www.lotus.com/dxl' version='8.5'
+<view name='Employees By Country' xmlns='http://www.lotus.com/dxl' version='8.5'
  maintenanceversion='3.0' replicaid='80257AA1002D0DF3' showinmenu='false'
  noreplace='true' publicaccess='false' designerversion='8.5.3' unreadmarks='none'
  onopengoto='lastopened' onrefresh='displayindicator' headers='beveled' opencollapsed='false'
@@ -10,18 +10,18 @@
  boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
  allowcustomizations='true' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
  uniquekeys='false'>
-<noteinfo noteid='1e6' unid='20160B4A0042D20A80257AA100314702' sequence='5'>
-<created><datetime dst='true'>20121024T095814,42+01</datetime></created>
-<modified><datetime>20121105T114752,09+00</datetime></modified>
-<revised><datetime>20121105T114752,08+00</datetime></revised>
-<lastaccessed><datetime>20121105T114752,09+00</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20121024T095814,44+01</datetime></addedtofile></noteinfo>
+<noteinfo noteid='43ba' unid='B126C7ADB2A83D4780257AAD0040D74F' sequence='4'>
+<created><datetime>20121105T114814,23+00</datetime></created>
+<modified><datetime>20121105T114833,54+00</datetime></modified>
+<revised><datetime>20121105T114833,53+00</datetime></revised>
+<lastaccessed><datetime>20121105T120228,08+00</datetime></lastaccessed>
+<addedtofile><datetime>20121105T114814,26+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><code event='selection'><formula
 >SELECT @All</formula></code>
-<column sort='ascending' hidedetailrows='false' itemname='Dept' width='10'
+<column sort='ascending' hidedetailrows='false' itemname='Countries' width='10'
  resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
- showaslinks='false'><columnheader title='Dept'><font size='9pt' style='bold'/></columnheader></column>
+ showaslinks='false'><columnheader title='Country'><font size='9pt' style='bold'/></columnheader></column>
 <column sort='ascending' hidedetailrows='false' itemname='Name' width='10'
  resizable='true' separatemultiplevalues='false' sortnoaccent='false' sortnocase='true'
  showaslinks='false'><columnheader title='Name'><font size='9pt' style='bold'/></columnheader></column>

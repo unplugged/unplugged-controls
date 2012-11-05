@@ -4,7 +4,7 @@ function stopViewSpinner(){
 	$("#loadmorespinner").hide();
 }
 
-function loadmore(){
+function loadmore(viewName, summarycol, detailcol){
 	try{
 		$("#loadmorelink").disabled = true;
 		$("#loadmorespinner").show();
@@ -20,11 +20,13 @@ function loadmore(){
 		}
 		firedrequests.push(pos);
 		var thisArea = $(".summaryDataRow");
-		thisArea.load("UnpFlatViewList.xsp?chosenView=" + viewName + "&start=" + pos + " #results", function(){
+		var url = "UnpFlatViewList.xsp?chosenView=" + encodeURIComponent(viewName) + "&summarycol=" + summarycol + "&detailcol=" + detailcol + "&start=" + pos;
+		thisArea.load(url + " #results", function(){
 			$("#flatViewRowSet").append($(".summaryDataRow li"));
 			$(".summaryDataRow").empty();
 			$("#loadmorelink").disabled = false;
 			$("#loadmorespinner").hide();
+			scrollContent.refresh();
 			return false;
 		});		
 	}catch(e){
@@ -51,7 +53,7 @@ function autoGetMore() {
         loadmore();
     }
 }
-window.onscroll = autoGetMore;
+//window.onscroll = autoGetMore;
 
 function getScrollTop(){
     if(typeof pageYOffset!= 'undefined'){

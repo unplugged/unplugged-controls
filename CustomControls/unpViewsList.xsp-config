@@ -58,6 +58,24 @@
           </designer-extension>
         </property-extension>
       </property>
+      <property>
+        <property-name>ajaxloadid</property-name>
+        <property-class>string</property-class>
+        <property-extension>
+          <designer-extension>
+            <default-value>results</default-value>
+          </designer-extension>
+        </property-extension>
+      </property>
+      <property>
+        <property-name>ajaxtargetid</property-name>
+        <property-class>string</property-class>
+        <property-extension>
+          <designer-extension>
+            <default-value>results</default-value>
+          </designer-extension>
+        </property-extension>
+      </property>
     </property-type>
   </composite-component>
 </faces-config>
