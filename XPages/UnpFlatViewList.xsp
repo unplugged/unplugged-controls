@@ -10,7 +10,7 @@ return viewname;}]]></xp:this.viewName>
 	</xp:this.data>
 	<div id="results">
 		<xp:repeat id="repeat4" var="thisRowData" value="#{viewList}"
-			disableOutputTag="true" rows="10">
+			disableOutputTag="true" rows="20">
 			<xp:this.first><![CDATA[#{javascript:var start = context.getUrlParameter("start");
 if (start == ""){
 	return 0;

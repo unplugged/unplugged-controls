@@ -5,6 +5,7 @@ function stopViewSpinner(){
 }
 
 function loadmore(viewName, summarycol, detailcol){
+	console.log("loading more for " + viewName + ", " + summarycol + ", " + detailcol);
 	try{
 		$("#loadmorelink").disabled = true;
 		$("#loadmorespinner").show();
@@ -54,6 +55,13 @@ function autoGetMore() {
     }
 }
 //window.onscroll = autoGetMore;
+
+$(window).scroll(function() {
+	if($(window).scrollTop() + $(window).height() == $(document).height()) {
+		console.log("Hit bottom!");
+		$(".loadmorebutton").click();
+	}
+});
 
 function getScrollTop(){
     if(typeof pageYOffset!= 'undefined'){

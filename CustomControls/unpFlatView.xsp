@@ -34,7 +34,7 @@
 
 						</xp:label>
 					</li>
-					<xp:repeat id="repeat4" rows="10" var="thisRowData"
+					<xp:repeat id="repeat4" rows="20" var="thisRowData"
 						value="#{viewList}" disableOutputTag="true">
 						<li class="data-row">
 							<xp:link escape="true" id="link1"
@@ -64,7 +64,7 @@ else {return true;}}]]></xp:this.rendered>
 				</ul>
 				<div class="summaryDataRow"></div>
 				<div id="loadmorelink">
-					<xp:button value="Load More..." id="button1">
+					<xp:button value="Load More..." id="loadmorebutton" styleClass="loadmorebutton">
 						<xp:this.attrs>
 							<xp:attr name="onclick">
 								<xp:this.value><![CDATA[#{javascript:"loadmore('" + compositeData.viewName + "', '" + compositeData.summaryColumn + "', '" + compositeData.detailColumn + "')"}]]></xp:this.value>
