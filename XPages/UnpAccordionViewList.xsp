@@ -17,7 +17,7 @@
 						rendered="#{javascript:thisRowData.getDocument() != undefined;}">
 							<xp:this.value><![CDATA[#{javascript:"/" + param.get('xpageDoc') + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID()}]]></xp:this.value>
 							<xp:label id="label2"
-								value="#{javascript:thisRowData.getColumnValue('Name');}"
+								value="#{javascript:thisRowData.getColumnValues()[1];}"
 								style="color:rgb(0,128,255)">
 							</xp:label>
 							<xp:image url="/unp/right-arrow-circle.png"
@@ -26,7 +26,7 @@
 							<xp:panel tagName="div">
 								<xp:label id="label1"
 									value="#{javascript:thisRowData.getColumnValues()[2];}"
-									style="color:rgb(0,128,255)">
+									style="color:rgb(0,0,0)">
 								</xp:label>
 							</xp:panel>
 						</xp:link>
