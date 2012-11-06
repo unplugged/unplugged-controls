@@ -1,3 +1,14 @@
+window.addEventListener("orientationchange", function() {
+	toggleViewsMenu();
+	try{
+		scrollContent.destroy();
+		$(".iscrollcontent").each(function(){
+			scrollContent = new iScroll($(this).attr("id"));
+		});
+	}catch(e){}
+
+}, false);
+
 function loadPage(url, target, menuitem){
 	var thisArea = $("#" + target);
 	var box = new AjaxLoader($('body'));
@@ -6,10 +17,7 @@ function loadPage(url, target, menuitem){
 		if (firedrequests != null){
 			firedrequests = new Array();
 		}
-		//Initialise any iScroll that needs it
-		$(".iscrollcontent").each(function(){
-			scrollContent = new iScroll($(this).attr("id"));
-		});
+		initiscroll();
 		return false;
 	});		
 	var menuitems = $("#menuitems li");
@@ -19,6 +27,44 @@ function loadPage(url, target, menuitem){
 	$(".menuitem" + menuitem).addClass("viewMenuItemSelected");
 	toggleViewsMenu();
 }
+
+function initiscroll(){
+	//Initialise any iScroll that needs it
+	pullUpEl = document.getElementById('pullUp');	
+	pullUpOffset = pullUpEl.offsetHeight;
+
+	scrollContent.destroy();
+	$(".iscrollcontent").each(function(){
+		scrollContent = new iScroll($(this).attr("id"), {
+			useTransition: true,
+			onRefresh: function () {
+				if (pullUpEl.className.match('loading')) {
+					pullUpEl.className = '';
+					pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Pull up to load more...';
+				}
+			},
+			onScrollMove: function () {
+				if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) {
+					pullUpEl.className = 'flip';
+					pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Release to refresh...';
+					this.maxScrollY = this.maxScrollY;
+				} else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
+					pullUpEl.className = '';
+					pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Pull up to load more...';
+					this.maxScrollY = pullUpOffset;
+				}
+			},
+			onScrollEnd: function () {
+				if (pullUpEl.className.match('flip')) {
+					pullUpEl.className = 'loading';
+					pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Loading...';				
+					$(".loadmorebutton").click();
+				}
+			}
+		});
+	});
+}
+	
 
 function AjaxLoader (el, options) {
 	var defaults = {

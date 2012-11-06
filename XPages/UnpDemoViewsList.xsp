@@ -41,7 +41,7 @@
 			</xc:menuItem>
 		</xc:this.menuItem>
 	</xc:unpViewsList>
-	<div id="results" style="background-color: white;">
+	<div id="results">
 		<div id="newcontent">UnpDemoViewsList</div>
 	</div>
 	<xc:unpFooter></xc:unpFooter>

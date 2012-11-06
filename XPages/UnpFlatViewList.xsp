@@ -8,11 +8,6 @@ return viewname;}]]></xp:this.viewName>
 		</xp:dominoView>
 	</xp:this.data>
 	<div id="results">
-		<xp:panel>
-			NOMORERECORDS
-			<xp:this.rendered><![CDATA[#{javascript:return false;
-//getComponent("repeatrows").getRowCount() <= parseInt(param.get("start"), 10)}]]></xp:this.rendered>
-		</xp:panel>
 		<xp:repeat id="repeatrows" var="thisRowData" value="#{viewList}"
 			disableOutputTag="true" rows="20">
 			<xp:this.first><![CDATA[#{javascript:var start = context.getUrlParameter("start");

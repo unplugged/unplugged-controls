@@ -7,14 +7,14 @@ function stopViewSpinner(){
 function loadmore(viewName, summarycol, detailcol){
 	console.log("loading more for " + viewName + ", " + summarycol + ", " + detailcol);
 	try{
-		$("#loadmorelink").disabled = true;
+		$("#loadmorelink").hide();
 		$("#loadmorespinner").show();
 		setTimeout("stopViewSpinner()", 5000);
 		var itemlist = $("#flatViewRowSet li");
 		var pos = itemlist.length - 1;
 		for (var i=0; i<firedrequests.length; i++){
 			if (firedrequests[i] == pos){
-				$("#loadmorelink").disabled = false;
+				$("#loadmorelink").show();
 				$("#loadmorespinner").hide();
 				return;
 			}
@@ -25,8 +25,9 @@ function loadmore(viewName, summarycol, detailcol){
 		thisArea.load(url + " #results", function(){
 			$("#flatViewRowSet").append($(".summaryDataRow li"));
 			if ($(".summaryDataRow").text().indexOf("NOMORERECORDS") > -1){
-				$("#loadmorelink").disabled = false;
 				$("#loadmorelink").hide();
+			}else{
+				$("#loadmorelink").show();
 			}
 			$("#loadmorespinner").hide();
 			$(".summaryDataRow").empty();
@@ -38,42 +39,8 @@ function loadmore(viewName, summarycol, detailcol){
 	}
 }
 
-function autoGetMore() {
-    var myWidth = 0,
-        myHeight = 0;
-    if (typeof(window.innerWidth) == 'number') {
-        myWidth = window.innerWidth;
-        myHeight = window.innerHeight;
-    } else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
-        myWidth = document.documentElement.clientWidth;
-        myHeight = document.documentElement.clientHeight;
-    } else if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
-        myWidth = document.body.clientWidth;
-        myHeight = document.body.clientHeight;
-    }
-    var scrolledtonum = getScrollTop() + myHeight + 2;
-    var heightofbody = document.body.offsetHeight;
-    if (scrolledtonum >= heightofbody) {
-        loadmore();
-    }
-}
-//window.onscroll = autoGetMore;
-
 $(window).scroll(function() {
 	if($(window).scrollTop() + $(window).height() == $(document).height()) {
-		console.log("Hit bottom!");
 		$(".loadmorebutton").click();
 	}
 });
-
-function getScrollTop(){
-    if(typeof pageYOffset!= 'undefined'){
-        //most browsers
-        return pageYOffset;
-    }else{
-        var B= document.body; //IE 'quirks'
-        var D= document.documentElement; //IE with doctype
-        D= (D.clientHeight)? D: B;
-        return D.scrollTop;
-    }
-}

@@ -63,14 +63,21 @@ else {return true;}}]]></xp:this.rendered>
 					</xp:repeat>
 				</ul>
 				<div class="summaryDataRow"></div>
-				<div id="loadmorelink">
-					<xp:button value="Load More..." id="loadmorebutton" styleClass="loadmorebutton">
-						<xp:this.attrs>
-							<xp:attr name="onclick">
-								<xp:this.value><![CDATA[#{javascript:"loadmore('" + compositeData.viewName + "', '" + compositeData.summaryColumn + "', '" + compositeData.detailColumn + "')"}]]></xp:this.value>
-							</xp:attr>
-						</xp:this.attrs>
-					</xp:button>
+				<div id="pullUp">
+					<span class="pullUpIcon"></span>
+					<span class="pullUpLabel">
+						Pull up to load more...
+					</span>
+					<div id="loadmorelink">
+						<xp:button value="Load More..." id="loadmorebutton"
+							styleClass="loadmorebutton" style="display: none;">
+							<xp:this.attrs>
+								<xp:attr name="onclick">
+									<xp:this.value><![CDATA[#{javascript:"loadmore('" + compositeData.viewName + "', '" + compositeData.summaryColumn + "', '" + compositeData.detailColumn + "')"}]]></xp:this.value>
+								</xp:attr>
+							</xp:this.attrs>
+						</xp:button>
+					</div>
 				</div>
 
 			</div>
