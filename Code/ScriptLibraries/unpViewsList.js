@@ -5,7 +5,7 @@ window.addEventListener("orientationchange", function() {
 
 function loadPage(url, target, menuitem){
 	var thisArea = $("#" + target);
-	var box = new AjaxLoader($('body'));
+	var box = new AjaxLoader($('#' + target));
 	thisArea.load(url, function(){
 		box.remove();
 		if (firedrequests != null){
