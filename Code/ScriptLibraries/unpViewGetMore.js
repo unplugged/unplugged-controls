@@ -24,9 +24,12 @@ function loadmore(viewName, summarycol, detailcol){
 		var url = "UnpFlatViewList.xsp?chosenView=" + encodeURIComponent(viewName) + "&summarycol=" + summarycol + "&detailcol=" + detailcol + "&start=" + pos;
 		thisArea.load(url + " #results", function(){
 			$("#flatViewRowSet").append($(".summaryDataRow li"));
-			$(".summaryDataRow").empty();
-			$("#loadmorelink").disabled = false;
+			if ($(".summaryDataRow").text().indexOf("NOMORERECORDS") > -1){
+				$("#loadmorelink").disabled = false;
+				$("#loadmorelink").hide();
+			}
 			$("#loadmorespinner").hide();
+			$(".summaryDataRow").empty();
 			scrollContent.refresh();
 			return false;
 		});		

@@ -4,12 +4,16 @@
 		<xp:dominoView var="viewList">
 			<xp:this.categoryFilter><![CDATA[#{javascript:param.get("catFilter");}]]></xp:this.categoryFilter>
 			<xp:this.viewName><![CDATA[#{javascript:var viewname = param.get("chosenView");
-print(viewname);
 return viewname;}]]></xp:this.viewName>
 		</xp:dominoView>
 	</xp:this.data>
 	<div id="results">
-		<xp:repeat id="repeat4" var="thisRowData" value="#{viewList}"
+		<xp:panel>
+			NOMORERECORDS
+			<xp:this.rendered><![CDATA[#{javascript:return false;
+//getComponent("repeatrows").getRowCount() <= parseInt(param.get("start"), 10)}]]></xp:this.rendered>
+		</xp:panel>
+		<xp:repeat id="repeatrows" var="thisRowData" value="#{viewList}"
 			disableOutputTag="true" rows="20">
 			<xp:this.first><![CDATA[#{javascript:var start = context.getUrlParameter("start");
 if (start == ""){
@@ -18,15 +22,15 @@ if (start == ""){
 	return parseInt(start, 10);
 }}]]></xp:this.first>
 
-			<li>
+			<li class="data-row">
 				<xp:link escape="true" id="link1"
 					rendered="#{javascript:thisRowData.getDocument() != undefined;}">
 					<xp:this.value><![CDATA[#{javascript:"/" + param.get('xpageDoc') + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID()}]]></xp:this.value>
 					<xp:label id="label2">
 						<xp:this.value><![CDATA[#{javascript:thisRowData.getColumnValue(param.get("summarycol"));}]]></xp:this.value>
 					</xp:label>
-					<xp:image url="/unp/right-arrow-circle.png"
-						id="image1" styleClass="multiLineIcon">
+					<xp:image url="/unp/right-arrow-circle.png" id="image1"
+						styleClass="multiLineIcon">
 					</xp:image>
 					<xp:panel tagName="div">
 						<xp:label id="label1"
