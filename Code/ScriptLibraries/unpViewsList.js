@@ -1,12 +1,6 @@
 window.addEventListener("orientationchange", function() {
 	toggleViewsMenu();
-	try{
-		scrollContent.destroy();
-		$(".iscrollcontent").each(function(){
-			scrollContent = new iScroll($(this).attr("id"));
-		});
-	}catch(e){}
-
+	initiscroll();
 }, false);
 
 function loadPage(url, target, menuitem){

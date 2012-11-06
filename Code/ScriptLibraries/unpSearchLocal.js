@@ -16,12 +16,16 @@ $(document).ready(function() {
 			$('li.data-row').css("display", "");
 			$("#loadmorelink").css("display", "");
 		}
-		try{
-			scrollContent.destroy();
-			$(".iscrollcontent").each(function(){
-				scrollContent = new iScroll($(this).attr("id"));
-			});
-		}catch(e){}
+		try {
+			initiscroll();
+		}catch(e){
+			try{
+				scrollContent.destroy();
+				$(".iscrollcontent").each(function(){
+					scrollContent = new iScroll($(this).attr("id"));
+				});
+			}catch(e){}
+		}
 	});
 
 	jQuery.expr[':'].icontains = function(a, i, m) {
