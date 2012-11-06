@@ -74,5 +74,9 @@ return xpageDoc.indexOf(".xsp") &gt;= 0;</validation-formula>
       <property-class>string</property-class>
       <display-name>Title of view data</display-name>
     </property>
+    <property>
+      <property-name>categoryfilter</property-name>
+      <property-class>string</property-class>
+    </property>
   </composite-component>
 </faces-config>

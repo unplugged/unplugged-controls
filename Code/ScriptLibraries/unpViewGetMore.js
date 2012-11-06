@@ -4,8 +4,8 @@ function stopViewSpinner(){
 	$("#loadmorespinner").hide();
 }
 
-function loadmore(viewName, summarycol, detailcol){
-	console.log("loading more for " + viewName + ", " + summarycol + ", " + detailcol);
+function loadmore(viewName, summarycol, detailcol, category){
+	//console.log("loading more for " + viewName + ", " + summarycol + ", " + detailcol);
 	try{
 		$("#loadmorelink").hide();
 		$("#loadmorespinner").show();
@@ -21,7 +21,8 @@ function loadmore(viewName, summarycol, detailcol){
 		}
 		firedrequests.push(pos);
 		var thisArea = $(".summaryDataRow");
-		var url = "UnpFlatViewList.xsp?chosenView=" + encodeURIComponent(viewName) + "&summarycol=" + summarycol + "&detailcol=" + detailcol + "&start=" + pos;
+		var url = "UnpFlatViewList.xsp?chosenView=" + encodeURIComponent(viewName) + "&summarycol=" + encodeURIComponent(summarycol)
+					+ "&detailcol=" + encodeURIComponent(detailcol) + "&category=" + encodeURIComponent(category) + "&start=" + pos;
 		thisArea.load(url + " #results", function(){
 			$("#flatViewRowSet").append($(".summaryDataRow li"));
 			if ($(".summaryDataRow").text().indexOf("NOMORERECORDS") > -1){

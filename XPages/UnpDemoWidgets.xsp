@@ -9,6 +9,8 @@
 			</xc:menuItem>
 			<xc:menuItem label="By Department" page="/UnpDemoWidgetsByDept.xsp"
 				ajaxtargetid="content" ajaxloadid="contentwrapper"></xc:menuItem>
+			<xc:menuItem label="Just Finances Department" page="/UnpDemoWidgetsByDeptFinances.xsp"
+				ajaxtargetid="content" ajaxloadid="contentwrapper"></xc:menuItem>
 			<xc:menuItem label="By Country" page="/UnpDemoWidgetsByCountry.xsp"
 				ajaxtargetid="content" ajaxloadid="contentwrapper"></xc:menuItem>
 			<xc:menuItem label="By Year" page="/UnpDemoWidgetsByYear.xsp"

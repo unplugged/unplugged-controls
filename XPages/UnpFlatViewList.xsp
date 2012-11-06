@@ -2,7 +2,12 @@
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core">
 	<xp:this.data>
 		<xp:dominoView var="viewList">
-			<xp:this.categoryFilter><![CDATA[#{javascript:param.get("catFilter");}]]></xp:this.categoryFilter>
+			<xp:this.categoryFilter><![CDATA[#{javascript:var category = param.get("category");
+if (category == "null" || category == ""){
+	return null;
+}else{
+	return category;
+}}]]></xp:this.categoryFilter>
 			<xp:this.viewName><![CDATA[#{javascript:var viewname = param.get("chosenView");
 return viewname;}]]></xp:this.viewName>
 		</xp:dominoView>
