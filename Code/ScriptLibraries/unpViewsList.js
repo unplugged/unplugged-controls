@@ -3,6 +3,10 @@ window.addEventListener("orientationchange", function() {
 	initiscroll();
 }, false);
 
+$(document).ready(function() {
+	initiscroll();
+});
+
 function loadPage(url, target, menuitem){
 	var thisArea = $("#" + target);
 	var box = new AjaxLoader($('#' + target));

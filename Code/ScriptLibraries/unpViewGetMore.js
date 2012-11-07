@@ -26,13 +26,15 @@ function loadmore(viewName, summarycol, detailcol, category){
 		thisArea.load(url + " #results", function(){
 			$("#flatViewRowSet").append($(".summaryDataRow li"));
 			if ($(".summaryDataRow").text().indexOf("NOMORERECORDS") > -1){
-				$("#loadmorelink").hide();
+				$("#pullUp").hide();
 			}else{
 				$("#loadmorelink").show();
 			}
 			$("#loadmorespinner").hide();
 			$(".summaryDataRow").empty();
-			scrollContent.refresh();
+			try{
+				scrollContent.refresh();
+			}catch(e){}
 			return false;
 		});		
 	}catch(e){

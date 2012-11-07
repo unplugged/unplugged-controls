@@ -25,12 +25,17 @@ if (start == ""){
 			<li class="data-row">
 				<xp:link escape="true" id="link1"
 					rendered="#{javascript:thisRowData.getDocument() != undefined;}">
-					<xp:this.value><![CDATA[#{javascript:"/" + param.get('xpageDoc') + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID()}]]></xp:this.value>
-					<xp:label id="label2">
+
+					<xp:this.value><![CDATA[#{javascript:if (viewScope.rowcount == null){
+	viewScope.rowcount = 1;
+}else{
+	viewScope.rowcount = viewScope.rowcount + 1;
+}
+return "/" + param.get('xpageDoc') + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID()}]]></xp:this.value><xp:label id="label2">
 						<xp:this.value><![CDATA[#{javascript:thisRowData.getColumnValue(param.get("summarycol"));}]]></xp:this.value>
 					</xp:label>
-					<xp:image url="/unp/right-arrow-circle.png" id="image1"
-						styleClass="multiLineIcon">
+					<xp:image url="/unp/right-arrow-circle.png"
+						id="image1" styleClass="multiLineIcon">
 					</xp:image>
 					<xp:panel tagName="div">
 						<xp:label id="label1"
@@ -40,5 +45,9 @@ if (start == ""){
 				</xp:link>
 			</li>
 		</xp:repeat>
+		<xp:panel>
+			NOMORERECORDS
+			<xp:this.rendered><![CDATA[#{javascript:viewScope.rowcount == null || viewScope.rowcount < 20}]]></xp:this.rendered>
+		</xp:panel>
 	</div>
 </xp:view>
