@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+  <faces-config-extension>
+    <namespace-uri>http://www.ibm.com/xsp/custom</namespace-uri>
+    <default-prefix>xc</default-prefix>
+  </faces-config-extension>
+  <composite-component>
+    <component-type>unpSwipeView</component-type>
+    <composite-name>unpSwipeView</composite-name>
+    <composite-file>/unpSwipeView.xsp</composite-file>
+    <composite-extension>
+      <designer-extension>
+        <in-palette>true</in-palette>
+        <render-markup>&lt;?xml version="1.0" encoding="UTF-8"?&gt; &#xd;
+&lt;xp:view xmlns:xp="http://www.ibm.com/xsp/core"&gt; &#xd;
+	&lt;div style="border: 2px solid #A9A9A9; padding: 3px; margin: 5px;"&gt;&#xd;
+	&lt;h1&gt;unpSwipeView&lt;/h1&gt;&#xd;
+	&lt;div&gt;&#xd;
+		To use this custom control make sure you have set the Custom Properties. &#xd;
+The 'imageDocId' is the UNID of the doc containing the image attachments&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;div&gt;&#xd;
+		Currently, this version only supports retrieving image attachments (via RTF's) from one Notes document. This is planned to be expanded so multiple doc datasources can be given and images displayed in one gallery regardless of the originating source docs.&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;div&gt;&#xd;
+		The suggested way to use this is to have a button/link (could use thumbnail images) on an XPage that directs the user to a new XPage only containing this control. The rendering and useage of this viewer is intended for full screen use.&#xd;
+	&lt;/div&gt;&#xd;
+&lt;/div&gt;&#xd;
+&lt;/xp:view&gt;</render-markup>
+      </designer-extension>
+    </composite-extension>
+    <property>
+      <property-name>imageDocId</property-name>
+      <property-class>string</property-class>
+      <display-name>imageDocId</display-name>
+      <description>Pass in the UNID of the doc containing the images</description>
+    </property>
+  </composite-component>
+</faces-config>
