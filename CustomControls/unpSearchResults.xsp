@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:this.data>
+		<xp:dominoView var="viewList"
+			viewName="#{javascript:compositeData.viewName}"
+			keys="#{compositeData.viewsearch}" keysExactMatch="false">
+		</xp:dominoView>
+	</xp:this.data>
+	<xp:this.resources>
+		<xp:metaData name="viewport"
+			content="width=device-width, initial-scale=2.3, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		</xp:metaData>
+		<xp:metaData name="apple-mobile-web-app-status-bar-style"
+			content="black-translucent">
+		</xp:metaData>
+		<xp:metaData name="apple-mobile-web-app-capable" content="yes">
+		</xp:metaData>
+		<xp:styleSheet href="/unpFlatview.css"></xp:styleSheet>
+		<xp:script src="unp/jquery-1.7.2.min.js" clientSide="true">
+		</xp:script>
+		<xp:script src="/unpViewGetMore.js" clientSide="true"></xp:script>
+	</xp:this.resources>
+	<div id="results">
+		<xp:panel tagName="div">
+			<xp:this.styleClass><![CDATA[#{javascript:if(compositeData.insetData) {return "bordered";}}]]>
+			</xp:this.styleClass>
+			<div id="flatView">
+				<ul id="flatViewRowSet">
+					<li id="title">
+						<xp:label id="label3">
+							<xp:this.value><![CDATA[#{javascript:compositeData.title;}]]></xp:this.value>
+						</xp:label>
+					</li>
+					<xp:repeat id="repeat4" rows="999" var="thisRowData"
+						value="#{viewList}" disableOutputTag="true">
+						<li class="data-row">
+							<xp:link escape="true" id="link1"
+								rendered="#{javascript:thisRowData.getDocument() != undefined;}">
+								<xp:this.value><![CDATA[#{javascript:"/" + compositeData.xpageDoc + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID()}]]></xp:this.value>
+								<xp:label id="label2"
+									value="#{javascript:thisRowData.getColumnValue(compositeData.summaryColumn);}">
+								</xp:label>
+								<xp:image url="/unp/right-arrow-circle.png" id="image1"
+									styleClass="#{javascript:if(compositeData.detailColumn == null){ return 'icon';} else {return 'multiLineIcon';}}">
+								</xp:image>
+								<xp:panel tagName="div">
+									<xp:this.rendered><![CDATA[#{javascript:if(compositeData.detailColumn == null){ return false; }
+else {return true;}}]]></xp:this.rendered>
+									<xp:label id="label1">
+										<xp:this.value><![CDATA[#{javascript:if(compositeData.detailColumn == null){
+	return "";
+}else{
+  return thisRowData.getColumnValue(compositeData.detailColumn);
+}}]]></xp:this.value>
+
+									</xp:label>
+								</xp:panel>
+							</xp:link>
+						</li>
+					</xp:repeat>
+				</ul>
+			</div>
+		</xp:panel>
+	</div>
+</xp:view>

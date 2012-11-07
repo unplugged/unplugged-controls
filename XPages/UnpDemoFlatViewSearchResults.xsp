@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xc:unpHeader search="database" searchPage="UnpDemoFlatViewSearchResults.xsp"
+		viewsButton="false" backButtonText="Back" backButtonURL="/UnpDemoFlatViewSearch.xsp"
+		title="Employees">
+	</xc:unpHeader>
+	<xc:unpSearchResults insetData="true" detailColumn="DOB"
+		summaryColumn="Name" viewName="Search" xpageDoc="Employee.xsp">
+		<xc:this.viewsearch><![CDATA[#{javascript:param.get("query")}]]></xc:this.viewsearch>
+		<xc:this.title><![CDATA[#{javascript:"Search results for " + param.get("query")}]]></xc:this.title>
+	</xc:unpSearchResults>
+	<xc:unpFooter></xc:unpFooter>
+</xp:view>

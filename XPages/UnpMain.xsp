@@ -27,6 +27,10 @@
 		value="/UnpDemoFlatViewCategory.xsp" style="font-size:18pt"></xp:link>
 	<xp:br></xp:br>
 	<xp:br></xp:br>
+	<xp:link escape="true" text="DatabaseSearch" id="link8"
+		value="/UnpDemoFlatViewSearch.xsp" style="font-size:18pt"></xp:link>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
 	<xp:link escape="true" text="Accordian Small Data Set" id="link2"
 		value="/UnpDemoAccordianSmallData.xsp" style="font-size:18pt">
 	</xp:link>
