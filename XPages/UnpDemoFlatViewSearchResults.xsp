@@ -7,7 +7,7 @@
 	<xc:unpSearchResults insetData="true" detailColumn="DOB"
 		summaryColumn="Name" viewName="Search" xpageDoc="Employee.xsp">
 		<xc:this.viewsearch><![CDATA[#{javascript:param.get("query")}]]></xc:this.viewsearch>
-		<xc:this.title><![CDATA[#{javascript:"Search results for " + param.get("query")}]]></xc:this.title>
+		<xc:this.title><![CDATA[#{javascript:"Search results for \"" + param.get("query") + "\""}]]></xc:this.title>
 	</xc:unpSearchResults>
 	<xc:unpFooter></xc:unpFooter>
 </xp:view>
