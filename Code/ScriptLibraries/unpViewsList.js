@@ -3,7 +3,7 @@ window.addEventListener("orientationchange", function() {
 	initiscroll();
 }, false);
 
-$(document).ready(function() {
+$(window).load(function() {
 	initiscroll();
 });
 
