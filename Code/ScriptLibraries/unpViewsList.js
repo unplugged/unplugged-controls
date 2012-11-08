@@ -27,6 +27,7 @@ function loadPage(url, target, menuitem){
 }
 
 function initiscroll(){
+	document.addEventListener('touchmove', function (e){e.preventDefault()});
 	//Initialise any iScroll that needs it
 	pullUpEl = document.getElementById('pullUp');	
 	pullUpOffset = pullUpEl.offsetHeight;
