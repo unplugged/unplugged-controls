@@ -47,7 +47,7 @@ a.menulink {
 	font-weight: bold;
 	padding: 24px 0px 10px 20px;
 	text-decoration: none;
-	-webkit-tap-highlight-color: blue;
+	-webkit-tap-highlight-color: #387bbe;
 	border: 1px solid #111111 /*{a-bup-border}*/;
 	background: #242424 /*{a-bup-background-color}*/;
 	font-weight: bold;
