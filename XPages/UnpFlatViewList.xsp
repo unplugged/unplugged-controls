@@ -3,7 +3,7 @@
 	<xp:this.data>
 		<xp:dominoView var="viewList">
 			<xp:this.categoryFilter><![CDATA[#{javascript:var category = param.get("category");
-if (category == "null" || category == ""){
+if (category == "null" || category == "" || category == "undefined"){
 	return null;
 }else{
 	return category;
