@@ -78,5 +78,15 @@ return xpageDoc.indexOf(".xsp") &gt;= 0;</validation-formula>
       <property-name>categoryfilter</property-name>
       <property-class>string</property-class>
     </property>
+    <property>
+      <property-name>numberofrows</property-name>
+      <property-class>int</property-class>
+      <property-extension>
+        <designer-extension>
+          <default-value>20</default-value>
+        </designer-extension>
+        <required>true</required>
+      </property-extension>
+    </property>
   </composite-component>
 </faces-config>

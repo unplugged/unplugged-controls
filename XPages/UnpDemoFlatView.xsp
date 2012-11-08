@@ -4,6 +4,7 @@
 		value="/UnpMain.xsp">
 	</xp:link>
 	<xc:unpFlatView insetData="true" detailColumn="DOB"
-		summaryColumn="Name" title="Employees" viewName="Employees" xpageDoc="Employee.xsp">
+		summaryColumn="Name" title="Employees" viewName="Employees"
+		xpageDoc="Employee.xsp" numberofrows="20">
 	</xc:unpFlatView>
 </xp:view>

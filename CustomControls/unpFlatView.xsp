@@ -38,8 +38,14 @@
 
 						</xp:label>
 					</li>
-					<xp:repeat id="repeat4" rows="20" var="thisRowData"
+					<xp:repeat id="repeat4" var="thisRowData"
 						value="#{viewList}" disableOutputTag="true">
+						<xp:this.rows><![CDATA[${javascript:sessionScope.rowcount = compositeData.numberofrows;
+if (sessionScope.rowcount != null){
+	return sessionScope.rowcount;
+}else{
+	return 20;
+}}]]></xp:this.rows>
 						<li class="data-row">
 							<xp:link escape="true" id="link1"
 								rendered="#{javascript:thisRowData.getDocument() != undefined;}">
@@ -47,7 +53,8 @@
 								<xp:label id="label2"
 									value="#{javascript:thisRowData.getColumnValue(compositeData.summaryColumn);}">
 								</xp:label>
-								<xp:image url="/unp/right-arrow-circle.png" id="image1"
+								<xp:image
+									url="/unp/right-arrow-circle.png" id="image1"
 									styleClass="#{javascript:if(compositeData.detailColumn == null){ return 'icon';} else {return 'multiLineIcon';}}">
 								</xp:image>
 								<xp:panel tagName="div">

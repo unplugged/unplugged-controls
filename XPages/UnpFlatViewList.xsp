@@ -14,7 +14,7 @@ return viewname;}]]></xp:this.viewName>
 	</xp:this.data>
 	<div id="results">
 		<xp:repeat id="repeatrows" var="thisRowData" value="#{viewList}"
-			disableOutputTag="true" rows="20">
+			disableOutputTag="true">
 			<xp:this.first><![CDATA[#{javascript:var start = context.getUrlParameter("start");
 if (start == ""){
 	return 0;
@@ -22,6 +22,11 @@ if (start == ""){
 	return parseInt(start, 10);
 }}]]></xp:this.first>
 
+			<xp:this.rows><![CDATA[${javascript:if (sessionScope.rowcount != null){
+	return sessionScope.rowcount;
+}else{
+	return 20;
+}}]]></xp:this.rows>
 			<li class="data-row">
 				<xp:link escape="true" id="link1"
 					rendered="#{javascript:thisRowData.getDocument() != undefined;}">
@@ -31,7 +36,8 @@ if (start == ""){
 }else{
 	viewScope.rowcount = viewScope.rowcount + 1;
 }
-return "/" + param.get('xpageDoc') + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID()}]]></xp:this.value><xp:label id="label2">
+return "/" + param.get('xpageDoc') + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID()}]]></xp:this.value>
+					<xp:label id="label2">
 						<xp:this.value><![CDATA[#{javascript:thisRowData.getColumnValue(param.get("summarycol"));}]]></xp:this.value>
 					</xp:label>
 					<xp:image url="/unp/right-arrow-circle.png"
@@ -47,7 +53,10 @@ return "/" + param.get('xpageDoc') + "?action=openDocument&documentId=" + thisRo
 		</xp:repeat>
 		<xp:panel>
 			NOMORERECORDS
-			<xp:this.rendered><![CDATA[#{javascript:viewScope.rowcount == null || viewScope.rowcount < 20}]]></xp:this.rendered>
+			<xp:this.rendered><![CDATA[#{javascript:if (sessionScope.rowcount == null){
+	sessionScope.rowcount = 20;
+}
+viewScope.rowcount == null || viewScope.rowcount < sessionScope.rowcount;}]]></xp:this.rendered>
 		</xp:panel>
 	</div>
 </xp:view>

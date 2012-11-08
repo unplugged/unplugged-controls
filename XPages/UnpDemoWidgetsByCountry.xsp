@@ -4,7 +4,7 @@
 	<xc:unpScrollableArea>
 		<xp:this.facets>
 			<xc:unpFlatView insetData="true" detailColumn="Country"
-				summaryColumn="Name" title="Employees By Country"
+				summaryColumn="Name" title="Employees By Country" numberofrows="20"
 				viewName="Employees By Country" xpageDoc="Employee.xsp"
 				xp:key="facet_1">
 			</xc:unpFlatView>
