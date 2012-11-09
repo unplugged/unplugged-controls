@@ -5,6 +5,10 @@ window.addEventListener("orientationchange", function() {
 
 $(window).load(function() {
 	initiscroll();
+	
+	$(".viewlink").addEventListener("click", function(){
+		var box = new AjaxLoader($(this));
+	})
 });
 
 function loadPage(url, target, menuitem){
@@ -29,35 +33,44 @@ function loadPage(url, target, menuitem){
 function initiscroll(){
 	document.addEventListener('touchmove', function (e){e.preventDefault()});
 	//Initialise any iScroll that needs it
-	pullUpEl = document.getElementById('pullUp');	
-	pullUpOffset = pullUpEl.offsetHeight;
-
-	scrollContent.destroy();
+	try{
+		pullUpEl = document.getElementById('pullUp');	
+		pullUpOffset = pullUpEl.offsetHeight;
+	}catch(e){}
+	try{
+		scrollContent.destroy();
+	}catch(e){}
 	$(".iscrollcontent").each(function(){
 		scrollContent = new iScroll($(this).attr("id"), {
 			useTransition: true,
 			onRefresh: function () {
-				if (pullUpEl.className.match('loading')) {
-					pullUpEl.className = '';
-					pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Pull up to load more...';
+				if (pullUpEl){
+					if (pullUpEl.className.match('loading')) {
+						pullUpEl.className = '';
+						pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Pull up to load more...';
+					}
 				}
 			},
 			onScrollMove: function () {
-				if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) {
-					pullUpEl.className = 'flip';
-					pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Release to refresh...';
-					this.maxScrollY = this.maxScrollY;
-				} else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
-					pullUpEl.className = '';
-					pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Pull up to load more...';
-					this.maxScrollY = pullUpOffset;
+				if (pullUpEl){
+					if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) {
+						pullUpEl.className = 'flip';
+						pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Release to refresh...';
+						this.maxScrollY = this.maxScrollY;
+					} else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
+						pullUpEl.className = '';
+						pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Pull up to load more...';
+						this.maxScrollY = pullUpOffset;
+					}
 				}
 			},
 			onScrollEnd: function () {
-				if (pullUpEl.className.match('flip')) {
-					pullUpEl.className = 'loading';
-					pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Loading...';				
-					$(".loadmorebutton").click();
+				if (pullUpEl){
+					if (pullUpEl.className.match('flip')) {
+						pullUpEl.className = 'loading';
+						pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Loading...';				
+						$(".loadmorebutton").click();
+					}
 				}
 			}
 		});

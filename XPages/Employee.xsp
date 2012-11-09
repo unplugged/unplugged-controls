@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xc:unpHeader search="local" viewsButton="true" title="Employees"></xc:unpHeader>
+	<xc:unpViewsList>
+		<xc:this.menuItem>
+			<xc:menuItem label="All Documents" page="/UnpDemoWidgets.xsp"
+				ajaxtargetid="content" ajaxloadid="contentwrapper">
+			</xc:menuItem>
+			<xc:menuItem label="By Department" page="/UnpDemoWidgetsByDept.xsp"
+				ajaxtargetid="content" ajaxloadid="contentwrapper"></xc:menuItem>
+			<xc:menuItem label="Just Finances Department" page="/UnpDemoWidgetsByDeptFinances.xsp"
+				ajaxtargetid="content" ajaxloadid="contentwrapper"></xc:menuItem>
+			<xc:menuItem label="By Country" page="/UnpDemoWidgetsByCountry.xsp"
+				ajaxtargetid="content" ajaxloadid="contentwrapper"></xc:menuItem>
+			<xc:menuItem label="By Year" page="/UnpDemoWidgetsByYear.xsp"
+				ajaxtargetid="content" ajaxloadid="contentwrapper"></xc:menuItem>
+		</xc:this.menuItem>
+	</xc:unpViewsList>
+	<div id="content">
+		<xc:unpFormViewer showbuttons="true" closexpagename="UnpDemoWidgets.xsp"
+			editxpagename="EmployeeEdit.xsp" formname="Employee" title="Employee">
+			<xp:this.facets>
+				<xp:panel xp:key="facet_1">
+					<xp:label value="Name" id="namelabel" for="name"></xp:label>
+					<xp:text id="name" value="#{document1.Name}"></xp:text>
+					<xp:label value="DOB" id="doblabel" for="dob"></xp:label>
+					<xp:text id="dob" value="#{document1.Birthday}"></xp:text>
+					<xp:label value="Email" id="emaillabel" for="email"></xp:label>
+					<xp:text id="email" value="#{document1.Email}"></xp:text>
+					<xp:label value="Start Month" id="startmonthlabel" for="startmonth"></xp:label>
+					<xp:text id="startmonth" value="#{document1.StartDate}"></xp:text>
+					<xp:label value="Manager" id="managerlabel" for="manager"></xp:label>
+					<xp:text id="manager" value="#{document1.Manager}"></xp:text>
+					<xp:label value="Dept" id="deptlabel" for="dept"></xp:label>
+					<xp:text id="dept" value="#{document1.Dept}"></xp:text>
+					<xp:label value="Countries" id="countrieslabel" for="countries"></xp:label>
+					<xp:text id="countries" value="#{document1.Countries}"></xp:text>
+					<xp:label value="Description" id="descriptionlabel" for="description"></xp:label>
+					<xp:text id="description" value="#{document1.Description}"></xp:text>
+				</xp:panel>
+			</xp:this.facets>
+		</xc:unpFormViewer>
+	</div>
+	<xc:unpFooter newDocTarget="EmployeeEdit.xsp"></xc:unpFooter>
+</xp:view>

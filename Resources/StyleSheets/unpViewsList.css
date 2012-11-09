@@ -15,9 +15,7 @@
 }
 
 a.menulink {
-	padding-right: 100%;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding: 1em;
 	font-weight: bold;
 	font-family: Helvetica;
 	font-size: 12pt;
@@ -133,6 +131,11 @@ a.menulink {
 	}
 	#results {
 		margin-left: 30%;
+	}
+	
+	#formholder {
+		width: 68% !important;
+		margin-left: 31% !important;
 	}
 }
 

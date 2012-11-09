@@ -47,7 +47,7 @@ if (sessionScope.rowcount != null){
 	return 20;
 }}]]></xp:this.rows>
 						<li class="data-row">
-							<xp:link escape="true" id="link1"
+							<xp:link escape="true" id="viewlink" styleClass="viewlink"
 								rendered="#{javascript:thisRowData.getDocument() != undefined;}">
 								<xp:this.value><![CDATA[#{javascript:"/" + compositeData.xpageDoc + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID()}]]></xp:this.value>
 								<xp:label id="label2"
