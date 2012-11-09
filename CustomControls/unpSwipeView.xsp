@@ -5,32 +5,46 @@
 		<xp:script src="unp/swipeview.js" clientSide="true"></xp:script>
 		<xp:styleSheet href="/unpSwipeView.css"></xp:styleSheet>
 	</xp:this.resources>
+
 	<xp:this.beforePageLoad>
 		<xp:executeScript>
 			<xp:this.script><![CDATA[#{javascript:var images = new Array;
 var imageFile = "";
 var caption = "";
-var attachmentList = @AttachmentNames();
+var arraySeparator = "[";
+
+var attachmentList = docImages.getAttachmentList();
+var thisUNID = docImages.getDocument().getUniversalID();
+
 for(var i=0; i<attachmentList.length; i++){
 
   var imageDocID = compositeData.imageDocId;
-  imageFile = "/" + @Subset(@DbName(), -1) + "/0/" + imageDocID + "/$FILE/" + attachmentList[i];
-  images.push({
+  imageFile = "0/" + docImages.getDocument().getUniversalID() + "/$FILE/" + attachmentList[i].getName();
+  
+  /*images.push({
      img: imageFile,
      width: 300,
      height: 250,
      desc: 'caption' 
-  });
+  });*/
+  images += arraySeparator + "{"
+  images += "'img': '" + imageFile + "',"
+  images += "'width': '300',"
+  images += "'height': '250',"
+  images += "'desc': 'caption'" 
+  images += "}" 
   
+  arraySeparator = ",";
 }
-viewScope.put("images", JSON.stringify(images));
+
+images+="]";
+
+viewScope.put("images", images);
 
 }]]></xp:this.script>
 		</xp:executeScript>
 	</xp:this.beforePageLoad>
-	
 	<div id="wrapper"></div>
-	
 	<ul id="nav">
 		<li id="prev" onclick="gallery.prev()">-</li>
 		<li class="selected" onclick="gallery.goToPage(0)"></li>
@@ -41,9 +55,9 @@ viewScope.put("images", JSON.stringify(images));
 		<li onclick="gallery.goToPage(5)"></li>
 		<li id="next" onclick="gallery.next()">+</li>
 	</ul>
-<xp:scriptBlock id="script1">
-<xp:this.value>
-<![CDATA[
+	<xp:scriptBlock id="script1">
+		<xp:this.value>
+			<![CDATA[
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 
 var	gallery,
@@ -104,6 +118,6 @@ gallery.onMoveIn(function () {
 	/(^|\s)swipeview-active(\s|$)/.test(className) || (gallery.masterPages[gallery.currentMasterPage].className = !className ? 'swipeview-active' : className + ' swipeview-active');
 });
 ]]>
-</xp:this.value>
-</xp:scriptBlock>
+		</xp:this.value>
+	</xp:scriptBlock>
 </xp:view>
