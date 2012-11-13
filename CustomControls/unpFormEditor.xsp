@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.resources>
+		<xp:script src="unp/jquery-1.7.2.min.js" clientSide="true">
+		</xp:script>
+		<xp:script src="/unp/iScroll.js" clientSide="true"></xp:script>
+		<xp:styleSheet href="/unpForm.css"></xp:styleSheet>
+		<xp:styleSheet href="/unpFlatview.css"></xp:styleSheet>
+		<xp:styleSheet href="/unp/mobiscroll-2.1.custom.min.css"></xp:styleSheet>
+		<xp:script src="/unpForm.js" clientSide="true"></xp:script>
+		<xp:script src="/unpViewGetMore.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/mobiscroll-2.1.custom.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unpViewsList.js" clientSide="true"></xp:script>
+
+	</xp:this.resources>
+	<xp:this.data>
+		<xp:dominoDocument var="document1"
+			formName="#{javascript:compositeData.formname}">
+		</xp:dominoDocument>
+	</xp:this.data>
+	<div id="contentwrapper">
+		<xp:div id="contentwrapper" styleClass="iscrollcontent"
+			style="width: 100%; height: 100%;">
+			<div id="formholder">
+				<xp:text escape="true" id="title" tagName="h2"
+					value="#{javascript:compositeData.title}" styleClass="formtitle">
+				</xp:text>
+
+				<xp:callback facetName="facet_1" id="callback1"></xp:callback>
+				<xp:panel id="buttons" styleClass="buttons" tagName="ul"
+					rendered="#{compositeData.showbuttons == true}">
+					<li class="saveButton">
+						<xp:link escape="true" text="Save" id="link1">
+							<xp:eventHandler event="onclick" submit="true"
+								refreshMode="complete">
+								<xp:this.action>
+									<xp:actionGroup>
+										<xp:saveDocument var="document1"></xp:saveDocument>
+										<xp:openPage name="#{javascript:compositeData.closexpagename}">
+										</xp:openPage>
+									</xp:actionGroup>
+								</xp:this.action>
+							</xp:eventHandler>
+						</xp:link>
+					</li>
+					<xp:text id="closebutton" styleClass="cancelButton"
+						tagName="li">
+						<xp:this.value><![CDATA[#{javascript:"Cancel"}]]></xp:this.value>
+						<xp:this.attrs>
+							<xp:attr name="onclick">
+								<xp:this.value><![CDATA[#{javascript:"window.location.href='" + compositeData.closexpagename + "';"}]]></xp:this.value>
+							</xp:attr>
+						</xp:this.attrs>
+					</xp:text>
+				</xp:panel>
+			</div>
+			<xp:text escape="false" id="iscroll" tagName="script">
+				<xp:this.attrs>
+					<xp:attr name="type" value="text/javascript"></xp:attr>
+				</xp:this.attrs>
+				<xp:this.value><![CDATA[#{javascript:var functionname = "iscrollloaded_" + @ReplaceSubstring(getClientId("contentwrapper"), [":", "_"], "");
+var out = "var scrollContent, scrollNav;\n";
+out += "function " + functionname + "() {\n";
+out += "initiscroll();\n";
+out += "scrollContent = new iScroll('" + getClientId("contentwrapper") + "');\n";
+out += "}\n";
+out += "document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);\n";
+out += "document.addEventListener('DOMContentLoaded', " + functionname + ", false);"
+return out;}]]></xp:this.value>
+			</xp:text>
+		</xp:div>
+	</div>
+
+</xp:view>

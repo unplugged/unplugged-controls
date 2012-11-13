@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE agent SYSTEM 'xmlschemas/domino_8_5_3.dtd'>
+<agent name='Fix Dates' xmlns='http://www.lotus.com/dxl' version='8.5' maintenanceversion='3.0'
+ replicaid='80257AA1002D0DF3' hide='v3' publicaccess='false' designerversion='8.5.3'>
+<noteinfo noteid='47f2' unid='49DA161F21B6901680257AB5002D1919' sequence='5'>
+<created><datetime>20121113T081235,45+00</datetime></created>
+<modified><datetime>20121113T081532,96+00</datetime></modified>
+<revised><datetime>20121113T081532,95+00</datetime></revised>
+<lastaccessed><datetime>20121113T081532,96+00</datetime></lastaccessed>
+<addedtofile><datetime>20121113T081235,47+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<designchange><datetime>20121113T081534,99+00</datetime></designchange>
+<trigger type='actionsmenu'/>
+<documentset type='selected'/><code event='options'><lotusscript>%REM
+	Agent Fix Dates
+	Created Nov 13, 2012 by Matt White/Exhilarate
+	Description: Comments for Agent
+%END REM
+Option Public
+Option Declare
+
+
+</lotusscript></code><code event='initialize'><lotusscript>Sub Initialize
+	Dim sess As New NotesSession
+	Dim docs As NotesDocumentCollection
+	Dim db As NotesDatabase
+	Set db = sess.Currentdatabase
+	Set docs = db.Unprocesseddocuments
+	Dim doc As NotesDocument
+	Set doc = docs.Getfirstdocument
+	Do Until doc Is Nothing
+		Call doc.replaceItemValue("Birthday", CDat(doc.Birthday(0)))
+		Call doc.save(True, False)
+		Set doc = docs.getNextDocument(doc)
+	Loop
+End Sub</lotusscript></code>
+<rundata processeddocs='0' exitcode='0' agentdata='5435DC12329F72C780257AB5002D6029'>
+<agentmodified><datetime>20121113T081532,96+00</datetime></agentmodified>
+<agentrun><datetime>20121113T081549,80+00</datetime></agentrun>
+<runlog>Started running agent 'Fix Dates' on 13/11/2012 08:15:49
+Running on selected documents: 200 total
+Found 200 document(s) that match search criteria
+Ran LotusScript code
+Done running agent 'Fix Dates' on 13/11/2012 08:15:49
+</runlog></rundata></agent>
+

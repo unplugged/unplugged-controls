@@ -5,10 +5,11 @@ window.addEventListener("orientationchange", function() {
 
 $(window).load(function() {
 	initiscroll();
-	
-	$(".viewlink").addEventListener("click", function(){
-		var box = new AjaxLoader($(this));
-	})
+	try{
+		$(".viewlink").addEventListener("click", function(){
+			var box = new AjaxLoader($(this));
+		})
+	}catch(e){}
 });
 
 function loadPage(url, target, menuitem){
