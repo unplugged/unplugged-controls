@@ -49,6 +49,7 @@ a.menulink {
 	border: 1px solid #111111 /*{a-bup-border}*/;
 	background: #242424 /*{a-bup-background-color}*/;
 	font-weight: bold;
+	cursor: pointer;
 	color: #c0c0c0 /*{a-bup-color}*/;
 	text-shadow: 0 /*{a-bup-shadow-x}*/   1px /*{a-bup-shadow-y}*/   0
 		/*{a-bup-shadow-radius}*/   #000 /*{a-bup-shadow-color}*/;
@@ -108,7 +109,7 @@ a.menulink {
 }
 
 .ajax_loader {
-	position: absolute;
+	position: relative;
 	background: url("unp/spinner_squares_circle.gif") no-repeat center center
 		transparent;
 	width: 100%;

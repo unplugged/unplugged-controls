@@ -16,7 +16,7 @@ $(window).load(function() {
 
 function loadPage(url, target, menuitem){
 	var thisArea = $("#" + target);
-	var box = new AjaxLoader($('#' + target));
+	var box = new AjaxLoader($('#content'));
 	thisArea.load(url, function(){
 		box.remove();
 		if (firedrequests != null){
@@ -31,6 +31,11 @@ function loadPage(url, target, menuitem){
 	$(".menuitem" + menuitem).removeClass("viewMenuItem");
 	$(".menuitem" + menuitem).addClass("viewMenuItemSelected");
 	toggleViewsMenu();
+}
+
+function openPage(url, target){
+	var box = new AjaxLoader($('#' + target));
+	document.location.href = url;
 }
 
 function initiscroll(){
@@ -83,7 +88,7 @@ function initiscroll(){
 
 function AjaxLoader (el, options) {
 	var defaults = {
-		bgColor 		: '#000',
+		bgColor 		: '#999',
 		duration		: 1000,
 		opacity			: 0.8,
 		classOveride 	: false
@@ -96,8 +101,8 @@ function AjaxLoader (el, options) {
 		var overlay = $('<div></div>').css({
 				'background-color': this.options.bgColor,
 				'opacity':this.options.opacity,
-				'width':container.width(),
-				'height':container.height(),
+				'width':"100%",
+				'height':"100%",
 				'position':'absolute',
 				'top':'0px',
 				'left':'0px',
