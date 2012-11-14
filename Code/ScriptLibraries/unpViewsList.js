@@ -6,9 +6,11 @@ window.addEventListener("orientationchange", function() {
 $(window).load(function() {
 	initiscroll();
 	try{
-		$(".viewlink").addEventListener("click", function(){
-			var box = new AjaxLoader($(this));
-		})
+		$(".viewlink").each(function(){
+			$(this).addEventListener("click", function(){
+				var box = new AjaxLoader($(this));
+			});
+		});
 	}catch(e){}
 });
 
@@ -81,9 +83,9 @@ function initiscroll(){
 
 function AjaxLoader (el, options) {
 	var defaults = {
-		bgColor 		: '#fff',
-		duration		: 200,
-		opacity			: 0.7,
+		bgColor 		: '#000',
+		duration		: 1000,
+		opacity			: 0.8,
 		classOveride 	: false
 	}
 	this.options 	= jQuery.extend(defaults, options);
@@ -107,7 +109,7 @@ function AjaxLoader (el, options) {
 		container.append(
 			overlay.append(
 				$('<div></div>').addClass('ajax_loader')
-			).fadeIn(this.options.duration)
+			)
 		);
     };
 	this.remove = function(){

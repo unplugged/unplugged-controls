@@ -46,17 +46,38 @@
 						</xp:this.converter>
 					</xp:inputText>
 					<xp:label value="Email" id="emaillabel" for="email"></xp:label>
-					<xp:text id="email" value="#{document1.Email}"></xp:text>
+					<xp:inputText id="email" value="#{document1.Email}"
+						type="email">
+					</xp:inputText>
 					<xp:label value="Start Month" id="startmonthlabel" for="startmonth"></xp:label>
-					<xp:text id="startmonth" value="#{document1.StartDate}"></xp:text>
+					<xp:comboBox id="startmonth"
+						value="#{document1.StartDate}">
+						<xp:selectItem itemLabel="January"></xp:selectItem>
+						<xp:selectItem itemLabel="February"></xp:selectItem>
+						<xp:selectItem itemLabel="March"></xp:selectItem>
+						<xp:selectItem itemLabel="April"></xp:selectItem>
+						<xp:selectItem itemLabel="May"></xp:selectItem>
+						<xp:selectItem itemLabel="June"></xp:selectItem>
+						<xp:selectItem itemLabel="July"></xp:selectItem>
+						<xp:selectItem itemLabel="August"></xp:selectItem>
+						<xp:selectItem itemLabel="September"></xp:selectItem>
+						<xp:selectItem itemLabel="October"></xp:selectItem>
+						<xp:selectItem itemLabel="November"></xp:selectItem>
+						<xp:selectItem itemLabel="December"></xp:selectItem>
+					</xp:comboBox>
 					<xp:label value="Manager" id="managerlabel" for="manager"></xp:label>
-					<xp:text id="manager" value="#{document1.Manager}"></xp:text>
+					<xp:inputText id="manager" value="#{document1.Manager}"></xp:inputText>
 					<xp:label value="Dept" id="deptlabel" for="dept"></xp:label>
-					<xp:text id="dept" value="#{document1.Dept}"></xp:text>
+					<xp:inputText id="dept" value="#{document1.Dept}"></xp:inputText>
 					<xp:label value="Countries" id="countrieslabel" for="countries"></xp:label>
-					<xp:text id="countries" value="#{document1.Countries}"></xp:text>
+					<xp:comboBox id="countries"
+						value="#{document1.countries}">
+						<xp:selectItems>
+							<xp:this.value><![CDATA[#{javascript:@Unique(@DbColumn(@DbName(), "Employees By Country", 1))}]]></xp:this.value>
+						</xp:selectItems>
+					</xp:comboBox>
 					<xp:label value="Description" id="descriptionlabel" for="description"></xp:label>
-					<xp:text id="description" value="#{document1.Description}"></xp:text>
+					<xp:inputTextarea id="description" value="#{document1.Description}"></xp:inputTextarea>
 				</xp:panel>
 			</xp:this.facets>
 		</xc:unpFormEditor>

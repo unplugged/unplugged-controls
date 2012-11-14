@@ -53,6 +53,10 @@
 	padding: 6px;
 }
 
+#formholder textarea {
+	height: 150px;	
+}
+
 #formholder button {
 	-webkit-box-sizing: border-box;
 	font-size: 1.3em;
