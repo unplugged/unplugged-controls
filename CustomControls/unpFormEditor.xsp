@@ -35,8 +35,11 @@
 										<xp:saveDocument
 											var="document1">
 										</xp:saveDocument>
+
 										<xp:openPage
-											name="#{javascript:compositeData.closexpagename}">
+											name="#{javascript:compositeData.closexpagename}"
+											target="openDocument"
+											documentId="#{javascript:document1.getDocument().getUniversalID()}">
 										</xp:openPage>
 									</xp:actionGroup>
 								</xp:this.action>
@@ -50,7 +53,7 @@ return true;]]></xp:this.script>
 						<xp:this.value><![CDATA[#{javascript:"Cancel"}]]></xp:this.value>
 						<xp:this.attrs>
 							<xp:attr name="onclick">
-								<xp:this.value><![CDATA[#{javascript:"var box = new AjaxLoader($('#contentwrapper'));window.location.href='" + compositeData.closexpagename + "';"}]]></xp:this.value>
+								<xp:this.value><![CDATA[#{javascript:"var box = new AjaxLoader($('#contentwrapper'));window.location.href='" + compositeData.closexpagename + "?action=openDocument&documentId=" + document1.getDocument().getUniversalID() + "';"}]]></xp:this.value>
 							</xp:attr>
 						</xp:this.attrs>
 					</xp:text>
