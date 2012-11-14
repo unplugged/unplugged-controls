@@ -23,12 +23,26 @@
 			<xp:this.facets>
 				<xp:panel xp:key="facet_1">
 					<xp:label value="Name" id="namelabel" for="name"></xp:label>
-					<xp:inputText id="name" value="#{document1.Name}"></xp:inputText>
+					<xp:inputText id="name" value="#{document1.Name}">
+						<xp:this.attrs>
+							<xp:attr name="onfocus">
+								<xp:this.value><![CDATA[console.log("Focus on " + this.id);]]></xp:this.value>
+							</xp:attr>
+							<xp:attr name="onclick">
+								<xp:this.value><![CDATA[console.log("Click on " + this.id);]]></xp:this.value>
+							</xp:attr>
+						</xp:this.attrs></xp:inputText>
 					<xp:label value="DOB" id="doblabel" for="dob"></xp:label>
-					<xp:inputText id="dob" styleClass="datepicker"
-						value="#{document1.Birthday}">
+					<xp:inputText id="dob"
+						value="#{document1.Birthday}" type="date">
 						<xp:this.converter>
-							<xp:convertDateTime pattern="dd MMM yyyy"></xp:convertDateTime>
+							<xp:convertDateTime>
+								<xp:this.pattern><![CDATA[${javascript:if (document1.isEditable()){
+	return "yyyy-MM-dd";
+}else{
+	return "dd MMM yyyy";
+}}]]></xp:this.pattern>
+							</xp:convertDateTime>
 						</xp:this.converter>
 					</xp:inputText>
 					<xp:label value="Email" id="emaillabel" for="email"></xp:label>

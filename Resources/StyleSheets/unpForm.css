@@ -45,6 +45,7 @@
 	margin: 2px;
 	overflow: visible;
 	height: 34px;
+	width: 100%;
 	-webkit-box-sizing: border-box;
 	font-family: helvetica;
 	font-size: 1.4em;

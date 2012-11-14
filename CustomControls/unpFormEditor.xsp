@@ -6,10 +6,8 @@
 		<xp:script src="/unp/iScroll.js" clientSide="true"></xp:script>
 		<xp:styleSheet href="/unpForm.css"></xp:styleSheet>
 		<xp:styleSheet href="/unpFlatview.css"></xp:styleSheet>
-		<xp:styleSheet href="/unp/mobiscroll-2.1.custom.min.css"></xp:styleSheet>
 		<xp:script src="/unpForm.js" clientSide="true"></xp:script>
 		<xp:script src="/unpViewGetMore.js" clientSide="true"></xp:script>
-		<xp:script src="/unp/mobiscroll-2.1.custom.min.js" clientSide="true"></xp:script>
 		<xp:script src="/unpViewsList.js" clientSide="true"></xp:script>
 
 	</xp:this.resources>
@@ -62,7 +60,7 @@
 var out = "var scrollContent, scrollNav;\n";
 out += "function " + functionname + "() {\n";
 out += "initiscroll();\n";
-out += "scrollContent = new iScroll('" + getClientId("contentwrapper") + "');\n";
+out += "scrollContent = new iScroll('" + getClientId("contentwrapper") + "'});\n";
 out += "}\n";
 out += "document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);\n";
 out += "document.addEventListener('DOMContentLoaded', " + functionname + ", false);"
