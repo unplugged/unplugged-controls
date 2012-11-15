@@ -11,6 +11,7 @@
 		</xp:metaData>
 		<xp:styleSheet href="/unpViewsList.css"></xp:styleSheet>
 		<xp:script src="/unp/jquery-1.7.2.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/jquery.blockUI.js" clientSide="true"></xp:script>
 		<xp:script src="/unp/iScroll.js" clientSide="true"></xp:script>
 		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 		<xp:script src="/unpViewsList.js" clientSide="true"></xp:script>
@@ -80,6 +81,11 @@ menuItem.icon != null && menuItem.icon != ""}]]></xp:this.rendered>
 		}
 	</script>
 	<xp:text escape="false" id="iscroll" tagName="script">
+		<xp:this.rendered><![CDATA[#{javascript:try{
+	getClientId("contentwrapper") != null
+}catch(e){
+	return false;
+}}]]></xp:this.rendered>
 		<xp:this.attrs>
 			<xp:attr name="type" value="text/javascript"></xp:attr>
 		</xp:this.attrs>

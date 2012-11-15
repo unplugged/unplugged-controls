@@ -91,7 +91,7 @@
 					<xp:label value="Description" id="descriptionlabel"
 						for="description">
 					</xp:label>
-					<xp:inputTextarea id="description"
+					<xp:inputTextarea id="description" styleClass="richtextfield"
 						value="#{document1.Description}">
 					</xp:inputTextarea>
 				</xp:panel>

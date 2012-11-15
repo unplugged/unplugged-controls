@@ -3,6 +3,7 @@
 	<xp:this.resources>
 		<xp:script src="unp/jquery-1.7.2.min.js" clientSide="true">
 		</xp:script>
+		<xp:script src="/unp/jquery.blockUI.js" clientSide="true"></xp:script>
 		<xp:script src="/unp/iScroll.js" clientSide="true"></xp:script>
 		<xp:styleSheet href="/unpForm.css"></xp:styleSheet>
 		<xp:styleSheet href="/unpFlatview.css"></xp:styleSheet>
@@ -43,7 +44,7 @@
 										</xp:openPage>
 									</xp:actionGroup>
 								</xp:this.action>
-								<xp:this.script><![CDATA[var box = new AjaxLoader($('#contentwrapper'));
+								<xp:this.script><![CDATA[$.blockUI();
 return true;]]></xp:this.script>
 							</xp:eventHandler>
 						</xp:link>
@@ -53,7 +54,7 @@ return true;]]></xp:this.script>
 						<xp:this.value><![CDATA[#{javascript:"Cancel"}]]></xp:this.value>
 						<xp:this.attrs>
 							<xp:attr name="onclick">
-								<xp:this.value><![CDATA[#{javascript:"var box = new AjaxLoader($('#contentwrapper'));window.location.href='" + compositeData.closexpagename + "?action=openDocument&documentId=" + document1.getDocument().getUniversalID() + "';"}]]></xp:this.value>
+								<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='" + compositeData.closexpagename + "?action=openDocument&documentId=" + document1.getDocument().getUniversalID() + "';"}]]></xp:this.value>
 							</xp:attr>
 						</xp:this.attrs>
 					</xp:text>

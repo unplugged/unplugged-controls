@@ -4,21 +4,23 @@ window.addEventListener("orientationchange", function() {
 }, false);
 
 $(window).load(function() {
+	$(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
 	initiscroll();
 	try{
 		$(".viewlink").each(function(){
 			$(this).addEventListener("click", function(){
-				var box = new AjaxLoader($(this));
+				//var box = new AjaxLoader($(this));
+				$.blockUI();
 			});
 		});
 	}catch(e){}
 });
 
+var firedrequests;
 function loadPage(url, target, menuitem){
 	var thisArea = $("#" + target);
-	var box = new AjaxLoader($('#content'));
 	thisArea.load(url, function(){
-		box.remove();
+		
 		if (firedrequests != null){
 			firedrequests = new Array();
 		}
@@ -34,7 +36,7 @@ function loadPage(url, target, menuitem){
 }
 
 function openPage(url, target){
-	var box = new AjaxLoader($('#' + target));
+	$.blockUI();
 	document.location.href = url;
 }
 
@@ -83,47 +85,4 @@ function initiscroll(){
 			}
 		});
 	});
-}
-	
-
-function AjaxLoader (el, options) {
-	var defaults = {
-		bgColor 		: '#999',
-		duration		: 1000,
-		opacity			: 0.8,
-		classOveride 	: false
-	}
-	this.options 	= jQuery.extend(defaults, options);
-	this.container 	= $(el);
-	this.init = function() {
-		var container = this.container;
-		this.remove();
-		var overlay = $('<div></div>').css({
-				'background-color': this.options.bgColor,
-				'opacity':this.options.opacity,
-				'width':"100%",
-				'height':"100%",
-				'position':'absolute',
-				'top':'0px',
-				'left':'0px',
-				'z-index':99999
-		}).addClass('ajax_overlay');
-		if (this.options.classOveride) {
-			overlay.addClass(this.options.classOveride);
-		}
-		container.append(
-			overlay.append(
-				$('<div></div>').addClass('ajax_loader')
-			)
-		);
-    };
-	this.remove = function(){
-		var overlay = this.container.children(".ajax_overlay");
-		if (overlay.length) {
-			overlay.fadeOut(this.options.classOveride, function() {
-				overlay.remove();
-			});
-		}
-	}
-    this.init();
 }

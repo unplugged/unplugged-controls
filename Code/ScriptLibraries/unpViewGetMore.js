@@ -1,3 +1,7 @@
+$(window).load(function() {
+	$(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
+});
+
 var firedrequests = new Array();
 function stopViewSpinner(){
 	$("#loadmorelink").disabled = false;
@@ -28,10 +32,13 @@ function loadmore(viewName, summarycol, detailcol, category, xpage){
 			$("#flatViewRowSet").append($(".summaryDataRow li"));
 			if ($(".summaryDataRow").text().indexOf("NOMORERECORDS") > -1){
 				$("#pullUp").hide();
+				$("#loadmorelink").hide();
+				$("#loadmorespinner").hide();
 			}else{
+				$("#pullUp").show();
 				$("#loadmorelink").show();
+				$("#loadmorespinner").hide();
 			}
-			$("#loadmorespinner").hide();
 			$(".summaryDataRow").empty();
 			try{
 				scrollContent.refresh();
@@ -44,7 +51,7 @@ function loadmore(viewName, summarycol, detailcol, category, xpage){
 }
 
 function openLink(url, target){
-	var box = new AjaxLoader($('#' + target));
+	$.blockUI();
 	document.location.href = url;
 }
 

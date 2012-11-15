@@ -37,7 +37,9 @@
 					<xp:label value="Countries" id="countrieslabel" for="countries"></xp:label>
 					<xp:text id="countries" value="#{document1.Countries}"></xp:text>
 					<xp:label value="Description" id="descriptionlabel" for="description"></xp:label>
-					<xp:text id="description" value="#{document1.Description}"></xp:text>
+					<xp:text id="description"
+						value="#{document1.Description}" escape="false">
+					</xp:text>
 				</xp:panel>
 			</xp:this.facets>
 		</xc:unpFormViewer>

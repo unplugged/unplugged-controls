@@ -3,12 +3,12 @@
 	<xp:this.resources>
 		<xp:script src="unp/jquery-1.7.2.min.js" clientSide="true">
 		</xp:script>
+		<xp:script src="/unp/jquery.blockUI.js" clientSide="true"></xp:script>
 		<xp:script src="/unp/iScroll.js" clientSide="true"></xp:script>
 		<xp:styleSheet href="/unpForm.css"></xp:styleSheet>
 		<xp:styleSheet href="/unpFlatview.css"></xp:styleSheet>
 		<xp:script src="/unpViewGetMore.js" clientSide="true"></xp:script>
 		<xp:script src="/unpViewsList.js" clientSide="true"></xp:script>
-
 	</xp:this.resources>
 	<xp:this.data>
 		<xp:dominoDocument var="document1"
@@ -30,7 +30,7 @@
 						<xp:this.value><![CDATA[#{javascript:"Edit"}]]></xp:this.value>
 						<xp:this.attrs>
 							<xp:attr name="onclick">
-								<xp:this.value><![CDATA[#{javascript:"var box = new AjaxLoader($('#contentwrapper'));window.location.href='" + compositeData.editxpagename + "?action=editDocument&documentId=" + document1.getDocument().getUniversalID() + "';"}]]></xp:this.value>
+								<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='" + compositeData.editxpagename + "?action=editDocument&documentId=" + document1.getDocument().getUniversalID() + "';"}]]></xp:this.value>
 							</xp:attr>
 						</xp:this.attrs>
 					</xp:text>
@@ -39,7 +39,7 @@
 						<xp:this.value><![CDATA[#{javascript:"Close"}]]></xp:this.value>
 						<xp:this.attrs>
 							<xp:attr name="onclick">
-								<xp:this.value><![CDATA[#{javascript:"var box = new AjaxLoader($('#contentwrapper'));window.location.href='" + compositeData.closexpagename + "';"}]]></xp:this.value>
+								<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='" + compositeData.closexpagename + "';"}]]></xp:this.value>
 							</xp:attr>
 						</xp:this.attrs>
 					</xp:text>
