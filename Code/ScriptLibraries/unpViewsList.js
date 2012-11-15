@@ -9,7 +9,6 @@ $(window).load(function() {
 	try{
 		$(".viewlink").each(function(){
 			$(this).addEventListener("click", function(){
-				//var box = new AjaxLoader($(this));
 				$.blockUI();
 			});
 		});
@@ -50,6 +49,9 @@ function initiscroll(){
 	try{
 		scrollContent.destroy();
 	}catch(e){}
+	$(".iscrollmenu").each(function(){
+		scrollContent = new iScroll($(this).attr("id"))
+	});
 	$(".iscrollcontent").each(function(){
 		scrollContent = new iScroll($(this).attr("id"), {
 			useTransition: true,

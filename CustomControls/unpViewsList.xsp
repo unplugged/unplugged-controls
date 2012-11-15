@@ -16,8 +16,8 @@
 		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 		<xp:script src="/unpViewsList.js" clientSide="true"></xp:script>
 	</xp:this.resources>
-	<div id="menuPane" class="offScreen">
-		<xp:panel styleClass="navScrollArea" id="navScrollArea">
+	<div id="menuPane" class="offScreen iscrollmenu">
+		<xp:panel styleClass="navScrollArea" id="navScrollArea" >
 			<ul id="menuitems">
 				<xp:repeat id="repeat1" rows="30" disableOutputTag="true"
 					var="menuItem" value="#{javascript:compositeData.menuItem;}">
@@ -82,7 +82,7 @@ menuItem.icon != null && menuItem.icon != ""}]]></xp:this.rendered>
 	</script>
 	<xp:text escape="false" id="iscroll" tagName="script">
 		<xp:this.rendered><![CDATA[#{javascript:try{
-	getClientId("contentwrapper") != null
+	getClientId("navScrollArea") != null
 }catch(e){
 	return false;
 }}]]></xp:this.rendered>
@@ -90,10 +90,10 @@ menuItem.icon != null && menuItem.icon != ""}]]></xp:this.rendered>
 			<xp:attr name="type" value="text/javascript"></xp:attr>
 		</xp:this.attrs>
 		<xp:this.value><![CDATA[#{javascript:var functionname = "iscrollloaded_" + @ReplaceSubstring(getClientId("navScrollArea"), [":", "_"], "");
-var out = "var scrollContent, scrollNav;\n";
+var out = "var scrollMenu, scrollNav;\n";
 out += "function " + functionname + "() {\n";
 out += "try{initiscroll()}catch(e){\n";
-out += "scrollContent = new iScroll('" + getClientId("contentwrapper") + "');\n";
+out += "scrollMenu = new iScroll('" + getClientId("navScrollArea") + "');\n";
 out += "}}\n";
 out += "document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);\n";
 out += "document.addEventListener('DOMContentLoaded', " + functionname + ", false);"
