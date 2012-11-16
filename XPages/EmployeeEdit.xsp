@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
 
-	<xc:unpHeader search="local" viewsButton="true" title="Employees"></xc:unpHeader>
+	<xc:unpHeader search="s" viewsButton="true" title="Employees"></xc:unpHeader>
 	<xc:unpViewsList>
 		<xc:this.menuItem>
 			<xc:menuItem label="All Documents" page="/UnpDemoWidgets.xsp"

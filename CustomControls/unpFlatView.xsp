@@ -77,22 +77,30 @@ else {return true;}}]]></xp:this.rendered>
 					</xp:repeat>
 				</ul>
 				<div class="summaryDataRow"></div>
-				<div id="pullUp">
-					<span class="pullUpIcon"></span>
-					<span class="pullUpLabel">
-						Pull up to load more...
-					</span>
-					<div id="loadmorelink">
-						<xp:button value="Load More..." id="loadmorebutton"
-							styleClass="loadmorebutton" style="display: none;">
-							<xp:this.attrs>
-								<xp:attr name="onclick">
-									<xp:this.value><![CDATA[#{javascript:"loadmore('" + compositeData.viewName + "', '" + compositeData.summaryColumn + "', '" + compositeData.detailColumn + "', '" + compositeData.categoryfilter + "', '" + compositeData.xpageDoc + "')"}]]></xp:this.value>
-								</xp:attr>
-							</xp:this.attrs>
-						</xp:button>
+				<xp:div id="pullUpHolder">
+					<xp:this.rendered><![CDATA[#{javascript:compositeData.refreshmethod == "pull"}]]></xp:this.rendered>
+					<div id="pullUp">
+						<span class="pullUpIcon"></span>
+						<span class="pullUpLabel">
+							Pull up to load more...
+						</span>
 					</div>
-				</div>
+				</xp:div>
+				<xp:div id="loadmorelink">
+					<xp:this.styleClass><![CDATA[#{javascript:if (compositeData.refreshmethod != "button"){
+	return "loadmorelink hidden";
+}else{
+	return "loadmorelink";
+}}]]></xp:this.styleClass>
+					<xp:button value="Load More..." id="loadmorebutton"
+						styleClass="loadmorebutton">
+						<xp:this.attrs>
+							<xp:attr name="onclick">
+								<xp:this.value><![CDATA[#{javascript:"loadmore('" + compositeData.viewName + "', '" + compositeData.summaryColumn + "', '" + compositeData.detailColumn + "', '" + compositeData.categoryfilter + "', '" + compositeData.xpageDoc + "', '" + compositeData.refreshmethod + "')"}]]></xp:this.value>
+							</xp:attr>
+						</xp:this.attrs>
+					</xp:button>
+				</xp:div>
 
 			</div>
 		</xp:panel>

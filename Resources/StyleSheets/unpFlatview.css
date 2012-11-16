@@ -98,7 +98,7 @@
 	padding-right: 30px;
 }
 
-#loadmorelink button {
+.loadmorelink button {
 	width: 100%;
 	background: #e4eafa none 0 0 repeat-x;
 	border: solid 1px #adc0ed;
@@ -126,6 +126,10 @@
 	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.01, #eee),
 		color-stop(0.05, #f3f5fa), color-stop(0.70, #e4eafa),
 		color-stop(1, #c9d5f6) );
+}
+
+.hidden {
+	display: none !important;	
 }
 
 /**

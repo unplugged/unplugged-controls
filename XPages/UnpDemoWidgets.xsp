@@ -22,7 +22,8 @@
 			<xp:this.facets>
 				<xc:unpFlatView insetData="true" detailColumn="DOB"
 					summaryColumn="Name" title="Employees" viewName="Employees"
-					xpageDoc="Employee.xsp" xp:key="facet_1" numberofrows="20">
+					xpageDoc="Employee.xsp" xp:key="facet_1" numberofrows="20"
+					refreshmethod="pull">
 				</xc:unpFlatView>
 			</xp:this.facets>
 		</xc:unpScrollableArea>

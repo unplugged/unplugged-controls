@@ -59,27 +59,6 @@ menuItem.icon != null && menuItem.icon != ""}]]></xp:this.rendered>
 			</ul>
 		</xp:panel>
 	</div>
-	<script>
-		$(document).ready(function () {
-		$('.viewsButton').click(function (event) {
-		toggleViewsMenu();
-		});
-		});
-
-		function toggleViewsMenu() {
-		if ($("#menuPane").hasClass("offScreen")) {
-		$("#menuPane").removeClass("offScreen").addClass("onScreen");
-		$("#menuPane").animate({
-		"left": "+=700px"
-		}, "slow");
-		} else {
-		$("#menuPane").removeClass("onScreen").addClass("offScreen");
-		$("#menuPane").animate({
-		"left": "-=700px"
-		}, "slow");
-		}
-		}
-	</script>
 	<xp:text escape="false" id="iscroll" tagName="script">
 		<xp:this.rendered><![CDATA[#{javascript:try{
 	getClientId("navScrollArea") != null

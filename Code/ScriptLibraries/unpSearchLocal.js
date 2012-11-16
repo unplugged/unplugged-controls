@@ -7,14 +7,14 @@ $(document).ready(function() {
 
 	$('#input-search').keyup( function() {
 		$('li.data-row').css("display", "none");
-		$("#loadmorelink").css("display", "none");
+		$(".loadmorelink").css("display", "none");
 		var searchterm = $('#input-search').val();
 		if (searchterm.length > 2) {
 			var match = $('li.data-row:icontains("' + searchterm + '")');
 			match.css("display", "");
 		} else {
 			$('li.data-row').css("display", "");
-			$("#loadmorelink").css("display", "");
+			$(".loadmorelink").css("display", "");
 		}
 		try {
 			initiscroll();

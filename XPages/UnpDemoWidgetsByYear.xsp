@@ -5,7 +5,7 @@
 		<xp:this.facets>
 			<xc:unpFlatView insetData="true" detailColumn="Year"
 				summaryColumn="Name" title="Employees By Year" numberofrows="20"
-				viewName="Employees By Year" xpageDoc="Employee.xsp"
+				viewName="Employees By Year" xpageDoc="Employee.xsp" refreshmethod="pull"
 				xp:key="facet_1">
 			</xc:unpFlatView>
 		</xp:this.facets>

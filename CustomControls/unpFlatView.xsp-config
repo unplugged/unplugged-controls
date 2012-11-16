@@ -88,5 +88,17 @@ return xpageDoc.indexOf(".xsp") &gt;= 0;</validation-formula>
         <required>true</required>
       </property-extension>
     </property>
+    <property>
+      <property-name>refreshmethod</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <editor-parameter>pull&#xd;
+button</editor-parameter>
+          <default-value>pull</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
   </composite-component>
 </faces-config>
