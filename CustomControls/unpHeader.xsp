@@ -7,12 +7,17 @@
 		<xp:metaData name="apple-mobile-web-app-status-bar-style"
 			content="black-translucent">
 		</xp:metaData>
-		<xp:metaData name="apple-mobile-web-app-capable" content="yes">
+		<xp:metaData name="apple-mobile-web-app-capable"
+			content="yes">
 		</xp:metaData>
 		<xp:styleSheet href="/unpHeaderFooter.css"></xp:styleSheet>
-		<xp:script src="unp/jquery-1.7.2.min.js" clientSide="true">
-		</xp:script>
 	</xp:this.resources>
+
+	<script type="text/javascript" src="unp/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="unp/jquery.blockUI.min.js"></script>
+	<script type="text/javascript" src="unp/iScroll.min.js"></script>
+	<script type="text/javascript" src="unplugged.js"></script>
+
 	<xp:panel styleClass="iHeader black">
 		<xp:image styleClass="companyLogo" url="/unp/unplugged_logo.png"
 			id="companyLogo"></xp:image>
@@ -32,8 +37,7 @@ else{ return true;
 }else{
 	return compositeData.viewsButton;
 }}]]></xp:this.rendered>
-			<xp:label value="Views" id="viewslabel"
-				styleClass="viewslabel">
+			<xp:label value="Views" id="viewslabel" styleClass="viewslabel">
 			</xp:label>
 		</xp:panel>
 
@@ -84,4 +88,9 @@ else{ return true;
 		</xp:this.attrs>
 		<xp:this.value><![CDATA[#{javascript:"var searchPage = \"" + compositeData.searchPage + "\";"}]]></xp:this.value>
 	</xp:text>
+
+	<!--
+		<script type="text/javascript" src="unp/jquery-1.7.2.min.js"></script>
+	-->
+
 </xp:view>

@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
 	<xp:this.resources>
-		<xp:script src="unp/jquery-1.7.2.min.js" clientSide="true">
-		</xp:script>
-		<xp:script src="/unp/jquery.blockUI.js" clientSide="true"></xp:script>
-		<xp:script src="/unp/iScroll.js" clientSide="true"></xp:script>
 		<xp:styleSheet href="/unpForm.css"></xp:styleSheet>
 		<xp:styleSheet href="/unpFlatview.css"></xp:styleSheet>
-		<xp:script src="/unpForm.js" clientSide="true"></xp:script>
-		<xp:script src="/unpViewGetMore.js" clientSide="true"></xp:script>
-		<xp:script src="/unpViewsList.js" clientSide="true"></xp:script>
 	</xp:this.resources>
 	<xp:this.data>
 		<xp:dominoDocument var="document1"
@@ -77,4 +71,12 @@ return out;}]]></xp:this.value>
 		</xp:div>
 	</div>
 
+	<!-- 
+		<script type="text/javascript" src="unp/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="unp/jquery.blockUI.min.js"></script>
+		<script type="text/javascript" src="unp/iScroll.min.js"></script>
+		<script type="text/javascript" src="unpForm.min.js"></script>
+		<script type="text/javascript" src="unpViewGetMore.min.js"></script>
+		<script type="text/javascript" src="unpViewsList.min.js"></script>
+	-->
 </xp:view>

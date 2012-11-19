@@ -1,3 +1,82 @@
+$(window).load( function() {
+	allowFormsInIscroll();
+	try{
+		if ($('.richtextfield').val().indexOf("<") > -1){
+			var val = $($('.richtextfield').val()).text();
+			$('.richtextfield').val(val);
+		}
+	}catch(e){}
+});
+
+function allowFormsInIscroll() {
+	[].slice.call(document.querySelectorAll('input, select, button, textarea')).forEach(function(el) {
+		el.addEventListener(('ontouchstart' in window) ? 'touchstart' : 'mousedown',
+				function(e) {
+			e.stopPropagation();
+		})
+	})
+}
+$(window).load(function() {
+	$(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
+});
+
+var firedrequests = new Array();
+function stopViewSpinner(){
+	$(".loadmorelink").disabled = false;
+	$("#loadmorespinner").hide();
+}
+
+function loadmore(viewName, summarycol, detailcol, category, xpage, refreshmethod){
+	try{
+		$(".loadmorelink").hide();
+		$("#loadmorespinner").show();
+		setTimeout("stopViewSpinner()", 5000);
+		var itemlist = $("#flatViewRowSet li");
+		var pos = itemlist.length - 1;
+		for (var i=0; i<firedrequests.length; i++){
+			if (firedrequests[i] == pos){
+				$(".loadmorelink").show();
+				$("#loadmorespinner").hide();
+				return;
+			}
+		}
+		firedrequests.push(pos);
+		var thisArea = $(".summaryDataRow");
+		var url = "UnpFlatViewList.xsp?chosenView=" + encodeURIComponent(viewName) + "&summarycol=" + encodeURIComponent(summarycol)
+					+ "&detailcol=" + encodeURIComponent(detailcol) + "&category=" + encodeURIComponent(category)
+					+ "&xpage=" + xpage + "&refreshmethod=" + refreshmethod + "&start=" + pos;
+		thisArea.load(url + " #results", function(){
+			$("#flatViewRowSet").append($(".summaryDataRow li"));
+			if ($(".summaryDataRow").text().indexOf("NOMORERECORDS") > -1){
+				$("#pullUp").hide();
+				$(".loadmorelink").hide();
+				$("#loadmorespinner").hide();
+			}else{
+				$("#pullUp").show();
+				$(".loadmorelink").show();
+				$("#loadmorespinner").hide();
+			}
+			$(".summaryDataRow").empty();
+			try{
+				scrollContent.refresh();
+			}catch(e){}
+			return false;
+		});		
+	}catch(e){
+		//Do nothing
+	}
+}
+
+function openLink(url, target){
+	$.blockUI();
+	document.location.href = url;
+}
+
+$(window).scroll(function() {
+	if($(window).scrollTop() + $(window).height() == $(document).height()) {
+		$(".loadmorebutton").click();
+	}
+});
 window.addEventListener("orientationchange", function() {
 	hideViewsMenu();
 	initiscroll();
