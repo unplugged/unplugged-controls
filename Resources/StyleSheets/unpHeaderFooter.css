@@ -49,7 +49,7 @@ body {
 		0, 0) ), color-stop(0.57, rgb(67, 70, 71) ) );
 }
 
-.hidden {
+.hiddensearch {
 	display: none;
 }
 
@@ -216,7 +216,7 @@ body {
 		width: 180px;
 		height: 30px;
 	}
-	.input-search-frame>.hidden {
+	.input-search-frame>.hiddensearch {
 		-webkit-box-sizing: border-box;
 		display: block;
 		width: 100%;
@@ -313,7 +313,7 @@ body {
 		width: 180px;
 		height: 30px;
 	}
-	.input-search-frame>.hidden {
+	.input-search-frame>.hiddensearch {
 		-webkit-box-sizing: border-box;
 		display: block;
 		width: 100%;

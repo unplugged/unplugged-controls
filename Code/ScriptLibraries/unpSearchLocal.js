@@ -32,3 +32,13 @@ $(document).ready(function() {
 		return jQuery(a).text().toUpperCase().indexOf(m[3].toUpperCase()) >= 0;
 	};
 });
+
+$(document).ready(function() {
+	$('.searchButton').click(function (event){
+		if($("#input-search").hasClass("hiddensearch")){
+			$("#input-search").removeClass("hidden").addClass("input-search");
+		}else{
+			$("#input-search").removeClass("input-search").addClass("hiddensearch");
+		}
+		$('#input-search > input').focus(); });
+});

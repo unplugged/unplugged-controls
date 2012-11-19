@@ -54,20 +54,9 @@ else{ return true;
 	</xp:panel>
 	<xp:div id="input-search-frame" styleClass="input-search-frame"
 		rendered="#{javascript:compositeData.search != 'none'}">
-		<input placeholder="Search..." id="input-search" class="hidden">
+		<input placeholder="Search..." id="input-search" class="hiddensearch">
 		</input>
 	</xp:div>
-	<script>
-		$(document).ready(function() {
-		$('.searchButton').click(function (event){
-		if($("#input-search").hasClass("hidden")){
-		$("#input-search").removeClass("hidden").addClass("input-search");
-		}else{
-		$("#input-search").removeClass("input-search").addClass("hidden");
-		}
-		$('#input-search > input').focus(); });
-		});
-	</script>
 	<xp:panel id="searchscript" tagName="script">
 		<xp:this.attrs>
 			<xp:attr name="type" value="text/javascript"></xp:attr>
