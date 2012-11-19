@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core">
 
-	<xp:this.resources>
-		<xp:script src="/unp/iScroll.js" clientSide="true"></xp:script>
-	</xp:this.resources>
 	<div id="contentwrapper">
 		<xp:div id="contentwrapper" styleClass="iscrollcontent"
 			style="width: 100%; height: 100%;">
@@ -26,4 +23,8 @@ out += "document.addEventListener('DOMContentLoaded', " + functionname + ", fals
 return out;}]]></xp:this.value>
 		</xp:text>
 	</div>
+	<!-- 
+	<script type="text/javascript" src="unp/iScroll.min.js"></script>
+	-->
+	
 </xp:view>

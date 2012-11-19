@@ -7,14 +7,11 @@
 		<xp:metaData name="apple-mobile-web-app-status-bar-style"
 			content="black-translucent">
 		</xp:metaData>
-		<xp:metaData name="apple-mobile-web-app-capable" content="yes">
+		<xp:metaData name="apple-mobile-web-app-capable"
+			content="yes">
 		</xp:metaData>
-		<xp:styleSheet href="/unpViewsList.css"></xp:styleSheet>
-		<xp:script src="/unp/jquery-1.7.2.min.js" clientSide="true"></xp:script>
-		<xp:script src="/unp/jquery.blockUI.js" clientSide="true"></xp:script>
-		<xp:script src="/unp/iScroll.js" clientSide="true"></xp:script>
 		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
-		<xp:script src="/unpViewsList.js" clientSide="true"></xp:script>
+		<xp:styleSheet href="/unpViewsList.css"></xp:styleSheet>
 	</xp:this.resources>
 	<div id="menuPane" class="offScreen iscrollmenu">
 		<xp:panel styleClass="navScrollArea" id="navScrollArea" >
@@ -78,5 +75,13 @@ out += "document.addEventListener('touchmove', function (e) { e.preventDefault()
 out += "document.addEventListener('DOMContentLoaded', " + functionname + ", false);"
 return out;}]]></xp:this.value>
 	</xp:text>
+
+	<!-- 
+	<script type="text/javascript" src="unp/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="unp/jquery.blockUI.min.js"></script>
+	<script type="text/javascript" src="unp/iScroll.min.js"></script>
+	<script type="text/javascript" src="unpViewsList.min.js"></script>
+	-->
+
 
 </xp:view>

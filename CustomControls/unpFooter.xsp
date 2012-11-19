@@ -50,5 +50,5 @@ db.replicate("someserver");}]]></xp:this.script>
 			</xp:this.action></xp:eventHandler></xp:link>
 	</xp:panel>
 
-
+	<!-- <script type="text/javascript" src="unplugged.js"></script> -->
 </xp:view>
