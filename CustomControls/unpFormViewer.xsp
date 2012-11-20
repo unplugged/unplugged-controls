@@ -9,34 +9,34 @@
 			formName="#{javascript:compositeData.formname}">
 		</xp:dominoDocument>
 	</xp:this.data>
-	
-		<div id="formholder">
-			<xp:text escape="true" id="title" tagName="h2"
-				value="#{javascript:compositeData.title}" styleClass="formtitle">
-			</xp:text>
 
-			<xp:callback facetName="facet_1" id="callback1"></xp:callback>
-			<xp:panel id="buttons" styleClass="buttons" tagName="ul"
-				rendered="#{compositeData.showbuttons == true}">
-				<xp:text id="editbutton" styleClass="editButton" tagName="li">
-					<xp:this.value><![CDATA[#{javascript:"Edit"}]]></xp:this.value>
-					<xp:this.attrs>
-						<xp:attr name="onclick">
-							<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='" + compositeData.editxpagename + "?action=editDocument&documentId=" + document1.getDocument().getUniversalID() + "';"}]]></xp:this.value>
-						</xp:attr>
-					</xp:this.attrs>
-				</xp:text>
-				<xp:text id="closebutton" styleClass="cancelButton" tagName="li">
-					<xp:this.value><![CDATA[#{javascript:"Close"}]]></xp:this.value>
-					<xp:this.attrs>
-						<xp:attr name="onclick">
-							<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='" + compositeData.closexpagename + "';"}]]></xp:this.value>
-						</xp:attr>
-					</xp:this.attrs>
-				</xp:text>
-			</xp:panel>
-		</div>
-	
+	<div id="formholder">
+		<xp:text escape="true" id="title" tagName="h2"
+			value="#{javascript:compositeData.title}" styleClass="formtitle">
+		</xp:text>
+
+		<xp:callback facetName="facet_1" id="callback1"></xp:callback>
+		<xp:panel id="buttons" styleClass="buttons" tagName="ul"
+			rendered="#{compositeData.showbuttons == true}">
+			<xp:text id="editbutton" styleClass="editButton" tagName="li">
+				<xp:this.value><![CDATA[#{javascript:"Edit"}]]></xp:this.value>
+				<xp:this.attrs>
+					<xp:attr name="onclick">
+						<xp:this.value><![CDATA[#{javascript:"openDocument('" + compositeData.editxpagename + "?action=editDocument&documentId=" + document1.getDocument().getUniversalID() + "', 'content');"}]]></xp:this.value>
+					</xp:attr>
+				</xp:this.attrs>
+			</xp:text>
+			<xp:text id="closebutton" styleClass="cancelButton" tagName="li">
+				<xp:this.value><![CDATA[#{javascript:"Close"}]]></xp:this.value>
+				<xp:this.attrs>
+					<xp:attr name="onclick">
+						<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='" + compositeData.closexpagename + "';"}]]></xp:this.value>
+					</xp:attr>
+				</xp:this.attrs>
+			</xp:text>
+		</xp:panel>
+	</div>
+
 	<!--
 		<script type="text/javascript" src="unp/jquery-1.7.2.min.js"></script>
 		<script type="text/javascript"

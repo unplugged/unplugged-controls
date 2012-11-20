@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
 
-	<xc:unpHeader search="none" viewsButton="true" title="Employees"></xc:unpHeader>
+	<xc:unpHeader search="database" viewsButton="true" title="Employees"
+		searchPage="UnpDemoWidgetsSearch.xsp">
+	</xc:unpHeader>
 	<xc:unpViewsList>
 		<xc:this.menuItem>
 			<xc:menuItem label="All Documents" page="/UnpDemoWidgets.xsp"
@@ -28,5 +30,5 @@
 			</xp:this.facets>
 		</xc:unpScrollableArea>
 	</div>
-	<xc:unpFooter newDocTarget="Employee.xsp"></xc:unpFooter>
+	<xc:unpFooter newDocTarget="EmployeeEdit.xsp"></xc:unpFooter>
 </xp:view>

@@ -77,6 +77,9 @@ function openDocument(url, target){
 			firedrequests = new Array();
 		}
 		initiscroll();
+		if (url.indexOf("editDocument") > -1){
+			allowFormsInIscroll();
+		}
 		return false;
 	});	
 }

@@ -1,103 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
 
-	<xc:unpHeader search="none" viewsButton="true" title="Employees">
-	</xc:unpHeader>
-	<xc:unpViewsList>
-		<xc:this.menuItem>
-			<xc:menuItem label="All Documents" page="/UnpDemoWidgets.xsp"
-				ajaxtargetid="content" ajaxloadid="contentwrapper">
-			</xc:menuItem>
-			<xc:menuItem label="By Department" page="/UnpDemoWidgetsByDept.xsp"
-				ajaxtargetid="content" ajaxloadid="contentwrapper"></xc:menuItem>
-			<xc:menuItem label="Just Finances Department" page="/UnpDemoWidgetsByDeptFinances.xsp"
-				ajaxtargetid="content" ajaxloadid="contentwrapper"></xc:menuItem>
-			<xc:menuItem label="By Country" page="/UnpDemoWidgetsByCountry.xsp"
-				ajaxtargetid="content" ajaxloadid="contentwrapper"></xc:menuItem>
-			<xc:menuItem label="By Year" page="/UnpDemoWidgetsByYear.xsp"
-				ajaxtargetid="content" ajaxloadid="contentwrapper"></xc:menuItem>
-		</xc:this.menuItem>
-	</xc:unpViewsList>
-	<div id="content">
-		<xc:unpFormEditor showbuttons="true"
-			closexpagename="Employee.xsp"
-			formname="Employee" title="Employee">
-			<xp:this.facets>
-				<xp:panel xp:key="facet_1">
-					<xp:label value="Name" id="namelabel" for="name"></xp:label>
-					<xp:inputText id="name" value="#{document1.Name}">
-						<xp:this.attrs>
-							<xp:attr name="onfocus">
-								<xp:this.value><![CDATA[console.log("Focus on " + this.id);]]></xp:this.value>
-							</xp:attr>
-							<xp:attr name="onclick">
-								<xp:this.value><![CDATA[console.log("Click on " + this.id);]]></xp:this.value>
-							</xp:attr>
-						</xp:this.attrs>
-					</xp:inputText>
-					<xp:label value="DOB" id="doblabel" for="dob"></xp:label>
-					<xp:inputText id="dob" value="#{document1.Birthday}"
-						type="date">
-						<xp:this.converter>
-							<xp:convertDateTime>
-								<xp:this.pattern><![CDATA[${javascript:if (document1.isEditable()){
+	<xc:unpScrollableArea>
+		<xp:this.facets>
+			<xc:unpFormEditor showbuttons="true" closexpagename="UnpDemoWidgets.xsp" viewxpagename="Employee.xsp"
+				formname="Employee" title="Employee" xp:key="facet_1">
+				<xp:this.facets>
+					<xp:panel xp:key="facet_1">
+						<xp:label value="Name" id="namelabel" for="name"></xp:label>
+						<xp:inputText id="name" value="#{document1.Name}">
+						</xp:inputText>
+						<xp:label value="DOB" id="doblabel" for="dob"></xp:label>
+						<xp:inputText id="dob" value="#{document1.Birthday}"
+							type="date">
+							<xp:this.converter>
+								<xp:convertDateTime>
+									<xp:this.pattern><![CDATA[${javascript:if (document1.isEditable()){
 	return "yyyy-MM-dd";
 }else{
 	return "dd MMM yyyy";
 }}]]></xp:this.pattern>
-							</xp:convertDateTime>
-						</xp:this.converter>
-					</xp:inputText>
-					<xp:label value="Email" id="emaillabel"
-						for="email">
-					</xp:label>
-					<xp:inputText id="email" value="#{document1.Email}"
-						type="email">
-					</xp:inputText>
-					<xp:label value="Start Month" id="startmonthlabel"
-						for="startmonth">
-					</xp:label>
-					<xp:comboBox id="startmonth"
-						value="#{document1.StartDate}">
-						<xp:selectItem itemLabel="January"></xp:selectItem>
-						<xp:selectItem itemLabel="February"></xp:selectItem>
-						<xp:selectItem itemLabel="March"></xp:selectItem>
-						<xp:selectItem itemLabel="April"></xp:selectItem>
-						<xp:selectItem itemLabel="May"></xp:selectItem>
-						<xp:selectItem itemLabel="June"></xp:selectItem>
-						<xp:selectItem itemLabel="July"></xp:selectItem>
-						<xp:selectItem itemLabel="August"></xp:selectItem>
-						<xp:selectItem itemLabel="September"></xp:selectItem>
-						<xp:selectItem itemLabel="October"></xp:selectItem>
-						<xp:selectItem itemLabel="November"></xp:selectItem>
-						<xp:selectItem itemLabel="December"></xp:selectItem>
-					</xp:comboBox>
-					<xp:label value="Manager" id="managerlabel"
-						for="manager">
-					</xp:label>
-					<xp:inputText id="manager"
-						value="#{document1.Manager}">
-					</xp:inputText>
-					<xp:label value="Dept" id="deptlabel" for="dept"></xp:label>
-					<xp:inputText id="dept" value="#{document1.Dept}"></xp:inputText>
-					<xp:label value="Countries" id="countrieslabel"
-						for="countries">
-					</xp:label>
-					<xp:comboBox id="countries"
-						value="#{document1.countries}">
-						<xp:selectItems>
-							<xp:this.value><![CDATA[#{javascript:@Unique(@DbColumn(@DbName(), "Employees By Country", 1))}]]></xp:this.value>
-						</xp:selectItems>
-					</xp:comboBox>
-					<xp:label value="Description" id="descriptionlabel"
-						for="description">
-					</xp:label>
-					<xp:inputTextarea id="description" styleClass="richtextfield"
-						value="#{document1.Description}">
-					</xp:inputTextarea>
-				</xp:panel>
-			</xp:this.facets>
-		</xc:unpFormEditor>
-	</div>
-	<xc:unpFooter newDocTarget="EmployeeEdit.xsp"></xc:unpFooter>
+								</xp:convertDateTime>
+							</xp:this.converter>
+						</xp:inputText>
+						<xp:label value="Email" id="emaillabel" for="email">
+						</xp:label>
+						<xp:inputText id="email" value="#{document1.Email}"
+							type="email">
+						</xp:inputText>
+						<xp:label value="Start Month" id="startmonthlabel" for="startmonth">
+						</xp:label>
+						<xp:comboBox id="startmonth" value="#{document1.StartDate}">
+							<xp:selectItem itemLabel="January"></xp:selectItem>
+							<xp:selectItem itemLabel="February"></xp:selectItem>
+							<xp:selectItem itemLabel="March"></xp:selectItem>
+							<xp:selectItem itemLabel="April"></xp:selectItem>
+							<xp:selectItem itemLabel="May"></xp:selectItem>
+							<xp:selectItem itemLabel="June"></xp:selectItem>
+							<xp:selectItem itemLabel="July"></xp:selectItem>
+							<xp:selectItem itemLabel="August"></xp:selectItem>
+							<xp:selectItem itemLabel="September"></xp:selectItem>
+							<xp:selectItem itemLabel="October"></xp:selectItem>
+							<xp:selectItem itemLabel="November"></xp:selectItem>
+							<xp:selectItem itemLabel="December"></xp:selectItem>
+						</xp:comboBox>
+						<xp:label value="Manager" id="managerlabel" for="manager">
+						</xp:label>
+						<xp:inputText id="manager" value="#{document1.Manager}">
+						</xp:inputText>
+						<xp:label value="Dept" id="deptlabel" for="dept"></xp:label>
+						<xp:inputText id="dept" value="#{document1.Dept}"></xp:inputText>
+						<xp:label value="Countries" id="countrieslabel" for="countries">
+						</xp:label>
+						<xp:comboBox id="countries" value="#{document1.countries}">
+							<xp:selectItems>
+								<xp:this.value><![CDATA[#{javascript:@Unique(@DbColumn(@DbName(), "Employees By Country", 1))}]]></xp:this.value>
+							</xp:selectItems>
+						</xp:comboBox>
+						<xp:label value="Description" id="descriptionlabel" for="description">
+						</xp:label>
+						<xp:inputTextarea id="description" styleClass="richtextfield"
+							value="#{document1.Description}">
+						</xp:inputTextarea>
+					</xp:panel>
+				</xp:this.facets>
+			</xc:unpFormEditor>
+		</xp:this.facets>
+	</xc:unpScrollableArea>
+
 </xp:view>
