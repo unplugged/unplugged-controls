@@ -67,9 +67,18 @@ function loadmore(viewName, summarycol, detailcol, category, xpage, refreshmetho
 	}
 }
 
-function openLink(url, target){
-	$.blockUI();
-	document.location.href = url;
+function openDocument(url, target){
+	//$.blockUI();
+	//document.location.href = url;
+	var thisArea = $("#" + target);
+	thisArea.load(url + " #contentwrapper", function(){
+
+		if (firedrequests != null){
+			firedrequests = new Array();
+		}
+		initiscroll();
+		return false;
+	});	
 }
 
 $(window).scroll(function() {

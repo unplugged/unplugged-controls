@@ -38,7 +38,7 @@ if (start == ""){
 }else{
 	viewScope.rowcount = viewScope.rowcount + 1;
 }
-"openLink('" + getDbPath() + "/" + context.getUrlParameter("xpage") + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID() + "', 'results');"}]]></xp:this.value>
+"openDocument('" + getDbPath() + "/" + context.getUrlParameter("xpage") + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID() + "', 'content');"}]]></xp:this.value>
 					</xp:attr>
 				</xp:this.attrs>
 				<xp:image url="/unp/right-arrow-circle.png" id="image1">
