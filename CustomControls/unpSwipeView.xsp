@@ -55,6 +55,13 @@ viewScope.put("images", images);
 		<li onclick="gallery.goToPage(5)"></li>
 		<li id="next" onclick="gallery.next()">+</li>
 	</ul>
+	<div id="closeButton">
+	<xp:link escape="true" id="link1"
+		value="/unpws.unp/">
+		<xp:label value="Close" id="label1">
+		</xp:label>
+	</xp:link>
+	</div>
 	<xp:scriptBlock id="script1">
 		<xp:this.value>
 			<![CDATA[
