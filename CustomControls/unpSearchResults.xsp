@@ -13,10 +13,12 @@
 		<xp:metaData name="apple-mobile-web-app-status-bar-style"
 			content="black-translucent">
 		</xp:metaData>
-		<xp:metaData name="apple-mobile-web-app-capable" content="yes">
+		<xp:metaData name="apple-mobile-web-app-capable"
+			content="yes">
 		</xp:metaData>
 		<xp:styleSheet href="/unpFlatview.css"></xp:styleSheet>
 		<xp:styleSheet href="/unpForm.css"></xp:styleSheet>
+		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 	</xp:this.resources>
 	<div id="results">
 		<xp:panel tagName="div">

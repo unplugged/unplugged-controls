@@ -1,25 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
-	<xc:unpHeader search="database" viewsButton="false" title="Employees"
-		searchPage="UnpDemoWidgetsSearch.xsp" backButtonText="Back"
-		backButtonURL="UnpDemoWidgets.xsp">
-	</xc:unpHeader>
-	<xc:unpViewsList>
-		<xc:this.menuItem>
-			<xc:menuItem label="All Documents" page="/UnpDemoWidgets.xsp">
-			</xc:menuItem>
-		</xc:this.menuItem>
-	</xc:unpViewsList>
-	<div id="content">
-		<xc:unpScrollableArea>
-			<xp:this.facets>
-				<xc:unpSearchResults insetData="true" xp:key="facet_1"
-					detailColumn="DOB" summaryColumn="Name" viewName="Search" xpageDoc="Employee.xsp">
-					<xc:this.viewsearch><![CDATA[#{javascript:param.get("query")}]]></xc:this.viewsearch>
-					<xc:this.title><![CDATA[#{javascript:"Search results for \"" + param.get("query") + "\""}]]></xc:this.title>
-				</xc:unpSearchResults>
-			</xp:this.facets>
-		</xc:unpScrollableArea>
-	</div>
-	<xc:unpFooter newDocTarget="EmployeeEdit.xsp"></xc:unpFooter>
+	<xc:unpScrollableArea>
+		<xp:this.facets>
+			<xc:unpSearchResults insetData="true" xp:key="facet_1"
+				detailColumn="DOB" summaryColumn="Name" viewName="Search" xpageDoc="Employee.xsp">
+				<xc:this.viewsearch><![CDATA[#{javascript:param.get("query")}]]></xc:this.viewsearch>
+				<xc:this.title><![CDATA[#{javascript:"Search results for \"" + param.get("query") + "\""}]]></xc:this.title>
+			</xc:unpSearchResults>
+		</xp:this.facets>
+	</xc:unpScrollableArea>
+
 </xp:view>

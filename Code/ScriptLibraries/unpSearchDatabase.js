@@ -3,8 +3,7 @@ $(document).ready(function() {
 		if(e.keyCode==13){
 			event.preventDefault();
 			var searchterm = $('#input-search').val();
-			$.blockUI();
-			window.location = searchPage + "?query=" + searchterm;
+			openDocument(searchPage + "?query=" + searchterm, 'content');
 		}
 	}); 
 });
