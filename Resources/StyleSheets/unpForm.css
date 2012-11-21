@@ -1,4 +1,3 @@
-
 #formholder .xspTextComputedField {
 	-webkit-box-sizing: border-box;
 	font-family: helvetica;
@@ -18,7 +17,6 @@
 	background: #fff;
 	-webkit-border-radius: 10px;
 	-webkit-box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.2);
-	
 	left: 0px;
 	right: 10px;
 	margin: 10px;
@@ -26,10 +24,23 @@
 }
 
 #formholder h2 {
-	font-size: 1.5em;
-	margin-bottom: 10px;
-	text-align: center;
-	font-weight: bold;
+	background: #cccccc;
+	height: 35px;
+	border-bottom: 1px solid #888;
+	border-top: 1px solid #EEE;
+	top: -10px;
+	left: -10px;
+	margin-right: -20px;
+	position: relative;
+	text-align: left;
+	font-weight: normal;
+	display: block;
+	padding-top: 15px;
+	padding-left: 20px;
+	font-size: 17px !important;
+	text-shadow: 0 1px 0 white;
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-top-right-radius: 8px;
 }
 
 #formholder label {
@@ -39,7 +50,18 @@
 	padding-top: 6px;
 }
 
-#formholder input,#formholder select,#formholder textarea, .xspInputFieldEditBox {
+#formholder .xspTextComputedField {
+	display: block;
+	width: 100%;
+	border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 5px 0;
+}
+
+#formholder input,#formholder select,#formholder textarea,.xspInputFieldEditBox
+	{
 	background: #FFFFFF;
 	line-height: normal;
 	margin: 2px;
@@ -54,7 +76,7 @@
 }
 
 #formholder textarea {
-	height: 150px;	
+	height: 150px;
 }
 
 #formholder button {
@@ -96,22 +118,20 @@
 
 #formholder .buttons>li a {
 	text-decoration: none;
-	color: #fff;	
+	color: #fff;
 }
 
 #formholder .buttons .deleteButton {
-	
-	background: -webkit-gradient(linear, 0 0, 0 100%, from(#c00), to(#400) );
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#c00), to(#400) )
+		;
 }
 
 #formholder .buttons .editButton {
-	
 	background: -webkit-gradient(linear, 0 0, 0 100%, from(#508eff),
 		to(#3e6ec5) );
 }
 
 #formholder .buttons .cancelButton {
-	
 	background: -webkit-gradient(linear, 0 0, 0 100%, from(#eee), to(#999) )
 		;
 	color: #555;
