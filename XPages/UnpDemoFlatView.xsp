@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
-	
+
 	<xc:unpHeader search="local" searchPage="UnpSearch.xsp"
 		viewsButton="false" backButtonText="Back" backButtonURL="/UnpMain.xsp"
 		title="Employees">
 	</xc:unpHeader>
-	<xc:unpFlatView insetData="true" detailColumn="DOB"
-		summaryColumn="Name" title="Employees" viewName="Employees"
-		xpageDoc="Employee.xsp" numberofrows="20">
-	</xc:unpFlatView>
-	<xc:unpFooter></xc:unpFooter></xp:view>
+	<div id="content">
+		<xc:unpScrollableArea>
+			<xp:this.facets>
+				<xc:unpFlatView insetData="true" detailColumn="DOB" xp:key="facet_1"
+					summaryColumn="Name" title="Employees" viewName="Employees"
+					xpageDoc="Employee.xsp" numberofrows="20">
+				</xc:unpFlatView>
+			</xp:this.facets>
+		</xc:unpScrollableArea>
+	</div>
+	<xc:unpFooter></xc:unpFooter>
+</xp:view>

@@ -11,7 +11,13 @@
 			content="yes">
 		</xp:metaData>
 		<xp:styleSheet href="/unpHeaderFooter.css"></xp:styleSheet>
+		<xp:script src="/unp/jquery-1.7.2.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/iScroll.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
+		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 	</xp:this.resources>
+	
 	<xp:panel styleClass="footer black">
 		<xp:link id="link1" styleClass="syncButton" value="#">
 			<xp:eventHandler event="onclick" submit="true"

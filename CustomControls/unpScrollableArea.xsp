@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core">
-
+	<xp:this.resources>
+		<xp:script src="/unp/jquery-1.7.2.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/iScroll.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
+		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
+	</xp:this.resources>
 	<div id="contentwrapper">
 		<xp:div id="contentwrapper" styleClass="iscrollcontent"
 			style="width: 100%; height: 100%;">
@@ -24,7 +30,7 @@ return out;}]]></xp:this.value>
 		</xp:text>
 	</div>
 	<!-- 
-	<script type="text/javascript" src="unp/iScroll.min.js"></script>
+		<script type="text/javascript" src="unp/iScroll.min.js"></script>
 	-->
-	
+
 </xp:view>

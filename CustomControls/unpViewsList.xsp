@@ -10,6 +10,10 @@
 		<xp:metaData name="apple-mobile-web-app-capable"
 			content="yes">
 		</xp:metaData>
+		<xp:script src="/unp/jquery-1.7.2.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/iScroll.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
 		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 		<xp:styleSheet href="/unpViewsList.css"></xp:styleSheet>
 	</xp:this.resources>

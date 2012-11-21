@@ -1,4 +1,6 @@
 $(window).load( function() {
+	
+	$(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
 	allowFormsInIscroll();
 	try{
 		if ($('.richtextfield').val().indexOf("<") > -1){
@@ -6,7 +8,33 @@ $(window).load( function() {
 			$('.richtextfield').val(val);
 		}
 	}catch(e){}
+	$('.viewsButton').unbind('click');
+	$('.viewsButton').click(function (event) {
+		toggleViewsMenu();
+		return false;
+	});
+
+	$(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
+	initiscroll();
+	try{
+		$(".viewlink").each(function(){
+			$(this).addEventListener("click", function(){
+				$.blockUI();
+			});
+		});
+	}catch(e){}
 });
+
+$(window).scroll(function() {
+	if($(window).scrollTop() + $(window).height() == $(document).height()) {
+		$(".loadmorebutton").click();
+	}
+});
+
+window.addEventListener("orientationchange", function() {
+	hideViewsMenu();
+	initiscroll();
+}, false);
 
 function allowFormsInIscroll() {
 	[].slice.call(document.querySelectorAll('input, select, button, textarea')).forEach(function(el) {
@@ -16,9 +44,6 @@ function allowFormsInIscroll() {
 		})
 	})
 }
-$(window).load(function() {
-	$(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
-});
 
 var firedrequests = new Array();
 function stopViewSpinner(){
@@ -107,34 +132,6 @@ function saveDocument(formid, unid, viewxpagename, formname){
 	});
 }
 
-$(window).scroll(function() {
-	if($(window).scrollTop() + $(window).height() == $(document).height()) {
-		$(".loadmorebutton").click();
-	}
-});
-window.addEventListener("orientationchange", function() {
-	hideViewsMenu();
-	initiscroll();
-}, false);
-
-$(window).load(function() {
-	$('.viewsButton').unbind('click');
-	$('.viewsButton').click(function (event) {
-		toggleViewsMenu();
-		return false;
-	});
-
-	$(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
-	initiscroll();
-	try{
-		$(".viewlink").each(function(){
-			$(this).addEventListener("click", function(){
-				$.blockUI();
-			});
-		});
-	}catch(e){}
-});
-
 function toggleViewsMenu() {
 	if ($("#menuPane").hasClass("offScreen")) {
 		$("#menuPane").removeClass("offScreen").addClass("onScreen");
@@ -182,6 +179,7 @@ function openPage(url, target){
 	document.location.href = url;
 }
 
+var scrollContent;
 function initiscroll(){
 	document.addEventListener('touchmove', function (e){e.preventDefault()});
 	//Initialise any iScroll that needs it

@@ -4,10 +4,16 @@
 		viewsButton="false" backButtonText="Back" backButtonURL="/UnpMain.xsp"
 		title="Employees">
 	</xc:unpHeader>
-	<xc:unpFlatView insetData="true" detailColumn="DOB"
-		summaryColumn="Name" title="Finance Employees"
-		categoryfilter="Finances" viewName="EmployeesCatByDept"
-		xpageDoc="Employee.xsp" numberofrows="20">
-	</xc:unpFlatView>
+	<div id="content">
+		<xc:unpScrollableArea>
+			<xp:this.facets>
+				<xc:unpFlatView insetData="true" detailColumn="DOB"
+					summaryColumn="Name" title="Finance Employees" xp:key="facet_1"
+					categoryfilter="Finances" viewName="EmployeesCatByDept" xpageDoc="Employee.xsp"
+					numberofrows="20">
+				</xc:unpFlatView>
+			</xp:this.facets>
+		</xc:unpScrollableArea>
+	</div>
 	<xc:unpFooter></xc:unpFooter>
 </xp:view>

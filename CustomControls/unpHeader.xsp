@@ -11,12 +11,12 @@
 			content="yes">
 		</xp:metaData>
 		<xp:styleSheet href="/unpHeaderFooter.css"></xp:styleSheet>
+		<xp:script src="/unp/jquery-1.7.2.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/iScroll.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
+		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 	</xp:this.resources>
-
-	<script type="text/javascript" src="unp/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="unp/jquery.blockUI.min.js"></script>
-	<script type="text/javascript" src="unp/iScroll.min.js"></script>
-	<script type="text/javascript" src="unplugged.js"></script>
 
 	<xp:panel styleClass="iHeader black">
 		<xp:image styleClass="companyLogo" url="/unp/unplugged_logo.png"

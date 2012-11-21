@@ -3,8 +3,13 @@
 	<xp:this.resources>
 		<xp:styleSheet href="/unpForm.css"></xp:styleSheet>
 		<xp:styleSheet href="/unpFlatview.css"></xp:styleSheet>
+		<xp:script src="/unp/jquery-1.7.2.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/iScroll.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
 		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 	</xp:this.resources>
+	
 	<xp:this.data>
 		<xp:dominoDocument var="document1"
 			formName="#{javascript:compositeData.formname}">
