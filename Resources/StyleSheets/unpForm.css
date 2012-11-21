@@ -23,33 +23,6 @@
 	padding: 10px;
 }
 
-#formholder h2 {
-	background: #cccccc;
-	height: 35px;
-	border-bottom: 1px solid #888;
-	border-top: 1px solid #EEE;
-	top: -10px;
-	left: -10px;
-	margin-right: -20px;
-	position: relative;
-	text-align: left;
-	font-weight: normal;
-	display: block;
-	padding-top: 15px;
-	padding-left: 20px;
-	font-size: 17px !important;
-	text-shadow: 0 1px 0 white;
-	-webkit-border-top-left-radius: 8px;
-	-webkit-border-top-right-radius: 8px;
-}
-
-#formholder label {
-	display: block;
-	font-size: 1.2em;
-	font-weight: bold;
-	padding-top: 6px;
-}
-
 #formholder .xspTextComputedField {
 	display: block;
 	width: 100%;
@@ -59,6 +32,37 @@
 	text-overflow: ellipsis;
 	padding: 5px 0;
 }
+
+
+#formholder h2 {
+	background: #cccccc;
+	height: 50px;
+	border-bottom: 1px solid #888;
+	border-top: 1px solid #EEE;
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-top-right-radius: 8px;
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-top: -10px;
+}
+
+#formholder h2 span {
+	display: block;
+	padding-top: 15px !important;
+	padding-left: 20px !important;
+	font-size: 17px !important;
+	text-shadow: 0 1px 0 white !important;
+	font-weight: normal !important;
+	border-bottom: none !important;
+}
+
+#formholder label {
+	display: block;
+	font-size: 1.2em;
+	font-weight: bold;
+	padding-top: 6px;
+}
+
 
 #formholder input,#formholder select,#formholder textarea,.xspInputFieldEditBox
 	{

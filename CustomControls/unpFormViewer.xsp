@@ -11,9 +11,11 @@
 	</xp:this.data>
 
 	<div id="formholder">
-		<xp:text escape="true" id="title" tagName="h2"
-			value="#{javascript:compositeData.title}" styleClass="formtitle">
-		</xp:text>
+		<h2>
+			<xp:text escape="true" id="title" tagName="span"
+				value="#{javascript:compositeData.title}" styleClass="formtitle">
+			</xp:text>
+		</h2>
 
 		<xp:callback facetName="facet_1" id="callback1"></xp:callback>
 		<xp:panel id="buttons" styleClass="buttons" tagName="ul"
