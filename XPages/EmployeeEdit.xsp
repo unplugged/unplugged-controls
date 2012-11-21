@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
-
 	<xc:unpScrollableArea>
 		<xp:this.facets>
 			<xc:unpFormEditor showbuttons="true" closexpagename="UnpDemoWidgets.xsp" viewxpagename="Employee.xsp"

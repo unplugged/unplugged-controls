@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom"
-	createForm="false">
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
 	<xp:this.resources>
 		<xp:styleSheet href="/unpForm.css"></xp:styleSheet>
 		<xp:styleSheet href="/unpFlatview.css"></xp:styleSheet>
@@ -12,46 +11,32 @@
 		</xp:dominoDocument>
 	</xp:this.data>
 	<div id="formholder">
-		<xp:form id="customform">
+		<xp:div id="customform" styleClass="customform">
 			<xp:text escape="true" id="title" tagName="h2"
 				value="#{javascript:compositeData.title}" styleClass="formtitle">
 			</xp:text>
-
-
 			<xp:callback facetName="facet_1" id="callback1"></xp:callback>
 			<xp:panel id="buttons" styleClass="buttons" tagName="ul"
 				rendered="#{compositeData.showbuttons == true}">
 				<li class="saveButton">
 					<xp:link escape="true" text="Save" id="link1">
-						<xp:eventHandler event="onclick" submit="true"
-							refreshMode="complete">
-							<xp:this.action>
-								<xp:actionGroup>
-									<xp:saveDocument var="document1">
-									</xp:saveDocument>
-									<xp:openPage name="/UnpDemoWidgets.xsp">
-									</xp:openPage>
-								</xp:actionGroup>
-							</xp:this.action>
-							<xp:this.script><![CDATA[$.blockUI();
-return true;]]></xp:this.script>
-						</xp:eventHandler>
+						<xp:this.attrs>
+							<xp:attr name="onclick">
+								<xp:this.value><![CDATA[#{javascript:"saveDocument('" + getClientId("customform") + "', '" + document1.getDocument().getUniversalID() + "', '" + compositeData.viewxpagename + "', '" + compositeData.formname + "')"}]]></xp:this.value>
+							</xp:attr>
+						</xp:this.attrs>
 					</xp:link>
 				</li>
 				<xp:text id="closebutton" styleClass="cancelButton" tagName="li">
 					<xp:this.value><![CDATA[#{javascript:"Cancel"}]]></xp:this.value>
 					<xp:this.attrs>
 						<xp:attr name="onclick">
-							<xp:this.value><![CDATA[#{javascript:if (document1.isNewNote()){
-	return "$.blockUI(); window.location.href='" + compositeData.closexpagename + "';";
-}else{
-	return "openDocument('" + getDbPath() + "/" + compositeData.viewxpagename + "?action=openDocument&documentId=" + document1.getDocument().getUniversalID() + "', 'content');"
-}}]]></xp:this.value>
+							<xp:this.value><![CDATA[#{javascript:return "$.blockUI(); window.location.href='" + compositeData.closexpagename + "';";}]]></xp:this.value>
 						</xp:attr>
 					</xp:this.attrs>
 				</xp:text>
 			</xp:panel>
-		</xp:form>
+		</xp:div>
 	</div>
 
 

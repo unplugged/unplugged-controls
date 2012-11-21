@@ -84,6 +84,29 @@ function openDocument(url, target){
 	});	
 }
 
+function saveDocument(formid, unid, viewxpagename, formname){
+	
+	var data = $(".customform :input").serialize();
+	var url = 'UnpSaveDocument.xsp?unid=' + unid + "&formname=" + formname + "&rnd=" + Math.floor(Math.random()*1001);
+
+	$.ajax({
+		type: 'POST', 
+		url: url, 
+		data: data,
+		cache: false, 
+		beforeSend: function(){
+			console.log("About to open URL");
+		}
+	}).done(function( response ) {
+		console.log(response.length);
+		if (response.length == 32){
+			openDocument(viewxpagename + "?action=openDocument&documentId=" + response, "content");
+		}else{
+			alert(response);
+		}
+	});
+}
+
 $(window).scroll(function() {
 	if($(window).scrollTop() + $(window).height() == $(document).height()) {
 		$(".loadmorebutton").click();
