@@ -2,67 +2,57 @@
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" rendered="false">
 	
 	<xp:this.afterRenderResponse><![CDATA[#{javascript:var exCon = facesContext.getExternalContext(); 
-print("UnpSaveDocument called");
 var writer = facesContext.getResponseWriter();
 var response = exCon.getResponse();
 var writer = facesContext.getResponseWriter();
 response.setContentType("text/plain");
-var resp
+var resp;
 var doc = null;
 try{
 	doc = database.getDocumentByUNID(context.getUrlParameter("unid"));
-	print("Found document " + doc.getUniversalID());
 }catch(e){
 	doc = database.createDocument();
 	doc.replaceItemValue("Form", context.getUrlParameter("formname"));
-	print("Creating new document " + doc.getUniversalID());
 }
-//var dateformat = /^(19|20)\d\d[- \/.](0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])$/;
-//try{
+var dateformat = /^(19|20)\d\d[- \/.](0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])$/;
+try{
 	var unid = doc.getUniversalID();
-	print("unid = " + unid);
-	print(typeof param);
-	print(param.toString());
-	newstr = param.toString().slice(1, -6);
-	var obj = fromJson(newstr);
 	var keys = param.keySet().iterator();
 	while(keys.hasNext()){
 		var key = keys.next();
-		print(key + " = " + param.get(key));
+		print("Processing " + key);
 		var value = param.get(key);
 		
-		//if (dateformat.test(value)){
-		//	value = value.split("-");
-		//	value = @Date(value[0], value[1], value[2]);
-		//}
+		if (dateformat.test(value)){
+			value = value.split("-");
+			print("value = " + value);
+			value = session.createDateTime(@Date(parseInt(value[0], 10), parseInt(value[1], 10), parseInt(value[2], 10)));
+		}
 		if (@Left(key, 2) == "$$"){
 			//Ignore, this is a system field
 		}else if(key.indexOf(":") > -1){
 			var fieldname = @RightBack(key, ":");
 			doc.replaceItemValue(fieldname, value);
+			print(fieldname + ": " + value);
 		}else{
 			doc.replaceItemValue(key, value);
+			print(fieldname + ": " + value);
 		}
 	}
 	
 	doc.save();
 	resp = "OK";
-//}catch(e){
-//	print("There has been an error");
-//	resp = e;
-//	print(e);
-//}
-var resp = "OK";
+}catch(e){
+	resp = e;
+}
+resp = "OK";
 if(resp == "OK")
 {
-	print("all ok");
 	response.setStatus(200);
 	writer.write(unid);
 } else {
-	print("error");
 	response.setStatus(403);
 	writer.write("Error: " + resp);
 }
 writer.endDocument();
-facesContext.responseComplete();
-print("finished");}]]></xp:this.afterRenderResponse></xp:view>
+facesContext.responseComplete();}]]></xp:this.afterRenderResponse></xp:view>

@@ -2,12 +2,6 @@ $(window).load( function() {
 	
 	$(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
 	allowFormsInIscroll();
-	try{
-		if ($('.richtextfield').val().indexOf("<") > -1){
-			var val = $($('.richtextfield').val()).text();
-			$('.richtextfield').val(val);
-		}
-	}catch(e){}
 	$('.viewsButton').unbind('click');
 	$('.viewsButton').click(function (event) {
 		toggleViewsMenu();
@@ -104,6 +98,12 @@ function openDocument(url, target){
 		initiscroll();
 		if (url.indexOf("editDocument") > -1){
 			allowFormsInIscroll();
+			try{
+				if ($('.richtextfield').val().indexOf("<") > -1){
+					var val = $($('.richtextfield').val()).text();
+					$('.richtextfield').val(val);
+				}
+			}catch(e){}
 		}
 		return false;
 	});	
