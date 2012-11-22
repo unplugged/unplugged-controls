@@ -9,8 +9,8 @@
 					<xp:panel xp:key="facet_1">
 						<xp:label value="Name" id="namelabel" for="name"></xp:label>
 						<xp:text id="name" value="#{document1.Name}"></xp:text>
-						<xp:label value="DOB" id="doblabel" for="dob"></xp:label>
-						<xp:text id="dob" value="#{document1.Birthday}"></xp:text>
+						<xp:label value="DOB" id="doblabel" for="birthday"></xp:label>
+						<xp:text id="birthday" value="#{document1.Birthday}"></xp:text>
 						<xp:label value="Email" id="emaillabel" for="email"></xp:label>
 						<xp:text id="email" value="#{document1.Email}"></xp:text>
 						<xp:label value="Start Month" id="startmonthlabel" for="startmonth"></xp:label>

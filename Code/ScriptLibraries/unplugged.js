@@ -96,7 +96,7 @@ function openDocument(url, target){
 			firedrequests = new Array();
 		}
 		initiscroll();
-		if (url.indexOf("editDocument") > -1){
+		if (url.indexOf("editDocument") > -1 || url.indexOf("newDocument") > -1){
 			allowFormsInIscroll();
 			try{
 				if ($('.richtextfield').val().indexOf("<") > -1){
@@ -113,23 +113,40 @@ function saveDocument(formid, unid, viewxpagename, formname){
 	
 	var data = $(".customform :input").serialize();
 	var url = 'UnpSaveDocument.xsp?unid=' + unid + "&formname=" + formname + "&rnd=" + Math.floor(Math.random()*1001);
+	var valid = validate();
+	if (valid){
+		$.ajax({
+			type: 'POST', 
+			url: url, 
+			data: data,
+			cache: false, 
+			beforeSend: function(){
+				console.log("About to open URL");
+			}
+		}).done(function( response ) {
+			console.log(response.length);
+			if (response.length == 32){
+				openDocument(viewxpagename + "?action=openDocument&documentId=" + response, "content");
+			}else{
+				alert(response);
+			}
+		});
+	}else{
+		return false;
+	}
+}
 
-	$.ajax({
-		type: 'POST', 
-		url: url, 
-		data: data,
-		cache: false, 
-		beforeSend: function(){
-			console.log("About to open URL");
+function validate(){
+	var valid = true;
+	$(".required").each(function (){
+		if ($(this).val() == ""){
+			var label = $("label[for='"+$(this).attr('id')+"']");
+			alert("Please complete " + label.text());
+			$(this).focus();
+			valid = false;
 		}
-	}).done(function( response ) {
-		console.log(response.length);
-		if (response.length == 32){
-			openDocument(viewxpagename + "?action=openDocument&documentId=" + response, "content");
-		}else{
-			alert(response);
-		}
-	});
+	})
+	return valid;
 }
 
 function toggleViewsMenu() {
