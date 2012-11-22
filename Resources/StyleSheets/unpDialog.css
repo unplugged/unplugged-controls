@@ -1,0 +1,169 @@
+#adminCover {
+	position: absolute;
+	z-index: 9998;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.75);
+}
+
+#dialogswitch {
+	-webkit-box-sizing: border-box;
+	position: absolute;
+	width: 48px;
+	height: 42px;
+	top: 8px;
+	left: 200px;
+	border-style: solid;
+	border-width: 1px;
+	overflow: hidden;
+	text-indent: -9999em;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 0
+		rgba(255, 255, 255, 0.15);
+	border-color: #0d0d0d;
+	-webkit-border-radius: 21px;
+	background: url(dialog.png) 50% 50% no-repeat,
+		-webkit-gradient(linear, 0 0, 0 100%, from(#767676),
+		color-stop(0.5, #595959), color-stop(0.5, #4f4f4f), to(#2f2f2f) );
+	-webkit-background-clip: padding-box !important;
+}
+
+.dialog #dialogswitch {
+	background: url(dialog.png) 50% 50% no-repeat,
+		-webkit-gradient(linear, 0 0, 0 100%, from(#611), to(#8a2a2a) );
+	-webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.7), 0 1px 0
+		rgba(255, 255, 255, 0.15);
+}
+
+#dialogPopup {
+	-webkit-box-sizing: border-box;
+	position: absolute;
+	z-index: 9999;
+	background: #fff;
+	-webkit-border-radius: 10px;
+	-webkit-box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.2);
+	left: 10px;
+	top: 10px;
+	right: 10px;
+	bottom: 10px;
+	padding: 10px;
+}
+
+#dialogPopup h2 {
+	font-size: 1.5em;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#dialogPopup label {
+	display: block;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+#dialogPopup input,#dialogPopup select,#dialogPopup textarea {
+	-webkit-box-sizing: border-box;
+	font-family: helvetica;
+	font-size: 1.4em;
+	margin-bottom: 10px;
+	padding: 6px;
+}
+
+#dialogPopup button {
+	-webkit-box-sizing: border-box;
+	font-size: 1.3em;
+	margin-bottom: 10px;
+	opacity: 0.5;
+}
+
+#dialogPopup.modal {
+	width: 90%;
+	height: 90%;
+	margin-left: -250px;
+	margin-top: -60px;
+}
+
+#dialogPopup.modal h2 {
+	margin-top: 10px;
+}
+
+#dialogPopup .buttons {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 90%;
+	height: 44px;
+	list-style-type: none;
+}
+
+#dialogPopup .buttons>li {
+	position: absolute;
+	padding: 6px 10px;
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #fff;
+	-webkit-border-radius: 8px;
+	-webkit-background-clip: padding-box !important;
+	border: 1px solid #000;
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6), inset 0 1px 0
+		rgba(255, 255, 255, 0.5);
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.65);
+	width: 80px;
+	text-align: center;
+}
+
+#dialogPopup .buttons .deleteButton {
+	left: 10px;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#c00), to(#400) )
+		;
+}
+
+#dialogPopup .buttons .cancelButton {
+	right: 130px;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#eee), to(#999) )
+		;
+	color: #555;
+	text-shadow: 0 1px 0 #eee;
+}
+
+#dialogPopup .buttons .proceedButton {
+	left: 50%;
+	margin-left: -40px;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#eee), to(#999) )
+		;
+	color: #555;
+	text-shadow: 0 1px 0 #eee;
+}
+
+#dialogPopup .buttons .saveButton {
+	width: 80px;
+	right: 10px;
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#9bc200),
+		to(#288600) );
+}
+
+#dialogCover {
+	position: absolute;
+	z-index: 9998;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.75);
+}
+
+#dialogPopup fieldset {
+	display: block;
+	float: left;
+	width: 48%;
+}
+
+#dialogPopup fieldset>input,#dialogPopup fieldset>select,#dialogPopup fieldset>textarea
+	{
+	width: 100%;
+}
+
+#dialogPopup fieldset:nth-child(even) {
+	float: right;
+}

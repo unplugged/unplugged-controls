@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+  <faces-config-extension>
+    <namespace-uri>http://www.ibm.com/xsp/custom</namespace-uri>
+    <default-prefix>xc</default-prefix>
+  </faces-config-extension>
+  <composite-component>
+    <component-type>unpDialog</component-type>
+    <composite-name>unpDialog</composite-name>
+    <composite-file>/unpDialog.xsp</composite-file>
+    <composite-extension>
+      <designer-extension>
+        <in-palette>true</in-palette>
+        <render-markup>&lt;?xml version="1.0" encoding="UTF-8"?&gt; &#xd;
+&lt;xp:view xmlns:xp="http://www.ibm.com/xsp/core"&gt; &#xd;
+	&lt;div style="border: 2px solid #A9A9A9; padding: 3px; margin: 5px;"&gt;&#xd;
+	&lt;h1&gt;unpDialog&lt;/h1&gt;&#xd;
+	&lt;div&gt;&#xd;
+		To use this custom control make sure you have set the Custom Properties.&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;hr /&gt;&#xd;
+	&lt;xp:callback facetName="facet_1" id="callback1"&gt;&lt;/xp:callback&gt;&#xd;
+	&lt;hr /&gt;&#xd;
+	&lt;div&gt; &#xd;
+		Title &lt;strong&gt;&lt;%=this.title %&gt;&lt;/strong&gt;&lt;br /&gt;&#xd;
+		&lt;br /&gt;&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;hr /&gt;&#xd;
+	&lt;div&gt;&#xd;
+		To use this custom control, make sure that you have copied across the following design elements to your database:&lt;br /&gt;&#xd;
+		&lt;ul&gt;&#xd;
+		&lt;/ul&gt;&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;/div&gt;&#xd;
+&lt;/xp:view&gt;</render-markup>
+      </designer-extension>
+    </composite-extension>
+    <property>
+      <property-name>callback</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>title</property-name>
+      <property-class>string</property-class>
+    </property>
+  </composite-component>
+</faces-config>
