@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.data>
+		<xp:dominoDocument var="docImages" formName="Employee"
+			action="openDocument">
+		</xp:dominoDocument>
+	</xp:this.data>
+	
+	<xc:unpSwipeView richtextfield="Description"></xc:unpSwipeView></xp:view>

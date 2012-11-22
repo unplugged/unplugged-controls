@@ -28,5 +28,10 @@
 &lt;/xp:view&gt;</render-markup>
       </designer-extension>
     </composite-extension>
+    <property>
+      <property-name>richtextfield</property-name>
+      <property-class>string</property-class>
+      <display-name>richtextfield</display-name>
+    </property>
   </composite-component>
 </faces-config>
