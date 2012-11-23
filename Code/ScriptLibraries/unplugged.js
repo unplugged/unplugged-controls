@@ -222,6 +222,7 @@ function openPage(url, target) {
 }
 
 var scrollContent;
+var scrollMenu;
 function initiscroll() {
 	document.addEventListener('touchmove', function(e) {
 		e.preventDefault()
@@ -237,8 +238,13 @@ function initiscroll() {
 		delete scrollContent;
 	} catch (e) {
 	}
+	try {
+		scrollMenu.destroy();
+		delete scrollMenu;
+	}catch(e){
+	}
 	$(".iscrollmenu").each( function() {
-		scrollContent = new iScroll($(this).attr("id"))
+		scrollMenu = new iScroll($(this).attr("id"));
 	});
 	$(".iscrollcontent")
 			.each(

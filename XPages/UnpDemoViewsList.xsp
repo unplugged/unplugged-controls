@@ -10,7 +10,8 @@
 				page="/UnpDemoViewsList.xsp" ajaxloadid="newcontent" ajaxtargetid="results">
 			</xc:menuItem>
 			<xc:menuItem icon="/icons/id_card.png" label="Test Page 2"
-				page="/UnpDemoViewsListPage2.xsp" ajaxloadid="newcontent" ajaxtargetid="results">
+				page="/UnpDemoViewsListPage2.xsp" ajaxloadid="newcontent"
+				ajaxtargetid="results">
 			</xc:menuItem>
 			<xc:menuItem icon="/icons/id_tag.png" label="Test Page 3"
 				page="/UnpDemoViewsListPage3.xsp">
@@ -42,7 +43,7 @@
 		</xc:this.menuItem>
 	</xc:unpViewsList>
 	<div id="results">
-		<div id="newcontent">UnpDemoViewsList</div>
+		<div id="newcontent" style="position: absolute; top: 60px;">UnpDemoViewsList</div>
 	</div>
 	<xc:unpFooter></xc:unpFooter>
 </xp:view>

@@ -17,7 +17,8 @@
 		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 		<xp:styleSheet href="/unpViewsList.css"></xp:styleSheet>
 	</xp:this.resources>
-	<div id="menuPane" class="offScreen iscrollmenu">
+	
+	<div id="menuPane" class="offScreen iscrollmenu" style="height: 100%;">
 		<xp:panel styleClass="navScrollArea" id="navScrollArea" >
 			<ul id="menuitems">
 				<xp:repeat id="repeat1" rows="30" disableOutputTag="true"
@@ -60,32 +61,5 @@ menuItem.icon != null && menuItem.icon != ""}]]></xp:this.rendered>
 			</ul>
 		</xp:panel>
 	</div>
-	<xp:text escape="false" id="iscroll" tagName="script">
-		<xp:this.rendered><![CDATA[#{javascript:try{
-	getClientId("navScrollArea") != null
-}catch(e){
-	return false;
-}}]]></xp:this.rendered>
-		<xp:this.attrs>
-			<xp:attr name="type" value="text/javascript"></xp:attr>
-		</xp:this.attrs>
-		<xp:this.value><![CDATA[#{javascript:var functionname = "iscrollloaded_" + @ReplaceSubstring(getClientId("navScrollArea"), [":", "_"], "");
-var out = "var scrollMenu, scrollNav;\n";
-out += "function " + functionname + "() {\n";
-out += "try{initiscroll()}catch(e){\n";
-out += "scrollMenu = new iScroll('" + getClientId("navScrollArea") + "');\n";
-out += "}}\n";
-out += "document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);\n";
-out += "document.addEventListener('DOMContentLoaded', " + functionname + ", false);"
-return out;}]]></xp:this.value>
-	</xp:text>
-
-	<!-- 
-	<script type="text/javascript" src="unp/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="unp/jquery.blockUI.min.js"></script>
-	<script type="text/javascript" src="unp/iScroll.min.js"></script>
-	<script type="text/javascript" src="unpViewsList.min.js"></script>
-	-->
-
-
+	
 </xp:view>

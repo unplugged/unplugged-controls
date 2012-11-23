@@ -1,3 +1,4 @@
+
 #menuPane {
 	z-index: 11;
 	padding-top: 10px;
@@ -51,8 +52,8 @@ a.menulink {
 	font-weight: bold;
 	cursor: pointer;
 	color: #c0c0c0 /*{a-bup-color}*/;
-	text-shadow: 0 /*{a-bup-shadow-x}*/   1px /*{a-bup-shadow-y}*/   0
-		/*{a-bup-shadow-radius}*/   #000 /*{a-bup-shadow-color}*/;
+	text-shadow: 0 /*{a-bup-shadow-x}*/     1px /*{a-bup-shadow-y}*/     0
+		/*{a-bup-shadow-radius}*/     #000 /*{a-bup-shadow-color}*/;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#323232
 		/*{a-bup-background-start}*/), to(#151515 /*{a-bup-background-end}*/)
 		); /* Saf4+, Chrome */
@@ -73,8 +74,8 @@ a.menulink {
 	background: #387bbe /*{d-bup-background-color}*/;
 	font-weight: bold;
 	color: #fefffe /*{d-bup-color}*/;
-	text-shadow: 0 /*{d-bup-shadow-x}*/   1px /*{d-bup-shadow-y}*/   0
-		/*{d-bup-shadow-radius}*/   #000 /*{d-bup-shadow-color}*/;
+	text-shadow: 0 /*{d-bup-shadow-x}*/     1px /*{d-bup-shadow-y}*/     0
+		/*{d-bup-shadow-radius}*/     #000 /*{d-bup-shadow-color}*/;
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#387bbe
 		/*{d-bup-background-start}*/), to(#387bbe /*{d-bup-background-end}*/)
 		); /* Saf4+, Chrome */
@@ -110,8 +111,8 @@ a.menulink {
 
 .ajax_loader {
 	position: relative;
-	background: url("unp/spinner_squares_circle.gif") no-repeat center center
-		transparent;
+	background: url("unp/spinner_squares_circle.gif") no-repeat center
+		center transparent;
 	width: 100%;
 	height: 100%;
 	left: 0px;
@@ -136,7 +137,6 @@ a.menulink {
 	#results {
 		margin-left: 30%;
 	}
-	
 	#formholder {
 		width: 68% !important;
 		margin-left: 31% !important;
