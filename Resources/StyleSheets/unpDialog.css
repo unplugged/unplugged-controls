@@ -169,6 +169,18 @@
 }
 
 
+@media screen and (min-width: 1001px) {
+ #dialogContent {height: 900px;}
+}
+
+@media screen and (min-width: 701px) {
+ #dialogContent {height: 650px;}
+}
+
+@media screen and (max-width: 700px) {
+ #dialogContent {height: 500px;}
+}
+
 /* Smartphones (landscape) ----------- */
 @media only screen 
 and (min-width : 321px) {
@@ -177,22 +189,6 @@ and (min-width : 321px) {
 
 /* Smartphones (portrait) ----------- */
 @media only screen 
-and (max-width : 320px) {
+and (min-width : 320px) {
  #dialogContent {height: 350px;}
-}
-
-/* iPads (landscape) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) {
- #dialogContent {height: 500px;}
-}
-
-/* iPads (portrait) ----------- */
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : portrait) {
- #dialogContent {height: 700px;}
 }
