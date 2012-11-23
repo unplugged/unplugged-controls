@@ -22,12 +22,7 @@
 							value="#{javascript:rowData.getColumnValues()[0];}"
 							styleClass="catLabel">
 						</xp:text>
-						<xp:text escape="true" id="computedField1"
-							styleClass="numDocsLabel"
-							value="#{javascript:rowData.getDescendantCount().toString();}">
-						</xp:text>
 					</li>
-				
 				<div class="summaryDataRow"></div>
 				</xp:panel>
 			</xp:repeat>

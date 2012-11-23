@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!DOCTYPE note SYSTEM 'xmlschemas/domino_8_5_3.dtd'>
 <note default='true' class='icon' xmlns='http://www.lotus.com/dxl' version='8.5'
- maintenanceversion='3.0' replicaid='80257AA1002D0DF3'>
-<noteinfo noteid='11a' unid='4468461EE129B1F780257AA1002D0DF5' sequence='9'>
-<created><datetime dst='true'>20121024T091206,93+01</datetime></created>
-<modified><datetime>20121106T113206,91+00</datetime></modified>
-<revised><datetime>20121106T113206,90+00</datetime></revised>
-<lastaccessed><datetime>20121106T113206,91+00</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20121024T091206,96+01</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+ maintenanceversion='3.0' replicaid='85257AAD004BBC1D'>
+<noteinfo noteid='11a' unid='E9BCD36E1914E25385257AAD004BBC30' sequence='18'>
+<created><datetime>20121105T084713,76-05</datetime></created>
+<modified><datetime>20121119T130039,24-05</datetime></modified>
+<revised><datetime>20121119T130039,23-05</datetime></revised>
+<lastaccessed><datetime>20121119T130039,24-05</datetime></lastaccessed>
+<addedtofile><datetime>20121105T084713,80-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Richard Sharpe/O=Teamstudio</name></updatedby>
+<wassignedby><name>CN=Richard Sharpe/O=Teamstudio</name></wassignedby>
 <item name='IconBitmap' summary='true'>
 <rawitemdata type='6'>
 AiAgAQAA///////wD///gAH//gAAf/wAAD/4AAAf8AAAD+AAAAfgAAAHwAAAA8AAAAPAAAADgAAA
