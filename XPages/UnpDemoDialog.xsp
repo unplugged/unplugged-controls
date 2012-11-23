@@ -111,8 +111,7 @@
 
 	<script>
 		function myCallBackFunction(){
-		alert("This is custom code called
-		by the OK button");
+			alert("This is custom code called by the OK button using the callback custom property");
 		}
 	</script>
 </xp:view>
