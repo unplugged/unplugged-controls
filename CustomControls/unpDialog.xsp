@@ -12,9 +12,9 @@
 		<xp:panel tagName="h2" id="title">
 			<xp:text value="#{javascript:compositeData.title}"></xp:text>
 		</xp:panel>
-		
-		<xp:callback facetName="facet_1" id="callback1"></xp:callback>
-
+		<div id="dialogContent">
+			<xp:callback facetName="facet_1" id="callback1"></xp:callback>
+		</div>
 		<ul class="buttons">
 			<li class="cancelButton" onclick="closeDialog('#dialogPopup')">Cancel</li>
 			<xp:panel tagName="li" styleClass="saveButton">
