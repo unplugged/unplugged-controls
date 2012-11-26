@@ -29,7 +29,13 @@
 					<xp:link escape="true" text="Save" id="link1">
 						<xp:this.attrs>
 							<xp:attr name="onclick">
-								<xp:this.value><![CDATA[#{javascript:"saveDocument('" + getClientId("customform") + "', '" + document1.getDocument().getUniversalID() + "', '" + compositeData.viewxpagename + "', '" + compositeData.formname + "')"}]]></xp:this.value>
+								<xp:this.value><![CDATA[#{javascript:var out = "saveDocument('" + getClientId("customform") + "', '" + document1.getDocument().getUniversalID() + 
+"', '" + compositeData.viewxpagename + "', '" + compositeData.formname + "'"
+if (context.getUrlParameter("parentunid") != ""){
+	out += ", '" + context.getUrlParameter("parentunid") + "'";
+}
+out += ");"
+return out;}]]></xp:this.value>
 							</xp:attr>
 						</xp:this.attrs>
 					</xp:link>

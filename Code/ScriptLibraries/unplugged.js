@@ -129,11 +129,14 @@ function openDocument(url, target) {
 			});
 }
 
-function saveDocument(formid, unid, viewxpagename, formname) {
+function saveDocument(formid, unid, viewxpagename, formname, parentunid) {
 
 	var data = $(".customform :input").serialize();
 	var url = 'UnpSaveDocument.xsp?unid=' + unid + "&formname=" + formname
 			+ "&rnd=" + Math.floor(Math.random() * 1001);
+	if (parentunid){
+		url += "&parentunid=" + parentunid;
+	}
 	var valid = validate();
 	if (valid) {
 		$.ajax( {

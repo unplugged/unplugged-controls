@@ -14,6 +14,10 @@ try{
 	doc = database.createDocument();
 	doc.replaceItemValue("Form", context.getUrlParameter("formname"));
 }
+if (context.getUrlParameter("parentunid") != ""){
+	var parent:NotesDocument = database.getDocumentByUNID(context.getUrlParameter("parentunid"));
+	doc.makeResponse(parent);
+}
 var dateformat = /^(19|20)\d\d[- \/.](0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])$/;
 try{
 	var unid = doc.getUniversalID();

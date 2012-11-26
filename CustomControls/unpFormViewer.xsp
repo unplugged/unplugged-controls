@@ -36,13 +36,12 @@
 			<xp:panel tagName="li" styleClass="proceedButton">
 				<xp:this.rendered><![CDATA[#{javascript:compositeData.newresponsexpagename != null && 
 compositeData.newresponsexpagename != ""}]]></xp:this.rendered>
-				<xp:link escape="true" text="New Response" id="link1">
-					<xp:this.attrs>
-						<xp:attr name="onclick">
-							<xp:this.value><![CDATA[#{javascript:"openDocument('" + compositeData.newresponsexpagename + "?action=newDocument&parentunid='" + document1.getDocument().getUniversalID() + "', 'content')"}]]></xp:this.value>
-						</xp:attr>
-					</xp:this.attrs>
-				</xp:link>
+				<xp:this.attrs>
+					<xp:attr name="onclick">
+						<xp:this.value><![CDATA[#{javascript:"openDocument('" + compositeData.newresponsexpagename + "?action=newDocument&parentunid=" + document1.getDocument().getUniversalID() + "', 'content');"}]]></xp:this.value>
+					</xp:attr>
+				</xp:this.attrs>
+				New Response
 			</xp:panel>
 			<xp:text id="closebutton" styleClass="cancelButton" tagName="li">
 				<xp:this.value><![CDATA[#{javascript:"Close"}]]></xp:this.value>
