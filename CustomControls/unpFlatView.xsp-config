@@ -138,7 +138,8 @@ return xpageDoc.indexOf(".xsp") &gt;= 0;</validation-formula>
         <designer-extension>
           <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
           <editor-parameter>pull&#xd;
-button</editor-parameter>
+button&#xd;
+none</editor-parameter>
           <default-value>pull</default-value>
         </designer-extension>
       </property-extension>

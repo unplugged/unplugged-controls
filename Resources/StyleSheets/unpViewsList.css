@@ -134,7 +134,7 @@ a.menulink {
 		height: 100%;
 		width: 100%;
 	}
-	#results {
+	#results, .categoryRow {
 		margin-left: 30%;
 	}
 	#formholder {
