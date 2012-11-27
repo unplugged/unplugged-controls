@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><stylesheetresource charset="UTF-8" designerversion="8.5.3" maintenanceversion="3.0" name="unpHeaderFooter.css" noreplace="true" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="15e" sequence="1" unid="1AA5F4B436A201E880257AA1002EAE66">
+<?xml version="1.0" encoding="UTF-8"?><stylesheetresource charset="UTF-8" designerversion="8.5.3" maintenanceversion="3.0" name="unpHeaderFooter.css" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="15e" sequence="58" unid="1AA5F4B436A201E880257AA1002EAE66">
 <created><datetime dst="true">20121024T092953,02+01</datetime></created>
-<modified><datetime dst="true">20121024T092953,03+01</datetime></modified>
-<revised><datetime dst="true">20121024T092953,02+01</datetime></revised>
-<lastaccessed><datetime dst="true">20121024T092953,03+01</datetime></lastaccessed>
+<modified><datetime>20121127T115528,00+00</datetime></modified>
+<revised><datetime>20121127T115527,99+00</datetime></revised>
+<lastaccessed><datetime>20121127T115528,00+00</datetime></lastaccessed>
 <addedtofile><datetime dst="true">20121024T092953,03+01</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Richard Sharpe/O=Teamstudio</name><name>CN=Matt White/O=Exhilarate</name></updatedby></stylesheetresource>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby></stylesheetresource>
