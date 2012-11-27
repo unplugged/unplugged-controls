@@ -14,7 +14,7 @@ try{
 	doc = database.createDocument();
 	doc.replaceItemValue("Form", context.getUrlParameter("formname"));
 }
-if (context.getUrlParameter("parentunid") != ""){
+if (context.getUrlParameter("parentunid") != "" && context.getUrlParameter("parentunid") != "null"){
 	var parent:NotesDocument = database.getDocumentByUNID(context.getUrlParameter("parentunid"));
 	doc.makeResponse(parent);
 }
