@@ -43,14 +43,14 @@ db.replicate("someserver");}]]></xp:this.script>
 			value='#{javascript:var rep = session.getEnvironmentString("ro.last.replicate", true);
 		  if (""==rep) { rep="(never)" };
 		 return "Updated: " + rep;}' />
-		<xp:link id="link2" styleClass="newButton"
+		<xp:panel tagName="div" id="newButton" styleClass="newButton"
 			rendered="#{javascript:compositeData.newDocTarget != null;}">
 			<xp:this.attrs>
 				<xp:attr name="onclick">
 					<xp:this.value><![CDATA[#{javascript:"openDocument('" + compositeData.newDocTarget + "?action=newDocument', 'content');"}]]></xp:this.value>
 				</xp:attr>
 			</xp:this.attrs>
-		</xp:link>
+		</xp:panel>
 	</xp:panel>
 
 	<!-- <script type="text/javascript" src="unplugged.js"></script> -->
