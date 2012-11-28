@@ -1,30 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core">
-	<xp:this.data>
-		<xp:dominoView var="view1"
-			viewName="#{javascript:compositeData.viewName;}">
-		</xp:dominoView>
-	</xp:this.data>
+	<xp:this.beforeRenderResponse><![CDATA[#{javascript:if(!(applicationScope.containsKey('PATH'))){
+	applicationScope.put('PATH', facesContext.getExternalContext().getRequestContextPath());
+}
+}]]></xp:this.beforeRenderResponse>
 	<xp:this.resources>
-		<xp:styleSheet href="/unpAccordianlarge.css"></xp:styleSheet>
 		<xp:script src="/unpAccordionLarge.js" clientSide="true"></xp:script>
+		<xp:styleSheet href="/unpAccordianlarge.css"></xp:styleSheet>
 	</xp:this.resources>
 
-	<div>
+	<div>	
 		<ul id="summaryList">
-			<xp:repeat id="repeat2" rows="999" var="rowData"
-				value="#{view1}" disableOutputTag="true">
-				<xp:panel disableOutputTag="true"
-					rendered="#{javascript:rowData.isCategory();}">
-					<li class="categoryRow"
-						onClick="javascript:fetchDetails(this,'#{javascript:compositeData.viewName;}','#{javascript:rowData.getColumnValues()[0];}')">
-						<xp:text escape="true" id="computedField2"
-							value="#{javascript:rowData.getColumnValues()[0];}"
-							styleClass="catLabel">
-						</xp:text>
-					</li>
-				<div class="summaryDataRow"></div>
-				</xp:panel>
+			<xp:repeat id="repeat2" rows="999"
+				value="#{javascript:@Unique(@DbColumn(@DbName(), compositeData.viewName, 1))}"
+				var="rowData" disableOutputTag="true">
+				<li class="categoryRow"
+					onClick="javascript:fetchDetails(this,'#{javascript:compositeData.viewName;}','#{rowData}', '#{javascript:compositeData.xpage;}')">
+					<xp:text escape="true" id="computedField2"
+						value="#{rowData}"
+						styleClass="catLabel">
+					</xp:text>
+				</li>
+				<div class="summaryDataRow">
+				  <ul class="accordionRowSet" style="padding:0px; margin:0px;">
+				  </ul>
+				  <div class="summaryDataRowHolder"></div>
+				  <xp:div id="loadmorelink" styleClass="loadMoreLink hidden">
+					<xp:button value="Load More..." id="loadmorebutton"
+						styleClass="loadMoreButton">
+						<xp:this.attrs>
+							<xp:attr name="onclick">
+								<xp:this.value><![CDATA[javascript:fetchMoreDetails(this,'#{javascript:compositeData.viewName;}','#{rowData}', '#{javascript:compositeData.xpage;}');]]></xp:this.value>
+							</xp:attr>
+						</xp:this.attrs>
+					</xp:button>
+				  </xp:div>
+				</div>
 			</xp:repeat>
 		</ul>
 	</div>

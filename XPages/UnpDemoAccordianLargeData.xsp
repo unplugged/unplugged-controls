@@ -5,6 +5,7 @@
 	<xp:this.resources>
 		<xp:script src="unp/jquery-1.7.2.min.js" clientSide="true"></xp:script>
 	</xp:this.resources>
-	<xc:unpAccordionLargeData viewName="EmployessCatByDept"></xc:unpAccordionLargeData>
-
+	<xc:unpAccordionLargeData viewName="EmployessCatByDept"
+		xpage="Employee.xsp">
+	</xc:unpAccordionLargeData>
 </xp:view>

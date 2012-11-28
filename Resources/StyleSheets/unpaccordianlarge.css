@@ -66,11 +66,11 @@
  background:rgb(59,59,59);
 }
 
-#accordionRowSet:first-child {
+.accordionRowSet:first-child {
 	margin-top:-8px;
 }
 
-#accordionRowSet > li{
+.accordionRowSet > li{
   background:white;
   border-bottom: 1px solid #999999;
   color: #222222;
@@ -82,7 +82,7 @@
   
 }
 
-#accordionRowSet > li a{
+.accordionRowSet > li a{
   text-decoration: none;
   padding: 20px 10px; 
   display: block;
@@ -151,19 +151,22 @@
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-
+.hidden{
+  display:none;
+}
 .catLabel{
 	font-weight:bold;
 	font-size:12pt;
 	margin-left:5px;
 }
-.numDocsLabel{
-	font-weight:bold;
-	font-size:12pt;
-	float:right;
-	background-color:white;
-	border-radius: 8px;	
-	padding:4px 10px;
-	margin-top:9px;
-	line-height:22px;
+.loadMoreButton{
+  background:white;
+  width:100%;
+  color: #222222;
+  display:block;
+  font-size: 17px;
+  text-decoration:none;
+  text-align:left;
+  height:80px;
+  border-style:none;
 }

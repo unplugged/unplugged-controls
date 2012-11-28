@@ -1,8 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><stylesheetresource charset="UTF-8" designerversion="8.5.3" maintenanceversion="3.0" name="unpAccordianlarge.css" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="6c2" sequence="7" unid="243C762E7EBEA69980257AA8002BCF46">
-<created><datetime>20121031T075831,10+00</datetime></created>
-<modified><datetime>20121107T163058,78+00</datetime></modified>
-<revised><datetime>20121107T163058,77+00</datetime></revised>
-<lastaccessed><datetime>20121107T163058,78+00</datetime></lastaccessed>
-<addedtofile><datetime>20121031T075831,28+00</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby></stylesheetresource>
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="85257AC4001F5F8C" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="21a" sequence="4" unid="243C762E7EBEA69980257AA8002BCF46">
+<created><datetime dst="true">20121031T085831,10+01</datetime></created>
+<modified><datetime>20121128T005456,75-05</datetime></modified>
+<revised><datetime>20121128T005456,74-05</datetime></revised>
+<lastaccessed><datetime>20121128T005456,75-05</datetime></lastaccessed>
+<addedtofile><datetime>20121128T005205,70-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Richard Sharpe/O=Teamstudio</name></updatedby>
+<wassignedby><name>CN=Richard Sharpe/O=Teamstudio</name></wassignedby>
+<item name="$TITLE" sign="true"><text>unpAccordianlarge.css</text></item>
+<item name="$MimeCharSet"><text>UTF-8</text></item>
+<item name="$FileModDT" sign="true"><datetime>20121128T005205,48-05</datetime></item>
+<item name="$Flags"><text>=34QC</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>unpaccordianlarge.css</text></item></note>

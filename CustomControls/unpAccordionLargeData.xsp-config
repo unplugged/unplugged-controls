@@ -31,5 +31,11 @@ The view must have only the first column categorized and then have a maximum of 
       <display-name>Categorized view name</display-name>
       <description>Categorized view, where only the first column is categorized</description>
     </property>
+    <property>
+      <property-name>xpage</property-name>
+      <property-class>string</property-class>
+      <display-name>target xpage</display-name>
+      <description>Xpage that contains the doc data when the view entry is tapped</description>
+    </property>
   </composite-component>
 </faces-config>

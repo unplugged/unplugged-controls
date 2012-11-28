@@ -1,22 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="85257AAD004BBC1D" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="6e6" sequence="20" unid="B2F7C286AB01637D85257AA70058A63A">
-<created><datetime dst="true">20121030T120817,22-04</datetime></created>
-<modified><datetime>20121105T122622,49-05</datetime></modified>
-<revised><datetime>20121105T122622,48-05</datetime></revised>
-<lastaccessed><datetime>20121105T122622,49-05</datetime></lastaccessed>
-<addedtofile><datetime>20121105T084739,11-05</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="85257AC4001F5F8C" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="7f6" sequence="4" unid="FFB798B1AF8F0B5F85257AC400214CAB">
+<created><datetime>20121128T010343,15-05</datetime></created>
+<modified><datetime>20121128T010343,31-05</datetime></modified>
+<revised><datetime>20121128T010343,30-05</datetime></revised>
+<lastaccessed><datetime>20121128T010343,31-05</datetime></lastaccessed>
+<addedtofile><datetime>20121128T010343,16-05</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Richard Sharpe/O=Teamstudio</name></updatedby>
 <wassignedby><name>CN=Richard Sharpe/O=Teamstudio</name></wassignedby>
-<item name="$Flags"><text>gC~4;</text></item>
 <item name="$TITLE"><text>unpAccordionLargeData.xsp</text></item>
+<item name="$Flags"><text>gC~4;</text></item>
 
 
+<item name="$FileNames" sign="true"><text>unpAccordionLargeData.xsp</text></item>
 
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-
-
-
-
-
-<item name="$FileNames" sign="true"><text>unpAccordionLargeData.xsp</text></item></note>
+</note>
