@@ -158,6 +158,7 @@ function saveDocument(formid, unid, viewxpagename, formname, parentunid) {
 					} else {
 						alert(response);
 					}
+					initiscroll();
 				});
 	} else {
 		return false;
