@@ -2,6 +2,8 @@
 ## Introduction
 This project will create a suite of re-usable and performant custom controls which are tailored towards use in the Teamstudio Unplugged mobile application. The custom controls will perform common tasks with the aim of making developing a mobile interface to an existing Notes or Domino application a simple process which does not require specialist mobile development knowledge.
 
+[For full documentation go here](https://github.com/unplugged/unplugged-controls/wiki "documentation")
+
 The project is split into two stages; stage one will see the creation of the custom controls themselves (outlined in more detail later); stage two will create three applications using the new custom controls.
 
 The code for the project will be made available via four projects on Github, one containing the custom controls and then one each for the template which are developed using the custom controls. Once the project has been completed the custom controls will be released to OpenNTF and made available to the Importer and Exporter project which allows tighter integration to Domino Designer for developers.
