@@ -71,15 +71,31 @@
 }
 
 .accordionRowSet > li{
-  background:white;
-  border-bottom: 1px solid #999999;
-  color: #222222;
-  display:block;
-  font-size: 17px;
-  font-weight: bold;  
-  text-decoration:none;
-  height:80px;
-  
+	background: white;
+	border-bottom: 1px solid #999999;
+	color: #222222;
+	display: block;
+	font-size: 17px;
+	font-weight: bold;
+	text-decoration: none;
+	height: 80px;
+	cursor: pointer;
+}
+
+.accordionRowSet > li a, .accordionRowSet > li .viewlistsummary {
+	text-decoration: none;
+	padding: 20px 10px 5px 10px;
+	display: block;
+	width: 100%;
+	color: #387bbe;
+	-webkit-tap-highlight-color: #387bbe;
+	font-weight: bold;
+	
+}
+
+.viewlistdetail {
+	font-weight: normal;
+	padding-left: 10px;	
 }
 
 .accordionRowSet > li a{
