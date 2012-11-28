@@ -40,15 +40,13 @@ window.addEventListener("orientationchange", function() {
 }, false);
 
 function allowFormsInIscroll() {
-	[].slice.call(document.querySelectorAll('input, select, button, textarea'))
-			.forEach(
-					function(el) {
-						el.addEventListener(
-								('ontouchstart' in window) ? 'touchstart'
-										: 'mousedown', function(e) {
-									e.stopPropagation();
-								})
-					})
+	[].slice.call(document.querySelectorAll('input, select, button, textarea')).forEach(function(el) {
+		el.addEventListener(
+				('ontouchstart' in window) ? 'touchstart'
+						: 'mousedown', function(e) {
+					e.stopPropagation();
+				})
+	});
 }
 
 var firedrequests = new Array();
@@ -124,13 +122,14 @@ function openDocument(url, target) {
 						}
 					} catch (e) {
 					}
+					
 				}
 				return false;
 			});
 }
 
 function saveDocument(formid, unid, viewxpagename, formname, parentunid) {
-
+	scrollContent.scrollTo(0, -60, 0);
 	var data = $(".customform :input").serialize();
 	var url = 'UnpSaveDocument.xsp?unid=' + unid + "&formname=" + formname
 			+ "&rnd=" + Math.floor(Math.random() * 1001);
@@ -149,16 +148,21 @@ function saveDocument(formid, unid, viewxpagename, formname, parentunid) {
 			}
 		}).done(
 				function(response) {
+					/**
+					 * At the moment we have to go back to the home page
+					 * because iScroll breaks if keyboard has been displayed
+					 */
 					console.log(response.length);
 					if (response.length == 32) {
-						openDocument(
-								viewxpagename
-										+ "?action=openDocument&documentId="
-										+ response, "content");
+					//	openDocument(
+					//			viewxpagename
+					//					+ "?action=openDocument&documentId="
+					//					+ response, "content");
+					//	initiscroll();
+						window.location.href = "UnpMain.xsp";
 					} else {
 						alert(response);
 					}
-					initiscroll();
 				});
 	} else {
 		return false;
