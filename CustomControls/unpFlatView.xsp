@@ -94,7 +94,7 @@ else {return true;}}]]></xp:this.rendered>
 					</div>
 				</xp:div>
 				<xp:div id="loadmorelink">
-					<xp:this.rendered><![CDATA[#{javascript:compositeData.refreshmethod == "button"}]]></xp:this.rendered>
+					<xp:this.rendered><![CDATA[#{javascript:compositeData.refreshmethod != "none"}]]></xp:this.rendered>
 					<xp:this.styleClass><![CDATA[#{javascript:if (compositeData.refreshmethod != "button"){
 	return "loadmorelink hidden";
 }else{
