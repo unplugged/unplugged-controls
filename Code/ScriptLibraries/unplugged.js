@@ -1,6 +1,7 @@
 $(window).load( function() {
 
 	$(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
+	$(document).ajaxStop(initiscroll);
 	allowFormsInIscroll();
 	$('.viewsButton').unbind('click');
 	$('.viewsButton').click( function(event) {
@@ -159,6 +160,7 @@ function saveDocument(formid, unid, viewxpagename, formname, parentunid) {
 					//					+ "?action=openDocument&documentId="
 					//					+ response, "content");
 					//	initiscroll();
+						$.blockUI();
 						window.location.href = "UnpMain.xsp";
 					} else {
 						alert(response);
