@@ -35,10 +35,9 @@ try{
 			var key = keys.next();
 			resp = ("Processing " + key);
 			var value = param.get(key);
-			
+			print (typeof value);
 			if (dateformat.test(value)){
 				value = value.split("-");
-				print("value = " + value);
 				value = session.createDateTime(@Date(parseInt(value[0], 10), parseInt(value[1], 10), parseInt(value[2], 10)));
 			}
 			if (@Left(key, 2) == "$$"){
@@ -46,8 +45,15 @@ try{
 			}else if(key.indexOf(":") > -1){
 				var fieldnames = key.split(":");
 				var fieldname = fieldnames[fieldnames.length - 1];
+				if (fieldname.indexOf("__") > -1){
+					//This needs to be a multi value field
+					fieldnames = fieldname.split("__");
+					fieldname = fieldnames[fieldnames.length - 1]
+					value = value.split(",");
+				}
 				doc.replaceItemValue(fieldname, value);
 				resp = (fieldname + ": " + value);
+				print(fieldname + ": " + value);
 			}else{
 				doc.replaceItemValue(key, value);
 				resp = (key + ": " + value);
