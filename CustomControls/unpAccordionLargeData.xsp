@@ -6,7 +6,6 @@
 }]]></xp:this.beforeRenderResponse>
 	<xp:this.resources>
 		<xp:script src="/unpAccordionLarge.js" clientSide="true"></xp:script>
-		<xp:styleSheet href="/unpAccordianlarge.css"></xp:styleSheet>
 	</xp:this.resources>
 
 	<div>	

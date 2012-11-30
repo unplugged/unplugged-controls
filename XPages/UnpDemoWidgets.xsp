@@ -1,22 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
 
+	<xp:this.resources>
+		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
+	</xp:this.resources>
 	<xc:unpHeader search="database" viewsButton="true" title="Employees"
 		searchPage="UnpDemoWidgetsSearch.xsp">
 	</xc:unpHeader>
 	<xc:unpViewsList>
 		<xc:this.menuItem>
-			<xc:menuItem label="All Documents" page="/UnpDemoWidgets.xsp"
-				ajaxtargetid="content" ajaxloadid="contentwrapper">
+			<xc:menuItem label="All Documents"
+				page="/UnpDemoWidgets.xsp" ajaxtargetid="content"
+				ajaxloadid="contentwrapper">
 			</xc:menuItem>
-			<xc:menuItem label="By Department" page="/UnpDemoWidgetsByDept.xsp"
-				ajaxtargetid="content" ajaxloadid="contentwrapper"></xc:menuItem>
-			<xc:menuItem label="Just Finances Department" page="/UnpDemoWidgetsByDeptFinances.xsp"
-				ajaxtargetid="content" ajaxloadid="contentwrapper"></xc:menuItem>
-			<xc:menuItem label="By Country" page="/UnpDemoWidgetsByCountry.xsp"
-				ajaxtargetid="content" ajaxloadid="contentwrapper"></xc:menuItem>
-			<xc:menuItem label="By Year" page="/UnpDemoWidgetsByYear.xsp"
-				ajaxtargetid="content" ajaxloadid="contentwrapper"></xc:menuItem>
+			<xc:menuItem label="By Department"
+				page="/UnpDemoWidgetsByDept.xsp" ajaxtargetid="content"
+				ajaxloadid="contentwrapper">
+			</xc:menuItem>
+			<xc:menuItem label="Just Finances Department"
+				page="/UnpDemoWidgetsByDeptFinances.xsp" ajaxtargetid="content"
+				ajaxloadid="contentwrapper">
+			</xc:menuItem>
+			<xc:menuItem label="By Country"
+				page="/UnpDemoWidgetsByCountry.xsp" ajaxtargetid="content"
+				ajaxloadid="contentwrapper">
+			</xc:menuItem>
+			<xc:menuItem label="By Year"
+				page="/UnpDemoWidgetsByYear.xsp" ajaxtargetid="content"
+				ajaxloadid="contentwrapper">
+			</xc:menuItem>
 		</xc:this.menuItem>
 	</xc:unpViewsList>
 	<div id="content">

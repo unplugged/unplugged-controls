@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
 
-	<xc:unpHeader search="none" viewsButton="true" title="Views List Demo"
-		backButtonText="">
+	<xp:this.resources>
+		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
+	</xp:this.resources>
+	<xc:unpHeader search="none" viewsButton="true"
+		title="Views List Demo" backButtonText="">
 	</xc:unpHeader>
 	<xc:unpViewsList>
 		<xc:this.menuItem>
 			<xc:menuItem icon="/icons/house.png" label="Test Page 1"
-				page="/UnpDemoViewsList.xsp" ajaxloadid="newcontent" ajaxtargetid="results">
+				page="/UnpDemoViewsList.xsp" ajaxloadid="newcontent"
+				ajaxtargetid="results">
 			</xc:menuItem>
 			<xc:menuItem icon="/icons/id_card.png" label="Test Page 2"
 				page="/UnpDemoViewsListPage2.xsp" ajaxloadid="newcontent"
@@ -37,13 +42,15 @@
 			<xc:menuItem icon="/icons/male.png" label="Test Page 10"
 				page="/UnpDemoViewsListPage10.xsp">
 			</xc:menuItem>
-			<xc:menuItem icon="/icons/map_marker.png" label="Test Page 11"
-				page="/UnpDemoViewsListPage11.xsp">
+			<xc:menuItem icon="/icons/map_marker.png"
+				label="Test Page 11" page="/UnpDemoViewsListPage11.xsp">
 			</xc:menuItem>
 		</xc:this.menuItem>
 	</xc:unpViewsList>
 	<div id="results">
-		<div id="newcontent" style="position: absolute; top: 60px;">UnpDemoViewsList</div>
+		<div id="newcontent" style="position: absolute; top: 60px;">
+			UnpDemoViewsList
+		</div>
 	</div>
 	<xc:unpFooter></xc:unpFooter>
 </xp:view>

@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.resources>
+		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
+	</xp:this.resources>
 	<xc:unpHeader search="none" searchPage="UnpSearch.xsp"
 		viewsButton="false" backButtonText="Back" backButtonURL="/UnpMain.xsp"
 		title="Employees">
@@ -9,8 +13,8 @@
 			<xp:this.facets>
 				<xc:unpFlatView insetData="true" detailColumn="DOB"
 					summaryColumn="Name" title="Finance Employees" xp:key="facet_1"
-					categoryfilter="Finances" viewName="EmployeesCatByDept" xpageDoc="Employee.xsp"
-					numberofrows="20">
+					categoryfilter="Finances" viewName="EmployeesCatByDept"
+					xpageDoc="Employee.xsp" numberofrows="20">
 				</xc:unpFlatView>
 			</xp:this.facets>
 		</xc:unpScrollableArea>
