@@ -47,8 +47,11 @@ try{
 				if (fieldname.indexOf("__") > -1){
 					//This needs to be a multi value field
 					fieldnames = fieldname.split("__");
+					resp = "start fieldname = " + fieldname;
 					fieldname = fieldnames[fieldnames.length - 1]
-					value = value.split(",");
+					resp = "new fieldname = " + fieldname;
+					resp = "value = " + value;
+					value = @Explode(value, ",");
 				}
 				doc.replaceItemValue(fieldname, value);
 				resp = (fieldname + ": " + value);
