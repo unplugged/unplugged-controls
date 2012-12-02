@@ -353,7 +353,7 @@ function accordionLoadMore(obj, viewName, catName, xpage){
 
 function fetchDetails(obj, viewName, catName, xpage)
 {	
-	console.log('View: ' + viewName);
+	//console.log('View: ' + viewName);
 	//console.log("Object = " + obj);
 	//Reset category
 	$('.accordionRowSet').empty();
@@ -366,6 +366,7 @@ function fetchDetails(obj, viewName, catName, xpage)
 		$(obj).nextAll('.summaryDataRow:first').children('.loadMoreLink').hide();
 	}
 	else{
+		$('.categoryRow').removeClass("accordianExpanded");
 		accordionLoadMore(obj, viewName, catName, xpage);
 	}
 }
