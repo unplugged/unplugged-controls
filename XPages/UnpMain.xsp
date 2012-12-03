@@ -15,8 +15,12 @@
 		id="link5" style="font-size:18pt" value="/UnpDemoHeaderFooterBackButton.xsp"></xp:link>
 	<xp:br></xp:br>
 	<xp:br></xp:br>
-	<xp:link escape="true" text="Views List" id="link1"
+	<xp:link escape="true" text="Views List (with icons)" id="link1"
 		value="/UnpDemoViewsList.xsp" style="font-size:18pt"></xp:link>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:link escape="true" text="Views List (no icons)" id="link11"
+		value="/UnpDemoViewsListNoIcons.xsp" style="font-size:18pt"></xp:link>
 	<xp:br></xp:br>
 	<xp:br></xp:br>
 	<xp:link escape="true" text="FlatView" id="FlatViewLink"

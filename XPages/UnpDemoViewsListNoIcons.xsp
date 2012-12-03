@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xp:this.resources>
+		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
+	</xp:this.resources>
+	<xc:unpHeader search="none" viewsButton="true"
+		title="Views List Demo" backButtonText="">
+	</xc:unpHeader>
+	<xc:unpViewsList>
+		<xc:this.menuItem>
+			<xc:menuItem label="Test Page 1"
+				page="/UnpDemoViewsList.xsp" ajaxloadid="newcontent"
+				ajaxtargetid="results">
+			</xc:menuItem>
+			<xc:menuItem label="Test Page 2"
+				page="/UnpDemoViewsListPage2.xsp" ajaxloadid="newcontent"
+				ajaxtargetid="results">
+			</xc:menuItem>
+			<xc:menuItem label="Test Page 3"
+				page="/UnpDemoViewsListPage3.xsp">
+			</xc:menuItem>
+			<xc:menuItem label="Test Page 4"
+				page="/UnpDemoViewsListPage4.xsp">
+			</xc:menuItem>
+			<xc:menuItem label="Test Page 5"
+				page="/UnpDemoViewsListPage5.xsp">
+			</xc:menuItem>
+			<xc:menuItem label="Test Page 6"
+				page="/UnpDemoViewsListPage6.xsp">
+			</xc:menuItem>
+			<xc:menuItem label="Test Page 7"
+				page="/UnpDemoViewsListPage7.xsp">
+			</xc:menuItem>
+			<xc:menuItem label="Test Page 8"
+				page="/UnpDemoViewsListPage8.xsp">
+			</xc:menuItem>
+			<xc:menuItem label="Test Page 9"
+				page="/UnpDemoViewsListPage9.xsp">
+			</xc:menuItem>
+			<xc:menuItem label="Test Page 10"
+				page="/UnpDemoViewsListPage10.xsp">
+			</xc:menuItem>
+			<xc:menuItem 
+				label="Test Page 11" page="/UnpDemoViewsListPage11.xsp">
+			</xc:menuItem>
+		</xc:this.menuItem>
+	</xc:unpViewsList>
+	<div id="results">
+		<div id="newcontent" style="position: absolute; top: 60px;">
+			UnpDemoViewsList
+		</div>
+	</div>
+	<xc:unpFooter></xc:unpFooter>
+</xp:view>
