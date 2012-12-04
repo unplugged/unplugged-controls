@@ -16,7 +16,7 @@
 		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 	</xp:this.resources>
 	<div id="menu">
-		<div id="menuPane" class="iscrollmenu">
+		<div id="menuPane" class="offScreen iscrollmenu">
 			<xp:panel styleClass="navScrollArea" id="navScrollArea">
 				<ul id="menuitems">
 					<xp:repeat id="repeat1" rows="30" disableOutputTag="true"
