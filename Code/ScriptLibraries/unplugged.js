@@ -2,14 +2,14 @@ $(window).load( function() {
 
 	$(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
 	allowFormsInIscroll();
+
+	initiscroll();
+	$("#menupane").addClass("offScreen");
 	$('.viewsButton').unbind('click');
 	$('.viewsButton').click( function(event) {
 		toggleViewsMenu();
 		return false;
 	});
-
-	$(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
-	initiscroll();
 	try {
 		$(".viewlink").each( function() {
 			$(this).addEventListener("click", function() {
@@ -154,13 +154,13 @@ function saveDocument(formid, unid, viewxpagename, formname, parentunid) {
 					 */
 					console.log(response.length);
 					if (response.length == 32) {
-					//	openDocument(
-					//			viewxpagename
-					//					+ "?action=openDocument&documentId="
-					//					+ response, "content");
-					//	initiscroll();
-						$.blockUI();
-						window.location.href = "UnpMain.xsp";
+						openDocument(
+								viewxpagename
+										+ "?action=openDocument&documentId="
+										+ response, "content");
+						initiscroll();
+					//	$.blockUI();
+					//	window.location.href = "UnpMain.xsp";
 					} else {
 						alert(response);
 					}
@@ -252,9 +252,8 @@ function initiscroll() {
 		delete scrollMenu;
 	}catch(e){
 	}
-	$(".iscrollmenu").each( function() {
-		scrollMenu = new iScroll($(this).attr("id"));
-	});
+	scrollMenu = new iScroll('menuPane');
+	
 	$(".iscrollcontent")
 			.each(
 					function() {
