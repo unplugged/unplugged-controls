@@ -499,6 +499,7 @@ body {
 	text-decoration: none;
 	height: 80px;
 	cursor: pointer;
+	-webkit-transform:translate3d(0,0,0);
 }
 
 .accordionRowSet>li a,.accordionRowSet>li .viewlistsummary {
