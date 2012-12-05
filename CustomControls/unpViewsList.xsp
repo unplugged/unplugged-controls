@@ -15,9 +15,9 @@
 		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
 		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 	</xp:this.resources>
-	<div id="menu">
-		<div id="menuPane" class="offScreen iscrollmenu">
-			<xp:panel styleClass="navScrollArea" id="navScrollArea">
+	<div id="menu" class="iscrollmenu" style="top: 60px;">
+		<div id="menuPane" class="offScreen" style="height: 100%;">
+			<xp:panel styleClass="navScrollArea" id="navScrollArea" style="height: 100%;">
 				<ul id="menuitems">
 					<xp:repeat id="repeat1" rows="30" disableOutputTag="true"
 						var="menuItem" value="#{javascript:compositeData.menuItem;}">
