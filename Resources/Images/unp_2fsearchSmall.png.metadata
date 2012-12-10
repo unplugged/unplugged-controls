@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="search.png" maintenanceversion="3.0" name="unp/searchSmall.png" noquery="true" publicaccess="false" readonly="true" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="1ae" sequence="2" unid="279E5CAEE49989FC80257AA1002EB6F3">
-<created><datetime dst="true">20121024T093014,91+01</datetime></created>
-<modified><datetime>20121030T082840,61+00</datetime></modified>
-<revised><datetime>20121030T082840,60+00</datetime></revised>
-<lastaccessed><datetime>20121030T082840,61+00</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20121024T093015,10+01</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Richard Sharpe/O=Teamstudio</name><name>CN=Matt White/O=Exhilarate</name></updatedby><jpeg>
+<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="search.png" maintenanceversion="3.0" name="unp/searchSmall.png" publicaccess="false" readonly="true" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="535a" sequence="1" unid="CCA605C1FC17A31080257AD00030317E">
+<created><datetime>20121210T084623,98+00</datetime></created>
+<modified><datetime>20121210T084624,81+00</datetime></modified>
+<revised><datetime>20121210T084624,80+00</datetime></revised>
+<lastaccessed><datetime>20121210T084624,81+00</datetime></lastaccessed>
+<addedtofile><datetime>20121210T084624,81+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
 iVBORw0KGgoAAAANSUhEUgAAABAAAAAVCAYAAABPPm7SAAADy0lEQVR42pVTbUybVRS+pW9bpg6B
 8tHSQlsKDAVKwZmpwPjcNIuZ06jzj8Y5v8YP4z8WTXSoLBuMbZlxuDImQsJHIAzoNmSwEDsRGbS0
 G1AGCWOzG5Sg3RpYsvLxeO4bs8zsDz7JfW/ec899zjnPOZfp4xMfLm2cQRel0hxISk7pT0vP+NNk
@@ -26,6 +27,5 @@ GBOTZ9ZFQKMsp8dj++jjT1BfX4fa2lqcrKpC8rOpfrZePPnUxpy09EyUlOxHZWUlPt1XDBLRsW4C
 /r6odV+ScJ6EpOT7Gq3OTXOQzwj/h4T0lW2TCsJuqSB7USaTsX8AuHMVSIdFuyIAAAAASUVORK5C
 YII=
 </jpeg>
-
 <item name="$FileModDT" sign="true"><datetime dst="true">20110519T090738,00+01</datetime></item>
-<item name="$MimeType" sign="true"><text>image/png</text></item></imageresource>
+</imageresource>

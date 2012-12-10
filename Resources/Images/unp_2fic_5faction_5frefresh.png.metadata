@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="ic_action_refresh.png" maintenanceversion="3.0" name="unp/ic_action_refresh.png" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="18a" sequence="3" unid="AADF0E059D208FBF80257AA1002EB6EA">
-<created><datetime dst="true">20121024T093014,82+01</datetime></created>
-<modified><datetime>20121030T082800,65+00</datetime></modified>
-<revised><datetime>20121030T082800,64+00</datetime></revised>
-<lastaccessed><datetime>20121030T082800,65+00</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20121024T093014,92+01</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Richard Sharpe/O=Teamstudio</name><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<noteinfo noteid="5322" sequence="1" unid="BBF1D88DFCA71AF880257AD000303170">
+<created><datetime>20121210T084623,84+00</datetime></created>
+<modified><datetime>20121210T084624,15+00</datetime></modified>
+<revised><datetime>20121210T084624,14+00</datetime></revised>
+<lastaccessed><datetime>20121210T084624,15+00</datetime></lastaccessed>
+<addedtofile><datetime>20121210T084624,15+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
 iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAACXBIWXMAAAsSAAALEgHS3X78AAAK
 T2lDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjanVNnVFPpFj333vRCS4iAlEtvUhUIIFJCi4AU
@@ -62,5 +62,5 @@ OagyKtPNBkQ1oVCZRq5AUhMKzabRCqc6b53XKMOiGUBTkDUFWQ8ZNJVBU4BmFsgaeeu8uhNWjTaa
 EtQkKE4joypBTQQ23RiVqQoZ2HXnaHKM6eRyOD1wE/UCaacru9fbsUrO4sX073wA4VcLVwM0G9AA
 AAAASUVORK5CYII=
 </jpeg>
-
-<item name="$FileModDT" sign="true"><datetime>20120125T184850,00-05</datetime></item></imageresource>
+<item name="$FileModDT" sign="true"><datetime>20120125T184850,00-05</datetime></item>
+</imageresource>

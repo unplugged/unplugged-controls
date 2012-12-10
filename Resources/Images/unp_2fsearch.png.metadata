@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="search.png" maintenanceversion="3.0" name="unp/search.png" noquery="true" publicaccess="false" readonly="true" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="1a6" sequence="2" unid="FBA5BAC6D903454180257AA1002EB6F1">
-<created><datetime dst="true">20121024T093014,89+01</datetime></created>
-<modified><datetime>20121030T082833,48+00</datetime></modified>
-<revised><datetime>20121030T082833,47+00</datetime></revised>
-<lastaccessed><datetime>20121030T082833,48+00</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20121024T093015,06+01</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Matt White/O=Exhilarate</name><name>CN=Ben Poole/O=Exhilarate</name><name>CN=Matt White/O=Exhilarate</name><name>CN=UnpluggedUnrestricted/O=mvtest</name><name>CN=Richard Sharpe/O=Teamstudio</name><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="search.png" maintenanceversion="3.0" name="unp/search.png" publicaccess="false" readonly="true" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="5352" sequence="1" unid="114BD58F1D3FAB7180257AD00030317C">
+<created><datetime>20121210T084623,96+00</datetime></created>
+<modified><datetime>20121210T084624,72+00</datetime></modified>
+<revised><datetime>20121210T084624,71+00</datetime></revised>
+<lastaccessed><datetime>20121210T084624,72+00</datetime></lastaccessed>
+<addedtofile><datetime>20121210T084624,72+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
 iVBORw0KGgoAAAANSUhEUgAAABUAAAAWCAYAAAAvg9c4AAADJElEQVR42qVTW0jTYRy1iIJmKenc
 5jQJifIG3UwTs6DSvNZD7+UFg6ysdM67SepADV2BMkXMuziYExUUEkRQMPDBUHzQFATxQaKeej19
@@ -24,6 +24,5 @@ sXEMTvU6arg41WMK57Q6Q+fl8Ejk5eXBZDLJzBOTkqFWZFf1U55Cjw4Oi0B2Tg7u3X8A9f+rt/eZ
 q9xGT6Eegy+EXoQ6A7tG4x2ttJOsewr1FOx7WqPh7PR7gf8ReiBYsF//C0uRd2zub3EAAAAAAElF
 TkSuQmCC
 </jpeg>
-
 <item name="$FileModDT" sign="true"><datetime dst="true">20110401T150723,00+01</datetime></item>
-<item name="$MimeType"><text>image/png</text></item></imageresource>
+</imageresource>

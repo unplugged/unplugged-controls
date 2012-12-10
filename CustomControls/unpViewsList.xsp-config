@@ -15,6 +15,7 @@
 &lt;xp:view xmlns:xp="http://www.ibm.com/xsp/core"&gt; &#xd;
 	&lt;div style="border: 2px solid #A9A9A9; padding: 3px; margin: 5px;"&gt;&#xd;
 	&lt;h1&gt;unpViewsList&lt;/h1&gt;&#xd;
+	&lt;div&gt;&lt;strong&gt;Don't forget to add &lt;i&gt;unplugged.css&lt;/i&gt; as a resource to your XPage&lt;/strong&gt;&lt;/div&gt;&#xd;
 	&lt;hr /&gt;&#xd;
 	&lt;div&gt; &#xd;
 		&#xd;

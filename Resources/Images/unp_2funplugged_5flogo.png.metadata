@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="unplugged_logo.png" maintenanceversion="3.0" name="unp/unplugged_logo.png" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="1ba" sequence="3" unid="DE90A1684A4A671180257AA1002EB6F6">
-<created><datetime dst="true">20121024T093014,94+01</datetime></created>
-<modified><datetime>20121102T100744,08+00</datetime></modified>
-<revised><datetime>20121102T100744,07+00</datetime></revised>
-<lastaccessed><datetime>20121102T100744,08+00</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20121024T093015,16+01</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Richard Sharpe/O=Teamstudio</name><name>CN=Matt White/O=Exhilarate</name></updatedby><jpeg>
+<noteinfo noteid="536a" sequence="1" unid="2C4414C747B397B680257AD000303182">
+<created><datetime>20121210T084624,02+00</datetime></created>
+<modified><datetime>20121210T084625,00+00</datetime></modified>
+<revised><datetime>20121210T084624,99+00</datetime></revised>
+<lastaccessed><datetime>20121210T084625,00+00</datetime></lastaccessed>
+<addedtofile><datetime>20121210T084625,00+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
 iVBORw0KGgoAAAANSUhEUgAAAHgAAAAoCAYAAAA16j4lAAAX8GlDQ1BJQ0MgUHJvZmlsZQAAWIWV
 WQk4lNHXv++8sxljGYPsxr7vWbLve/a9whj73thVyhIl0SIJRYhElAqJiiwtSqlokcgSJZEkVL6X
 1P///Zfne777PPe+vznvueeee865y5kXAJ6r1MjIUBQrAGHh0XQHM0OKm7sHBTcIsACHVA3AQaVF
@@ -195,5 +196,5 @@ IlqdbhRWNyH1VPXEHUtm1gCAIAgGZh6Q3xV9LwH/YIMLgsi9XQsNIgj3LYzgQ0sH7PfjAyrgIfz4
 GPrXlUGOIQEPcgwJeJDj5y7g/u80BwGGnKxBjp+7Bg96DAl4kGNIwIMcQwIe5BgS8CDHkIAHOYYE
 PMjx/wmQCr9IDWgaAAAAAElFTkSuQmCC
 </jpeg>
-
-<item name="$FileModDT" sign="true"><datetime dst="true">20120703T102503,00+01</datetime></item></imageresource>
+<item name="$FileModDT" sign="true"><datetime dst="true">20120703T102503,00+01</datetime></item>
+</imageresource>

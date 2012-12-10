@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="newIcon.gif" maintenanceversion="3.0" name="unp/newIcon.gif" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="19a" sequence="2" unid="319FECBCD170C8BB80257AA1002EB6EE">
-<created><datetime dst="true">20121024T093014,86+01</datetime></created>
-<modified><datetime>20121030T082815,69+00</datetime></modified>
-<revised><datetime>20121030T082815,68+00</datetime></revised>
-<lastaccessed><datetime>20121030T082815,69+00</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20121024T093015,00+01</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Richard Sharpe/O=Teamstudio</name><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<noteinfo noteid="5332" sequence="1" unid="2558817F8CDA9BF480257AD000303174">
+<created><datetime>20121210T084623,88+00</datetime></created>
+<modified><datetime>20121210T084624,34+00</datetime></modified>
+<revised><datetime>20121210T084624,33+00</datetime></revised>
+<lastaccessed><datetime>20121210T084624,34+00</datetime></lastaccessed>
+<addedtofile><datetime>20121210T084624,34+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
-
-<item name="$MimeType" sign="true"><text>image/gif</text></item>
-<item name="$FileModDT" sign="true"><datetime dst="true">20121001T093622,00-04</datetime></item></imageresource>
+<item name="$FileModDT" sign="true"><datetime dst="true">20121001T093622,00-04</datetime></item>
+</imageresource>
