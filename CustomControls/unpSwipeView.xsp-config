@@ -29,9 +29,20 @@
       </designer-extension>
     </composite-extension>
     <property>
-      <property-name>richtextfield</property-name>
+      <property-name>DocUNID</property-name>
       <property-class>string</property-class>
-      <display-name>richtextfield</display-name>
+      <display-name>UNID of document</display-name>
+      <property-extension>
+        <required>true</required>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>formName</property-name>
+      <property-class>string</property-class>
+      <display-name>Name of form containg RTF attachments</display-name>
+      <property-extension>
+        <required>true</required>
+      </property-extension>
     </property>
   </composite-component>
 </faces-config>

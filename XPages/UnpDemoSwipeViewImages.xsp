@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.resources>
+		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
+	</xp:this.resources>
+	
+	<xc:unpSwipeView formName="Employee">
+		<xc:this.DocUNID><![CDATA[#{javascript:param.get("documentId");}]]></xc:this.DocUNID>
+	</xc:unpSwipeView>
+</xp:view>

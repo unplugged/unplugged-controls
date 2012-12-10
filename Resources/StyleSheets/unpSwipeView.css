@@ -211,6 +211,17 @@ body {
 .display{
   display:block;
 }
+
+#closeButton{
+  position:absolute;
+  display:block;
+  top: 34px;
+  right: 12px;
+  width: 70px;
+  height: 30px;
+  background-color:black;
+  border-radius:8px;
+}
 #closeButton > a{
   display:block;
   font-size: 20px;

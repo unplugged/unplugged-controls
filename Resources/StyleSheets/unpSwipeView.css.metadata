@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="85257AAD004BBC1D" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="8b2" sequence="1" unid="D5701B659FB8A93A85257AAF004F6C64">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="85257AC8001391B9" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1d6" sequence="4" unid="D5701B659FB8A93A85257AAF004F6C64">
 <created><datetime>20121107T092730,92-05</datetime></created>
-<modified><datetime>20121107T092730,93-05</datetime></modified>
-<revised><datetime>20121107T092730,92-05</datetime></revised>
-<lastaccessed><datetime>20121107T092730,93-05</datetime></lastaccessed>
-<addedtofile><datetime>20121107T092730,93-05</datetime></addedtofile></noteinfo>
+<modified><datetime>20121210T134725,89-05</datetime></modified>
+<revised><datetime>20121210T134725,88-05</datetime></revised>
+<lastaccessed><datetime>20121210T134725,89-05</datetime></lastaccessed>
+<addedtofile><datetime>20121201T223458,19-05</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Richard Sharpe/O=Teamstudio</name></updatedby>
 <wassignedby><name>CN=Richard Sharpe/O=Teamstudio</name></wassignedby>
 <item name="$Flags"><text>34C=Q</text></item>
 <item name="$FlagsExt" sign="true"><text>D</text></item>
 <item name="$FileModDT" sign="true"><datetime dst="true">20120825T093132,00-04</datetime></item>
-
-
-<item name="$FileNames" sign="true"><text>style.css</text></item>
 <item name="$TITLE" sign="true"><text>unpSwipeView.css</text></item>
-<item name="$DesignerVersion" sign="true"><text>8.5.3</text></item></note>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>unpSwipeView.css</text></item></note>

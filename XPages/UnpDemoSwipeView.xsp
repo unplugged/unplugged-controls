@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core"
 	xmlns:xc="http://www.ibm.com/xsp/custom">
-
-	<xp:this.data>
-		<xp:dominoDocument var="docImages" formName="Employee"
-			action="openDocument">
-		</xp:dominoDocument>
-	</xp:this.data>
+	<xp:this.resources>
+		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
+	</xp:this.resources>
+	<xc:unpHeader search="none" searchPage="UnpSearch.xsp"
+		viewsButton="false" title="Image Test">
+	</xc:unpHeader>
+	<xc:unpScrollableArea><xp:this.facets>
+	<xc:unpFlatView insetData="false" numberofrows="20"
+		refreshmethod="pull" xp:key="facet_1" detailColumn="Birthday"
+		summaryColumn="Name" title="Image list" viewName="Employees"
+		xpageDoc="UnpDemoSwipeViewImages.xsp">
+	</xc:unpFlatView></xp:this.facets>
 	
-	<xc:unpSwipeView richtextfield="Description"></xc:unpSwipeView></xp:view>
+	</xc:unpScrollableArea>
+</xp:view>
+	
+	
+	

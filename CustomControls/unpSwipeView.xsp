@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	
 	<xp:this.resources>
 		<xp:script src="unp/swipeview.js" clientSide="true"></xp:script>
 		<xp:styleSheet href="/unpSwipeView.css"></xp:styleSheet>
 	</xp:this.resources>
-
+   <xp:this.data>
+		<xp:dominoDocument var="docImages"
+			documentId="#{javascript:compositeData.DocUNID;}"
+			action="openDocument"
+			formName="#{javascript:compositeData.formName}">
+		</xp:dominoDocument>
+   </xp:this.data>
 	<xp:this.beforePageLoad>
 		<xp:executeScript>
 			<xp:this.script><![CDATA[#{javascript:var images = new Array;
@@ -12,7 +19,7 @@ var imageFile = "";
 var caption = "";
 var arraySeparator = "[";
 
-var attachmentList = docImages.getAttachmentList(compositeData.richtextfield);
+var attachmentList = docImages.getAttachmentList();
 var thisUNID = docImages.getDocument().getUniversalID();
 
 for(var i=0; i<attachmentList.length; i++){
