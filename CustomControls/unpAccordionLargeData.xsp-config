@@ -21,7 +21,27 @@
 	&lt;div&gt;&#xd;
 		The 'viewName' is the name of the categorized view you want displayed.&#xd;
 The view must have only the first column categorized and then have a maximum of 2 other columns with the data you wish to be displayed. The second (flat) column will be displayed in larger blue font while the third column will be displayed in small black font (These styles can be changed in the CSS file). &#xd;
-&lt;/div&gt;&lt;/div&gt;&#xd;
+&lt;/div&gt;&#xd;
+&lt;hr /&gt;&#xd;
+	&lt;div&gt; &#xd;
+		View Name = &lt;%=this.viewName %&gt;&#xd;
+		&lt;br /&gt;&#xd;
+		XPage to Open = &lt;%=this.xpage %&gt;&#xd;
+		&lt;br /&gt;&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;hr /&gt;&#xd;
+	&lt;div&gt;&#xd;
+		To use this custom control, make sure that you have copied across the following design elements to your database:&lt;br /&gt;&#xd;
+		&lt;ul&gt;&#xd;
+			&lt;li&gt;unp/jquery-1.7.2.min.js&lt;/li&gt;&#xd;
+			&lt;li&gt;unp/jquery.blockUI.js&lt;/li&gt;&#xd;
+			&lt;li&gt;unpCommon.jss&lt;/li&gt;&#xd;
+			&lt;li&gt;unplugged.js&lt;/li&gt;&#xd;
+			&lt;li&gt;unplugged.css&lt;/li&gt;&#xd;
+			&lt;li&gt;unp/right-arrow-circle.png&lt;/li&gt;&#xd;
+		&lt;/ul&gt;&#xd;
+	&lt;/div&gt;&#xd;
+&lt;/div&gt;&#xd;
 &lt;/xp:view&gt;</render-markup>
       </designer-extension>
     </composite-extension>

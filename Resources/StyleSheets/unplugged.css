@@ -588,6 +588,18 @@ body {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+.loadMoreButton {
+	background: white;
+	width: 98%;
+	color: #222222;
+	display: block;
+	font-size: 17px;
+	text-decoration: none;
+	text-align: left;
+	height: 80px;
+	border-style: none;
+}
+
 @media screen and (max-width: 700px) {
 	.categoryRow {
 		-webkit-box-sizing: border-box;
@@ -625,6 +637,17 @@ body {
 		-webkit-tap-highlight-color: #387bbe;
 		font-weight: bold;
 	}
+	.loadMoreButton {
+		background: white;
+		width: 100%;
+		color: #222222;
+		display: block;
+		font-size: 17px;
+		text-decoration: none;
+		text-align: left;
+		height: 40px;
+		border-style: none;
+	}
 }
 
 .hidden {
@@ -635,18 +658,6 @@ body {
 	font-weight: bold;
 	font-size: 12pt;
 	margin-left: 5px;
-}
-
-.loadMoreButton {
-	background: white;
-	width: 100%;
-	color: #222222;
-	display: block;
-	font-size: 17px;
-	text-decoration: none;
-	text-align: left;
-	height: 80px;
-	border-style: none;
 }
 
 /** END unpAccordianlarge.css **/ /** START unpViewsList **/

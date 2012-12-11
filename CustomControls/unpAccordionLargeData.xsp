@@ -4,6 +4,10 @@
 	applicationScope.put('PATH', facesContext.getExternalContext().getRequestContextPath());
 }
 }]]></xp:this.beforeRenderResponse>
+	<xp:this.resources>
+		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
+	</xp:this.resources>
+
 	<div>	
 		<ul id="summaryList">
 			<xp:repeat id="repeat2" rows="999"

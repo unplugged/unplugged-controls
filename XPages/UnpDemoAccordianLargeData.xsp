@@ -7,7 +7,13 @@
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
 	</xp:this.resources>
-	<xc:unpAccordionLargeData viewName="EmployessCatByDept"
-		xpage="Employee.xsp">
-	</xc:unpAccordionLargeData>
+	<xc:unpHeader search="none" searchPage="UnpSearch.xsp"
+		viewsButton="false" title="Accordion Demo" backButtonText="Back"
+		backButtonURL="UnpMain.xsp">
+	</xc:unpHeader>
+	
+	<xc:unpScrollableArea><xp:this.facets>
+	<xc:unpAccordionLargeData xp:key="facet_1"
+		viewName="EmployessCatByDept" xpage="Employee.xsp">
+	</xc:unpAccordionLargeData></xp:this.facets></xc:unpScrollableArea>
 </xp:view>
