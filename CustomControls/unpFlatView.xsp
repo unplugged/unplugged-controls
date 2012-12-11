@@ -77,8 +77,6 @@ if (sessionScope.rowcount != null){
 							<div>
 								<xp:label id="label1"
 									styleClass="viewlistdetail">
-									<xp:this.rendered><![CDATA[#{javascript:if(compositeData.detailColumn == null){ return false; }
-else {return true;}}]]></xp:this.rendered>
 									<xp:this.value><![CDATA[#{javascript:if(compositeData.detailColumn == null){
 	return "";
 }else{
