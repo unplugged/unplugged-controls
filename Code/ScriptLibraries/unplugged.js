@@ -254,7 +254,7 @@ function initiscroll() {
 	}catch(e){
 	}
 	try{
-		scrollMenu = new iScroll('menu');
+		scrollMenu = new iScroll('menu', {bounce: true, momentum: false});
 	}catch(e){}
 	
 	$(".iscrollcontent")

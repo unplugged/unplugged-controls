@@ -58,6 +58,11 @@ menuItem.icon != null && menuItem.icon != ""}]]></xp:this.rendered>
 					</xp:repeat>
 				</ul>
 			</xp:panel>
+			<br />
+			<br />
+			<br />
+			<br />
+			<hr />
 		</div>
 	</div>
 </xp:view>

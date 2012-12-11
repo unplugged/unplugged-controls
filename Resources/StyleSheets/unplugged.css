@@ -1011,6 +1011,14 @@ a.menulink {
 	padding-top: 30px;
 }
 
+.menulink .icon {
+	padding-top: 0px;	
+}
+
+#menuPane hr {
+	border: 1px solid #000000;	
+}
+
 .multiLineIcon {
 	float: right;
 	margin-top: 30px;
