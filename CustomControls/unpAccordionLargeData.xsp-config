@@ -39,6 +39,8 @@ The view must have only the first column categorized and then have a maximum of 
 			&lt;li&gt;unplugged.js&lt;/li&gt;&#xd;
 			&lt;li&gt;unplugged.css&lt;/li&gt;&#xd;
 			&lt;li&gt;unp/right-arrow-circle.png&lt;/li&gt;&#xd;
+			&lt;li&gt;UnpAccordionViewList.xsp (XPage)&lt;/li&gt;&#xd;
+&#xd;
 		&lt;/ul&gt;&#xd;
 	&lt;/div&gt;&#xd;
 &lt;/div&gt;&#xd;

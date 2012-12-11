@@ -588,9 +588,9 @@ body {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.loadMoreButton {
+.accLoadMoreButton {
 	background: white;
-	width: 98%;
+	width: 100%;
 	color: #222222;
 	display: block;
 	font-size: 17px;
@@ -637,7 +637,7 @@ body {
 		-webkit-tap-highlight-color: #387bbe;
 		font-weight: bold;
 	}
-	.loadMoreButton {
+	.accLoadMoreButton {
 		background: white;
 		width: 100%;
 		color: #222222;

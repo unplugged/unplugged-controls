@@ -24,9 +24,9 @@
 				  <ul class="accordionRowSet" style="padding:0px; margin:0px;">
 				  </ul>
 				  <div class="summaryDataRowHolder"></div>
-				  <xp:div id="loadmorelink" styleClass="loadMoreLink hidden">
-					<xp:button value="Load More..." id="loadmorebutton"
-						styleClass="loadMoreButton">
+				  <xp:div id="accLoadmorelink" styleClass="accLoadMoreLink hidden">
+					<xp:button value="Load More..." id="accLoadmorebutton"
+						styleClass="accLoadMoreButton">
 						<xp:this.attrs>
 							<xp:attr name="onclick">
 								<xp:this.value><![CDATA[javascript:fetchMoreDetails(this,'#{javascript:compositeData.viewName;}','#{rowData}', '#{javascript:compositeData.xpage;}');]]></xp:this.value>
