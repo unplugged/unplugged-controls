@@ -934,6 +934,12 @@ a.menulink {
 	font-weight: bold;
 }
 
+@media screen and (min-width: 1001px) {
+    .pullleft {
+        margin-left: -43% !important;
+    }
+}
+
 @media screen and (max-width: 700px) {
 	#flatViewRowSet>li {
 		background: white;

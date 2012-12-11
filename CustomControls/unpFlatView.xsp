@@ -31,7 +31,16 @@
 	<div id="results">
 		<xp:panel tagName="div"
 			style="#{javascript:compositeData.cssoverride}">
-			<xp:this.styleClass><![CDATA[#{javascript:if(compositeData.insetData) {return "bordered";}}]]>
+			<xp:this.styleClass><![CDATA[#{javascript:var out = new Array();
+if(compositeData.insetData) {
+	out.push("bordered");
+}
+if (compositeData.position == "left-aligned"){
+	out.push("pullleft");
+}
+if (out.length > 0){
+	return @Implode(out, " ");
+}}]]>
 			</xp:this.styleClass>
 			<div id="flatView">
 				<ul id="flatViewRowSet">

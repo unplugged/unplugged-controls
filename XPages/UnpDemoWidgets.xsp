@@ -38,7 +38,7 @@
 				<xc:unpFlatView insetData="true" detailColumn="DOB"
 					summaryColumn="Name" title="Employees" viewName="Employees"
 					xpageDoc="Employee.xsp" xp:key="facet_1" numberofrows="20"
-					refreshmethod="pull">
+					refreshmethod="pull" position="menu-aligned">
 				</xc:unpFlatView>
 			</xp:this.facets>
 		</xc:unpScrollableArea>
