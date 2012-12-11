@@ -20,10 +20,25 @@
 	&lt;/div&gt;&#xd;
 	&lt;div&gt;&lt;strong&gt;Don't forget to add &lt;i&gt;unplugged.css&lt;/i&gt; as a resource to your XPage&lt;/strong&gt;&lt;/div&gt;&#xd;
 	&lt;div&gt;&#xd;
-		Currently, this version only supports retrieving image attachments (via RTF's) from one Notes document. This is planned to be expanded so multiple doc datasources can be given and images displayed in one gallery regardless of the originating source docs.&#xd;
+		Currently, this version only supports retrieving image attachments (from RTF's) from one Notes document. This is planned to be expanded so multiple doc datasources can be given and images displayed in one gallery regardless of the originating source docs.&#xd;
 	&lt;/div&gt;&#xd;
 	&lt;div&gt;&#xd;
 		The suggested way to use this is to have a button/link (could use thumbnail images) on an XPage that directs the user to this new XPage that only containing this control. The rendering and useage of this viewer is intended for full screen use.&#xd;
+	&lt;/div&gt;&#xd;
+&lt;hr /&gt;&#xd;
+	&lt;div&gt; &#xd;
+		DocUNID &lt;strong&gt;&lt;%=this.DocUNID %&gt;&lt;/strong&gt;&lt;br /&gt;&#xd;
+		&lt;br /&gt;&#xd;
+		Form Name = &lt;%=this.formName %&gt;&#xd;
+		&lt;br /&gt;&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;hr /&gt;&#xd;
+	&lt;div&gt;&#xd;
+		To use this custom control, make sure that you have copied across the following design elements to your database:&lt;br /&gt;&#xd;
+		&lt;ul&gt;&#xd;
+			&lt;li&gt;unpSwipeView.css&lt;/li&gt;&#xd;
+			&lt;li&gt;unpSwipeView.js&lt;/li&gt;&#xd;
+		&lt;/ul&gt;&#xd;
 	&lt;/div&gt;&#xd;
 &lt;/div&gt;&#xd;
 &lt;/xp:view&gt;</render-markup>
