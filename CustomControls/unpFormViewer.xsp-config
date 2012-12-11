@@ -23,6 +23,7 @@
 		Edit XPage: &lt;strong&gt;&lt;%=this.editxpagename %&gt;&lt;/strong&gt;&lt;br /&gt;&#xd;
 		Close XPage: &lt;strong&gt;&lt;%=this.closexpagename %&gt;&lt;/strong&gt;&lt;br /&gt;&#xd;
 	&lt;/div&gt;&#xd;
+	&lt;div&gt;&lt;strong&gt;Don't forget to add &lt;i&gt;unplugged.css&lt;/i&gt; as a resource to your XPage&lt;/strong&gt;&lt;/div&gt;&#xd;
 	&lt;hr /&gt;&#xd;
 	&lt;xp:callback facetName="facet_1" id="callback1"&gt;&lt;/xp:callback&gt;&#xd;
 	&lt;hr /&gt;&#xd;

@@ -19,6 +19,7 @@
 		&lt;p&gt;To use this custom control make sure you have set the Custom Properties.&lt;/p&gt;&#xd;
 		&lt;p&gt;If you want to run client side code when the OK button is pressed, complete the callback Property Definition, enter the name of the function you want to call without brackets, for example "myFunction".&lt;/p&gt;&#xd;
 	&lt;/div&gt;&#xd;
+	&lt;div&gt;&lt;strong&gt;Don't forget to add &lt;i&gt;unplugged.css&lt;/i&gt; as a resource to your XPage&lt;/strong&gt;&lt;/div&gt;&#xd;
 	&lt;hr /&gt;&#xd;
 	&lt;xp:callback facetName="facet_1" id="callback1"&gt;&lt;/xp:callback&gt;&#xd;
 	&lt;hr /&gt;&#xd;

@@ -19,6 +19,7 @@
 	&lt;div&gt; &#xd;
 		New Button Goes to &lt;strong&gt;&lt;%=this.newDocTarget %&gt;&lt;/strong&gt;&lt;br /&gt;&#xd;
 	&lt;/div&gt;&#xd;
+	&lt;div&gt;&lt;strong&gt;Don't forget to add &lt;i&gt;unplugged.css&lt;/i&gt; as a resource to your XPage&lt;/strong&gt;&lt;/div&gt;&#xd;
 	&lt;hr /&gt;&#xd;
 	&lt;div&gt;&#xd;
 		To use this custom control, make sure that you have copied across the following design elements to your database:&lt;br /&gt;&#xd;

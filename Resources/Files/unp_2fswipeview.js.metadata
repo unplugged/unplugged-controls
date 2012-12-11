@@ -1,17 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="85257AAD004BBC1D" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="8b6" sequence="1" unid="C91D31D3B85F1D8385257AAF004F75BE">
-<created><datetime>20121107T092754,86-05</datetime></created>
-<modified><datetime>20121107T092754,87-05</datetime></modified>
-<revised><datetime>20121107T092754,86-05</datetime></revised>
-<lastaccessed><datetime>20121107T092754,87-05</datetime></lastaccessed>
-<addedtofile><datetime>20121107T092754,87-05</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Richard Sharpe/O=Teamstudio</name></updatedby>
-<wassignedby><name>CN=Richard Sharpe/O=Teamstudio</name></wassignedby>
-<item name="$Flags"><text>345CgQ</text></item>
-<item name="$FlagsExt"><text>D</text></item>
-
-<item name="$FileModDT" sign="true"><datetime dst="true">20120825T093132,00-04</datetime></item>
-
-<item name="$FileNames" sign="true"><text>swipeview.js</text></item>
-<item name="$TITLE" sign="true"><textlist><text>unp/swipeview.js</text></textlist></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item></note>
+<?xml version="1.0" encoding="UTF-8"?><fileresource designerversion="8.5.3" maintenanceversion="3.0" name="unp/swipeview.js" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="44ba" sequence="4" unid="9FA48447C966EF3E80257AAF005AB039">
+<created><datetime>20121107T163033,53+00</datetime></created>
+<modified><datetime>20121210T164750,58+00</datetime></modified>
+<revised><datetime>20121210T164750,57+00</datetime></revised>
+<lastaccessed><datetime>20121210T164750,58+00</datetime></lastaccessed>
+<addedtofile><datetime>20121107T163033,57+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby></fileresource>
