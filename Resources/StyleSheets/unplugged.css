@@ -619,23 +619,23 @@ body {
 	}
 	.accordionRowSet>li {
 		background: white;
-		border-bottom: 1px solid #999999;
+		border-bottom: 1px solid #EEE;
 		color: #222222;
 		display: block;
 		font-size: 12px;
-		font-weight: bold;
+		font-weight: normal;
 		text-decoration: none;
-		height: 40px;
+		height: 50px;
 		cursor: pointer;
 	}
 	.accordionRowSet>li a,.accordionRowSet>li .viewlistsummary {
 		text-decoration: none;
-		padding: 7px 10px 0px 10px;
+		padding: 12px 10px 0px 10px;
 		display: block;
 		width: 100%;
 		color: #387bbe;
 		-webkit-tap-highlight-color: #387bbe;
-		font-weight: bold;
+		font-weight: normal;
 	}
 	.accLoadMoreButton {
 		background: white;
@@ -925,7 +925,7 @@ a.menulink {
 
 #flatViewRowSet>li {
 	background: white;
-	border-bottom: 1px solid #999999;
+	border-bottom: 1px solid #EEE;
 	color: #222222;
 	display: block;
 	font-size: 17px;
@@ -955,27 +955,27 @@ a.menulink {
 @media screen and (max-width: 700px) {
 	#flatViewRowSet>li {
 		background: white;
-		border-bottom: 1px solid #999999;
+		border-bottom: 1px solid #EEE;
 		color: #222222;
 		display: block;
 		font-size: 12px;
 		font-weight: bold;
 		text-decoration: none;
-		height: 40px;
+		height: 50px;
 		cursor: pointer;
 		white-space: nowrap !important;
 	}
 	#flatViewRowSet>li a,#flatViewRowSet>li .viewlistsummary {
 		text-decoration: none;
-		padding: 5px 3px 3px 10px;
+		padding: 10px 3px 3px 10px;
 		display: block;
 		width: 100%;
 		color: #387bbe;
 		-webkit-tap-highlight-color: #387bbe;
-		font-weight: bold;
+		font-weight: normal;
 	}
 	.multiLineIcon {
-		margin-top: 10px !important;
+		margin-top: 15px !important;
 	}
 }
 
