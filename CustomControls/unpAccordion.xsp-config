@@ -5,9 +5,9 @@
     <default-prefix>xc</default-prefix>
   </faces-config-extension>
   <composite-component>
-    <component-type>unpAccordionLargeData</component-type>
-    <composite-name>unpAccordionLargeData</composite-name>
-    <composite-file>/unpAccordionLargeData.xsp</composite-file>
+    <component-type>unpAccordion</component-type>
+    <composite-name>unpAccordion</composite-name>
+    <composite-file>/unpAccordion.xsp</composite-file>
     <composite-extension>
       <designer-extension>
         <in-palette>true</in-palette>

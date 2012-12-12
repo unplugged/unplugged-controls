@@ -13,9 +13,9 @@
 	</xc:unpHeader>
 	<div id="content">
 	<xc:unpScrollableArea><xp:this.facets>
-	<xc:unpAccordionLargeData xp:key="facet_1"
+	<xc:unpAccordion xp:key="facet_1"
 		viewName="EmployessCatByDept" xpage="Employee.xsp" insetData="false"
 		position="menu-aligned">
-	</xc:unpAccordionLargeData></xp:this.facets></xc:unpScrollableArea>
+	</xc:unpAccordion></xp:this.facets></xc:unpScrollableArea>
 	</div>
 </xp:view>
