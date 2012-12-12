@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
-	<xp:this.resources>
-		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
-	</xp:this.resources>
-	<div id="loading" class="spin"></div>
-</xp:view>
