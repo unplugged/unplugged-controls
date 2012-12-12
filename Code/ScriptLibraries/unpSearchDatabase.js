@@ -11,7 +11,7 @@ $(document).ready(function() {
 $(document).ready(function() {
 	$('.searchButton').click(function (event){
 		if($("#input-search").hasClass("hiddensearch")){
-			$("#input-search").removeClass("hidden").addClass("input-search");
+			$("#input-search").removeClass("hiddensearch").addClass("input-search");
 		}else{
 			$("#input-search").removeClass("input-search").addClass("hiddensearch");
 		}
