@@ -10,9 +10,6 @@
 
 	<xp:panel>
 	<xp:this.styleClass><![CDATA[#{javascript:var out = new Array();
-if(compositeData.insetData) {
-	out.push("bordered");
-}
 if (compositeData.position == "left-aligned"){
 	out.push("pullleft");
 }
