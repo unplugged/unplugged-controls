@@ -7,6 +7,9 @@
 	</xp:link>
 	<xp:br></xp:br>
 	<xp:br></xp:br>
+	<xp:link escape="true" id="link2" text="New Workspace" style="font-size:18pt" value="/UnpDemoWorkspace.xsp">
+	</xp:link><xp:br></xp:br>
+	<xp:br></xp:br>
 	<xp:link escape="true" text="Header / Footer (with Views Button)"
 		id="HeaderFooterLink" style="font-size:18pt" value="/UnpDemoHeaderFooterViewsButton.xsp"></xp:link>
 	<xp:br></xp:br>

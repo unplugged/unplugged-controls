@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" createForm="false"
+	pageTitle="Unplugged" disableTheme="true" themeId="none">
+
+	<xp:this.resources>
+		<xp:metaData name="viewport"
+			content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		</xp:metaData>
+		<xp:metaData name="apple-mobile-web-app-capable" content="yes">
+		</xp:metaData>
+		<xp:metaData name="apple-mobile-web-app-status-bar-style"
+			content="black">
+		</xp:metaData>
+		<xp:styleSheet href="/unpreset.css"></xp:styleSheet>
+		<xp:styleSheet href="/unpworkspace.css"></xp:styleSheet>
+		<xp:script src="unp/iscroll.min.js" clientSide="true"></xp:script>
+		<xp:script src="unp/workspace.js" clientSide="true"></xp:script>
+		<xp:script src="unp/jquery-1.7.2.min.js" clientSide="true"></xp:script>
+		<xp:script src="unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
+	</xp:this.resources>
+
+	<xp:this.data>
+		<xp:dominoView var="dbs" viewName="Databases"></xp:dominoView>
+	</xp:this.data>
+
+	<header>
+		<h1>Unplugged</h1>
+	</header>
+
+	<section id="content">
+		<div class="scroll">
+			<ul id="apps">
+				<xp:repeat id="chiclets" value="#{dbs}" var="db">
+					<li
+						onclick="window.location.href='#{javascript:db.getColumnValue('UnpUrl');}'">
+						<img class="icon" src="#{javascript:db.getColumnValue('ImgUrl');}" />
+						<xp:image url="unp/error.png"
+							rendered='#{javascript:"true".equals(db.getColumnValue("Flagged"));}'
+							styleClass="error" />
+						<h4>
+							<xp:text value="#{javascript:db.getColumnValue('Title');}" />
+						</h4>
+					</li>
+				</xp:repeat>
+
+			</ul>
+		</div>
+	</section>
+
+	<footer></footer>
+
+	<a class="button green sync" id="unpSync">
+		<img src="unp/sync.png" />
+		Sync
+	</a>
+	<a class="button about" onclick="window.location.href='UnpAbout.xsp'">
+		<img src="unp/about.png" />
+		About
+	</a>
+
+	<xp:scriptBlock>
+		<xp:this.value escape="false">
+			$(document).ready(function() {
+			$('#unpSync').click(function() {
+			$.blockUI({
+			centerY: 0,
+			css: { top: '10px', left: '10px', right: '' }
+			});
+			$.get("ajaxReplicate.xsp", function(data) {
+			$.unblockUI();
+			location.reload();
+			});
+			});
+			if( "yes" ==
+			"#{javascript:session.getEnvironmentString('client.starting', true)}"
+			){
+			#{javascript:session.setEnvironmentVar('client.starting', 'no',
+			true)}
+			if ("Yes" ==
+			"#{javascript:session.getEnvironmentString("rep.onLaunch", true);}")
+			{
+			$('#unpSync').click();
+			}
+			}
+			if( "0" != "#{javascript:context.getUrlParameter("AutoLaunch")}") {
+			if
+			("" !=
+			"#{javascript:session.getEnvironmentString("ws.autoLaunch.path",
+			true);}") {
+			window.location.href="#{javascript:"/"+session.getEnvironmentString("ws.autoLaunch.path",
+			true) + "/";}";
+			}
+			}
+			});			
+</xp:this.value>
+	</xp:scriptBlock>
+
+</xp:view>
