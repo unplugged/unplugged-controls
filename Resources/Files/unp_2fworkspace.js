@@ -4,6 +4,10 @@
  *
  */
 
+$(window).load( function() {
+	$(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
+});
+
 document.addEventListener('DOMContentLoaded', ready, false);
 window.addEventListener('load', loaded, false);
 //window.addEventListener('orientationchange', orientation, false);

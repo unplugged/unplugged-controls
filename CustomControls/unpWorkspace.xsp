@@ -13,16 +13,11 @@
 		</xp:metaData>
 		<xp:styleSheet href="/unpreset.css"></xp:styleSheet>
 		<xp:styleSheet href="/unpworkspace.css"></xp:styleSheet>
-		<xp:script src="unp/iscroll.min.js" clientSide="true"></xp:script>
-		<xp:script src="unp/workspace.js" clientSide="true"></xp:script>
 		<xp:script src="unp/jquery-1.7.2.min.js" clientSide="true"></xp:script>
 		<xp:script src="unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
+		<xp:script src="unp/iscroll.min.js" clientSide="true"></xp:script>
+		<xp:script src="unp/workspace.js" clientSide="true"></xp:script>
 	</xp:this.resources>
-
-	<xp:this.data>
-		<xp:dominoView var="dbs" viewName="Databases"></xp:dominoView>
-	</xp:this.data>
-
 	<header>
 		<h1>Unplugged</h1>
 	</header>
@@ -32,7 +27,7 @@
 			<ul id="apps">
 				<xp:repeat id="chiclets" value="#{dbs}" var="db">
 					<li
-						onclick="window.location.href='#{javascript:db.getColumnValue('UnpUrl');}'">
+						onclick="$.blockUI();window.location.href='#{javascript:db.getColumnValue('UnpUrl');}'">
 						<img class="icon" src="#{javascript:db.getColumnValue('ImgUrl');}" />
 						<xp:image url="unp/error.png"
 							rendered='#{javascript:"true".equals(db.getColumnValue("Flagged"));}'

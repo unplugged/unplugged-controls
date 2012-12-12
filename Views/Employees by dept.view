@@ -9,15 +9,15 @@
  totalscolor='black' headerbgcolor='white' boldunreadrows='false' evaluateactions='false'
  allownewdocuments='false' allowcustomizations='true' hidemarginborder='false'
  marginwidth='0px' marginbgcolor='white' uniquekeys='false'>
-<noteinfo noteid='1e6' unid='20160B4A0042D20A80257AA100314702' sequence='12'>
+<noteinfo noteid='1e6' unid='20160B4A0042D20A80257AA100314702' sequence='13'>
 <created><datetime dst='true'>20121024T095814,42+01</datetime></created>
-<modified><datetime>20121212T085934,35+00</datetime></modified>
-<revised><datetime>20121212T085934,34+00</datetime></revised>
-<lastaccessed><datetime>20121212T085934,35+00</datetime></lastaccessed>
+<modified><datetime>20121212T122032,65+00</datetime></modified>
+<revised><datetime>20121212T122032,64+00</datetime></revised>
+<lastaccessed><datetime>20121212T122032,65+00</datetime></lastaccessed>
 <addedtofile><datetime dst='true'>20121024T095814,44+01</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><code event='selection'><formula
->SELECT @All</formula></code>
+>SELECT ((Form = "Employee") | (Form = "Employee"))</formula></code>
 <column sort='ascending' hidedetailrows='false' itemname='Dept' width='10'
  resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
  showaslinks='false'><columnheader title='Dept'><font size='9pt' style='bold'/></columnheader></column>

@@ -9,15 +9,15 @@
  totalscolor='black' headerbgcolor='white' boldunreadrows='false' evaluateactions='false'
  allownewdocuments='false' allowcustomizations='true' hidemarginborder='false'
  marginwidth='0px' marginbgcolor='white' uniquekeys='false'>
-<noteinfo noteid='43ba' unid='B126C7ADB2A83D4780257AAD0040D74F' sequence='11'>
+<noteinfo noteid='43ba' unid='B126C7ADB2A83D4780257AAD0040D74F' sequence='12'>
 <created><datetime>20121105T114814,23+00</datetime></created>
-<modified><datetime>20121212T085934,43+00</datetime></modified>
-<revised><datetime>20121212T085934,42+00</datetime></revised>
-<lastaccessed><datetime>20121212T085934,43+00</datetime></lastaccessed>
+<modified><datetime>20121212T122026,48+00</datetime></modified>
+<revised><datetime>20121212T122026,47+00</datetime></revised>
+<lastaccessed><datetime>20121212T122026,48+00</datetime></lastaccessed>
 <addedtofile><datetime>20121105T114814,26+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><code event='selection'><formula
->SELECT @All</formula></code>
+>SELECT ((Form = "Employee") | (Form = "Employee"))</formula></code>
 <column sort='ascending' hidedetailrows='false' itemname='Countries' width='10'
  resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
  showaslinks='false'><columnheader title='Country'><font size='9pt' style='bold'/></columnheader></column>

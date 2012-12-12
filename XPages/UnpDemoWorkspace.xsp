@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
-	xmlns:xc="http://www.ibm.com/xsp/custom">
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
 
-	<xc:unpWorkspace></xc:unpWorkspace></xp:view>
+	<xp:this.data>
+		<xp:dominoView var="dbs" viewName="Databases"></xp:dominoView>
+	</xp:this.data>
+	<xc:unpWorkspace></xc:unpWorkspace>
+</xp:view>
