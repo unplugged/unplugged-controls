@@ -13,5 +13,35 @@
         <in-palette>true</in-palette>
       </designer-extension>
     </composite-extension>
+    <property>
+      <property-name>linkurlcol</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>imgurlcol</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>labelcol</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>syncbutton</property-name>
+      <property-class>boolean</property-class>
+      <property-extension>
+        <designer-extension>
+          <default-value>true</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>aboutbutton</property-name>
+      <property-class>boolean</property-class>
+      <property-extension>
+        <designer-extension>
+          <default-value>true</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
   </composite-component>
 </faces-config>

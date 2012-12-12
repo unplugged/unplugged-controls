@@ -4,5 +4,7 @@
 	<xp:this.data>
 		<xp:dominoView var="dbs" viewName="Databases"></xp:dominoView>
 	</xp:this.data>
-	<xc:unpWorkspace></xc:unpWorkspace>
+	<xc:unpWorkspace aboutbutton="false" imgurlcol="ImgUrl"
+		labelcol="Title" linkurlcol="UnpUrl" syncbutton="true">
+	</xc:unpWorkspace>
 </xp:view>
