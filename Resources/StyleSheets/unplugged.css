@@ -1030,10 +1030,6 @@ a.menulink {
 	border: 0px solid #FFFFFF;
 }
 
-#menuPane {
-	background: rgba(70, 70, 70, 0.6);
-}
-
 .multiLineIcon {
 	float: right;
 	margin-top: 30px;
@@ -1314,24 +1310,22 @@ to {
 /** END unpForm **/
 #loading {
 	position: absolute;
-	z-index: 100;
-	top: 8px;
-	right: 212px;
+	
 	width: 42px;
 	height: 42px;
 	background: url(unp/spinner.png) 0 0 no-repeat;
 	-webkit-transform: translate3d(0, 0, 0);
-	-webkit-animation-duration: 0.5s;
+	-webkit-animation-duration: 1s;
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-timing-function: linear;
 }
 
 #loading.spin {
 	background-position: 0 -42px;
-	-webkit-animation-name: rotate;
+	-webkit-animation-name: spin;
 }
 
 @-webkit-keyframes spin {
 	from { -webkit-transform:rotateZ(0); }
 	to { -webkit-transform:rotateZ(360deg); }
-}
+	}
