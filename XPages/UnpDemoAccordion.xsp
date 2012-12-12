@@ -11,9 +11,11 @@
 		viewsButton="false" title="Accordion Demo" backButtonText="Back"
 		backButtonURL="UnpMain.xsp">
 	</xc:unpHeader>
-	
+	<div id="content">
 	<xc:unpScrollableArea><xp:this.facets>
 	<xc:unpAccordionLargeData xp:key="facet_1"
-		viewName="EmployessCatByDept" xpage="Employee.xsp">
+		viewName="EmployessCatByDept" xpage="Employee.xsp" insetData="false"
+		position="menu-aligned">
 	</xc:unpAccordionLargeData></xp:this.facets></xc:unpScrollableArea>
+	</div>
 </xp:view>

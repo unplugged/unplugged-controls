@@ -38,8 +38,8 @@
 		value="/UnpDemoFlatViewSearch.xsp" style="font-size:18pt"></xp:link>
 	<xp:br></xp:br>
 	<xp:br></xp:br>
-	<xp:link escape="true" text="Accordian" id="link6"
-		value="/UnpDemoAccordianLargeData.xsp" style="font-size:18pt">
+	<xp:link escape="true" text="Accordion" id="link6"
+		value="/UnpDemoAccordion.xsp" style="font-size:18pt">
 	</xp:link>
 	<xp:br></xp:br>
 	<xp:br></xp:br>

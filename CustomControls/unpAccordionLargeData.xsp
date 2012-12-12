@@ -8,7 +8,19 @@
 		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
 	</xp:this.resources>
 
-	<div>	
+	<xp:panel>
+	<xp:this.styleClass><![CDATA[#{javascript:var out = new Array();
+if(compositeData.insetData) {
+	out.push("bordered");
+}
+if (compositeData.position == "left-aligned"){
+	out.push("pullleft");
+}
+if (out.length > 0){
+	return @Implode(out, " ");
+}}]]>
+			</xp:this.styleClass>
+		
 		<ul id="summaryList">
 			<xp:repeat id="repeat2" rows="999"
 				value="#{javascript:@Unique(@DbColumn(@DbName(), compositeData.viewName, 1))}"
@@ -37,5 +49,5 @@
 				</div>
 			</xp:repeat>
 		</ul>
-	</div>
+	</xp:panel>
 </xp:view>
