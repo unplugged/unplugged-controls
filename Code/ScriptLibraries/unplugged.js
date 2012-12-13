@@ -189,11 +189,13 @@ function toggleViewsMenu() {
 		$("#menuPane").animate( {
 			"left" : "+=700px"
 		}, "slow");
+		$("#content").fadeOut();
 	} else {
 		$("#menuPane").removeClass("onScreen").addClass("offScreen");
 		$("#menuPane").animate( {
 			"left" : "-=700px"
 		}, "slow");
+		$("#content").fadeIn();
 	}
 }
 
@@ -204,6 +206,7 @@ function hideViewsMenu() {
 			"left" : "-=700px"
 		}, "slow");
 	}
+	$("#content").fadeIn();
 }
 
 var firedrequests;
