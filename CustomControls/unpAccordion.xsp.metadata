@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="85257AC8001391B9" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="74e" sequence="33" unid="3CB11B883BD5269580257AA8002BCF49">
+<created><datetime dst="true">20121031T085831,13+01</datetime></created>
+<modified><datetime>20121212T093414,89-05</datetime></modified>
+<revised><datetime>20121212T093414,88-05</datetime></revised>
+<lastaccessed><datetime>20121212T093414,89-05</datetime></lastaccessed>
+<addedtofile><datetime>20121201T223521,04-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Richard Sharpe/O=Teamstudio</name></updatedby>
+<wassignedby><name>CN=Richard Sharpe/O=Teamstudio</name></wassignedby>
+<item name="$Flags"><text>gC~4;</text></item>
+<item name="$TITLE" sign="true"><text>unpAccordion.xsp</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+
+
+
+
+
+<item name="$FileNames" sign="true"><text>unpAccordion.xsp</text></item>
+
+</note>

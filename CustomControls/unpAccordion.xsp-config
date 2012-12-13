@@ -5,9 +5,9 @@
     <default-prefix>xc</default-prefix>
   </faces-config-extension>
   <composite-component>
-    <component-type>unpAccordionLargeData</component-type>
-    <composite-name>unpAccordionLargeData</composite-name>
-    <composite-file>/unpAccordionLargeData.xsp</composite-file>
+    <component-type>unpAccordion</component-type>
+    <composite-name>unpAccordion</composite-name>
+    <composite-file>/unpAccordion.xsp</composite-file>
     <composite-extension>
       <designer-extension>
         <in-palette>true</in-palette>
@@ -20,13 +20,17 @@
 	&lt;/div&gt;&#xd;
 	&lt;div&gt;&#xd;
 		The 'viewName' is the name of the categorized view you want displayed.&#xd;
-The view must have only the first column categorized and then have a maximum of 2 other columns with the data you wish to be displayed. The second (flat) column will be displayed in larger blue font while the third column will be displayed in small black font (These styles can be changed in the CSS file). &#xd;
+The view must have only the first column categorized and then have a maximum of 2 other columns with the data you wish to be displayed. The second (flat) column will be displayed in larger blue font while the third column will be displayed in small black font (These styles can be changed in the CSS file).&#xd;
+&#xd;
+The default position is 'menu-aligned' as this control would normally be used with a View List Control and will be set to 2/3 right in landscape mode on a tablet. Use 'Position = left-aligned' if no View List control is used and this will be rendered across the whole screen.&#xd;
 &lt;/div&gt;&#xd;
 &lt;hr /&gt;&#xd;
 	&lt;div&gt; &#xd;
 		View Name = &lt;%=this.viewName %&gt;&#xd;
 		&lt;br /&gt;&#xd;
 		XPage to Open = &lt;%=this.xpage %&gt;&#xd;
+		&lt;br /&gt;&#xd;
+		Position = &lt;%=this.position %&gt;&#xd;
 		&lt;br /&gt;&#xd;
 	&lt;/div&gt;&#xd;
 	&lt;hr /&gt;&#xd;
@@ -58,6 +62,17 @@ The view must have only the first column categorized and then have a maximum of 
       <property-class>string</property-class>
       <display-name>target xpage</display-name>
       <description>Xpage that contains the doc data when the view entry is tapped</description>
+    </property>
+    <property>
+      <property-name>position</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <editor-parameter>left-aligned&#xd;
+menu-aligned</editor-parameter>
+        </designer-extension>
+      </property-extension>
     </property>
   </composite-component>
 </faces-config>
