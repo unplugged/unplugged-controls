@@ -1273,6 +1273,7 @@ to {
 #formholder .buttons .editButton {
 	background: -webkit-gradient(linear, 0 0, 0 100%, from(#508eff),
 		to(#3e6ec5) );
+	width: 58px;
 }
 
 #formholder .buttons .cancelButton {
@@ -1280,11 +1281,13 @@ to {
 		;
 	color: #555;
 	text-shadow: 0 1px 0 #eee;
+	width: 67px;
 }
 
 #formholder .buttons .proceedButton {
 	background: -webkit-gradient(linear, 0 0, 0 100%, from(#9bc200),
 		to(#288600) );
+	width: 129px;
 }
 
 #formholder .buttons .saveButton {
