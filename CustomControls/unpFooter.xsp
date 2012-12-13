@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<style>
+		body {
+			padding-bottom: 45px;
+		}
+		@media screen and (min-width: 701px) {
+			body {
+				padding-bottom: 60px;
+			}
+		}
+		@media screen and (max-width: 700px) {
+			body {
+				padding-bottom: 45px;
+			}
+		}
+	</style>
 	<xp:this.resources>
 		<xp:metaData name="viewport"
 			content="width=device-width, initial-scale=2.3, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">

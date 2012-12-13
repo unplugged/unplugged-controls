@@ -1,8 +1,6 @@
 /** START unpHeaderFooter **/
 body {
 	background-color: #464646;
-	padding-top: 0px;
-	padding-bottom: 45px;
 }
 
 .iHeader {
@@ -132,10 +130,6 @@ body {
 }
 
 @media screen and (min-width: 1001px) {
-	body {
-		padding-top: 60px;
-		padding-bottom: 60px;
-	}
 	.iHeader {
 		height: 60px;
 	}
@@ -241,10 +235,6 @@ body {
 }
 
 @media screen and (min-width: 701px) {
-	body {
-		padding-top: 60px;
-		padding-bottom: 60px;
-	}
 	.iHeader {
 		height: 60px;
 	}
@@ -338,10 +328,6 @@ body {
 }
 
 @media screen and (max-width: 700px) {
-	body {
-		padding-top: 45px;
-		padding-bottom: 45px;
-	}
 	.iHeader {
 		height: 45px;
 	}
