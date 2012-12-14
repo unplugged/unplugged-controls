@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core"
 	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xp:this.data>
+		<xp:dominoView var="viewEmps" viewName="Employees"></xp:dominoView>
+	</xp:this.data>
 	<xp:this.resources>
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 	</xp:this.resources>
 	<xc:unpHeader search="none" searchPage="UnpSearch.xsp"
-		viewsButton="false" title="Image Test">
+		viewsButton="false" title="Image Test" backButtonText="Back"
+		backButtonURL="UnpMain.xsp">
 	</xc:unpHeader>
-	<xc:unpScrollableArea><xp:this.facets>
-	<xc:unpFlatView insetData="false" numberofrows="20"
-		refreshmethod="pull" xp:key="facet_1" detailColumn="Birthday"
-		summaryColumn="Name" title="Image list" viewName="Employees"
-		xpageDoc="UnpDemoSwipeViewImages.xsp">
-	</xc:unpFlatView></xp:this.facets>
-	
-	</xc:unpScrollableArea>
+	<xp:label value="Han Solo is the only emp with images:" id="label1"
+		style="font-size:20pt;color:rgb(0,128,255)">
+	</xp:label>
+	<xp:repeat id="repeat1" rows="30" value="#{viewEmps}"
+		var="rowData">
+		<xp:link escape="true" id="link1"
+			style="color:rgb(255,255,255)">
+			<xp:text escape="true" id="computedField1"
+				value="#{rowData.Name}"
+				style="color:rgb(255,255,255);font-size:20pt">
+			</xp:text>
+			<xp:this.value><![CDATA[#{javascript:'/UnpDemoSwipeViewImages.xsp?documentId=' + rowData.getDocument().getUniversalID();}]]></xp:this.value>
+		</xp:link>
+		<br/><br/>
+		
+	</xp:repeat>
 </xp:view>
-	
-	
-	
+
+

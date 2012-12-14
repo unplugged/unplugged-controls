@@ -1,33 +1,42 @@
 <?xml version='1.0' encoding='utf-8'?>
-<!DOCTYPE view SYSTEM 'xmlschemas/domino_8_5_3.dtd'>
-<view name='All Documents' xmlns='http://www.lotus.com/dxl' version='8.5'
- maintenanceversion='3.0' replicaid='80257AA1002D0DF3' showinmenu='false'
- publicaccess='false' designerversion='8.5.3' unreadmarks='none' onopengoto='lastopened'
- onrefresh='displayindicator' headers='beveled' opencollapsed='false' showresponsehierarchy='false'
- showmargin='true' shrinkrows='false' extendlastcolumn='false' showhierarchies='false'
- unreadcolor='black' rowlinecount='1' headerlinecount='1' rowspacing='1' bgcolor='white'
- totalscolor='black' headerbgcolor='white' boldunreadrows='false' evaluateactions='false'
- allownewdocuments='false' allowcustomizations='true' hidemarginborder='false'
- marginwidth='0px' marginbgcolor='white' uniquekeys='false'>
-<noteinfo noteid='4f02' unid='BAC9A6C7A7AF433580257AC20043700C' sequence='9'>
+<!DOCTYPE note SYSTEM 'xmlschemas/domino_8_5_3.dtd'>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='8.5' maintenanceversion='3.0'
+ replicaid='85257AD400477C1B'>
+<noteinfo noteid='1da' unid='BAC9A6C7A7AF433580257AC20043700C' sequence='2'>
 <created><datetime>20121126T121635,96+00</datetime></created>
-<modified><datetime>20121213T075728,57+00</datetime></modified>
-<revised><datetime>20121213T075728,56+00</datetime></revised>
-<lastaccessed><datetime>20121213T075728,57+00</datetime></lastaccessed>
-<addedtofile><datetime>20121126T121635,97+00</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><code event='selection'><formula
->SELECT @All</formula></code>
-<column sort='ascending' hidedetailrows='false' itemname='Form' width='10'
- resizable='true' separatemultiplevalues='true' sortnoaccent='true' sortnocase='true'
- showaslinks='false' categorized='true'><columnheader title='Form'><font size='9pt'
- style='bold'/></columnheader></column>
-<column sort='ascending' hidedetailrows='false' itemname='$1' width='24.2500'
- resizable='true' separatemultiplevalues='false' sortnoaccent='false' sortnocase='true'
- showaslinks='false'><columnheader title='Date Created'><font size='9pt' style='bold'/></columnheader><code
- event='value'><formula>@Created</formula></code></column>
-<column resort='ascending' hidedetailrows='false' itemname='$2' width='10'
- resizable='true' separatemultiplevalues='false' sortnoaccent='false' sortnocase='true'
- showaslinks='false'><columnheader title='UNID'><font size='9pt' style='bold'/></columnheader><code
- event='value'><formula>@Text(@DocumentUniqueID)</formula></code></column></view>
+<modified><datetime>20121214T080104,86-05</datetime></modified>
+<revised><datetime>20121214T080104,85-05</datetime></revised>
+<lastaccessed><datetime>20121214T080240,02-05</datetime></lastaccessed>
+<addedtofile><datetime>20121214T080104,84-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Richard Sharpe/O=Teamstudio</name></updatedby>
+<wassignedby><name>CN=Richard Sharpe/O=Teamstudio</name></wassignedby>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>All Documents</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+VAACAAwAAgAkMWkAAwACAA4AAgAkMpAAVgEDAAUAIgAdAAQABAACAAIACQBGb3JtJDEkMiRDb25m
+bGljdAAEAAQAAAAIAGYAAwAHAAoABAAJTDFT
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+GgACAABECGYHAAAEAIBmAAQAAgBGb3JtJDE=
+</rawitemdata></item>
+<item name='$Collation1' summary='true'>
+<rawitemdata type='2'>
+DwABAABEgGYAAAACACQy
+</rawitemdata></item>
+<item name='$ViewFormat' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQADAAAACgAAAFZDAwAEAAQAAAAAAFAAAQAACgABAAAAAAAAAAICAAAAVkMBAAIADAAOAAAAwgAB
+AAAKAAAAAAAAAAAAAgIAAABWQwABAgAEABwAAABQAAEAAAoAAAAAAAAAAAACAgAAAEZvcm1Gb3Jt
+JDFEYXRlIENyZWF0ZWQOAAIADAACACQxaQADACQyVU5JRBwAAgAOAAIAJDKQAFYBAwAHAAwABQAJ
+MFMwRQAmAAEAAAABAQAJAQAACgEBAAoAAAEArSsBAAEAAQAAAAAAAAAAAFdDAQEACQAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAAAE
+AAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAA
+AAAAAAAAAAAAAEIAAAAAAAEA////AAUA////AAEAAAAAAAAAAAAAAAAAAQD///8AAQD///8AAAAB
+AAAAAAABAAAAAAABAAAAAAAAAAgAAAAAAAEA
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item>
+<item name='$Flags'><text>Y</text></item></note>
 
