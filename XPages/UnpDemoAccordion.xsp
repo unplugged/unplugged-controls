@@ -13,9 +13,8 @@
 	</xc:unpHeader>
 	<div id="content">
 	<xc:unpScrollableArea><xp:this.facets>
-	<xc:unpAccordion xp:key="facet_1"
-		viewName="EmployessCatByDept" xpage="Employee.xsp"
-		position="left-aligned">
+	<xc:unpAccordion xp:key="facet_1" viewName="EmployessCatByDept"
+		xpage="Employee.xsp" position="left-aligned" insetData="true">
 	</xc:unpAccordion></xp:this.facets></xc:unpScrollableArea>
 	</div>
 </xp:view>

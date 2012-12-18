@@ -74,5 +74,15 @@ menu-aligned</editor-parameter>
         </designer-extension>
       </property-extension>
     </property>
+    <property>
+      <property-name>insetData</property-name>
+      <property-class>boolean</property-class>
+      <display-name>insetData</display-name>
+      <property-extension>
+        <designer-extension>
+          <default-value>true</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
   </composite-component>
 </faces-config>

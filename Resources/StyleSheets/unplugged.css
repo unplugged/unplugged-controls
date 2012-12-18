@@ -517,7 +517,7 @@ body {
 	padding: 10px;
 }
 
-.bordered>div:first-child>div:first-child>div:first-child {
+.bordered>ul>li:first-child {
 	-webkit-border-top-left-radius: 8px;
 	-webkit-border-top-right-radius: 8px;
 }
