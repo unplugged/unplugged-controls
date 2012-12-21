@@ -19,18 +19,28 @@
 				value="#{javascript:compositeData.title}" styleClass="formtitle">
 			</xp:text>
 		</h2>
-
-		<xp:callback facetName="facet_1" id="callback1"></xp:callback>
-		<xp:panel id="buttons" styleClass="buttons" tagName="ul"
+		<xp:panel id="topbuttons" styleClass="buttons" tagName="ul"
 			rendered="#{compositeData.showbuttons == true}">
-			<xp:text id="editbutton" styleClass="editButton" tagName="li">
-				<xp:this.value><![CDATA[#{javascript:"Edit"}]]></xp:this.value>
+			<xp:panel id="editbutton" styleClass="editButton" tagName="li">
 				<xp:this.attrs>
 					<xp:attr name="onclick">
 						<xp:this.value><![CDATA[#{javascript:"openDocument('" + compositeData.editxpagename + "?action=editDocument&documentId=" + document1.getDocument().getUniversalID() + "', 'content');"}]]></xp:this.value>
 					</xp:attr>
 				</xp:this.attrs>
-			</xp:text>
+				<span>Edit</span>
+			</xp:panel>
+			<xp:panel id="closebutton" styleClass="cancelButton" tagName="li">
+				<xp:this.attrs>
+					<xp:attr name="onclick">
+						<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='" + compositeData.closexpagename + "';"}]]></xp:this.value>
+					</xp:attr>
+				</xp:this.attrs>
+				<span>Close</span>
+			</xp:panel>
+		</xp:panel>
+		<xp:callback facetName="facet_1" id="callback1"></xp:callback>
+		<xp:panel id="bottombuttons" styleClass="buttons bottombuttons" tagName="ul"
+			rendered="#{compositeData.showbuttons == true}">
 			<xp:panel tagName="li" styleClass="proceedButton">
 				<xp:this.rendered><![CDATA[#{javascript:compositeData.newresponsexpagename != null && 
 compositeData.newresponsexpagename != ""}]]></xp:this.rendered>
@@ -39,17 +49,11 @@ compositeData.newresponsexpagename != ""}]]></xp:this.rendered>
 						<xp:this.value><![CDATA[#{javascript:"openDocument('" + compositeData.newresponsexpagename + "?action=newDocument&parentunid=" + document1.getDocument().getUniversalID() + "', 'content');"}]]></xp:this.value>
 					</xp:attr>
 				</xp:this.attrs>
-				New Response
+				<span>New Response</span>
 			</xp:panel>
-			<xp:text id="closebutton" styleClass="cancelButton" tagName="li">
-				<xp:this.value><![CDATA[#{javascript:"Close"}]]></xp:this.value>
-				<xp:this.attrs>
-					<xp:attr name="onclick">
-						<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='" + compositeData.closexpagename + "';"}]]></xp:this.value>
-					</xp:attr>
-				</xp:this.attrs>
-			</xp:text>
 		</xp:panel>
+		<br />
+		<br />
 	</div>
 
 	<!--

@@ -2,17 +2,17 @@
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core">
 	<style>
 		body {
-			padding-top: 0px;
+		padding-top: 0px;
 		}
 		@media screen and (min-width: 701px) {
-			body {
-				padding-top: 60px;
-			}
+		body {
+		padding-top: 60px;
+		}
 		}
 		@media screen and (max-width: 700px) {
-			body {
-				padding-top: 45px;
-			}
+		body {
+		padding-top: 45px;
+		}
 		}
 	</style>
 	<xp:this.resources>
@@ -22,8 +22,7 @@
 		<xp:metaData name="apple-mobile-web-app-status-bar-style"
 			content="black-translucent">
 		</xp:metaData>
-		<xp:metaData name="apple-mobile-web-app-capable"
-			content="yes">
+		<xp:metaData name="apple-mobile-web-app-capable" content="yes">
 		</xp:metaData>
 		<xp:script src="/unp/jquery-1.7.2.min.js" clientSide="true"></xp:script>
 		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
@@ -35,15 +34,20 @@
 	<xp:panel styleClass="iHeader black">
 		<xp:image styleClass="companyLogo" url="/unp/unplugged_logo.png"
 			id="companyLogo"></xp:image>
-		<xp:panel styleClass="backButton">
+		<xp:panel styleClass="viewsButton">
 			<xp:this.rendered><![CDATA[#{javascript:if(compositeData.backButtonText == '' || compositeData.backButtonText == null){
 	return false;
 }
 else{ return true;
 }}]]></xp:this.rendered>
-			<xp:link escape="true" id="backlink" styleClass="backlabel"
-				value="#{javascript:compositeData.backButtonURL}" text="#{javascript:compositeData.backButtonText}">
-			</xp:link>
+			<xp:label id="backlink" styleClass="viewslabel"
+				value="#{javascript:compositeData.backButtonText}">
+				<xp:this.attrs>
+					<xp:attr name="onclick">
+						<xp:this.value><![CDATA[#{javascript:"window.location.href='" + compositeData.backButtonURL + "';"}]]></xp:this.value>
+					</xp:attr>
+				</xp:this.attrs>
+			</xp:label>
 		</xp:panel>
 		<xp:panel styleClass="viewsButton">
 			<xp:this.rendered><![CDATA[#{javascript:if (compositeData.backButtonText != "" && compositeData.backButtonText != null){
@@ -63,6 +67,7 @@ else{ return true;
 		</xp:panel>
 		<xp:link escape="true" id="homebutton" value="/unpws.unp/"
 			styleClass="homeButton">
+			<span></span>
 		</xp:link>
 
 	</xp:panel>

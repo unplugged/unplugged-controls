@@ -7,62 +7,82 @@
 				xp:key="facet_1">
 				<xp:this.facets>
 					<xp:panel xp:key="facet_1">
-						<xp:label value="Name" id="namelabel" for="name"></xp:label>
-						<xp:inputText id="name" value="#{document1.Name}"
-							styleClass="required">
-						</xp:inputText>
-						<xp:label value="DOB" id="doblabel" for="birthday"></xp:label>
-						<xp:inputText id="birthday" value="#{document1.Birthday}"
-							type="date">
-							<xp:this.converter>
-								<xp:convertDateTime>
-									<xp:this.pattern><![CDATA[${javascript:if (document1.isEditable()){
+						<ul class="fieldlist">
+							<li>
+								<xp:label value="Name" id="namelabel" for="name"></xp:label>
+								<xp:inputText id="name" value="#{document1.Name}"
+									styleClass="required xspInputFieldEditBox">
+								</xp:inputText>
+							</li>
+							<li>
+								<xp:label value="DOB" id="doblabel" for="birthday"></xp:label>
+								<xp:inputText id="birthday" value="#{document1.Birthday}" styleClass="xspInputFieldEditBox"
+									type="date">
+									<xp:this.converter>
+										<xp:convertDateTime>
+											<xp:this.pattern><![CDATA[${javascript:if (document1.isEditable()){
 	return "yyyy-MM-dd";
 }else{
 	return "dd MMM yyyy";
 }}]]></xp:this.pattern>
-								</xp:convertDateTime>
-							</xp:this.converter>
-						</xp:inputText>
-						<xp:label value="Email" id="emaillabel" for="email">
-						</xp:label>
-						<xp:inputText id="email" value="#{document1.Email}"
-							type="email">
-						</xp:inputText>
-						<xp:label value="Start Month" id="startmonthlabel" for="startmonth">
-						</xp:label>
-						<xp:comboBox id="startmonth" value="#{document1.StartDate}">
-							<xp:selectItem itemLabel="January"></xp:selectItem>
-							<xp:selectItem itemLabel="February"></xp:selectItem>
-							<xp:selectItem itemLabel="March"></xp:selectItem>
-							<xp:selectItem itemLabel="April"></xp:selectItem>
-							<xp:selectItem itemLabel="May"></xp:selectItem>
-							<xp:selectItem itemLabel="June"></xp:selectItem>
-							<xp:selectItem itemLabel="July"></xp:selectItem>
-							<xp:selectItem itemLabel="August"></xp:selectItem>
-							<xp:selectItem itemLabel="September"></xp:selectItem>
-							<xp:selectItem itemLabel="October"></xp:selectItem>
-							<xp:selectItem itemLabel="November"></xp:selectItem>
-							<xp:selectItem itemLabel="December"></xp:selectItem>
-						</xp:comboBox>
-						<xp:label value="Manager" id="managerlabel" for="manager">
-						</xp:label>
-						<xp:inputText id="manager" value="#{document1.Manager}">
-						</xp:inputText>
-						<xp:label value="Dept" id="deptlabel" for="dept"></xp:label>
-						<xp:inputText id="dept" value="#{document1.Dept}" styleClass="required"></xp:inputText>
-						<xp:label value="Countries" id="countrieslabel" for="countries">
-						</xp:label>
-						<xp:comboBox id="countries" value="#{document1.countries}">
-							<xp:selectItems>
-								<xp:this.value><![CDATA[#{javascript:@Unique(@DbColumn(@DbName(), "Employees By Country", 1))}]]></xp:this.value>
-							</xp:selectItems>
-						</xp:comboBox>
-						<xp:label value="Description" id="descriptionlabel" for="description">
-						</xp:label>
-						<xp:inputTextarea id="description" styleClass="richtextfield"
-							value="#{document1.Description}">
-						</xp:inputTextarea>
+										</xp:convertDateTime>
+									</xp:this.converter>
+								</xp:inputText>
+							</li>
+							<li>
+								<xp:label value="Email" id="emaillabel" for="email">
+								</xp:label>
+								<xp:inputText id="email" value="#{document1.Email}"
+									type="email" styleClass="xspInputFieldEditBox">
+								</xp:inputText>
+							</li>
+							<li>
+								<xp:label value="Start Month" id="startmonthlabel" for="startmonth">
+								</xp:label>
+								<xp:comboBox id="startmonth" value="#{document1.StartDate}" styleClass="xspListBox">
+									<xp:selectItem itemLabel="January"></xp:selectItem>
+									<xp:selectItem itemLabel="February"></xp:selectItem>
+									<xp:selectItem itemLabel="March"></xp:selectItem>
+									<xp:selectItem itemLabel="April"></xp:selectItem>
+									<xp:selectItem itemLabel="May"></xp:selectItem>
+									<xp:selectItem itemLabel="June"></xp:selectItem>
+									<xp:selectItem itemLabel="July"></xp:selectItem>
+									<xp:selectItem itemLabel="August"></xp:selectItem>
+									<xp:selectItem itemLabel="September"></xp:selectItem>
+									<xp:selectItem itemLabel="October"></xp:selectItem>
+									<xp:selectItem itemLabel="November"></xp:selectItem>
+									<xp:selectItem itemLabel="December"></xp:selectItem>
+								</xp:comboBox>
+							</li>
+							<li>
+								<xp:label value="Manager" id="managerlabel" for="manager">
+								</xp:label>
+								<xp:inputText id="manager" value="#{document1.Manager}" styleClass="xspInputFieldEditBox">
+								</xp:inputText>
+							</li>
+							<li>
+								<xp:label value="Dept" id="deptlabel" for="dept"></xp:label>
+								<xp:inputText id="dept" value="#{document1.Dept}"
+									styleClass="required xspInputFieldEditBox"></xp:inputText>
+							</li>
+							<li>
+								<xp:label value="Countries" id="countrieslabel" for="countries">
+								</xp:label>
+								<xp:comboBox id="countries" value="#{document1.countries}" styleClass="xspListBox">
+									<xp:selectItems>
+										<xp:this.value><![CDATA[#{javascript:@Unique(@DbColumn(@DbName(), "Employees By Country", 1))}]]></xp:this.value>
+									</xp:selectItems>
+								</xp:comboBox>
+							</li>
+							<li>
+								<xp:label value="Description" id="descriptionlabel"
+									for="description">
+								</xp:label>
+								<xp:inputTextarea id="description"
+									styleClass="richtextfield" value="#{document1.Description}">
+								</xp:inputTextarea>
+							</li>
+						</ul>
 					</xp:panel>
 				</xp:this.facets>
 			</xc:unpFormEditor>

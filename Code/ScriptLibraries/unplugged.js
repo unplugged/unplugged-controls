@@ -148,10 +148,6 @@ function saveDocument(formid, unid, viewxpagename, formname, parentunid) {
 			}
 		}).done(
 				function(response) {
-					/**
-					 * At the moment we have to go back to the home page
-					 * because iScroll breaks if keyboard has been displayed
-					 */
 					console.log(response.length);
 					if (response.length == 32) {
 						openDocument(
@@ -189,13 +185,13 @@ function toggleViewsMenu() {
 		$("#menuPane").animate( {
 			"left" : "+=700px"
 		}, "slow");
-		$("#content").fadeOut();
+		//$("#content").fadeOut();
 	} else {
 		$("#menuPane").removeClass("onScreen").addClass("offScreen");
 		$("#menuPane").animate( {
 			"left" : "-=700px"
 		}, "slow");
-		$("#content").fadeIn();
+		//$("#content").fadeIn();
 	}
 }
 
@@ -206,7 +202,7 @@ function hideViewsMenu() {
 			"left" : "-=700px"
 		}, "slow");
 	}
-	$("#content").fadeIn();
+	//$("#content").fadeIn();
 }
 
 var firedrequests;

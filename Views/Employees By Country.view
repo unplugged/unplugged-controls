@@ -1,38 +1,30 @@
 <?xml version='1.0' encoding='utf-8'?>
-<!DOCTYPE note SYSTEM 'xmlschemas/domino_8_5_3.dtd'>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='8.5' maintenanceversion='3.0'
- replicaid='85257AD400477C1B'>
-<noteinfo noteid='1d2' unid='B126C7ADB2A83D4780257AAD0040D74F' sequence='2'>
+<!DOCTYPE view SYSTEM 'xmlschemas/domino_8_5_3.dtd'>
+<view name='Employees By Country' xmlns='http://www.lotus.com/dxl' version='8.5'
+ maintenanceversion='3.0' replicaid='80257AA1002D0DF3' showinmenu='false'
+ publicaccess='false' designerversion='8.5.3' unreadmarks='none' onopengoto='lastopened'
+ onrefresh='displayindicator' headers='beveled' opencollapsed='false' showresponsehierarchy='true'
+ showmargin='true' shrinkrows='false' extendlastcolumn='false' showhierarchies='false'
+ unreadcolor='black' rowlinecount='1' headerlinecount='1' rowspacing='1' bgcolor='white'
+ totalscolor='black' headerbgcolor='white' boldunreadrows='false' evaluateactions='false'
+ allownewdocuments='false' allowcustomizations='true' hidemarginborder='false'
+ marginwidth='0px' marginbgcolor='white' uniquekeys='false'>
+<noteinfo noteid='43ba' unid='B126C7ADB2A83D4780257AAD0040D74F' sequence='16'>
 <created><datetime>20121105T114814,23+00</datetime></created>
-<modified><datetime>20121214T080104,78-05</datetime></modified>
-<revised><datetime>20121214T080104,77-05</datetime></revised>
-<lastaccessed><datetime>20121214T080104,78-05</datetime></lastaccessed>
-<addedtofile><datetime>20121214T080104,76-05</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Richard Sharpe/O=Teamstudio</name></updatedby>
-<wassignedby><name>CN=Richard Sharpe/O=Teamstudio</name></wassignedby>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>Employees By Country</text></item>
-<item name='$Index' sign='true'><text/></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-jAAFADQAMAAFAAkABAAIAAkABABDb3VudHJpZXNOYW1lQmlydGhkYXkkQ29uZmxpY3QkUkVGBAAE
-AAAAOgAFAAQARm9ybQEACABFbXBsb3llZQoCBAAFAAQARm9ybQEACABFbXBsb3llZQoCBAAdAgQA
-AwAHABgAEgAJTDFTNFM1UzdTOFMxMFMxMVM=
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-IQACAABEAGYAAAAJAIBmAAkABABDb3VudHJpZXNOYW1l
-</rawitemdata></item>
-<item name='$ViewFormat' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQADAAAACAAAAFZDAQAJAAcAAAAAAFAAAQAACgAAAAAAAAAAAAICAAAAVkMBAAQABAAAAAAAUAAB
-AAAKAAAAAAAAAAAAAgIAAABWQwAACAADAAAAAAB6AAEAAAoAAAAAAAAAAAACAgAAAENvdW50cmll
-c0NvdW50cnlOYW1lTmFtZUJpcnRoZGF5RE9CJgABAAAAAQEACQEAAAoBAQAKAAABAK0rAQABAAEA
-AAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MB
-AQAJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQEACQAAAAAAAAAA
-AAAAAAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABCAAAAAAABAP///wAFAP///wABAAAAAAAA
-AAAAAAAAAAEA////AAEA////AAAAAQAAAAAAAQAAAAAAAQAAAAAAAAAIAAAAAAABAA==
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$DesignerVersion'><text>8.5.3</text></item>
-<item name='$Flags'><text>Y</text></item></note>
+<modified><datetime>20121216T113215,18+00</datetime></modified>
+<revised><datetime>20121216T113215,17+00</datetime></revised>
+<lastaccessed><datetime>20121216T113215,18+00</datetime></lastaccessed>
+<addedtofile><datetime>20121105T114814,26+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><code event='selection'><formula
+>SELECT ((Form = "Employee") | (Form = "Employee"))</formula></code>
+<column sort='ascending' hidedetailrows='false' itemname='Countries' width='10'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><columnheader title='Country'><font size='9pt' style='bold'/></columnheader></column>
+<column sort='ascending' hidedetailrows='false' itemname='Name' width='10'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='false' sortnocase='true'
+ showaslinks='false'><columnheader title='Name'><font size='9pt' style='bold'/></columnheader></column>
+<column hidedetailrows='false' itemname='Birthday' width='15.2500' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='DOB'><font size='9pt' style='bold'/></columnheader></column></view>
 

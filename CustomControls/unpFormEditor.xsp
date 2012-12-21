@@ -35,16 +35,16 @@ out += ");"
 return out;}]]></xp:this.value>
 						</xp:attr>
 					</xp:this.attrs>
-					Save
+					<span>Save</span>
 				</xp:panel>
-				<xp:text id="closebutton" styleClass="cancelButton" tagName="li">
-					<xp:this.value><![CDATA[#{javascript:"Cancel"}]]></xp:this.value>
+				<xp:panel id="closebutton" styleClass="cancelButton" tagName="li">
 					<xp:this.attrs>
 						<xp:attr name="onclick">
 							<xp:this.value><![CDATA[#{javascript:return "$.blockUI(); window.location.href='" + compositeData.closexpagename + "';";}]]></xp:this.value>
 						</xp:attr>
 					</xp:this.attrs>
-				</xp:text>
+					<span>Cancel</span>
+				</xp:panel>
 			</xp:panel>
 		</xp:div>
 	</div>

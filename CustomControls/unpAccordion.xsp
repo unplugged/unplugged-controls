@@ -14,7 +14,7 @@ if(compositeData.insetData) {
 	out.push("bordered");
 }
 if (compositeData.position == "left-aligned"){
-	out.push("pullleft");
+	out.push("accpullleft");
 }
 if (out.length > 0){
 	return @Implode(out, " ");

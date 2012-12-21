@@ -1,43 +1,37 @@
 <?xml version='1.0' encoding='utf-8'?>
-<!DOCTYPE note SYSTEM 'xmlschemas/domino_8_5_3.dtd'>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='8.5' maintenanceversion='3.0'
- replicaid='85257AD400477C1B'>
-<noteinfo noteid='1d6' unid='DB04CC100F845F9680257AD20043A7FF' sequence='2'>
+<!DOCTYPE view SYSTEM 'xmlschemas/domino_8_5_3.dtd'>
+<view name='Databases' xmlns='http://www.lotus.com/dxl' version='8.5' maintenanceversion='3.0'
+ replicaid='80257AA1002D0DF3' showinmenu='false' noreplace='true' publicaccess='false'
+ designerversion='8.5.3' unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator'
+ headers='beveled' opencollapsed='false' showresponsehierarchy='true' showmargin='true'
+ shrinkrows='false' extendlastcolumn='false' showhierarchies='false' unreadcolor='black'
+ rowlinecount='1' headerlinecount='1' rowspacing='1' bgcolor='white' totalscolor='black'
+ headerbgcolor='white' boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
+ allowcustomizations='true' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
+ uniquekeys='false'>
+<noteinfo noteid='5616' unid='DB04CC100F845F9680257AD20043A7FF' sequence='5'>
 <created><datetime>20121212T121859,19+00</datetime></created>
-<modified><datetime>20121214T080104,82-05</datetime></modified>
-<revised><datetime>20121214T080104,81-05</datetime></revised>
-<lastaccessed><datetime>20121214T080104,82-05</datetime></lastaccessed>
-<addedtofile><datetime>20121214T080104,80-05</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Richard Sharpe/O=Teamstudio</name></updatedby>
-<wassignedby><name>CN=Richard Sharpe/O=Teamstudio</name></wassignedby>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>Databases</text></item>
-<item name='$Index' sign='true'><text/></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-bgAFADoANQAGAAUABgAHAAYACQAEAFRpdGxlSW1nVVJMRmxhZ2dlZFVucFVSTCRDb25mbGljdCRS
-RUYABAAEAAAAIAAFAAQARm9ybQEACABEYXRhYmFzZQoCBAAEAAMABwAOAAgACUwxUzRTNVM=
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-BgAAAABE
-</rawitemdata></item>
-<item name='$ViewFormat' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQAEAAAACAAAAFZDAAAFAAUAAAAAAFAAAQAACgAAAAAAAAAAAAICAAAAVkMAAAYABgAAAAAAUAAB
-AAAKAAAAAAAAAAAAAgIAAABWQwAABwAHAAAAAABQAAEAAAoAAAAAAAAAAAACAgAAAFZDAAAGAAYA
-AAAAAFAAAQAACgAAAAAAAAAAAAICAAAAVGl0bGVUaXRsZUltZ1VSTEltZ1VybEZsYWdnZWRGbGFn
-Z2VkVW5wVVJMVW5wVXJsJgABAAAAAQEACQEAAAoBAQAKAAABAK0rAQABAAEAAAAAAAAAAABXQwEB
-AAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAQAJAAAAAAAAAAAA
-AAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAAAAAQA
-AAAAAP//AAAAAAAAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAA
-AAAAAAAAAAAAQgAAAAAAAQD///8ABQD///8AAQAAAAAAAAAAAAAAAAABAP///wABAP///wAAAAEA
-AAAAAAEAAAAAAAEAAAAAAAAACAAAAAAAAQA=
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$DesignerVersion'><text>8.5.3</text></item>
+<modified><datetime>20121216T113215,22+00</datetime></modified>
+<revised><datetime>20121216T113215,21+00</datetime></revised>
+<lastaccessed><datetime>20121216T113215,22+00</datetime></lastaccessed>
+<addedtofile><datetime>20121212T121859,22+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><code event='selection'><formula
+>SELECT ((Form = "Database"))</formula></code>
+<column hidedetailrows='false' itemname='Title' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Title'><font size='9pt' style='bold'/></columnheader></column>
+<column hidedetailrows='false' itemname='ImgURL' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='ImgUrl'><font size='9pt' style='bold'/></columnheader></column>
+<column hidedetailrows='false' itemname='Flagged' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='Flagged'><font size='9pt' style='bold'/></columnheader></column>
+<column hidedetailrows='false' itemname='UnpURL' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='UnpUrl'><font size='9pt' style='bold'/></columnheader></column>
 <item name='$SelQuery' sign='true'>
 <rawitemdata type='f'>
 gQYAAAAAif8UAAAAAAABAAgARGF0YWJhc2U=
-</rawitemdata></item>
-<item name='$Flags'><text>PY</text></item></note>
+</rawitemdata></item></view>
 

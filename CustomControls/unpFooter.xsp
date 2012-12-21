@@ -46,6 +46,7 @@ db.replicate("someserver");}]]></xp:this.script>
 					</xp:actionGroup>
 				</xp:this.action>
 			</xp:eventHandler>
+			<span>Sync</span>
 		</xp:link>
 		<!--
 			<xp:text value='#{javascript:var rep =
@@ -64,6 +65,7 @@ db.replicate("someserver");}]]></xp:this.script>
 					<xp:this.value><![CDATA[#{javascript:"openDocument('" + compositeData.newDocTarget + "?action=newDocument', 'content');"}]]></xp:this.value>
 				</xp:attr>
 			</xp:this.attrs>
+			<span>New</span>
 		</xp:panel>
 	</xp:panel>
 
