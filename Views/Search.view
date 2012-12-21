@@ -9,18 +9,18 @@
  boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
  allowcustomizations='false' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
  uniquekeys='false'>
-<noteinfo noteid='44a6' unid='0369829FA5A5958180257AAF00547F40' sequence='14'>
+<noteinfo noteid='44a6' unid='0369829FA5A5958180257AAF00547F40' sequence='16'>
 <created><datetime>20121107T152256,00+00</datetime></created>
-<modified><datetime>20121216T113214,98+00</datetime></modified>
-<revised><datetime>20121216T113214,97+00</datetime></revised>
-<lastaccessed><datetime>20121216T113214,98+00</datetime></lastaccessed>
+<modified><datetime>20121221T125644,05+00</datetime></modified>
+<revised><datetime>20121221T125644,04+00</datetime></revised>
+<lastaccessed><datetime>20121221T125644,05+00</datetime></lastaccessed>
 <addedtofile><datetime>20121107T152256,01+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><code event='selection'><formula
 >SELECT ((Form = "Employee") | (Form = "Employee"))</formula></code>
 <actionbar bgcolor='#f0f0f0' bordercolor='black'>
-<actionbuttonstyle bgcolor='#f0f0f0'/><font size='9pt' color='system'/><border
- style='solid' width='0px 0px 1px'/>
+<actionbuttonstyle bgcolor='#f0f0f0'/><font color='system'/><border style='solid'
+ width='0px 0px 1px'/>
 <action title='Categori_ze' showinbar='false' systemcommand='categorize'/>
 <action title='_Edit Document' showinbar='false' systemcommand='edit'/>
 <action title='_Send Document' showinbar='false' systemcommand='send'/>
@@ -43,7 +43,7 @@
 <column sort='ascending' hidedetailrows='false' itemname='$0' width='10' resizable='true'
  separatemultiplevalues='true' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
  title='Key'><font size='9pt' style='bold'/></columnheader><code event='value'><formula
->Name : @Right(Name; " ") : Countries : Dept</formula></code></column>
+>@LowerCase(Name : @Right(Name; " ") : Countries : Dept)</formula></code></column>
 <column hidedetailrows='false' itemname='Name' width='10' resizable='true'
  separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
  title='Name'><font size='9pt' style='bold'/></columnheader></column>
