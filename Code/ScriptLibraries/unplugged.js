@@ -150,13 +150,13 @@ function saveDocument(formid, unid, viewxpagename, formname, parentunid) {
 				function(response) {
 					console.log(response.length);
 					if (response.length == 32) {
-						openDocument(
-								viewxpagename
-										+ "?action=openDocument&documentId="
-										+ response, "content");
-						initiscroll();
-					//	$.blockUI();
-					//	window.location.href = "UnpMain.xsp";
+						//openDocument(
+						//		viewxpagename
+						//				+ "?action=openDocument&documentId="
+						//				+ response, "content");
+						//initiscroll();
+						$.blockUI();
+						window.location.href = "UnpMain.xsp";
 					} else {
 						alert(response);
 					}
