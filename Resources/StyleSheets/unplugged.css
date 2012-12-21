@@ -365,6 +365,9 @@ body {
 	display: block;
 	font-weight: bold;
 	font-size: 16px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .viewlistdetail {

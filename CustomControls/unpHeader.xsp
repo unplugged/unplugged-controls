@@ -64,6 +64,7 @@ else{ return true;
 		</xp:label>
 		<xp:panel id="searchbutton" rendered="#{javascript:compositeData.search != 'none'}"
 			styleClass="searchButton">
+			<span></span>
 		</xp:panel>
 		<xp:link escape="true" id="homebutton" value="/unpws.unp/"
 			styleClass="homeButton">

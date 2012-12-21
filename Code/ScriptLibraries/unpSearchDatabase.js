@@ -3,7 +3,7 @@ $(document).ready(function() {
 		if(e.keyCode==13){
 			event.preventDefault();
 			var searchterm = $('#input-search').val();
-			openDocument(searchPage + "?query=" + searchterm.toLowerCase(), 'content');
+			openDocument(searchPage + "?query=" + escape(searchterm.toLowerCase()), 'content');
 		}
 	}); 
 });
