@@ -35,9 +35,9 @@ var apps_scroll;
 
 function ready () {	
 	// Scroll content
-	var content = document.querySelector('#content > div.scroll');
+	var content = document.querySelector('#wscontent > div.wsscroll');
 	if (content) {
-		content_scroll = new iScroll(content, { hScroll:false, vScrollbar:false });
+		content_scroll = new iScroll(content);
 	}
 
 	// Free some memory

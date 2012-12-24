@@ -43,5 +43,25 @@
         </designer-extension>
       </property-extension>
     </property>
+    <property>
+      <property-name>alertlevel</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <editor-parameter>high&#xd;
+elevated&#xd;
+normal</editor-parameter>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>headerinfo</property-name>
+      <property-class>java.util.Collection</property-class>
+      <property-extension>
+        <property-item-class>string</property-item-class>
+        <collection-property>true</collection-property>
+      </property-extension>
+    </property>
   </composite-component>
 </faces-config>

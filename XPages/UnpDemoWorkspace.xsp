@@ -4,7 +4,26 @@
 	<xp:this.data>
 		<xp:dominoView var="dbs" viewName="Databases"></xp:dominoView>
 	</xp:this.data>
-	<xc:unpWorkspace aboutbutton="false" imgurlcol="ImgUrl"
-		labelcol="Title" linkurlcol="UnpUrl" syncbutton="true">
-	</xc:unpWorkspace>
+	<xp:this.resources>
+		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
+	</xp:this.resources>
+	<xc:unpHeader search="none" searchPage="UnpSearch.xsp"
+		viewsButton="false" title="Continuity">
+	</xc:unpHeader>
+				<xc:unpWorkspace aboutbutton="false" imgurlcol="ImgUrl"
+					labelcol="Title" linkurlcol="UnpUrl" syncbutton="true"
+					alertlevel="elevated">
+					<xc:this.headerinfo>
+						<xp:value>
+							#{javascript:&quot;&lt;strong&gt;&quot; +
+							@Name(&quot;[CN]&quot;, @UserName()) +
+							&quot;&lt;/strong&gt;&quot;}
+					</xp:value>
+						<xp:value>BCM Local Coordinator</xp:value>
+						<xp:value>
+							&lt;strong&gt;Org Unit:&lt;/strong&gt; Zetafire
+					</xp:value>
+					</xc:this.headerinfo>
+				</xc:unpWorkspace>
+	<xc:unpFooter></xc:unpFooter>
 </xp:view>

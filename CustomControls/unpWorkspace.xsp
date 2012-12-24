@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core" createForm="false"
-	pageTitle="Unplugged" disableTheme="true" themeId="none">
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" pageTitle="Unplugged"
+	createForm="false" disableTheme="true">
 
 	<xp:this.resources>
 		<xp:metaData name="viewport"
@@ -11,98 +11,80 @@
 		<xp:metaData name="apple-mobile-web-app-status-bar-style"
 			content="black">
 		</xp:metaData>
-		<xp:styleSheet href="/unpreset.css"></xp:styleSheet>
-		<xp:styleSheet href="/unpworkspace.css"></xp:styleSheet>
+		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 		<xp:script src="unp/jquery-1.7.2.min.js" clientSide="true"></xp:script>
 		<xp:script src="unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
 		<xp:script src="unp/iscroll.min.js" clientSide="true"></xp:script>
 		<xp:script src="unp/workspace.js" clientSide="true"></xp:script>
 	</xp:this.resources>
-	<header>
-		<h1>Unplugged</h1>
-	</header>
 
-	<section id="content">
-		<div class="scroll">
-			<ul id="apps">
+	<section class="workspace-header"
+		style="-webkit-transition: -webkit-transform 0ms cubic-bezier(0.33, 0.66, 0.66, 1); -webkit-transform-origin: 0px 0px; -webkit-transform: translate(0px, 0px) translateZ(0px);">
+		<xp:panel tagName="ul" styleClass="user-info">
+			<xp:repeat value="#{compositeData.headerinfo}" var="headeritem"
+				disableOutputTag="true">
+				<xp:text escape="false" value="#{javascript:headeritem}" id="headeritem"
+					styleClass="headeritem" tagName="li">
+				</xp:text>
+			</xp:repeat>
+		</xp:panel>
+		<xp:panel tagName="ul" styleClass="alert-status">
+			<xp:panel tagName="li">
+				High Alert
+				<xp:this.styleClass><![CDATA[#{javascript:var out = "high";
+if (compositeData.alertlevel == "high"){
+	out += " active";
+}
+return out;}]]></xp:this.styleClass>
+			</xp:panel>
+			<xp:panel tagName="li">
+				Elevated
+				<xp:this.styleClass><![CDATA[#{javascript:var out = "elevated";
+if (compositeData.alertlevel == "elevated"){
+	out += " active";
+}
+return out;}]]></xp:this.styleClass>
+			</xp:panel>
+			<xp:panel tagName="li">
+				Normal
+				<xp:this.styleClass><![CDATA[#{javascript:var out = "normal";
+if (compositeData.alertlevel == "normal"){
+	out += " active";
+}
+return out;}]]></xp:this.styleClass>
+			</xp:panel>
+		</xp:panel>
+	</section>
+
+	<section id="wscontent">
+		<div class="wsscroll">
+			<ul class="workspace-items">
 				<xp:repeat id="chiclets" value="#{dbs}" var="db">
 					<xp:panel tagName="li">
-						<xp:this.attrs>
-							<xp:attr name="onclick">
-								<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='" + db.getColumnValue(compositeData.linkurlcol) + "';"}]]></xp:this.value>
-							</xp:attr>
-						</xp:this.attrs>
-						<xp:image styleClass="icon"
-							url="#{javascript:db.getColumnValue(compositeData.imgurlcol)}">
-						</xp:image>
-						<h4>
-							<xp:text
+						<xp:panel tagName="a">
+							<xp:this.attrs>
+								<xp:attr name="onclick">
+									<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='" + db.getColumnValue(compositeData.linkurlcol) + "';"}]]></xp:this.value>
+								</xp:attr>
+								<xp:attr name="href" value="#"></xp:attr>
+							</xp:this.attrs>
+							<xp:image
+								url="#{javascript:db.getColumnValue(compositeData.imgurlcol)}">
+							</xp:image>
+							<xp:text tagName="span"
 								value="#{javascript:db.getColumnValue(compositeData.labelcol);}" />
-						</h4>
+						</xp:panel>
 					</xp:panel>
 				</xp:repeat>
-
 			</ul>
 		</div>
 	</section>
 
-	<footer></footer>
+	<style>
+		body {
+		  padding-bottom: 80px !important;
+		}
+	</style>
 
-	<xp:panel tagName="a" styleClass="button green sync unpSync"
-		rendered="#{javascript:compositeData.syncbutton}">
-		<img src="unp/sync.png" />
-		Sync
-	</xp:panel>
-
-	<xp:panel tagName="a" styleClass="button about"
-		rendered="#{javascript:compositeData.aboutbutton}">
-		<xp:this.attrs>
-			<xp:attr name="onclick"
-				value="window.location.href='UnpAbout.xsp'">
-			</xp:attr>
-		</xp:this.attrs>
-		<img src="unp/about.png" />
-		About
-	</xp:panel>
-
-	<xp:scriptBlock>
-		<xp:this.value escape="false">
-			$(document).ready(function() {
-			$('.unpSync').click(function() {
-			$.blockUI({
-			centerY: 0,
-			css: { top:
-			'10px', left: '10px', right: '' }
-			});
-			$.get("ajaxReplicate.xsp",
-			function(data) {
-			$.unblockUI();
-			location.reload();
-			});
-			});
-			if( "yes" ==
-			"#{javascript:session.getEnvironmentString('client.starting', true)}"
-			){
-			#{javascript:session.setEnvironmentVar('client.starting', 'no',
-			true)}
-			if ("Yes" ==
-			"#{javascript:session.getEnvironmentString("rep.onLaunch", true);}")
-			{
-			$('#unpSync').click();
-			}
-			}
-			if( "0" !=
-			"#{javascript:context.getUrlParameter("AutoLaunch")}") {
-			if
-			("" !=
-			"#{javascript:session.getEnvironmentString("ws.autoLaunch.path",
-			true);}") {
-			window.location.href="#{javascript:"/"+session.getEnvironmentString("ws.autoLaunch.path",
-			true) + "/";}";
-			}
-			}
-			});			
-</xp:this.value>
-	</xp:scriptBlock>
 
 </xp:view>

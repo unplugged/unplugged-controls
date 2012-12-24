@@ -223,7 +223,7 @@ body {
 	}
 	.title {
 		margin-top: 14px;
-		margin-right: 120px;
+		margin-right: 100px;
 	}
 	.workspace .title {
 		margin-right: 0;
@@ -260,13 +260,7 @@ body {
 	.title {
 		font-size: 16px;
 		margin-top: 10px;
-		margin-right: 65px;
-		margin-left:  30px;
-		text-overflow: ellipsis;
-		text-align: center;
-		display: block;
-		overflow: hidden;
-		white-space: nowrap;
+		margin-right: 20px;
 	}
 	.workspace .title {
 		margin-right: 0;
@@ -347,11 +341,6 @@ body {
 	text-shadow: 0 1px 0 rgba(255,255,255,0.5);
 	font-size:16px;
 	line-height: 24px;
-	text-overflow: ellipsis;
-	text-align: center;
-	display: block;
-	overflow: hidden;
-	white-space: nowrap;
 }
 
 #flatViewRowSet>li:first-child>span {
@@ -382,9 +371,6 @@ body {
 	display: block;
 	font-weight: bold;
 	font-size: 16px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
 }
 
 .viewlistdetail {
@@ -693,7 +679,7 @@ body {
 	z-index: 11;
 	padding-top: 10px;
 	background: transparent;
-		
+	background: rgba(0, 0, 0, 0.6);	
 }
 
 .icon {
@@ -835,13 +821,6 @@ body {
 	#formholder {
 		width: 68% !important;
 		margin-left: 31% !important;
-	}
-}
-
-@media screen and (min-width:1001px) and (orientation:landscape) {
-	#formholder {
-		width: 98% !important;
-		margin-left: 1% !important;
 	}
 }
 
@@ -1052,7 +1031,6 @@ body {
 	border: 0;
 	float: left;
 	height: 36px;
-	list-style-type: none;
 }
 
 #formholder ul.buttons li span {
@@ -1129,16 +1107,6 @@ body {
 	background: -webkit-linear-gradient(#57a800,#236000);
 }
 
-#formholder ul.fieldlist {
-	margin-top: 0px;
-	margin-bottom: 0px;
-	margin-left: -40px;	
-}
-
-#formholder ul.fieldlist li {
-	list-style-type: none;	
-}
-
 #formholder .xspTextComputedField {
 	display: block;
 	font-size: 16px;
@@ -1147,19 +1115,18 @@ body {
 	line-height: 24px;
 	height: 24px;
 	background: #fff;
+	width: 70%;
 	border-bottom: 1px solid #ddd;
 }
 
-#formholder .body_richtext {
+#formholder #Body_richtext {
 	clear: both;
 	background: white;
 	padding: 15px;
+	border-radius: 0 0 10px 10px;
 	font-size: 12px;
 	line-height: 18px;
-	width: auto;
-	height: auto;
 }
-
 
 .customform > div {
 	background: white;
@@ -1234,11 +1201,7 @@ body {
 
 @media screen and (min-width: 1001px) {
     .pullleft {
-        margin-left: -42% !important;
-    }
-    
-    .accpullleft {
-    	margin-left: 0% !important;
+        margin-left: -43% !important;
     }
 }
 
@@ -1389,16 +1352,15 @@ body {
 }
 
 */
+
 /** END unpForm **/
+
+
+
 
 /* WORKSPACE */
 
 /* Top Info */
-
-.wsscroll {
-	height: 100%;
-	left: 0px;	
-}
 
 .workspace-header {
 	background: #3d3d3d;
