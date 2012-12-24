@@ -39,11 +39,10 @@
 			</xp:panel>
 		</xp:panel>
 		<xp:callback facetName="facet_1" id="callback1"></xp:callback>
-		<xp:panel id="bottombuttons" styleClass="buttons bottombuttons" tagName="ul"
-			rendered="#{compositeData.showbuttons == true}">
+		<xp:panel id="bottombuttons" styleClass="buttons bottombuttons"
+			tagName="ul">
+			<xp:this.rendered><![CDATA[#{javascript:compositeData.showbuttons == true && compositeData.newresponsexpagename != null && compositeData.newresponsexpagename != ""}]]></xp:this.rendered>
 			<xp:panel tagName="li" styleClass="proceedButton">
-				<xp:this.rendered><![CDATA[#{javascript:compositeData.newresponsexpagename != null && 
-compositeData.newresponsexpagename != ""}]]></xp:this.rendered>
 				<xp:this.attrs>
 					<xp:attr name="onclick">
 						<xp:this.value><![CDATA[#{javascript:"openDocument('" + compositeData.newresponsexpagename + "?action=newDocument&parentunid=" + document1.getDocument().getUniversalID() + "', 'content');"}]]></xp:this.value>
