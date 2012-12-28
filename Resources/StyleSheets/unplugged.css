@@ -506,6 +506,7 @@ body {
 	-webkit-transform:translate3d(0,0,0);
 	padding: 8px 15px;
 	line-height: 24px;
+	min-height: 40px;
 }
 
 /*
@@ -1232,13 +1233,13 @@ body {
 	border-bottom: none;
 }
 
-@media screen and (min-width: 1001px) {
+@media screen and (min-width: 1001px) and (orientation:landscape) {
     .pullleft {
         margin-left: -42% !important;
     }
     
     .accpullleft {
-    	margin-left: 0% !important;
+    	margin-left: -42% !important;
     }
 }
 

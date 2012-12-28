@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
-	xmlns:xc="http://www.ibm.com/xsp/custom">
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
 
 	<xp:this.resources>
 		<xp:script src="unp/jquery-1.7.2.min.js" clientSide="true"></xp:script>
@@ -12,9 +11,12 @@
 		backButtonURL="UnpMain.xsp">
 	</xc:unpHeader>
 	<div id="content">
-	<xc:unpScrollableArea><xp:this.facets>
-	<xc:unpAccordion xp:key="facet_1" viewName="EmployessCatByDept"
-		xpage="Employee.xsp" position="left-aligned" insetData="true">
-	</xc:unpAccordion></xp:this.facets></xc:unpScrollableArea>
+		<xc:unpScrollableArea>
+			<xp:this.facets>
+				<xc:unpAccordion xp:key="facet_1" viewName="EmployessCatByDept"
+					xpage="Employee.xsp" position="left-aligned" insetData="true">
+				</xc:unpAccordion>
+			</xp:this.facets>
+		</xc:unpScrollableArea>
 	</div>
 </xp:view>

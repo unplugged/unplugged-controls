@@ -40,9 +40,7 @@ if (start == ""){
 				<xp:label id="label2" styleClass="viewlistsummary">
 					<xp:this.value><![CDATA[#{javascript:thisRowData.getColumnValues()[1];}]]></xp:this.value>
 				</xp:label>
-
 				<xp:text tagName="div" id="detail" styleClass="viewlistdetail">
-					<xp:this.rendered><![CDATA[#{javascript:thisRowData.getColumnValues().length > 2}]]></xp:this.rendered>
 					<xp:this.value><![CDATA[#{javascript:if(thisRowData.getColumnValues().length > 2){
   return thisRowData.getColumnValues()[2];
 }

@@ -30,8 +30,6 @@ The default position is 'menu-aligned' as this control would normally be used wi
 		&lt;br /&gt;&#xd;
 		XPage to Open = &lt;%=this.xpage %&gt;&#xd;
 		&lt;br /&gt;&#xd;
-		Position = &lt;%=this.position %&gt;&#xd;
-		&lt;br /&gt;&#xd;
 	&lt;/div&gt;&#xd;
 	&lt;hr /&gt;&#xd;
 	&lt;div&gt;&#xd;
