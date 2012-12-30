@@ -13,7 +13,7 @@
 			formName="#{javascript:compositeData.formname}">
 		</xp:dominoDocument>
 	</xp:this.data>
-	<div id="formholder">
+	<div id="formholder" class="editmode">
 		<xp:div id="customform" styleClass="customform">
 			<h2>
 				<xp:text escape="true" id="title" tagName="span"

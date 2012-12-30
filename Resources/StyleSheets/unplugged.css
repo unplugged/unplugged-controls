@@ -1147,7 +1147,7 @@ body {
 	padding: 10px 0;
 	padding-left: 30%;
 	line-height: 24px;
-	height: 24px;
+	min-height: 24px;
 	background: #fff;
 	border-bottom: 1px solid #ddd;
 }
@@ -1169,7 +1169,7 @@ body {
 }
 
 #formholder label {
-	border-bottom: 1px solid #ddd;
+	/*border-bottom: 1px solid #ddd;*/
 }
 
 #formholder .xspInputFieldEditBox,
@@ -1203,7 +1203,7 @@ body {
 }
 
 #formholder textarea {
-	padding: 10px 15px;
+	padding: 0px 15px;
 	font-size: 12px;
 	line-height: 18px;
 	overflow: visible;
@@ -1225,8 +1225,13 @@ body {
 	clear: left;
 }
 
+.editmode label {
+	border-bottom: 1px solid #DDD;	
+}
+
 #formholder label.longlabel {
 	border-bottom: 0px;
+	padding-bottom: 0px;
 }
 
 #formholder .bordered {
@@ -1241,6 +1246,10 @@ body {
 #formholder .buttons:last-child {
 	border-radius: 0 0 10px 10px;
 	border-bottom: none;
+}
+
+#formholder .xspTextComputedField {
+	
 }
 
 @media screen and (min-width: 1001px) and (orientation:landscape) {
