@@ -1225,13 +1225,18 @@ body {
 	clear: left;
 }
 
-.editmode label {
-	border-bottom: 1px solid #DDD;	
+#formholder label.longlabel {
+	padding: 10px 0;
 }
 
-#formholder label.longlabel {
-	border-bottom: 0px;
-	padding-bottom: 0px;
+@media screen and (max-width: 800px){
+	#formholder label.longlabel {
+		padding: 0px 0;
+	}
+}
+
+.editmode label {
+	border-bottom: 1px solid #DDD;	
 }
 
 #formholder .bordered {
