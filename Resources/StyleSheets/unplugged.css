@@ -328,7 +328,8 @@ body {
 	.homeButton,
 	.viewsButton, 
 	.syncButton,
-	.newButton {
+	.newButton, 
+	.settingsButton {
 		top: 6px;
 		height: 34px;
 	}
@@ -337,7 +338,8 @@ body {
 		height: 23px;
 	}
 	.homeButton,
-	.newButton {
+	.newButton, 
+	.settingsButton {
 		right:4px;
 	}
 	.searchButton {
@@ -355,7 +357,8 @@ body {
 		box-shadow: none; 
 	}
 	.syncButton span,
-	.newButton span {
+	.newButton span, 
+	.settingsButton span {
 		text-indent: -9999px;
 		padding: 0;
 		width: 36px;
