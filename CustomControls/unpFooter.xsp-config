@@ -49,5 +49,9 @@
         <required>false</required>
       </property-extension>
     </property>
+    <property>
+      <property-name>settingsurl</property-name>
+      <property-class>string</property-class>
+    </property>
   </composite-component>
 </faces-config>

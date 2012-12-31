@@ -24,5 +24,5 @@
 					</xp:value>
 		</xc:this.headerinfo>
 	</xc:unpWorkspace>
-	<xc:unpFooter></xc:unpFooter>
+	<xc:unpFooter settingsurl="/unpws.unp/UnpAbout.xsp"></xc:unpFooter>
 </xp:view>
