@@ -34,13 +34,13 @@
 	<xp:panel styleClass="iHeader black">
 		<xp:image styleClass="companyLogo" url="/unp/unplugged_logo.png"
 			id="companyLogo"></xp:image>
-		<xp:panel styleClass="viewsButton">
+		<xp:panel styleClass="backButton">
 			<xp:this.rendered><![CDATA[#{javascript:if(compositeData.backButtonText == '' || compositeData.backButtonText == null){
 	return false;
 }
 else{ return true;
 }}]]></xp:this.rendered>
-			<xp:label id="backlink" styleClass="viewslabel"
+			<xp:label id="backlink" styleClass="backlabel"
 				value="#{javascript:compositeData.backButtonText}">
 				<xp:this.attrs>
 					<xp:attr name="onclick">
