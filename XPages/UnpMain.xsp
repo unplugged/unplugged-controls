@@ -49,6 +49,9 @@
 	<xp:link escape="true" text="Dialog" id="link10" value="/UnpDemoDialog.xsp" style="font-size:18pt"></xp:link>
 	<xp:br></xp:br>
 	<xp:br></xp:br>
+	<xp:link escape="true" text="Debug Toolbar" id="link12" value="/UnpDemoDebugToolbar.xsp" style="font-size:18pt"></xp:link>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
 	<xp:link escape="true" text="Demo of all widgets" id="link3"
 		style="font-size:18pt" value="/UnpDemoWidgets.xsp"></xp:link>
 </xp:view>

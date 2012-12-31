@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	
+	<xp:this.beforePageLoad><![CDATA[#{javascript:/* no access to dBar here yet, since the SSJS library is
+ * loaded in the custom control. To have access here too,
+ * we need to add it at sooner
+*/
+/*
+try {
+	dBar.debug("(bpl) adding demo variables to scopes");
+	
+	//add test variables to scope
+	applicationScope.put("testVarString", "string in appScope");
+	applicationScope.put("testVarNr", 256);
+	
+	sessionScope.put("testVarString", "string in sessionScope");
+	sessionScope.put("testVarNr", 46);
+	
+	viewScope.put("testVarString", "string in viewScope");
+	viewScope.put("testVarNr", 87);
+	
+	requestScope.put("testVarString", "in requestScope");
+	requestScope.put("testVarNr", 25458);
+	
+	dBar.debug("done");
+	
+	dBar.error("sample error message");
+	
+	dBar.info("sample info msg");
+	
+	dBar.warn("sample warning message");
+	
+} catch (e) {
+
+	dBar.error(e);
+
+}
+*/
+}]]></xp:this.beforePageLoad>
+
+	<xp:this.resources>
+		<xp:script src="/unpDebugToolbar.jss" clientSide="false"></xp:script>
+		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
+	</xp:this.resources>
+	<xc:unpDebugToolbar defaultCollapsed="false"></xc:unpDebugToolbar>
+	<xc:unpHeader search="none" searchPage="UnpSearch.xsp"
+		viewsButton="false" title="Debug Toolbar">
+	</xc:unpHeader>
+	<xc:unpFooter></xc:unpFooter>
+
+	<xp:this.afterPageLoad><![CDATA[#{javascript:dBar.debug("afterPageLoad");}]]></xp:this.afterPageLoad>
+	<xp:this.beforeRenderResponse><![CDATA[#{javascript:dBar.debug("beforeRenderResponse");}]]></xp:this.beforeRenderResponse>
+
+</xp:view>
