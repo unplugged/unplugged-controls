@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
 <!DOCTYPE note SYSTEM 'xmlschemas/domino_8_5_3.dtd'>
 <note default='true' class='icon' xmlns='http://www.lotus.com/dxl' version='8.5'
- maintenanceversion='3.0' replicaid='85257AAD004BBC1D'>
-<noteinfo noteid='11a' unid='E9BCD36E1914E25385257AAD004BBC30' sequence='18'>
-<created><datetime>20121105T084713,76-05</datetime></created>
-<modified><datetime>20121119T130039,24-05</datetime></modified>
-<revised><datetime>20121119T130039,23-05</datetime></revised>
-<lastaccessed><datetime>20121119T130039,24-05</datetime></lastaccessed>
-<addedtofile><datetime>20121105T084713,80-05</datetime></addedtofile></noteinfo>
+ maintenanceversion='3.0' replicaid='85257AD400477C1B'>
+<noteinfo noteid='11a' unid='E1EB583422D25A3385257AD400477C2B' sequence='13'>
+<created><datetime>20121214T080048,43-05</datetime></created>
+<modified><datetime>20121228T091550,18-05</datetime></modified>
+<revised><datetime>20121228T091550,17-05</datetime></revised>
+<lastaccessed><datetime>20121228T091550,18-05</datetime></lastaccessed>
+<addedtofile><datetime>20121214T080048,46-05</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Richard Sharpe/O=Teamstudio</name></updatedby>
 <wassignedby><name>CN=Richard Sharpe/O=Teamstudio</name></wassignedby>
 <item name='IconBitmap' summary='true'>

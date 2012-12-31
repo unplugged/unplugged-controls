@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:this.beforePageLoad>
+		<xp:executeScript>
+			<xp:this.script><![CDATA[#{javascript:var escViewName = @ReplaceSubstring(compositeData.viewName, "\\","\\\\");
+viewScope.put('escViewName',escViewName);}]]></xp:this.script>
+		</xp:executeScript>
+	</xp:this.beforePageLoad>
 	<xp:this.beforeRenderResponse><![CDATA[#{javascript:if(!(applicationScope.containsKey('PATH'))){
 	applicationScope.put('PATH', facesContext.getExternalContext().getRequestContextPath());
 }
@@ -26,7 +32,7 @@ if (out.length > 0){
 				value="#{javascript:@Unique(@DbColumn(@DbName(), compositeData.viewName, 1))}"
 				var="rowData" disableOutputTag="true">
 				<li class="categoryRow"
-					onClick="javascript:fetchDetails(this,'#{javascript:compositeData.viewName;}','#{rowData}', '#{javascript:compositeData.xpage;}')">
+					onClick="javascript:fetchDetails(this,'#{javascript:viewScope.get('escViewName');}','#{rowData}', '#{javascript:compositeData.xpage;}')">
 					<xp:text escape="true" id="computedField2"
 						value="#{rowData}"
 						styleClass="catLabel">
@@ -41,7 +47,7 @@ if (out.length > 0){
 						styleClass="accLoadMoreButton">
 						<xp:this.attrs>
 							<xp:attr name="onclick">
-								<xp:this.value><![CDATA[javascript:fetchMoreDetails(this,'#{javascript:compositeData.viewName;}','#{rowData}', '#{javascript:compositeData.xpage;}');]]></xp:this.value>
+								<xp:this.value><![CDATA[javascript:fetchMoreDetails(this,'#{javascript:viewScope.get('escViewName');}','#{rowData}', '#{javascript:compositeData.xpage;}');]]></xp:this.value>
 							</xp:attr>
 						</xp:this.attrs>
 					</xp:button>
