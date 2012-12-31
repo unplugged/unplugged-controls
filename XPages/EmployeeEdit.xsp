@@ -75,7 +75,7 @@
 								</xp:comboBox>
 							</li>
 							<li>
-								<xp:label value="Details" id="detailslabel" for="description" styleClass="longlabel"></xp:label>
+								<xp:label value="Details" id="detailslabel" for="description" styleClass="widelabel"></xp:label>
 								<xp:inputTextarea id="description"
 									styleClass="richtextfield" value="#{document1.Description}">
 								</xp:inputTextarea>

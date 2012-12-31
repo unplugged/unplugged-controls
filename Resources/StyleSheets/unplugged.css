@@ -1263,6 +1263,11 @@ body {
 	border-bottom: 1px solid #DDD;	
 }
 
+#formholder label.widelabel {
+	border-bottom: 0px;
+	padding-bottom: 0px;
+}
+
 #formholder .bordered {
 	padding: 10px 0 0 0;
 }
