@@ -31,30 +31,30 @@
 			</xp:repeat>
 		</xp:panel>
 		<xp:panel tagName="ul" styleClass="alert-status">
-			<xp:panel tagName="li">
-				High Alert
+			<xp:text tagName="li"
+				value="#{compositeData.alertlevelhighlabel}">
 				<xp:this.styleClass><![CDATA[#{javascript:var out = "high";
 if (compositeData.alertlevel == "high"){
 	out += " active";
 }
 return out;}]]></xp:this.styleClass>
-			</xp:panel>
-			<xp:panel tagName="li">
-				Elevated
+</xp:text>
+			<xp:text tagName="li"
+				value="#{compositeData.alertlevelelevatedlabel}">
 				<xp:this.styleClass><![CDATA[#{javascript:var out = "elevated";
 if (compositeData.alertlevel == "elevated"){
 	out += " active";
 }
 return out;}]]></xp:this.styleClass>
-			</xp:panel>
-			<xp:panel tagName="li">
-				Normal
+			</xp:text>
+			<xp:text tagName="li"
+				value="#{compositeData.alertlevelnormallabel}">
 				<xp:this.styleClass><![CDATA[#{javascript:var out = "normal";
 if (compositeData.alertlevel == "normal"){
 	out += " active";
 }
 return out;}]]></xp:this.styleClass>
-			</xp:panel>
+			</xp:text>
 		</xp:panel>
 	</xp:panel>
 

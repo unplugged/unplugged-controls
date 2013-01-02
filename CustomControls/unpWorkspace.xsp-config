@@ -66,5 +66,32 @@ normal</editor-parameter>
         <collection-property>true</collection-property>
       </property-extension>
     </property>
+    <property>
+      <property-name>alertlevelhighlabel</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <default-value>High</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>alertlevelelevatedlabel</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <default-value>Elevated</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>alertlevelnormallabel</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <default-value>Normal</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
   </composite-component>
 </faces-config>

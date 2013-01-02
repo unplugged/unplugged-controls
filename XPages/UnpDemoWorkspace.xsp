@@ -11,7 +11,8 @@
 		viewsButton="false" title="Continuity">
 	</xc:unpHeader>
 	<xc:unpWorkspace imgurlcol="ImgUrl" labelcol="Title"
-		linkurlcol="UnpUrl" alertlevel="elevated">
+		linkurlcol="UnpUrl" alertlevel="elevated" alertlevelhighlabel="High" alertlevelelevatedlabel="Elevated"
+		alertlevelnormallabel="Normal">
 		<xc:this.headerinfo>
 			<xp:value>
 				#{javascript:&quot;&lt;strong&gt;&quot; +
