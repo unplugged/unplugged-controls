@@ -1,23 +1,8 @@
-# Unplugged Templates 2 Project
+# Unplugged Controls
 ## Introduction
-This project will create a suite of re-usable and performant custom controls which are tailored towards use in the Teamstudio Unplugged mobile application. The custom controls will perform common tasks with the aim of making developing a mobile interface to an existing Notes or Domino application a simple process which does not require specialist mobile development knowledge.
-
-[For full documentation go here](https://github.com/unplugged/unplugged-controls/wiki "documentation")
-
-The project is split into two stages; stage one will see the creation of the custom controls themselves (outlined in more detail later); stage two will create three applications using the new custom controls.
-
-The code for the project will be made available via four projects on Github, one containing the custom controls and then one each for the template which are developed using the custom controls. Once the project has been completed the custom controls will be released to OpenNTF and made available to the Importer and Exporter project which allows tighter integration to Domino Designer for developers.
-
-The custom controls will be developed to work with the following different browsers:
-* iOS 5 and iOS6 (for iPhone 4+ and iPad 2+)
-* Android 3.x
-* Android 4.x
-* Chrome (Desktop)
-* Safari (Desktop)
-
-If required then further work can be undertaken to make the custom controls work in Firefox and Internet Explorer, however the templates which we are developing already have a (sometimes basic) web interface already defined. Our suggestion is that this project be aimed entirely at Webkit based browsers (i.e. the mobile browsers plus Safari and Chrome on the desktop).
-
-You can see a demonstration of the custom controls at [unp.londc.com](http://unp.londc.com/ "unp.londc.com").
+Our goal with this project is to create a highly-optimised set of XPages mobile controls with a) close-to-native performance b) attractive aesthetics and c) compatible with the Teamstudio Unplugged mobile offline XPages engine running on iOS and Android devices.  We wanted to make it as easy as possible for (reasonably experienced) XPage developers who don’t have much or any mobile development experience to create attractive Unplugged mobile apps.
+Using these controls, we've also provided 3 application templates  (Doc Library, Journal, Teamroom) that are compatible with the original Lotus Domino application templates.  We are targeting both smartphone and tablet users, for iOS (iOS 5.01 and higher) and Android devices (Android 3.0 and higher).  
+It is our intention to publish periodic updates to these controls to OpenNTF.  
 
 ## Deliverables
 
