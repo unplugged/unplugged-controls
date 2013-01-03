@@ -1,4 +1,4 @@
-body {
+	body {
 	background-color: #464646;
 	padding-top: 0px;
 	padding-bottom: 45px;
@@ -1294,7 +1294,12 @@ body {
 }
 
 .editmode label {
-	border-bottom: 1px solid #DDD;	
+	border-bottom: 1px solid #DDD;
+}
+
+.editmode label.longlabel {
+	padding: 10px 0 !important;
+	line-height: normal !important;	
 }
 
 #formholder label.widelabel {

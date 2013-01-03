@@ -55,7 +55,7 @@
 								</xp:comboBox>
 							</li>
 							<li>
-								<xp:label value="Manager" id="managerlabel" for="manager">
+								<xp:label value="Manager long label blah" id="managerlabel" for="manager" styleClass="longlabel">
 								</xp:label>
 								<xp:inputText id="manager" value="#{document1.Manager}" styleClass="xspInputFieldEditBox">
 								</xp:inputText>
