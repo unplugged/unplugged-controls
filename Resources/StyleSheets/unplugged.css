@@ -2,6 +2,7 @@ body {
 	background-color: #464646;
 	padding-top: 0px;
 	padding-bottom: 45px;
+	-webkit-text-size-adjust: none !important;
 }
 
 .hidden {

@@ -7,15 +7,6 @@
 		</xp:dominoView>
 	</xp:this.data>
 	<xp:this.resources>
-		<xp:metaData name="viewport"
-			content="width=device-width, initial-scale=2.3, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		</xp:metaData>
-		<xp:metaData name="apple-mobile-web-app-status-bar-style"
-			content="black-translucent">
-		</xp:metaData>
-		<xp:metaData name="apple-mobile-web-app-capable"
-			content="yes">
-		</xp:metaData>
 		<xp:script src="/unp/jquery-1.7.2.min.js" clientSide="true"></xp:script>
 		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
 		<xp:script src="/unp/iScroll.min.js" clientSide="true"></xp:script>
