@@ -1289,6 +1289,7 @@ body {
 @media screen and (max-width: 800px){
 	#formholder label.longlabel {
 		padding: 0px 0;
+		line-height: normal;
 	}
 }
 
