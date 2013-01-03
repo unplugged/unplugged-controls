@@ -3,8 +3,8 @@
 	<xc:unpScrollableArea>
 		<xp:this.facets>
 			<xc:unpFormViewer showbuttons="true" closexpagename="UnpDemoWidgets.xsp"
-				editxpagename="EmployeeEdit.xsp" formname="Employee" title="Employee"
-				xp:key="facet_1" newresponsexpagename="EmployeeEdit.xsp">
+				editxpagename="EmployeeEdit.xsp" formname="Employee" title="Employee" newresponsexpagename=""
+				xp:key="facet_1">
 				<xp:this.facets>
 					<xp:panel xp:key="facet_1">
 						<ul class="fieldlist">
