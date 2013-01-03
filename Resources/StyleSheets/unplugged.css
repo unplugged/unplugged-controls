@@ -1215,6 +1215,10 @@ body {
 }
 
 
+.customform {
+	padding-bottom: 40px;	
+}
+
 .customform > div {
 	background: white;
 	overflow: hidden;
