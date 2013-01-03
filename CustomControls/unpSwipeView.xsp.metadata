@@ -1,17 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="85257AC8001391B9" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="7ea" sequence="6" unid="317B23F04493D56D85257AD00066BEFB">
-<created><datetime>20121210T134215,63-05</datetime></created>
-<modified><datetime>20121210T134216,22-05</datetime></modified>
-<revised><datetime>20121210T134216,21-05</datetime></revised>
-<lastaccessed><datetime>20121210T134216,22-05</datetime></lastaccessed>
-<addedtofile><datetime>20121210T134215,64-05</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Richard Sharpe/O=Teamstudio</name></updatedby>
-<wassignedby><name>CN=Richard Sharpe/O=Teamstudio</name></wassignedby>
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="44b2" sequence="43" unid="B2E5DF25643DBFE680257AAF005A730A">
+<created><datetime>20121107T162756,90+00</datetime></created>
+<modified><datetime>20130103T155427,04+00</datetime></modified>
+<revised><datetime>20130103T155427,03+00</datetime></revised>
+<lastaccessed><datetime>20130103T155427,04+00</datetime></lastaccessed>
+<addedtofile><datetime>20121107T162756,90+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
 <item name="$TITLE"><text>unpSwipeView.xsp</text></item>
 <item name="$Flags"><text>gC~4;</text></item>
-
-
-<item name="$FileNames" sign="true"><text>unpSwipeView.xsp</text></item>
 
 
 <item name="$DesignerVersion"><text>8.5</text></item>
@@ -19,4 +16,7 @@
 
 
 
-</note>
+
+
+
+<item name="$FileNames" sign="true"><text>unpSwipeView.xsp</text></item></note>
