@@ -572,6 +572,13 @@ body {
 	min-height: 40px;
 }
 
+.lastrow>li:last-child{                                
+    -moz-border-radius-bottomright: 10px;                
+    border-bottom-right-radius: 10px;                 
+    -moz-border-radius-bottomleft: 10px;                
+    border-bottom-left-radius: 10px;                 
+}
+
 /*
 #accordion {
 	padding-top: 0px;

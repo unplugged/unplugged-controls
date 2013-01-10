@@ -38,30 +38,44 @@ if (out.length > 0){
 			</xp:this.styleClass>
 		
 		<ul id="summaryList">
-			<xp:repeat id="repeat2" rows="999"
-				value="#{javascript:@Unique(@DbColumn(@DbName(), compositeData.viewName, 1))}"
-				var="rowData" disableOutputTag="true">
+			<xp:repeat id="repeat2" rows="999" var="rowData"
+				disableOutputTag="true">
+				<xp:this.value><![CDATA[#{javascript:var list = @Unique(@DbColumn(@DbName(), compositeData.viewName, 1));
+viewScope.categorycount = list.length;
+return list;}]]></xp:this.value>
 				<li class="categoryRow"
 					onClick="javascript:fetchDetails(this,'#{javascript:viewScope.get('escViewName');}','#{rowData}', '#{javascript:compositeData.xpage;}')">
 					<xp:text escape="true" id="computedField2"
-						value="#{rowData}"
-						styleClass="catLabel">
+						value="#{rowData}" styleClass="catLabel">
 					</xp:text>
 				</li>
 				<div class="summaryDataRow">
-				  <ul class="accordionRowSet" style="padding:0px; margin:0px;">
-				  </ul>
-				  <div class="summaryDataRowHolder"></div>
-				  <xp:div id="accLoadmorelink" styleClass="accLoadMoreLink hidden">
-					<xp:button value="Load More..." id="accLoadmorebutton"
-						styleClass="accLoadMoreButton">
-						<xp:this.attrs>
-							<xp:attr name="onclick">
-								<xp:this.value><![CDATA[javascript:fetchMoreDetails(this,'#{javascript:viewScope.get('escViewName');}','#{rowData}', '#{javascript:compositeData.xpage;}');]]></xp:this.value>
-							</xp:attr>
-						</xp:this.attrs>
-					</xp:button>
-				  </xp:div>
+					<xp:panel tagName="ul"
+						style="padding:0px; margin: 0px;">
+
+						<xp:this.styleClass><![CDATA[#{javascript:if (viewScope.rowcount == null){
+	viewScope.rowcount = 1;
+}else{
+	viewScope.rowcount = viewScope.rowcount + 1;
+}
+var out = "accordionRowSet";
+if (viewScope.rowcount == viewScope.categorycount){
+	out += " lastrow";
+}
+return out;}]]></xp:this.styleClass>
+					</xp:panel>
+					<div class="summaryDataRowHolder"></div>
+					<xp:div id="accLoadmorelink"
+						styleClass="accLoadMoreLink hidden">
+						<xp:button value="Load More..."
+							id="accLoadmorebutton" styleClass="accLoadMoreButton">
+							<xp:this.attrs>
+								<xp:attr name="onclick">
+									<xp:this.value><![CDATA[javascript:fetchMoreDetails(this,'#{javascript:viewScope.get('escViewName');}','#{rowData}', '#{javascript:compositeData.xpage;}');]]></xp:this.value>
+								</xp:attr>
+							</xp:this.attrs>
+						</xp:button>
+					</xp:div>
 				</div>
 			</xp:repeat>
 		</ul>
