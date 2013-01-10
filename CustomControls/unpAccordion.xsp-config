@@ -60,6 +60,11 @@ The default position is 'menu-aligned' as this control would normally be used wi
       <property-class>string</property-class>
       <display-name>target xpage</display-name>
       <description>Xpage that contains the doc data when the view entry is tapped</description>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.PagePicker</editor>
+        </designer-extension>
+      </property-extension>
     </property>
     <property>
       <property-name>position</property-name>
