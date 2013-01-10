@@ -69,7 +69,7 @@
         <property-class>string</property-class>
         <property-extension>
           <designer-extension>
-            <default-value>results</default-value>
+            <default-value>contentwrapper</default-value>
           </designer-extension>
         </property-extension>
       </property>
@@ -78,7 +78,7 @@
         <property-class>string</property-class>
         <property-extension>
           <designer-extension>
-            <default-value>results</default-value>
+            <default-value>content</default-value>
           </designer-extension>
         </property-extension>
       </property>
