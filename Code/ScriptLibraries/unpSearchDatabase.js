@@ -14,6 +14,8 @@ $(document).ready(function() {
 			event.preventDefault();
 			var searchterm = $('#input-search').val();
 			openDocument(searchPage + "?query=" + escape(searchterm.toLowerCase()), 'content');
+			$(this).blur();
+			$(".searchButton").focus();
 		}
 	}); 
 });
