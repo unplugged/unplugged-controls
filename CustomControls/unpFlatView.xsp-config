@@ -159,5 +159,18 @@ menu-aligned</editor-parameter>
         </designer-extension>
       </property-extension>
     </property>
+    <property>
+      <property-name>ajaxload</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <default-value>Yes</default-value>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <editor-parameter>Yes&#xd;
+No</editor-parameter>
+        </designer-extension>
+      </property-extension>
+      <description>Select Yes to use Ajax to load documents, No to open the link as a full page load</description>
+    </property>
   </composite-component>
 </faces-config>

@@ -64,7 +64,12 @@ if (sessionScope.rowcount != null){
 							styleClass="data-row">
 							<xp:this.attrs>
 								<xp:attr name="onClick">
-									<xp:this.value><![CDATA[#{javascript:"openDocument('" + getDbPath() + "/" + compositeData.xpageDoc + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID() + "', 'content');"}]]></xp:this.value>
+									<xp:this.value><![CDATA[#{javascript:var url = getDbPath() + "/" + compositeData.xpageDoc + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID();
+if (compositeData.ajaxload != "No"){
+	return "openDocument('" + url + "', 'content');"
+}else{
+	return "document.location.href='" + url + "'";
+}}]]></xp:this.value>
 								</xp:attr>
 							</xp:this.attrs>
 							<xp:image url="/unp/right-arrow-circle.png"
