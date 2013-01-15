@@ -35,6 +35,10 @@
       </designer-extension>
     </composite-extension>
     <property>
+      <property-name>badgeidcol</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
       <property-name>linkurlcol</property-name>
       <property-class>string</property-class>
     </property>

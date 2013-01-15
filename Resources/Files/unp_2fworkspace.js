@@ -78,3 +78,8 @@ function allowFormsInIscroll(){
     })
   })
 }
+
+function setBadge(badgeid, value){
+	$('span[badgeid="' + badgeid + '"]').html(value);
+	$('span[badgeid="' + badgeid + '"]').show();
+}

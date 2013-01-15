@@ -22,7 +22,7 @@ the specific language governing permissions and limitations under the License
 	</xc:unpHeader>
 	<xc:unpWorkspace imgurlcol="ImgUrl" labelcol="Title"
 		linkurlcol="UnpUrl" alertlevel="elevated" alertlevelhighlabel="High" alertlevelelevatedlabel="Elevated"
-		alertlevelnormallabel="Normal">
+		alertlevelnormallabel="Normal" badgeidcol="BadgeID">
 		<xc:this.headerinfo>
 			<xp:value>
 				#{javascript:&quot;&lt;strong&gt;&quot; +
@@ -36,4 +36,10 @@ the specific language governing permissions and limitations under the License
 		</xc:this.headerinfo>
 	</xc:unpWorkspace>
 	<xc:unpFooter settingsurl="/unpws.unp/UnpAbout.xsp"></xc:unpFooter>
+	<script>
+		$(window).load( function() {
+			setBadge("MyRole", "999");
+			setBadge("CommsGuide", "21");
+		});
+	</script>
 </xp:view>

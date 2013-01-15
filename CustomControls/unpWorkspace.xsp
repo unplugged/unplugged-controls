@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-Copyright 2013 Teamstudio Inc 
-Licensed under the Apache License, Version 2.0 (the "License"); 
-you may not use this file except in compliance with the License. You may obtain a copy of the License at
-http://www.apache.org/licenses/LICENSE-2.0 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed 
-on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
-the specific language governing permissions and limitations under the License
- -->
+	<!--
+		Copyright 2013 Teamstudio Inc Licensed under the Apache License,
+		Version 2.0 (the "License"); you may not use this file except in
+		compliance with the License. You may obtain a copy of the License at
+		http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+		applicable law or agreed to in writing, software distributed under the
+		License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or implied. See the License for
+		the specific language governing permissions and limitations under the
+		License
+	-->
 
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" pageTitle="Unplugged"
 	createForm="false" disableTheme="true">
@@ -41,24 +43,21 @@ the specific language governing permissions and limitations under the License
 			</xp:repeat>
 		</xp:panel>
 		<xp:panel tagName="ul" styleClass="alert-status">
-			<xp:text tagName="li"
-				value="#{compositeData.alertlevelhighlabel}">
+			<xp:text tagName="li" value="#{compositeData.alertlevelhighlabel}">
 				<xp:this.styleClass><![CDATA[#{javascript:var out = "high";
 if (compositeData.alertlevel == "high"){
 	out += " active";
 }
 return out;}]]></xp:this.styleClass>
-</xp:text>
-			<xp:text tagName="li"
-				value="#{compositeData.alertlevelelevatedlabel}">
+			</xp:text>
+			<xp:text tagName="li" value="#{compositeData.alertlevelelevatedlabel}">
 				<xp:this.styleClass><![CDATA[#{javascript:var out = "elevated";
 if (compositeData.alertlevel == "elevated"){
 	out += " active";
 }
 return out;}]]></xp:this.styleClass>
 			</xp:text>
-			<xp:text tagName="li"
-				value="#{compositeData.alertlevelnormallabel}">
+			<xp:text tagName="li" value="#{compositeData.alertlevelnormallabel}">
 				<xp:this.styleClass><![CDATA[#{javascript:var out = "normal";
 if (compositeData.alertlevel == "normal"){
 	out += " active";
@@ -80,9 +79,27 @@ return out;}]]></xp:this.styleClass>
 								</xp:attr>
 								<xp:attr name="href" value="#"></xp:attr>
 							</xp:this.attrs>
-							<xp:image
+
+							<xp:text tagName="span" id="badge"
+								styleClass="badge">
+								<xp:this.rendered><![CDATA[#{javascript:if (db.getColumnValue(compositeData.badgeidcol) != ""){
+	return true;
+}else{
+	return false;
+}}]]></xp:this.rendered>
+								<xp:this.attrs>
+									<xp:attr name="badgeid"
+										value="#{javascript:db.getColumnValue(compositeData.badgeidcol)}">
+									</xp:attr>
+								</xp:this.attrs>
+							</xp:text>
+							<xp:text tagName="span" id="chicletimg"
+								styleClass="chicletimg">
+								<xp:this.style><![CDATA[#{javascript:"background: url(" + db.getColumnValue(compositeData.imgurlcol) + ") no-repeat scroll 0 0 transparent;"}]]></xp:this.style>
+							</xp:text>
+							<!-- <xp:image
 								url="#{javascript:db.getColumnValue(compositeData.imgurlcol)}">
-							</xp:image>
+							</xp:image> -->
 							<xp:text tagName="span"
 								value="#{javascript:db.getColumnValue(compositeData.labelcol);}" />
 						</xp:panel>
