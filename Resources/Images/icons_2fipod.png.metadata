@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="ipod.png" maintenanceversion="3.0" name="icons/ipod.png" noquery="true" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="323e" sequence="2" unid="D545FB181DB713B580257AAA00404761">
+<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="ipod.png" maintenanceversion="3.0" name="icons/ipod.png" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="323e" sequence="6" unid="D545FB181DB713B580257AAA00404761">
 <created><datetime>20121102T114205,77+00</datetime></created>
-<modified><datetime>20121102T115312,43+00</datetime></modified>
-<revised><datetime>20121102T115312,42+00</datetime></revised>
-<lastaccessed><datetime>20121102T115312,43+00</datetime></lastaccessed>
+<modified><datetime>20130115T082029,79+00</datetime></modified>
+<revised><datetime>20130115T082029,78+00</datetime></revised>
+<lastaccessed><datetime>20130115T082029,79+00</datetime></lastaccessed>
 <addedtofile><datetime>20121102T114206,98+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
@@ -39,5 +39,5 @@ gKqqSZwgB1qNiUPTOxaLJUCtXJMkmfTLOCgXxdp1ECO8VXq3HOVMKpVVFGUcjO6VZDIJuSxJEgf4
 IsjAQaDH7RB/S75AqiLXQGwY953AcZLI5YbBchg2YdAJGuz9kdkZ82rtSK77tfHznqqpdXjSsAz3
 Q7sgoL8CDAASAgoHvr826wAAAABJRU5ErkJggg==
 </jpeg>
-
-<item name="$FileModDT" sign="true"><datetime>20121102T113951,00+00</datetime></item></imageresource>
+<item name="$FileModDT" sign="true"><datetime>20121102T113951,00+00</datetime></item>
+</imageresource>

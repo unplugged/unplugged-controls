@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="lightbulb.png" maintenanceversion="3.0" name="icons/lightbulb.png" noquery="true" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="3256" sequence="2" unid="DDC5C50FE80D0F8880257AAA00404767">
+<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="lightbulb.png" maintenanceversion="3.0" name="icons/lightbulb.png" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="3256" sequence="6" unid="DDC5C50FE80D0F8880257AAA00404767">
 <created><datetime>20121102T114205,83+00</datetime></created>
-<modified><datetime>20121102T115337,18+00</datetime></modified>
-<revised><datetime>20121102T115337,17+00</datetime></revised>
-<lastaccessed><datetime>20121102T115337,18+00</datetime></lastaccessed>
+<modified><datetime>20130115T082029,85+00</datetime></modified>
+<revised><datetime>20130115T082029,84+00</datetime></revised>
+<lastaccessed><datetime>20130115T082029,85+00</datetime></lastaccessed>
 <addedtofile><datetime>20121102T114207,10+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
@@ -45,5 +45,5 @@ o6SPGiZQrFbrOXAbmBtHEZCAz8iKkm5dXf022kzQPyq2G9KmY/tc2L4MPBl/y5HIINooe7fIdTky
 W6y0CGgpp6OM6WGOQKdMg9MZQGX/8eTryhGVbTt32dHMYw61N2sM0Bu6q3LN814jW/ePAAMArq9G
 IJhCu/EAAAAASUVORK5CYII=
 </jpeg>
-
-<item name="$FileModDT" sign="true"><datetime>20121102T113951,00+00</datetime></item></imageresource>
+<item name="$FileModDT" sign="true"><datetime>20121102T113951,00+00</datetime></item>
+</imageresource>

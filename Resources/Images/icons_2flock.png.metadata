@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="lock.png" maintenanceversion="3.0" name="icons/lock.png" noquery="true" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="325e" sequence="2" unid="B34BD56E7440FD8E80257AAA00404769">
+<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="lock.png" maintenanceversion="3.0" name="icons/lock.png" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="325e" sequence="6" unid="B34BD56E7440FD8E80257AAA00404769">
 <created><datetime>20121102T114205,85+00</datetime></created>
-<modified><datetime>20121102T115344,39+00</datetime></modified>
-<revised><datetime>20121102T115344,38+00</datetime></revised>
-<lastaccessed><datetime>20121102T115344,39+00</datetime></lastaccessed>
+<modified><datetime>20130115T082029,87+00</datetime></modified>
+<revised><datetime>20130115T082029,86+00</datetime></revised>
+<lastaccessed><datetime>20130115T082029,87+00</datetime></lastaccessed>
 <addedtofile><datetime>20121102T114207,14+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
@@ -36,5 +36,5 @@ uxyxPmLBnlF/Y49kXl4FDk6OGqB8NYgG8XGppcgiaEJhB8nDaGIBC66gw1MsfQPJ//33nx2fOqIs
 +oOn7JJXUKoFytfKysrjVUexj8gFdMuwWC369OnjC25uHglyDf369csLovLR5N4OSWChykgu5uDk
 kiTKRy2dvYVAip+CkHoJxNORBQACDAAV7N4ey5XjEwAAAABJRU5ErkJggg==
 </jpeg>
-
-<item name="$FileModDT" sign="true"><datetime>20121102T113951,00+00</datetime></item></imageresource>
+<item name="$FileModDT" sign="true"><datetime>20121102T113951,00+00</datetime></item>
+</imageresource>
