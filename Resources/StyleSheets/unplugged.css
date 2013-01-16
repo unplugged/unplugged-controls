@@ -1761,7 +1761,7 @@ body {
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 	white-space: nowrap;
 	vertical-align: baseline;
-	background-color: #b94a48;
+	background: -webkit-linear-gradient(#F78528,#FA431B);
 	padding-right: 9px;
   	padding-left: 9px;
   	-webkit-border-radius: 9px;
