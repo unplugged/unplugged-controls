@@ -45,13 +45,17 @@ if (out.length > 0){
 			</xp:this.styleClass>
 			<div id="flatView">
 				<ul id="flatViewRowSet">
-					<li id="title">
+					<xp:panel tagName="li" id="title"
+						styleClass="title">
+						<xp:this.style><![CDATA[#{javascript:if (compositeData.title == null){
+	return "display: none;";
+}}]]></xp:this.style>
 						<xp:label id="label3">
 							<xp:this.value><![CDATA[#{javascript:compositeData.title;
 }]]></xp:this.value>
 
 						</xp:label>
-					</li>
+					</xp:panel>
 					<xp:repeat id="repeat4" var="thisRowData"
 						value="#{viewList}" disableOutputTag="true">
 						<xp:this.rows><![CDATA[${javascript:sessionScope.rowcount = compositeData.numberofrows;
@@ -60,8 +64,7 @@ if (sessionScope.rowcount != null){
 }else{
 	return 20;
 }}]]></xp:this.rows>
-						<xp:panel tagName="li" id="datarow"
-							styleClass="data-row">
+						<xp:panel tagName="li" id="datarow">
 							<xp:this.attrs>
 								<xp:attr name="onClick">
 									<xp:this.value><![CDATA[#{javascript:var url = getDbPath() + "/" + compositeData.xpageDoc + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID();
@@ -72,6 +75,16 @@ if (compositeData.ajaxload != "No"){
 }}]]></xp:this.value>
 								</xp:attr>
 							</xp:this.attrs>
+							<xp:this.styleClass><![CDATA[#{javascript:if (viewScope.rowcount == null){
+	viewScope.rowcount = 1;
+}else{
+	viewScope.rowcount = viewScope.rowcount + 1;
+}
+var out = "data-row";
+if (viewScope.rowcount == 1 && compositeData.title == null){
+	out += " first-row";
+}
+return out;}]]></xp:this.styleClass>
 							<xp:image url="/unp/right-arrow-circle.png"
 								id="image1">
 								<xp:this.styleClass><![CDATA[#{javascript:if(compositeData.detailColumn == null){ return 'singleLineIcon';} else {return 'multiLineIcon';}}]]></xp:this.styleClass>
