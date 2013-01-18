@@ -21,7 +21,7 @@ the specific language governing permissions and limitations under the License
 	<div id="content">
 		<xc:unpScrollableArea>
 			<xp:this.facets>
-				<xc:unpFlatView insetData="true" title="Employees"
+				<xc:unpFlatView insetData="true" title="Employees" detailColumn="DOB"
 					summaryColumn="Name" viewName="Employees"
 					xpageDoc="Employee.xsp" xp:key="facet_1" numberofrows="20"
 					refreshmethod="pull" position="left-aligned">
