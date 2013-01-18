@@ -73,8 +73,8 @@ if (compositeData.ajaxload != "No"){
 								</xp:attr>
 							</xp:this.attrs>
 							<xp:image url="/unp/right-arrow-circle.png"
-								id="image1"
-								styleClass="#{javascript:if(compositeData.detailColumn == null){ return 'icon';} else {return 'multiLineIcon';}}">
+								id="image1">
+								<xp:this.styleClass><![CDATA[#{javascript:if(compositeData.detailColumn == null){ return 'singleLineIcon';} else {return 'multiLineIcon';}}]]></xp:this.styleClass>
 							</xp:image>
 							<xp:label id="label2"
 								value="#{javascript:thisRowData.getColumnValue(compositeData.summaryColumn);}"
@@ -84,7 +84,7 @@ if (compositeData.ajaxload != "No"){
 								<xp:label id="label1"
 									styleClass="viewlistdetail">
 									<xp:this.value><![CDATA[#{javascript:if(compositeData.detailColumn == null){
-	return "";
+	return " ";
 }else{
   return thisRowData.getColumnValue(compositeData.detailColumn);
 }}]]></xp:this.value>

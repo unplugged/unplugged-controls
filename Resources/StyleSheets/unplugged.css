@@ -471,6 +471,13 @@ body {
 	opacity: 0.2;
 }
 
+.singleLineIcon {
+	float: right;
+	margin-top: 5px;
+	padding-right: 0px;
+	opacity: 0.2;
+}
+
 .bordered {
 	padding: 10px;
 }
