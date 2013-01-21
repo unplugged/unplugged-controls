@@ -55,7 +55,7 @@ else{ return true;
 				value="#{javascript:compositeData.backButtonText}">
 				<xp:this.attrs>
 					<xp:attr name="onclick">
-						<xp:this.value><![CDATA[#{javascript:"window.location.href='" + compositeData.backButtonURL + "';"}]]></xp:this.value>
+						<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='" + compositeData.backButtonURL + "';"}]]></xp:this.value>
 					</xp:attr>
 				</xp:this.attrs>
 			</xp:label>
@@ -77,8 +77,13 @@ else{ return true;
 			styleClass="searchButton">
 			<span></span>
 		</xp:panel>
-		<xp:link escape="true" id="homebutton" value="/unpws.unp/"
+		<xp:link escape="true" id="homebutton" value="#"
 			styleClass="homeButton">
+			<xp:this.attrs>
+				<xp:attr name="onclick">
+					<xp:this.value><![CDATA[$.blockUI();window.location.href="/unpws.unp/";]]></xp:this.value>
+				</xp:attr>
+			</xp:this.attrs>
 			<span></span>
 		</xp:link>
 

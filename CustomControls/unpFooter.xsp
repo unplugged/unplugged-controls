@@ -43,10 +43,12 @@ the specific language governing permissions and limitations under the License
 							<xp:this.script><![CDATA[#{javascript:db = session.getCurrentDatabase();
 db.replicate("someserver");}]]></xp:this.script>
 						</xp:executeScript>
-						<xp:openPage name="/UnpMain.xsp" target="openDocument">
+						<xp:openPage name="/UnpMain.xsp"
+							target="openDocument">
 						</xp:openPage>
 					</xp:actionGroup>
 				</xp:this.action>
+				<xp:this.script><![CDATA[$.blockUI();]]></xp:this.script>
 			</xp:eventHandler>
 			<span>Sync</span>
 		</xp:link>
@@ -73,7 +75,7 @@ db.replicate("someserver");}]]></xp:this.script>
 			rendered="#{javascript:compositeData.settingsurl != null;}">
 			<xp:this.attrs>
 				<xp:attr name="onclick">
-					<xp:this.value><![CDATA[#{javascript:"window.location.href='" + compositeData.settingsurl + "';"}]]></xp:this.value>
+					<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='" + compositeData.settingsurl + "';"}]]></xp:this.value>
 				</xp:attr>
 			</xp:this.attrs>
 			<span>Settings</span>
