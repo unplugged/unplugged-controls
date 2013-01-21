@@ -15,7 +15,8 @@ the specific language governing permissions and limitations under the License
 	<xp:this.resources>
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 	</xp:this.resources>
-	<xc:unpHeader search="none" viewsButton="true" title="Employees">
+	<xc:unpHeader search="none" viewsButton="false" title="Employees"
+		backButtonText="Back" backButtonURL="UnpDemoFlatView.xsp">
 	</xc:unpHeader>
 
 	<div id="content">
@@ -23,11 +24,11 @@ the specific language governing permissions and limitations under the License
 			<xp:this.facets>
 				<xc:unpFlatView insetData="true" title="Employees" detailColumn="DOB"
 					summaryColumn="Name" viewName="Employees"
-					xpageDoc="Employee.xsp" xp:key="facet_1" numberofrows="20"
+					xpageDoc="UnpDemoEmployee.xsp" xp:key="facet_1" numberofrows="20"
 					refreshmethod="pull" position="left-aligned">
 				</xc:unpFlatView>
 			</xp:this.facets>
 		</xc:unpScrollableArea>
 	</div>
-	<xc:unpFooter newDocTarget="EmployeeEdit.xsp"></xc:unpFooter>
+	<xc:unpFooter></xc:unpFooter>
 </xp:view>

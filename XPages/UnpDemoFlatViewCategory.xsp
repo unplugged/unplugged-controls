@@ -15,7 +15,7 @@ the specific language governing permissions and limitations under the License
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 	</xp:this.resources>
 	<xc:unpHeader search="none" searchPage="UnpSearch.xsp"
-		viewsButton="false" backButtonText="Back" backButtonURL="/UnpMain.xsp"
+		viewsButton="false" backButtonText="Back" backButtonURL="UnpDemoFlatViewCategory.xsp"
 		title="Employees">
 	</xc:unpHeader>
 	<div id="content">
@@ -24,7 +24,7 @@ the specific language governing permissions and limitations under the License
 				<xc:unpFlatView insetData="true" detailColumn="DOB"
 					summaryColumn="Name" title="Finance Employees" xp:key="facet_1"
 					categoryfilter="Finances" viewName="EmployeesCatByDept"
-					xpageDoc="Employee.xsp" numberofrows="20">
+					xpageDoc="UnpDemoEmployee.xsp" numberofrows="20">
 				</xc:unpFlatView>
 			</xp:this.facets>
 		</xc:unpScrollableArea>
