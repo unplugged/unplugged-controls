@@ -77,7 +77,7 @@ else{ return true;
 			styleClass="searchButton">
 			<span></span>
 		</xp:panel>
-		<xp:link escape="true" id="homebutton" value="#"
+		<xp:panel id="homebutton"
 			styleClass="homeButton">
 			<xp:this.attrs>
 				<xp:attr name="onclick">
@@ -85,7 +85,7 @@ else{ return true;
 				</xp:attr>
 			</xp:this.attrs>
 			<span></span>
-		</xp:link>
+		</xp:panel>
 
 	</xp:panel>
 	<xp:div id="input-search-frame" styleClass="input-search-frame"
