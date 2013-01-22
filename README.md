@@ -6,14 +6,14 @@ It is our intention to publish periodic updates to these controls to OpenNTF.
 
 ## Changes
 ### v1.1.0 (22nd Jan 2013)
-85 - UnpViewsList - made documentation better (in Github Wiki) and also changed Custom Property defaults to be more logical
-86 - UnpAccordion - made last element in list show with rounded corners where appropriate. Also changed Custom Property picker for xpage to use the XPages List
-87 - Search bar - The keyboard now hides after executing a search
-89 - UnpFlatView - now has a new custom property which allows to open documents with full page loads or via Ajax (the default)
-90 - UnpFlatView - fixed display bug when no detail row was specified
-91 - UnpFlatView - fixed display bug when no title property was specified
-96 - BlockUI called on various links to give user feedback that something is happening following a click
-97 - Changed Flat View Demo page to open a different Employee document that the full widget demo
+85. - UnpViewsList - made documentation better (in Github Wiki) and also changed Custom Property defaults to be more logical
+86. - UnpAccordion - made last element in list show with rounded corners where appropriate. Also changed Custom Property picker for xpage to use the XPages List
+87. - Search bar - The keyboard now hides after executing a search
+89. - UnpFlatView - now has a new custom property which allows to open documents with full page loads or via Ajax (the default)
+90. - UnpFlatView - fixed display bug when no detail row was specified
+91. - UnpFlatView - fixed display bug when no title property was specified
+96. - BlockUI called on various links to give user feedback that something is happening following a click
+97. - Changed Flat View Demo page to open a different Employee document that the full widget demo
 
 
 ## Deliverables
