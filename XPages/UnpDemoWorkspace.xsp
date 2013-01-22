@@ -38,8 +38,7 @@ the specific language governing permissions and limitations under the License
 	<xc:unpFooter settingsurl="/unpws.unp/UnpAbout.xsp"></xc:unpFooter>
 	<script>
 		$(window).load( function() {
-			setBadge("MyRole", "999");
-			setBadge("CommsGuide", "21");
+			setBadge("Updates", "7");
 		});
 	</script>
 </xp:view>
