@@ -76,21 +76,70 @@ body {
 }
 
 .backButton {
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	width: auto;
-	height: 28px;
-	border-radius: 6px;
-	background: -webkit-linear-gradient(gray,#464646);
-	cursor: pointer;
-	box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
-	padding-top: 8px;
-	padding-left: 5px;
-	padding-right: 7px;
+    top: 10px;
+	left: 20px;
+    position:absolute;
+    background: -webkit-linear-gradient(top,#808080,#464646);
+    height: 36px;
+    padding: 0;
+    z-index : 0;
+    border-radius: 6px;
+    -webkit-border-top-left-radius : 10px 15px;
+    -webkit-border-bottom-left-radius : 10px 15px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+    text-align:center;
+    cursor: pointer;
+}
+ 
+.backButton:before {
+    position:absolute;
+    top:9.9%;
+    left:-6px;
+    background: -webkit-gradient(linear, right top, left bottom, from(#808080), to(#464646));
+    box-shadow: inset 0 1px 1px rgba(255,255,255,0.2);
+    height : 30px;
+    width: 30px;
+    -webkit-transform : rotate(-45deg) skew(-10deg, -10deg);
+    -webkit-border-top-right-radius : 100px 40px;
+    -webkit-border-top-left-radius : 30px 2px;
+    -webkit-border-bottom-right-radius : 2px 30px;
+    -webkit-border-bottom-left-radius : 40px 100px;
+    z-index : 1;
+    content : ' ';
+    -webkit-mask-image :
+        -webkit-gradient(linear, left top, right bottom,
+            from(#000000),
+            color-stop(0.33,#000000),
+            color-stop(0.5, transparent),
+            to(transparent));
+}
+
+.backButton span {
+	display: block;
+	height: 100%;
+	padding: 0 10px 0 8px;
+	color: white;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.2);
 	font-weight: bold;
-	color: #FFF;
-	font-size: 12px;
+	line-height: 36px;
+	font-size: 16px;
+}
+
+@media screen and (max-width: 700px) {
+	.backButton {
+		height: 32px;
+		top: 5px;
+		left: 14px;
+	}
+	.backButton span {
+		font-size: 12px;
+		line-height: 32px;
+	}
+	.backButton:before {
+		height: 26px;
+		width: 26px;
+		left: -5px;
+	}
 }
 
 .homeButton {
@@ -344,10 +393,6 @@ body {
 		top: 6px;
 		height: 34px;
 	}
-	.backButton {
-		top: 6px;
-		height: 23px;
-	}
 	.homeButton,
 	.newButton, 
 	.settingsButton {
@@ -357,7 +402,6 @@ body {
 		right: 40px;
 	}
 	.viewsButton,
-	.backButton, 
 	.syncButton {
 		left: 4px;
 	}
