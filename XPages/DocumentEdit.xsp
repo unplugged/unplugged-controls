@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2013 Teamstudio Inc 
+Licensed under the Apache License, Version 2.0 (the "License"); 
+you may not use this file except in compliance with the License. You may obtain a copy of the License at
+http://www.apache.org/licenses/LICENSE-2.0 
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed 
+on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
+the specific language governing permissions and limitations under the License
+ -->
+
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xc:unpScrollableArea>
+		<xp:this.facets>
+			<xc:unpFormEditor showbuttons="true"
+				closexpagename="UnpMain.xsp" viewxpagename="Document.xsp"
+				formname="MainTopic" title="Document" xp:key="facet_1"
+				dbName="teamstudio/widgets/teamroom.nsf">
+				<xp:this.facets>
+					<xp:panel xp:key="facet_1">
+						<ul class="fieldlist">
+							<li>
+								<xp:label value="Topic"
+									id="subjectlabel" for="subject">
+								</xp:label>
+								<xp:inputText id="subject"
+									styleClass="required xspInputFieldEditBox"
+									value="#{document1.Subject}">
+								</xp:inputText>
+							</li>
+							<li>
+								<xp:label value="Document Type"
+									id="doctypelabel" for="doctype" styleClass="longlabel">
+								</xp:label>
+								<xp:comboBox id="doctype"
+									value="#{document1.DocType}" styleClass="doctype xspListBox">
+									<xp:this.attrs>
+										<xp:attr name="onchange"
+											value="showHideFields();">
+										</xp:attr>
+									</xp:this.attrs>
+									<xp:selectItem itemLabel=" "
+										itemValue="">
+									</xp:selectItem>
+									<xp:selectItems>
+										<xp:this.value><![CDATA[#{javascript:var db = session.getDatabase(database.getServer(), "teamstudio\\widgets\\teamroom.nsf");
+var doc:NotesDocument = db.getView("MissionLookup").getFirstDocument();
+var out = doc.getItemValue("DocType");
+return out;}]]></xp:this.value>
+									</xp:selectItems>
+								</xp:comboBox>
+							</li>
+
+							<xp:panel tagName="li"
+								styleClass="actionitemtypeholder">
+								<xp:this.style><![CDATA[#{javascript:if(document1.getItemValueString("DocType") == "Action Item"){
+	return "display: block;";
+}else{
+	return "display: none;";
+}}]]></xp:this.style>
+								<xp:label value="Priority"
+									id="aiprioritylabel" for="aipriority">
+								</xp:label>
+								<xp:comboBox id="aipriority"
+									value="#{document1.AIPriority}" styleClass="xspListBox"
+									defaultValue="3">
+									<xp:selectItem itemLabel=" "
+										itemValue="">
+									</xp:selectItem>
+									<xp:selectItem
+										itemLabel="1 (highest)" itemValue="1">
+									</xp:selectItem>
+									<xp:selectItem itemLabel="2"
+										itemValue="2">
+									</xp:selectItem>
+									<xp:selectItem itemLabel="3"
+										itemValue="3">
+									</xp:selectItem>
+									<xp:selectItem itemLabel="4"
+										itemValue="4">
+									</xp:selectItem>
+									<xp:selectItem
+										itemLabel="5 (lowest)" itemValue="5">
+									</xp:selectItem>
+								</xp:comboBox>
+							</xp:panel>
+							<li>
+								<xp:label value="Categories"
+									id="categorieslabel" for="multi__categories">
+								</xp:label>
+								<xp:listBox id="multi__categories"
+									multiple="true" value="#{document1.Categories}"
+									styleClass="xspListBox">
+									<xp:selectItem itemLabel=" "
+										itemValue="">
+									</xp:selectItem>
+									<xp:selectItems>
+										<xp:this.value><![CDATA[#{javascript:var db = session.getDatabase(database.getServer(), "teamstudio\\widgets\\teamroom.nsf");
+var doc:NotesDocument = db.getView("MissionLookup").getFirstDocument();
+var out = doc.getItemValue("Categories");
+return out;}]]></xp:this.value>
+									</xp:selectItems>
+								</xp:listBox>
+							</li>
+							<li>
+								<xp:label value="Subteam(s)"
+									id="subteaminterestlabel" for="multi__subteaminterest">
+								</xp:label>
+								<xp:listBox id="multi__subteaminterest"
+									multiple="true" value="#{document1.SubTeamInterest}"
+									styleClass="xspListBox">
+									<xp:selectItem itemLabel=" "
+										itemValue="">
+									</xp:selectItem>
+									<xp:selectItems>
+										<xp:this.value><![CDATA[#{javascript:@DbColumn(@DbName(), "SubteamLookup", 1);}]]></xp:this.value>
+									</xp:selectItems>
+								</xp:listBox>
+							</li>
+							<xp:panel tagName="li"
+								styleClass="nonmeetingtypeholder">
+								<xp:this.style><![CDATA[#{javascript:if(document1.getItemValueString("DocType") != "Meeting"){
+	return "display: block;";
+}else{
+	return "display: none;";
+}}]]></xp:this.style>
+								<xp:label id="duedatelabel"
+									for="duedate" styleClass="longlabel">
+									<xp:this.value><![CDATA[#{javascript:if (document1.getItemValueString("DocType") == "Action Item"){
+	return "Due Date";
+}else{
+	return "Review By Date";
+}}]]></xp:this.value>
+								</xp:label>
+								<xp:inputText id="duedate"
+									value="#{document1.DueDate}" type="date"
+									styleClass="xspInputFieldEditBox">
+									<xp:this.converter>
+										<xp:convertDateTime>
+											<xp:this.pattern><![CDATA[${javascript:return "yyyy-MM-dd";}]]></xp:this.pattern>
+										</xp:convertDateTime>
+									</xp:this.converter>
+								</xp:inputText>
+							</xp:panel>
+							<xp:panel tagName="li"
+								styleClass="meetingtypeholder">
+								<xp:this.style><![CDATA[#{javascript:if(document1.getItemValueString("DocType") == "Meeting"){
+	return "display: block;";
+}else{
+	return "display: none;";
+}}]]></xp:this.style>
+								<xp:label for="mtgdate" value="Date">
+								</xp:label>
+								<xp:inputText id="mtgdate"
+									value="#{document1.MtgDate}" type="date"
+									styleClass="xspInputFieldEditBox">
+									<xp:this.converter>
+										<xp:convertDateTime>
+											<xp:this.pattern><![CDATA[${javascript:return "yyyy-MM-dd";}]]></xp:this.pattern>
+										</xp:convertDateTime>
+									</xp:this.converter>
+								</xp:inputText>
+							</xp:panel>
+							<xp:panel tagName="li"
+								styleClass="meetingtypeholder">
+								<xp:this.style><![CDATA[#{javascript:if(document1.getItemValueString("DocType") == "Meeting"){
+	return "display: block;";
+}else{
+	return "display: none;";
+}}]]></xp:this.style>
+								<xp:label for="mtgtime" value="Time"></xp:label>
+								<xp:inputText id="mtgtime"
+									value="#{document1.MtgTime}" type="time"
+									styleClass="xspInputFieldEditBox">
+									<xp:this.converter>
+										<xp:convertDateTime
+											pattern="hh:mm">
+										</xp:convertDateTime>
+									</xp:this.converter>
+								</xp:inputText>
+							</xp:panel>
+							<xp:panel tagName="li"
+								styleClass="meetingtypeholder">
+								<xp:this.style><![CDATA[#{javascript:if(document1.getItemValueString("DocType") == "Meeting"){
+	return "display: block;";
+}else{
+	return "display: none;";
+}}]]></xp:this.style>
+								<xp:label for="duration"
+									value="Duration (mins)">
+								</xp:label>
+								<xp:inputText id="duration"
+									value="#{document1.Duration}" type="number" defaultValue="60"
+									styleClass="xspInputFieldEditBox">
+									<xp:this.converter>
+										<xp:convertNumber type="number"
+											integerOnly="true">
+										</xp:convertNumber>
+									</xp:this.converter>
+								</xp:inputText>
+							</xp:panel>
+							<xp:panel tagName="li"
+								styleClass="meetingtypeholder">
+								<xp:this.style><![CDATA[#{javascript:if(document1.getItemValueString("DocType") == "Meeting"){
+	return "display: block;";
+}else{
+	return "display: none;";
+}}]]></xp:this.style>
+								<xp:label for="mtglocation"
+									value="Location">
+								</xp:label>
+								<xp:inputText id="mtglocation"
+									value="#{document1.MtgLocation}"
+									styleClass="xspInputFieldEditBox">
+								</xp:inputText>
+							</xp:panel>
+							<li>
+								<xp:label for="PriNameSelection"
+									value="Names">
+								</xp:label>
+								<xp:listBox id="multi__PriNameSelection"
+									multiple="true" value="#{document1.PriNameSelection}"
+									styleClass="xspListBox">
+									<xp:selectItem itemLabel=" "
+										itemValue="">
+									</xp:selectItem>
+									<xp:selectItems>
+										<xp:this.value><![CDATA[#{javascript:@DbColumn(@DbName(), "PeopleLookup", 1);}]]></xp:this.value>
+									</xp:selectItems>
+								</xp:listBox>
+							</li>
+							<li>
+								<xp:label for="SubTeam1"
+									value="Teams">
+								</xp:label>
+								<xp:listBox id="multi__SubTeam1"
+									multiple="true" value="#{document1.SubTeam1}"
+									styleClass="xspListBox">
+									<xp:selectItem itemLabel=" "
+										itemValue="">
+									</xp:selectItem>
+									<xp:selectItems>
+										<xp:this.value><![CDATA[#{javascript:@DbColumn(@DbName(), "SubTeamLookup", 1);}]]></xp:this.value>
+									</xp:selectItems>
+								</xp:listBox>
+							</li>
+							<li>
+								<xp:label value="Details"
+									id="detailslabel" for="description" styleClass="widelabel">
+								</xp:label>
+								<xp:inputTextarea id="body"
+									styleClass="richtextfield" value="#{document1.Body}">
+								</xp:inputTextarea>
+							</li>
+							<xp:inputText id="from"
+								value="#{document1.From}" style="display: none;"
+								defaultValue="#{javascript:@UserName()}">
+							</xp:inputText>
+							<xp:inputText id="altfrom"
+								value="#{document1.AltFrom}" style="display: none;"
+								defaultValue="#{javascript:@UserName()}">
+							</xp:inputText>
+						</ul>
+					</xp:panel>
+				</xp:this.facets>
+			</xc:unpFormEditor>
+		</xp:this.facets>
+	</xc:unpScrollableArea>
+
+</xp:view>

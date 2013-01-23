@@ -40,15 +40,23 @@ if (out.length > 0){
 		<ul id="summaryList">
 			<xp:repeat id="repeat2" rows="999" var="rowData"
 				disableOutputTag="true">
-				<xp:this.value><![CDATA[#{javascript:var list = @Unique(@DbColumn(@DbName(), compositeData.viewName, 1));
+				<xp:this.value><![CDATA[#{javascript:var db = @DbName();
+if (compositeData.dbName != null){
+	db = [@DbName()[0], compositeData.dbName];
+}
+var list = @Unique(@DbColumn(db, compositeData.viewName, 1));
 viewScope.categorycount = list.length;
 return list;}]]></xp:this.value>
-				<li class="categoryRow"
-					onClick="javascript:fetchDetails(this,'#{javascript:viewScope.get('escViewName');}','#{rowData}', '#{javascript:compositeData.xpage;}')">
+				<xp:panel tagName="li" styleClass="categoryRow">
+					<xp:this.attrs>
+						<xp:attr name="onClick">
+							<xp:this.value><![CDATA[#{javascript:"fetchDetails(this,'" + @ReplaceSubstring(compositeData.viewName, "\\","\\\\") + "','" + rowData + "', '" + compositeData.xpage + "', '" + compositeData.dbName + "')"}]]></xp:this.value>
+						</xp:attr>
+					</xp:this.attrs>
 					<xp:text escape="true" id="computedField2"
 						value="#{rowData}" styleClass="catLabel">
 					</xp:text>
-				</li>
+				</xp:panel>
 				<div class="summaryDataRow">
 					<xp:panel tagName="ul"
 						style="padding:0px; margin: 0px;">
@@ -71,7 +79,7 @@ return out;}]]></xp:this.styleClass>
 							id="accLoadmorebutton" styleClass="accLoadMoreButton">
 							<xp:this.attrs>
 								<xp:attr name="onclick">
-									<xp:this.value><![CDATA[javascript:fetchMoreDetails(this,'#{javascript:viewScope.get('escViewName');}','#{rowData}', '#{javascript:compositeData.xpage;}');]]></xp:this.value>
+									<xp:this.value><![CDATA[#{javascript:"fetchMoreDetails(this,'" + @ReplaceSubstring(compositeData.viewName, "\\","\\\\") + "','" + rowData + "', '" + compositeData.xpage + "', '" + compositeData.dbName + "');"}]]></xp:this.value>
 								</xp:attr>
 							</xp:this.attrs>
 						</xp:button>

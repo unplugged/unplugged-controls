@@ -65,7 +65,7 @@ function stopViewSpinner() {
 	$("#loadmorespinner").hide();
 }
 
-function loadmore(viewName, summarycol, detailcol, category, xpage,
+function loadmore(dbName, viewName, summarycol, detailcol, category, xpage,
 		refreshmethod) {
 	try {
 		$(".loadmorelink").hide();
@@ -87,6 +87,7 @@ function loadmore(viewName, summarycol, detailcol, category, xpage,
 				+ encodeURIComponent(summarycol) + "&detailcol="
 				+ encodeURIComponent(detailcol) + "&category="
 				+ encodeURIComponent(category) + "&xpage=" + xpage
+				+ "&dbName=" + dbName
 				+ "&refreshmethod=" + refreshmethod + "&start=" + pos;
 		thisArea.load(url + " #results", function() {
 			$("#flatViewRowSet").append($(".summaryDataRow li"));
@@ -138,13 +139,16 @@ function openDocument(url, target) {
 			});
 }
 
-function saveDocument(formid, unid, viewxpagename, formname, parentunid) {
+function saveDocument(formid, unid, viewxpagename, formname, parentunid, dbname) {
 	scrollContent.scrollTo(0, -60, 0);
 	var data = $(".customform :input").serialize();
 	var url = 'UnpSaveDocument.xsp?unid=' + unid + "&formname=" + formname
 			+ "&rnd=" + Math.floor(Math.random() * 1001);
 	if (parentunid){
 		url += "&parentunid=" + parentunid;
+	}
+	if (dbname){
+		url += "&dbname=" + dbname;
 	}
 	var valid = validate();
 	if (valid) {
@@ -330,12 +334,12 @@ function closeDialog(id){
 }
 
 
-function accordionLoadMore(obj, viewName, catName, xpage){
+function accordionLoadMore(obj, viewName, catName, xpage, dbname){
 	
 	var thisArea = $(obj).nextAll(".summaryDataRow:first").children(".accordionRowSet");		
 	var pos = $(thisArea).find('li').length;
 	thisArea.css('display','block');
-	var thisUrl = "UnpAccordionViewList.xsp?chosenView=" + encodeURIComponent(viewName) + "&catFilter=" + encodeURIComponent(catName) + "&xpageDoc=" + xpage + "&start=" + pos; 
+	var thisUrl = "UnpAccordionViewList.xsp?chosenView=" + encodeURIComponent(viewName) + "&catFilter=" + encodeURIComponent(catName) + "&xpageDoc=" + xpage + "&start=" + pos + "&dbname=" + dbname; 
 	
 	var tempHolder = $(obj).nextAll(".summaryDataRow:first").children(".summaryDataRowHolder");
 	$(tempHolder).load(thisUrl + " #results", function(){
@@ -357,7 +361,7 @@ function accordionLoadMore(obj, viewName, catName, xpage){
 
 }
 
-function fetchDetails(obj, viewName, catName, xpage)
+function fetchDetails(obj, viewName, catName, xpage, dbname)
 {	
 	$('.accordionRowSet').empty();
 	$('.accLoadMoreLink').hide();
@@ -370,12 +374,12 @@ function fetchDetails(obj, viewName, catName, xpage)
 	}
 	else{
 		$('.categoryRow').removeClass("accordianExpanded");
-		accordionLoadMore(obj, viewName, catName, xpage);
+		accordionLoadMore(obj, viewName, catName, xpage, dbname);
 	}
 }
 
-function fetchMoreDetails(obj, viewName, catName, xpage){
+function fetchMoreDetails(obj, viewName, catName, xpage, dbname){
 	
 	var objRow = $(obj).parent().parent().prev();
-	accordionLoadMore(objRow, viewName, catName, xpage);	
+	accordionLoadMore(objRow, viewName, catName, xpage, dbname);	
 }

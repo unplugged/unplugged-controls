@@ -21,17 +21,21 @@ try{
 	resp = "Started";
 	var doc = null;
 	resp = "Gettings doc";
+	var db = database;
+	if (context.getUrlParameter("dbname") != ""){
+		db = session.getDatabase(database.getServer(), context.getUrlParameter("dbname"));
+	}
 	try{
-		doc = database.getDocumentByUNID(context.getUrlParameter("unid"));
+		doc = db.getDocumentByUNID(context.getUrlParameter("unid"));
 	}catch(e){
 	}
 	if (doc == null){
-		doc = database.createDocument();
+		doc = db.createDocument();
 		doc.replaceItemValue("Form", context.getUrlParameter("formname"));
 	}
 	resp = "getting parentunid";
 	if (context.getUrlParameter("parentunid") != "" && context.getUrlParameter("parentunid") != "null"){
-		var parent:NotesDocument = database.getDocumentByUNID(context.getUrlParameter("parentunid"));
+		var parent:NotesDocument = db.getDocumentByUNID(context.getUrlParameter("parentunid"));
 		resp = "creating response to parentunid = " + parent.getUniversalID();
 		doc.makeResponse(parent);
 	}

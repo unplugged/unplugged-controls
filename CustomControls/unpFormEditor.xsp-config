@@ -65,5 +65,10 @@
       <property-name>viewxpagename</property-name>
       <property-class>string</property-class>
     </property>
+    <property>
+      <property-name>dbName</property-name>
+      <property-class>string</property-class>
+      <description>Optional parameter if you want to use data from a different database (make sure you use forward slashes eg mydir/mydb.nsf)</description>
+    </property>
   </composite-component>
 </faces-config>

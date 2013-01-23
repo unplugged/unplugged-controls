@@ -20,6 +20,10 @@ if (category == "null" || category == "" || category == "undefined"){
 }}]]></xp:this.categoryFilter>
 			<xp:this.viewName><![CDATA[#{javascript:var viewname = param.get("chosenView");
 return viewname;}]]></xp:this.viewName>
+			<xp:this.databaseName><![CDATA[#{javascript:var dbName = param.get("dbName");
+if (dbName != "null" && dbName != "" && dbName != "undefined"){
+	return dbName;
+}}]]></xp:this.databaseName>
 		</xp:dominoView>
 	</xp:this.data>
 	<xp:this.resources>

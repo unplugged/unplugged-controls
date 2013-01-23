@@ -50,6 +50,11 @@ The default position is 'menu-aligned' as this control would normally be used wi
       </designer-extension>
     </composite-extension>
     <property>
+      <property-name>dbName</property-name>
+      <property-class>string</property-class>
+      <description>Optional parameter if you want to use a view from a different database (make sure you use forward slashes eg mydir/mydb.nsf)</description>
+    </property>
+    <property>
       <property-name>viewName</property-name>
       <property-class>string</property-class>
       <display-name>Categorized view name</display-name>

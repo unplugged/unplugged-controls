@@ -72,6 +72,11 @@
       <description>Alias of Categorized View - first column only must be categorized </description>
     </property>
     <property>
+      <property-name>dbName</property-name>
+      <property-class>string</property-class>
+      <description>Optional parameter if you want to use a view from a different database (make sure you use forward slashes eg mydir/mydb.nsf)</description>
+    </property>
+    <property>
       <property-name>summaryColumn</property-name>
       <property-class>string</property-class>
       <display-name>Summary Row</display-name>

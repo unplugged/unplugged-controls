@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-Copyright 2013 Teamstudio Inc 
-Licensed under the Apache License, Version 2.0 (the "License"); 
-you may not use this file except in compliance with the License. You may obtain a copy of the License at
-http://www.apache.org/licenses/LICENSE-2.0 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed 
-on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
-the specific language governing permissions and limitations under the License
- -->
+	<!--
+		Copyright 2013 Teamstudio Inc Licensed under the Apache License,
+		Version 2.0 (the "License"); you may not use this file except in
+		compliance with the License. You may obtain a copy of the License at
+		http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+		applicable law or agreed to in writing, software distributed under the
+		License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or implied. See the License for
+		the specific language governing permissions and limitations under the
+		License
+	-->
 
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core">
 	<xp:this.data>
@@ -18,6 +20,9 @@ the specific language governing permissions and limitations under the License
 }else{
 	return compositeData.categoryfilter;
 }}]]></xp:this.categoryFilter>
+			<xp:this.databaseName><![CDATA[#{javascript:if (compositeData.dbName != null){
+	return compositeData.dbName;
+}}]]></xp:this.databaseName>
 		</xp:dominoView>
 	</xp:this.data>
 	<xp:this.resources>
@@ -28,10 +33,9 @@ the specific language governing permissions and limitations under the License
 		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
 		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 	</xp:this.resources>
-	
+
 	<div id="results">
-		<xp:panel tagName="div"
-			style="#{javascript:compositeData.cssoverride}">
+		<xp:panel tagName="div" style="#{javascript:compositeData.cssoverride}">
 			<xp:this.styleClass><![CDATA[#{javascript:var out = new Array();
 if(compositeData.insetData) {
 	out.push("bordered");
@@ -45,8 +49,7 @@ if (out.length > 0){
 			</xp:this.styleClass>
 			<div id="flatView">
 				<ul id="flatViewRowSet">
-					<xp:panel tagName="li" id="title"
-						styleClass="title">
+					<xp:panel tagName="li" id="title" styleClass="title">
 						<xp:this.style><![CDATA[#{javascript:if (compositeData.title == null){
 	return "display: none;";
 }}]]></xp:this.style>
@@ -56,8 +59,8 @@ if (out.length > 0){
 
 						</xp:label>
 					</xp:panel>
-					<xp:repeat id="repeat4" var="thisRowData"
-						value="#{viewList}" disableOutputTag="true">
+					<xp:repeat id="repeat4" var="thisRowData" value="#{viewList}"
+						disableOutputTag="true">
 						<xp:this.rows><![CDATA[${javascript:sessionScope.rowcount = compositeData.numberofrows;
 if (sessionScope.rowcount != null){
 	return sessionScope.rowcount;
@@ -85,8 +88,7 @@ if (viewScope.rowcount == 1 && compositeData.title == null){
 	out += " first-row";
 }
 return out;}]]></xp:this.styleClass>
-							<xp:image url="/unp/right-arrow-circle.png"
-								id="image1">
+							<xp:image url="/unp/right-arrow-circle.png" id="image1">
 								<xp:this.styleClass><![CDATA[#{javascript:if(compositeData.detailColumn == null){ return 'singleLineIcon';} else {return 'multiLineIcon';}}]]></xp:this.styleClass>
 							</xp:image>
 							<xp:label id="label2"
@@ -94,8 +96,7 @@ return out;}]]></xp:this.styleClass>
 								styleClass="viewlistsummary">
 							</xp:label>
 							<div>
-								<xp:label id="label1"
-									styleClass="viewlistdetail">
+								<xp:label id="label1" styleClass="viewlistdetail">
 									<xp:this.value><![CDATA[#{javascript:if(compositeData.detailColumn == null){
 	return " ";
 }else{
@@ -128,7 +129,7 @@ return out;}]]></xp:this.styleClass>
 						styleClass="loadmorebutton">
 						<xp:this.attrs>
 							<xp:attr name="onclick">
-								<xp:this.value><![CDATA[#{javascript:"loadmore('" + compositeData.viewName + "', '" + compositeData.summaryColumn + "', '" + compositeData.detailColumn + "', '" + compositeData.categoryfilter + "', '" + compositeData.xpageDoc + "', '" + compositeData.refreshmethod + "')"}]]></xp:this.value>
+								<xp:this.value><![CDATA[#{javascript:"loadmore('" + compositeData.dbName + "', '" + compositeData.viewName + "', '" + compositeData.summaryColumn + "', '" + compositeData.detailColumn + "', '" + compositeData.categoryfilter + "', '" + compositeData.xpageDoc + "', '" + compositeData.refreshmethod + "')"}]]></xp:this.value>
 							</xp:attr>
 						</xp:this.attrs>
 					</xp:button>
@@ -137,9 +138,10 @@ return out;}]]></xp:this.styleClass>
 			</div>
 		</xp:panel>
 	</div>
-	<!-- 
-	<script type="text/javascript" src="unp/jquery-1.7.2.min.js"></script>
-	<script type="text/javascript" src="unp/jquery.blockUI.min.js"></script>
-	<script type="text/javascript" src="unpViewGetMore.min.js"></script>
+	<!--
+		<script type="text/javascript" src="unp/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript"
+		src="unp/jquery.blockUI.min.js"></script> <script
+		type="text/javascript" src="unpViewGetMore.min.js"></script>
 	-->
 </xp:view>

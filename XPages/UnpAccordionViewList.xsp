@@ -15,6 +15,10 @@ the specific language governing permissions and limitations under the License
 
 			<xp:this.categoryFilter><![CDATA[#{javascript:param.get("catFilter");}]]></xp:this.categoryFilter>
 			<xp:this.viewName><![CDATA[#{javascript:param.get("chosenView");}]]></xp:this.viewName>
+			<xp:this.databaseName><![CDATA[#{javascript:var dbname = param.get("dbname");
+if (dbname != "" && dbname != "null" && dbname != "undefined"){
+	return dbname;
+}}]]></xp:this.databaseName>
 		</xp:dominoView>
 	</xp:this.data>
 

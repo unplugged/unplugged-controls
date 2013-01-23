@@ -21,6 +21,9 @@ the specific language governing permissions and limitations under the License
 	<xp:this.data>
 		<xp:dominoDocument var="document1"
 			formName="#{javascript:compositeData.formname}">
+			<xp:this.databaseName><![CDATA[#{javascript:if (compositeData.dbName != null){
+	return compositeData.dbName;
+}}]]></xp:this.databaseName>
 		</xp:dominoDocument>
 	</xp:this.data>
 	<div id="formholder" class="editmode">
@@ -40,6 +43,9 @@ the specific language governing permissions and limitations under the License
 "', '" + compositeData.viewxpagename + "', '" + compositeData.formname + "'"
 if (context.getUrlParameter("parentunid") != ""){
 	out += ", '" + context.getUrlParameter("parentunid") + "'";
+}
+if (compositeData.dbName != null){
+	out += ", '" + compositeData.dbName + "'";
 }
 out += ");"
 return out;}]]></xp:this.value>
