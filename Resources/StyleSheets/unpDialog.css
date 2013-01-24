@@ -98,61 +98,6 @@
 	margin-top: 10px;
 }
 
-#dialogPopup .buttons {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 90%;
-	height: 44px;
-	list-style-type: none;
-}
-
-#dialogPopup .buttons>li {
-	position: absolute;
-	padding: 6px 10px;
-	font-size: 1.3em;
-	font-weight: bold;
-	color: #fff;
-	-webkit-border-radius: 8px;
-	-webkit-background-clip: padding-box !important;
-	border: 1px solid #000;
-	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6), inset 0 1px 0
-		rgba(255, 255, 255, 0.5);
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.65);
-	width: 80px;
-	text-align: center;
-}
-
-#dialogPopup .buttons .deleteButton {
-	left: 10px;
-	background: -webkit-gradient(linear, 0 0, 0 100%, from(#c00), to(#400) )
-		;
-}
-
-#dialogPopup .buttons .cancelButton {
-	right: 130px;
-	background: -webkit-gradient(linear, 0 0, 0 100%, from(#eee), to(#999) )
-		;
-	color: #555;
-	text-shadow: 0 1px 0 #eee;
-}
-
-#dialogPopup .buttons .proceedButton {
-	left: 50%;
-	margin-left: -40px;
-	background: -webkit-gradient(linear, 0 0, 0 100%, from(#eee), to(#999) )
-		;
-	color: #555;
-	text-shadow: 0 1px 0 #eee;
-}
-
-#dialogPopup .buttons .saveButton {
-	width: 80px;
-	right: 10px;
-	background: -webkit-gradient(linear, 0 0, 0 100%, from(#9bc200),
-		to(#288600) );
-}
-
 #dialogCover {
 	position: absolute;
 	z-index: 9998;

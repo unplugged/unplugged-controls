@@ -14,6 +14,7 @@ the specific language governing permissions and limitations under the License
 
 	<xp:this.resources>
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
+		<xp:styleSheet href="/unpDialog.css"></xp:styleSheet>
 	</xp:this.resources>
 	<xc:unpHeader search="database" viewsButton="true" title="Employees"
 		searchPage="UnpDemoWidgetsSearch.xsp">
