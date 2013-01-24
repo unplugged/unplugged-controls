@@ -1312,8 +1312,7 @@ body {
 	line-height: 24px;
 	height: 45px;
 	background: #fff;
-	border: 0;
-	border-bottom: 1px solid #ddd;
+	border: 1px solid #ddd;
 	margin: 0;
 	box-sizing: border-box;
 	width: 66%;
@@ -1321,6 +1320,8 @@ body {
 	background: transparent;
 	border-radius:0;
 	float: right;
+	border-radius: 6px;
+	border-bottom-left-radius: 0;
 }
 
 #formholder .xspListBox {
