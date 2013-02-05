@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2013 Teamstudio Inc 
+Licensed under the Apache License, Version 2.0 (the "License"); 
+you may not use this file except in compliance with the License. You may obtain a copy of the License at
+http://www.apache.org/licenses/LICENSE-2.0 
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed 
+on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
+the specific language governing permissions and limitations under the License
+ -->
+
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:this.resources>
+		<xp:script src="/demohome.js" clientSide="true"></xp:script>
+	</xp:this.resources>
+	<div id="userinfo"></div>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:link escape="true" id="link4" value="/unpws.unp/"
+		text="Workspace" style="font-size:18pt">
+	</xp:link>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:link escape="true" id="link2" text="New Workspace"
+		style="font-size:18pt" value="/UnpDemoWorkspace.xsp">
+	</xp:link>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:link escape="true" text="Header / Footer (with Views Button)"
+		id="HeaderFooterLink" style="font-size:18pt"
+		value="/UnpDemoHeaderFooterViewsButton.xsp">
+	</xp:link>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:link escape="true" text="Header / Footer (with Back Button)"
+		id="link5" style="font-size:18pt"
+		value="/UnpDemoHeaderFooterBackButton.xsp">
+	</xp:link>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:link escape="true" text="Views List (with icons)" id="link1"
+		value="/UnpDemoViewsList.xsp" style="font-size:18pt">
+	</xp:link>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:link escape="true" text="Views List (no icons)" id="link11"
+		value="/UnpDemoViewsListNoIcons.xsp" style="font-size:18pt">
+	</xp:link>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:link escape="true" text="FlatView" id="FlatViewLink"
+		value="/UnpDemoFlatView.xsp" style="font-size:18pt">
+	</xp:link>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:link escape="true" text="FlatViewCategorized" id="link7"
+		value="/UnpDemoFlatViewCategory.xsp" style="font-size:18pt">
+	</xp:link>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:link escape="true"
+		text="FlatView (Different Database) - NB assumes you have Teamroom setup in teamstudio\widgets\teamroom.nsf"
+		id="link13" value="/UnpDemoFlatViewDifferentDB.xsp"
+		style="font-size:18pt">
+	</xp:link>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:link escape="true" text="DatabaseSearch" id="link8"
+		value="/UnpDemoFlatViewSearch.xsp" style="font-size:18pt">
+	</xp:link>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:link escape="true" text="Accordion" id="link6"
+		value="/UnpDemoAccordion.xsp" style="font-size:18pt">
+	</xp:link>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:link escape="true" text="Accordion (different database)"
+		id="link14" value="/UnpDemoAccordionDifferentDB.xsp"
+		style="font-size:18pt">
+	</xp:link>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:link escape="true" text="Swipe View" id="link9"
+		style="font-size:18pt">
+		<xp:this.value><![CDATA[UnpDemoSwipeView.xsp?action=openDocument&documentId=692A5A4E443B337880257ABE00389EF1]]></xp:this.value>
+	</xp:link>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:link escape="true" text="Dialog" id="link10"
+		value="/UnpDemoDialog.xsp" style="font-size:18pt">
+	</xp:link>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:link escape="true" text="Debug Toolbar" id="link12"
+		value="/UnpDemoDebugToolbar.xsp" style="font-size:18pt">
+	</xp:link>
+	<xp:br></xp:br>
+	<xp:br></xp:br>
+	<xp:link escape="true" text="Demo of all widgets" id="link3"
+		style="font-size:18pt" value="/UnpDemoWidgets.xsp">
+	</xp:link>
+</xp:view>
