@@ -40,12 +40,12 @@ the specific language governing permissions and limitations under the License
 	<xp:br></xp:br>
 	<xp:br></xp:br>
 	<xp:link escape="true" text="Views List (with icons)" id="link1"
-		value="/UnpDemoViewsList.xsp" style="font-size:18pt">
+		value="/UnpDemoNavigator.xsp" style="font-size:18pt">
 	</xp:link>
 	<xp:br></xp:br>
 	<xp:br></xp:br>
 	<xp:link escape="true" text="Views List (no icons)" id="link11"
-		value="/UnpDemoViewsListNoIcons.xsp" style="font-size:18pt">
+		value="/UnpDemoNavigatorNoIcons.xsp" style="font-size:18pt">
 	</xp:link>
 	<xp:br></xp:br>
 	<xp:br></xp:br>

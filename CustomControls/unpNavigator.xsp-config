@@ -5,16 +5,16 @@
     <default-prefix>xc</default-prefix>
   </faces-config-extension>
   <composite-component>
-    <component-type>unpViewsList</component-type>
-    <composite-name>unpViewsList</composite-name>
-    <composite-file>/unpViewsList.xsp</composite-file>
+    <component-type>unpNavigator</component-type>
+    <composite-name>unpNavigator</composite-name>
+    <composite-file>/unpNavigator.xsp</composite-file>
     <composite-extension>
       <designer-extension>
         <in-palette>true</in-palette>
         <render-markup>&lt;?xml version="1.0" encoding="UTF-8"?&gt; &#xd;
 &lt;xp:view xmlns:xp="http://www.ibm.com/xsp/core"&gt; &#xd;
 	&lt;div style="border: 2px solid #A9A9A9; padding: 3px; margin: 5px;"&gt;&#xd;
-	&lt;h1&gt;unpViewsList&lt;/h1&gt;&#xd;
+	&lt;h1&gt;unpNavigator&lt;/h1&gt;&#xd;
 	&lt;div&gt;&lt;strong&gt;Don't forget to add &lt;i&gt;unplugged.css&lt;/i&gt; as a resource to your XPage&lt;/strong&gt;&lt;/div&gt;&#xd;
 	&lt;hr /&gt;&#xd;
 	&lt;div&gt; &#xd;

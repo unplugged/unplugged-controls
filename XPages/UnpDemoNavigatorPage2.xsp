@@ -11,6 +11,6 @@ the specific language governing permissions and limitations under the License
 
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
 	<div id="newcontent" style="position: absolute; top: 60px;">
-		UnpDemoViewsListPage2
+		UnpDemoNavigatorPage2
 	</div>
 </xp:view>

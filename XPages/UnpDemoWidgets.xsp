@@ -19,7 +19,7 @@ the specific language governing permissions and limitations under the License
 	<xc:unpHeader search="database" viewsButton="true" title="Employees"
 		searchPage="UnpDemoWidgetsSearch.xsp">
 	</xc:unpHeader>
-	<xc:unpViewsList>
+	<xc:unpNavigator>
 		<xc:this.menuItem>
 			<xc:menuItem label="All Documents"
 				page="/UnpDemoWidgets.xsp" ajaxtargetid="content"
@@ -42,7 +42,7 @@ the specific language governing permissions and limitations under the License
 				ajaxloadid="contentwrapper">
 			</xc:menuItem>
 		</xc:this.menuItem>
-	</xc:unpViewsList>
+	</xc:unpNavigator>
 	<div id="content">
 		<xc:unpScrollableArea>
 			<xp:this.facets>
