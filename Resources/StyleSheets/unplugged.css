@@ -966,12 +966,12 @@ body {
 	}
 }
 
-@media screen and (min-width:1001px) and (orientation:landscape) {
+/*@media screen and (min-width:1001px) and (orientation:landscape) {
 	#formholder {
 		width: 98% !important;
 		margin-left: 1% !important;
 	}
-}
+}*/
 
 /*
 .menutext {
