@@ -966,12 +966,13 @@ body {
 	}
 }
 
-/*@media screen and (min-width:1001px) and (orientation:landscape) {
+/*@media screen and (min-width:1001px) and (orientation:landscape) {*/
+@media screen and (max-width: 1024px) and (min-width: 1020px) {
 	#formholder {
 		width: 98% !important;
 		margin-left: 1% !important;
 	}
-}*/
+}
 
 /*
 .menutext {
