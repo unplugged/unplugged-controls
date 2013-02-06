@@ -22,25 +22,5 @@ the specific language governing permissions and limitations under the License
 			style="width: 100%; height: 100%;">
 			<xp:callback facetName="facet_1" id="callback1"></xp:callback>
 		</xp:div>
-
-
-		<xp:text escape="false" id="iscroll" tagName="script">
-			<xp:this.attrs>
-				<xp:attr name="type" value="text/javascript"></xp:attr>
-			</xp:this.attrs>
-			<xp:this.value><![CDATA[#{javascript:var functionname = "iscrollloaded_" + @ReplaceSubstring(getClientId("contentwrapper"), [":", "_"], "");
-var out = "var scrollContent, scrollNav;\n";
-out += "function " + functionname + "() {\n";
-out += "try{initiscroll()}catch(e){\n";
-out += "scrollContent = new iScroll('" + getClientId("contentwrapper") + "');\n";
-out += "}}\n";
-out += "document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);\n";
-out += "document.addEventListener('DOMContentLoaded', " + functionname + ", false);"
-return out;}]]></xp:this.value>
-		</xp:text>
 	</div>
-	<!-- 
-		<script type="text/javascript" src="unp/iScroll.min.js"></script>
-	-->
-
 </xp:view>

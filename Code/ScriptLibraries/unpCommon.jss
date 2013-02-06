@@ -34,3 +34,16 @@ function getDbPath(){
 	}
 	return applicationScope.dbpath;
 }
+
+try{
+	if (null != UnpluggedLib) {
+		applicationScope.unpluggedserver = true;
+		applicationScope.dominoserver = false;
+	}else{
+		applicationScope.unpluggedserver = false;
+		applicationScope.dominoserver = true;
+	}
+}catch(e){
+	applicationScope.unpluggedserver = false;
+	applicationScope.dominoserver = true;
+}

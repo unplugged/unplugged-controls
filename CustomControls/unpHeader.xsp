@@ -42,6 +42,16 @@ the specific language governing permissions and limitations under the License
 		</xp:metaData>
 	</xp:this.resources>
 
+	<xp:text tagName="script" id="inlinescript">
+
+		<xp:this.value><![CDATA[#{javascript:if(applicationScope.unpluggedserver){
+	return "var unpluggedserver = true;alert(true);";
+}else{
+	return "var unpluggedserver = false;alert(false);";
+}
+}]]></xp:this.value>
+	</xp:text>
+
 	<xp:panel styleClass="iHeader black">
 		<xp:image styleClass="companyLogo" url="/unp/unplugged_logo.png"
 			id="companyLogo"></xp:image>
@@ -113,9 +123,4 @@ else{ return true;
 		</xp:this.attrs>
 		<xp:this.value><![CDATA[#{javascript:"var searchPage = \"" + compositeData.searchPage + "\";"}]]></xp:this.value>
 	</xp:text>
-
-	<!--
-		<script type="text/javascript" src="unp/jquery-1.7.2.min.js"></script>
-	-->
-
 </xp:view>
