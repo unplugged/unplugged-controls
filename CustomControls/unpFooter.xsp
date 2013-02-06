@@ -34,7 +34,8 @@ the specific language governing permissions and limitations under the License
 	</xp:this.resources>
 
 	<xp:panel styleClass="footer black">
-		<xp:link id="link1" styleClass="syncButton" value="#">
+		<xp:link id="link1" styleClass="syncButton" value="#"
+			rendered="#{javascript:isUnpluggedServer();}">
 			<xp:eventHandler event="onclick" submit="true"
 				refreshMode="complete">
 				<xp:this.action>
@@ -61,7 +62,8 @@ db.replicate("someserver");}]]></xp:this.script>
 		<xp:text
 			value='#{javascript:var rep = session.getEnvironmentString("ro.last.replicate", true);
 		  if (""==rep) { rep="(never)" };
-		 return "Updated: " + rep;}' />
+		 return "Updated: " + rep;}'
+			rendered="#{javascript:isUnpluggedServer()}" />
 		<xp:panel tagName="div" id="newButton" styleClass="newButton"
 			rendered="#{javascript:compositeData.newDocTarget != null;}">
 			<xp:this.attrs>

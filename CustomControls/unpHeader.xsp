@@ -44,10 +44,10 @@ the specific language governing permissions and limitations under the License
 
 	<xp:text tagName="script" id="inlinescript">
 
-		<xp:this.value><![CDATA[#{javascript:if(applicationScope.unpluggedserver){
-	return "var unpluggedserver = true;alert(true);";
+		<xp:this.value><![CDATA[#{javascript:if(isUnpluggedServer()){
+	return "var unpluggedserver = true;";
 }else{
-	return "var unpluggedserver = false;alert(false);";
+	return "var unpluggedserver = false;";
 }
 }]]></xp:this.value>
 	</xp:text>
@@ -91,7 +91,12 @@ else{ return true;
 			styleClass="homeButton">
 			<xp:this.attrs>
 				<xp:attr name="onclick">
-					<xp:this.value><![CDATA[$.blockUI();window.location.href="/unpws.unp/";]]></xp:this.value>
+
+					<xp:this.value><![CDATA[#{javascript:if (isUnpluggedServer()){
+	return "$.blockUI();window.location.href=\"/unpws.unp/\";";
+}else{
+	return "$.blockUI();window.location.href=\"/" + @ReplaceSubstring(database.getFilePath(), "\\", "/") + "/UnpMain.xsp\";";
+}}]]></xp:this.value>
 				</xp:attr>
 			</xp:this.attrs>
 			<span></span>

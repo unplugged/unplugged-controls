@@ -35,15 +35,20 @@ function getDbPath(){
 	return applicationScope.dbpath;
 }
 
-try{
-	if (null != UnpluggedLib) {
-		applicationScope.unpluggedserver = true;
-		applicationScope.dominoserver = false;
-	}else{
-		applicationScope.unpluggedserver = false;
-		applicationScope.dominoserver = true;
+function isUnpluggedServer(){
+	if (!applicationScope.containsKey("unpluggedserver")){
+		try{
+			if (null != UnpluggedLib) {
+				applicationScope.unpluggedserver = true;
+				applicationScope.dominoserver = false;
+			}else{
+				applicationScope.unpluggedserver = false;
+				applicationScope.dominoserver = true;
+			}
+		}catch(e){
+			applicationScope.unpluggedserver = false;
+			applicationScope.dominoserver = true;
+		}
 	}
-}catch(e){
-	applicationScope.unpluggedserver = false;
-	applicationScope.dominoserver = true;
+	return applicationScope.unpluggedserver;
 }

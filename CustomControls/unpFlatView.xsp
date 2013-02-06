@@ -110,7 +110,7 @@ return out;}]]></xp:this.styleClass>
 				</ul>
 				<div class="summaryDataRow"></div>
 				<xp:div id="pullUpHolder">
-					<xp:this.rendered><![CDATA[#{javascript:compositeData.refreshmethod == "pull"}]]></xp:this.rendered>
+					<xp:this.rendered><![CDATA[#{javascript:compositeData.refreshmethod == "pull" && applicationScope.unpluggedserver == true}]]></xp:this.rendered>
 					<div id="pullUp">
 						<span class="pullUpIcon"></span>
 						<span class="pullUpLabel">
@@ -120,7 +120,7 @@ return out;}]]></xp:this.styleClass>
 				</xp:div>
 				<xp:div id="loadmorelink">
 					<xp:this.rendered><![CDATA[#{javascript:compositeData.refreshmethod != "none"}]]></xp:this.rendered>
-					<xp:this.styleClass><![CDATA[#{javascript:if (compositeData.refreshmethod != "button"){
+					<xp:this.styleClass><![CDATA[#{javascript:if (compositeData.refreshmethod != "button" && applicationScope.unpluggedserver == true){
 	return "loadmorelink hidden";
 }else{
 	return "loadmorelink";

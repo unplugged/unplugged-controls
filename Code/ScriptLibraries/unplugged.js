@@ -246,79 +246,83 @@ function openPage(url, target) {
 var scrollContent;
 var scrollMenu;
 function initiscroll() {
-	document.addEventListener('touchmove', function(e) {
-		e.preventDefault()
-	});
-	// Initialise any iScroll that needs it
-	try {
-		pullUpEl = document.getElementById('pullUp');
-		pullUpOffset = pullUpEl.offsetHeight;
-	} catch (e) {
-	}
-	try {
-		scrollContent.destroy();
-		delete scrollContent;
-	} catch (e) {
-	}
-	
-	try {
-		scrollMenu.destroy();
-		delete scrollMenu;
-	}catch(e){
-	}
-	try{
-		scrollMenu = new iScroll('menu', {bounce: true, momentum: false});
-	}catch(e){}
-	
-	$(".iscrollcontent")
-			.each(
-					function() {
-						scrollContent = new iScroll(
-								$(this).attr("id"),
-								{
-									useTransition : true,
-									onRefresh : function() {
-										if (pullUpEl) {
-											if (pullUpEl.className
-													.match('loading')) {
-												pullUpEl.className = '';
-												pullUpEl
-														.querySelector('.pullUpLabel').innerHTML = 'Pull up to load more...';
+	if (unpluggedserver){
+		document.addEventListener('touchmove', function(e) {
+			e.preventDefault()
+		});
+		// Initialise any iScroll that needs it
+		try {
+			pullUpEl = document.getElementById('pullUp');
+			pullUpOffset = pullUpEl.offsetHeight;
+		} catch (e) {
+		}
+		try {
+			scrollContent.destroy();
+			delete scrollContent;
+		} catch (e) {
+		}
+		
+		try {
+			scrollMenu.destroy();
+			delete scrollMenu;
+		}catch(e){
+		}
+		try{
+			scrollMenu = new iScroll('menu', {bounce: true, momentum: false});
+		}catch(e){}
+		
+		$(".iscrollcontent")
+				.each(
+						function() {
+							scrollContent = new iScroll(
+									$(this).attr("id"),
+									{
+										useTransition : true,
+										onRefresh : function() {
+											if (pullUpEl) {
+												if (pullUpEl.className
+														.match('loading')) {
+													pullUpEl.className = '';
+													pullUpEl
+															.querySelector('.pullUpLabel').innerHTML = 'Pull up to load more...';
+												}
+											}
+										},
+										onScrollMove : function() {
+											if (pullUpEl) {
+												if (this.y < (this.maxScrollY - 5)
+														&& !pullUpEl.className
+																.match('flip')) {
+													pullUpEl.className = 'flip';
+													pullUpEl
+															.querySelector('.pullUpLabel').innerHTML = 'Release to refresh...';
+													this.maxScrollY = this.maxScrollY;
+												} else if (this.y > (this.maxScrollY + 5)
+														&& pullUpEl.className
+																.match('flip')) {
+													pullUpEl.className = '';
+													pullUpEl
+															.querySelector('.pullUpLabel').innerHTML = 'Pull up to load more...';
+													this.maxScrollY = pullUpOffset;
+												}
+											}
+										},
+										onScrollEnd : function() {
+											if (pullUpEl) {
+												if (pullUpEl.className
+														.match('flip')) {
+													pullUpEl.className = 'loading';
+													pullUpEl
+															.querySelector('.pullUpLabel').innerHTML = 'Loading...';
+													$(".loadmorebutton").click();
+												}
 											}
 										}
-									},
-									onScrollMove : function() {
-										if (pullUpEl) {
-											if (this.y < (this.maxScrollY - 5)
-													&& !pullUpEl.className
-															.match('flip')) {
-												pullUpEl.className = 'flip';
-												pullUpEl
-														.querySelector('.pullUpLabel').innerHTML = 'Release to refresh...';
-												this.maxScrollY = this.maxScrollY;
-											} else if (this.y > (this.maxScrollY + 5)
-													&& pullUpEl.className
-															.match('flip')) {
-												pullUpEl.className = '';
-												pullUpEl
-														.querySelector('.pullUpLabel').innerHTML = 'Pull up to load more...';
-												this.maxScrollY = pullUpOffset;
-											}
-										}
-									},
-									onScrollEnd : function() {
-										if (pullUpEl) {
-											if (pullUpEl.className
-													.match('flip')) {
-												pullUpEl.className = 'loading';
-												pullUpEl
-														.querySelector('.pullUpLabel').innerHTML = 'Loading...';
-												$(".loadmorebutton").click();
-											}
-										}
-									}
-								});
-					});
+									});
+						});
+	}else{
+		//alert("Not on unplugged so no iScroll");
+	}
 }
 
 function openDialog(id){
