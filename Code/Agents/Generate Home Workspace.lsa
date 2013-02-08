@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE agent SYSTEM 'xmlschemas/domino_8_5_3.dtd'>
+<agent name='Generate Home Workspace' xmlns='http://www.lotus.com/dxl' version='8.5'
+ maintenanceversion='3.0' replicaid='80257AA1002D0DF3' hide='v3' publicaccess='false'
+ designerversion='8.5.3'>
+<noteinfo noteid='65c2' unid='C09C45BB7C7D3B2480257B0C004A9F02' sequence='7'>
+<created><datetime>20130208T133503,70+00</datetime></created>
+<modified><datetime>20130208T134801,95+00</datetime></modified>
+<revised><datetime>20130208T134801,94+00</datetime></revised>
+<lastaccessed><datetime>20130208T134801,95+00</datetime></lastaccessed>
+<addedtofile><datetime>20130208T133503,73+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<designchange><datetime>20130208T134801,94+00</datetime></designchange>
+<trigger type='actionsmenu'/>
+<documentset type='selected'/><code event='options'><lotusscript>%REM
+	Agent Generate Home Workspace
+	Created Feb 8, 2013 by Matt White/Exhilarate
+	Description: Comments for Agent
+%END REM
+Option Public
+Option Declare
+
+
+</lotusscript></code><code event='initialize'><lotusscript>Sub Initialize
+	Dim sess As New NotesSession
+	Dim db As NotesDatabase
+	Dim doc As NotesDocument
+	Dim titles(11) As string
+	Dim urls(11) As String
+	Set db = sess.currentdatabase
+	titles(0) = "Header / Footer (With Views)"
+	titles(1) = "Header / Footer (With Back Button)"
+	titles(2) = "Navigator (With icons)"
+	titles(3) = "Navigator (no icons)"
+	titles(4) = "Flat View"
+	titles(5) = "Flat View (Categorized)"
+	titles(6) = "Flat View (different database)"
+	titles(7) = "Database Search"
+	titles(8) = "Accordion"
+	titles(9) = "Dialog"
+	titles(10) = "Debug Toolbar"
+	titles(11) = "Demo of All Widgets" 
+	urls(0) = "/UnpDemoHeaderFooterViewsButton.xsp"
+	urls(1) = "/UnpDemoHeaderFooterBackButton.xsp"
+	urls(2) = "/UnpDemoNavigator.xsp"
+	urls(3) = "/UnpDemoNavigatorNoIcons.xsp"
+	urls(4) = "/UnpDemoFlatView.xsp"
+	urls(5) = "/UnpDemoFlatViewCategory.xsp"
+	urls(6) = "/UnpDemoFlatViewDifferentDB.xsp"
+	urls(7) = "/UnpDemoFlatViewSearch.xsp"
+	urls(8) = "/UnpDemoAccordion.xsp"
+	urls(9) = "/UnpDemoDialog.xsp"
+	urls(10) = "/UnpDemoDebugToolbar.xsp"
+	urls(11) = "/UnpDemoWidgets.xsp"
+	
+	Dim i As Integer
+	Dim dbPath As String
+	dbPath = "/" + Replace(db.Filepath, "\", "/")
+	For i = LBound(titles) To UBound(titles)
+		Set doc = db.Createdocument()
+		doc.Form = "HomeLink"
+		doc.Title = titles(i)
+		doc.ImgUrl = dbPath + "/workspace/calltree-blue.png"
+		doc.UnpUrl = dbPath + urls(i)
+		Call doc.save(True, False)
+	Next
+	
+End Sub</lotusscript></code>
+<rundata processeddocs='0' exitcode='0' agentdata='FDE0FFB1BFC0C42580257B0C004BD011'>
+<agentmodified><datetime>20130208T134801,95+00</datetime></agentmodified>
+<agentrun><datetime>20130208T134831,14+00</datetime></agentrun>
+<runlog>Started running agent 'Generate Home Workspace' on 08/02/2013 13:48:31
+Running on selected documents: 13 total
+Found 13 document(s) that match search criteria
+Ran LotusScript code
+Done running agent 'Generate Home Workspace' on 08/02/2013 13:48:31
+</runlog></rundata></agent>
+
