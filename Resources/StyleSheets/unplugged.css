@@ -1266,6 +1266,14 @@ body {
 
 #formholder ul.fieldlist li {
 	list-style-type: none;	
+	border-bottom: 1px solid #DDD;
+	overflow: hidden;
+	background: white;
+}
+
+#formholder ul.fieldlist li:last-child {
+	border-bottom: 0;
+	border-radius: 0 0 10px 10px;
 }
 
 #formholder .xspTextComputedField {
@@ -1276,7 +1284,6 @@ body {
 	line-height: 24px;
 	min-height: 24px;
 	background: #fff;
-	border-bottom: 1px solid #ddd;
 }
 
 #formholder .body_richtext {
@@ -1291,95 +1298,145 @@ body {
 
 
 .customform {
-	padding-bottom: 40px;	
+	//padding-bottom: 40px;
+	//background: #f5f5f5;	
 }
 
 .customform > div {
 	background: white;
+	//background: #f5f5f5;
 	overflow: hidden;
-}
-
-#formholder label {
-	/*border-bottom: 1px solid #ddd;*/
 }
 
 #formholder .xspInputFieldEditBox,
 #formholder .xspListBox,
 #formholder textarea {
+	color: #0051bb;
 	display: block;
 	font-size: 16px;
-	padding-left: 3%;
-	right: 7%;
+	padding-left: 2%;
+	//right: 7%;
 	line-height: 24px;
-	height: 45px;
+	height: 44px;
 	background: #fff;
-	border: 1px solid #ddd;
+	border: 0;
 	margin: 0;
 	box-sizing: border-box;
 	width: 66%;
 	text-align: left;
 	background: transparent;
-	border-radius:0;
-	float: right;
+	float: left;
 	border-radius: 6px;
 	border-bottom-left-radius: 0;
+	border-radius:0;
+	background: white;
+	border: 0 !important;
 }
 
 #formholder .xspListBox {
-	float: none;	
+	-webkit-appearance: none;
 }
 
-#formholder input:focus {
-	border: none;
-	outline: none;
+#formholder input[type=date] {
+	-webkit-appearance: none;
 }
+
+/*
+#formholder .xspInputFieldEditBox:focus,
+#formholder .xspListBox:focus,
+#formholder textarea:focus {
+	border: 0 !important;
+	outline: 0;
+}*/
+
+/*
+#formholder .xspInputFieldEditBox:focus:before {
+	content: '';
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	background: #b8cce6;
+	position: absolute;
+	top: 14px;
+	right: 14px;
+	cursor: pointer;
+}
+
+#formholder .xspInputFieldEditBox:focus:after {
+	content: 'x';
+	font-size: 10px;
+	font-weight: bold;
+	color: white;
+	position: absolute;
+	top: 16px;
+	right: 16px;
+}
+*/
 
 #formholder textarea {
-	padding: 0px 15px;
 	font-size: 12px;
 	line-height: 18px;
 	overflow: visible;
 	width: 93%;
+	padding-top: 2%;
+	padding-bottom: 2%;
 	float: none;
 	height: 100px;
 }
 
 #formholder label {
-	width: 27%;
+	width: 25%;
 	text-align: right;
 	color: #333;
 	font-size: 12px;
 	font-weight: bold;
-	padding: 10px 0;
+	padding: 10px 2%;
 	line-height: 24px;
-	height: 24px;
+	//height: 24px;
+	background: white;
 	float: left;
 	clear: left;
+	border-right: 1px solid transparent;
 }
 
+#formholder.editmode label {
+	border-color: #E5E5E5;
+	background: #F5F5F5;
+}
+
+/*
 #formholder label.longlabel {
-	padding: 10px 0;
+	//padding: 10px 0;
 }
 
 @media screen and (max-width: 800px){
 	#formholder label.longlabel {
-		padding: 0px 0;
-		line-height: normal;
+		//padding: 0px 0;
+		//line-height: normal;
 	}
 }
+*/
 
+/*
 .editmode label {
 	border-bottom: 1px solid #DDD;
+	border: 0;
 }
+*/
 
-.editmode label.longlabel {
+/*.editmode label.longlabel {
 	padding: 10px 0 !important;
 	line-height: normal !important;	
-}
+}*/
 
 #formholder label.widelabel {
-	border-bottom: 0px;
-	padding-bottom: 0px;
+	padding-bottom: 10px;
+	text-align: left;
+	width: auto;
+	display: block;
+	float: none;
+	border: 0;
+	border-bottom: 1px solid #e5e5e5;
 }
 
 #formholder .bordered {
