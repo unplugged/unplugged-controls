@@ -83,6 +83,7 @@
 local&#xd;
 database</editor-parameter>
         </designer-extension>
+        <required>true</required>
       </property-extension>
     </property>
     <property>
