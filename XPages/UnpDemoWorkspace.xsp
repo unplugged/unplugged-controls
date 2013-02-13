@@ -35,7 +35,9 @@ the specific language governing permissions and limitations under the License
 					</xp:value>
 		</xc:this.headerinfo>
 	</xc:unpWorkspace>
-	<xc:unpFooter settingsurl="/unpws.unp/UnpAbout.xsp"></xc:unpFooter>
+	<xc:unpFooter settingsurl="/unpws.unp/UnpAbout.xsp"
+		synctype="currentdb">
+	</xc:unpFooter>
 	<script>
 		$(window).load( function() {
 			setBadge("Updates", "7");

@@ -166,7 +166,7 @@ the specific language governing permissions and limitations under the License
 			</xc:unpScrollableArea>
 		</xp:this.facets>
 	</xc:unpDialog>
-	<xc:unpFooter></xc:unpFooter>
+	<xc:unpFooter synctype="currentdb"></xc:unpFooter>
 
 	<script>
 		function myCallBackFunction(){

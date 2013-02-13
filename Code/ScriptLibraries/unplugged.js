@@ -387,3 +387,14 @@ function fetchMoreDetails(obj, viewName, catName, xpage, dbname){
 	var objRow = $(obj).parent().parent().prev();
 	accordionLoadMore(objRow, viewName, catName, xpage, dbname);	
 }
+
+function syncAllDbs(){
+	$.blockUI({
+		centerY: 0,
+		css: { top: '10px', left: '10px', right: '' }
+	});
+	$.get("UnpSyncAll.xsp", function(data) {
+		$.unblockUI();
+		location.reload();
+	});
+}

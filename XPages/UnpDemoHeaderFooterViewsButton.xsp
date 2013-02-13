@@ -370,5 +370,5 @@ the specific language governing permissions and limitations under the License
 		</xp:this.facets>
 	</xc:unpScrollableArea>
 
-	<xc:unpFooter newDocTarget="NewDoc.xsp"></xc:unpFooter>
+	<xc:unpFooter newDocTarget="NewDoc.xsp" synctype="currentdb"></xc:unpFooter>
 </xp:view>

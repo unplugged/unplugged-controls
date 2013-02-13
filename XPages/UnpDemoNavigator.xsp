@@ -67,5 +67,5 @@
 			UnpDemoNavigator
 		</div>
 	</div>
-	<xc:unpFooter></xc:unpFooter>
+	<xc:unpFooter synctype="currentdb"></xc:unpFooter>
 </xp:view>

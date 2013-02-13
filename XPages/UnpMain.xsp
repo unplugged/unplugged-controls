@@ -23,5 +23,5 @@ the specific language governing permissions and limitations under the License
 	<xc:unpWorkspace imgurlcol="ImgUrl" labelcol="Title"
 		linkurlcol="UnpUrl" badgeidcol="BadgeID">
 	</xc:unpWorkspace>
-	<xc:unpFooter	></xc:unpFooter>
+	<xc:unpFooter synctype="alldbs"></xc:unpFooter>
 </xp:view>

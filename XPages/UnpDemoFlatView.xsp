@@ -30,5 +30,5 @@ the specific language governing permissions and limitations under the License
 			</xp:this.facets>
 		</xc:unpScrollableArea>
 	</div>
-	<xc:unpFooter></xc:unpFooter>
+	<xc:unpFooter synctype="currentdb"></xc:unpFooter>
 </xp:view>

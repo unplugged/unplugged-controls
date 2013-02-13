@@ -57,7 +57,7 @@ try {
 	<xc:unpHeader search="none" searchPage="UnpSearch.xsp"
 		viewsButton="false" title="Debug Toolbar">
 	</xc:unpHeader>
-	<xc:unpFooter></xc:unpFooter>
+	<xc:unpFooter synctype="currentdb"></xc:unpFooter>
 
 	<xp:this.afterPageLoad><![CDATA[#{javascript:dBar.debug("afterPageLoad");}]]></xp:this.afterPageLoad>
 	<xp:this.beforeRenderResponse><![CDATA[#{javascript:dBar.debug("beforeRenderResponse");}]]></xp:this.beforeRenderResponse>

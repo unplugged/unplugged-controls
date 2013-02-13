@@ -53,5 +53,19 @@
       <property-name>settingsurl</property-name>
       <property-class>string</property-class>
     </property>
+    <property>
+      <property-name>synctype</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <editor-parameter>none&#xd;
+currentdb&#xd;
+alldbs</editor-parameter>
+          <default-value>currentdb</default-value>
+        </designer-extension>
+        <required>true</required>
+      </property-extension>
+    </property>
   </composite-component>
 </faces-config>

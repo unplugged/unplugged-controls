@@ -54,5 +54,7 @@ the specific language governing permissions and limitations under the License
 			</xp:this.facets>
 		</xc:unpScrollableArea>
 	</div>
-	<xc:unpFooter newDocTarget="EmployeeEdit.xsp"></xc:unpFooter>
+	<xc:unpFooter newDocTarget="EmployeeEdit.xsp"
+		synctype="currentdb">
+	</xc:unpFooter>
 </xp:view>

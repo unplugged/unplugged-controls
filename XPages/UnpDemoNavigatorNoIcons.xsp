@@ -62,5 +62,5 @@ the specific language governing permissions and limitations under the License
 			UnpDemoNavigator
 		</div>
 	</div>
-	<xc:unpFooter></xc:unpFooter>
+	<xc:unpFooter synctype="currentdb"></xc:unpFooter>
 </xp:view>
