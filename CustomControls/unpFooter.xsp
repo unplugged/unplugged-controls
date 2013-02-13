@@ -76,7 +76,11 @@ db.replicate("someserver");}]]></xp:this.script>
 			rendered="#{javascript:compositeData.newDocTarget != null;}">
 			<xp:this.attrs>
 				<xp:attr name="onclick">
-					<xp:this.value><![CDATA[#{javascript:"openDocument('" + compositeData.newDocTarget + "?action=newDocument', 'content');"}]]></xp:this.value>
+					<xp:this.value><![CDATA[#{javascript:if (compositeData.newDocLoadType != "full"){
+	return "openDocument('" + compositeData.newDocTarget + "?action=newDocument', 'content');";
+}else{
+	return "$.blockUI();window.location.href='" + compositeData.newDocTarget + "?action=newDocument';";
+}}]]></xp:this.value>
 				</xp:attr>
 			</xp:this.attrs>
 			<span>New</span>
