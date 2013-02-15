@@ -34,9 +34,10 @@ the specific language governing permissions and limitations under the License
 				</xp:text>
 			</h2>
 			<xp:callback facetName="facet_1" id="callback1"></xp:callback>
-			<xp:panel id="buttons" styleClass="buttons" tagName="ul"
-				rendered="#{compositeData.showbuttons == true}">
-				<xp:panel tagName="li" id="saveButton" styleClass="saveButton">
+			<xp:panel id="buttons" styleClass="buttons" tagName="ul">
+				<xp:this.rendered><![CDATA[#{javascript:compositeData.showbuttons == "yes"}]]></xp:this.rendered>
+				<xp:panel tagName="li" id="saveButton"
+					styleClass="saveButton">
 					<xp:this.attrs>
 						<xp:attr name="onclick">
 							<xp:this.value><![CDATA[#{javascript:var out = "saveDocument('" + getClientId("customform") + "', '" + document1.getDocument().getUniversalID() + 
@@ -53,7 +54,8 @@ return out;}]]></xp:this.value>
 					</xp:this.attrs>
 					<span>Save</span>
 				</xp:panel>
-				<xp:panel id="closebutton" styleClass="cancelButton" tagName="li">
+				<xp:panel id="closebutton" styleClass="cancelButton"
+					tagName="li">
 					<xp:this.attrs>
 						<xp:attr name="onclick">
 							<xp:this.value><![CDATA[#{javascript:return "$.blockUI(); window.location.href='" + compositeData.closexpagename + "';";}]]></xp:this.value>
