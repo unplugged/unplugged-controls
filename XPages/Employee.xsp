@@ -12,55 +12,74 @@ the specific language governing permissions and limitations under the License
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
 	<xc:unpScrollableArea>
 		<xp:this.facets>
-			<xc:unpFormViewer showbuttons="true" closexpagename="UnpDemoWidgets.xsp"
-				editxpagename="EmployeeEdit.xsp" formname="Employee" title="Employee" newresponsexpagename=""
+			<xc:unpFormViewer showbuttons="true"
+				closexpagename="UnpDemoWidgets.xsp" editxpagename="EmployeeEdit.xsp"
+				formname="Employee" title="Employee" newresponsexpagename=""
 				xp:key="facet_1">
 				<xp:this.facets>
 					<xp:panel xp:key="facet_1">
 						<ul class="fieldlist">
 							<li>
-								<xp:label value="Name" id="namelabel" for="name">
+								<xp:label value="Name" id="namelabel"
+									for="name">
 								</xp:label>
-								<xp:text id="name" value="#{document1.Name}"></xp:text>
-							</li>
-							<li>
-								<xp:label value="DOB" id="doblabel" for="birthday">
-								</xp:label>
-								<xp:text id="birthday" value="#{document1.Birthday}">
+								<xp:text id="name"
+									value="#{document1.Name}">
 								</xp:text>
 							</li>
 							<li>
-								<xp:label value="Email" id="emaillabel" for="email">
+								<xp:label value="DOB" id="doblabel"
+									for="birthday">
 								</xp:label>
-								<xp:text id="email" value="#{document1.Email}">
+								<xp:text id="birthday"
+									value="#{document1.Birthday}">
 								</xp:text>
 							</li>
 							<li>
-								<xp:label value="Start Month" id="startmonthlabel" for="startmonth">
+								<xp:label value="Email" id="emaillabel"
+									for="email">
 								</xp:label>
-								<xp:text id="startmonth" value="#{document1.StartDate}">
+								<xp:text id="email"
+									value="#{document1.Email}">
 								</xp:text>
 							</li>
 							<li>
-								<xp:label value="Manager long label blah blah" id="managerlabel" for="manager" styleClass="longlabel">
+								<xp:label value="Start Month"
+									id="startmonthlabel" for="startmonth">
 								</xp:label>
-								<xp:text id="manager" value="#{document1.Manager}">
+								<xp:text id="startmonth"
+									value="#{document1.StartDate}">
 								</xp:text>
 							</li>
 							<li>
-								<xp:label value="Dept" id="deptlabel" for="dept">
+								<xp:label
+									value="Manager long label blah blah" id="managerlabel"
+									for="manager" styleClass="longlabel">
 								</xp:label>
-								<xp:text id="dept" value="#{document1.Dept}"></xp:text>
+								<xp:text id="manager"
+									value="#{document1.Manager}">
+								</xp:text>
 							</li>
 							<li>
-								<xp:label value="Countries" id="countrieslabel" for="countries">
+								<xp:label value="Dept" id="deptlabel"
+									for="dept">
 								</xp:label>
-								<xp:text id="countries" value="#{document1.Countries}">
+								<xp:text id="dept"
+									value="#{document1.Dept}">
+								</xp:text>
+							</li>
+							<li>
+								<xp:label value="Countries"
+									id="countrieslabel" for="countries">
+								</xp:label>
+								<xp:text id="countries"
+									value="#{document1.Countries}">
 								</xp:text>
 							</li>
 							<li>
 								<xp:text id="description" tagName="div"
-									value="#{document1.Description}" escape="false" styleClass="body_richtext">
+									value="#{document1.Description}" escape="false"
+									styleClass="body_richtext">
 								</xp:text>
 							</li>
 						</ul>
