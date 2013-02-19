@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-Copyright 2013 Teamstudio Inc 
-Licensed under the Apache License, Version 2.0 (the "License"); 
-you may not use this file except in compliance with the License. You may obtain a copy of the License at
-http://www.apache.org/licenses/LICENSE-2.0 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed 
-on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
-the specific language governing permissions and limitations under the License
- -->
+	<!--
+		Copyright 2013 Teamstudio Inc Licensed under the Apache License,
+		Version 2.0 (the "License"); you may not use this file except in
+		compliance with the License. You may obtain a copy of the License at
+		http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+		applicable law or agreed to in writing, software distributed under the
+		License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or implied. See the License for
+		the specific language governing permissions and limitations under the
+		License
+	-->
 
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" rendered="false">
-	
+
 	<xp:this.afterRenderResponse><![CDATA[#{javascript:var exCon = facesContext.getExternalContext(); 
 var writer = facesContext.getResponseWriter();
 var response = exCon.getResponse();
@@ -20,22 +22,20 @@ var unid = "testing";
 try{
 	resp = "Started";
 	var doc = null;
-	resp = "Gettings doc";
-	var db = database;
-	if (context.getUrlParameter("dbname") != ""){
-		db = session.getDatabase(database.getServer(), context.getUrlParameter("dbname"));
-	}
+	resp = "Getting doc";
 	try{
-		doc = db.getDocumentByUNID(context.getUrlParameter("unid"));
+		doc = database.getDocumentByUNID(context.getUrlParameter("unid"));
 	}catch(e){
+		resp = "Error getting doc";
 	}
 	if (doc == null){
-		doc = db.createDocument();
+		resp = "Creating doc";
+		doc = database.createDocument();
 		doc.replaceItemValue("Form", context.getUrlParameter("formname"));
 	}
 	resp = "getting parentunid";
 	if (context.getUrlParameter("parentunid") != "" && context.getUrlParameter("parentunid") != "null"){
-		var parent:NotesDocument = db.getDocumentByUNID(context.getUrlParameter("parentunid"));
+		var parent:NotesDocument = database.getDocumentByUNID(context.getUrlParameter("parentunid"));
 		resp = "creating response to parentunid = " + parent.getUniversalID();
 		doc.makeResponse(parent);
 	}
@@ -74,7 +74,7 @@ try{
 				resp = (key + ": " + value);
 			}
 		}
-		
+
 		doc.save();
 		unid = doc.getUniversalID();
 		resp = "OK";
@@ -82,7 +82,7 @@ try{
 		resp = e;
 	}
 }catch(mainerror){
-	
+
 }
 if(resp == "OK")
 {
@@ -91,4 +91,5 @@ if(resp == "OK")
 	writer.write("Error: " + resp);
 }
 writer.endDocument();
-facesContext.responseComplete();}]]></xp:this.afterRenderResponse></xp:view>
+facesContext.responseComplete();}]]></xp:this.afterRenderResponse>
+</xp:view>
