@@ -56,14 +56,14 @@ if (start == ""){
 					</xp:attr>
 				</xp:this.attrs>
 				<xp:image url="/unp/right-arrow-circle.png" id="image1">
-					<xp:this.styleClass><![CDATA[#{javascript:if(context.getUrlParameter("detailcol") == "undefined"){ return 'singleLineIcon';} else {return 'multiLineIcon';}}]]></xp:this.styleClass>
+					<xp:this.styleClass><![CDATA[#{javascript:if(context.getUrlParameter("detailcol") == "undefined" || context.getUrlParameter("detailcol") == "null"){ return 'singleLineIcon';} else {return 'multiLineIcon';}}]]></xp:this.styleClass>
 				</xp:image>
 				<xp:label id="label2" styleClass="viewlistsummary">
 					<xp:this.value><![CDATA[#{javascript:thisRowData.getColumnValue(context.getUrlParameter("summarycol"));}]]></xp:this.value>
 				</xp:label>
 
 				<xp:text tagName="div" id="detail" styleClass="viewlistdetail">
-					<xp:this.value><![CDATA[#{javascript:if(context.getUrlParameter("detailcol") == "undefined"){
+					<xp:this.value><![CDATA[#{javascript:if(context.getUrlParameter("detailcol") == "undefined" || context.getUrlParameter("detailcol") == "null"){
 	return "";
 }else{
   return thisRowData.getColumnValue(context.getUrlParameter("detailcol"));
