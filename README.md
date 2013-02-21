@@ -5,6 +5,27 @@ Using these controls, we've also provided 3 application templates  (Doc Library,
 It is our intention to publish periodic updates to these controls to OpenNTF.  
 
 ## Changes
+
+### v1.2.0 (22nd Feb 2013)
+93. - Display data from a different database in Flat View control
+98. - Enhance UI for documents in edit mode
+99. - Re-styled Back button
+100. - Fixed bug with Dialog Control when used on document in edit mode
+101, 110. - Fixed layout bug for widescreen Android tablets
+105. - Renamed unpViewList control to unpNavigator to be more descriptive
+109, 121. - Re-styled Home page of sample app to use Workspace control. (Make sure to run "Generate Home Workspace" agent to see the icons)
+111. - Fixed various bugs to allow all controls to work in mobile browsers as well as Unplugged
+115. - Documentation updated
+117. - Variables created to allow developer to tell where code is running (Unplugged or Domino)
+119. - Fixed bug with display of icons on Workspace on iPad
+122. - Added menu-aligned option to Accordion control
+123. - Added support for null setting of search property in UnpHeader control
+126. - Added option for new button in footer to perform a full page load or Ajax load
+127. - Added option to Sync button in footer to sync current database or all databases
+129. - Fixed bug with showbuttons property in unpFormEditor
+130. - Added option for Edit button in Form Viewer control to perform a full page load or Ajax load
+131. - Fixed bug with Flat view control get more data function if the data column is left blank
+
 ### v1.1.0 (22nd Jan 2013)
 85. - UnpViewsList - made documentation better (in Github Wiki) and also changed Custom Property defaults to be more logical
 86. - UnpAccordion - made last element in list show with rounded corners where appropriate. Also changed Custom Property picker for xpage to use the XPages List
