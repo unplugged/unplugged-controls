@@ -25,7 +25,8 @@ the specific language governing permissions and limitations under the License
 				<xc:unpFlatView insetData="true" title="Employees"
 					summaryColumn="Name" viewName="Employees"
 					xpageDoc="UnpDemoEmployee.xsp" xp:key="facet_1" numberofrows="20"
-					refreshmethod="pull" position="left-aligned" ajaxload="Yes">
+					refreshmethod="pull" position="left-aligned" ajaxload="Yes"
+					detailColumn="DOB">
 				</xc:unpFlatView>
 			</xp:this.facets>
 		</xc:unpScrollableArea>
