@@ -3,17 +3,17 @@
 <agent name='Generate Home Workspace' xmlns='http://www.lotus.com/dxl' version='8.5'
  maintenanceversion='3.0' replicaid='80257AA1002D0DF3' hide='v3' publicaccess='false'
  designerversion='8.5.3'>
-<noteinfo noteid='65c2' unid='C09C45BB7C7D3B2480257B0C004A9F02' sequence='8'>
+<noteinfo noteid='65c2' unid='C09C45BB7C7D3B2480257B0C004A9F02' sequence='12'>
 <created><datetime>20130208T133503,70+00</datetime></created>
-<modified><datetime>20130219T091453,53+00</datetime></modified>
-<revised><datetime>20130219T091453,52+00</datetime></revised>
-<lastaccessed><datetime>20130219T091453,53+00</datetime></lastaccessed>
+<modified><datetime>20130221T152328,11+00</datetime></modified>
+<revised><datetime>20130221T152328,10+00</datetime></revised>
+<lastaccessed><datetime>20130221T152328,11+00</datetime></lastaccessed>
 <addedtofile><datetime>20130208T133503,73+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
-<designchange><datetime>20130219T091453,31+00</datetime></designchange>
+<designchange><datetime>20130221T152338,20+00</datetime></designchange>
 <trigger type='actionsmenu'/>
-<documentset type='selected'/><code event='options'><lotusscript>%REM
+<documentset type='runonce'/><code event='options'><lotusscript>%REM
 	Agent Generate Home Workspace
 	Created Feb 8, 2013 by Matt White/Exhilarate
 	Description: Comments for Agent
@@ -26,7 +26,7 @@ Option Declare
 	Dim sess As New NotesSession
 	Dim db As NotesDatabase
 	Dim doc As NotesDocument
-	Dim titles(11) As string
+	Dim titles(11) As String
 	Dim urls(11) As String
 	Set db = sess.currentdatabase
 	titles(0) = "Header / Footer (With Views)"
@@ -57,7 +57,7 @@ Option Declare
 	Dim i As Integer
 	Dim dbPath As String
 	dbPath = "/" + Replace(db.Filepath, "\", "/")
-	For i = LBound(titles) To UBound(titles)
+	For i = Lbound(titles) To Ubound(titles)
 		Set doc = db.Createdocument()
 		doc.Form = "HomeLink"
 		doc.Title = titles(i)
@@ -67,13 +67,6 @@ Option Declare
 	Next
 	
 End Sub</lotusscript></code>
-<rundata processeddocs='0' exitcode='0' agentdata='FDE0FFB1BFC0C42580257B0C004BD011'>
-<agentmodified><datetime>20130208T134801,95+00</datetime></agentmodified>
-<agentrun><datetime>20130208T134831,14+00</datetime></agentrun>
-<runlog>Started running agent 'Generate Home Workspace' on 08/02/2013 13:48:31
-Running on selected documents: 13 total
-Found 13 document(s) that match search criteria
-Ran LotusScript code
-Done running agent 'Generate Home Workspace' on 08/02/2013 13:48:31
-</runlog></rundata></agent>
+<rundata processeddocs='0' exitcode='0'>
+<agentmodified><datetime>20130221T152338,03+00</datetime></agentmodified></rundata></agent>
 
