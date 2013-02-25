@@ -26,7 +26,7 @@
 								</xp:label>
 								<xp:inputText id="name"
 									value="#{document1.Name}"
-									styleClass="required xspInputFieldEditBox">
+									styleClass="required xspInputFieldEditBox deletable">
 								</xp:inputText>
 							</li>
 							<li>

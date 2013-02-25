@@ -35,7 +35,9 @@ $(window).load( function() {
 		});
 	}catch(e){
 		
-	}
+	}	
+	
+	initDeleteable();
 });
 
 $(window).scroll( function() {
@@ -135,6 +137,7 @@ function openDocument(url, target) {
 					}
 					
 				}
+				initDeleteable();
 				return false;
 			});
 }
@@ -230,6 +233,7 @@ function loadPage(url, target, menuitem) {
 			firedrequests = new Array();
 		}
 		initiscroll();
+		initDeleteable();
 		return false;
 	});
 	var menuitems = $("#menuitems li");
@@ -243,6 +247,16 @@ function loadPage(url, target, menuitem) {
 function openPage(url, target) {
 	$.blockUI();
 	document.location.href = url;
+}
+
+function initDeleteable(){
+	try{
+		$('input.deletable').wrap('<span class="deleteicon" />').after($('<span/>').click(function() {
+            $(this).prev('input').val('').focus();
+        }));
+	}catch(e){
+		
+	}
 }
 
 var scrollContent;

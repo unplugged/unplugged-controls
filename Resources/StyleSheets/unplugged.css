@@ -1388,7 +1388,7 @@ to {
 }
 
 @media screen and (min-width: 1001px) and (orientation:landscape) {
-	.pullleft, .left-aligned {
+	.pullleft,.left-aligned {
 		margin-left: -42% !important;
 	}
 	.accpullleft {
@@ -1813,8 +1813,7 @@ CSS Controls
 	background: #fff;
 	color: #333;
 	border: 1px solid #EEE;
-	margin-top: 5px;
-	padding: 10px 15px;
+	margin-top: 5px; padding : 10px 15px;
 	font-size: 16px;
 	line-height: 24px;
 	text-overflow: ellipsis;
@@ -1824,6 +1823,7 @@ CSS Controls
 	-webkit-border-top-right-radius: 8px;
 	-webkit-border-bottom-left-radius: 8px;
 	-webkit-border-bottom-right-radius: 8px;
+	padding: 10px 15px;
 }
 
 legend {
@@ -1895,4 +1895,23 @@ legend {
 .editbutton:hover {
 	border: 1px solid #0643ec;
 	background: -webkit-linear-gradient(#1a8fee, #0643ec);
+}
+
+span.deleteicon {
+	position: relative;
+}
+
+span.deleteicon span {
+	position: absolute;
+	display: block;
+	top: 12px;
+	right: 0px;
+	width: 16px;
+	height: 16px;
+	background:url('unp/cross.png') no-repeat;
+	cursor: pointer;
+}
+
+span.deleteicon input {
+	padding-right: 16px;
 }
