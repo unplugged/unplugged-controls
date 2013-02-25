@@ -3,15 +3,15 @@
 <agent name='Generate Home Workspace' xmlns='http://www.lotus.com/dxl' version='8.5'
  maintenanceversion='3.0' replicaid='80257AA1002D0DF3' hide='v3' publicaccess='false'
  designerversion='8.5.3'>
-<noteinfo noteid='65c2' unid='C09C45BB7C7D3B2480257B0C004A9F02' sequence='12'>
+<noteinfo noteid='65c2' unid='C09C45BB7C7D3B2480257B0C004A9F02' sequence='14'>
 <created><datetime>20130208T133503,70+00</datetime></created>
-<modified><datetime>20130221T152328,11+00</datetime></modified>
-<revised><datetime>20130221T152328,10+00</datetime></revised>
-<lastaccessed><datetime>20130221T152328,11+00</datetime></lastaccessed>
+<modified><datetime>20130225T124926,73+00</datetime></modified>
+<revised><datetime>20130225T124926,72+00</datetime></revised>
+<lastaccessed><datetime>20130225T124926,73+00</datetime></lastaccessed>
 <addedtofile><datetime>20130208T133503,73+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
-<designchange><datetime>20130221T152338,20+00</datetime></designchange>
+<designchange><datetime>20130225T124928,74+00</datetime></designchange>
 <trigger type='actionsmenu'/>
 <documentset type='runonce'/><code event='options'><lotusscript>%REM
 	Agent Generate Home Workspace
@@ -26,8 +26,8 @@ Option Declare
 	Dim sess As New NotesSession
 	Dim db As NotesDatabase
 	Dim doc As NotesDocument
-	Dim titles(11) As String
-	Dim urls(11) As String
+	Dim titles(12) As String
+	Dim urls(12) As String
 	Set db = sess.currentdatabase
 	titles(0) = "Header / Footer (With Views)"
 	titles(1) = "Header / Footer (With Back Button)"
@@ -40,7 +40,8 @@ Option Declare
 	titles(8) = "Accordion"
 	titles(9) = "Dialog"
 	titles(10) = "Debug Toolbar"
-	titles(11) = "Demo of All Widgets" 
+	titles(11) = "Demo of All Widgets"
+	titles(12) = "CSS Classes" 
 	urls(0) = "/UnpDemoHeaderFooterViewsButton.xsp"
 	urls(1) = "/UnpDemoHeaderFooterBackButton.xsp"
 	urls(2) = "/UnpDemoNavigator.xsp"
@@ -53,6 +54,7 @@ Option Declare
 	urls(9) = "/UnpDemoDialog.xsp"
 	urls(10) = "/UnpDemoDebugToolbar.xsp"
 	urls(11) = "/UnpDemoWidgets.xsp"
+	urls(12) = "/UnpCSSControls.xsp"
 	
 	Dim i As Integer
 	Dim dbPath As String
@@ -68,5 +70,5 @@ Option Declare
 	
 End Sub</lotusscript></code>
 <rundata processeddocs='0' exitcode='0'>
-<agentmodified><datetime>20130221T152338,03+00</datetime></agentmodified></rundata></agent>
+<agentmodified><datetime>20130225T124928,60+00</datetime></agentmodified></rundata></agent>
 
