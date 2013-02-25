@@ -1388,7 +1388,7 @@ to {
 }
 
 @media screen and (min-width: 1001px) and (orientation:landscape) {
-	.pullleft {
+	.pullleft, .left-aligned {
 		margin-left: -42% !important;
 	}
 	.accpullleft {
