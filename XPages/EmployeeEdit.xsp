@@ -53,7 +53,7 @@
 								</xp:label>
 								<xp:inputText id="email"
 									value="#{document1.Email}" type="email"
-									styleClass="xspInputFieldEditBox">
+									styleClass="xspInputFieldEditBox deletable">
 								</xp:inputText>
 							</li>
 							<li>
@@ -95,7 +95,7 @@
 								</xp:label>
 								<xp:inputText id="manager"
 									value="#{document1.Manager}"
-									styleClass="xspInputFieldEditBox">
+									styleClass="xspInputFieldEditBox deletable">
 								</xp:inputText>
 							</li>
 							<li>
@@ -104,7 +104,7 @@
 								</xp:label>
 								<xp:inputText id="dept"
 									value="#{document1.Dept}"
-									styleClass="required xspInputFieldEditBox">
+									styleClass="required xspInputFieldEditBox deletable">
 								</xp:inputText>
 							</li>
 							<li>

@@ -1904,11 +1904,12 @@ span.deleteicon {
 span.deleteicon span {
 	position: absolute;
 	display: block;
-	top: 12px;
+	top: 9px;
 	right: 0px;
-	width: 16px;
-	height: 16px;
+	width: 24px;
+	height: 26px;
 	background:url('unp/cross.png') no-repeat;
+	background-size: 100% auto;
 	cursor: pointer;
 }
 
