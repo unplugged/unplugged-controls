@@ -1122,6 +1122,7 @@ to {
 	float: left;
 	height: 36px;
 	list-style-type: none;
+	background: transparent;
 }
 
 #formholder ul.buttons li span {
@@ -1860,10 +1861,11 @@ legend {
 	border: 1px solid #2e2e2e;
 	background: #333333;
 	color: white;
+	background: -webkit-linear-gradient(#878787, #414141);
 }
 
 .button:hover {
-	background: #111;
+	background: -webkit-linear-gradient(#636363, #212121);
 	text-decoration: none;
 }
 
