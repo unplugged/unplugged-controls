@@ -73,7 +73,7 @@ viewScope.put("images", images);
 	</ul>
 	<div id="closeButton">
 	<xp:link escape="true" id="link1"
-		value="/unpws.unp/">
+		value="#{javascript:compositeData.closeXpage;}">
 		<xp:label value="Close" id="label1">
 		</xp:label>
 	</xp:link>

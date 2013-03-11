@@ -60,5 +60,9 @@
         <required>true</required>
       </property-extension>
     </property>
+    <property>
+      <property-name>closeXPage</property-name>
+      <property-class>string</property-class>
+    </property>
   </composite-component>
 </faces-config>
