@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <faces-config>
   <faces-config-extension>
-    <namespace-uri>http://www.ibm.com/xsp/unplugged</namespace-uri>
+    <namespace-uri>http://unplugged.teamstudio.com</namespace-uri>
     <default-prefix>unp</default-prefix>
   </faces-config-extension>
   <composite-component>
