@@ -14,16 +14,16 @@
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core">
 	<style>
 		body {
-		padding-bottom: 45px;
+		padding-bottom: 45px !important;
 		}
 		@media screen and (min-width: 701px) {
 		body {
-		padding-bottom: 60px;
+		padding-bottom: 60px !important;
 		}
 		}
 		@media screen and (max-width: 700px) {
 		body {
-		padding-bottom: 45px;
+		padding-bottom: 45px !important;
 		}
 		}
 	</style>
