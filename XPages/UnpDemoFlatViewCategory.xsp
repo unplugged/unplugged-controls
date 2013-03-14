@@ -10,24 +10,24 @@ the specific language governing permissions and limitations under the License
  -->
 
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core"
-	xmlns:xc="http://www.ibm.com/xsp/custom">
+	xmlns:xc="http://www.ibm.com/xsp/custom" xmlns:unp="http://www.ibm.com/xsp/unplugged">
 	<xp:this.resources>
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 	</xp:this.resources>
-	<xc:unpHeader search="none" searchPage="UnpSearch.xsp"
+	<unp:unpHeader search="none" searchPage="UnpSearch.xsp"
 		viewsButton="false" backButtonText="Back" backButtonURL="UnpDemoFlatViewCategory.xsp"
 		title="Employees">
-	</xc:unpHeader>
+	</unp:unpHeader>
 	<div id="content">
-		<xc:unpScrollableArea>
+		<unp:unpScrollableArea>
 			<xp:this.facets>
-				<xc:unpFlatView insetData="true" detailColumn="DOB"
+				<unp:unpFlatView insetData="true" detailColumn="DOB"
 					summaryColumn="Name" title="Finance Employees" xp:key="facet_1"
 					categoryfilter="Finances" viewName="EmployeesCatByDept"
 					xpageDoc="UnpDemoEmployee.xsp" numberofrows="20">
-				</xc:unpFlatView>
+				</unp:unpFlatView>
 			</xp:this.facets>
-		</xc:unpScrollableArea>
+		</unp:unpScrollableArea>
 	</div>
-	<xc:unpFooter synctype="currentdb"></xc:unpFooter>
+	<unp:unpFooter synctype="currentdb"></unp:unpFooter>
 </xp:view>

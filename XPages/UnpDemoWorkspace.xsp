@@ -9,7 +9,7 @@ on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either expres
 the specific language governing permissions and limitations under the License
  -->
 
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom" xmlns:unp="http://www.ibm.com/xsp/unplugged">
 
 	<xp:this.data>
 		<xp:dominoView var="dbs" viewName="Databases"></xp:dominoView>
@@ -17,13 +17,13 @@ the specific language governing permissions and limitations under the License
 	<xp:this.resources>
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 	</xp:this.resources>
-	<xc:unpHeader search="none" searchPage="UnpSearch.xsp"
+	<unp:unpHeader search="none" searchPage="UnpSearch.xsp"
 		viewsButton="false" title="Continuity">
-	</xc:unpHeader>
-	<xc:unpWorkspace imgurlcol="ImgUrl" labelcol="Title"
+	</unp:unpHeader>
+	<unp:unpWorkspace imgurlcol="ImgUrl" labelcol="Title"
 		linkurlcol="UnpUrl" alertlevel="elevated" alertlevelhighlabel="High" alertlevelelevatedlabel="Elevated"
 		alertlevelnormallabel="Normal" badgeidcol="BadgeID">
-		<xc:this.headerinfo>
+		<unp:this.headerinfo>
 			<xp:value>
 				#{javascript:&quot;&lt;strong&gt;&quot; +
 				@Name(&quot;[CN]&quot;, @UserName()) +
@@ -33,11 +33,11 @@ the specific language governing permissions and limitations under the License
 			<xp:value>
 				&lt;strong&gt;Org Unit:&lt;/strong&gt; Zetafire
 					</xp:value>
-		</xc:this.headerinfo>
-	</xc:unpWorkspace>
-	<xc:unpFooter settingsurl="/unpws.unp/UnpAbout.xsp"
+		</unp:this.headerinfo>
+	</unp:unpWorkspace>
+	<unp:unpFooter settingsurl="/unpws.unp/UnpAbout.xsp"
 		synctype="currentdb">
-	</xc:unpFooter>
+	</unp:unpFooter>
 	<script>
 		$(window).load( function() {
 			setBadge("Updates", "7");

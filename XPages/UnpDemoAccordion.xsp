@@ -9,24 +9,27 @@ on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either expres
 the specific language governing permissions and limitations under the License
  -->
 
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom"
+	xmlns:unp="http://www.ibm.com/xsp/unplugged">
 
 	<xp:this.resources>
 		<xp:script src="unp/jquery-1.7.2.min.js" clientSide="true"></xp:script>
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
 	</xp:this.resources>
-	<xc:unpHeader search="none" searchPage="UnpSearch.xsp"
+	<unp:unpHeader search="none" searchPage="UnpSearch.xsp"
 		viewsButton="false" title="Accordion Demo" backButtonText="Back"
 		backButtonURL="UnpMain.xsp">
-	</xc:unpHeader>
+	</unp:unpHeader>
 	<div id="content">
-		<xc:unpScrollableArea>
+		<unp:unpScrollableArea>
 			<xp:this.facets>
-				<xc:unpAccordion xp:key="facet_1" viewName="EmployessCatByDept"
-					xpage="Employee.xsp" position="left-aligned" insetData="true">
-				</xc:unpAccordion>
+				<unp:unpAccordion xp:key="facet_1"
+					viewName="EmployessCatByDept" xpage="Employee.xsp"
+					position="left-aligned" insetData="true">
+				</unp:unpAccordion>
 			</xp:this.facets>
-		</xc:unpScrollableArea>
+		</unp:unpScrollableArea>
 	</div>
 </xp:view>

@@ -11,10 +11,10 @@
 		License
 	-->
 
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
-	<xc:unpScrollableArea>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom" xmlns:unp="http://www.ibm.com/xsp/unplugged">
+	<unp:unpScrollableArea>
 		<xp:this.facets>
-			<xc:unpFormEditor showbuttons="yes"
+			<unp:unpFormEditor showbuttons="yes"
 				closexpagename="UnpDemoWidgets.xsp" viewxpagename="Employee.xsp"
 				formname="Employee" title="Employee" xp:key="facet_1">
 				<xp:this.facets>
@@ -129,17 +129,17 @@
 						</ul>
 						<input type="button"
 							onclick="openDialog('#dialogPopup')" value="Open Demo Dialog" />
-						<xc:unpDialog title="Test Dialog">
+						<unp:unpDialog title="Test Dialog">
 							<xp:this.facets>
 								<xp:panel xp:key="facet_1">
 									This is a test
 								</xp:panel>
 							</xp:this.facets>
-						</xc:unpDialog>
+						</unp:unpDialog>
 					</xp:panel>
 				</xp:this.facets>
-			</xc:unpFormEditor>
+			</unp:unpFormEditor>
 		</xp:this.facets>
-	</xc:unpScrollableArea>
+	</unp:unpScrollableArea>
 
 </xp:view>

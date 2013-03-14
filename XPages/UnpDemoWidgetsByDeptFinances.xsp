@@ -10,14 +10,14 @@ the specific language governing permissions and limitations under the License
  -->
 
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core"
-	xmlns:xc="http://www.ibm.com/xsp/custom">
-	<xc:unpScrollableArea>
+	xmlns:xc="http://www.ibm.com/xsp/custom" xmlns:unp="http://www.ibm.com/xsp/unplugged">
+	<unp:unpScrollableArea>
 		<xp:this.facets>
-			<xc:unpFlatView insetData="true" detailColumn="Dept"
+			<unp:unpFlatView insetData="true" detailColumn="Dept"
 				summaryColumn="Name" title="Employees in Finances" numberofrows="20"
 				categoryfilter="Finances" viewName="EmployeesCatByDept" refreshmethod="pull"
 				xpageDoc="Employee.xsp" xp:key="facet_1">
-			</xc:unpFlatView>
+			</unp:unpFlatView>
 		</xp:this.facets>
-	</xc:unpScrollableArea>
+	</unp:unpScrollableArea>
 </xp:view>

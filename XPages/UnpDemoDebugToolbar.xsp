@@ -10,7 +10,7 @@ the specific language governing permissions and limitations under the License
  -->
 
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core"
-	xmlns:xc="http://www.ibm.com/xsp/custom">
+	xmlns:xc="http://www.ibm.com/xsp/custom" xmlns:unp="http://www.ibm.com/xsp/unplugged">
 	
 	<xp:this.beforePageLoad><![CDATA[#{javascript:/* no access to dBar here yet, since the SSJS library is
  * loaded in the custom control. To have access here too,
@@ -53,11 +53,11 @@ try {
 		<xp:script src="/unpDebugToolbar.jss" clientSide="false"></xp:script>
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 	</xp:this.resources>
-	<xc:unpDebugToolbar defaultCollapsed="false"></xc:unpDebugToolbar>
-	<xc:unpHeader search="none" searchPage="UnpSearch.xsp"
+	<unp:unpDebugToolbar defaultCollapsed="false"></unp:unpDebugToolbar>
+	<unp:unpHeader search="none" searchPage="UnpSearch.xsp"
 		viewsButton="false" title="Debug Toolbar">
-	</xc:unpHeader>
-	<xc:unpFooter synctype="currentdb"></xc:unpFooter>
+	</unp:unpHeader>
+	<unp:unpFooter synctype="currentdb"></unp:unpFooter>
 
 	<xp:this.afterPageLoad><![CDATA[#{javascript:dBar.debug("afterPageLoad");}]]></xp:this.afterPageLoad>
 	<xp:this.beforeRenderResponse><![CDATA[#{javascript:dBar.debug("beforeRenderResponse");}]]></xp:this.beforeRenderResponse>

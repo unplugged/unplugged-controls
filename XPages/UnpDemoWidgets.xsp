@@ -10,51 +10,51 @@ the specific language governing permissions and limitations under the License
  -->
 
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core"
-	xmlns:xc="http://www.ibm.com/xsp/custom">
+	xmlns:xc="http://www.ibm.com/xsp/custom" xmlns:unp="http://www.ibm.com/xsp/unplugged">
 
 	<xp:this.resources>
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 		<xp:styleSheet href="/unpDialog.css"></xp:styleSheet>
 	</xp:this.resources>
-	<xc:unpHeader search="database" viewsButton="true" title="Employees"
+	<unp:unpHeader search="database" viewsButton="true" title="Employees"
 		searchPage="UnpDemoWidgetsSearch.xsp">
-	</xc:unpHeader>
-	<xc:unpNavigator>
-		<xc:this.menuItem>
-			<xc:menuItem label="All Documents"
+	</unp:unpHeader>
+	<unp:unpNavigator>
+		<unp:this.menuItem>
+			<unp:menuItem label="All Documents"
 				page="/UnpDemoWidgets.xsp" ajaxtargetid="content"
 				ajaxloadid="contentwrapper">
-			</xc:menuItem>
-			<xc:menuItem label="By Department"
+			</unp:menuItem>
+			<unp:menuItem label="By Department"
 				page="/UnpDemoWidgetsByDept.xsp" ajaxtargetid="content"
 				ajaxloadid="contentwrapper">
-			</xc:menuItem>
-			<xc:menuItem label="Just Finances Department"
+			</unp:menuItem>
+			<unp:menuItem label="Just Finances Department"
 				page="/UnpDemoWidgetsByDeptFinances.xsp" ajaxtargetid="content"
 				ajaxloadid="contentwrapper">
-			</xc:menuItem>
-			<xc:menuItem label="By Country"
+			</unp:menuItem>
+			<unp:menuItem label="By Country"
 				page="/UnpDemoWidgetsByCountry.xsp" ajaxtargetid="content"
 				ajaxloadid="contentwrapper">
-			</xc:menuItem>
-			<xc:menuItem label="By Year"
+			</unp:menuItem>
+			<unp:menuItem label="By Year"
 				page="/UnpDemoWidgetsByYear.xsp" ajaxtargetid="content"
 				ajaxloadid="contentwrapper">
-			</xc:menuItem>
-		</xc:this.menuItem>
-	</xc:unpNavigator>
+			</unp:menuItem>
+		</unp:this.menuItem>
+	</unp:unpNavigator>
 	<div id="content">
-		<xc:unpScrollableArea>
+		<unp:unpScrollableArea>
 			<xp:this.facets>
-				<xc:unpFlatView insetData="true" detailColumn="DOB"
+				<unp:unpFlatView insetData="true" detailColumn="DOB"
 					summaryColumn="Name" title="Employees" viewName="Employees"
 					xpageDoc="Employee.xsp" xp:key="facet_1" numberofrows="20"
 					refreshmethod="pull" position="menu-aligned">
-				</xc:unpFlatView>
+				</unp:unpFlatView>
 			</xp:this.facets>
-		</xc:unpScrollableArea>
+		</unp:unpScrollableArea>
 	</div>
-	<xc:unpFooter newDocTarget="EmployeeEdit.xsp" synctype="currentdb"
+	<unp:unpFooter newDocTarget="EmployeeEdit.xsp" synctype="currentdb"
 		newDocLoadType="ajax">
-	</xc:unpFooter>
+	</unp:unpFooter>
 </xp:view>

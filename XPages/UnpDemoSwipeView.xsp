@@ -10,17 +10,17 @@ the specific language governing permissions and limitations under the License
  -->
 
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core"
-	xmlns:xc="http://www.ibm.com/xsp/custom">
+	xmlns:xc="http://www.ibm.com/xsp/custom" xmlns:unp="http://www.ibm.com/xsp/unplugged">
 	<xp:this.data>
 		<xp:dominoView var="viewEmps" viewName="Employees"></xp:dominoView>
 	</xp:this.data>
 	<xp:this.resources>
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 	</xp:this.resources>
-	<xc:unpHeader search="none" searchPage="UnpSearch.xsp"
+	<unp:unpHeader search="none" searchPage="UnpSearch.xsp"
 		viewsButton="false" title="Image Test" backButtonText="Back"
 		backButtonURL="UnpMain.xsp">
-	</xc:unpHeader>
+	</unp:unpHeader>
 	<xp:label value="Han Solo is the only emp with images:" id="label1"
 		style="font-size:20pt;color:rgb(0,128,255)">
 	</xp:label>

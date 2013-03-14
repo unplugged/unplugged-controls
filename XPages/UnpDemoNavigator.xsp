@@ -11,7 +11,7 @@
 		License
 	-->
 
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom" xmlns:unp="http://www.ibm.com/xsp/unplugged">
 
 	<xp:this.resources>
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
@@ -21,51 +21,51 @@
 		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
 		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 	</xp:this.resources>
-	<xc:unpHeader search="none" viewsButton="true" title="Views List Demo"
+	<unp:unpHeader search="none" viewsButton="true" title="Views List Demo"
 		backButtonText="">
-	</xc:unpHeader>
-	<xc:unpNavigator>
-		<xc:this.menuItem>
-			<xc:menuItem icon="/icons/house.png" label="Test Page 1"
+	</unp:unpHeader>
+	<unp:unpNavigator>
+		<unp:this.menuItem>
+			<unp:menuItem icon="/icons/house.png" label="Test Page 1"
 				page="/UnpDemoNavigator.xsp" ajaxloadid="newcontent" ajaxtargetid="results">
-			</xc:menuItem>
-			<xc:menuItem icon="/icons/id_card.png" label="Test Page 2"
+			</unp:menuItem>
+			<unp:menuItem icon="/icons/id_card.png" label="Test Page 2"
 				page="/UnpDemoNavigatorPage2.xsp" ajaxloadid="newcontent"
 				ajaxtargetid="results">
-			</xc:menuItem>
-			<xc:menuItem icon="/icons/id_tag.png" label="Test Page 3"
+			</unp:menuItem>
+			<unp:menuItem icon="/icons/id_tag.png" label="Test Page 3"
 				page="/UnpDemoNavigatorPage3.xsp">
-			</xc:menuItem>
-			<xc:menuItem icon="/icons/ipod.png" label="Test Page 4"
+			</unp:menuItem>
+			<unp:menuItem icon="/icons/ipod.png" label="Test Page 4"
 				page="/UnpDemoNavigatorPage4.xsp">
-			</xc:menuItem>
-			<xc:menuItem icon="/icons/key.png" label="Test Page 5"
+			</unp:menuItem>
+			<unp:menuItem icon="/icons/key.png" label="Test Page 5"
 				page="/UnpDemoNavigatorPage5.xsp">
-			</xc:menuItem>
-			<xc:menuItem icon="/icons/keyboard.png" label="Test Page 6"
+			</unp:menuItem>
+			<unp:menuItem icon="/icons/keyboard.png" label="Test Page 6"
 				page="/UnpDemoNavigatorPage6.xsp">
-			</xc:menuItem>
-			<xc:menuItem icon="/icons/lightbulb.png" label="Test Page 7"
+			</unp:menuItem>
+			<unp:menuItem icon="/icons/lightbulb.png" label="Test Page 7"
 				page="/UnpDemoNavigatorPage7.xsp">
-			</xc:menuItem>
-			<xc:menuItem icon="/icons/lock.png" label="Test Page 8"
+			</unp:menuItem>
+			<unp:menuItem icon="/icons/lock.png" label="Test Page 8"
 				page="/UnpDemoNavigatorPage8.xsp">
-			</xc:menuItem>
-			<xc:menuItem icon="/icons/magnet.png" label="Test Page 9"
+			</unp:menuItem>
+			<unp:menuItem icon="/icons/magnet.png" label="Test Page 9"
 				page="/UnpDemoNavigatorPage9.xsp">
-			</xc:menuItem>
-			<xc:menuItem icon="/icons/male.png" label="Test Page 10"
+			</unp:menuItem>
+			<unp:menuItem icon="/icons/male.png" label="Test Page 10"
 				page="/UnpDemoNavigatorPage10.xsp">
-			</xc:menuItem>
-			<xc:menuItem icon="/icons/map_marker.png" label="Test Page 11"
+			</unp:menuItem>
+			<unp:menuItem icon="/icons/map_marker.png" label="Test Page 11"
 				page="/UnpDemoNavigatorPage11.xsp">
-			</xc:menuItem>
-		</xc:this.menuItem>
-	</xc:unpNavigator>
+			</unp:menuItem>
+		</unp:this.menuItem>
+	</unp:unpNavigator>
 	<div id="results">
 		<div id="newcontent" style="position: absolute; top: 60px;">
 			UnpDemoNavigator
 		</div>
 	</div>
-	<xc:unpFooter synctype="currentdb"></xc:unpFooter>
+	<unp:unpFooter synctype="currentdb"></unp:unpFooter>
 </xp:view>

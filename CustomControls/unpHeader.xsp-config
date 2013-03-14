@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <faces-config>
   <faces-config-extension>
-    <namespace-uri>http://www.ibm.com/xsp/custom</namespace-uri>
-    <default-prefix>xc</default-prefix>
+    <namespace-uri>http://www.ibm.com/xsp/unplugged</namespace-uri>
+    <default-prefix>unp</default-prefix>
   </faces-config-extension>
   <composite-component>
     <component-type>unpHeader</component-type>

@@ -9,7 +9,7 @@ on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either expres
 the specific language governing permissions and limitations under the License
  -->
 
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom" xmlns:unp="http://www.ibm.com/xsp/unplugged">
 
 	<xp:this.data>
 		<xp:dominoView var="dbs" viewName="HomeLinks"></xp:dominoView>
@@ -17,11 +17,11 @@ the specific language governing permissions and limitations under the License
 	<xp:this.resources>
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 	</xp:this.resources>
-	<xc:unpHeader search="none" searchPage="UnpSearch.xsp"
+	<unp:unpHeader search="none" searchPage="UnpSearch.xsp"
 		viewsButton="false" title="Unplugged Controls">
-	</xc:unpHeader>
-	<xc:unpWorkspace imgurlcol="ImgUrl" labelcol="Title"
+	</unp:unpHeader>
+	<unp:unpWorkspace imgurlcol="ImgUrl" labelcol="Title"
 		linkurlcol="UnpUrl" badgeidcol="BadgeID">
-	</xc:unpWorkspace>
-	<xc:unpFooter synctype="alldbs"></xc:unpFooter>
+	</unp:unpWorkspace>
+	<unp:unpFooter synctype="alldbs"></unp:unpFooter>
 </xp:view>

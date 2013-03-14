@@ -10,16 +10,16 @@ the specific language governing permissions and limitations under the License
  -->
 
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core"
-	xmlns:xc="http://www.ibm.com/xsp/custom">
+	xmlns:xc="http://www.ibm.com/xsp/custom" xmlns:unp="http://www.ibm.com/xsp/unplugged">
 	<xp:this.resources>
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 	</xp:this.resources>
-	<xc:unpHeader search="local" backButtonText="Back"
+	<unp:unpHeader search="local" backButtonText="Back"
 		backButtonURL="UnpMain.xsp" title="Header / Footer Demo"
 		viewsButton="false" searchPage="">
-	</xc:unpHeader>
+	</unp:unpHeader>
 
-	<xc:unpScrollableArea>
+	<unp:unpScrollableArea>
 		<xp:this.facets>
 			<xp:panel xp:key="facet_1"
 				style="background-color:rgb(255,255,255)">
@@ -369,6 +369,6 @@ the specific language governing permissions and limitations under the License
 				</div>
 			</xp:panel>
 		</xp:this.facets>
-	</xc:unpScrollableArea>
-	<xc:unpFooter newDocTarget="NewDoc.xsp" synctype="currentdb"></xc:unpFooter>
+	</unp:unpScrollableArea>
+	<unp:unpFooter newDocTarget="NewDoc.xsp" synctype="currentdb"></unp:unpFooter>
 </xp:view>

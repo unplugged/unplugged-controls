@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom" xmlns:unp="http://www.ibm.com/xsp/unplugged">
 
 	<xp:this.resources>
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 	</xp:this.resources>
-	<xc:unpHeader search="none" searchPage="UnpSearch.xsp"
+	<unp:unpHeader search="none" searchPage="UnpSearch.xsp"
 		viewsButton="true" backButtonText="Home" backButtonURL="UnpMain.xsp"
 		title="CSS Controls">
-	</xc:unpHeader>
+	</unp:unpHeader>
 
-	<xc:unpScrollableArea>
+	<unp:unpScrollableArea>
 		<xp:this.facets>
 			<xp:panel xp:key="facet_1">
 
@@ -50,7 +50,7 @@
 
 			</xp:panel>
 		</xp:this.facets>
-	</xc:unpScrollableArea>
+	</unp:unpScrollableArea>
 
-	<xc:unpFooter newDocLoadType="ajax" synctype="currentdb"></xc:unpFooter>
+	<unp:unpFooter newDocLoadType="ajax" synctype="currentdb"></unp:unpFooter>
 </xp:view>
