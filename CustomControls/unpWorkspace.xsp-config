@@ -32,6 +32,7 @@
 	&lt;/div&gt;&#xd;
 	&lt;/div&gt;&#xd;
 &lt;/xp:view&gt;</render-markup>
+        <category>Unplugged</category>
       </designer-extension>
     </composite-extension>
     <property>
@@ -97,5 +98,9 @@ normal</editor-parameter>
         </designer-extension>
       </property-extension>
     </property>
+    <icon>
+      <small-icon>/icons/defaultLogoSmall.png</small-icon>
+      <large-icon>/icons/defaultLogo.png</large-icon>
+    </icon>
   </composite-component>
 </faces-config>

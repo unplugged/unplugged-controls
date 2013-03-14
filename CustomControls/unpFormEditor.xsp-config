@@ -38,6 +38,7 @@
 	&lt;/div&gt;&#xd;
 	&lt;/div&gt;&#xd;
 &lt;/xp:view&gt;</render-markup>
+        <category>Unplugged</category>
       </designer-extension>
     </composite-extension>
     <property>
@@ -74,5 +75,9 @@ no</editor-parameter>
       <property-class>string</property-class>
       <description>Optional parameter if you want to use data from a different database (make sure you use forward slashes eg mydir/mydb.nsf)</description>
     </property>
+    <icon>
+      <small-icon>/icons/defaultLogoSmall.png</small-icon>
+      <large-icon>/icons/defaultLogo.png</large-icon>
+    </icon>
   </composite-component>
 </faces-config>

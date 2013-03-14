@@ -34,6 +34,7 @@
 	&lt;/div&gt;&#xd;
 	&lt;/div&gt;&#xd;
 &lt;/xp:view&gt;</render-markup>
+        <category>Unplugged</category>
       </designer-extension>
     </composite-extension>
     <property-type>
@@ -83,5 +84,9 @@
         </property-extension>
       </property>
     </property-type>
+    <icon>
+      <small-icon>/icons/defaultLogoSmall.png</small-icon>
+      <large-icon>/icons/defaultLogo.png</large-icon>
+    </icon>
   </composite-component>
 </faces-config>

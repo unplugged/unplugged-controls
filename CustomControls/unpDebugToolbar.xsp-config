@@ -16,6 +16,7 @@
   xmlns:xc="http://www.ibm.com/xsp/custom"&gt;&#xd;
 &lt;xp:div style="background-color:#555555; border: 1px solid #000000; color: #ffffff; padding:2px;"&gt;&lt;b&gt;Unplugged Debug Toolbar - v0.1&lt;/b&gt; (by Mark Leusink)&lt;/xp:div&gt;&#xd;
 &lt;/xp:view&gt;</render-markup>
+        <category>Unplugged</category>
       </designer-extension>
     </composite-extension>
     <property>
@@ -30,5 +31,9 @@
       </property-extension>
       <description>Indicates if the toolbar will be opened in a collapsed or expanded state (by default)</description>
     </property>
+    <icon>
+      <small-icon>/icons/defaultLogoSmall.png</small-icon>
+      <large-icon>/icons/defaultLogo.png</large-icon>
+    </icon>
   </composite-component>
 </faces-config>

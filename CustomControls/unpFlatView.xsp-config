@@ -57,6 +57,7 @@
 	&lt;/div&gt;&#xd;
 	&lt;/div&gt;&#xd;
 &lt;/xp:view&gt;</render-markup>
+        <category>Unplugged</category>
       </designer-extension>
     </composite-extension>
     <property>
@@ -177,5 +178,9 @@ No</editor-parameter>
       </property-extension>
       <description>Select Yes to use Ajax to load documents, No to open the link as a full page load</description>
     </property>
+    <icon>
+      <small-icon>/icons/defaultLogoSmall.png</small-icon>
+      <large-icon>/icons/defaultLogo.png</large-icon>
+    </icon>
   </composite-component>
 </faces-config>

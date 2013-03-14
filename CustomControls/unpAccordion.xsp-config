@@ -47,6 +47,7 @@ The default position is 'menu-aligned' as this control would normally be used wi
 	&lt;/div&gt;&#xd;
 &lt;/div&gt;&#xd;
 &lt;/xp:view&gt;</render-markup>
+        <category>Unplugged</category>
       </designer-extension>
     </composite-extension>
     <property>
@@ -92,5 +93,9 @@ menu-aligned</editor-parameter>
         </designer-extension>
       </property-extension>
     </property>
+    <icon>
+      <small-icon>/icons/defaultLogoSmall.png</small-icon>
+      <large-icon>/icons/defaultLogo.png</large-icon>
+    </icon>
   </composite-component>
 </faces-config>
