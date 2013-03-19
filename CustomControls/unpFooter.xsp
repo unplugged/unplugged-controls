@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<!--
+<!--
 		Copyright 2013 Teamstudio Inc Licensed under the Apache License,
 		Version 2.0 (the "License"); you may not use this file except in
 		compliance with the License. You may obtain a copy of the License at
@@ -16,12 +16,14 @@
 		body {
 		padding-bottom: 45px !important;
 		}
-		@media screen and (min-width: 701px) {
+		@media screen and
+		(min-width: 701px) {
 		body {
 		padding-bottom: 60px !important;
 		}
 		}
-		@media screen and (max-width: 700px) {
+		@media
+		screen and (max-width: 700px) {
 		body {
 		padding-bottom: 45px !important;
 		}
@@ -42,11 +44,15 @@
 				refreshMode="complete">
 				<xp:this.action>
 					<xp:actionGroup>
+
 						<xp:executeScript>
 							<xp:this.script><![CDATA[#{javascript:db = session.getCurrentDatabase();
+var date = new Date();
+session.setEnvironmentVar("ro.last.sync." + @LowerCase(@ReplaceSubstring(db.getFilePath(), "\\", "")), @Text(date.getTime()), true);
 db.replicate("someserver");}]]></xp:this.script>
 						</xp:executeScript>
-						<xp:openPage name="/UnpMain.xsp" target="openDocument">
+						<xp:openPage name="/UnpMain.xsp"
+							target="openDocument">
 						</xp:openPage>
 					</xp:actionGroup>
 				</xp:this.action>
@@ -61,17 +67,34 @@ db.replicate("someserver");}]]></xp:this.script>
 				<xp:this.script><![CDATA[syncAllDbs()]]></xp:this.script>
 			</xp:eventHandler>
 		</xp:link>
-		<!--
-			<xp:text value='#{javascript:var rep =
-			session.getEnvironmentString("ro.last.replicate", true); if (""==rep)
-			rep="(never)"; else rep=@Text(new Date(parseInt(rep))); return
-			"Updated: " + rep.substring(0,14);}' />
-		-->
-		<xp:text
-			value='#{javascript:var rep = session.getEnvironmentString("ro.last.replicate", true);
-		  if (""==rep) { rep="(never)" };
-		 return "Updated: " + rep;}'
-			rendered="#{javascript:isUnpluggedServer()}" />
+
+		<xp:text rendered="#{javascript:isUnpluggedServer()}">
+			<xp:this.value><![CDATA[#{javascript:var dbrep = session.getEnvironmentString("ro.last.sync." + @LowerCase(@ReplaceSubstring(database.getFilePath(), "\\", "/")), true);
+var rep = session.getEnvironmentString("ro.last.sync", true); 
+if ("" == rep) {
+	rep = session.getEnvironmentString("ro.last.replicate", true); 
+} 
+if ("" ==	rep) { 
+	rep = "(never)"; 
+} else {
+	if (dbrep != ""){
+		try{
+			var irep = parseInt(rep);
+			var idbrep = parseInt(dbrep);
+			if (idbrep > irep){
+				rep = dbrep;
+			}
+		}catch(e){
+		}
+	}
+	try { 
+		var date = new Date(parseInt(rep)); 
+		rep = @Text(date); 
+	} catch (e) {
+	} 
+} 
+return "Updated: " + rep;}]]></xp:this.value>
+		</xp:text>
 		<xp:panel tagName="div" id="newButton" styleClass="newButton"
 			rendered="#{javascript:compositeData.newDocTarget != null;}">
 			<xp:this.attrs>
