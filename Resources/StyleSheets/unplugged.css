@@ -1919,3 +1919,8 @@ span.deleteicon span {
 span.deleteicon input {
 	padding-right: 16px;
 }
+
+#dialogContent {
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+}
