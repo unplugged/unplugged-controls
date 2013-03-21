@@ -1173,7 +1173,8 @@ to {
 }
 
 #formholder li.proceedButton {
-	width: 100%;
+	width: 50%;
+	padding-left: 25% !important;
 }
 
 #formholder li.proceedButton span {

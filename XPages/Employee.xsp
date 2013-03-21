@@ -14,8 +14,7 @@ the specific language governing permissions and limitations under the License
 		<xp:this.facets>
 			<unp:unpFormViewer showbuttons="true"
 				closexpagename="UnpDemoWidgets.xsp" editxpagename="EmployeeEdit.xsp"
-				formname="Employee" title="Employee" newresponsexpagename=""
-				xp:key="facet_1">
+				formname="Employee" title="Employee" xp:key="facet_1">
 				<xp:this.facets>
 					<xp:panel xp:key="facet_1">
 						<ul class="fieldlist">
