@@ -93,6 +93,9 @@ if ("" ==	rep) {
 	} catch (e) {
 	} 
 } 
+if (rep == "01/01/70"){
+	rep = "(never)";
+}
 return "Updated: " + rep;}]]></xp:this.value>
 		</xp:text>
 		<xp:panel tagName="div" id="newButton" styleClass="newButton"
