@@ -499,7 +499,9 @@ body {
 }
 
 .bordered {
-	padding: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
 }
 
 .bordered>div>ul>li:first-child {
@@ -785,7 +787,7 @@ body {
 */ /** MENU **/
 #menuPane {
 	z-index: 11;
-	padding-top: 10px;
+	padding-top: 24px;
 	background: transparent;
 }
 

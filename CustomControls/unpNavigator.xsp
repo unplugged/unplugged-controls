@@ -17,7 +17,7 @@ the specific language governing permissions and limitations under the License
 		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
 		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 	</xp:this.resources>
-	<div id="menu" class="iscrollmenu" style="top: 60px;">
+	<div id="menu" class="iscrollmenu">
 		<div id="menuPane" class="offScreen" style="height: 100%;">
 			<xp:panel styleClass="navScrollArea" id="navScrollArea" style="height: 100%;">
 				<ul id="menuitems">

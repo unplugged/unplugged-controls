@@ -89,7 +89,8 @@ if ("" ==	rep) {
 	}
 	try { 
 		var date = new Date(parseInt(rep)); 
-		rep = @Text(date); 
+		rep = @Text(date);
+		rep = @Left(@Trim(rep), @Length(rep) - 3); 
 	} catch (e) {
 	} 
 } 
