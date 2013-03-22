@@ -10,11 +10,13 @@
 
 $(window).load( function() {
 	if (!unpluggedserver){
-		for ( i=0; i<document.styleSheets.length; i++) {
-			if (document.styleSheets.item(i).href.indexOf("defaultTheme.css") > -1 || document.styleSheets.item(i).href.indexOf("core.css") > -1){
-				void(document.styleSheets.item(i).disabled=true);
+		try {
+			for ( i=0; i<document.styleSheets.length; i++) {
+				if (document.styleSheets.item(i).href.indexOf("defaultTheme.css") > -1 || document.styleSheets.item(i).href.indexOf("core.css") > -1){
+					void(document.styleSheets.item(i).disabled=true);
+				}
 			}
-		}
+		}catch(e){}
 	}
 	
 	$(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
