@@ -1085,6 +1085,7 @@ to {
 	position: relative;
 	-webkit-border-radius: 10px;
 	margin: 10px;
+	padding-top: 5px;
 }
 
 #formholder h2 {
