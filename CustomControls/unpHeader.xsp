@@ -38,7 +38,7 @@ the specific language governing permissions and limitations under the License
 		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
 		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 		<xp:metaData name="viewport"
-			content="width=device-width; user-scalable=yes; initial-scale=1; maximum-scale=1; minimum-scale=1">
+			content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1">
 		</xp:metaData>
 	</xp:this.resources>
 
