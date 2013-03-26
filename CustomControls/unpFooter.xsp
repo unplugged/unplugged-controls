@@ -85,7 +85,7 @@ if ("" ==	rep) {
 				rep = dbrep;
 			}
 		}catch(e){
-			rep = "localdate " + e;
+			//rep = "localdate " + e;
 		}
 	}
 	try { 
@@ -93,7 +93,7 @@ if ("" ==	rep) {
 		rep = @Text(date);
 		rep = @Left(@Trim(rep), @Trim(rep).length - 3); 
 	} catch (e) {
-		rep = "dateparse " + e;
+		//rep = "dateparse " + e;
 	} 
 } 
 if (rep == "01/01/70"){
