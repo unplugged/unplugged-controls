@@ -6,6 +6,54 @@ It is our intention to publish periodic updates to these controls to OpenNTF.
 
 ## Changes
 
+### v1.3.0 (26th Mar 2013)
+1. - Date not displayed in Android footer bar
+102. - Add CSS Controls - New non location specific CSS classes have been created for buttons and fieldsets. See demo database for examples
+103. - Define classes to control left-aligned and menu-aligned. See demo database for examples
+107. - Expandable fieldset control. New CSS classes defined to control fieldsets, see demo database for examples
+124. - UnpNavigator page selector in custom properties now works correctly
+128. - Last updated date/time now shows in footer. If current database has been replicated after all databases then latest time shows
+133. - Editable fields can now be cleared with an iOS style (x) button using new deletable css class
+134. - Fixed bug with Save and Cancel button display
+135. - Editable fields can now be cleared with an iOS style (x) button using new deletable css class
+136. - Form field labels now align vertically better
+137. - All custom controls moved to a new Namespace*
+138. - Fixed bug when using Mobile controls with OneUI v2.1 on a web browser
+140. - Textarea text size has been increased
+141. - Demo dialog box text size increased
+142. - On initial sync, footer bar displays (never) rather than 1/1/1970
+143. - Fixed bug with alignment of view and navigator panels
+144. - Last synced footer message format changed to be slightly shorter
+146. - Changed size of New Response button
+148. - Fixed viewport metadata tag to be comma separated
+
+NB: Due to the Namespace changes of all custom controls, all XPages will need to be edited and two sets of changes made.
+Firstly, make sure that the new namespace is added to the xp:view tag:  xmlns:unp="http://unplugged.teamstudio.com"
+Secondly, every reference to xc:unp tags needs to be updated to unp:unp:
+
+So for example, the old format of:
+```xml
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+  xmlns:xc="http://www.ibm.com/xsp/custom">
+	<xc:unpFlatView insetData="true" detailColumn="Date"
+		summaryColumn="Topic" title="All Documents"
+		viewName="(Unp All Documents)" xpageDoc="Document.xsp" ajaxload="yes"
+		xp:key="facet_1" numberofrows="20" refreshmethod="pull">
+	</xc:unpFlatView>
+</xp:view>
+```
+will now become:
+```xml
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom" xmlns:unp="http://unplugged.teamstudio.com">
+	<unp:unpFlatView insetData="true" detailColumn="Date"
+		summaryColumn="Topic" title="All Documents"
+		viewName="(Unp All Documents)" xpageDoc="Document.xsp" ajaxload="yes"
+		xp:key="facet_1" numberofrows="20" refreshmethod="pull">
+	</unp:unpFlatView>
+</xp:view>
+```
+
 ### v1.2.0 (22nd Feb 2013)
 93. - Display data from a different database in Flat View control
 98. - Enhance UI for documents in edit mode
