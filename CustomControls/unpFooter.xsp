@@ -85,13 +85,15 @@ if ("" ==	rep) {
 				rep = dbrep;
 			}
 		}catch(e){
+			rep = "localdate " + e;
 		}
 	}
 	try { 
 		var date = new Date(parseInt(rep)); 
 		rep = @Text(date);
-		rep = @Left(@Trim(rep), @Length(rep) - 3); 
+		rep = @Left(@Trim(rep), @Trim(rep).length - 3); 
 	} catch (e) {
+		rep = "dateparse " + e;
 	} 
 } 
 if (rep == "01/01/70"){
