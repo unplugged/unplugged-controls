@@ -28,7 +28,7 @@ the specific language governing permissions and limitations under the License
 			<xp:this.styleClass><![CDATA[#{javascript:if(compositeData.insetData) {return "bordered";}}]]>
 			</xp:this.styleClass>
 			<div id="flatView">
-				<ul id="flatViewRowSet">
+				<ul id="flatViewRowSet" style="padding-top: 14px;">
 					<li id="title">
 						<xp:label id="label3">
 							<xp:this.value><![CDATA[#{javascript:compositeData.title;

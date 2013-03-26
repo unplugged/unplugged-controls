@@ -884,7 +884,7 @@ body {
 		left: -700px;
 		display: block;
 		width: 100%;
-		top: 45px;
+		top: 40px;
 		bottom: 45px;
 	}
 	.navScrollArea {
@@ -903,7 +903,7 @@ body {
 		position: absolute;
 		left: -700px;
 		display: block;
-		top: 60px;
+		top: 50px;
 		bottom: 60px;
 	}
 	.navScrollArea ul {
