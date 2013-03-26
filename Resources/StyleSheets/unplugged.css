@@ -547,6 +547,7 @@ body {
 */ /* CATEGORISED TABLE VIEW */
 #summaryList {
 	padding: 0px;
+	padding-top: 4px;
 	margin: 10px;
 	list-style: none;
 	border-radius: 10px;
