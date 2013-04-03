@@ -353,13 +353,13 @@ function initiscroll() {
 
 function openDialog(id){
 	$(id).css('display', 'block');
-	$("#adminCover").css('display', 'block');
+	$("#underlay").css('display', 'block');
 	initiscroll();
 }
 
 function closeDialog(id){
 	$(id).css('display', 'none');
-	$("#adminCover").css('display', 'none');
+	$("#underlay").css('display', 'none');
 	initiscroll();
 }
 

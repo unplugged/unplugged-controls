@@ -27,25 +27,25 @@
 		<div id="dialogContent">
 			<xp:callback facetName="facet_1" id="callback1"></xp:callback>
 		</div>
-		<ul class="buttons">
-			<xp:panel tagName="li" styleClass="saveButton">
-				<span>OK</span>
-				<xp:this.attrs>
-					<xp:attr name="onclick">
-						<xp:this.value><![CDATA[#{javascript:var out = "";
+
+		<div class="button cancelbutton" onclick="closeDialog('#dialogPopup')" style="float: right;">
+			Cancel
+		</div>
+		<xp:panel tagName="div" styleClass="button savebutton">
+			OK
+			<xp:this.attrs>
+				<xp:attr name="onclick">
+					<xp:this.value><![CDATA[#{javascript:var out = "";
 if (compositeData.callback){
 	out += compositeData.callback + "(); "
 }
 out += "closeDialog('#dialogPopup');";
 return out;}]]></xp:this.value>
-					</xp:attr>
-				</xp:this.attrs>
-			</xp:panel>
-			<li class="cancelButton" onclick="closeDialog('#dialogPopup')">
-				<span>Cancel</span>
-			</li>
+				</xp:attr>
+			</xp:this.attrs>
+		</xp:panel>
+		
 
-		</ul>
 	</div>
 	<div id="adminCover" style="display: none;"></div>
 </xp:view>

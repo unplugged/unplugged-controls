@@ -1,36 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-Copyright 2013 Teamstudio Inc 
-Licensed under the Apache License, Version 2.0 (the "License"); 
-you may not use this file except in compliance with the License. You may obtain a copy of the License at
-http://www.apache.org/licenses/LICENSE-2.0 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed 
-on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
-the specific language governing permissions and limitations under the License
- -->
+	<!--
+		Copyright 2013 Teamstudio Inc Licensed under the Apache License,
+		Version 2.0 (the "License"); you may not use this file except in
+		compliance with the License. You may obtain a copy of the License at
+		http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+		applicable law or agreed to in writing, software distributed under the
+		License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or implied. See the License for
+		the specific language governing permissions and limitations under the
+		License
+	-->
 
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:unp="http://unplugged.teamstudio.com">
 	<style>
-		body {
-		padding-top: 0px !important;
-		}
-		@media screen and (min-width: 701px) {
-		body {
-		padding-top: 60px !important;
-		}
-		}
-		@media screen and (max-width: 700px) {
-		body {
-		padding-top: 45px !important;
-		}
+		body { padding-top: 0px !important; } @media screen and
+		(min-width: 701px) { body { padding-top: 60px !important; } }
+		@media
+		screen and (max-width: 700px) { body { padding-top: 45px
+		!important; }
 		}
 	</style>
 	<xp:this.resources>
 		<xp:metaData name="apple-mobile-web-app-status-bar-style"
 			content="black-translucent">
 		</xp:metaData>
-		<xp:metaData name="apple-mobile-web-app-capable"
-			content="yes">
+		<xp:metaData name="apple-mobile-web-app-capable" content="yes">
 		</xp:metaData>
 		<xp:script src="/unp/jquery-1.7.2.min.js" clientSide="true"></xp:script>
 		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
@@ -40,6 +34,7 @@ the specific language governing permissions and limitations under the License
 		<xp:metaData name="viewport"
 			content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1">
 		</xp:metaData>
+		<xp:styleSheet href="/unpDialog.css"></xp:styleSheet>
 	</xp:this.resources>
 
 	<xp:text tagName="script" id="inlinescript">
@@ -54,7 +49,8 @@ the specific language governing permissions and limitations under the License
 
 	<xp:panel styleClass="iHeader black">
 		<xp:image styleClass="companyLogo" url="/unp/unplugged_logo.png"
-			id="companyLogo"></xp:image>
+			id="companyLogo">
+		</xp:image>
 		<xp:panel styleClass="backButton">
 			<xp:this.rendered><![CDATA[#{javascript:if(compositeData.backButtonText == '' || compositeData.backButtonText == null){
 	return false;
@@ -80,15 +76,22 @@ else{ return true;
 			</xp:label>
 		</xp:panel>
 
-		<xp:label styleClass="title" id="title"
+		<xp:label id="title"
 			value="#{javascript:compositeData.title}">
+			<xp:this.attrs>
+				<xp:attr name="href" value="#versionPopup"></xp:attr>
+			</xp:this.attrs>
+			<xp:this.styleClass><![CDATA[#{javascript:if (compositeData.appVersion != null && compositeData.appDescription != ""){
+	return "title opendialoglink";
+}else{
+	return "title";
+}}]]></xp:this.styleClass>
 		</xp:label>
 		<xp:panel id="searchbutton" rendered="#{javascript:compositeData.search != 'none'}"
 			styleClass="searchButton">
 			<span></span>
 		</xp:panel>
-		<xp:panel id="homebutton"
-			styleClass="homeButton">
+		<xp:panel id="homebutton" styleClass="homeButton">
 			<xp:this.attrs>
 				<xp:attr name="onclick">
 
@@ -127,5 +130,17 @@ else{ return true;
 			<xp:attr name="type" value="text/javascript"></xp:attr>
 		</xp:this.attrs>
 		<xp:this.value><![CDATA[#{javascript:"var searchPage = \"" + compositeData.searchPage + "\";"}]]></xp:this.value>
-	</xp:text>
-</xp:view>
+	</xp:text>	<div id="versionPopup" class="dialog" style=" display:none;">
+		<xp:panel tagName="h2" id="panel1">
+			<xp:text value="#{javascript:compositeData.appVersion}"></xp:text>
+		</xp:panel>
+		<div id="versionContent">
+			<xp:text value="#{javascript:compositeData.appDescription}"
+				escape="false">
+			</xp:text>
+		</div>
+		<div class="button" onclick="closeDialog('#versionPopup')" style="margin-left: 25%;">
+				OK
+		</div>
+	</div>
+	<div id="underlay"></div></xp:view>

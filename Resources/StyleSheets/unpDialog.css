@@ -46,7 +46,7 @@
 		rgba(255, 255, 255, 0.15);
 }
 
-#dialogPopup {
+#dialogPopup, #versionPopup {
 	-webkit-box-sizing: border-box;
 	position: absolute;
 	z-index: 9999;
@@ -56,17 +56,16 @@
 	left: 10px;
 	top: 10px;
 	right: 10px;
-	bottom: 10px;
 	padding: 10px;
 }
 
-#dialogPopup h2 {
+#dialogPopup h2, #versionPopup h2 {
 	font-size: 1.5em;
 	margin-bottom: 10px;
 	text-align: center;
 }
 
-#dialogPopup label {
+#dialogPopup label, #versionPopup label {
 	display: block;
 	font-size: 1.2em;
 	font-weight: bold;
@@ -80,21 +79,21 @@
 	padding: 6px;
 }
 
-#dialogPopup button {
+#dialogPopup button, #versionPopup button {
 	-webkit-box-sizing: border-box;
 	font-size: 1.3em;
 	margin-bottom: 10px;
 	opacity: 0.5;
 }
 
-#dialogPopup.modal {
+#dialogPopup.modal, #versionPopup.modal {
 	width: 90%;
 	height: 90%;
 	margin-left: -250px;
 	margin-top: -60px;
 }
 
-#dialogPopup.modal h2 {
+#dialogPopup.modal h2, #versionPopup.modal h2 {
 	margin-top: 10px;
 }
 
@@ -123,27 +122,46 @@
 	float: right;
 }
 
+#dialogContent {
+	overflow: scroll;	
+}
 
 @media screen and (min-width: 1001px) {
- #dialogContent {height: 900px;}
+ #dialogContent, #versionContent {max-height: 900px;}
+ 
 }
 
 @media screen and (min-width: 701px) {
- #dialogContent {height: 650px;}
+ #dialogContent, #versionContent {max-height: 650px;}
 }
 
 @media screen and (max-width: 700px) {
- #dialogContent {height: 500px;}
+ #dialogContent, #versionContent {max-height: 500px;}
 }
 
 /* Smartphones (landscape) ----------- */
 @media only screen 
 and (min-width : 321px) {
- #dialogContent {height: 200px;}
+ #dialogContent, #versionContent {max-height: 200px;}
 }
 
 /* Smartphones (portrait) ----------- */
 @media only screen 
 and (min-width : 320px) {
- #dialogContent {height: 350px;}
+ #dialogContent, #versionContent {max-height: 350px;}
+}
+
+
+#underlay{
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:#000;
+	-moz-opacity:0.5;
+	opacity:.50;
+	filter:alpha(opacity=50);
+	z-index: 1;
 }

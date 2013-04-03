@@ -116,5 +116,15 @@ database</editor-parameter>
       <small-icon>/icons/defaultLogoSmall.png</small-icon>
       <large-icon>/icons/defaultLogo.png</large-icon>
     </icon>
+    <property>
+      <property-name>appVersion</property-name>
+      <property-class>string</property-class>
+      <display-name>The current version of the application</display-name>
+    </property>
+    <property>
+      <property-name>appDescription</property-name>
+      <property-class>string</property-class>
+      <display-name>A description of the current application</display-name>
+    </property>
   </composite-component>
 </faces-config>

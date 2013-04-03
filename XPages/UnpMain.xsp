@@ -18,7 +18,7 @@ the specific language governing permissions and limitations under the License
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 	</xp:this.resources>
 	<unp:unpHeader search="none" searchPage="UnpSearch.xsp"
-		viewsButton="false" title="Unplugged Controls">
+		viewsButton="false" title="Unplugged Controls" appVersion="v1.4.0 (April 2013)">
 	</unp:unpHeader>
 	<unp:unpWorkspace imgurlcol="ImgUrl" labelcol="Title"
 		linkurlcol="UnpUrl" badgeidcol="BadgeID">
