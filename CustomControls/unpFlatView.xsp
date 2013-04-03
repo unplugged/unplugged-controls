@@ -67,7 +67,13 @@ if (sessionScope.rowcount != null){
 }else{
 	return 20;
 }}]]></xp:this.rows>
-						<xp:panel tagName="li" id="datarow">
+						<xp:text escape="false" tagName="li"
+							styleClass="categoryRowFixed condensed" disableTheme="true"
+							rendered="#{javascript:thisRowData.isCategory()}"
+							value="#{javascript:thisRowData.getColumnValues().elementAt(0)}">
+						</xp:text>
+						<xp:panel tagName="li" id="datarow"
+							rendered="#{javascript:!thisRowData.isCategory()}">
 							<xp:this.attrs>
 								<xp:attr name="onClick">
 									<xp:this.value><![CDATA[#{javascript:var url = getDbPath() + "/" + compositeData.xpageDoc + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID();
@@ -88,7 +94,8 @@ if (viewScope.rowcount == 1 && compositeData.title == null){
 	out += " first-row";
 }
 return out;}]]></xp:this.styleClass>
-							<xp:image url="/unp/right-arrow-circle.png" id="image1">
+							<xp:image url="/unp/right-arrow-circle.png"
+								id="image1">
 								<xp:this.styleClass><![CDATA[#{javascript:if(compositeData.detailColumn == null){ return 'singleLineIcon';} else {return 'multiLineIcon';}}]]></xp:this.styleClass>
 							</xp:image>
 							<xp:label id="label2"
@@ -96,7 +103,8 @@ return out;}]]></xp:this.styleClass>
 								styleClass="viewlistsummary">
 							</xp:label>
 							<div>
-								<xp:label id="label1" styleClass="viewlistdetail">
+								<xp:label id="label1"
+									styleClass="viewlistdetail">
 									<xp:this.value><![CDATA[#{javascript:if(compositeData.detailColumn == null){
 	return " ";
 }else{
