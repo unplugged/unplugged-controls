@@ -94,6 +94,11 @@ if (viewScope.rowcount == 1 && compositeData.title == null){
 	out += " first-row";
 }
 return out;}]]></xp:this.styleClass>
+							<xp:image
+								url="#{javascript:thisRowData.getColumnValue(compositeData.photoColumn)}"
+								styleClass="rowphoto">
+								<xp:this.rendered><![CDATA[#{javascript:compositeData.photoColumn != null && compositeData.photoColumn != ""}]]></xp:this.rendered>
+							</xp:image>
 							<xp:image url="/unp/right-arrow-circle.png"
 								id="image1">
 								<xp:this.styleClass><![CDATA[#{javascript:if(compositeData.detailColumn == null){ return 'singleLineIcon';} else {return 'multiLineIcon';}}]]></xp:this.styleClass>
@@ -137,7 +142,7 @@ return out;}]]></xp:this.styleClass>
 						styleClass="loadmorebutton">
 						<xp:this.attrs>
 							<xp:attr name="onclick">
-								<xp:this.value><![CDATA[#{javascript:"loadmore('" + compositeData.dbName + "', '" + compositeData.viewName + "', '" + compositeData.summaryColumn + "', '" + compositeData.detailColumn + "', '" + compositeData.categoryfilter + "', '" + compositeData.xpageDoc + "', '" + compositeData.refreshmethod + "')"}]]></xp:this.value>
+								<xp:this.value><![CDATA[#{javascript:"loadmore('" + compositeData.dbName + "', '" + compositeData.viewName + "', '" + compositeData.summaryColumn + "', '" + compositeData.detailColumn + "', '" + compositeData.categoryfilter + "', '" + compositeData.xpageDoc + "', '" + compositeData.refreshmethod + "', '" + compositeData.photoColumn + "')"}]]></xp:this.value>
 							</xp:attr>
 						</xp:this.attrs>
 					</xp:button>

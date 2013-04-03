@@ -54,14 +54,20 @@ if (start == ""){
 				rendered="#{javascript:!thisRowData.isCategory()}">
 				<xp:this.attrs>
 					<xp:attr name="onClick">
-						<xp:this.value><![CDATA[#{javascript:if (viewScope.rowcount == null){
-	viewScope.rowcount = 1;
-}else{
-	viewScope.rowcount = viewScope.rowcount + 1;
-}
-"openDocument('" + getDbPath() + "/" + context.getUrlParameter("xpage") + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID() + "', 'content');"}]]></xp:this.value>
+						<xp:this.value><![CDATA[#{javascript:try{
+	if (viewScope.rowcount == null){
+		viewScope.rowcount = 1;
+	}else{
+		viewScope.rowcount = viewScope.rowcount + 1;
+	}
+	"openDocument('" + getDbPath() + "/" + context.getUrlParameter("xpage") + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID() + "', 'content');";
+}catch(e){}}]]></xp:this.value>
 					</xp:attr>
 				</xp:this.attrs>
+				<xp:image styleClass="rowphoto">
+					<xp:this.rendered><![CDATA[#{javascript:context.getUrlParameter("photocol") != ""}]]></xp:this.rendered>
+					<xp:this.url><![CDATA[#{javascript:thisRowData.getColumnValue(context.getUrlParameter("photocol"))}]]></xp:this.url>
+				</xp:image>
 				<xp:image url="/unp/right-arrow-circle.png" id="image1">
 					<xp:this.styleClass><![CDATA[#{javascript:if(context.getUrlParameter("detailcol") == "undefined" || context.getUrlParameter("detailcol") == "null"){ return 'singleLineIcon';} else {return 'multiLineIcon';}}]]></xp:this.styleClass>
 				</xp:image>

@@ -14,7 +14,7 @@ the specific language governing permissions and limitations under the License
 	<unp:unpScrollableArea>
 		<xp:this.facets>
 			<unp:unpFlatView insetData="true" detailColumn="Dept"
-				numberofrows="20" summaryColumn="Name"
+				numberofrows="20" summaryColumn="Name" photoColumn="Photo"
 				title="Employees By Department" viewName="EmployessCatByDept"
 				xpageDoc="Employee.xsp" refreshmethod="pull" xp:key="facet_1">
 			</unp:unpFlatView>

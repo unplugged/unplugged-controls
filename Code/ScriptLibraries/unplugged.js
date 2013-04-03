@@ -77,7 +77,7 @@ function stopViewSpinner() {
 }
 
 function loadmore(dbName, viewName, summarycol, detailcol, category, xpage,
-		refreshmethod) {
+		refreshmethod, photocol) {
 	try {
 		$(".loadmorelink").hide();
 		$("#loadmorespinner").show();
@@ -96,7 +96,8 @@ function loadmore(dbName, viewName, summarycol, detailcol, category, xpage,
 		var url = "UnpFlatViewList.xsp?chosenView="
 				+ encodeURIComponent(viewName) + "&summarycol="
 				+ encodeURIComponent(summarycol) + "&detailcol="
-				+ encodeURIComponent(detailcol) + "&category="
+				+ encodeURIComponent(detailcol) + "&photocol=" 
+				+ encodeURIComponent(photocol) + "&category="
 				+ encodeURIComponent(category) + "&xpage=" + xpage
 				+ "&dbName=" + dbName
 				+ "&refreshmethod=" + refreshmethod + "&start=" + pos;

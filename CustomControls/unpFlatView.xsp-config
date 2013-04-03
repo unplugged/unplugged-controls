@@ -97,6 +97,12 @@
       </property-extension>
     </property>
     <property>
+      <property-name>photoColumn</property-name>
+      <property-class>string</property-class>
+      <display-name>Photo Column (Optional)</display-name>
+      <description>Photo displayed to left of each row. Enter name of column in view. </description>
+    </property>
+    <property>
       <property-name>xpageDoc</property-name>
       <property-class>string</property-class>
       <display-name>Target XPage</display-name>
