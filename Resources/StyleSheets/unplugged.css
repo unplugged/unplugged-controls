@@ -863,7 +863,7 @@ body {
 	border-radius: 0 0 8px 8px;
 }
 
-.ajax_loader {
+.ajax_loader{
 	position: relative;
 	background: url("unp/spinner_squares_circle.gif") no-repeat center
 		center transparent;
@@ -2012,3 +2012,12 @@ span.deleteicon input {
 }
 
 /**End Autocomplete**/
+
+#loading {
+	background : url('unp/spinner_squares_circle.gif') center center no-repeat;
+	background-color: #000000;
+	opacity: 0.4;
+	width: 140px;
+	height: 30px;
+	display: none;
+}
