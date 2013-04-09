@@ -397,7 +397,8 @@ function accordionLoadMore(obj, viewName, catName, xpage, dbname){
 		}
 		$(tempHolder).empty();
 		try{
-			initiscroll();
+			scrollContent.refresh();
+			scrollContent.scrollToElement($(obj));
 		}catch(e){}
 	});
 	
