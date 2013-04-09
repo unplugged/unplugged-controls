@@ -74,7 +74,15 @@ if (context.getUrlParameter("collapserows") == "Yes"){
 }
 return out;}]]></xp:this.styleClass>
 				<xp:image styleClass="rowphoto">
-					<xp:this.rendered><![CDATA[#{javascript:context.getUrlParameter("photocol") != "" && context.getUrlParameter("photocol") != "null"}]]></xp:this.rendered>
+					<xp:this.rendered><![CDATA[#{javascript:if (context.getUrlParameter("photocol") != "" && context.getUrlParameter("photocol") != "null"){
+	if (thisRowData.getColumnValue(context.getUrlParameter("photocol")) != ""){
+		return true;
+	}else{
+		return false;
+	}
+}else{
+	return false;
+}}]]></xp:this.rendered>
 					<xp:this.url><![CDATA[#{javascript:thisRowData.getColumnValue(context.getUrlParameter("photocol"))}]]></xp:this.url>
 				</xp:image>
 				<xp:image id="image1">

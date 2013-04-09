@@ -102,9 +102,23 @@ if (compositeData.collapseRows == "Yes"){
 }
 return out;}]]></xp:this.styleClass>
 							<xp:image
-								url="#{javascript:thisRowData.getColumnValue(compositeData.photoColumn)}"
-								styleClass="rowphoto">
-								<xp:this.rendered><![CDATA[#{javascript:compositeData.photoColumn != null && compositeData.photoColumn != ""}]]></xp:this.rendered>
+								url="#{javascript:thisRowData.getColumnValue(compositeData.photoColumn)}">
+								<xp:this.rendered><![CDATA[#{javascript:if (compositeData.photoColumn != null && compositeData.photoColumn != ""){
+	try{
+		if (thisRowData.getColumnValue(compositeData.photoColumn) != ""){
+			return true;
+		}else{
+			return false;
+		}
+	}catch(e){
+		return false;
+	}
+}else{
+	return false;
+}}]]></xp:this.rendered>
+								<xp:this.styleClass><![CDATA[#{javascript:if (thisRowData.getColumnValue(compositeData.photoColumn) != ""){
+	return "rowphoto";
+}}]]></xp:this.styleClass>
 							</xp:image>
 							<xp:image id="image1">
 								<xp:this.styleClass><![CDATA[#{javascript:if(compositeData.detailColumn == null || compositeData.collapseRows == "Yes"){ 
