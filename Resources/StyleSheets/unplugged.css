@@ -1857,7 +1857,7 @@ legend {
 
 .button {
 	border-radius: 6px;
-	width: 50%;
+	width: 48%;
 	margin-right: 6px;
 	height: 36px;
 	cursor: pointer;
@@ -1961,3 +1961,54 @@ span.deleteicon input {
 	top: -5px;
 	padding-right: 3px;
 }
+
+/**Autocomplete**/
+.acResults {
+	padding: 0px;
+	border: 0px solid white;
+	background-color: Window;
+	overflow: hidden;
+}
+
+.acResults ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-position: outside;
+	list-style: none;	
+}
+
+.acResults ul li {
+	color: #0051bb;
+	display: block;
+	font-size: 16px;
+	padding-left: 2%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	right: 7%;
+	line-height: 24px;
+	background: #fff;
+	border: 1px solid #E5E5E5;
+	margin: 0;
+	box-sizing: border-box;
+	width: 100%;
+	cursor: pointer;
+	text-align: left;
+	background: transparent;
+	float: left;
+	background: white;
+}
+
+.acResults ul li:hover{
+	background-color: #F5F5F5;	
+}
+
+.acLoading {
+	background : url('unp/indicator.gif') right center no-repeat;
+}
+
+.acSelect {
+	background-color: Highlight;
+	color: HighlightText;
+}
+
+/**End Autocomplete**/

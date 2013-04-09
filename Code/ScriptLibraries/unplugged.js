@@ -47,6 +47,7 @@ $(window).load( function() {
 	}	
 	
 	initDeleteable();
+	initAutoComplete();
 });
 
 $(window).scroll( function() {
@@ -149,6 +150,7 @@ function openDocument(url, target) {
 					
 				}
 				initDeleteable();
+				initAutoComplete();
 				return false;
 			});
 }
@@ -245,6 +247,7 @@ function loadPage(url, target, menuitem) {
 		}
 		initiscroll();
 		initDeleteable();
+		initAutoComplete();
 		return false;
 	});
 	var menuitems = $("#menuitems li");
@@ -268,6 +271,18 @@ function initDeleteable(){
 	}catch(e){
 		
 	}
+}
+
+function initAutoComplete(){
+	//try{
+		$(".autocomplete").each(function(){
+			var thefield = $(this);
+			var options = { serviceUrl:thefield.attr('auto-src') };
+			var a = $(this).autocomplete(options);
+		});
+	//}catch(e){
+		
+	//}
 }
 
 var scrollContent;

@@ -11,7 +11,8 @@
 		License
 	-->
 
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom" xmlns:unp="http://unplugged.teamstudio.com">
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom"
+	xmlns:unp="http://unplugged.teamstudio.com">
 	<unp:unpScrollableArea>
 		<xp:this.facets>
 			<unp:unpFormEditor showbuttons="yes"
@@ -21,21 +22,17 @@
 					<xp:panel xp:key="facet_1">
 						<ul class="fieldlist">
 							<li>
-								<xp:label value="Name" id="namelabel"
-									for="name">
+								<xp:label value="Name" id="namelabel" for="name">
 								</xp:label>
-								<xp:inputText id="name"
-									value="#{document1.Name}"
+								<xp:inputText id="name" value="#{document1.Name}"
 									styleClass="required xspInputFieldEditBox deletable">
 								</xp:inputText>
 							</li>
 							<li>
-								<xp:label value="DOB" id="doblabel"
-									for="birthday">
+								<xp:label value="DOB" id="doblabel" for="birthday">
 								</xp:label>
-								<xp:inputText id="birthday"
-									value="#{document1.Birthday}" styleClass="xspInputFieldEditBox"
-									type="date">
+								<xp:inputText id="birthday" value="#{document1.Birthday}"
+									styleClass="xspInputFieldEditBox" type="date">
 									<xp:this.converter>
 										<xp:convertDateTime>
 											<xp:this.pattern><![CDATA[${javascript:if (document1.isEditable()){
@@ -48,25 +45,20 @@
 								</xp:inputText>
 							</li>
 							<li>
-								<xp:label value="Email" id="emaillabel"
-									for="email">
+								<xp:label value="Email" id="emaillabel" for="email">
 								</xp:label>
-								<xp:inputText id="email"
-									value="#{document1.Email}" type="email"
-									styleClass="xspInputFieldEditBox deletable">
+								<xp:inputText id="email" value="#{document1.Email}"
+									type="email" styleClass="xspInputFieldEditBox deletable">
 								</xp:inputText>
 							</li>
 							<li>
-								<xp:label value="Start Month"
-									id="startmonthlabel" for="startmonth">
+								<xp:label value="Start Month" id="startmonthlabel" for="startmonth">
 								</xp:label>
-								<xp:comboBox id="startmonth"
-									value="#{document1.StartDate}" styleClass="xspListBox">
-									<xp:selectItem
-										itemLabel="January">
+								<xp:comboBox id="startmonth" value="#{document1.StartDate}"
+									styleClass="xspListBox">
+									<xp:selectItem itemLabel="January">
 									</xp:selectItem>
-									<xp:selectItem
-										itemLabel="February">
+									<xp:selectItem itemLabel="February">
 									</xp:selectItem>
 									<xp:selectItem itemLabel="March"></xp:selectItem>
 									<xp:selectItem itemLabel="April"></xp:selectItem>
@@ -74,61 +66,56 @@
 									<xp:selectItem itemLabel="June"></xp:selectItem>
 									<xp:selectItem itemLabel="July"></xp:selectItem>
 									<xp:selectItem itemLabel="August"></xp:selectItem>
-									<xp:selectItem
-										itemLabel="September">
+									<xp:selectItem itemLabel="September">
 									</xp:selectItem>
-									<xp:selectItem
-										itemLabel="October">
+									<xp:selectItem itemLabel="October">
 									</xp:selectItem>
-									<xp:selectItem
-										itemLabel="November">
+									<xp:selectItem itemLabel="November">
 									</xp:selectItem>
-									<xp:selectItem
-										itemLabel="December">
+									<xp:selectItem itemLabel="December">
 									</xp:selectItem>
 								</xp:comboBox>
 							</li>
 							<li>
-								<xp:label
-									value="Manager long label blah" id="managerlabel" for="manager"
-									styleClass="longlabel">
+								<xp:label value="Manager long label blah" id="managerlabel"
+									for="manager" styleClass="longlabel">
 								</xp:label>
-								<xp:inputText id="manager"
-									value="#{document1.Manager}"
+								<xp:inputText id="manager" value="#{document1.Manager}"
 									styleClass="xspInputFieldEditBox deletable">
 								</xp:inputText>
 							</li>
 							<li>
-								<xp:label value="Dept" id="deptlabel"
-									for="dept">
+								<xp:label value="Dept" id="deptlabel" for="dept">
 								</xp:label>
-								<xp:inputText id="dept"
-									value="#{document1.Dept}"
-									styleClass="required xspInputFieldEditBox deletable">
+								<xp:inputText id="dept" value="#{document1.Dept}"
+									styleClass="required xspInputFieldEditBox deletable autocomplete">
+									<xp:this.attrs>
+										<xp:attr name="auto-src" value="EmployeeEditDeptAuto.xsp">
+										</xp:attr>
+									</xp:this.attrs>
 								</xp:inputText>
 							</li>
 							<li>
-								<xp:label value="Countries"
-									id="countrieslabel" for="countries">
+								<xp:label value="Countries" id="countrieslabel" for="countries">
 								</xp:label>
-								<xp:comboBox id="countries"
-									value="#{document1.countries}" styleClass="xspListBox">
+								<xp:comboBox id="countries" value="#{document1.countries}"
+									styleClass="xspListBox">
 									<xp:selectItems>
 										<xp:this.value><![CDATA[#{javascript:@Unique(@DbColumn(@DbName(), "Employees By Country", 1))}]]></xp:this.value>
 									</xp:selectItems>
 								</xp:comboBox>
 							</li>
 							<li>
-								<xp:label value="Details"
-									id="detailslabel" for="description" styleClass="widelabel">
+								<xp:label value="Details" id="detailslabel" for="description"
+									styleClass="widelabel">
 								</xp:label>
-								<xp:inputTextarea id="description"
-									styleClass="richtextfield" value="#{document1.Description}">
+								<xp:inputTextarea id="description" styleClass="richtextfield"
+									value="#{document1.Description}">
 								</xp:inputTextarea>
 							</li>
 						</ul>
-						<input type="button"
-							onclick="openDialog('#dialogPopup')" value="Open Demo Dialog" />
+						<input type="button" onclick="openDialog('#dialogPopup')"
+							value="Open Demo Dialog" />
 						<unp:unpDialog title="Test Dialog">
 							<xp:this.facets>
 								<xp:panel xp:key="facet_1">

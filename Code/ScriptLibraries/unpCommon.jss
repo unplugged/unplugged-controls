@@ -52,3 +52,13 @@ function isUnpluggedServer(){
 	}
 	return applicationScope.unpluggedserver;
 }
+
+function $A( object ){
+	if( typeof object === 'undefined' || object === null ){ return []; }
+	if( typeof object === 'string' ){ return [ object ]; }
+	if( typeof object.toArray !== 'undefined' ){
+		return object.toArray();
+	}
+	if( object.constructor === Array ){ return object; }  
+	return [ object ];
+}
