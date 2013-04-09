@@ -30,6 +30,9 @@
 			<unp:menuItem label="By Department" page="/UnpDemoWidgetsByDept.xsp"
 				ajaxtargetid="content" ajaxloadid="contentwrapper">
 			</unp:menuItem>
+			<unp:menuItem label="Employee Details" page="/UnpDemoWidgetsExpanding.xsp"
+				ajaxtargetid="content" ajaxloadid="contentwrapper">
+			</unp:menuItem>
 			<unp:menuItem label="Just Finances Department" page="/UnpDemoWidgetsByDeptFinances.xsp"
 				ajaxtargetid="content" ajaxloadid="contentwrapper">
 			</unp:menuItem>
@@ -47,7 +50,8 @@
 				<unp:unpFlatView insetData="true" detailColumn="DOB"
 					summaryColumn="Name" title="Employees" viewName="Employees"
 					xpageDoc="Employee.xsp" xp:key="facet_1" numberofrows="20"
-					refreshmethod="pull" position="menu-aligned" photoColumn="Photo">
+					refreshmethod="pull" position="menu-aligned" photoColumn="Photo"
+					collapseRows="No">
 				</unp:unpFlatView>
 			</xp:this.facets>
 		</unp:unpScrollableArea>

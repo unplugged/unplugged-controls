@@ -77,7 +77,7 @@ function stopViewSpinner() {
 }
 
 function loadmore(dbName, viewName, summarycol, detailcol, category, xpage,
-		refreshmethod, photocol) {
+		refreshmethod, photocol, collapserows) {
 	try {
 		$(".loadmorelink").hide();
 		$("#loadmorespinner").show();
@@ -97,7 +97,8 @@ function loadmore(dbName, viewName, summarycol, detailcol, category, xpage,
 				+ encodeURIComponent(viewName) + "&summarycol="
 				+ encodeURIComponent(summarycol) + "&detailcol="
 				+ encodeURIComponent(detailcol) + "&photocol=" 
-				+ encodeURIComponent(photocol) + "&category="
+				+ encodeURIComponent(photocol) + "&collapserows="
+				+ encodeURIComponent(collapserows) + "&category="
 				+ encodeURIComponent(category) + "&xpage=" + xpage
 				+ "&dbName=" + dbName
 				+ "&refreshmethod=" + refreshmethod + "&start=" + pos;
@@ -423,4 +424,26 @@ function syncAllDbs(){
 		$.unblockUI();
 		location.reload();
 	});
+}
+
+function x$(idTag, param){ //Updated 18 Feb 2012
+   idTag=idTag.replace(/:/gi, "\\:")+(param ? param : "");
+   return($("#"+idTag));
+}
+//expand/ collapse link
+function showListDetails(id) {
+	var $div = x$(id);
+	if ($div.text().length==0) { return; }		//no content to show
+	var $image = $div.slideToggle(300, function() {
+		//refresh iscroll
+		if (unpluggedserver){
+			scrollContent.refresh();
+			scrollContent.scrollToElement($div);
+		}
+	}).siblings("img");
+	if ($image.attr("src") == "unp/arrow-up.png") {
+		   $image.attr("src", "unp/arrow-down.png");
+	} else {
+		 $image.attr("src", "unp/arrow-up.png");
+	}
 }

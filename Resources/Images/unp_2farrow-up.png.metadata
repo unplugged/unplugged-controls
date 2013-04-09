@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="4172" sequence="1" unid="E3F7E4E27354967780257B47004FD874">
+<created><datetime dst="true">20130408T153207,56+01</datetime></created>
+<modified><datetime dst="true">20130408T153210,64+01</datetime></modified>
+<revised><datetime dst="true">20130408T153210,63+01</datetime></revised>
+<lastaccessed><datetime dst="true">20130408T153210,64+01</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20130408T153210,64+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$FileModDT" sign="true"><datetime>20130219T203844,99+01</datetime></item>
+<item name="$ImageNames" sign="true"><text>arrow-up.png</text></item>
+<item name="$TITLE" sign="true"><text>unp/arrow-up.png</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+</note>

@@ -50,32 +50,50 @@ if (start == ""){
 				disableTheme="true" rendered="#{javascript:thisRowData.isCategory()}"
 				value="#{javascript:thisRowData.getColumnValues().elementAt(0)}">
 			</xp:text>
-			<xp:panel tagName="li" id="datarow" styleClass="data-row"
+			<xp:panel tagName="li" id="datarow"
 				rendered="#{javascript:!thisRowData.isCategory()}">
 				<xp:this.attrs>
 					<xp:attr name="onClick">
 						<xp:this.value><![CDATA[#{javascript:try{
-	if (viewScope.rowcount == null){
-		viewScope.rowcount = 1;
+	if (context.getUrlParameter("collapserows") == "Yes"){
+		return "showListDetails('" + getClientId("detail") + "'); event.stopPropagation();";
 	}else{
-		viewScope.rowcount = viewScope.rowcount + 1;
+		if (viewScope.rowcount == null){
+			viewScope.rowcount = 1;
+		}else{
+			viewScope.rowcount = viewScope.rowcount + 1;
+		}
+		return "openDocument('" + getDbPath() + "/" + context.getUrlParameter("xpage") + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID() + "', 'content');";
 	}
-	"openDocument('" + getDbPath() + "/" + context.getUrlParameter("xpage") + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID() + "', 'content');";
 }catch(e){}}]]></xp:this.value>
 					</xp:attr>
 				</xp:this.attrs>
+				<xp:this.styleClass><![CDATA[#{javascript:var out = "data-row";
+if (context.getUrlParameter("collapserows") == "Yes"){
+	out += " collapse-row";
+}
+return out;}]]></xp:this.styleClass>
 				<xp:image styleClass="rowphoto">
-					<xp:this.rendered><![CDATA[#{javascript:context.getUrlParameter("photocol") != ""}]]></xp:this.rendered>
+					<xp:this.rendered><![CDATA[#{javascript:context.getUrlParameter("photocol") != "" && context.getUrlParameter("photocol") != "null"}]]></xp:this.rendered>
 					<xp:this.url><![CDATA[#{javascript:thisRowData.getColumnValue(context.getUrlParameter("photocol"))}]]></xp:this.url>
 				</xp:image>
-				<xp:image url="/unp/right-arrow-circle.png" id="image1">
-					<xp:this.styleClass><![CDATA[#{javascript:if(context.getUrlParameter("detailcol") == "undefined" || context.getUrlParameter("detailcol") == "null"){ return 'singleLineIcon';} else {return 'multiLineIcon';}}]]></xp:this.styleClass>
+				<xp:image id="image1">
+					<xp:this.styleClass><![CDATA[#{javascript:if(context.getUrlParameter("detailcol") == "undefined" || context.getUrlParameter("detailcol") == "null" || context.getUrlParameter("collapserows") == "Yes"){ return 'singleLineIcon';} else {return 'multiLineIcon';}}]]></xp:this.styleClass>
+					<xp:this.url><![CDATA[#{javascript:if (context.getUrlParameter("collapserows") == "Yes"){
+	return "/unp/arrow-down.png";
+}else{
+	return "/unp/right-arrow-circle.png";
+}}]]></xp:this.url>
 				</xp:image>
 				<xp:label id="label2" styleClass="viewlistsummary">
 					<xp:this.value><![CDATA[#{javascript:thisRowData.getColumnValue(context.getUrlParameter("summarycol"));}]]></xp:this.value>
 				</xp:label>
 
-				<xp:text tagName="div" id="detail" styleClass="viewlistdetail">
+				<xp:text tagName="div" id="detail"
+					styleClass="viewlistdetail">
+					<xp:this.style><![CDATA[#{javascript:if (context.getUrlParameter("collapserows") == "Yes"){
+	return "display: none;";
+}}]]></xp:this.style>
 					<xp:this.value><![CDATA[#{javascript:if(context.getUrlParameter("detailcol") == "undefined" || context.getUrlParameter("detailcol") == "null"){
 	return "";
 }else{
