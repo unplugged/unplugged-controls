@@ -58,11 +58,11 @@ db.replicate("someserver");}]]></xp:this.script>
 				</xp:this.action>
 				<xp:this.script><![CDATA[$.blockUI();]]></xp:this.script>
 			</xp:eventHandler>
-			<span>Sync</span>
+			<span class="synclabel">Sync</span>
 		</xp:link>
 		<xp:link id="link2" styleClass="syncButton" value="#">
 			<xp:this.rendered><![CDATA[#{javascript:isUnpluggedServer() && compositeData.synctype == "alldbs";}]]></xp:this.rendered>
-			<span>Sync</span>
+			<span class="synclabel">Sync</span>
 			<xp:eventHandler event="onclick" submit="false">
 				<xp:this.script><![CDATA[syncAllDbs()]]></xp:this.script>
 			</xp:eventHandler>
@@ -112,7 +112,7 @@ return "Updated: " + rep;}]]></xp:this.value>
 }}]]></xp:this.value>
 				</xp:attr>
 			</xp:this.attrs>
-			<span>New</span>
+			<span class="newbuttonlabel">New</span>
 		</xp:panel>
 		<xp:panel tagName="div" id="settingsButton" styleClass="settingsButton"
 			rendered="#{javascript:compositeData.settingsurl != null;}">
@@ -121,7 +121,7 @@ return "Updated: " + rep;}]]></xp:this.value>
 					<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='" + compositeData.settingsurl + "';"}]]></xp:this.value>
 				</xp:attr>
 			</xp:this.attrs>
-			<span>Settings</span>
+			<span class="settingsbuttonlabel">Settings</span>
 		</xp:panel>
 	</xp:panel>
 

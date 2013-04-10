@@ -42,7 +42,7 @@ if (compositeData.editxpagewithajax != "no"){
 }}]]></xp:this.value>
 					</xp:attr>
 				</xp:this.attrs>
-				<span>Edit</span>
+				<span class="formbuttonlabel">Edit</span>
 			</xp:panel>
 			<xp:panel id="closebutton" styleClass="cancelButton" tagName="li">
 				<xp:this.attrs>
@@ -50,7 +50,7 @@ if (compositeData.editxpagewithajax != "no"){
 						<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='" + compositeData.closexpagename + "';"}]]></xp:this.value>
 					</xp:attr>
 				</xp:this.attrs>
-				<span>Close</span>
+				<span class="formbuttonlabel">Close</span>
 			</xp:panel>
 		</xp:panel>
 		<xp:callback facetName="facet_1" id="callback1"></xp:callback>
@@ -63,7 +63,7 @@ if (compositeData.editxpagewithajax != "no"){
 						<xp:this.value><![CDATA[#{javascript:"openDocument('" + compositeData.newresponsexpagename + "?action=newDocument&parentunid=" + document1.getDocument().getUniversalID() + "', 'content');"}]]></xp:this.value>
 					</xp:attr>
 				</xp:this.attrs>
-				<span>New Response</span>
+				<span class="formbuttonlabel">New Response</span>
 			</xp:panel>
 		</xp:panel>
 		<br />

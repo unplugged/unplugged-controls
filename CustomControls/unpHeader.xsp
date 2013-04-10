@@ -90,7 +90,7 @@ else{ return true;
 		</xp:label>
 		<xp:panel id="searchbutton" rendered="#{javascript:compositeData.search != 'none'}"
 			styleClass="searchButton">
-			<span></span>
+			<span class="searchlabel"></span>
 		</xp:panel>
 		<xp:panel id="homebutton" styleClass="homeButton">
 			<xp:this.attrs>
@@ -103,7 +103,7 @@ else{ return true;
 }}]]></xp:this.value>
 				</xp:attr>
 			</xp:this.attrs>
-			<span></span>
+			<span class="homelabel"></span>
 		</xp:panel>
 
 	</xp:panel>

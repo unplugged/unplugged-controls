@@ -53,7 +53,7 @@ out += ");"
 return out;}]]></xp:this.value>
 						</xp:attr>
 					</xp:this.attrs>
-					<span>Save</span>
+					<span class="formbuttonlabel">Save</span>
 				</xp:panel>
 				<xp:panel id="closebutton" styleClass="cancelButton"
 					tagName="li">
@@ -62,20 +62,9 @@ return out;}]]></xp:this.value>
 							<xp:this.value><![CDATA[#{javascript:return "$.blockUI(); window.location.href='" + compositeData.closexpagename + "';";}]]></xp:this.value>
 						</xp:attr>
 					</xp:this.attrs>
-					<span>Cancel</span>
+					<span class="formbuttonlabel">Cancel</span>
 				</xp:panel>
 			</xp:panel>
 		</xp:div>
 	</div>
-
-
-	<!--
-		<script type="text/javascript" src="unp/jquery-1.7.2.min.js"></script>
-		<script type="text/javascript"
-		src="unp/jquery.blockUI.min.js"></script> <script
-		type="text/javascript" src="unp/iScroll.min.js"></script> <script
-		type="text/javascript" src="unpForm.min.js"></script> <script
-		type="text/javascript" src="unpViewGetMore.min.js"></script> <script
-		type="text/javascript" src="unpViewsList.min.js"></script>
-	-->
 </xp:view>

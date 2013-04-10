@@ -830,6 +830,7 @@
             .mousedown(self.disableFinishOnBlur)
             .mouseup(self.enableFinishOnBlur)
         ;
+        $li.attr('class', 'ac-li')
         return $li;
     };
 
@@ -849,7 +850,7 @@
     $.Autocompleter.prototype.showResults = function(results, filter) {
         var numResults = results.length;
         var self = this;
-        var $ul = $('<ul></ul>');
+        var $ul = $('<ul class="ac-ul"></ul>');
         var i, result, $li, autoWidth, first = false, $first = false;
 
         if (numResults) {

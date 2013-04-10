@@ -44,14 +44,14 @@
 		</xp:panel>
 		<xp:panel tagName="ul" styleClass="alert-status">
 			<xp:text tagName="li" value="#{compositeData.alertlevelhighlabel}">
-				<xp:this.styleClass><![CDATA[#{javascript:var out = "high";
+				<xp:this.styleClass><![CDATA[#{javascript:var out = "workspace-header-li high";
 if (compositeData.alertlevel == "high"){
 	out += " active";
 }
 return out;}]]></xp:this.styleClass>
 			</xp:text>
 			<xp:text tagName="li" value="#{compositeData.alertlevelelevatedlabel}">
-				<xp:this.styleClass><![CDATA[#{javascript:var out = "elevated";
+				<xp:this.styleClass><![CDATA[#{javascript:var out = "workspace-header-li elevated";
 if (compositeData.alertlevel == "elevated"){
 	out += " active";
 }
@@ -71,7 +71,7 @@ return out;}]]></xp:this.styleClass>
 		<div class="wsscroll">
 			<ul class="workspace-items">
 				<xp:repeat id="chiclets" value="#{dbs}" var="db">
-					<xp:panel tagName="li">
+					<xp:panel tagName="li" styleClass="workspace-item">
 						<xp:panel tagName="a">
 							<xp:this.attrs>
 								<xp:attr name="onclick">
