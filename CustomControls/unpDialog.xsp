@@ -28,7 +28,7 @@
 			<xp:callback facetName="facet_1" id="callback1"></xp:callback>
 		</div>
 
-		<div class="button cancelbutton" onclick="closeDialog('#dialogPopup')" style="float: right;">
+		<div class="button cancelbutton" onclick="closeDialog('dialogPopup')" style="float: right;">
 			Cancel
 		</div>
 		<xp:panel tagName="div" styleClass="button savebutton">
@@ -39,13 +39,11 @@
 if (compositeData.callback){
 	out += compositeData.callback + "(); "
 }
-out += "closeDialog('#dialogPopup');";
+out += "closeDialog('dialogPopup');";
 return out;}]]></xp:this.value>
 				</xp:attr>
 			</xp:this.attrs>
 		</xp:panel>
-		
-
 	</div>
-	<div id="adminCover" style="display: none;"></div>
+	<div id="underlaydialogPopup" class="underlay"></div>
 </xp:view>

@@ -124,6 +124,4 @@ return "Updated: " + rep;}]]></xp:this.value>
 			<span class="settingsbuttonlabel">Settings</span>
 		</xp:panel>
 	</xp:panel>
-
-	<!-- <script type="text/javascript" src="unplugged.js"></script> -->
 </xp:view>

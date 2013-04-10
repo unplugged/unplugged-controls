@@ -368,14 +368,24 @@ function initiscroll() {
 }
 
 function openDialog(id){
-	$(id).css('display', 'block');
-	$("#underlay").css('display', 'block');
+	$("#underlay" + id).css('display', 'block');
+	$("#" + id).css('display', 'block');
+    var boxes = $("div");
+    boxes.click(function() {
+        var el = $(id);
+        var max = 0;
+        boxes.each(function() {
+            var z = parseInt( $( this ).css( "z-index" ), 10 );
+            max = Math.max( max, z );
+        });
+        el.css("z-index", max + 1 );
+    });
 	initiscroll();
 }
 
 function closeDialog(id){
-	$(id).css('display', 'none');
-	$("#underlay").css('display', 'none');
+	$("#" + id).css('display', 'none');
+	$("#underlay" + id).css('display', 'none');
 	initiscroll();
 }
 

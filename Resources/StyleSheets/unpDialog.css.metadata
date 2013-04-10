@@ -1,8 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><stylesheetresource charset="UTF-8" designerversion="8.5.3" maintenanceversion="3.0" name="unpDialog.css" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="4cf2" sequence="5" unid="AE84F45CDF40ADB480257ABE004EA551">
-<created><datetime>20121122T141901,29+00</datetime></created>
-<modified><datetime>20121122T142559,82+00</datetime></modified>
-<revised><datetime>20121122T142559,81+00</datetime></revised>
-<lastaccessed><datetime>20121122T142559,82+00</datetime></lastaccessed>
-<addedtofile><datetime>20121122T141901,30+00</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby></stylesheetresource>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="226" sequence="4" unid="3AE2AC9566CE9F2080257B470037F0D8">
+<created><datetime dst="true">20130408T111101,36+01</datetime></created>
+<modified><datetime dst="true">20130410T094539,32+01</datetime></modified>
+<revised><datetime dst="true">20130410T094539,31+01</datetime></revised>
+<lastaccessed><datetime dst="true">20130410T094539,32+01</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20130408T111102,86+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>unpDialog.css</text></item>
+<item name="$MimeCharSet"><text>UTF-8</text></item>
+<item name="$FileModDT" sign="true"><datetime dst="true">20130408T111101,37+01</datetime></item>
+<item name="$Flags"><text>=34QC</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>unpDialog.css</text></item></note>

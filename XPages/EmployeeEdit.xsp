@@ -114,7 +114,7 @@
 								</xp:inputTextarea>
 							</li>
 						</ul>
-						<input type="button" onclick="openDialog('#dialogPopup')"
+						<input type="button" onclick="openDialog('dialogPopup')"
 							value="Open Demo Dialog" />
 						<unp:unpDialog title="Test Dialog">
 							<xp:this.facets>

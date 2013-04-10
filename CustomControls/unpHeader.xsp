@@ -80,7 +80,7 @@ else{ return true;
 		<xp:label id="title"
 			value="#{javascript:compositeData.title}">
 			<xp:this.attrs>
-				<xp:attr name="href" value="#versionPopup"></xp:attr>
+				<xp:attr name="href" value="versionPopup"></xp:attr>
 			</xp:this.attrs>
 			<xp:this.styleClass><![CDATA[#{javascript:if (compositeData.appVersion != null && compositeData.appDescription != ""){
 	return "title opendialoglink";
@@ -140,8 +140,8 @@ else{ return true;
 				escape="false">
 			</xp:text>
 		</div>
-		<div class="button" onclick="closeDialog('#versionPopup')" style="margin-left: 25%;">
+		<div class="button" onclick="closeDialog('versionPopup')" style="margin-left: 25%;">
 				OK
 		</div>
 	</div>
-	<div id="underlay"></div></xp:view>
+	<div id="underlayversionPopup" class="underlay"></div></xp:view>
