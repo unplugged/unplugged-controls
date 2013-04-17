@@ -34,18 +34,6 @@ body {
 	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
-.title {
-	text-shadow: 0px 1px 0px #000;
-	display: block;
-	color: white;
-	font-weight: bold;
-	padding: 0px;
-	text-decoration: none;
-	text-align: center;
-	text-overflow: ellipsis;
-	font-size: 22px;
-}
-
 .hiddensearch {
 	display: none;
 }
@@ -1549,4 +1537,28 @@ span.deleteicon input {
 	width: 140px;
 	height: 30px;
 	display: none;
+}
+
+li.title {
+	text-shadow: 0px 1px 0px #000;
+	display: block;
+	color: white;
+	font-weight: bold;
+	padding-bottom: 0px !important;
+	text-decoration: none;
+	text-align: center;
+	text-overflow: ellipsis;
+	font-size: 22px;
+}
+
+span.title {
+	text-shadow: 0px 1px 0px #000;
+	display: block;
+	color: white;
+	font-weight: bold;
+	padding: 0px;
+	text-decoration: none;
+	text-align: center;
+	text-overflow: ellipsis;
+	font-size: 22px;
 }
