@@ -62,12 +62,12 @@ body {
 
 .backButton {
 	top: 10px;
-	left: 20px;
+	left: 30px;
 	position: absolute;
 	background: -webkit-linear-gradient(top, #808080, #464646);
 	height: 36px;
 	padding: 0;
-	z-index: 0;
+	z-index: 1;
 	border-radius: 6px;
 	-webkit-border-top-left-radius: 10px 15px;
 	-webkit-border-bottom-left-radius: 10px 15px;
@@ -119,11 +119,12 @@ body {
 		font-size: 12px;
 		line-height: 32px;
 	}
-	.backButton:before {
+	/*.backButton:before {
 		height: 26px;
 		width: 26px;
 		left: -5px;
 	}
+	*/
 }
 
 .homeButton {

@@ -58,14 +58,14 @@
 }
 else{ return true;
 }}]]></xp:this.rendered>
-			<xp:label id="backlink" styleClass="backlabel"
+			<xp:text tagName="span" id="backlink" styleClass="backlabel"
 				value="#{javascript:compositeData.backButtonText}">
 				<xp:this.attrs>
 					<xp:attr name="onclick">
 						<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='" + compositeData.backButtonURL + "';"}]]></xp:this.value>
 					</xp:attr>
 				</xp:this.attrs>
-			</xp:label>
+			</xp:text>
 		</xp:panel>
 		<xp:panel styleClass="viewsButton">
 			<xp:this.rendered><![CDATA[#{javascript:if (compositeData.backButtonText != "" && compositeData.backButtonText != null){
