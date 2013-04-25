@@ -27,5 +27,6 @@ $(document).ready(function() {
 		}else{
 			$("#input-search").removeClass("input-search").addClass("hiddensearch");
 		}
-		$('#input-search > input').focus(); });
+		$('.input-search:first').focus();
+	});
 });
