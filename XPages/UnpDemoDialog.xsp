@@ -15,7 +15,7 @@ the specific language governing permissions and limitations under the License
 	</xp:this.resources>
 
 	<unp:unpHeader search="local" searchPage="UnpSearch.xsp"
-		viewsButton="false" backButtonText="Back" backButtonURL="/UnpMain.xsp"
+		viewsButton="false" backButtonText="Back" backButtonURL="UnpMain.xsp"
 		title="Employees">
 	</unp:unpHeader>
 	<p style="padding: 40px;">

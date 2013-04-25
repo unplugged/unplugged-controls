@@ -16,7 +16,7 @@ the specific language governing permissions and limitations under the License
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 	</xp:this.resources>
 	<unp:unpHeader search="none" viewsButton="false" title="Employees"
-		backButtonText="Back" backButtonURL="UnpDemoFlatView.xsp">
+		backButtonText="Back" backButtonURL="UnpMain.xsp">
 	</unp:unpHeader>
 
 	<div id="content">
