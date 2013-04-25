@@ -13,12 +13,12 @@ the specific language governing permissions and limitations under the License
 	xmlns:xc="http://www.ibm.com/xsp/custom" xmlns:unp="http://unplugged.teamstudio.com">
 	<unp:unpScrollableArea>
 		<xp:this.facets>
-			<unp:unpFlatView insetData="true" detailColumn="Description"
-				numberofrows="20" summaryColumn="Name"
-				title="By Department (collapsed)" viewName="Employees"
-				xpageDoc="Employee.xsp" refreshmethod="pull" xp:key="facet_1"
-				collapseRows="Yes">
-			</unp:unpFlatView>
+			<unp:unpFlatView insetData="true" detailColumn="DOB"
+					summaryColumn="Name" title="Employees" viewName="Employees"
+					xpageDoc="Employee.xsp" xp:key="facet_1" numberofrows="20"
+					refreshmethod="pull" position="menu-aligned"
+					collapseRows="No">
+				</unp:unpFlatView>
 		</xp:this.facets>
 	</unp:unpScrollableArea>
 </xp:view>

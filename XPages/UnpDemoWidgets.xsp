@@ -30,19 +30,22 @@
 			<unp:menuItem label="Employees (Partial)" page="/UnpDemoWidgetsEmployees.xsp"
 				ajaxtargetid="content" ajaxloadid="contentwrapper">
 			</unp:menuItem>
-			<unp:menuItem label="By Department" page="/UnpDemoWidgetsByDept.xsp"
+			<unp:menuItem label="Employees (Partial no icons)" page="/UnpDemoWidgetsEmployeesNoIcons.xsp"
 				ajaxtargetid="content" ajaxloadid="contentwrapper">
 			</unp:menuItem>
-			<unp:menuItem label="Employee Details" page="/UnpDemoWidgetsExpanding.xsp"
+			<unp:menuItem label="Employees By Department" page="/UnpDemoWidgetsByDept.xsp"
 				ajaxtargetid="content" ajaxloadid="contentwrapper">
 			</unp:menuItem>
-			<unp:menuItem label="Just Finances Department" page="/UnpDemoWidgetsByDeptFinances.xsp"
+			<unp:menuItem label="By Department (collapsed)" page="/UnpDemoWidgetsExpanding.xsp"
 				ajaxtargetid="content" ajaxloadid="contentwrapper">
 			</unp:menuItem>
-			<unp:menuItem label="By Country" page="/UnpDemoWidgetsByCountry.xsp"
+			<unp:menuItem label="Employees in Finances" page="/UnpDemoWidgetsByDeptFinances.xsp"
 				ajaxtargetid="content" ajaxloadid="contentwrapper">
 			</unp:menuItem>
-			<unp:menuItem label="By Year" page="/UnpDemoWidgetsByYear.xsp"
+			<unp:menuItem label="Employees By Country" page="/UnpDemoWidgetsByCountry.xsp"
+				ajaxtargetid="content" ajaxloadid="contentwrapper">
+			</unp:menuItem>
+			<unp:menuItem label="Employees By Year" page="/UnpDemoWidgetsByYear.xsp"
 				ajaxtargetid="content" ajaxloadid="contentwrapper">
 			</unp:menuItem>
 		</unp:this.menuItem>
