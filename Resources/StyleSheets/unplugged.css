@@ -415,11 +415,11 @@ body {
 	color: #333;
 	border-bottom: 1px solid #AAA;
 	border-top: 1px solid #EEE;
-	padding: 10px 15px;
+	padding: 8px 15px;
 	font-weight: bold;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 	font-size: 16px;
-	line-height: 24px;
+	min-height: 30px;
 	text-overflow: ellipsis;
 	text-align: center;
 	display: block;
@@ -428,7 +428,9 @@ body {
 }
 
 #flatViewRowSet>li:first-child>span {
+	position: relative;
 	font-weight: bold;
+	top: 0px;
 }
 
 #flatViewRowSet>li:last-child {
