@@ -28,7 +28,7 @@
 			<xp:callback facetName="facet_1" id="callback1"></xp:callback>
 		</div>
 
-		<div class="button cancelbutton" onclick="closeDialog('dialogPopup')" style="float: right;">
+		<div class="button cancelbutton" onclick="closeDialog('dialogPopup')" style="float: right; margin-right: 0px;">
 			Cancel
 		</div>
 		<xp:panel tagName="div" styleClass="button savebutton">
