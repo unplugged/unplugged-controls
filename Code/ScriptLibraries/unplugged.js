@@ -464,7 +464,11 @@ function showListDetails(id) {
 		//refresh iscroll
 		if (unpluggedserver){
 			scrollContent.refresh();
-			scrollContent.scrollToElement($div);
+			try{
+				scrollContent.scrollToElement($div);
+			}catch(e){
+				
+			}
 		}
 	}).siblings("img");
 	if ($image.attr("src") == "unp/arrow-up.png") {
