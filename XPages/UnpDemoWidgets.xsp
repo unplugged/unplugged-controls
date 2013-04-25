@@ -24,7 +24,10 @@
 	</unp:unpHeader>
 	<unp:unpNavigator>
 		<unp:this.menuItem>
-			<unp:menuItem label="All Documents" page="/UnpDemoWidgets.xsp"
+			<unp:menuItem label="Employees" page="/UnpDemoWidgets.xsp"
+				ajaxtargetid="content" ajaxloadid="contentwrapper">
+			</unp:menuItem>
+			<unp:menuItem label="Employees (Partial)" page="/UnpDemoWidgetsEmployees.xsp"
 				ajaxtargetid="content" ajaxloadid="contentwrapper">
 			</unp:menuItem>
 			<unp:menuItem label="By Department" page="/UnpDemoWidgetsByDept.xsp"
