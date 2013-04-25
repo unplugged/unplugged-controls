@@ -78,7 +78,7 @@ function stopViewSpinner() {
 }
 
 function loadmore(dbName, viewName, summarycol, detailcol, category, xpage,
-		refreshmethod, photocol, collapserows) {
+		refreshmethod, photocol, collapserows, wrapsummarycol) {
 	try {
 		$(".loadmorelink").hide();
 		$("#loadmorespinner").show();
@@ -101,6 +101,7 @@ function loadmore(dbName, viewName, summarycol, detailcol, category, xpage,
 				+ encodeURIComponent(photocol) + "&collapserows="
 				+ encodeURIComponent(collapserows) + "&category="
 				+ encodeURIComponent(category) + "&xpage=" + xpage
+				+ "&wrapsummarycol=" + encodeURIComponent(wrapsummarycol) 
 				+ "&dbName=" + dbName
 				+ "&refreshmethod=" + refreshmethod + "&start=" + pos;
 		thisArea.load(url + " #results", function() {

@@ -57,7 +57,7 @@
 					summaryColumn="Name" title="Employees" viewName="Employees"
 					xpageDoc="Employee.xsp" xp:key="facet_1" numberofrows="20"
 					refreshmethod="pull" position="menu-aligned" photoColumn="Photo"
-					collapseRows="No">
+					collapseRows="No" wrapsummarytext="yes">
 				</unp:unpFlatView>
 			</xp:this.facets>
 		</unp:unpScrollableArea>

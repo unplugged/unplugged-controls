@@ -1569,3 +1569,11 @@ span.title {
 	text-overflow: ellipsis;
 	font-size: 22px;
 }
+
+.two-lines {
+	display: -webkit-box; 
+	-webkit-line-clamp: 2;	/*num lines*/
+	-webkit-box-orient: vertical;
+	white-space: normal;
+	line-height: 22px;
+}

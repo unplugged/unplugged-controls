@@ -133,8 +133,12 @@ return out;}]]></xp:this.styleClass>
 }}]]></xp:this.url>
 							</xp:image>
 							<xp:label id="label2"
-								value="#{javascript:thisRowData.getColumnValue(compositeData.summaryColumn);}"
-								styleClass="viewlistsummary">
+								value="#{javascript:thisRowData.getColumnValue(compositeData.summaryColumn);}">
+								<xp:this.styleClass><![CDATA[#{javascript:var out = "viewlistsummary";
+if (compositeData.wrapsummarytext == "yes"){
+	out += " two-lines";
+}
+return out;}]]></xp:this.styleClass>
 							</xp:label>
 							<xp:div id="rowDetails">
 								<xp:this.style><![CDATA[#{javascript:if (compositeData.collapseRows == "Yes"){
@@ -174,7 +178,7 @@ return out;}]]></xp:this.styleClass>
 						styleClass="loadmorebutton">
 						<xp:this.attrs>
 							<xp:attr name="onclick">
-								<xp:this.value><![CDATA[#{javascript:"loadmore('" + compositeData.dbName + "', '" + compositeData.viewName + "', '" + compositeData.summaryColumn + "', '" + compositeData.detailColumn + "', '" + compositeData.categoryfilter + "', '" + compositeData.xpageDoc + "', '" + compositeData.refreshmethod + "', '" + compositeData.photoColumn + "', '" + compositeData.collapseRows + "')"}]]></xp:this.value>
+								<xp:this.value><![CDATA[#{javascript:"loadmore('" + compositeData.dbName + "', '" + compositeData.viewName + "', '" + compositeData.summaryColumn + "', '" + compositeData.detailColumn + "', '" + compositeData.categoryfilter + "', '" + compositeData.xpageDoc + "', '" + compositeData.refreshmethod + "', '" + compositeData.photoColumn + "', '" + compositeData.collapseRows + "', '" + compositeData.wrapsummarytext + "')"}]]></xp:this.value>
 							</xp:attr>
 						</xp:this.attrs>
 					</xp:button>

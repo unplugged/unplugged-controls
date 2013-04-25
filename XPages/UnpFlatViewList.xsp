@@ -93,8 +93,13 @@ return out;}]]></xp:this.styleClass>
 	return "/unp/right-arrow-circle.png";
 }}]]></xp:this.url>
 				</xp:image>
-				<xp:label id="label2" styleClass="viewlistsummary">
+				<xp:label id="label2">
 					<xp:this.value><![CDATA[#{javascript:thisRowData.getColumnValue(context.getUrlParameter("summarycol"));}]]></xp:this.value>
+					<xp:this.styleClass><![CDATA[#{javascript:var out = "viewlistsummary";
+if (context.getUrlParameter("wrapsummarycol") == "yes"){
+	out += " two-lines";
+}
+return out;}]]></xp:this.styleClass>
 				</xp:label>
 
 				<xp:text tagName="div" id="detail"
