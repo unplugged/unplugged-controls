@@ -62,20 +62,19 @@ body {
 
 .backButton {
 	top: 10px;
-	left: 30px;
+	left: 10px;
 	position: absolute;
 	background: -webkit-linear-gradient(top, #808080, #464646);
 	height: 36px;
 	padding: 0;
 	z-index: 1;
 	border-radius: 6px;
-	-webkit-border-top-left-radius: 10px 15px;
-	-webkit-border-bottom-left-radius: 10px 15px;
+	
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
 	text-align: center;
 	cursor: pointer;
 }
-
+/*
 .backButton:before {
 	position: absolute;
 	top: 9.9%;
@@ -96,6 +95,7 @@ body {
 		color-stop(0.33, #000000), color-stop(0.5, transparent),
 		to(transparent) );
 }
+*/
 
 /*.backButton span {*/
 .backlabel {
@@ -107,6 +107,7 @@ body {
 	font-weight: bold;
 	line-height: 36px;
 	font-size: 16px;
+	z-index: 100;
 }
 
 @media screen and (max-width: 700px) {
