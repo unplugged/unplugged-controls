@@ -114,17 +114,19 @@ body {
 	.backButton {
 		height: 32px;
 		top: 5px;
-		left: 14px;
+		left: 5px;
 	}
 	.backlabel {
 		font-size: 12px;
 		line-height: 32px;
 	}
+	/*
 	.backButton:before {
 		height: 26px;
 		width: 26px;
 		left: -5px;
 	}
+	*/
 }
 
 .homeButton {

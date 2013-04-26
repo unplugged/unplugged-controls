@@ -131,7 +131,7 @@ function openDocument(url, target) {
 	// $.blockUI();
 	// document.location.href = url;
 	var thisArea = $("#" + target);
-	thisArea.load(url + " #contentwrapper",
+	thisArea.load(url.replace(" ", "%20") + " #contentwrapper",
 			function() {
 
 				if (firedrequests != null) {
