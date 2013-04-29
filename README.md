@@ -6,6 +6,19 @@ It is our intention to publish periodic updates to these controls to OpenNTF.
 
 ## Changes
 
+### v1.4.0 (29th April 2013)
+- Reduce use of dependent CSS selectors
+- Add "About" dialog box. Accessed by tapping the title in the header bar. Populated by completing appVersion and appDescription custom properties. Leave blank to disable.
+- Added support for Type ahead edit box. To enable add "autocomplete" to the styleClass property of the field you want to autocomplete. Then add an attribute "auto-src" which is the name of the URL which will generate the JSON formatted data with suggestions.
+- Added category support to Flat View Control. Categories now display as a blue separator bar with the category title inside
+- Added icon support to Flat view control. URL pointing to image to use should be calculated in a new view column
+- Added expandable row support to Flat View Control. The flat view row entries can be displayed as a single line of text which can be tapped to expand. When using this new feature, the document cannot be opened.
+- Fixed bug with Accordion view control where the view scrolled to the top of the page when expanding a category
+- Added support for a spinner graphic on page interestitials. Populate a div called "loading" to enable
+- Fixed bug with Back button not displaying correctly on smaller devices
+- Added support for wrapping content in Flat View Control. By default text is still truncated but a new custom property called "wrapsummarytext" can be set to "yes" to enable
+- Keyboard now automatically displays when click search icon on phone
+
 ### v1.3.0 (26th Mar 2013)
 1. - Date not displayed in Android footer bar
 102. - Add CSS Controls - New non location specific CSS classes have been created for buttons and fieldsets. See demo database for examples
