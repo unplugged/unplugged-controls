@@ -349,6 +349,7 @@ function initiscroll() {
 													this.maxScrollY = pullUpOffset;
 												}
 											}
+											$(".acResults").hide();
 										},
 										onScrollEnd : function() {
 											if (pullUpEl) {
