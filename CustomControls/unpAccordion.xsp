@@ -13,7 +13,8 @@ the specific language governing permissions and limitations under the License
 	<xp:this.beforePageLoad>
 		<xp:executeScript>
 			<xp:this.script><![CDATA[#{javascript:var escViewName = @ReplaceSubstring(compositeData.viewName, "\\","\\\\");
-viewScope.put('escViewName',escViewName);}]]></xp:this.script>
+viewScope.put('escViewName',escViewName);
+sessionScope.put('ajaxLoad', compositeData.ajaxload);}]]></xp:this.script>
 		</xp:executeScript>
 	</xp:this.beforePageLoad>
 	<xp:this.beforeRenderResponse><![CDATA[#{javascript:if(!(applicationScope.containsKey('PATH'))){

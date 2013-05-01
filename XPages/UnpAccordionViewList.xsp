@@ -45,7 +45,14 @@ if (start == ""){
 								}else{
 								  viewScope.accRowcount = viewScope.accRowcount + 1;
 								}
-								"openDocument('" + param.get("xpageDoc") + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID() + "', 'content')"}]]></xp:this.value>
+								if(sessionScope.get("ajaxLoad") != "No"){
+									return "openDocument('" + param.get("xpageDoc") + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID() + "', 'content');"
+								}
+								else{						
+									var url = getDbPath() + "/" + param.get("xpageDoc") + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID();
+									return "document.location.href='" + url + "'";
+								}
+							}]]></xp:this.value>
 					</xp:attr>
 				</xp:this.attrs>
 				<xp:image url="/unp/right-arrow-circle.png" id="image1"

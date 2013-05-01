@@ -97,5 +97,17 @@ menu-aligned</editor-parameter>
       <small-icon>/icons/defaultLogoSmall.png</small-icon>
       <large-icon>/icons/defaultLogo.png</large-icon>
     </icon>
+    <property>
+      <property-name>ajaxload</property-name>
+      <property-class>string</property-class>
+      <display-name>ajaxload</display-name>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <editor-parameter>Yes&#xd;
+No</editor-parameter>
+        </designer-extension>
+      </property-extension>
+    </property>
   </composite-component>
 </faces-config>
