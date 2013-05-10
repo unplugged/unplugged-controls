@@ -217,13 +217,13 @@ function toggleViewsMenu() {
 		$("#menuPane").removeClass("offScreen").addClass("onScreen");
 		$("#menuPane").animate( {
 			"left" : "+=700px"
-		}, "slow");
+		}, "fast");
 		//$("#content").fadeOut();
 	} else {
 		$("#menuPane").removeClass("onScreen").addClass("offScreen");
 		$("#menuPane").animate( {
 			"left" : "-=700px"
-		}, "slow");
+		}, "fast");
 		//$("#content").fadeIn();
 	}
 }
@@ -233,7 +233,7 @@ function hideViewsMenu() {
 		$("#menuPane").removeClass("onScreen").addClass("offScreen");
 		$("#menuPane").animate( {
 			"left" : "-=700px"
-		}, "slow");
+		}, "fast");
 	}
 	//$("#content").fadeIn();
 }
