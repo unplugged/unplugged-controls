@@ -27,7 +27,7 @@
 	</xp:this.data>
 	<xp:this.resources>
 		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
-		
+
 		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
 		<xp:script src="/unp/iScroll.min.js" clientSide="true"></xp:script>
 		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
@@ -67,11 +67,13 @@ if (sessionScope.rowcount != null){
 }else{
 	return 20;
 }}]]></xp:this.rows>
-						<xp:text escape="false" tagName="li"
+						<xp:panel tagName="li" id="categoryrow"
 							styleClass="categoryRowFixed condensed" disableTheme="true"
-							rendered="#{javascript:thisRowData.isCategory()}"
-							value="#{javascript:thisRowData.getColumnValues().elementAt(0)}">
-						</xp:text>
+							rendered="#{javascript:thisRowData.isCategory()}">
+							<xp:text
+								value="#{javascript:thisRowData.getColumnValues().elementAt(0)}">
+							</xp:text>
+						</xp:panel>
 						<xp:panel tagName="li" id="datarow"
 							rendered="#{javascript:!thisRowData.isCategory()}">
 							<xp:this.attrs>
@@ -144,8 +146,7 @@ return out;}]]></xp:this.styleClass>
 								<xp:this.style><![CDATA[#{javascript:if (compositeData.collapseRows == "Yes"){
 	return "display: none;";
 }}]]></xp:this.style>
-								<xp:label id="label1"
-									styleClass="viewlistdetail">
+								<xp:label id="label1" styleClass="viewlistdetail">
 									<xp:this.value><![CDATA[#{javascript:if(compositeData.detailColumn == null){
 	return " ";
 }else{
