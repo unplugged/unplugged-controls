@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!--
+		Copyright 2013 Teamstudio Inc Licensed under the Apache License,
+		Version 2.0 (the "License"); you may not use this file except in
+		compliance with the License. You may obtain a copy of the License at
+		http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+		applicable law or agreed to in writing, software distributed under the
+		License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or implied. See the License for
+		the specific language governing permissions and limitations under the
+		License
+	-->
+
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<style>
+		body {
+		padding-bottom: 45px !important;
+		}
+		@media screen and
+		(min-width: 701px) {
+		body {
+		padding-bottom: 60px !important;
+		}
+		}
+		@media
+		screen and (max-width: 700px) {
+		body {
+		padding-bottom: 45px !important;
+		}
+		}
+	</style>
+	<xp:this.resources>
+
+		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/iScroll.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
+		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
+	</xp:this.resources>
+	<xp:panel styleClass="footer black">
+		<div id='tabfooter'>
+			<ul id="footerTabBar">
+				<xp:repeat id="repeat1" rows="30" disableOutputTag="true"
+					var="menuItem" value="#{javascript:compositeData.tab;}">
+					<xp:panel tagName="li">
+						<xp:this.styleClass><![CDATA[#{javascript:
+if (("/" + getCurrentXPage()) == menuItem.page){
+	return "menuitem" + viewScope.menuItemIndex + " tabSelected";
+}else{
+	return "menuitem" + viewScope.menuItemIndex + " viewMenuItem";
+}}]]></xp:this.styleClass>
+						<xp:this.attrs>
+							<xp:attr name="onclick">
+								<xp:this.value><![CDATA[#{javascript:
+	return "openPage('" + getDbPath() + menuItem.page + "', '" + menuItem.ajaxtargetid + "')";
+}]]></xp:this.value>
+							</xp:attr>
+						</xp:this.attrs>
+						<xp:image url="#{javascript:menuItem.icon}" id="image2">
+							<xp:this.rendered><![CDATA[#{javascript:if (viewScope.menuItemIndex == null){
+	viewScope.menuItemIndex = 0;
+}else{
+	viewScope.menuItemIndex = viewScope.menuItemIndex + 1;
+}
+menuItem.icon != null && menuItem.icon != ""}]]></xp:this.rendered>
+							<xp:this.styleClass><![CDATA[#{javascript:
+return "background:  url('" + menuItem.icon + "') 50% 0% no-repeat; padding-top: 10px;margin-bottom:5px;"
+}]]>
+							</xp:this.styleClass>
+						</xp:image>
+						<br/>
+						<xp:text id="menutext" styleClass="footerTabtext"
+							value="#{javascript:menuItem.label;}">
+						</xp:text>
+					</xp:panel>
+
+				</xp:repeat>
+			</ul>
+		</div>
+	</xp:panel>
+</xp:view>

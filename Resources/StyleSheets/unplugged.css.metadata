@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" replicaid="80257B470037E1BA" version="9.0">
-<noteinfo noteid="21e" sequence="4" unid="063A8E4AF6BA58E980257B470037F0D1">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="3.0" replicaid="85257B5E0013C26D" version="8.5" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="222" sequence="4" unid="063A8E4AF6BA58E980257B470037F0D1">
 <created><datetime dst="true">20130408T111101,29+01</datetime></created>
-<modified><datetime dst="true">20130408T164940,06+01</datetime></modified>
-<revised><datetime dst="true">20130408T164940,05+01</datetime></revised>
-<lastaccessed><datetime dst="true">20130408T164940,06+01</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20130408T111102,74+01</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<modified><datetime dst="true">20130510T124651,71-04</datetime></modified>
+<revised><datetime dst="true">20130510T124651,70-04</datetime></revised>
+<lastaccessed><datetime dst="true">20130510T124651,71-04</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20130430T233554,42-04</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Richard Sharpe/O=Teamstudio</name></updatedby>
+<wassignedby><name>CN=Richard Sharpe/O=Teamstudio</name></wassignedby>
 <item name="$TITLE" sign="true"><text>unplugged.css</text></item>
 <item name="$FileModDT" sign="true"><datetime dst="true">20130408T111101,30+01</datetime></item>
 <item name="$Flags"><text>=34QC</text></item>

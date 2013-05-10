@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:unp="http://unplugged.teamstudio.com">
+
+	<xp:this.resources>
+		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
+	</xp:this.resources>
+	<unp:unpTabbedFooter>
+		<unp:this.tab>
+			<unp:tab icon="icons/house.png" label="Home"
+				page="/UnpMain.xsp">
+			</unp:tab>
+			<unp:tab icon="icons/id_card.png" label="Contacts"
+				page="/UnpDemoTabbedFooter.xsp">
+			</unp:tab>
+			<unp:tab icon="icons/ipod.png" label="Music"
+				page="#">
+			</unp:tab>
+			<unp:tab icon="icons/lock.png" label="Security"
+				page="#">
+			</unp:tab>
+		</unp:this.tab>
+	</unp:unpTabbedFooter>
+</xp:view>

@@ -110,6 +110,28 @@ body {
 	z-index: 100;
 }
 
+#tabfooter ul {
+	-webkit-padding-start:0px;
+	margin: 0px;
+}
+
+#tabfooter li {
+	display:block;
+	float:left;
+	width:25%;
+	text-align:center;
+	padding-top:5px;
+}
+
+.footerTabtext{
+  color:white;
+}
+
+.tabSelected{
+	background:blue;
+	padding-bottom:10px;
+}
+
 @media screen and (max-width: 700px) {
 	.backButton {
 		height: 32px;
