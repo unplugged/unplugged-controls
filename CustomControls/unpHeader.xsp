@@ -53,7 +53,7 @@
 			id="companyLogo">
 		</xp:image>
 		<xp:panel styleClass="backButton">
-			<xp:this.rendered><![CDATA[#{javascript:if(compositeData.backButtonText == '' || compositeData.backButtonText == null){
+			<xp:this.rendered><![CDATA[#{javascript:if(isEmpty(compositeData.backButtonText)){
 	return false;
 }
 else{ return true;

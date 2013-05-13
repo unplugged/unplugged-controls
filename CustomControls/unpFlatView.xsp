@@ -15,7 +15,7 @@
 	<xp:this.data>
 		<xp:dominoView var="viewList"
 			viewName="#{javascript:compositeData.viewName}">
-			<xp:this.categoryFilter><![CDATA[#{javascript:if (compositeData.categoryfilter == null || compositeData.categoryfilter == ""){
+			<xp:this.categoryFilter><![CDATA[#{javascript:if (isEmpty(compositeData.categoryfilter)){
 	return null;
 }else{
 	return compositeData.categoryfilter;
@@ -50,7 +50,7 @@ if (out.length > 0){
 			<div id="flatView">
 				<ul id="flatViewRowSet">
 					<xp:panel tagName="li" id="title" styleClass="title">
-						<xp:this.style><![CDATA[#{javascript:if (compositeData.title == null){
+						<xp:this.style><![CDATA[#{javascript:if (isEmpty(compositeData.title)){
 	return "display: none;";
 }}]]></xp:this.style>
 						<xp:label id="label3">
@@ -96,7 +96,7 @@ if (sessionScope.rowcount != null){
 	viewScope.rowcount = viewScope.rowcount + 1;
 }
 var out = "data-row";
-if (viewScope.rowcount == 1 && compositeData.title == null){
+if (viewScope.rowcount == 1 && isEmpty(compositeData.title)){
 	out += " first-row";
 }
 if (compositeData.collapseRows == "Yes"){
@@ -123,7 +123,7 @@ return out;}]]></xp:this.styleClass>
 }}]]></xp:this.styleClass>
 							</xp:image>
 							<xp:image id="image1">
-								<xp:this.styleClass><![CDATA[#{javascript:if(compositeData.detailColumn == null || compositeData.collapseRows == "Yes"){ 
+								<xp:this.styleClass><![CDATA[#{javascript:if(isEmpty(compositeData.detailColumn) || compositeData.collapseRows == "Yes"){ 
 	return 'singleLineIcon';
 } else {
 	return 'multiLineIcon';
@@ -147,7 +147,7 @@ return out;}]]></xp:this.styleClass>
 	return "display: none;";
 }}]]></xp:this.style>
 								<xp:label id="label1" styleClass="viewlistdetail">
-									<xp:this.value><![CDATA[#{javascript:if(compositeData.detailColumn == null){
+									<xp:this.value><![CDATA[#{javascript:if(isEmpty(compositeData.detailColumn)){
 	return " ";
 }else{
   return thisRowData.getColumnValue(compositeData.detailColumn);

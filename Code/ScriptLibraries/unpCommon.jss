@@ -62,3 +62,15 @@ function $A( object ){
 	if( object.constructor === Array ){ return object; }  
 	return [ object ];
 }
+
+function isEmpty( input ) {
+	if (input == null || typeof input == 'undefined') {
+	    return true;    
+	}
+	if (typeof input == 'string') {
+	    return input.equals("");
+	} else if (input.toString != null) {
+	    return input.toString().equals("");
+	}
+	return false;
+}

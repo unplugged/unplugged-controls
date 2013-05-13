@@ -51,7 +51,7 @@ if (sessionScope.rowcount != null){
 								</xp:attr>
 							</xp:this.attrs>
 							<xp:image url="/unp/right-arrow-circle.png" id="image1"
-								styleClass="#{javascript:if(compositeData.detailColumn == null){ return 'icon';} else {return 'multiLineIcon';}}">
+								styleClass="#{javascript:if(isEmpty(compositeData.detailColumn)){ return 'icon';} else {return 'multiLineIcon';}}">
 							</xp:image>
 							<xp:label id="label2"
 								value="#{javascript:thisRowData.getColumnValue(compositeData.summaryColumn);}"
@@ -59,9 +59,9 @@ if (sessionScope.rowcount != null){
 							</xp:label>
 							<div>
 								<xp:label id="label1" styleClass="viewlistdetail">
-									<xp:this.rendered><![CDATA[#{javascript:if(compositeData.detailColumn == null){ return false; }
+									<xp:this.rendered><![CDATA[#{javascript:if(isEmpty(compositeData.detailColumn)){ return false; }
 else {return true;}}]]></xp:this.rendered>
-									<xp:this.value><![CDATA[#{javascript:if(compositeData.detailColumn == null){
+									<xp:this.value><![CDATA[#{javascript:if(isEmpty(compositeData.detailColumn)){
 	return "";
 }else{
   return thisRowData.getColumnValue(compositeData.detailColumn);
