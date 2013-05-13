@@ -754,7 +754,7 @@ body {
 }
 
 /*@media screen and (min-width:1001px) and (orientation:landscape) {*/
-@media screen and (max-width: 1024px) and (min-width: 1020px) {
+@media screen and (max-width: 1023px) and (min-width: 1020px) {
 	#formholder {
 		width: 98% !important;
 		margin-left: 1% !important;
@@ -1601,4 +1601,18 @@ span.title {
 	-webkit-box-orient: vertical;
 	white-space: normal;
 	line-height: 22px;
+}
+
+.titleicon {
+	display: inline;
+	max-height: 44px;
+	padding-right: 13px;
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-webkit-border-bottom-left-radius: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+}
+
+.formtitle {
+	display: inline;
 }
