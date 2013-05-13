@@ -27,8 +27,9 @@
 			<unp:menuItem label="Employees" page="/UnpDemoWidgets.xsp"
 				ajaxtargetid="content" ajaxloadid="contentwrapper">
 			</unp:menuItem>
-			<unp:menuItem label="Employees (Partial)" page="/UnpDemoWidgetsEmployees.xsp"
+			<unp:menuItem label="Employees (Partial)"
 				ajaxtargetid="content" ajaxloadid="contentwrapper">
+				<unp:this.page><![CDATA[#{javascript:"/UnpDemoWidgetsEmployees.xsp"}]]></unp:this.page>
 			</unp:menuItem>
 			<unp:menuItem label="Employees (Partial no icons)" page="/UnpDemoWidgetsEmployeesNoIcons.xsp"
 				ajaxtargetid="content" ajaxloadid="contentwrapper">
