@@ -1619,3 +1619,21 @@ span.title {
 #footerTabBar {
 	cursor: pointer;
 }
+
+#swipepreviousbutton{
+	position: absolute;
+	top: 50%;
+	font-size: 4em;
+	font-weight: bold;
+	left: 1%;
+	cursor: pointer;
+}
+
+#swipenextbutton{
+	position: absolute;
+	top: 50%;
+	font-size: 4em;
+	font-weight: bold;
+	right: 1%;
+	cursor: pointer;
+}

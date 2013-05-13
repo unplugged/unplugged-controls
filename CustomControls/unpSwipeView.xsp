@@ -47,7 +47,7 @@ for(var i=0; i<attachmentList.length; i++){
   images += "'img': '" + imageFile + "',"
   images += "'width': '300',"
   images += "'height': '250',"
-  images += "'desc': 'caption'" 
+  images += "'desc': '" + attachmentList[i].getName() + "'" 
   images += "}" 
   
   arraySeparator = ",";
@@ -77,6 +77,12 @@ viewScope.put("images", images);
 		<xp:label value="Close" id="label1">
 		</xp:label>
 	</xp:link>
+	</div>
+	<div id="swipepreviousbutton" onclick="gallery.prev()">
+		&#171;
+	</div>
+	<div id="swipenextbutton" onclick="gallery.next()">
+		&#187;
 	</div>
 	<xp:scriptBlock id="script1">
 		<xp:this.value>
