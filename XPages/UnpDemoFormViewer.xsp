@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:unp="http://unplugged.teamstudio.com">
+	<xp:this.resources>
+		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
+		<xp:styleSheet href="/unpDialog.css"></xp:styleSheet>
+	</xp:this.resources>
+
+	<unp:unpHeader search="none" searchPage="UnpSearch.xsp"
+		viewsButton="false" title="Form View (No Navigator)">
+	</unp:unpHeader>
+	<unp:unpScrollableArea>
+		<xp:this.facets>
+			<unp:unpFormViewer showbuttons="true"
+				closexpagename="UnpDemoWidgets.xsp" editxpagename="EmployeeEdit.xsp"
+				formname="Employee" title="Employee" xp:key="facet_1"
+				titleiconfield="photo1" position="left-aligned">
+				<xp:this.facets>
+					<xp:panel xp:key="facet_1">
+						<ul class="fieldlist">
+							<li>
+								<xp:label value="Name" id="namelabel" for="name">
+								</xp:label>
+								<xp:text id="name" value="#{document1.Name}">
+								</xp:text>
+							</li>
+							<li>
+								<xp:label value="DOB" id="doblabel" for="birthday">
+								</xp:label>
+								<xp:text id="birthday" value="#{document1.Birthday}">
+								</xp:text>
+							</li>
+							<li>
+								<xp:label value="Email" id="emaillabel" for="email">
+								</xp:label>
+								<xp:text id="email" value="#{document1.Email}">
+								</xp:text>
+							</li>
+							<li>
+								<xp:label value="Start Month" id="startmonthlabel" for="startmonth">
+								</xp:label>
+								<xp:text id="startmonth" value="#{document1.StartDate}">
+								</xp:text>
+							</li>
+							<li>
+								<xp:label value="Manager long label blah blah" id="managerlabel"
+									for="manager" styleClass="longlabel">
+								</xp:label>
+								<xp:text id="manager" value="#{document1.Manager}">
+								</xp:text>
+							</li>
+							<li>
+								<xp:label value="Dept" id="deptlabel" for="dept">
+								</xp:label>
+								<xp:text id="dept" value="#{document1.Dept}">
+								</xp:text>
+							</li>
+							<li>
+								<xp:label value="Countries" id="countrieslabel" for="countries">
+								</xp:label>
+								<xp:text id="countries" value="#{document1.Countries}">
+								</xp:text>
+							</li>
+							<li>
+								<xp:text id="description" tagName="div"
+									value="#{document1.Description}" escape="false" styleClass="body_richtext">
+								</xp:text>
+							</li>
+						</ul>
+					</xp:panel>
+				</xp:this.facets>
+			</unp:unpFormViewer>
+		</xp:this.facets>
+	</unp:unpScrollableArea>
+
+	<unp:unpFooter newDocLoadType="ajax" synctype="currentdb"></unp:unpFooter>
+</xp:view>

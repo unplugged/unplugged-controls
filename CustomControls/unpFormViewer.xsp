@@ -25,11 +25,20 @@
 		</xp:dominoDocument>
 	</xp:this.data>
 
-	<div id="formholder">
-		<h2>
-			<xp:panel tagName="img" id="titleicon"
-				styleClass="titleicon">
-				<xp:this.rendered><![CDATA[#{javascript:if (compositeData.titleiconfield != "" && compositeData.titleiconfield != null){
+
+	<xp:panel tagName="div" style="#{javascript:compositeData.cssoverride}">
+		<xp:this.styleClass><![CDATA[#{javascript:var out = new Array();
+if (compositeData.position == "left-aligned"){
+	out.push("formpullleft");
+}
+if (out.length > 0){
+	return @Implode(out, " ");
+}}]]>
+		</xp:this.styleClass>
+		<div id="formholder">
+			<h2>
+				<xp:panel tagName="img" id="titleicon" styleClass="titleicon">
+					<xp:this.rendered><![CDATA[#{javascript:if (compositeData.titleiconfield != "" && compositeData.titleiconfield != null){
 	if (document1.getDocument().getFirstItem(compositeData.titleiconfield) != null){
 		return true;
 	}else{
@@ -38,68 +47,60 @@
 }else{
 	return false;
 }}]]></xp:this.rendered>
-				<xp:this.attrs>
-					<xp:attr name="src">
-						<xp:this.value><![CDATA[#{javascript:var rtitem:NotesRichTextItem = document1.getDocument().getFirstItem(compositeData.titleiconfield);
+					<xp:this.attrs>
+						<xp:attr name="src">
+							<xp:this.value><![CDATA[#{javascript:var rtitem:NotesRichTextItem = document1.getDocument().getFirstItem(compositeData.titleiconfield);
 var objects = rtitem.getEmbeddedObjects();
 for(var i=0; i<objects.length; i++){
 	return getDbPath() + "/0/" + document1.getDocument().getUniversalID() + "/$FILE/" + objects[i].getName();
 }}]]></xp:this.value>
-					</xp:attr>
-				</xp:this.attrs>
-			</xp:panel>
-			<xp:text escape="true" id="title" tagName="span"
-				value="#{javascript:compositeData.title}" styleClass="formtitle">
-			</xp:text>
-		</h2>
-		<xp:panel id="topbuttons" styleClass="buttons" tagName="ul"
-			rendered="#{javascript:compositeData.showbuttons}">
-			<xp:panel id="editbutton" styleClass="editButton" tagName="li">
-				<xp:this.attrs>
-					<xp:attr name="onclick">
-						<xp:this.value><![CDATA[#{javascript:var url = compositeData.editxpagename + "?action=editDocument&documentId=" + document1.getDocument().getUniversalID();
+						</xp:attr>
+					</xp:this.attrs>
+				</xp:panel>
+				<xp:text escape="true" id="title" tagName="span"
+					value="#{javascript:compositeData.title}" styleClass="formtitle">
+				</xp:text>
+			</h2>
+			<xp:panel id="topbuttons" styleClass="buttons" tagName="ul"
+				rendered="#{javascript:compositeData.showbuttons}">
+				<xp:panel id="editbutton" styleClass="editButton" tagName="li">
+					<xp:this.attrs>
+						<xp:attr name="onclick">
+							<xp:this.value><![CDATA[#{javascript:var url = compositeData.editxpagename + "?action=editDocument&documentId=" + document1.getDocument().getUniversalID();
 if (compositeData.editxpagewithajax != "no"){
 	return "openDocument('" + url + "', 'content');";
 }else{
 	return "$.blockUI();window.location.href='" + url + "';";
 }}]]></xp:this.value>
-					</xp:attr>
-				</xp:this.attrs>
-				<span class="formbuttonlabel">Edit</span>
+						</xp:attr>
+					</xp:this.attrs>
+					<span class="formbuttonlabel">Edit</span>
+				</xp:panel>
+				<xp:panel id="closebutton" styleClass="cancelButton"
+					tagName="li">
+					<xp:this.attrs>
+						<xp:attr name="onclick">
+							<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='" + compositeData.closexpagename + "';"}]]></xp:this.value>
+						</xp:attr>
+					</xp:this.attrs>
+					<span class="formbuttonlabel">Close</span>
+				</xp:panel>
 			</xp:panel>
-			<xp:panel id="closebutton" styleClass="cancelButton"
-				tagName="li">
-				<xp:this.attrs>
-					<xp:attr name="onclick">
-						<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='" + compositeData.closexpagename + "';"}]]></xp:this.value>
-					</xp:attr>
-				</xp:this.attrs>
-				<span class="formbuttonlabel">Close</span>
+			<xp:callback facetName="facet_1" id="callback1"></xp:callback>
+			<xp:panel id="bottombuttons" styleClass="buttons bottombuttons"
+				tagName="ul">
+				<xp:this.rendered><![CDATA[#{javascript:compositeData.newresponsexpagename != "" && compositeData.newresponsexpagename != null}]]></xp:this.rendered>
+				<xp:panel tagName="li" styleClass="proceedButton">
+					<xp:this.attrs>
+						<xp:attr name="onclick">
+							<xp:this.value><![CDATA[#{javascript:"openDocument('" + compositeData.newresponsexpagename + "?action=newDocument&parentunid=" + document1.getDocument().getUniversalID() + "', 'content');"}]]></xp:this.value>
+						</xp:attr>
+					</xp:this.attrs>
+					<span class="formbuttonlabel">New Response</span>
+				</xp:panel>
 			</xp:panel>
-		</xp:panel>
-		<xp:callback facetName="facet_1" id="callback1"></xp:callback>
-		<xp:panel id="bottombuttons" styleClass="buttons bottombuttons"
-			tagName="ul">
-			<xp:this.rendered><![CDATA[#{javascript:compositeData.newresponsexpagename != "" && compositeData.newresponsexpagename != null}]]></xp:this.rendered>
-			<xp:panel tagName="li" styleClass="proceedButton">
-				<xp:this.attrs>
-					<xp:attr name="onclick">
-						<xp:this.value><![CDATA[#{javascript:"openDocument('" + compositeData.newresponsexpagename + "?action=newDocument&parentunid=" + document1.getDocument().getUniversalID() + "', 'content');"}]]></xp:this.value>
-					</xp:attr>
-				</xp:this.attrs>
-				<span class="formbuttonlabel">New Response</span>
-			</xp:panel>
-		</xp:panel>
-		<br />
-		<br />
-	</div>
-
-	<!--
-		<script type="text/javascript" src="unp/jquery-1.7.2.min.js"></script>
-		<script type="text/javascript"
-		src="unp/jquery.blockUI.min.js"></script> <script
-		type="text/javascript" src="unp/iScroll.min.js"></script> <script
-		type="text/javascript" src="unpViewGetMore.min.js"></script> <script
-		type="text/javascript" src="unpViewsList.min.js"></script>
-	-->
+			<br />
+			<br />
+		</div>
+	</xp:panel>
 </xp:view>

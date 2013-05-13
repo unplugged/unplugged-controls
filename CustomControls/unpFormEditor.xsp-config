@@ -79,5 +79,17 @@ no</editor-parameter>
       <small-icon>/icons/defaultLogoSmall.png</small-icon>
       <large-icon>/icons/defaultLogo.png</large-icon>
     </icon>
+    <property>
+      <property-name>position</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <editor-parameter>menu-aligned&#xd;
+left-aligned</editor-parameter>
+          <default-value>menu-aligned</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
   </composite-component>
 </faces-config>
