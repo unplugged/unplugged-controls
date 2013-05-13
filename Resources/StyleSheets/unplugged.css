@@ -1616,3 +1616,7 @@ span.title {
 .formtitle {
 	display: inline;
 }
+
+#footerTabBar {
+	cursor: pointer;
+}
