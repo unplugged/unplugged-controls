@@ -1501,10 +1501,9 @@ span.deleteicon input {
 .rowphoto {
 	float: left;
 	height: 50px;
-	width: 50px;
 	position: relative;
 	top: -5px;
-	padding-right: 13px;
+	margin-right: 13px;
 	-webkit-border-top-left-radius: 8px;
 	-webkit-border-top-right-radius: 8px;
 	-webkit-border-bottom-left-radius: 8px;
@@ -1606,7 +1605,7 @@ span.title {
 .titleicon {
 	display: inline;
 	max-height: 44px;
-	padding-right: 13px;
+	margin-right: 13px;
 	-webkit-border-top-left-radius: 8px;
 	-webkit-border-top-right-radius: 8px;
 	-webkit-border-bottom-left-radius: 8px;
@@ -1614,7 +1613,7 @@ span.title {
 }
 
 .formtitle {
-	display: inline;
+	display: inline !important;
 }
 
 #footerTabBar {
