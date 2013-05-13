@@ -5,6 +5,10 @@
 	<xp:this.resources>
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 	</xp:this.resources>
+	<unp:unpHeader search="none" searchPage="UnpSearch.xsp"
+		viewsButton="false" backButtonText="Home" backButtonURL="/UnpMain.xsp"
+		title="Footer tabs">
+	</unp:unpHeader>
 	<unp:unpTabbedFooter>
 		<unp:this.tab>
 			<unp:tab icon="icons/house.png" label="Home"
