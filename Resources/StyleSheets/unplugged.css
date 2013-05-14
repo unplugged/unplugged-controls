@@ -1641,3 +1641,60 @@ span.title {
 .formpullleft {
 	margin-left: 0% !important;
 }
+
+.atozpicker {
+	display: none;
+	position: fixed;
+	top: 61px;
+	right: 40px;
+	background-color: #cccccc;
+	opacity: 0.8;
+	z-index: 100;
+	width: 5px;
+	text-align: left;
+	border: 1px solid gray;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-top-right-radius: 8px;
+	-webkit-border-bottom-left-radius: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+}
+
+.atozletter {
+	list-style-image: none;
+	list-style-type: none;
+	padding: 3px;
+	padding-left: 15px;
+	margin-left: -35px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+/*iPad */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
+}
+/*iPhone Landscape*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
+	.atozpicker {
+		top: 32px;
+	}
+	.atozletter {
+		display: none;
+	}
+	.atozletter:nth-child(1), .atozletter:nth-child(8n+0){
+		display: block;
+	}
+}
+/*Phablet*/
+@media only screen and (min-device-width: 569px) and (max-device-width: 767px) and (orientation : landscape) {
+	.atozpicker {
+		top: 32px;
+	}
+	.atozletter {
+		display: none;
+	}
+	.atozletter:nth-child(odd){
+		display: block;
+	}
+}

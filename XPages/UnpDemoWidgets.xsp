@@ -41,7 +41,7 @@
 				ajaxtargetid="content" ajaxloadid="contentwrapper">
 			</unp:menuItem>
 			<unp:menuItem label="Employees in Finances" page="/UnpDemoWidgetsByDeptFinances.xsp"
-				ajaxtargetid="content" ajaxloadid="contentwrapper">
+				ajaxtargetid="content" ajaxloadid="allcontent">
 			</unp:menuItem>
 			<unp:menuItem label="Employees By Country" page="/UnpDemoWidgetsByCountry.xsp"
 				ajaxtargetid="content" ajaxloadid="contentwrapper">

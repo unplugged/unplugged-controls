@@ -59,13 +59,17 @@ if (out.length > 0){
 
 						</xp:label>
 					</xp:panel>
-					<xp:repeat id="repeat4" var="thisRowData" value="#{viewList}"
-						disableOutputTag="true">
+					<xp:repeat id="repeat4" var="thisRowData"
+						value="#{viewList}" disableOutputTag="true">
 						<xp:this.rows><![CDATA[${javascript:sessionScope.rowcount = compositeData.numberofrows;
-if (sessionScope.rowcount != null){
-	return sessionScope.rowcount;
+if (compositeData.enableAZPicker == "yes"){
+	return "5000";
 }else{
-	return 20;
+	if (sessionScope.rowcount != null){
+		return sessionScope.rowcount;
+	}else{
+		return 20;
+	}
 }}]]></xp:this.rows>
 						<xp:panel tagName="li" id="categoryrow"
 							styleClass="categoryRowFixed condensed" disableTheme="true"
@@ -146,7 +150,8 @@ return out;}]]></xp:this.styleClass>
 								<xp:this.style><![CDATA[#{javascript:if (compositeData.collapseRows == "Yes"){
 	return "display: none;";
 }}]]></xp:this.style>
-								<xp:label id="label1" styleClass="viewlistdetail">
+								<xp:label id="label1"
+									styleClass="viewlistdetail">
 									<xp:this.value><![CDATA[#{javascript:if(isEmpty(compositeData.detailColumn)){
 	return " ";
 }else{
@@ -188,6 +193,7 @@ return out;}]]></xp:this.styleClass>
 			</div>
 		</xp:panel>
 	</div>
+
 	<!--
 		<script type="text/javascript" src="unp/jquery-1.7.2.min.js"></script>
 		<script type="text/javascript"

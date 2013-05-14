@@ -995,7 +995,9 @@ iScroll.prototype = {
 
 	scrollToElement: function (el, time) {
 		var that = this, pos;
-		el = el.nodeType ? el : that.scroller.querySelector(el);
+		try{
+			el = el.nodeType ? el : that.scroller.querySelector(el);
+		}catch(e){}
 		if (!el) return;
 
 		pos = that._offset(el);
