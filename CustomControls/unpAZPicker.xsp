@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:panel tagName="ul" id="atozpicker" styleClass="atozpicker">
+		<xp:repeat var="letter" indexVar="letterindex"
+			disableOutputTag="true">
+			<xp:this.value><![CDATA[#{javascript:['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']}]]></xp:this.value>
+			<xp:text id="letter" tagName="li" styleClass="atozletter"
+				value="#{javascript:letter}">
+			</xp:text>
+		</xp:repeat>
+	</xp:panel>
+</xp:view>
