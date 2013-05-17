@@ -518,7 +518,7 @@ function x$(idTag, param) { // Updated 18 Feb 2012
 }
 // expand/ collapse link
 function showListDetails(id) {
-	var $div = x$(id);
+	var $div = $("." + id);
 	if ($div.text().length == 0) {
 		return;
 	} // no content to show

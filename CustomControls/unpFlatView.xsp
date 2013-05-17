@@ -60,7 +60,8 @@ if (out.length > 0){
 						</xp:label>
 					</xp:panel>
 					<xp:repeat id="repeat4" var="thisRowData"
-						value="#{viewList}" disableOutputTag="true">
+						value="#{viewList}" disableOutputTag="true"
+						indexVar="thisRowIndex">
 						<xp:this.rows><![CDATA[${javascript:sessionScope.rowcount = compositeData.numberofrows;
 if (compositeData.enableAZPicker == "yes"){
 	return "5000";
@@ -83,7 +84,7 @@ if (compositeData.enableAZPicker == "yes"){
 							<xp:this.attrs>
 								<xp:attr name="onClick">
 									<xp:this.value><![CDATA[#{javascript:if (compositeData.collapseRows == "Yes"){
-	return "showListDetails('" + getClientId("rowDetails") + "'); event.stopPropagation();";
+	return "showListDetails('" + "rowDetails" + thisRowIndex + "'); event.stopPropagation();";
 }else{
 	var url = getDbPath() + "/" + compositeData.xpageDoc + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID();
 	if (compositeData.ajaxload != "No"){
@@ -150,6 +151,7 @@ return out;}]]></xp:this.styleClass>
 								<xp:this.style><![CDATA[#{javascript:if (compositeData.collapseRows == "Yes"){
 	return "display: none;";
 }}]]></xp:this.style>
+								<xp:this.styleClass><![CDATA[#{javascript:"rowDetails" + thisRowIndex}]]></xp:this.styleClass>
 								<xp:label id="label1"
 									styleClass="viewlistdetail">
 									<xp:this.value><![CDATA[#{javascript:if(isEmpty(compositeData.detailColumn)){
