@@ -9,17 +9,19 @@
 		viewsButton="false" backButtonText="Home" backButtonURL="/UnpMain.xsp"
 		title="Footer tabs">
 	</unp:unpHeader>
-	<div id="content">
+	<div id="allcontent">
 		<unp:unpScrollableArea>
 			<xp:this.facets>
-				<unp:unpFlatView insetData="true" detailColumn="DOB"
-					summaryColumn="Name" title="Employees" viewName="Employees"
-					xpageDoc="Employee.xsp" xp:key="facet_1" numberofrows="20"
-					refreshmethod="pull" position="left-aligned" photoColumn="Photo"
-					collapseRows="No" wrapsummarytext="yes">
+				<unp:unpFlatView insetData="true" detailColumn="Dept"
+					summaryColumn="Name" title="Employees in Finances"
+					numberofrows="20" categoryfilter="Finances"
+					viewName="EmployeesCatByDept" refreshmethod="pull"
+					xpageDoc="Employee.xsp" xp:key="facet_1" enableAZPicker="yes"
+					position="left-aligned">
 				</unp:unpFlatView>
 			</xp:this.facets>
 		</unp:unpScrollableArea>
+		<unp:unpAZPicker></unp:unpAZPicker>
 	</div>
 	<unp:unpTabbedFooter>
 		<unp:this.tab>
