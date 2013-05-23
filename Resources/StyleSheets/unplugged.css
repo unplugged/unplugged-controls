@@ -314,6 +314,7 @@ body {
 		position: absolute;
 		top: 17px;
 		left: 12px;
+		max-width: 122px;
 	}
 	.title {
 		margin-top: 12px;
