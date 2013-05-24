@@ -95,12 +95,12 @@ else{ return true;
 		<xp:panel id="homebutton" styleClass="homeButton">
 			<xp:this.attrs>
 				<xp:attr name="onclick">
-
-					<xp:this.value><![CDATA[#{javascript:if (isUnpluggedServer()){
+					<xp:this.value><![CDATA[#{javascript:if (isUnpluggedServer() && (compositeData.headerHomeLink == null || compositeData.headerHomeLink == "")){
 	return "$.blockUI();window.location.href=\"/unpws.unp/\";";
 }else{
-	return "$.blockUI();window.location.href=\"/" + @ReplaceSubstring(database.getFilePath(), "\\", "/") + "/UnpMain.xsp\";";
-}}]]></xp:this.value>
+	return "$.blockUI();window.location.href=\"/" + @ReplaceSubstring(database.getFilePath(), "\\", "/") + compositeData.headerHomeLink + "\";";
+}
+}]]></xp:this.value>
 				</xp:attr>
 			</xp:this.attrs>
 			<span class="homelabel"></span>

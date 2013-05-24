@@ -126,5 +126,14 @@ database</editor-parameter>
       <property-class>string</property-class>
       <display-name>A description of the current application</display-name>
     </property>
+    <property>
+      <property-name>headerHomeLink</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.xsp.extlib.designer.tooling.editor.XPageControlIDEditor</editor>
+        </designer-extension>
+      </property-extension>
+    </property>
   </composite-component>
 </faces-config>

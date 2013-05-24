@@ -5,7 +5,7 @@
 		<xp:styleSheet href="/unpDialog.css"></xp:styleSheet>
 	</xp:this.resources>
 
-	<unp:unpHeader search="none" searchPage="UnpSearch.xsp"
+	<unp:unpHeader search="none" searchPage="UnpSearch.xsp" headerHomeLink="/UnpMain.xsp"
 		viewsButton="false" title="Form View (No Navigator)">
 	</unp:unpHeader>
 	<unp:unpScrollableArea>
