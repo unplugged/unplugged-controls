@@ -21,7 +21,7 @@ the specific language governing permissions and limitations under the License
 	<unp:unpNavigator>
 		<unp:this.menuItem>
 			<unp:menuItem label="Test Page 1"
-				page="/UnpDemoNavigator.xsp" ajaxloadid="newcontent"
+				page="/UnpDemoNavigatorNoIcons.xsp" ajaxloadid="newcontent"
 				ajaxtargetid="results">
 			</unp:menuItem>
 			<unp:menuItem label="Test Page 2"
@@ -57,9 +57,17 @@ the specific language governing permissions and limitations under the License
 			</unp:menuItem>
 		</unp:this.menuItem>
 	</unp:unpNavigator>
-	<div id="results">
-		<div id="newcontent" style="position: absolute; top: 60px;">
-			UnpDemoNavigator
+	<div id="results" style="padding-top:10px;padding-left: 5px;padding-right: 5px;">
+		<div id="newcontent">
+			<unp:unpScrollableArea>
+				<xp:this.facets>
+					<xp:panel xp:key="facet_1">
+						<div class="panel">
+							<strong>UnpDemoNavigator (With No Icons)</strong>
+						</div>
+					</xp:panel>
+				</xp:this.facets>
+			</unp:unpScrollableArea>
 		</div>
 	</div>
 	<unp:unpFooter synctype="currentdb"></unp:unpFooter>
