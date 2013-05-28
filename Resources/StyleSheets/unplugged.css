@@ -128,8 +128,13 @@ body {
 }
 
 .tabSelected{
-	background:blue;
 	padding-bottom:10px;
+}
+.tabSelected .footerTabtext {
+	font-weight: bold;	
+}
+.tabSelected img {
+		
 }
 
 @media screen and (max-width: 700px) {

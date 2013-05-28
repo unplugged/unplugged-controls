@@ -55,7 +55,7 @@ if (("/" + getCurrentXPage()) == menuItem.page){
 }]]></xp:this.value>
 							</xp:attr>
 						</xp:this.attrs>
-						<xp:image url="#{javascript:menuItem.icon}" id="image2">
+						<xp:image id="image2">
 							<xp:this.rendered><![CDATA[#{javascript:if (viewScope.menuItemIndex == null){
 	viewScope.menuItemIndex = 0;
 }else{
@@ -66,6 +66,11 @@ menuItem.icon != null && menuItem.icon != ""}]]></xp:this.rendered>
 return "background:  url('" + menuItem.icon + "') 50% 0% no-repeat; padding-top: 10px;margin-bottom:5px;"
 }]]>
 							</xp:this.styleClass>
+							<xp:this.url><![CDATA[#{javascript:if (("/" + getCurrentXPage()) == menuItem.page){
+	return menuItem.iconselected;
+}else{
+	return menuItem.icon;
+}}]]></xp:this.url>
 						</xp:image>
 						<br/>
 						<xp:text id="menutext" styleClass="footerTabtext"

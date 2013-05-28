@@ -43,6 +43,11 @@
         <display-name>icon</display-name>
       </property>
       <property>
+        <property-name>iconselected</property-name>
+        <property-class>string</property-class>
+        <display-name>iconselected</display-name>
+      </property>
+      <property>
         <property-name>label</property-name>
         <property-class>string</property-class>
         <display-name>label</display-name>
