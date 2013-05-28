@@ -52,6 +52,11 @@
       <property-class>string</property-class>
     </property>
     <property>
+      <property-name>disabledbadges</property-name>
+      <property-class>string</property-class>
+      <display-name>An array of disabled BadgeIDs</display-name>
+    </property>
+    <property>
       <property-name>alertlevel</property-name>
       <property-class>string</property-class>
       <property-extension>

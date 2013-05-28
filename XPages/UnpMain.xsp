@@ -22,6 +22,19 @@ the specific language governing permissions and limitations under the License
 	</unp:unpHeader>
 	<unp:unpWorkspace imgurlcol="ImgUrl" labelcol="Title"
 		linkurlcol="UnpUrl" badgeidcol="BadgeID">
+		<unp:this.disabledbadges><![CDATA[#{javascript:var db:NotesDatabase = session.getDatabase(database.getServer(), "teamstudio\\widgets\\Teamroom.nsf");
+var out = ["DisabledChiclet"];
+try{
+	if (db == null){
+		out.push("FlatViewDifferentDB");
+	}else{
+		print(db.getReplicaID());
+	}
+}catch(e){
+	out.push("FlatViewDifferentDB");
+}
+print(out);
+return out;}]]></unp:this.disabledbadges>
 	</unp:unpWorkspace>
 	<unp:unpFooter synctype="alldbs"></unp:unpFooter>
 </xp:view>

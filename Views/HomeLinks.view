@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='80257B470037E1BA'>
-<noteinfo noteid='1fa' unid='E9C479B489A808DA80257B470037F0BB' sequence='2'>
+<noteinfo noteid='1fa' unid='E9C479B489A808DA80257B470037F0BB' sequence='3'>
 <created><datetime dst='true'>20130408T111101,07+01</datetime></created>
-<modified><datetime dst='true'>20130408T111102,38+01</datetime></modified>
-<revised><datetime dst='true'>20130408T111102,37+01</datetime></revised>
-<lastaccessed><datetime dst='true'>20130408T132429,59+01</datetime></lastaccessed>
+<modified><datetime dst='true'>20130528T104308,18+01</datetime></modified>
+<revised><datetime dst='true'>20130528T104308,17+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20130528T104308,18+01</datetime></lastaccessed>
 <addedtofile><datetime dst='true'>20130408T111102,36+01</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
@@ -18,11 +18,11 @@ NFM1Uw==
 </formula></item>
 <item name='$Collation' summary='true'>
 <rawitemdata type='2'>
-BgAAAABE
+EgABAABEAGYAAAAFAFRpdGxl
 </rawitemdata></item>
 <item name='$ViewFormat' summary='true' sign='true'>
 <rawitemdata type='5'>
-AQAFAAAACAAAAFZDAAAFAAUAAAAAAFAAAQAACgAAAAAAAAAAAAICAAAAVkMAAAYABgAAAAAAUAAB
+AQAFAAAACAAAAFZDAQAFAAUAAAAAAFAAAQAACgAAAAAAAAAAAAICAAAAVkMAAAYABgAAAAAAUAAB
 AAAKAAAAAAAAAAAAAgIAAABWQwAABwAHAAAAAABQAAEAAAoAAAAAAAAAAAACAgAAAFZDAAAGAAYA
 AAAAAFAAAQAACgAAAAAAAAAAAAICAAAAVkMAAAcABwAAAAAAUAABAAAKAAAAAAAAAAAAAgIAAABU
 aXRsZVRpdGxlSW1nVVJMSW1nVXJsRmxhZ2dlZEZsYWdnZWRVbnBVUkxVbnBVcmxCYWRnZUlEQmFk
@@ -35,10 +35,10 @@ AP///wABAAAAAAAAAAAAAAAAAAEA////AAEA////AAAAAQAAAAAAAQAAAAAAAQAAAAAAAAAIAAAA
 AAABAA==
 </rawitemdata></item>
 <item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
 <item name='$DesignerVersion'><text>8.5.3</text></item>
 <item name='$SelQuery' sign='true'>
 <rawitemdata type='f'>
 gQYAAAAAif8UAAAAAAABAAgASG9tZUxpbms=
-</rawitemdata></item>
-<item name='$Flags'><text>Y</text></item></note>
+</rawitemdata></item></note>
 

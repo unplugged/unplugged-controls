@@ -70,38 +70,45 @@ return out;}]]></xp:this.styleClass>
 	<section id="wscontent">
 		<div class="wsscroll">
 			<ul class="workspace-items">
-				<xp:repeat id="chiclets" value="#{dbs}" var="db">
-					<xp:panel tagName="li" styleClass="workspace-item">
+				<xp:repeat id="chiclets" value="#{dbs}" var="chiclet">
+					<xp:panel tagName="li">
+						<xp:this.styleClass><![CDATA[#{javascript:var out = "workspace-item";
+if (compositeData.disabledbadges != "" && compositeData.disabledbadges != null && @IsMember(chiclet.getColumnValue(compositeData.badgeidcol), compositeData.disabledbadges)){
+	
+	out += "-disabled";
+}
+return out;}]]></xp:this.styleClass>
 						<xp:panel tagName="a">
 							<xp:this.attrs>
 								<xp:attr name="onclick">
-									<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='" + db.getColumnValue(compositeData.linkurlcol) + "';"}]]></xp:this.value>
+									<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='" + chiclet.getColumnValue(compositeData.linkurlcol) + "';"}]]></xp:this.value>
+									<xp:this.rendered><![CDATA[#{javascript:compositeData.disabledbadges == "" || compositeData.disabledbadges == null || !@IsMember(chiclet.getColumnValue(compositeData.badgeidcol), compositeData.disabledbadges)}]]></xp:this.rendered>
 								</xp:attr>
 								<xp:attr name="href" value="#"></xp:attr>
 							</xp:this.attrs>
 
 							<xp:text tagName="span" id="badge"
 								styleClass="badge">
-								<xp:this.rendered><![CDATA[#{javascript:if (db.getColumnValue(compositeData.badgeidcol) != ""){
+								<xp:this.rendered><![CDATA[#{javascript:if (chiclet.getColumnValue(compositeData.badgeidcol) != ""){
 	return true;
 }else{
 	return false;
 }}]]></xp:this.rendered>
 								<xp:this.attrs>
 									<xp:attr name="badgeid"
-										value="#{javascript:db.getColumnValue(compositeData.badgeidcol)}">
+										value="#{javascript:chiclet.getColumnValue(compositeData.badgeidcol)}">
 									</xp:attr>
 								</xp:this.attrs>
 							</xp:text>
 							<xp:text tagName="span" id="chicletimg"
 								styleClass="chicletimg">
-								<xp:this.style><![CDATA[#{javascript:"background: url(" + db.getColumnValue(compositeData.imgurlcol) + ") no-repeat scroll 0 0 transparent;"}]]></xp:this.style>
+								<xp:this.style><![CDATA[#{javascript:"background: url(" + chiclet.getColumnValue(compositeData.imgurlcol) + ") no-repeat scroll 0 0 transparent;"}]]></xp:this.style>
 							</xp:text>
 							<!-- <xp:image
 								url="#{javascript:db.getColumnValue(compositeData.imgurlcol)}">
-							</xp:image> -->
+								</xp:image> -->
 							<xp:text tagName="span"
-								value="#{javascript:db.getColumnValue(compositeData.labelcol);}" />
+								value="#{javascript:chiclet.getColumnValue(compositeData.labelcol);}" />
 						</xp:panel>
 					</xp:panel>
 				</xp:repeat>

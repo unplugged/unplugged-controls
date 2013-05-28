@@ -1256,7 +1256,7 @@ to {
 	overflow: hidden;
 }
 
-.workspace-items .workspace-item {
+.workspace-items .workspace-item, .workspace-items .workspace-item-disabled {
 	float: left;
 }
 
@@ -1273,8 +1273,13 @@ to {
 	height: 64px;
 }
 
+.workspace-items .workspace-item-disabled a:hover, .workspace-items .workspace-item-disabled a {
+	background: #7A7A7A;
+	text-decoration: none;
+}
+
 @media screen and (min-width: 701px) {
-	.workspace-items .workspace-item {
+	.workspace-items .workspace-item, .workspace-items .workspace-item-disabled {
 		width: 25%;
 	}
 	.workspace-items a {
@@ -1299,13 +1304,13 @@ to {
 }
 
 @media screen and (max-width: 1000px) {
-	.workspace-items .workspace-item {
+	.workspace-items .workspace-item, .workspace-items .workspace-item-disabled {
 		width: 33%;
 	}
 }
 
 @media screen and (max-width: 700px) {
-	.workspace-items .workspace-item {
+	.workspace-items .workspace-item, .workspace-items .workspace-item-disabled {
 		width: 20%;
 	}
 	.workspace-items a {
@@ -1331,7 +1336,7 @@ to {
 }
 
 @media screen and (max-width: 400px) {
-	.workspace-items .workspace-item {
+	.workspace-items .workspace-item, .workspace-items .workspace-item-disabled {
 		width: 33%;
 	}
 	.workspace-items a {
