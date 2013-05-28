@@ -43,7 +43,7 @@ the specific language governing permissions and limitations under the License
 										itemValue="">
 									</xp:selectItem>
 									<xp:selectItems>
-										<xp:this.value><![CDATA[#{javascript:var db = session.getDatabase(database.getServer(), "teamstudio\\widgets\\teamroom.nsf");
+										<xp:this.value><![CDATA[#{javascript:var db = session.getDatabase("", "teamstudio\\widgets\\teamroom.nsf");
 var doc:NotesDocument = db.getView("MissionLookup").getFirstDocument();
 var out = doc.getItemValue("DocType");
 return out;}]]></xp:this.value>
@@ -95,7 +95,7 @@ return out;}]]></xp:this.value>
 										itemValue="">
 									</xp:selectItem>
 									<xp:selectItems>
-										<xp:this.value><![CDATA[#{javascript:var db = session.getDatabase(database.getServer(), "teamstudio\\widgets\\teamroom.nsf");
+										<xp:this.value><![CDATA[#{javascript:var db = session.getDatabase("", "teamstudio\\widgets\\teamroom.nsf");
 var doc:NotesDocument = db.getView("MissionLookup").getFirstDocument();
 var out = doc.getItemValue("Categories");
 return out;}]]></xp:this.value>

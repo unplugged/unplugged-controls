@@ -21,7 +21,7 @@
 	return compositeData.categoryfilter;
 }}]]></xp:this.categoryFilter>
 			<xp:this.databaseName><![CDATA[#{javascript:if (compositeData.dbName != null){
-	var db = session.getDatabase(database.getServer(), compositeData.dbName);
+	var db = session.getDatabase("", compositeData.dbName);
 	if (db == null){
 		return null;
 	}else{

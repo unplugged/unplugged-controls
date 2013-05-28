@@ -72,21 +72,22 @@ return out;}]]></xp:this.styleClass>
 			<ul class="workspace-items">
 				<xp:repeat id="chiclets" value="#{dbs}" var="chiclet">
 					<xp:panel tagName="li">
-						<xp:this.styleClass><![CDATA[#{javascript:var out = "workspace-item";
+						<xp:this.styleClass><![CDATA[#{javascript:var sout = "workspace-item";
 if (compositeData.disabledbadges != "" && compositeData.disabledbadges != null && @IsMember(chiclet.getColumnValue(compositeData.badgeidcol), compositeData.disabledbadges)){
-	
-	out += "-disabled";
+	sout += "-disabled";
 }
-return out;}]]></xp:this.styleClass>
+return sout;}]]></xp:this.styleClass>
 						<xp:panel tagName="a">
 							<xp:this.attrs>
 								<xp:attr name="onclick">
-									<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='" + chiclet.getColumnValue(compositeData.linkurlcol) + "';"}]]></xp:this.value>
-									<xp:this.rendered><![CDATA[#{javascript:compositeData.disabledbadges == "" || compositeData.disabledbadges == null || !@IsMember(chiclet.getColumnValue(compositeData.badgeidcol), compositeData.disabledbadges)}]]></xp:this.rendered>
+									<xp:this.value><![CDATA[#{javascript:if (compositeData.disabledbadges != "" && compositeData.disabledbadges != null && @IsMember(chiclet.getColumnValue(compositeData.badgeidcol), compositeData.disabledbadges)){
+	return "";
+}else{
+	return "$.blockUI();window.location.href='" + chiclet.getColumnValue(compositeData.linkurlcol) + "';";
+}}]]></xp:this.value>
 								</xp:attr>
 								<xp:attr name="href" value="#"></xp:attr>
 							</xp:this.attrs>
-
 							<xp:text tagName="span" id="badge"
 								styleClass="badge">
 								<xp:this.rendered><![CDATA[#{javascript:if (chiclet.getColumnValue(compositeData.badgeidcol) != ""){
