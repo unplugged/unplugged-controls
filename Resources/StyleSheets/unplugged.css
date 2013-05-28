@@ -1656,23 +1656,19 @@ span.title {
 .atozpicker {
 	display: none;
 	position: fixed;
-	top: 61px;
-	right: 40px;
-	background-color: #cccccc;
-	opacity: 0.8;
+	top: 81px;
+	right: 0px;
+	opacity: 0.6;
 	z-index: 100;
 	width: 5px;
 	text-align: left;
-	border: 1px solid gray;
 	padding-top: 5px;
 	padding-bottom: 5px;
-	-webkit-border-top-left-radius: 8px;
-	-webkit-border-top-right-radius: 8px;
-	-webkit-border-bottom-left-radius: 8px;
-	-webkit-border-bottom-right-radius: 8px;
+	font-size: 10px;
+	font-weight: bold;
 }
 
-.atozletter {
+.atozletter, .atozletter-divider {
 	list-style-image: none;
 	list-style-type: none;
 	padding: 3px;
@@ -1685,30 +1681,62 @@ span.title {
 @media screen and (min-height: 701px) {
 	.atozletter {
 		display: block;
+		font-size: 12px;
+	}
+	.fourthletter {
+		display: block;
+	}
+	.otherletter {
+		display: block;
+	}
+	.atozletter-divider {
+		display: none;
 	}
 }
 
 
 @media screen and (min-height: 401px) and (max-height: 700px) {
 	.atozpicker {
-		top: 32px;
+		top: 40px;
 	}
 	.atozletter {
-		display: none;
-	}
-	.atozletter:nth-child(odd){
 		display: block;
+		font-size: 12px;
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+	.fourthletter {
+		display: block;
+	}
+	.otherletter {
+		display: block;
+	}
+	.atozletter-divider {
+		display: none;
 	}
 }
 
 @media screen and (max-height: 400px) {
 	.atozpicker {
-		top: 32px;
+		top: 35px;
 	}
 	.atozletter {
+		display: block;
+		font-size: 10px;
+		font-weight: normal;
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+	.fourthletter {
+		display: block;
+	}
+	.otherletter {
 		display: none;
 	}
-	.atozletter:nth-child(1), .atozletter:nth-child(4n+0){
+	.atozletter-divider {
 		display: block;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		height: 9px;
 	}
 }
