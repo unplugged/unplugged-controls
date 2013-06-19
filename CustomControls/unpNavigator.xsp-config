@@ -83,10 +83,27 @@
           </designer-extension>
         </property-extension>
       </property>
+      <property>
+        <property-name>submenu</property-name>
+        <property-class>string</property-class>
+        <property-extension>
+          <designer-extension>
+            <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+            <editor-parameter>no&#xd;
+sub&#xd;
+sub-sub</editor-parameter>
+            <default-value>no</default-value>
+          </designer-extension>
+        </property-extension>
+      </property>
     </property-type>
     <icon>
       <small-icon>/icons/defaultLogoSmall.png</small-icon>
       <large-icon>/icons/defaultLogo.png</large-icon>
     </icon>
+    <property>
+      <property-name>computedmenuitems</property-name>
+      <property-class>object</property-class>
+    </property>
   </composite-component>
 </faces-config>
