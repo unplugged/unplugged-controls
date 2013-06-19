@@ -1,37 +1,257 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core">
 	<xp:this.resources>
-		<xp:script src="unp/idangerous.swiper.1.9.4.js" clientSide="true"></xp:script>
+		<xp:script src="unp/idangerous.swiper.1.9.4.js" clientSide="true">
+		</xp:script>
 		<xp:script src="unp/idangerous.swiper.scrollbar.js"
-			clientSide="true"></xp:script>
+			clientSide="true">
+		</xp:script>
+		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
+		<xp:styleSheet href="/unpDialog.css"></xp:styleSheet>
 	</xp:this.resources>
-	<div id="results">
-		<xp:repeat id="hcategoryrepeat" var="category" indexVar="categoryindex">
-			<xp:text id="categorytitle" tagName="h2" value="#{javascript:category}" styleClass="hviewcategory">
-			</xp:text>
-			<xp:panel styleClass="swiper-container swiper-scroll-container">
-				<xp:this.data>
-					<xp:dominoView var="view1" viewName="Documents"
-						categoryFilter="#{javascript:category}">
-					</xp:dominoView>
-				</xp:this.data>
-				<div id="hscroller" class="swiper-wrapper">
-					<div class="swiper-slide">
-						<xp:repeat id="hviewrepeat" value="#{view1}" var="rowData"
-							indexVar="rowIndex" rows="20" disableOutputTag="true">
-							<div class="hviewitem">
-								<xp:image id="hviewicon" styleClass="hviewicon">
-									<xp:this.url><![CDATA[#{javascript:"unp/" + rowData.getColumnValue("DocType") + ".png"}]]></xp:this.url>
-								</xp:image>
-								<xp:text id="hviewtitle" styleClass="hviewtitle" value="#{rowData.Title}">
-								</xp:text>
-							</div>
-						</xp:repeat>
-					</div>
-				</div>
-			</xp:panel>
-			<xp:this.value><![CDATA[#{javascript:@Unique(@DbColumn(@DbName(), "Documents", 1))}]]></xp:this.value>
-		</xp:repeat>
-	</div>
+	<script>
+		$(window).load(function(){
+			$('#input-search').attr("targetelement", "contentwrapper");
+		});
+	</script>
+	<div id="results" style="padding-left: 10px; padding-top: 10px;">
+		<xp:panel id="hviewfilters" styleClass="hviewfilters">
+			<xp:this.rendered><![CDATA[#{javascript:compositeData.favoritesonly != "yes" && (context.getUrlParameter("query") == "" || context.getUrlParameter("query") == null)}]]></xp:this.rendered>
 
+			<div class="btn-group">
+				<a class="dropdown-toggle" onclick="dropdownToggle(this)">
+					Language:
+					<xp:text tagName="span" styleClass="dropdownlabel languagelabel">
+						<xp:this.value><![CDATA[#{javascript:var lang=context.getUrlParameter("languagefilter");
+if (lang=="" || lang==null){
+	return "All";
+}else{
+	return lang;
+}}]]></xp:this.value>
+					</xp:text>
+				</a>
+				<ul id="dropdown" class="dropdown-menu">
+					<xp:repeat var="language" disableOutputTag="true">
+						<xp:this.value><![CDATA[#{javascript:var out = ["All Languages|All"];
+var list = @Unique(@DbColumn(@DbName(), compositeData.primaryview, 6)).sort();
+for (var i=0; i<list.length; i++){
+	if (list[i].indexOf("|") > -1){
+		out.push(list[i]);
+	}else{
+		out.push(list[i] + "|" + list[i]);
+	}
+}
+return out;}]]></xp:this.value>
+						<xp:text tagName="li" id="dropwdownitem">
+							<xp:this.value><![CDATA[#{javascript:@Left(language, "|")}]]></xp:this.value>
+							<xp:this.attrs>
+								<xp:attr name="onclick">
+									<xp:this.value><![CDATA[#{javascript:var currentyear = context.getUrlParameter("yearfilter");
+if (currentyear == ""){
+	currentyear = "All";
+}
+"doHViewFilter('" + @Right(language, "|") + "', null, '" + compositeData.primaryview + "', '" + compositeData.filterview + "', '" + compositeData.dialogxpage + "', '" + compositeData.sourcediv + "', '" + compositeData.toplevelcategory + "')"}]]></xp:this.value>
+								</xp:attr>
+							</xp:this.attrs>
+						</xp:text>
+					</xp:repeat>
+				</ul>
+			</div>
+			<div class="btn-group">
+				<a class="dropdown-toggle" onclick="dropdownToggle(this)">
+					Year:
+					<xp:text tagName="span" styleClass="dropdownlabel yearlabel">
+						<xp:this.value><![CDATA[#{javascript:var yearfilter=context.getUrlParameter("yearfilter");
+if (yearfilter=="" || yearfilter == null){
+	return "All";
+}else{
+	return yearfilter;
+}}]]></xp:this.value>
+					</xp:text>
+				</a>
+				<ul id="yeardropdown" class="dropdown-menu">
+					<xp:repeat var="year" disableOutputTag="true">
+						<xp:this.value><![CDATA[#{javascript:var out = ["All Years|All"];
+var list = @Unique(@DbColumn(@DbName(), compositeData.primaryview, 7)).sort();
+for (var i=0; i<list.length; i++){
+	if (list[i].indexOf("|") > -1){
+		out.push(list[i]);
+	}else{
+		out.push(list[i] + "|" + list[i]);
+	}
+}
+return out;}]]></xp:this.value>
+						<xp:text tagName="li" id="yeardropdownitem">
+							<xp:this.value><![CDATA[#{javascript:@Left(year, "|")}]]></xp:this.value>
+							<xp:this.attrs>
+								<xp:attr name="onclick">
+									<xp:this.value><![CDATA[#{javascript:var currentlang = context.getUrlParameter("languagefilter");
+if (currentlang == ""){
+	currentlang = "All";
+}
+"doHViewFilter(null, '" + @Right(year, "|") + "', '" + compositeData.primaryview + "', '" + compositeData.filterview + "', '" + compositeData.dialogxpage + "', '" + compositeData.sourcediv + "', '" + compositeData.toplevelcategory + "')"}]]></xp:this.value>
+								</xp:attr>
+							</xp:this.attrs>
+						</xp:text>
+					</xp:repeat>
+				</ul>
+			</div>
+		</xp:panel>
+		<xp:text tagName="h1" id="title" styleClass="hview-h1"
+			value="#{javascript:compositeData.title}">
+		</xp:text>
+		<xp:text tagName="h2" id="subtitle" styleClass="hview-h2"
+			value="#{javascript:compositeData.subtitle}">
+		</xp:text>
+		<div id="repeatholder">
+			<xp:repeat id="hcategoryrepeat" var="category" indexVar="categoryindex">
+				<xp:text tagName="div" id="categorytitle" styleClass="hviewcategory">
+					<xp:this.value><![CDATA[#{javascript:@Right(category, "~")}]]></xp:this.value>
+				</xp:text>
+				<xp:panel>
+					<xp:this.styleClass><![CDATA[#{javascript:"swiper-container swiper-scroll-container swiper-" + @ReplaceSubstring(category, [" ", "~"], "-")}]]></xp:this.styleClass>
+					<div id="hscroller" class="swiper-wrapper">
+						<xp:panel id="swiper-slide">
+							<xp:this.styleClass><![CDATA[#{javascript:"swiper-slide swiper-slide-" + @ReplaceSubstring(category, [" ", "~"], "-")}]]></xp:this.styleClass>
+							<xp:repeat id="hviewrepeat" var="rowData"
+								indexVar="rowIndex" disableOutputTag="true">
+								<xp:this.value><![CDATA[#{javascript:requestScope.count = null;
+var filter = "";
+if (context.getUrlParameter("languagefilter") != null && context.getUrlParameter("languagefilter") != "" && context.getUrlParameter("languagefilter") != "All"){
+	filter = context.getUrlParameter("languagefilter");
+}
+if (context.getUrlParameter("yearfilter") != null && context.getUrlParameter("yearfilter") != "" && context.getUrlParameter("yearfilter") != "All"){
+	if (filter != ""){
+		filter += "~";
+	}
+	filter += context.getUrlParameter("yearfilter");
+}
+var viewname = compositeData.primaryview;
+if (filter != ""){
+	filter += "~" + category;
+	viewname = compositeData.filterview;
+}else{
+	if (context.getUrlParameter("query") != "" && context.getUrlParameter("query") != null){
+		filter = context.getUrlParameter("query") + "~" + @Right(category, "~");
+	}else{
+		filter = category;
+	}
+}
+print("view = " + viewname);
+print("filter = " + filter);
+var alldocs:NotesView = database.getView(viewname);
+var docs:NotesViewEntryCollection = alldocs.getAllEntriesByKey(filter, true);
+print(docs.getCount() + " results");
+if (compositeData.favoritesonly != "yes"){
+	return docs;
+}else{
+	//We need to filter down the collection to only include favorites
+	var favorites = getFavorites();
+	var filtereddocs = new Array();
+	var doc:NotesViewEntry = docs.getFirstEntry();
+	while (doc != null){
+		if (@IsMember(doc.getUniversalID(), favorites)){
+			filtereddocs.push(doc);
+		}
+		doc = docs.getNextEntry();
+	}
+	return filtereddocs;
+}}]]></xp:this.value>
+								<xp:this.rows><![CDATA[#{javascript:if (compositeData.favoritesonly == "yes"){
+	return 1000;
+}else{
+	return 10;
+}}]]></xp:this.rows>
+								<xp:panel id="hviewitem"
+									styleClass="hviewitem">
+									<xp:this.attrs>
+										<xp:attr name="year">
+											<xp:this.value><![CDATA[#{javascript:if (requestScope.count == null){
+	requestScope.count = 1;
+}else{
+	requestScope.count = requestScope.count + 1;
+}
+rowData.getDocument().getItemValueString("Year")}]]></xp:this.value>
+										</xp:attr>
+										<xp:attr name="language">
+											<xp:this.value><![CDATA[#{javascript:rowData.getDocument().getItemValueString("Language")}]]></xp:this.value>
+										</xp:attr>
+										<xp:attr name="unid">
+											<xp:this.value><![CDATA[#{javascript:rowData.getDocument().getUniversalID()}]]></xp:this.value>
+										</xp:attr>
+										<xp:attr name="onclick">
+											<xp:this.value><![CDATA[#{javascript:"openHViewDialog('" + compositeData.dialogxpage + "', '" + compositeData.sourcediv + "', '" + rowData.getDocument().getUniversalID() + "')"}]]></xp:this.value>
+										</xp:attr>
+									</xp:this.attrs>
+									<xp:panel id="hviewicon">
+										<xp:this.styleClass><![CDATA[#{javascript:"hviewicon icon-" + rowData.getColumnValues().elementAt(4)}]]></xp:this.styleClass>
+										<xp:panel tagName="span"
+											id="badge1" styleClass="badge badge-favorite">
+
+											<xp:this.style><![CDATA[#{javascript:if(@IsMember(rowData.getDocument().getUniversalID(), getFavorites())){
+	return "display: inline;";
+}else{
+	return "display: none;";
+}}]]></xp:this.style>
+										</xp:panel>
+										<xp:panel tagName="span"
+											id="badge2" styleClass="badge badge-downloaded">
+											<xp:this.rendered><![CDATA[#{javascript:if(@IsMember(rowData.getDocument().getUniversalID(), getDownloaded())){
+	return true;
+}else{
+	return false;
+}}]]></xp:this.rendered>
+										</xp:panel>
+										<xp:panel tagName="span"
+											id="badge3" styleClass="badge badge-downloading"
+											rendered="false">
+										</xp:panel>
+									</xp:panel>
+
+									<xp:text id="hviewtitle"
+										styleClass="hviewtitle">
+										<xp:this.value><![CDATA[#{javascript:rowData.getDocument().getItemValueString("Title")}]]></xp:this.value>
+									</xp:text>
+								</xp:panel>
+							</xp:repeat>
+							<xp:panel id="hviewitemmore">
+								<xp:this.styleClass><![CDATA[#{javascript:"hviewitem loadmorebutton-" + @ReplaceSubstring(category, [" ", "~"], "-")}]]></xp:this.styleClass>
+								<xp:this.rendered><![CDATA[#{javascript:if (compositeData.favoritesonly == "yes"){
+	return false;
+}else{
+	return requestScope.count >= 10;
+}}]]></xp:this.rendered>
+								<span class="hviewtitle">
+									<xp:button value="Load More" id="loadmorebutton"
+										styleClass="hviewloadmorebutton">
+										<xp:this.attrs>
+											<xp:attr name="onclick">
+												<xp:this.value><![CDATA[#{javascript:"loadMoreHorizontal(this, '" + category + "', '" + compositeData.primaryview + "', '" + compositeData.filterview + "', '" + compositeData.dialogxpage + "', '" + compositeData.sourcediv + "')";}]]></xp:this.value>
+											</xp:attr>
+										</xp:this.attrs>
+									</xp:button>
+								</span>
+							</xp:panel>
+						</xp:panel>
+					</div>
+				</xp:panel>
+				<xp:this.value><![CDATA[#{javascript:var out = @Unique(@Right(@DbColumn(@DbName(), compositeData.primaryview, 1), "~"));
+try{
+	out = @Explode(out, ",");
+	for (var i=0; i<out.length; i++){
+		out[i] = compositeData.toplevelcategory + "~" + out[i];
+	}
+	return out;
+}catch(e){
+	return out;
+}}]]></xp:this.value>
+			</xp:repeat>
+		</div>
+	</div>
+	<div id="hviewPopup" class="dialog" style=" display:none;">
+		<div id="hviewitemcontent">
+
+		</div>
+	</div>
+	<div id="underlayhviewPopup" class="underlay"></div>
 </xp:view>

@@ -13,7 +13,12 @@ $(document).ready(function() {
 		if(e.keyCode==13){
 			event.preventDefault();
 			var searchterm = $('#input-search').val();
-			openDocument(searchPage + "?query=" + escape(searchterm.toLowerCase()), 'content');
+			var attr = $('#input-search').attr('targetelement');
+			var target = "content";
+			if (typeof attr !== 'undefined' && attr !== false) {
+			    target = attr;
+			}
+			openDocument(searchPage + "?query=" + escape(searchterm.toLowerCase()), target);
 			$(this).blur();
 			$(".searchButton").focus();
 		}

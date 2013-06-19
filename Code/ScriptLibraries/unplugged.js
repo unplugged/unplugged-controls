@@ -52,7 +52,12 @@ $(window)
 					} catch (e) {
 
 					}
-
+					try{
+						fixNavigatorBottomCorners();
+					}catch(e){
+						
+					}
+					initHorizontalView();
 					initDeleteable();
 					initAutoComplete();
 				});
@@ -66,6 +71,7 @@ $(window).scroll( function() {
 window.addEventListener("orientationchange", function() {
 	hideViewsMenu();
 	initiscroll();
+	initHorizontalView();
 }, false);
 
 function allowFormsInIscroll() {
@@ -161,6 +167,7 @@ function openDocument(url, target) {
 				}
 				initDeleteable();
 				initAutoComplete();
+				initHorizontalView();
 				return false;
 			});
 }
@@ -256,6 +263,7 @@ function loadPage(url, target, menuitem) {
 			firedrequests = new Array();
 		}
 		initiscroll();
+		initHorizontalView();
 		initDeleteable();
 		initAutoComplete();
 		return false;
@@ -281,6 +289,24 @@ function initDeleteable() {
 				}));
 	} catch (e) {
 
+	}
+}
+
+var swipers;
+function initHorizontalView(){
+	try{
+		swipers = new Array();
+		$(".swiper-container").each(function(){
+			var mySwiper = $(this).swiper({
+				scrollContainer:true, 
+				freeMode: true,
+				freeModeFluid: true
+			});
+			swipers.push(mySwiper);
+		})
+		allowFormsInIscroll();
+	}catch(e){
+		
 	}
 }
 
@@ -427,12 +453,14 @@ function openDialog(id) {
 		el.css("z-index", max + 1);
 	});
 	initiscroll();
+	initHorizontalView();
 }
 
 function closeDialog(id) {
 	$("#" + id).css('display', 'none');
 	$("#underlay" + id).css('display', 'none');
 	initiscroll();
+	initHorizontalView();
 }
 
 function accordionLoadMore(obj, viewName, catName, xpage, dbname) {
@@ -542,5 +570,184 @@ function showListDetails(id) {
 		$image.attr("src", "unp/arrow-down.png");
 	} else {
 		$image.attr("src", "unp/arrow-up.png");
+	}
+}
+
+function doHViewFilter(language, year, primaryview, filterview, xpage, source, toplevelcategory){
+	if (language == null){
+		language = $(".languagelabel").text();
+	}
+	if (year == null){
+		year = $(".yearlabel").text();
+	}
+	var thisArea = $("#repeatholder");
+	var url = ("UnpHorizontalViewFilter.xsp?languagefilter=" + language + 
+											"&yearfilter=" + year).replace(" ", "%20") + 
+											"&primaryview=" + primaryview.replace(" ", "%20") + 
+											"&filterview=" + filterview.replace(" ", "%20") + 
+											"&xpage=" + xpage + 
+											"&source=" + source + 
+											"&toplevelcategory=" + toplevelcategory;
+	thisArea.load(url.replace(" ", "%20") + " #repeatholder",
+			function() {
+				initiscroll();
+				initHorizontalView();
+				closeDialog('hviewPopup');
+				return false;
+			});
+	$(".dropdown-menu").hide();
+	$(".languagelabel").text(language);
+	$(".yearlabel").text(year);
+}
+
+function loadMoreHorizontal(button, category, primaryview, filterview, xpage, source){
+	var language = $(".languagelabel").text().replace(" ", "%20");
+	var year = $(".yearlabel").text().replace(" ", "%20");
+	var categoryrep = category.replace(" ", "-");
+	categoryrep = categoryrep.replace("~", "-");
+	var thisArea = $(".swiper-" + categoryrep);
+	var itemcount = $(".swiper-slide-" + categoryrep + " .hviewitem").length;
+	var url = "UnpHorizontalViewList.xsp?category=" + category.replace(" ", "%20") + 
+										"&languagefilter=" + language + 
+										"&yearfilter=" + year + 
+										"&start=" + (itemcount - 1) + 
+										"&primaryview=" + primaryview.replace(" ", "%20") + 
+										"&filterview=" + filterview.replace(" ", "%20") + 
+										"&xpage=" + xpage + 
+										"&source=" + source;
+	$.ajax({
+	    url: url,
+	    dataType: 'html',
+	    success: function(html) {
+	        $('.swiper-slide-' + categoryrep).append($('#loadmoreresults .hviewitem', $(html)));
+	        if (html.indexOf("NOMORERECORDS") > -1){
+	        	$(".loadmorebutton-" + categoryrep).hide();
+	        }else{
+	        	$(".loadmorebutton-" + categoryrep).appendTo($('.swiper-slide-' + categoryrep));
+	        }
+	    }
+	});
+}
+
+function openHViewDialog(xpage, source, unid){
+	if (xpage.indexOf(".xsp") == -1){
+		xpage += ".xsp";
+	}
+	var url = xpage + "?action=openDocument&documentId=" + unid;
+	$("#hviewitemcontent").load(url.replace(" ", "%20") + " #" + source,
+			function() {
+				openDialog("hviewPopup");
+				return false;
+			});
+}
+
+function expandMenuItem(menuitem){
+	$(".viewMenuItemSub").hide();
+	$(".viewMenuItemSubSub").hide();
+	$(".navScrollArea .viewMenuItem img").prop("src", "unp/right-arrow-trans-white-large.png");
+	if ($(menuitem).hasClass("viewMenuItemSub")){
+		//We need to toggle a sub-sub menu
+		var bFinishedCategory = false;
+		$(menuitem).show();
+		$(menuitem).nextAll().each(function(i){
+			if (!$(this).hasClass("viewMenuItemSubSub") && !$(this).hasClass("viewMenuItemSub")){
+				return false;
+			}else if($(this).hasClass("viewMenuItemSub")){
+				if ($(this).is(':visible')){
+					$(menuitem).find("img").prop("src", "unp/right-arrow-trans-white-large.png");
+					bimg = true;
+				}else{
+					$(menuitem).find("img").prop("src", "unp/down-arrow-trans-white-large.png");
+					bimg = true;
+				}
+				$(this).toggle();
+				bFinishedCategory = true;
+			}else{
+				if ($(this).hasClass("viewMenuItemSubSub") && !bFinishedCategory){
+					if (i==0){
+						if ($(this).is(':visible')){
+							$(menuitem).find("img").prop("src", "unp/right-arrow-trans-white-large.png");
+							bimg = true;
+						}else{
+							$(menuitem).find("img").prop("src", "unp/down-arrow-trans-white-large.png");
+							bimg = true;
+						}
+					}
+					$(this).toggle();
+				}
+			}
+		});
+		//Now we need to make sure that any previous sub categories are shown as well
+		$(menuitem).prevAll().each(function(i){
+			if (!$(this).hasClass("viewMenuItemSub") && !$(this).hasClass("viewMenuItemSubSub")){
+				return false;
+			}
+			if($(this).hasClass("viewMenuItemSub")){
+				if ($(this).is(':visible')){
+					$(menuitem).find("img").prop("src", "unp/right-arrow-trans-white-large.png");
+					bimg = true;
+				}else{
+					$(menuitem).find("img").prop("src", "unp/down-arrow-trans-white-large.png");
+					bimg = true;
+				}
+				$(this).toggle();
+			}
+		})
+	}else{
+		//We need to toggle a sub menu
+		$(menuitem).nextAll().each(function(i){
+			if (!$(this).hasClass("viewMenuItemSub") && !$(this).hasClass("viewMenuItemSubSub")){
+				return false;
+			}else{
+				if ($(this).hasClass("viewMenuItemSub")){
+					if (i==0){
+						if ($(this).is(':visible')){
+							$(menuitem).find("img").prop("src", "unp/right-arrow-trans-white-large.png");
+							bimg = true;
+						}else{
+							$(menuitem).find("img").prop("src", "unp/down-arrow-trans-white-large.png");
+							bimg = true;
+						}
+					}
+					$(this).toggle();
+				}
+			}
+		});
+	}
+	fixNavigatorBottomCorners();
+}
+function fixNavigatorBottomCorners(){
+	$(".navroundedbottom").removeClass("navroundedbottom");
+	$(".navScrollArea .viewMenuItem").not(':hidden').last().addClass("navroundedbottom");
+}
+
+function hviewFavourite(xpage, unid){
+	if (xpage.indexOf(".xsp") == -1){
+		xpage += ".xsp";
+	}
+	var url = xpage + "?favorite=toggle&action=openDocument&documentId=" + unid;
+	$("#hviewitemcontent").load(url.replace(" ", "%20") + " #results");
+	$("[unid='" + unid + "'] .badge-favorite").toggle();
+}
+
+function hviewEmail(xpage, unid){
+	$("#hviewdialogbuttons").toggle();
+	$("#emailholder").toggle();	
+}
+
+function hviewEmailSend(xpage, unid){
+	alert("This needs to be implemented");	
+}
+
+function hviewEmailCancel(xpage, unid){
+	$("#hviewdialogbuttons").toggle();
+	$("#emailholder").toggle();	
+}
+
+function dropdownToggle(element){
+	if (element != null){
+		$(element).next().toggle();
+	}else{
+		$(".dropdown-menu").toggle();
 	}
 }
