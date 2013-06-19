@@ -68,5 +68,18 @@
         </property-extension>
       </property>
     </property-type>
+    <property>
+      <property-name>synctype</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <editor-parameter>none&#xd;
+currentdb&#xd;
+alldbs</editor-parameter>
+          <default-value>alldbs</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
   </composite-component>
 </faces-config>
