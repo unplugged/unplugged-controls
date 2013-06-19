@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:this.resources>
+		<xp:script src="unp/idangerous.swiper.1.9.4.js" clientSide="true"></xp:script>
+		<xp:script src="unp/idangerous.swiper.scrollbar.js"
+			clientSide="true"></xp:script>
+	</xp:this.resources>
+	<div id="results">
+		<xp:repeat id="hcategoryrepeat" var="category" indexVar="categoryindex">
+			<xp:text id="categorytitle" tagName="h2" value="#{javascript:category}" styleClass="hviewcategory">
+			</xp:text>
+			<xp:panel styleClass="swiper-container swiper-scroll-container">
+				<xp:this.data>
+					<xp:dominoView var="view1" viewName="Documents"
+						categoryFilter="#{javascript:category}">
+					</xp:dominoView>
+				</xp:this.data>
+				<div id="hscroller" class="swiper-wrapper">
+					<div class="swiper-slide">
+						<xp:repeat id="hviewrepeat" value="#{view1}" var="rowData"
+							indexVar="rowIndex" rows="20" disableOutputTag="true">
+							<div class="hviewitem">
+								<xp:image id="hviewicon" styleClass="hviewicon">
+									<xp:this.url><![CDATA[#{javascript:"unp/" + rowData.getColumnValue("DocType") + ".png"}]]></xp:this.url>
+								</xp:image>
+								<xp:text id="hviewtitle" styleClass="hviewtitle" value="#{rowData.Title}">
+								</xp:text>
+							</div>
+						</xp:repeat>
+					</div>
+				</div>
+			</xp:panel>
+			<xp:this.value><![CDATA[#{javascript:@Unique(@DbColumn(@DbName(), "Documents", 1))}]]></xp:this.value>
+		</xp:repeat>
+	</div>
+
+</xp:view>
