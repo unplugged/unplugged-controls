@@ -11,7 +11,7 @@
 	</unp:unpHeader>
 	<unp:unpNavigator>
 		<unp:this.computedmenuitems><![CDATA[#{javascript:[
-	{label: "Business and EconomyFRED"}, 
+	{label: "Business and Economy"}, 
 	{label: "Business", submenu: "sub"}, 
 	{label: "Business", submenu: "sub-sub", ajaxloadid: "results", ajaxtargetid:"results", page:"/UnpDemoHorizontalViewBusiness.xsp"}, 
 	{label: "Sales", submenu: "sub-sub", ajaxloadid: "results", ajaxtargetid:"results", page:"/UnpDemoHorizontalViewSales.xsp"},
@@ -30,15 +30,18 @@
 	{label: "Social Media", submenu: "sub-sub", ajaxloadid: "results", ajaxtargetid:"results", page:"/UnpDemoHorizontalViewSocialMedia.xsp"}
 ]}]]></unp:this.computedmenuitems>
 	</unp:unpNavigator>
-	<unp:unpScrollableArea>
-		<xp:this.facets>
-			<unp:unpHorizontalView xp:key="facet_1"
-				dialogxpage="UnpDemoHorizontalViewDialog" sourcediv="results"
-				primaryview="Documents" filterview="Documents Filter"
-				toplevelcategory="All" title="Media Library" subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque arcu tellus, ullamcorper et tortor commodo, volutpat facilisis arcu. Donec eleifend nisl sed erat scelerisque sollicitudin.">
-			</unp:unpHorizontalView>
-		</xp:this.facets>
-	</unp:unpScrollableArea>
+	<div id="content">
+		<unp:unpScrollableArea>
+			<xp:this.facets>
+				<unp:unpHorizontalView xp:key="facet_1"
+					dialogxpage="UnpDemoHorizontalViewDialog" sourcediv="results"
+					primaryview="Documents" filterview="Documents Filter"
+					toplevelcategory="All" title="Media Library"
+					subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque arcu tellus, ullamcorper et tortor commodo, volutpat facilisis arcu. Donec eleifend nisl sed erat scelerisque sollicitudin.">
+				</unp:unpHorizontalView>
+			</xp:this.facets>
+		</unp:unpScrollableArea>
+	</div>
 	<unp:unpTabbedFooter synctype="alldbs">
 		<unp:this.tab>
 			<unp:tab label="Library" page="/UnpDemoHorizontalView.xsp"

@@ -9,11 +9,6 @@
 		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 		<xp:styleSheet href="/unpDialog.css"></xp:styleSheet>
 	</xp:this.resources>
-	<script>
-		$(window).load(function(){
-			$('#input-search').attr("targetelement", "contentwrapper");
-		});
-	</script>
 	<div id="results" style="padding-left: 10px; padding-top: 10px;">
 		<xp:panel id="hviewfilters" styleClass="hviewfilters">
 			<xp:this.rendered><![CDATA[#{javascript:compositeData.favoritesonly != "yes" && (context.getUrlParameter("query") == "" || context.getUrlParameter("query") == null)}]]></xp:this.rendered>

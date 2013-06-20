@@ -304,7 +304,6 @@ function initHorizontalView(){
 			});
 			swipers.push(mySwiper);
 		})
-		allowFormsInIscroll();
 	}catch(e){
 		
 	}
@@ -361,7 +360,7 @@ function initiscroll() {
 			});
 		} catch (e) {
 		}
-
+		
 		$(".iscrollcontent")
 				.each(
 						function() {
@@ -413,6 +412,7 @@ function initiscroll() {
 										}
 									});
 							$(".atozpicker").show();
+							return false;
 						});
 		$(".atozpicker").show();
 	} else {

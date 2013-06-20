@@ -8,7 +8,7 @@
 		viewsButton="false" headerHomeLink="/UnpMain.xsp" title="Horizontal View"
 		appVersion="v1.6.0" appDescription="Horizontal Viewer">
 	</unp:unpHeader>
-	<div class="pullleft">
+	<div id="content" class="pullleft">
 		<unp:unpScrollableArea>
 			<xp:this.facets>
 				<unp:unpHorizontalView xp:key="facet_1"
