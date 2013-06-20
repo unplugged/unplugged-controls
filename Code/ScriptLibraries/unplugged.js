@@ -93,7 +93,7 @@ function stopViewSpinner() {
 }
 
 function loadmore(dbName, viewName, summarycol, detailcol, category, xpage,
-		refreshmethod, photocol, collapserows, wrapsummarycol) {
+		refreshmethod, photocol, collapserows, wrapsummarycol, ajaxload) {
 	try {
 		$(".loadmorelink").hide();
 		$("#loadmorespinner").show();
@@ -118,7 +118,7 @@ function loadmore(dbName, viewName, summarycol, detailcol, category, xpage,
 				+ encodeURIComponent(category) + "&xpage=" + xpage
 				+ "&wrapsummarycol=" + encodeURIComponent(wrapsummarycol)
 				+ "&dbName=" + dbName + "&refreshmethod=" + refreshmethod
-				+ "&start=" + pos;
+				+ "&start=" + pos + "&ajaxload=" + ajaxload;
 		thisArea.load(url + " #results", function() {
 			$("#flatViewRowSet").append($(".summaryDataRow li"));
 			if ($(".summaryDataRow").text().indexOf("NOMORERECORDS") > -1) {
