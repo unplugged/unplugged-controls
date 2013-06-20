@@ -1654,7 +1654,9 @@ span.title {
   
 }
 @media screen and (max-width: 400px) {
-  
+  .tabfootertext {
+    display: none !important;
+  }
 }
 .hviewitem {
   width: 140px;
