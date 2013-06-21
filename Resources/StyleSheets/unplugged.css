@@ -1722,7 +1722,7 @@ span.title {
 }
 .navScrollArea ul li.viewMenuItemSelected {
   background-color: #0078f4 !important;
-  background: url('unp/right-arrow-trans-white-large.png') no-repeat 96% center;
+  background: url('unp/right-arrow-trans-white-large.png') no-repeat right 15px center;
   border: 1px solid #000000;
 }
 .tabfootertext {
