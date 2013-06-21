@@ -186,6 +186,18 @@ body {
 	color: @tabSelected-footerTabtext-color;
 }
 
+.homeButton {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 72px;
+	height: 36px;
+	border-radius: 6px;
+	background: @homeButton-background;
+	cursor: pointer;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
 @media screen and (max-width: 700px) {
 	.backButton {
 		height: 32px;
@@ -196,25 +208,9 @@ body {
 		font-size: 12px;
 		line-height: 32px;
 	}
-	/*
-  	.backButton:before {
-  		height: 26px;
-  		width: 26px;
-  		left: -5px;
-  	}
-  	*/
-}
-
-.homeButton {
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	width: 36px;
-	height: 36px;
-	border-radius: 6px;
-	background: @homeButton-background;
-	cursor: pointer;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+	.homeButton{
+		width: 36px;
+	}
 }
 
 .homelabel {
@@ -407,7 +403,7 @@ body {
 		z-index: 15;
 		position: fixed;
 		top: 10px;
-		right: 56px;
+		right: 88px;
 		width: 180px;
 	}
 	.hiddensearch {
