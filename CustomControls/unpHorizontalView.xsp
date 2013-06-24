@@ -21,16 +21,19 @@ if (sessionScope.languages == null){
 if (sessionScope.years == null){
 	sessionScope.years = @Unique(@DbColumn(@DbName(), compositeData.primaryview, 7)).sort();
 }
-sessionScope.categorylist = @Unique(@Right(@DbColumn(@DbName(), compositeData.primaryview, 1), "~"));}]]></xp:this.beforePageLoad>
+sessionScope.categorylist = @Unique(@Right(@DbColumn(@DbName(), compositeData.primaryview, 1), "~"));
+sessionScope.urlquery = context.getUrlParameter("query");
+sessionScope.urllanguagefilter = context.getUrlParameter("languagefilter");
+sessionScope.urlyearfilter = context.getUrlParameter("yearfilter");}]]></xp:this.beforePageLoad>
 	<div id="results" style="padding-left: 10px; padding-top: 10px;">
 		<xp:panel id="hviewfilters" styleClass="hviewfilters">
-			<xp:this.rendered><![CDATA[#{javascript:compositeData.favoritesonly != "yes" && (context.getUrlParameter("query") == "" || context.getUrlParameter("query") == null)}]]></xp:this.rendered>
+			<xp:this.rendered><![CDATA[#{javascript:compositeData.favoritesonly != "yes" && (sessionScope.urlquery == "" || sessionScope.urlquery == null)}]]></xp:this.rendered>
 
 			<div class="btn-group">
 				<a class="dropdown-toggle" onclick="dropdownToggle(this)">
 					Language:
 					<xp:text tagName="span" styleClass="dropdownlabel languagelabel">
-						<xp:this.value><![CDATA[#{javascript:var lang=context.getUrlParameter("languagefilter");
+						<xp:this.value><![CDATA[#{javascript:var lang=sessionScope.urllanguagefilter;
 if (lang=="" || lang==null){
 	return "All";
 }else{
@@ -54,7 +57,7 @@ return out;}]]></xp:this.value>
 							<xp:this.value><![CDATA[#{javascript:@Left(language, "|")}]]></xp:this.value>
 							<xp:this.attrs>
 								<xp:attr name="onclick">
-									<xp:this.value><![CDATA[#{javascript:var currentyear = context.getUrlParameter("yearfilter");
+									<xp:this.value><![CDATA[#{javascript:var currentyear = sessionScope.urlyearfilter;
 if (currentyear == ""){
 	currentyear = "All";
 }
@@ -69,7 +72,7 @@ if (currentyear == ""){
 				<a class="dropdown-toggle" onclick="dropdownToggle(this)">
 					Year:
 					<xp:text tagName="span" styleClass="dropdownlabel yearlabel">
-						<xp:this.value><![CDATA[#{javascript:var yearfilter=context.getUrlParameter("yearfilter");
+						<xp:this.value><![CDATA[#{javascript:var yearfilter=sessionScope.urlyearfilter;
 if (yearfilter=="" || yearfilter == null){
 	return "All";
 }else{
@@ -93,7 +96,7 @@ return out;}]]></xp:this.value>
 							<xp:this.value><![CDATA[#{javascript:@Left(year, "|")}]]></xp:this.value>
 							<xp:this.attrs>
 								<xp:attr name="onclick">
-									<xp:this.value><![CDATA[#{javascript:var currentlang = context.getUrlParameter("languagefilter");
+									<xp:this.value><![CDATA[#{javascript:var currentlang = sessionScope.urllanguagefilter;
 if (currentlang == ""){
 	currentlang = "All";
 }
@@ -125,22 +128,22 @@ if (currentlang == ""){
 								indexVar="rowIndex" disableOutputTag="true">
 								<xp:this.value><![CDATA[#{javascript:requestScope.count = null;
 var filter = "";
-if (context.getUrlParameter("languagefilter") != null && context.getUrlParameter("languagefilter") != "" && context.getUrlParameter("languagefilter") != "All"){
-	filter = context.getUrlParameter("languagefilter");
+if (sessionScope.urllanguagefilter != null && sessionScope.urllanguagefilter != "" && sessionScope.urllanguagefilter != "All"){
+	filter = sessionScope.urllanguagefilter;
 }
-if (context.getUrlParameter("yearfilter") != null && context.getUrlParameter("yearfilter") != "" && context.getUrlParameter("yearfilter") != "All"){
+if (sessionScope.urlyearfilter != null && sessionScope.urlyearfilter != "" && sessionScope.urlyearfilter){
 	if (filter != ""){
 		filter += "~";
 	}
-	filter += context.getUrlParameter("yearfilter");
+	filter += sessionScope.urlyearfilter;
 }
 var viewname = compositeData.primaryview;
 if (filter != ""){
 	filter += "~" + category;
 	viewname = compositeData.filterview;
 }else{
-	if (context.getUrlParameter("query") != "" && context.getUrlParameter("query") != null){
-		filter = context.getUrlParameter("query") + "~" + @Right(category, "~");
+	if (sessionScope.urlquery != "" && sessionScope.urlquery != null){
+		filter = sessionScope.urlquery + "~" + @Right(category, "~");
 	}else{
 		filter = category;
 	}
