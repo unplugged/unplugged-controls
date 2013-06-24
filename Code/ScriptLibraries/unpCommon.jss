@@ -117,6 +117,7 @@ function getFavorites(){
 }
 function setFavorites(favoritesarray){
 	session.setEnvironmentVar("ro.favorites." + @LowerCase(@ReplaceSubstring(database.getFilePath(), "\\", "")), @Implode(@Trim(favoritesarray), ","), true);
+	sessionScope.favorites = null;
 }
 function getDownloaded(){
 	var downloaded = session.getEnvironmentString("ro.downloaded." + @LowerCase(@ReplaceSubstring(database.getFilePath(), "\\", "")), true);
@@ -130,4 +131,5 @@ function getDownloaded(){
 }
 function setDownloaded(downloadedarray){
 	session.setEnvironmentVar("ro.downloaded." + @LowerCase(@ReplaceSubstring(database.getFilePath(), "\\", "")), @Implode(@Trim(downloadedarray), ","), true);
+	sessionScope.downloaded = null;
 }
