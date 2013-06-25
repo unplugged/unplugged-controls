@@ -110,7 +110,7 @@ body {
   float: left;
   width: 100px;
   text-align: center;
-  padding-top: 5px;
+  padding-top: 10px;
 }
 .footerTabtext {
   color: #cccccc;
@@ -120,9 +120,11 @@ body {
 }
 #footerTabBar img {
   opacity: 0.4;
+  padding-bottom: 2px;
 }
 #footerTabBar .tabSelected img {
   opacity: 1.0;
+  padding-bottom: 2px;
 }
 .tabSelected .footerTabtext {
   font-weight: bold;
@@ -1722,7 +1724,7 @@ span.title {
 }
 .navScrollArea ul li.viewMenuItemSelected {
   background-color: #0078f4 !important;
-  background: url('unp/right-arrow-trans-white-large.png') no-repeat right 15px center;
+  background: url('unp/right-arrow-trans-white-large.png') no-repeat 96% center;
   border: 1px solid #000000;
 }
 .tabfootertext {

@@ -110,7 +110,7 @@ body {
   float: left;
   width: 100px;
   text-align: center;
-  padding-top: 5px;
+  padding-top: 10px;
 }
 .footerTabtext {
   color: #768fa4;
@@ -120,9 +120,11 @@ body {
 }
 #footerTabBar img {
   opacity: 0.4;
+  padding-bottom: 2px;
 }
 #footerTabBar .tabSelected img {
   opacity: 1.0;
+  padding-bottom: 2px;
 }
 .tabSelected .footerTabtext {
   font-weight: bold;
