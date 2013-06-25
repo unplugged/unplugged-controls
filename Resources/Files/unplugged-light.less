@@ -444,9 +444,15 @@ body {
 	.footer>span {
 		margin-top: 16px;
 	}
+	#tabfooter li {
+		padding-top: 2px;
+	}
+	.tabfootertext {
+		display: none !important;
+	}
 	.searchButton,.homeButton,.viewsButton,.syncButton,.newButton,.settingsButton
 		{
-		top: 6px;
+		top: 5px;
 		height: 34px;
 	}
 	.homeButton,.newButton,.settingsButton {
@@ -753,12 +759,22 @@ body {
 	opacity: 1;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 400px) {
 	#menuPane {
 		position: absolute;
 		left: -700px;
 		display: block;
 		width: 100%;
+		top: 40px;
+		bottom: 45px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	#menuPane {
+		position: absolute;
+		left: -700px;
+		display: block;
 		top: 40px;
 		bottom: 45px;
 	}
@@ -1320,6 +1336,7 @@ to {
 	{
 	background: #7a7a7a;
 	text-decoration: none;
+	opacity: 0.2;
 }
 
 @media screen and (min-width: 701px) {
@@ -1380,6 +1397,9 @@ to {
 		text-align: center;
 		margin-top: 5px;
 	}
+	.workspace-items span.badge {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 400px) {
@@ -1391,6 +1411,9 @@ to {
 		clear: left;
 		display: block;
 		text-align: center;
+	}
+	.workspace-items span.badge {
+		display: none;
 	}
 }
 

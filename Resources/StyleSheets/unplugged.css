@@ -387,7 +387,7 @@ body {
   .syncButton,
   .newButton,
   .settingsButton {
-    top: 6px;
+    top: 5px;
     height: 34px;
   }
   .homeButton,
