@@ -375,6 +375,12 @@ body {
   .footer > span {
     margin-top: 16px;
   }
+  #tabfooter li {
+    padding-top: 2px;
+  }
+  .tabfootertext {
+    display: none !important;
+  }
   .searchButton,
   .homeButton,
   .viewsButton,
