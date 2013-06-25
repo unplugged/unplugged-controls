@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core">
 	<xp:this.resources>
-		<xp:script src="unp/idangerous.swiper.1.9.4.js" clientSide="true">
+		<xp:script src="unp/idangerous.swiper.1.9.4.js"
+			clientSide="true">
 		</xp:script>
 		<xp:script src="unp/idangerous.swiper.scrollbar.js"
 			clientSide="true">
@@ -25,14 +26,35 @@ sessionScope.categorylist = @Unique(@Right(@DbColumn(@DbName(), compositeData.pr
 sessionScope.urlquery = context.getUrlParameter("query");
 sessionScope.urllanguagefilter = context.getUrlParameter("languagefilter");
 sessionScope.urlyearfilter = context.getUrlParameter("yearfilter");}]]></xp:this.beforePageLoad>
+	<xp:this.data>
+		<xp:dominoView var="hview">
+			<xp:this.viewName><![CDATA[#{javascript:var filter = "";
+if (sessionScope.urllanguagefilter != null && sessionScope.urllanguagefilter != "" && sessionScope.urllanguagefilter != "All"){
+	filter = sessionScope.urllanguagefilter;
+}
+if (sessionScope.urlyearfilter != null && sessionScope.urlyearfilter != "" && sessionScope.urlyearfilter){
+	if (filter != ""){
+		filter += "~";
+	}
+	filter += sessionScope.urlyearfilter;
+}
+var viewname = compositeData.primaryview;
+if (filter != ""){
+	viewname = compositeData.filterview;
+}
+return viewname;}]]></xp:this.viewName>
+		</xp:dominoView>
+	</xp:this.data>
 	<div id="results" style="padding-left: 10px; padding-top: 10px;">
 		<xp:panel id="hviewfilters" styleClass="hviewfilters">
 			<xp:this.rendered><![CDATA[#{javascript:compositeData.favoritesonly != "yes" && (sessionScope.urlquery == "" || sessionScope.urlquery == null)}]]></xp:this.rendered>
 
 			<div class="btn-group">
-				<a class="dropdown-toggle" onclick="dropdownToggle(this)">
+				<a class="dropdown-toggle"
+					onclick="dropdownToggle(this)">
 					Language:
-					<xp:text tagName="span" styleClass="dropdownlabel languagelabel">
+					<xp:text tagName="span"
+						styleClass="dropdownlabel languagelabel">
 						<xp:this.value><![CDATA[#{javascript:var lang=sessionScope.urllanguagefilter;
 if (lang=="" || lang==null){
 	return "All";
@@ -69,9 +91,11 @@ if (currentyear == ""){
 				</ul>
 			</div>
 			<div class="btn-group">
-				<a class="dropdown-toggle" onclick="dropdownToggle(this)">
+				<a class="dropdown-toggle"
+					onclick="dropdownToggle(this)">
 					Year:
-					<xp:text tagName="span" styleClass="dropdownlabel yearlabel">
+					<xp:text tagName="span"
+						styleClass="dropdownlabel yearlabel">
 						<xp:this.value><![CDATA[#{javascript:var yearfilter=sessionScope.urlyearfilter;
 if (yearfilter=="" || yearfilter == null){
 	return "All";
@@ -115,8 +139,10 @@ if (currentlang == ""){
 			value="#{javascript:compositeData.subtitle}">
 		</xp:text>
 		<div id="repeatholder">
-			<xp:repeat id="hcategoryrepeat" var="category" indexVar="categoryindex">
-				<xp:text tagName="div" id="categorytitle" styleClass="hviewcategory">
+			<xp:repeat id="hcategoryrepeat" var="category"
+				indexVar="categoryindex">
+				<xp:text tagName="div" id="categorytitle"
+					styleClass="hviewcategory">
 					<xp:this.value><![CDATA[#{javascript:@Right(category, "~")}]]></xp:this.value>
 				</xp:text>
 				<xp:panel>
@@ -131,16 +157,14 @@ var filter = "";
 if (sessionScope.urllanguagefilter != null && sessionScope.urllanguagefilter != "" && sessionScope.urllanguagefilter != "All"){
 	filter = sessionScope.urllanguagefilter;
 }
-if (sessionScope.urlyearfilter != null && sessionScope.urlyearfilter != "" && sessionScope.urlyearfilter){
+if (sessionScope.urlyearfilter != null && sessionScope.urlyearfilter != "" && sessionScope.urlyearfilter && sessionScope.urlyearfilter != "All"){
 	if (filter != ""){
 		filter += "~";
 	}
 	filter += sessionScope.urlyearfilter;
 }
-var viewname = compositeData.primaryview;
 if (filter != ""){
 	filter += "~" + category;
-	viewname = compositeData.filterview;
 }else{
 	if (sessionScope.urlquery != "" && sessionScope.urlquery != null){
 		filter = sessionScope.urlquery + "~" + @Right(category, "~");
@@ -148,8 +172,7 @@ if (filter != ""){
 		filter = category;
 	}
 }
-var alldocs:NotesView = database.getView(viewname);
-var docs:NotesViewEntryCollection = alldocs.getAllEntriesByKey(filter, true);
+var docs:NotesViewEntryCollection = hview.getAllEntriesByKey(filter, true);
 if (compositeData.favoritesonly != "yes"){
 	return docs;
 }else{
@@ -174,21 +197,13 @@ if (compositeData.favoritesonly != "yes"){
 								<xp:panel id="hviewitem"
 									styleClass="hviewitem">
 									<xp:this.attrs>
-										<xp:attr name="year">
-											<xp:this.value><![CDATA[#{javascript:if (requestScope.count == null){
+										<xp:attr name="unid"
+											value="#{javascript:if (requestScope.count == null){
 	requestScope.count = 1;
 }else{
 	requestScope.count = requestScope.count + 1;
 }
-//rowData.getDocument().getItemValueString("Year");
-rowData.getColumnValues().elementAt(6)}]]></xp:this.value>
-										</xp:attr>
-										<xp:attr name="language">
-											<xp:this.value><![CDATA[#{javascript://rowData.getDocument().getItemValueString("Language")
-rowData.getColumnValues().elementAt(5)}]]></xp:this.value>
-										</xp:attr>
-										<xp:attr name="unid"
-											value="#{javascript:rowData.getUniversalID()}">
+rowData.getUniversalID()}">
 										</xp:attr>
 										<xp:attr name="onclick">
 											<xp:this.value><![CDATA[#{javascript:"openHViewDialog('" + compositeData.dialogxpage + "', '" + compositeData.sourcediv + "', '" + rowData.getUniversalID() + "')"}]]></xp:this.value>
@@ -233,8 +248,8 @@ rowData.getColumnValues().elementAt(5)}]]></xp:this.value>
 	return requestScope.count >= 5;
 }}]]></xp:this.rendered>
 								<span class="hviewtitle">
-									<xp:button value="Load More" id="loadmorebutton"
-										styleClass="hviewloadmorebutton">
+									<xp:button value="Load More"
+										id="loadmorebutton" styleClass="hviewloadmorebutton">
 										<xp:this.attrs>
 											<xp:attr name="onclick">
 												<xp:this.value><![CDATA[#{javascript:"loadMoreHorizontal(this, '" + category + "', '" + compositeData.primaryview + "', '" + compositeData.filterview + "', '" + compositeData.dialogxpage + "', '" + compositeData.sourcediv + "')";}]]></xp:this.value>
