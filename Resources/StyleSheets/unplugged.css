@@ -662,12 +662,21 @@ body {
 .viewMenuItemSelected .menulink .icon {
   opacity: 1;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 400px) {
   #menuPane {
     position: absolute;
     left: -700px;
     display: block;
     width: 100%;
+    top: 40px;
+    bottom: 45px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #menuPane {
+    position: absolute;
+    left: -700px;
+    display: block;
     top: 40px;
     bottom: 45px;
   }
