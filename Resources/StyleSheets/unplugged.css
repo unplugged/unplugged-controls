@@ -1167,6 +1167,7 @@ to {
 .workspace-items .workspace-item-disabled a {
   background: #7a7a7a;
   text-decoration: none;
+  opacity: 0.2;
 }
 @media screen and (min-width: 701px) {
   .workspace-items .workspace-item,
@@ -1226,6 +1227,9 @@ to {
     text-align: center;
     margin-top: 5px;
   }
+  .workspace-items span.badge {
+    display: none;
+  }
 }
 @media screen and (max-width: 400px) {
   .workspace-items .workspace-item,
@@ -1236,6 +1240,9 @@ to {
     clear: left;
     display: block;
     text-align: center;
+  }
+  .workspace-items span.badge {
+    display: none;
   }
 }
 .badge {
