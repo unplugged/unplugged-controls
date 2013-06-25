@@ -45,7 +45,7 @@ if (filter != ""){
 return viewname;}]]></xp:this.viewName>
 		</xp:dominoView>
 	</xp:this.data>
-	<div id="results" style="padding-left: 10px; padding-top: 10px;">
+	<div id="results" style="padding-left: 20px; padding-top: 10px;">
 		<xp:panel id="hviewfilters" styleClass="hviewfilters">
 			<xp:this.rendered><![CDATA[#{javascript:compositeData.favoritesonly != "yes" && (sessionScope.urlquery == "" || sessionScope.urlquery == null)}]]></xp:this.rendered>
 
@@ -62,6 +62,9 @@ if (lang=="" || lang==null){
 	return lang;
 }}]]></xp:this.value>
 					</xp:text>
+					<xp:image
+						url="/unp%2Fdown-arrow-trans-gray-large.png">
+					</xp:image>
 				</a>
 				<ul id="dropdown" class="dropdown-menu">
 					<xp:repeat var="language" disableOutputTag="true">
@@ -103,6 +106,9 @@ if (yearfilter=="" || yearfilter == null){
 	return yearfilter;
 }}]]></xp:this.value>
 					</xp:text>
+					<xp:image
+						url="/unp%2Fdown-arrow-trans-gray-large.png">
+					</xp:image>
 				</a>
 				<ul id="yeardropdown" class="dropdown-menu">
 					<xp:repeat var="year" disableOutputTag="true">

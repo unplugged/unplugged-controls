@@ -1695,7 +1695,8 @@ span.title {
   color: #e5e5e5;
   font-weight: bold;
   font-size: 1.4em;
-  padding-top: 2px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   padding-left: 3px;
   border-top: 1px solid #2d2d2d;
   border-left: 1px solid #2d2d2d;
@@ -1821,11 +1822,15 @@ h1.hview-h1 {
   color: #ffffff;
   font-size: 1.6em;
   font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 h2.hview-h2 {
   font-size: 1.0em;
   font-weight: normal;
   color: #999999;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .hviewloadmorebutton {
   width: 60px;
@@ -1843,7 +1848,7 @@ a.dropdown-toggle:hover {
   font-weight: bold;
   font-size: 12px;
   position: relative;
-  padding: 3px;
+  padding: 8px;
   margin-right: 3px;
   text-decoration: none;
   cursor: pointer;
@@ -1854,16 +1859,17 @@ a.dropdown-toggle:hover {
   display: inline-block;
   white-space: nowrap;
   vertical-align: middle;
+  padding-right: 7px;
 }
 a.dropdown-toggle span {
-  color: #657893;
+  color: #0078C8;
   padding-left: 3px;
-  padding-right: 3px;
+  padding-right: 8px;
 }
 ul.dropdown-menu {
   position: absolute;
   top: 100%;
-  right: 0;
+  right: 10px;
   z-index: 1000;
   display: none;
   float: left;
