@@ -719,6 +719,8 @@ function expandMenuItem(menuitem){
 function fixNavigatorBottomCorners(){
 	$(".navroundedbottom").removeClass("navroundedbottom");
 	$(".navScrollArea .viewMenuItem").not(':hidden').last().addClass("navroundedbottom");
+	$("#menuitems li a").removeClass("navroundedbottom");
+	$("#menuitems li a").not(':hidden').last().addClass("navroundedbottom");
 }
 
 function hviewFavourite(xpage, unid){

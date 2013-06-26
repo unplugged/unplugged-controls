@@ -9,27 +9,51 @@
 		viewsButton="true" headerHomeLink="/UnpMain.xsp" title="Horizontal View"
 		appVersion="v1.6.0" appDescription="Horizontal Viewer">
 	</unp:unpHeader>
-	<unp:unpNavigator>
+	<unp:unpNavigatorComputed>
 		<unp:this.computedmenuitems><![CDATA[#{javascript:[
-	{label: "Business and Economy"}, 
-	{label: "Business", submenu: "sub"}, 
-	{label: "Business", submenu: "sub-sub", ajaxloadid: "results", ajaxtargetid:"results", page:"/UnpDemoHorizontalViewBusiness.xsp"}, 
-	{label: "Sales", submenu: "sub-sub", ajaxloadid: "results", ajaxtargetid:"results", page:"/UnpDemoHorizontalViewSales.xsp"},
-	{label: "Economy", submenu: "sub"}, 
-	{label: "Economy", submenu: "sub-sub", ajaxloadid: "results", ajaxtargetid:"results", page:"/UnpDemoHorizontalViewEconomy.xsp"}, 
-	{label: "News", submenu: "sub-sub", ajaxloadid: "results", ajaxtargetid:"results", page:"/UnpDemoHorizontalViewNews.xsp"},
-	{label: "Environment"}, 
-	{label: "Cause", submenu: "sub", ajaxloadid: "results", ajaxtargetid:"results", page:"/UnpDemoHorizontalViewCause.xsp"}, 
-	{label: "Drought", submenu: "sub", ajaxloadid: "results", ajaxtargetid:"results", page:"/UnpDemoHorizontalViewDrought.xsp"},
-	{label: "Internet"}, 
-	{label: "Apple", submenu: "sub"}, 
-	{label: "iPad", submenu: "sub-sub", ajaxloadid: "results", ajaxtargetid:"results", page:"/UnpDemoHorizontalViewiPad.xsp"}, 
-	{label: "iPhone", submenu: "sub-sub", ajaxloadid: "results", ajaxtargetid:"results", page:"/UnpDemoHorizontalViewiPhone.xsp"},
-	{label: "Other", submenu: "sub"}, 
-	{label: "Apps", submenu: "sub-sub", ajaxloadid: "results", ajaxtargetid:"results", page:"/UnpDemoHorizontalViewApps.xsp"}, 
-	{label: "Social Media", submenu: "sub-sub", ajaxloadid: "results", ajaxtargetid:"results", page:"/UnpDemoHorizontalViewSocialMedia.xsp"}
+	{label: "Business and Economy", hasSubMenu: true, subMenu: [
+		{
+			label: "Business", hasSubMenu: true, subMenu: 
+			[
+				{label: "Business", ajaxloadid: "resultsinner", ajaxtargetid: "results", page: "/UnpDemoHorizontalViewBusiness.xsp"},
+				{label: "Sales", ajaxloadid: "results", ajaxtargetid: "results", page: "/UnpDemoHorizontalViewSales.xsp"}
+			]
+		}, 
+		{
+			label: "Economy", hasSubMenu: true, subMenu: 
+			[
+				{label: "Economy", ajaxloadid: "resultsinner", ajaxtargetid: "results", page: "/UnpDemoHorizontalViewEconomy.xsp"},
+				{label: "News", ajaxloadid: "resultsinner", ajaxtargetid: "results", page: "/UnpDemoHorizontalViewNews.xsp"}
+			]
+		}
+	]}, 
+	{label: "Environment", hasSubMenu: true, subMenu: [
+		{
+			label: "Environment", hasSubMenu: true, subMenu: 
+			[
+				{label: "Cause", ajaxloadid: "resultsinner", ajaxtargetid: "results", page: "/UnpDemoHorizontalViewCause.xsp"},
+				{label: "Drought", ajaxloadid: "resultsinner", ajaxtargetid: "results", page: "/UnpDemoHorizontalViewDrought.xsp"}
+			]
+		}
+	]}, 
+	{label: "Internet", hasSubMenu: true, subMenu: [
+		{
+			label: "Apple", hasSubMenu: true, subMenu: 
+			[
+				{label: "iPad", ajaxloadid: "resultsinner", ajaxtargetid: "results", page: "/UnpDemoHorizontalViewiPad.xsp"},
+				{label: "iPhone", ajaxloadid: "resultsinner", ajaxtargetid: "results", page: "/UnpDemoHorizontalViewiPhone.xsp"}
+			]
+		}, 
+		{
+			label: "Other", hasSubMenu: true, subMenu: 
+			[
+				{label: "Apps", ajaxloadid: "resultsinner", ajaxtargetid: "results", page: "/UnpDemoHorizontalViewApps.xsp"},
+				{label: "Social Media", ajaxloadid: "resultsinner", ajaxtargetid: "results", page: "/UnpDemoHorizontalViewSocialMedia.xsp"}
+			]
+		}
+	]}
 ]}]]></unp:this.computedmenuitems>
-	</unp:unpNavigator>
+	</unp:unpNavigatorComputed>
 	<div id="content">
 		<unp:unpScrollableArea>
 			<xp:this.facets>

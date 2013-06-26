@@ -22,11 +22,7 @@ the specific language governing permissions and limitations under the License
 				<ul id="menuitems">
 					<xp:repeat id="repeat1" rows="30"
 						disableOutputTag="true" var="menuItem">
-						<xp:this.value><![CDATA[#{javascript:if (compositeData.computedmenuitems != null){
-	compositeData.computedmenuitems;
-}else{
-	compositeData.menuItem;
-}}]]></xp:this.value>
+						<xp:this.value><![CDATA[#{javascript:compositeData.menuItem;}]]></xp:this.value>
 						<xp:panel id="viewMenuItem" tagName="li">
 							<xp:this.styleClass><![CDATA[#{javascript:var out = "";
 if (("/" + getCurrentXPage()) == menuItem.page){

@@ -46,29 +46,27 @@ return viewname;}]]></xp:this.viewName>
 		</xp:dominoView>
 	</xp:this.data>
 	<div id="results" style="padding-left: 20px; padding-top: 10px;">
-		<xp:panel id="hviewfilters" styleClass="hviewfilters">
-			<xp:this.rendered><![CDATA[#{javascript:compositeData.favoritesonly != "yes" && (sessionScope.urlquery == "" || sessionScope.urlquery == null)}]]></xp:this.rendered>
+		<div id="resultsinner">
+			<xp:panel id="hviewfilters" styleClass="hviewfilters">
+				<xp:this.rendered><![CDATA[#{javascript:compositeData.favoritesonly != "yes" && (sessionScope.urlquery == "" || sessionScope.urlquery == null)}]]></xp:this.rendered>
 
-			<div class="btn-group">
-				<a class="dropdown-toggle"
-					onclick="dropdownToggle(this)">
-					Language:
-					<xp:text tagName="span"
-						styleClass="dropdownlabel languagelabel">
-						<xp:this.value><![CDATA[#{javascript:var lang=sessionScope.urllanguagefilter;
+				<div class="btn-group">
+					<a class="dropdown-toggle" onclick="dropdownToggle(this)">
+						Language:
+						<xp:text tagName="span" styleClass="dropdownlabel languagelabel">
+							<xp:this.value><![CDATA[#{javascript:var lang=sessionScope.urllanguagefilter;
 if (lang=="" || lang==null){
 	return "All";
 }else{
 	return lang;
 }}]]></xp:this.value>
-					</xp:text>
-					<xp:image
-						url="/unp%2Fdown-arrow-trans-gray-large.png">
-					</xp:image>
-				</a>
-				<ul id="dropdown" class="dropdown-menu">
-					<xp:repeat var="language" disableOutputTag="true">
-						<xp:this.value><![CDATA[#{javascript:var out = ["All Languages|All"];
+						</xp:text>
+						<xp:image url="/unp%2Fdown-arrow-trans-gray-large.png">
+						</xp:image>
+					</a>
+					<ul id="dropdown" class="dropdown-menu">
+						<xp:repeat var="language" disableOutputTag="true">
+							<xp:this.value><![CDATA[#{javascript:var out = ["All Languages|All"];
 var list = sessionScope.languages;
 for (var i=0; i<list.length; i++){
 	if (list[i].indexOf("|") > -1){
@@ -78,41 +76,38 @@ for (var i=0; i<list.length; i++){
 	}
 }
 return out;}]]></xp:this.value>
-						<xp:text tagName="li" id="dropwdownitem">
-							<xp:this.value><![CDATA[#{javascript:@Left(language, "|")}]]></xp:this.value>
-							<xp:this.attrs>
-								<xp:attr name="onclick">
-									<xp:this.value><![CDATA[#{javascript:var currentyear = sessionScope.urlyearfilter;
+							<xp:text tagName="li" id="dropwdownitem">
+								<xp:this.value><![CDATA[#{javascript:@Left(language, "|")}]]></xp:this.value>
+								<xp:this.attrs>
+									<xp:attr name="onclick">
+										<xp:this.value><![CDATA[#{javascript:var currentyear = sessionScope.urlyearfilter;
 if (currentyear == ""){
 	currentyear = "All";
 }
 "doHViewFilter('" + @Right(language, "|") + "', null, '" + compositeData.primaryview + "', '" + compositeData.filterview + "', '" + compositeData.dialogxpage + "', '" + compositeData.sourcediv + "', '" + compositeData.toplevelcategory + "')"}]]></xp:this.value>
-								</xp:attr>
-							</xp:this.attrs>
-						</xp:text>
-					</xp:repeat>
-				</ul>
-			</div>
-			<div class="btn-group">
-				<a class="dropdown-toggle"
-					onclick="dropdownToggle(this)">
-					Year:
-					<xp:text tagName="span"
-						styleClass="dropdownlabel yearlabel">
-						<xp:this.value><![CDATA[#{javascript:var yearfilter=sessionScope.urlyearfilter;
+									</xp:attr>
+								</xp:this.attrs>
+							</xp:text>
+						</xp:repeat>
+					</ul>
+				</div>
+				<div class="btn-group">
+					<a class="dropdown-toggle" onclick="dropdownToggle(this)">
+						Year:
+						<xp:text tagName="span" styleClass="dropdownlabel yearlabel">
+							<xp:this.value><![CDATA[#{javascript:var yearfilter=sessionScope.urlyearfilter;
 if (yearfilter=="" || yearfilter == null){
 	return "All";
 }else{
 	return yearfilter;
 }}]]></xp:this.value>
-					</xp:text>
-					<xp:image
-						url="/unp%2Fdown-arrow-trans-gray-large.png">
-					</xp:image>
-				</a>
-				<ul id="yeardropdown" class="dropdown-menu">
-					<xp:repeat var="year" disableOutputTag="true">
-						<xp:this.value><![CDATA[#{javascript:var out = ["All Years|All"];
+						</xp:text>
+						<xp:image url="/unp%2Fdown-arrow-trans-gray-large.png">
+						</xp:image>
+					</a>
+					<ul id="yeardropdown" class="dropdown-menu">
+						<xp:repeat var="year" disableOutputTag="true">
+							<xp:this.value><![CDATA[#{javascript:var out = ["All Years|All"];
 var list = sessionScope.years
 for (var i=0; i<list.length; i++){
 	if (list[i].indexOf("|") > -1){
@@ -122,43 +117,41 @@ for (var i=0; i<list.length; i++){
 	}
 }
 return out;}]]></xp:this.value>
-						<xp:text tagName="li" id="yeardropdownitem">
-							<xp:this.value><![CDATA[#{javascript:@Left(year, "|")}]]></xp:this.value>
-							<xp:this.attrs>
-								<xp:attr name="onclick">
-									<xp:this.value><![CDATA[#{javascript:var currentlang = sessionScope.urllanguagefilter;
+							<xp:text tagName="li" id="yeardropdownitem">
+								<xp:this.value><![CDATA[#{javascript:@Left(year, "|")}]]></xp:this.value>
+								<xp:this.attrs>
+									<xp:attr name="onclick">
+										<xp:this.value><![CDATA[#{javascript:var currentlang = sessionScope.urllanguagefilter;
 if (currentlang == ""){
 	currentlang = "All";
 }
 "doHViewFilter(null, '" + @Right(year, "|") + "', '" + compositeData.primaryview + "', '" + compositeData.filterview + "', '" + compositeData.dialogxpage + "', '" + compositeData.sourcediv + "', '" + compositeData.toplevelcategory + "')"}]]></xp:this.value>
-								</xp:attr>
-							</xp:this.attrs>
-						</xp:text>
-					</xp:repeat>
-				</ul>
-			</div>
-		</xp:panel>
-		<xp:text tagName="h1" id="title" styleClass="hview-h1"
-			value="#{javascript:compositeData.title}">
-		</xp:text>
-		<xp:text tagName="h2" id="subtitle" styleClass="hview-h2"
-			value="#{javascript:compositeData.subtitle}">
-		</xp:text>
-		<div id="repeatholder">
-			<xp:repeat id="hcategoryrepeat" var="category"
-				indexVar="categoryindex">
-				<xp:text tagName="div" id="categorytitle"
-					styleClass="hviewcategory">
-					<xp:this.value><![CDATA[#{javascript:@Right(category, "~")}]]></xp:this.value>
-				</xp:text>
-				<xp:panel>
-					<xp:this.styleClass><![CDATA[#{javascript:"swiper-container swiper-scroll-container swiper-" + @ReplaceSubstring(category, [" ", "~"], "-")}]]></xp:this.styleClass>
-					<div id="hscroller" class="swiper-wrapper">
-						<xp:panel id="swiper-slide">
-							<xp:this.styleClass><![CDATA[#{javascript:"swiper-slide swiper-slide-" + @ReplaceSubstring(category, [" ", "~"], "-")}]]></xp:this.styleClass>
-							<xp:repeat id="hviewrepeat" var="rowData"
-								indexVar="rowIndex" disableOutputTag="true">
-								<xp:this.value><![CDATA[#{javascript:requestScope.count = null;
+									</xp:attr>
+								</xp:this.attrs>
+							</xp:text>
+						</xp:repeat>
+					</ul>
+				</div>
+			</xp:panel>
+			<xp:text tagName="h1" id="title" styleClass="hview-h1"
+				value="#{javascript:compositeData.title}">
+			</xp:text>
+			<xp:text tagName="h2" id="subtitle" styleClass="hview-h2"
+				value="#{javascript:compositeData.subtitle}">
+			</xp:text>
+			<div id="repeatholder">
+				<xp:repeat id="hcategoryrepeat" var="category" indexVar="categoryindex">
+					<xp:text tagName="div" id="categorytitle" styleClass="hviewcategory">
+						<xp:this.value><![CDATA[#{javascript:@Right(category, "~")}]]></xp:this.value>
+					</xp:text>
+					<xp:panel>
+						<xp:this.styleClass><![CDATA[#{javascript:"swiper-container swiper-scroll-container swiper-" + @ReplaceSubstring(category, [" ", "~"], "-")}]]></xp:this.styleClass>
+						<div id="hscroller" class="swiper-wrapper">
+							<xp:panel id="swiper-slide">
+								<xp:this.styleClass><![CDATA[#{javascript:"swiper-slide swiper-slide-" + @ReplaceSubstring(category, [" ", "~"], "-")}]]></xp:this.styleClass>
+								<xp:repeat id="hviewrepeat" var="rowData" indexVar="rowIndex"
+									disableOutputTag="true">
+									<xp:this.value><![CDATA[#{javascript:requestScope.count = null;
 var filter = "";
 if (sessionScope.urllanguagefilter != null && sessionScope.urllanguagefilter != "" && sessionScope.urllanguagefilter != "All"){
 	filter = sessionScope.urllanguagefilter;
@@ -195,79 +188,74 @@ if (compositeData.favoritesonly != "yes"){
 	}
 	return filtereddocs;
 }}]]></xp:this.value>
-								<xp:this.rows><![CDATA[#{javascript:if (compositeData.favoritesonly == "yes"){
+									<xp:this.rows><![CDATA[#{javascript:if (compositeData.favoritesonly == "yes"){
 	return 1000;
 }else{
 	return 5;
 }}]]></xp:this.rows>
-								<xp:panel id="hviewitem"
-									styleClass="hviewitem">
-									<xp:this.attrs>
-										<xp:attr name="unid"
-											value="#{javascript:if (requestScope.count == null){
+									<xp:panel id="hviewitem" styleClass="hviewitem">
+										<xp:this.attrs>
+											<xp:attr name="unid"
+												value="#{javascript:if (requestScope.count == null){
 	requestScope.count = 1;
 }else{
 	requestScope.count = requestScope.count + 1;
 }
 rowData.getUniversalID()}">
-										</xp:attr>
-										<xp:attr name="onclick">
-											<xp:this.value><![CDATA[#{javascript:"openHViewDialog('" + compositeData.dialogxpage + "', '" + compositeData.sourcediv + "', '" + rowData.getUniversalID() + "')"}]]></xp:this.value>
-										</xp:attr>
-									</xp:this.attrs>
-									<xp:panel id="hviewicon">
-										<xp:this.styleClass><![CDATA[#{javascript:"hviewicon icon-" + rowData.getColumnValues().elementAt(4)}]]></xp:this.styleClass>
-										<xp:panel tagName="span"
-											id="badge1" styleClass="badge badge-favorite">
+											</xp:attr>
+											<xp:attr name="onclick">
+												<xp:this.value><![CDATA[#{javascript:"openHViewDialog('" + compositeData.dialogxpage + "', '" + compositeData.sourcediv + "', '" + rowData.getUniversalID() + "')"}]]></xp:this.value>
+											</xp:attr>
+										</xp:this.attrs>
+										<xp:panel id="hviewicon">
+											<xp:this.styleClass><![CDATA[#{javascript:"hviewicon icon-" + rowData.getColumnValues().elementAt(4)}]]></xp:this.styleClass>
+											<xp:panel tagName="span" id="badge1" styleClass="badge badge-favorite">
 
-											<xp:this.style><![CDATA[#{javascript:if(@IsMember(rowData.getUniversalID(), sessionScope.favorites)){
+												<xp:this.style><![CDATA[#{javascript:if(@IsMember(rowData.getUniversalID(), sessionScope.favorites)){
 	return "display: inline;";
 }else{
 	return "display: none;";
 }}]]></xp:this.style>
-										</xp:panel>
-										<xp:panel tagName="span"
-											id="badge2" styleClass="badge badge-downloaded">
-											<xp:this.rendered><![CDATA[#{javascript:if(@IsMember(rowData.getUniversalID(), sessionScope.downloaded)){
+											</xp:panel>
+											<xp:panel tagName="span" id="badge2" styleClass="badge badge-downloaded">
+												<xp:this.rendered><![CDATA[#{javascript:if(@IsMember(rowData.getUniversalID(), sessionScope.downloaded)){
 	return true;
 }else{
 	return false;
 }}]]></xp:this.rendered>
+											</xp:panel>
+											<xp:panel tagName="span" id="badge3"
+												styleClass="badge badge-downloading" rendered="false">
+											</xp:panel>
 										</xp:panel>
-										<xp:panel tagName="span"
-											id="badge3" styleClass="badge badge-downloading"
-											rendered="false">
-										</xp:panel>
-									</xp:panel>
 
-									<xp:text id="hviewtitle"
-										styleClass="hviewtitle">
-										<xp:this.value><![CDATA[#{javascript:rowData.getColumnValues().elementAt(1)}]]></xp:this.value>
-									</xp:text>
-								</xp:panel>
-							</xp:repeat>
-							<xp:panel id="hviewitemmore">
-								<xp:this.styleClass><![CDATA[#{javascript:"hviewitem loadmorebutton-" + @ReplaceSubstring(category, [" ", "~"], "-")}]]></xp:this.styleClass>
-								<xp:this.rendered><![CDATA[#{javascript:if (compositeData.favoritesonly == "yes"){
+										<xp:text id="hviewtitle" styleClass="hviewtitle">
+											<xp:this.value><![CDATA[#{javascript:rowData.getColumnValues().elementAt(1)}]]></xp:this.value>
+										</xp:text>
+									</xp:panel>
+								</xp:repeat>
+								<xp:panel id="hviewitemmore">
+									<xp:this.styleClass><![CDATA[#{javascript:"hviewitem loadmorebutton-" + @ReplaceSubstring(category, [" ", "~"], "-")}]]></xp:this.styleClass>
+									<xp:this.rendered><![CDATA[#{javascript:if (compositeData.favoritesonly == "yes"){
 	return false;
 }else{
 	return requestScope.count >= 5;
 }}]]></xp:this.rendered>
-								<span class="hviewtitle">
-									<xp:button value="Load More"
-										id="loadmorebutton" styleClass="hviewloadmorebutton">
-										<xp:this.attrs>
-											<xp:attr name="onclick">
-												<xp:this.value><![CDATA[#{javascript:"loadMoreHorizontal(this, '" + category + "', '" + compositeData.primaryview + "', '" + compositeData.filterview + "', '" + compositeData.dialogxpage + "', '" + compositeData.sourcediv + "')";}]]></xp:this.value>
-											</xp:attr>
-										</xp:this.attrs>
-									</xp:button>
-								</span>
+									<span class="hviewtitle">
+										<xp:button value="Load More" id="loadmorebutton"
+											styleClass="hviewloadmorebutton">
+											<xp:this.attrs>
+												<xp:attr name="onclick">
+													<xp:this.value><![CDATA[#{javascript:"loadMoreHorizontal(this, '" + category + "', '" + compositeData.primaryview + "', '" + compositeData.filterview + "', '" + compositeData.dialogxpage + "', '" + compositeData.sourcediv + "')";}]]></xp:this.value>
+												</xp:attr>
+											</xp:this.attrs>
+										</xp:button>
+									</span>
+								</xp:panel>
 							</xp:panel>
-						</xp:panel>
-					</div>
-				</xp:panel>
-				<xp:this.value><![CDATA[#{javascript:var out = $A(sessionScope.categorylist);
+						</div>
+					</xp:panel>
+					<xp:this.value><![CDATA[#{javascript:var out = $A(sessionScope.categorylist);
 try{
 	out = @Explode(out, ",");
 	for (var i=0; i<out.length; i++){
@@ -277,7 +265,8 @@ try{
 }catch(e){
 	return out;
 }}]]></xp:this.value>
-			</xp:repeat>
+				</xp:repeat>
+			</div>
 		</div>
 	</div>
 	<div id="hviewPopup" class="dialog" style=" display:none;">

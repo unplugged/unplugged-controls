@@ -101,9 +101,5 @@ sub-sub</editor-parameter>
       <small-icon>/icons/defaultLogoSmall.png</small-icon>
       <large-icon>/icons/defaultLogo.png</large-icon>
     </icon>
-    <property>
-      <property-name>computedmenuitems</property-name>
-      <property-class>object</property-class>
-    </property>
   </composite-component>
 </faces-config>
