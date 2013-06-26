@@ -1667,15 +1667,29 @@ span.title {
   padding-left: 5px;
   padding-top: 5px;
 }
+.hviewresults {
+  padding-left: 30px;
+  padding-top: 10px;
+}
 @media screen and (max-width: 1000px) {
-  
+  .hviewresults {
+    padding-left: 10px;
+    padding-top: 10px;
+  }
 }
 @media screen and (max-width: 700px) {
-  
+  .hviewresults {
+    padding-left: 10px;
+    padding-top: 10px;
+  }
 }
 @media screen and (max-width: 400px) {
   .tabfootertext {
     display: none !important;
+  }
+  .hviewresults {
+    padding-left: 5px;
+    padding-top: 10px;
   }
 }
 .hviewitem {

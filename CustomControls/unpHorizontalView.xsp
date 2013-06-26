@@ -45,7 +45,7 @@ if (filter != ""){
 return viewname;}]]></xp:this.viewName>
 		</xp:dominoView>
 	</xp:this.data>
-	<div id="results" style="padding-left: 20px; padding-top: 10px;">
+	<div id="results" class="hviewresults">
 		<div id="resultsinner">
 			<xp:panel id="hviewfilters" styleClass="hviewfilters">
 				<xp:this.rendered><![CDATA[#{javascript:compositeData.favoritesonly != "yes" && (sessionScope.urlquery == "" || sessionScope.urlquery == null)}]]></xp:this.rendered>
