@@ -292,16 +292,28 @@ function initDeleteable() {
 	}
 }
 
-var swipers;
+var swipers = null;
 function initHorizontalView(){
 	try{
+		if (swipers != null){
+			//We need to destroy the existing swipers and re-init
+			for (var i=0; i<swipers.length; i++){
+				swipers[i].destroy();
+			}
+		}
 		swipers = new Array();
 		$(".swiper-container").each(function(){
+			//First we need to re-size the swipe area
+			var items = $(this).find(".hviewitem").length;
+			$(this).find(".swiper-slide").width((items * 140));
+			//Now init the swiper
 			var mySwiper = $(this).swiper({
 				scrollContainer:true, 
 				freeMode: true,
-				freeModeFluid: true
+				freeModeFluid: true,
+				momentumBounce: true
 			});
+
 			swipers.push(mySwiper);
 		})
 	}catch(e){
@@ -625,6 +637,7 @@ function loadMoreHorizontal(button, category, primaryview, filterview, xpage, so
 	        }else{
 	        	$(".loadmorebutton-" + categoryrep).appendTo($('.swiper-slide-' + categoryrep));
 	        }
+	        initHorizontalView();
 	    }
 	});
 }
