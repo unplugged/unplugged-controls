@@ -29,13 +29,6 @@
 		}
 		}
 	</style>
-	<xp:this.resources>
-
-		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
-		<xp:script src="/unp/iScroll.min.js" clientSide="true"></xp:script>
-		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
-		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
-	</xp:this.resources>
 	<xp:panel styleClass="footer black">
 
 		<div id='tabfooter'>
@@ -145,9 +138,6 @@ if (rep == "01/01/70"){
 }else{
 	rep = timeSince(new Date(rep));
 }
-//if (rep != "(never)"){
-//	rep = @Left(@Trim(rep), @Trim(rep).length - 3);
-//}
 return "Updated " + rep;}]]></xp:this.value>
 		</xp:text>
 	</xp:panel>
