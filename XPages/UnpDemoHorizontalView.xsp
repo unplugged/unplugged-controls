@@ -16,7 +16,8 @@
 			label: "Business", hasSubMenu: true, subMenu: 
 			[
 				{label: "Business", ajaxloadid: "resultsinner", ajaxtargetid: "results", page: "/UnpDemoHorizontalViewBusiness.xsp"},
-				{label: "Sales", ajaxloadid: "results", ajaxtargetid: "results", page: "/UnpDemoHorizontalViewSales.xsp"}
+				{label: "Sales", ajaxloadid: "results", ajaxtargetid: "results", page: "/UnpDemoHorizontalViewSales.xsp"},
+				{label: "Disabled Item", ajaxloadid: "results", ajaxtargetid: "results", page: "", disabled: true} 
 			]
 		}, 
 		{

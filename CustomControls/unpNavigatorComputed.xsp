@@ -13,12 +13,20 @@
 			return compositeData.computedmenuitems;}]]></xp:this.value>
 
 					<!-- main options -->
-					<li>
-						<xp:link escape="true" text="#{javascript:menuItem.label}"
-							id="link1" value="#" disableTheme="true">
+					<xp:panel tagName="li">
+						<xp:this.styleClass><![CDATA[#{javascript:if (menuItem.disabled){
+	return "viewMenuItemDisabled";
+}else{
+	return "";
+}}]]></xp:this.styleClass>
+						<xp:link escape="true"
+							text="#{javascript:menuItem.label}" id="link1" value="#"
+							disableTheme="true">
 							<span class="chevron" />
 							<xp:this.attrs>
-								<xp:attr name="onClick" value="return false"></xp:attr>
+								<xp:attr name="onClick"
+									value="return false">
+								</xp:attr>
 							</xp:this.attrs>
 						</xp:link>
 
@@ -26,15 +34,23 @@
 						<xp:panel tagName="ul">
 							<xp:this.rendered><![CDATA[#{javascript:menuItem.hasSubMenu}]]></xp:this.rendered>
 
-							<xp:repeat id="repeat2" rows="30" var="subMenu1"
-								repeatControls="false" disableOutputTag="true"
+							<xp:repeat id="repeat2" rows="30"
+								var="subMenu1" repeatControls="false" disableOutputTag="true"
 								value="#{javascript:menuItem.subMenu}">
-								<li>
-									<xp:link escape="true" text="#{javascript:subMenu1.label}"
-										id="link2" value="#" disableTheme="true">
+								<xp:panel tagName="li">
+									<xp:this.styleClass><![CDATA[#{javascript:if (subMenu1.disabled){
+	return "viewMenuItemDisabled";
+}else{
+	return "";
+}}]]></xp:this.styleClass>
+									<xp:link escape="true"
+										text="#{javascript:subMenu1.label}" id="link2" value="#"
+										disableTheme="true">
 										<span class="chevron" />
 										<xp:this.attrs>
-											<xp:attr name="onClick" value="return false"></xp:attr>
+											<xp:attr name="onClick"
+												value="return false">
+											</xp:attr>
 										</xp:this.attrs>
 									</xp:link>
 
@@ -42,31 +58,40 @@
 									<xp:panel tagName="ul">
 										<xp:this.rendered><![CDATA[#{javascript:subMenu1.hasSubMenu}]]></xp:this.rendered>
 
-										<xp:repeat id="repeat3" rows="30" var="subMenu2"
-											repeatControls="false" disableOutputTag="true"
+										<xp:repeat id="repeat3"
+											rows="30" var="subMenu2" repeatControls="false"
+											disableOutputTag="true"
 											value="#{javascript:subMenu1.subMenu}">
-											<li>
-
-												<xp:link escape="true" text="#{javascript:subMenu2.label}"
-													id="link3" value="#" disableTheme="true">
-													<span class="chevron" />
+											<xp:panel tagName="li">
+												<xp:this.styleClass><![CDATA[#{javascript:if (subMenu2.disabled){
+	return "viewMenuItemDisabled";
+}else{
+	return "";
+}}]]></xp:this.styleClass>
+												<xp:link escape="true"
+													text="#{javascript:subMenu2.label}" id="link3" value="#"
+													disableTheme="true">
+													<span
+														class="chevron" />
 													<xp:this.attrs>
-														<xp:attr name="onclick">
+														<xp:attr
+															name="onclick"
+															rendered="#{javascript:!subMenu2.disabled}">
 															<xp:this.value><![CDATA[#{javascript:return "loadPage('" + getDbPath() + subMenu2.page + " #" + subMenu2.ajaxloadid + "', '" + subMenu2.ajaxtargetid + "', " + viewScope.menuItemIndex + "); return false;";}]]></xp:this.value>
 														</xp:attr>
 													</xp:this.attrs>
 												</xp:link>
-											</li>
+											</xp:panel>
 										</xp:repeat>
 
 									</xp:panel>
 
-								</li>
+								</xp:panel>
 							</xp:repeat>
 
 						</xp:panel>
 
-					</li>
+					</xp:panel>
 				</xp:repeat>
 
 			</ul>

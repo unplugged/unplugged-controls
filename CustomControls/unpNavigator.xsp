@@ -35,6 +35,9 @@ if (menuItem.submenu == "sub"){
 }else if(menuItem.submenu == "sub-sub"){
 	out += " viewMenuItemSubSub";
 }
+if (menuItem.disabled == "yes"){
+	out += " viewMenuItemDisabled"
+}
 return out;}]]></xp:this.styleClass>
 							<xp:this.attrs>
 								<xp:attr name="onclick">
@@ -47,6 +50,7 @@ return out;}]]></xp:this.styleClass>
 }else{
 	return "expandMenuItem(this)";
 }}]]></xp:this.value>
+									<xp:this.rendered><![CDATA[#{javascript:menuItem.disabled != "yes"}]]></xp:this.rendered>
 								</xp:attr>
 							</xp:this.attrs>
 							<xp:panel id="menulink" tagName="div"
