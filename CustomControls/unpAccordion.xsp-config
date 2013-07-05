@@ -109,5 +109,17 @@ No</editor-parameter>
         </designer-extension>
       </property-extension>
     </property>
+    <property>
+      <property-name>expandfirstcategory</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <editor-parameter>yes&#xd;
+no</editor-parameter>
+          <default-value>no</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
   </composite-component>
 </faces-config>
