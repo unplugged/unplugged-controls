@@ -73,6 +73,12 @@ the specific language governing permissions and limitations under the License
 		div.dBar button {
 			margin: 4px;
 		}
+		.debugbutton {
+			width: auto !important;
+			display: inline;
+			padding-left: 4px;
+			padding-right: 4px;
+		}
 		
 	</style>
 	
@@ -83,21 +89,21 @@ the specific language governing permissions and limitations under the License
 			
 			<div style="float:right">
 			
-				<xp:button value="remove" id="btnRemoveToolbar">
+				<xp:button value="remove" id="btnRemoveToolbar" styleClass="button debugbutton">
 					<xp:eventHandler immediate="true" event="onclick" submit="true"
 						refreshMode="complete">
 						<xp:this.action><![CDATA[#{javascript:dBar.setEnabled(false)}]]></xp:this.action>
 					</xp:eventHandler>
 				</xp:button>
 			
-				<xp:button id="btnCollapse" rendered="#{javascript:!dBar.isCollapsed()}">
+				<xp:button id="btnCollapse" rendered="#{javascript:!dBar.isCollapsed()}" styleClass="button debugbutton">
 					<xp:this.value><![CDATA[<]]></xp:this.value>
 					<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
 						<xp:this.action><![CDATA[#{javascript:dBar.setCollapsed(true);}]]></xp:this.action>
 					</xp:eventHandler>
 				</xp:button>
 				
-				<xp:button id="btnExpand" rendered="#{javascript:dBar.isCollapsed()}">
+				<xp:button id="btnExpand" rendered="#{javascript:dBar.isCollapsed()}" styleClass="button debugbutton">
 					<xp:this.value><![CDATA[>]]></xp:this.value>
 					<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
 						<xp:this.action><![CDATA[#{javascript:dBar.setCollapsed(false);}]]></xp:this.action>
@@ -117,7 +123,7 @@ the specific language governing permissions and limitations under the License
 				
 				<div class="content">
 				
-					<xp:button value="startpage" id="button2">
+					<xp:button value="startpage" id="button2" styleClass="button debugbutton">
 						<xp:eventHandler immediate="true" event="onclick" submit="true"
 							refreshMode="complete">
 							<xp:this.action>
@@ -126,13 +132,13 @@ the specific language governing permissions and limitations under the License
 						</xp:eventHandler>
 					</xp:button>
 					
-					<xp:button value="back" id="button5">
+					<xp:button value="back" id="button5" styleClass="button debugbutton">
 						<xp:eventHandler event="onclick" submit="false">
 							<xp:this.script><![CDATA[history.back();]]></xp:this.script>
 						</xp:eventHandler>
 					</xp:button>
 					
-					<xp:button value="workspace" id="button4">
+					<xp:button value="workspace" id="button4" styleClass="button debugbutton">
 						<xp:eventHandler immediate="true" event="onclick" submit="true"
 							refreshMode="complete">
 							<xp:this.action>
@@ -141,7 +147,7 @@ the specific language governing permissions and limitations under the License
 						</xp:eventHandler>
 					</xp:button>
 		
-					<xp:button value="reload" id="button7">
+					<xp:button value="reload" id="button7" styleClass="button debugbutton">
 						<xp:eventHandler immediate="true" event="onclick" submit="true"
 							refreshMode="complete">
 							<xp:this.action><![CDATA[#{javascript://context.reloadPage();		//not implemented	
@@ -149,7 +155,7 @@ the specific language governing permissions and limitations under the License
 						</xp:eventHandler>
 					</xp:button>
 					
-					<xp:button value="sync" id="button3">
+					<xp:button value="sync" id="button3" styleClass="button debugbutton">
 						<xp:eventHandler immediate="true" event="onclick" submit="true"
 							refreshMode="complete">
 		
@@ -175,7 +181,7 @@ the specific language governing permissions and limitations under the License
 				Messages
 			
 				<div style="float:right">
-					<xp:button value="clear" id="button1">
+					<xp:button value="clear" id="button1" styleClass="button debugbutton">
 						<xp:eventHandler immediate="true" event="onclick" submit="true"
 							refreshMode="partial" refreshId="dBar" execMode="partial" execId="dBar">
 							<xp:this.action><![CDATA[#{javascript:dBar.clearMessages()}]]></xp:this.action>
