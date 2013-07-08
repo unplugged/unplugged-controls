@@ -1,157 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-Copyright 2013 Teamstudio Inc 
-Licensed under the Apache License, Version 2.0 (the "License"); 
-you may not use this file except in compliance with the License. You may obtain a copy of the License at
-http://www.apache.org/licenses/LICENSE-2.0 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed 
-on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
-the specific language governing permissions and limitations under the License
- -->
+	<!--
+		Copyright 2013 Teamstudio Inc Licensed under the Apache License,
+		Version 2.0 (the "License"); you may not use this file except in
+		compliance with the License. You may obtain a copy of the License at
+		http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+		applicable law or agreed to in writing, software distributed under the
+		License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or implied. See the License for
+		the specific language governing permissions and limitations under the
+		License
+	-->
 
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom" xmlns:unp="http://unplugged.teamstudio.com">
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom"
+	xmlns:unp="http://unplugged.teamstudio.com">
 	<unp:unpScrollableArea>
 		<xp:this.facets>
-			<unp:unpFormViewer showbuttons="true"
-				closexpagename="UnpMain.xsp" editxpagename="DocumentEdit.xsp"
-				formname="MainTopic" title="Document" xp:key="facet_1"
-				newresponsexpagename="ResponseEdit.xsp"
-				dbName="teamstudio\\widgets\\teamroom.nsf">
-				<xp:this.facets>
-					<xp:panel xp:key="facet_1">
-						<ul class="fieldlist">
-							<li>
-								<xp:label value="Topic"
-									id="subjectlabel" for="subject">
-								</xp:label>
-								<xp:text id="subject"
-									value="#{document1.Subject}">
-								</xp:text>
-							</li>
-							<li>
-								<xp:label value="Document Type"
-									id="doctypelabel" for="doctype" styleClass="longlabel">
-								</xp:label>
-								<xp:text id="doctype"
-									value="#{document1.DocType}">
-								</xp:text>
-							</li>
-							<xp:panel tagName="li">
-								<xp:this.rendered><![CDATA[#{javascript:document1.getItemValueString("DocType") == "Action Item"}]]></xp:this.rendered>
-								<xp:label value="Priority"
-									id="aiprioritylabel" for="aipriority">
-								</xp:label>
-								<xp:text id="aipriority"
-									value="#{document1.AIPriority}">
-								</xp:text>
-							</xp:panel>
-							<li>
-								<xp:label value="Categories"
-									id="categorieslabel" for="categories">
-								</xp:label>
-								<xp:text id="categories"
-									value="#{document1.Categories}">
-								</xp:text>
-							</li>
-							<li>
-								<xp:label value="Associated Subteam(s)"
-									id="subteaminterestlabel" for="subteaminterest"
-									styleClass="longlabel">
-								</xp:label>
-								<xp:text id="subteaminterest"
-									value="#{document1.SubTeamInterest}">
-								</xp:text>
-							</li>
+			<xp:panel xp:key="facet_1">
+				<div class="panel left-aligned" style="margin: 5px;">
+					To view a document in a different database, you must
+					open the document directly.
+				</div>
 
-							<xp:panel tagName="li">
-								<xp:this.rendered><![CDATA[#{javascript:document1.getItemValueString("DocType") != "Meeting"}]]></xp:this.rendered>
-								<xp:label id="duedatelabel"
-									for="duedate" styleClass="longlabel">
-									<xp:this.value><![CDATA[#{javascript:if (document1.getItemValueString("DocType") == "Action Item"){
-	return "Due Date";
-}else{
-	return "Review By Date";
-}}]]></xp:this.value>
-								</xp:label>
-								<xp:text id="duedate"
-									value="#{document1.DueDate}">
-								</xp:text>
-							</xp:panel>
-							<xp:panel tagName="li">
-								<xp:this.rendered><![CDATA[#{javascript:document1.getItemValueString("DocType") == "Meeting"}]]></xp:this.rendered>
-								<xp:label for="mtgdate" value="Date">
-								</xp:label>
-								<xp:text id="mtgdate"
-									value="#{document1.MtgDate}">
-								</xp:text>
-							</xp:panel>
-							<xp:panel tagName="li">
-								<xp:this.rendered><![CDATA[#{javascript:document1.getItemValueString("DocType") == "Meeting"}]]></xp:this.rendered>
-								<xp:label for="mtgtime" value="Time"></xp:label>
-								<xp:text id="mtgtime"
-									value="#{document1.MtgTime}">
-									<xp:this.converter>
-										<xp:convertDateTime
-											type="time">
-										</xp:convertDateTime>
-									</xp:this.converter>
-								</xp:text>
-							</xp:panel>
-							<xp:panel tagName="li">
-								<xp:label for="duration"
-									value="Duration (mins)" styleClass="longlabel">
-								</xp:label>
-								<xp:text id="duration"
-									value="#{document1.Duration}">
-									<xp:this.converter>
-										<xp:convertNumber type="number"
-											integerOnly="true">
-										</xp:convertNumber>
-									</xp:this.converter>
-								</xp:text>
-							</xp:panel>
-							<xp:panel tagName="li">
-								<xp:label for="mtglocation"
-									value="Location">
-								</xp:label>
-								<xp:text id="mtglocation"
-									value="#{document1.MtgLocation}">
-								</xp:text>
-							</xp:panel>
-							<li>
-								<xp:label for="PriNameSelection"
-									value="Names">
-								</xp:label>
-								<xp:text id="PriNameSelection"
-									value="#{document1.PriNameSelection}">
-								</xp:text>
-							</li>
-							<li>
-								<xp:label for="SubTeam1"
-									value="Teams">
-								</xp:label>
-								<xp:text id="SubTeam1"
-									value="#{document1.SubTeam1}">
-								</xp:text>
-							</li>
-							<li>
-								<xp:text id="body"
-									value="#{document1.Body}" escape="false"
-									styleClass="body_richtext">
-								</xp:text>
-							</li>
-						</ul>
-
-						<unp:unpFlatView insetData="false"
-							numberofrows="999" refreshmethod="none"
-							categoryfilter="#{javascript:document1.getDocument().getUniversalID()}"
-							detailColumn="Date" summaryColumn="Topic" title="Responses"
-							viewName="(UnpDocumentsResponses)" xpageDoc="Response.xsp">
-						</unp:unpFlatView>
-
+				<div style="padding: 5px;">
+					<xp:panel id="closebutton" styleClass="button cancelbutton"
+						tagName="li">
+						<xp:this.attrs>
+							<xp:attr name="onclick">
+								<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='UnpDemoFlatViewDifferentDB.xsp';"}]]></xp:this.value>
+							</xp:attr>
+						</xp:this.attrs>
+						<span class="formbuttonlabel">Close</span>
 					</xp:panel>
-				</xp:this.facets>
-			</unp:unpFormViewer>
+
+				</div>
+			</xp:panel>
 		</xp:this.facets>
 	</unp:unpScrollableArea>
 </xp:view>
