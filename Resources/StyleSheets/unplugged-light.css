@@ -434,8 +434,14 @@ body {
     left: 12px;
     max-width: 122px;
   }
-  .title {
+  span.title {
+    margin-top: 12px;
+    /*margin-right: 100px;*/
+  
     width: 300px;
+  }
+  li.title {
+  	margin-top: 12px;
   }
 }
 @media screen and (min-width: 701px) {
@@ -449,13 +455,20 @@ body {
   .companyLogo {
     display: none;
   }
-  .title {
+  span.title {
+    /*margin-top: 14px;*/
+  
+    /*margin-right: 120px;*/
+  
     position: absolute;
     left: 100px;
     right: 100px;
     margin-left: auto !important;
     margin-right: auto !important;
-    top: 14px;
+    top: 0px;
+  }
+  li.title {
+  	margin-top: 14px;
   }
   .workspace .title {
     margin-right: 0;
@@ -488,13 +501,25 @@ body {
   .iHeader {
     height: 45px;
   }
-  .title {
+  span.title {
     position: absolute;
     top: 0px;
     left: 70px;
     right: 70px;
     margin-left: auto;
     margin-right: auto;
+    font-size: 16px;
+    margin-top: 10px;
+    /*margin-right: 65px;
+    		margin-left:  30px;*/
+  
+    text-overflow: ellipsis;
+    text-align: center;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  li.title{
     font-size: 16px;
     margin-top: 10px;
     /*margin-right: 65px;
@@ -1082,7 +1107,7 @@ to {
   display: block;
   font-size: 16px;
   padding-left: 2%;
-  right: 7%;
+  
   line-height: 24px;
   height: 44px;
   background: #fff;
