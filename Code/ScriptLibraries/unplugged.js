@@ -57,6 +57,12 @@ $(window)
 					}catch(e){
 						
 					}
+					try{
+						FastClick.attach(document.body);
+					}catch(e){
+						
+					}
+					
 					initHorizontalView();
 					initDeleteable();
 					initAutoComplete();

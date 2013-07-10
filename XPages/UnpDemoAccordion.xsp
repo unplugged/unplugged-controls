@@ -15,6 +15,7 @@ the specific language governing permissions and limitations under the License
 
 	<xp:this.resources>
 		<xp:script src="unp/jquery-2.0.3.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/fastclick.js" clientSide="true"></xp:script>
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
 	</xp:this.resources>

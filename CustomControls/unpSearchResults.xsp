@@ -102,11 +102,4 @@ else {return true;}}]]></xp:this.rendered>
 		</xp:panel>
 	</div>
 
-	<!--
-		<script type="text/javascript" src="unp/jquery-2.0.3.min.js"></script>
-		<script type="text/javascript"
-		src="unp/jquery.blockUI.min.js"></script> <script
-		type="text/javascript" src="unpViewGetMore.min.js"></script>
-	-->
-
 </xp:view>
