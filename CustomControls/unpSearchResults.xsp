@@ -103,7 +103,7 @@ else {return true;}}]]></xp:this.rendered>
 	</div>
 
 	<!--
-		<script type="text/javascript" src="unp/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="unp/jquery-2.0.3.min.js"></script>
 		<script type="text/javascript"
 		src="unp/jquery.blockUI.min.js"></script> <script
 		type="text/javascript" src="unpViewGetMore.min.js"></script>

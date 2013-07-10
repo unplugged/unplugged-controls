@@ -14,7 +14,7 @@ the specific language governing permissions and limitations under the License
 	xmlns:unp="http://unplugged.teamstudio.com">
 
 	<xp:this.resources>
-		<xp:script src="unp/jquery-1.7.2.min.js" clientSide="true"></xp:script>
+		<xp:script src="unp/jquery-2.0.3.min.js" clientSide="true"></xp:script>
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
 	</xp:this.resources>
