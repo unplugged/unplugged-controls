@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:unp="http://unplugged.teamstudio.com">
+	<xp:this.data>
+		<xp:dominoDocument var="document1" formName="Document"
+			action="openDocument">
+		</xp:dominoDocument>
+	</xp:this.data>
+	<xp:this.resources>
+		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
+	</xp:this.resources>
+	<xp:this.beforeRenderResponse><![CDATA[#{javascript:try{
+	if (context.getUrlParameter("favorite") == "toggle"){
+		var unid = context.getUrlParameter("documentId");
+		var favorites =getFavorites();
+		if (@IsMember(unid, favorites)){
+			var newfavorites = new Array();
+			for (var i=0; i<favorites.length; i++){
+				if (favorites[i] != unid){
+					newfavorites.push(favorites[i]);
+				}
+			}
+			setFavorites(newfavorites);
+		}else{
+			favorites.push(unid);
+			setFavorites(favorites);
+		}
+	}
+}catch(e){
+}}]]></xp:this.beforeRenderResponse>
+
+	<div id="results">
+		<div id="hviewitemheader">
+			<div class="hviewclosebutton" onclick="closeDialog('hviewPopup')">
+				&#160; </div>
+			<xp:panel id="hviewicon">
+				<xp:this.styleClass><![CDATA[#{javascript:"hviewicon icon-" + @Right(document1.getItemValueString("attachmentname"), ".")}]]></xp:this.styleClass>
+				<xp:panel tagName="span" id="badge1" styleClass="badge badge-favorite"
+					rendered="#{javascript:@IsMember(document1.getDocument().getUniversalID(), getFavorites());}">
+				</xp:panel>
+				<xp:panel tagName="span" id="badge2" styleClass="badge badge-downloaded"
+					rendered="#{javascript:@IsMember(document1.getDocument().getUniversalID(), getDownloaded());}">
+				</xp:panel>
+				<xp:panel tagName="span" id="badge3" styleClass="badge badge-downloading"
+					rendered="false">
+				</xp:panel>
+			</xp:panel>
+			<div id="hviewmetadata">
+				<xp:text escape="true" id="metatitle" value="#{document1.title}"
+					styleClass="hviewmetatitle">
+				</xp:text>
+				<div
+					style="float: right; position: relative; top: 20px; margin-right: -24px;">
+					<xp:text escape="true" id="filesize" styleClass="hviewmetafield">
+						<xp:this.value><![CDATA[#{javascript:(document1.getItemValue("AttachmentSize").elementAt(0) / 1024)}]]></xp:this.value>
+						<xp:this.converter>
+							<xp:convertNumber pattern="#,##0"></xp:convertNumber>
+						</xp:this.converter>
+					</xp:text>
+					kb
+				</div>
+				<div>
+					Released&#160;
+					<xp:text escape="true" id="datecreated" value="#{document1.datecreated}"
+						styleClass="hviewmetafield">
+						<xp:this.converter>
+							<xp:convertDateTime type="date"></xp:convertDateTime>
+						</xp:this.converter>
+					</xp:text>
+				</div>
+				<div style="float: right;">
+					<xp:text escape="true" id="filetype" styleClass="hviewmetafield">
+						<xp:this.value><![CDATA[#{javascript:@UpperCase(@Right(document1.getItemValueString("attachmentname"), "."))}]]></xp:this.value>
+					</xp:text>
+				</div>
+				<div>
+					Created By&#160;
+					<xp:text escape="true" id="createdby" styleClass="hviewmetafield">
+						<xp:this.value><![CDATA[#{javascript:@Name("[CN]", document1.getItemValueString("Createdby"))}]]></xp:this.value>
+					</xp:text>
+				</div>
+			</div>
+		</div>
+		<div id="hviewitembody">
+			<div id="hviewdialogbuttons">
+				<xp:text tagName="button" styleClass="button downloadnowbutton"
+					id="downloadnowbutton" escape="false">
+					<xp:this.attrs>
+						<xp:attr name="type" value="button"></xp:attr>
+						<xp:attr name="onclick">
+							<xp:this.value><![CDATA[#{javascript:"hviewDownloadNow('" + document1.getDocument().getUniversalID() + "')"}]]></xp:this.value>
+						</xp:attr>
+					</xp:this.attrs>
+					<xp:this.value><![CDATA[#{javascript:"<img src=\"unp/icon-button-download.png\" /> Download Now"}]]></xp:this.value>
+				</xp:text>
+				<xp:text tagName="div" id="timetodownload" styleClass="timetodownload">
+
+					<xp:this.value><![CDATA[#{javascript:var size = document1.getItemValue("AttachmentSize").elementAt(0);
+if (size < 7000000){
+	return "Less than a minute in WiFi";
+}else{
+	var speed = 1024000;
+	var mult = 8000;
+	var overhead = 1;
+	var time = ((overhead * size * mult) / speed) / 1000 / 60; 
+	return "Approx " + @Round(time) + " minutes to download in WiFi";
+}}]]></xp:this.value>
+				</xp:text>
+				<xp:text tagName="button" styleClass="button downloadnowbutton"
+					id="downloadlaterbutton" escape="false">
+					<xp:this.attrs>
+						<xp:attr name="type" value="button"></xp:attr>
+						<xp:attr name="onclick">
+							<xp:this.value><![CDATA[#{javascript:"hviewDownloadLater('" + document1.getDocument().getUniversalID() + "')"}]]></xp:this.value>
+						</xp:attr>
+					</xp:this.attrs>
+					<xp:this.value><![CDATA[#{javascript:"<img src=\"unp/icon-button-sync.png\" /> Download during next Sync"}]]></xp:this.value>
+				</xp:text>
+
+				<xp:text tagName="button" styleClass="button emailfilebutton"
+					id="emailfilebutton" escape="false">
+					<xp:this.attrs>
+						<xp:attr name="type" value="button"></xp:attr>
+						<xp:attr name="onclick">
+							<xp:this.value><![CDATA[#{javascript:"hviewEmail('" + getCurrentXPage() + "', '" + document1.getDocument().getUniversalID() + "')"}]]></xp:this.value>
+						</xp:attr>
+					</xp:this.attrs>
+					<xp:this.value><![CDATA[#{javascript:"<img src=\"unp/icon-button-mail.png\" /> Email"}]]></xp:this.value>
+				</xp:text>
+
+				<xp:text tagName="button" styleClass="button togglefavorite"
+					id="togglefavorite" escape="false">
+					<xp:this.attrs>
+						<xp:attr name="type" value="button"></xp:attr>
+						<xp:attr name="onclick">
+							<xp:this.value><![CDATA[#{javascript:"hviewFavourite('" + getCurrentXPage() + "', '" + document1.getDocument().getUniversalID() + "')"}]]></xp:this.value>
+						</xp:attr>
+					</xp:this.attrs>
+					<xp:this.value><![CDATA[#{javascript:"<img src=\"unp/icon-button-favorite.png\" /> Mark as Favorite"}]]></xp:this.value>
+				</xp:text>
+			</div>
+
+			<div id="emailholder" styleClass="emailholder" style="display: none;">
+				<input id="emailaddress" name="emailaddress" value=""
+					placeholder="Enter email address..." />
+				<xp:text tagName="button" styleClass="button emailsendbutton"
+					id="sendemail" escape="false">
+					<xp:this.attrs>
+						<xp:attr name="type" value="button"></xp:attr>
+						<xp:attr name="onclick">
+							<xp:this.value><![CDATA[#{javascript:"hviewEmailSend('" + getCurrentXPage() + "', '" + document1.getDocument().getUniversalID() + "')"}]]></xp:this.value>
+						</xp:attr>
+					</xp:this.attrs>
+					<xp:this.value><![CDATA[#{javascript:"<img src=\"unp/icon-button-mail.png\" /> Send"}]]></xp:this.value>
+				</xp:text>
+				<xp:text tagName="button" styleClass="button emailcancelbutton"
+					id="cancelemail" escape="false">
+					<xp:this.attrs>
+						<xp:attr name="type" value="button"></xp:attr>
+						<xp:attr name="onclick">
+							<xp:this.value><![CDATA[#{javascript:"hviewEmailCancel('" + getCurrentXPage() + "', '" + document1.getDocument().getUniversalID() + "')"}]]></xp:this.value>
+						</xp:attr>
+					</xp:this.attrs>
+					<xp:this.value><![CDATA[#{javascript:"Cancel"}]]></xp:this.value>
+				</xp:text>
+			</div>
+
+		</div>
+	</div>
+</xp:view>

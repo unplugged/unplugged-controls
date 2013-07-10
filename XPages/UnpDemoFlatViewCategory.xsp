@@ -24,7 +24,7 @@ the specific language governing permissions and limitations under the License
 				<unp:unpFlatView insetData="true" detailColumn="DOB"
 					summaryColumn="Name" title="Finance Employees" xp:key="facet_1"
 					categoryfilter="Finances" viewName="EmployeesCatByDept"
-					xpageDoc="UnpDemoEmployee.xsp" numberofrows="20">
+					xpageDoc="EmployeeFlatViewCategory.xsp" numberofrows="20">
 				</unp:unpFlatView>
 			</xp:this.facets>
 		</unp:unpScrollableArea>

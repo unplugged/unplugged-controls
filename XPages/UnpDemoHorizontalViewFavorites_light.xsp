@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:unp="http://unplugged.teamstudio.com">
+
+	<xp:this.resources>
+		<xp:styleSheet href="/unplugged-light.css"></xp:styleSheet>
+	</xp:this.resources>
+	<unp:unpHeader search="none" searchPage="UnpSearch.xsp"
+		viewsButton="false" headerHomeLink="/UnpMain.xsp" title="Horizontal View"
+		appVersion="v1.6.0" appDescription="Horizontal Viewer">
+	</unp:unpHeader>
+	<div id="content" class="pullleft">
+		<unp:unpScrollableArea>
+			<xp:this.facets>
+				<unp:unpHorizontalView xp:key="facet_1"
+					dialogxpage="UnpDemoHorizontalViewDialog" sourcediv="results"
+					primaryview="Documents" filterview="Documents Filter"
+					toplevelcategory="All" favoritesonly="yes" title="Favorites" subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque arcu tellus, ullamcorper et tortor commodo, volutpat facilisis arcu. Donec eleifend nisl sed erat scelerisque sollicitudin.">
+				</unp:unpHorizontalView>
+			</xp:this.facets>
+		</unp:unpScrollableArea>
+	</div>
+	<unp:unpTabbedFooter synctype="alldbs">
+		<unp:this.tab>
+			<unp:tab label="Library" page="/UnpDemoHorizontalView_light.xsp"
+				icon="unp/icon-library.png" iconselected="unp/icon-library.png">
+			</unp:tab>
+			<unp:tab label="Favorites" page="/UnpDemoHorizontalViewFavorites_light.xsp"
+				icon="unp/icon-favorite.png" iconselected="unp/icon-favorite.png">
+			</unp:tab>
+		</unp:this.tab>
+	</unp:unpTabbedFooter>
+</xp:view>

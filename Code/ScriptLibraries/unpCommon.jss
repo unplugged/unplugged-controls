@@ -74,3 +74,62 @@ function isEmpty( input ) {
 	}
 	return false;
 }
+
+function timeSince(datetime){
+	var seconds = Math.floor((new Date() - date) / 1000);
+
+    var interval = Math.floor(seconds / 31536000);
+
+    if (interval > 1) {
+        return interval + " years ago";
+    }
+    interval = Math.floor(seconds / 2592000);
+    if (interval > 1) {
+        return interval + " months ago";
+    }
+    interval = Math.floor(seconds / 86400);
+    if (interval > 1) {
+        return interval + " days ago";
+    }
+    interval = Math.floor(seconds / 3600);
+    if (interval > 1) {
+        return interval + " hours ago";
+    }
+    interval = Math.floor(seconds / 60);
+    if (interval > 1) {
+        return interval + " minutes ago";
+    }
+    if (interval == 1){
+    	return interval + " minute ago";	
+    }
+    return "less than a minute ago";
+}
+
+function getFavorites(){
+	var favorites = session.getEnvironmentString("ro.favorites." + @LowerCase(@ReplaceSubstring(database.getFilePath(), "\\", "")), true) + ",";
+	if (favorites == null || favorites == ""){
+		return new Array();
+	}else if(favorites.indexOf(",") > -1){
+		return $A(favorites.split(","));
+	}else{
+		return $A(favorites);
+	}
+}
+function setFavorites(favoritesarray){
+	session.setEnvironmentVar("ro.favorites." + @LowerCase(@ReplaceSubstring(database.getFilePath(), "\\", "")), @Implode(@Trim(favoritesarray), ","), true);
+	sessionScope.favorites = null;
+}
+function getDownloaded(){
+	var downloaded = session.getEnvironmentString("ro.downloaded." + @LowerCase(@ReplaceSubstring(database.getFilePath(), "\\", "")), true);
+	if (downloaded == null || downloaded == ""){
+		return new Array();
+	}else if(downloaded.indexOf(",") > -1){
+		return downloaded.split(",");
+	}else{
+		return [downloaded];
+	}
+}
+function setDownloaded(downloadedarray){
+	session.setEnvironmentVar("ro.downloaded." + @LowerCase(@ReplaceSubstring(database.getFilePath(), "\\", "")), @Implode(@Trim(downloadedarray), ","), true);
+	sessionScope.downloaded = null;
+}

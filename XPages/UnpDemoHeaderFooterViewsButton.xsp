@@ -14,7 +14,7 @@ the specific language governing permissions and limitations under the License
 	<xp:this.resources>
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 	</xp:this.resources>
-	<unp:unpHeader title="Header / Footer Demo" search="local" headerHomeLink="/UnpMain.xsp"
+	<unp:unpHeader title="Header/Footer" search="local" headerHomeLink="/UnpMain.xsp"
 		searchPage="" viewsButton="true" backButtonText="" backButtonURL="">
 	</unp:unpHeader>
 

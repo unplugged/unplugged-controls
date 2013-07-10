@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:unp="http://unplugged.teamstudio.com">
+
+
+	<unp:unpScrollableArea>
+		<xp:this.facets>
+			<unp:unpHorizontalView xp:key="facet_1"
+				dialogxpage="UnpDemoHorizontalViewDialog" sourcediv="results"
+				primaryview="Documents"
+				filterview="Documents Filter"
+				toplevelcategory="economy"
+				 title="Economy" subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque arcu tellus, ullamcorper et tortor commodo, volutpat facilisis arcu. Donec eleifend nisl sed erat scelerisque sollicitudin.">
+			</unp:unpHorizontalView>
+		</xp:this.facets>
+	</unp:unpScrollableArea>
+
+</xp:view>

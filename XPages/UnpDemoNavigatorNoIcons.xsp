@@ -57,7 +57,7 @@ the specific language governing permissions and limitations under the License
 			</unp:menuItem>
 		</unp:this.menuItem>
 	</unp:unpNavigator>
-	<div id="results" style="padding-top:10px;padding-left: 5px;padding-right: 5px;">
+	<div id="results" style="padding-top:10px;padding-left: 15px;padding-right: 10px;">
 		<div id="newcontent">
 			<unp:unpScrollableArea>
 				<xp:this.facets>

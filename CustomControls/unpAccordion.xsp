@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-Copyright 2013 Teamstudio Inc 
-Licensed under the Apache License, Version 2.0 (the "License"); 
-you may not use this file except in compliance with the License. You may obtain a copy of the License at
-http://www.apache.org/licenses/LICENSE-2.0 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed 
-on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
-the specific language governing permissions and limitations under the License
- -->
+	<!--
+		Copyright 2013 Teamstudio Inc Licensed under the Apache License,
+		Version 2.0 (the "License"); you may not use this file except in
+		compliance with the License. You may obtain a copy of the License at
+		http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+		applicable law or agreed to in writing, software distributed under the
+		License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or implied. See the License for
+		the specific language governing permissions and limitations under the
+		License
+	-->
 
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core">
 	<xp:this.beforePageLoad>
@@ -26,7 +28,7 @@ sessionScope.put('ajaxLoad', compositeData.ajaxload);}]]></xp:this.script>
 	</xp:this.resources>
 
 	<xp:panel>
-	<xp:this.styleClass><![CDATA[#{javascript:var out = new Array();
+		<xp:this.styleClass><![CDATA[#{javascript:var out = new Array();
 if(compositeData.insetData) {
 	out.push("bordered");
 }
@@ -36,8 +38,8 @@ if (compositeData.position == "left-aligned"){
 if (out.length > 0){
 	return @Implode(out, " ");
 }}]]>
-			</xp:this.styleClass>
-		
+		</xp:this.styleClass>
+
 		<ul id="summaryList">
 			<xp:repeat id="repeat2" rows="999" var="rowData"
 				disableOutputTag="true">
@@ -54,13 +56,12 @@ return list;}]]></xp:this.value>
 							<xp:this.value><![CDATA[#{javascript:"fetchDetails(this,'" + @ReplaceSubstring(compositeData.viewName, "\\","\\\\") + "','" + rowData + "', '" + compositeData.xpage + "', '" + compositeData.dbName + "')"}]]></xp:this.value>
 						</xp:attr>
 					</xp:this.attrs>
-					<xp:text escape="true" id="computedField2"
-						value="#{rowData}" styleClass="catLabel">
+					<xp:text escape="true" id="computedField2" value="#{rowData}"
+						styleClass="catLabel">
 					</xp:text>
 				</xp:panel>
 				<div class="summaryDataRow">
-					<xp:panel tagName="ul"
-						style="padding:0px; margin: 0px;">
+					<xp:panel tagName="ul" style="padding:0px; margin: 0px;">
 
 						<xp:this.styleClass><![CDATA[#{javascript:if (viewScope.rowcount == null){
 	viewScope.rowcount = 1;
@@ -74,10 +75,9 @@ if (viewScope.rowcount == viewScope.categorycount){
 return out;}]]></xp:this.styleClass>
 					</xp:panel>
 					<div class="summaryDataRowHolder"></div>
-					<xp:div id="accLoadmorelink"
-						styleClass="accLoadMoreLink hidden">
-						<xp:button value="Load More..."
-							id="accLoadmorebutton" styleClass="accLoadMoreButton">
+					<xp:div id="accLoadmorelink" styleClass="accLoadMoreLink hidden">
+						<xp:button value="Load More..." id="accLoadmorebutton"
+							styleClass="accLoadMoreButton">
 							<xp:this.attrs>
 								<xp:attr name="onclick">
 									<xp:this.value><![CDATA[#{javascript:"fetchMoreDetails(this,'" + @ReplaceSubstring(compositeData.viewName, "\\","\\\\") + "','" + rowData + "', '" + compositeData.xpage + "', '" + compositeData.dbName + "');"}]]></xp:this.value>
@@ -86,6 +86,12 @@ return out;}]]></xp:this.styleClass>
 						</xp:button>
 					</xp:div>
 				</div>
+				<xp:text tagName="script" escape="false">
+					<xp:this.rendered><![CDATA[#{javascript:compositeData.expandfirstcategory == "yes" && viewScope.rowcount == 1}]]></xp:this.rendered>
+					<xp:this.value><![CDATA[#{javascript:"$(document).ready(function() {" + 
+"fetchDetails($('.categoryRow').first(),'" + @ReplaceSubstring(compositeData.viewName, "\\","\\\\") + "','" + rowData + "', '" + compositeData.xpage + "', '" + compositeData.dbName + "')" + 
+"});"}]]></xp:this.value>
+				</xp:text>
 			</xp:repeat>
 		</ul>
 	</xp:panel>

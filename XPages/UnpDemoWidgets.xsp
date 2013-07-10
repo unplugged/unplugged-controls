@@ -27,27 +27,32 @@
 			<unp:menuItem label="Employees" page="/UnpDemoWidgets.xsp"
 				ajaxtargetid="content" ajaxloadid="contentwrapper">
 			</unp:menuItem>
-			<unp:menuItem label="Employees (Partial)"
-				ajaxtargetid="content" ajaxloadid="contentwrapper">
-				<unp:this.page><![CDATA[#{javascript:"/UnpDemoWidgetsEmployees.xsp"}]]></unp:this.page>
+			<unp:menuItem label="Employees (Partial no icons)"
+				page="/UnpDemoWidgetsEmployeesNoIcons.xsp" ajaxtargetid="content"
+				ajaxloadid="contentwrapper">
 			</unp:menuItem>
-			<unp:menuItem label="Employees (Partial no icons)" page="/UnpDemoWidgetsEmployeesNoIcons.xsp"
-				ajaxtargetid="content" ajaxloadid="contentwrapper">
+			<unp:menuItem ajaxloadid="contentwrapper" disabled="yes"
+				ajaxtargetid="content" submenu="no" label="Disabled Menu Item">
 			</unp:menuItem>
-			<unp:menuItem label="Employees By Department" page="/UnpDemoWidgetsByDept.xsp"
-				ajaxtargetid="content" ajaxloadid="contentwrapper">
+			<unp:menuItem label="Employees By Department"
+				page="/UnpDemoWidgetsByDept.xsp" ajaxtargetid="content"
+				ajaxloadid="contentwrapper">
 			</unp:menuItem>
-			<unp:menuItem label="By Department (collapsed)" page="/UnpDemoWidgetsExpanding.xsp"
-				ajaxtargetid="content" ajaxloadid="contentwrapper">
+			<unp:menuItem label="By Department (collapsed)"
+				page="/UnpDemoWidgetsExpanding.xsp" ajaxtargetid="content"
+				ajaxloadid="contentwrapper">
 			</unp:menuItem>
-			<unp:menuItem label="Employees in Finances" page="/UnpDemoWidgetsByDeptFinances.xsp"
-				ajaxtargetid="content" ajaxloadid="allcontent">
+			<unp:menuItem label="Employees in Finances"
+				page="/UnpDemoWidgetsByDeptFinances.xsp" ajaxtargetid="content"
+				ajaxloadid="allcontent">
 			</unp:menuItem>
-			<unp:menuItem label="Employees By Country" page="/UnpDemoWidgetsByCountry.xsp"
-				ajaxtargetid="content" ajaxloadid="contentwrapper">
+			<unp:menuItem label="Employees By Country"
+				page="/UnpDemoWidgetsByCountry.xsp" ajaxtargetid="content"
+				ajaxloadid="contentwrapper">
 			</unp:menuItem>
-			<unp:menuItem label="Employees By Year" page="/UnpDemoWidgetsByYear.xsp"
-				ajaxtargetid="content" ajaxloadid="contentwrapper">
+			<unp:menuItem label="Employees By Year"
+				page="/UnpDemoWidgetsByYear.xsp" ajaxtargetid="content"
+				ajaxloadid="contentwrapper">
 			</unp:menuItem>
 		</unp:this.menuItem>
 	</unp:unpNavigator>

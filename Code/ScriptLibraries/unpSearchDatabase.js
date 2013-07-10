@@ -9,11 +9,30 @@
  */
 
 $(document).ready(function() {
+	$('#input-search').bind('focus', function() {
+		if ($(window).width() > 700){
+			$('.input-search-frame').width(180);
+			$(".title.opendialoglink").fadeTo(0.2, 0.1);
+		}
+	});
+	$('#input-search').bind('blur', function() {
+		if ($(window).width() > 700){
+			if ($('#input-search').val() == "") {
+				$('.input-search-frame').width(100);
+				$(".title.opendialoglink").fadeTo(0.2, 1.0);
+			}
+		}
+	});
 	$('#input-search').keypress( function(e) {
 		if(e.keyCode==13){
 			event.preventDefault();
 			var searchterm = $('#input-search').val();
-			openDocument(searchPage + "?query=" + escape(searchterm.toLowerCase()), 'content');
+			var attr = $('#input-search').attr('targetelement');
+			var target = "content";
+			if (typeof attr !== 'undefined' && attr !== false) {
+			    target = attr;
+			}
+			openDocument(searchPage + "?query=" + escape(searchterm.toLowerCase()), target);
 			$(this).blur();
 			$(".searchButton").focus();
 		}

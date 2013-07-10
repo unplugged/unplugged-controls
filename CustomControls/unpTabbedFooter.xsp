@@ -29,14 +29,8 @@
 		}
 		}
 	</style>
-	<xp:this.resources>
-
-		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
-		<xp:script src="/unp/iScroll.min.js" clientSide="true"></xp:script>
-		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
-		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
-	</xp:this.resources>
 	<xp:panel styleClass="footer black">
+
 		<div id='tabfooter'>
 			<ul id="footerTabBar">
 				<xp:repeat id="repeat1" rows="30" disableOutputTag="true"
@@ -72,7 +66,7 @@ return "background:  url('" + menuItem.icon + "') 50% 0% no-repeat; padding-top:
 	return menuItem.icon;
 }}]]></xp:this.url>
 						</xp:image>
-						<br/>
+						<br />
 						<xp:text id="menutext" styleClass="footerTabtext"
 							value="#{javascript:menuItem.label;}">
 						</xp:text>
@@ -81,5 +75,70 @@ return "background:  url('" + menuItem.icon + "') 50% 0% no-repeat; padding-top:
 				</xp:repeat>
 			</ul>
 		</div>
+		<xp:link id="link1" styleClass="syncButton" value="#">
+			<xp:this.rendered><![CDATA[#{javascript:isUnpluggedServer() && compositeData.synctype == "currentdb";}]]></xp:this.rendered>
+			<xp:eventHandler event="onclick" submit="true"
+				refreshMode="complete">
+				<xp:this.action>
+					<xp:actionGroup>
+
+						<xp:executeScript>
+							<xp:this.script><![CDATA[#{javascript:db = session.getCurrentDatabase();
+var date = new Date();
+session.setEnvironmentVar("ro.last.sync." + @LowerCase(@ReplaceSubstring(db.getFilePath(), "\\", "")), @Text(date.getTime()), true);
+db.replicate("someserver");}]]></xp:this.script>
+						</xp:executeScript>
+						<xp:openPage name="/UnpMain.xsp" target="openDocument">
+						</xp:openPage>
+					</xp:actionGroup>
+				</xp:this.action>
+				<xp:this.script><![CDATA[$.blockUI();]]></xp:this.script>
+			</xp:eventHandler>
+			<span class="synclabel">Sync</span>
+		</xp:link>
+		<xp:link id="link2" styleClass="syncButton" value="#">
+			<xp:this.rendered><![CDATA[#{javascript:isUnpluggedServer() && compositeData.synctype == "alldbs";}]]></xp:this.rendered>
+			<span class="synclabel">Sync</span>
+			<xp:eventHandler event="onclick" submit="false">
+				<xp:this.script><![CDATA[syncAllDbs()]]></xp:this.script>
+			</xp:eventHandler>
+		</xp:link>
+
+		<xp:text rendered="#{javascript:isUnpluggedServer()}"
+			styleClass="tabfootertext">
+			<xp:this.value><![CDATA[#{javascript:var dbrep = session.getEnvironmentString("ro.last.sync." + @LowerCase(@ReplaceSubstring(database.getFilePath(), "\\", "/")), true);
+var rep = session.getEnvironmentString("ro.last.sync", true); 
+if ("" == rep) {
+	rep = session.getEnvironmentString("ro.last.replicate", true); 
+} 
+if ("" ==	rep) { 
+	rep = "(never)"; 
+} else {
+	if (dbrep != ""){
+		try{
+			var irep = parseInt(rep);
+			var idbrep = parseInt(dbrep);
+			if (idbrep > irep){
+				rep = dbrep;
+			}
+		}catch(e){
+			//rep = "localdate " + e;
+		}
+	}
+	try { 
+		var date = new Date(parseInt(rep)); 
+		rep = @Text(date);
+		rep = @Left(@Trim(rep), @Trim(rep).length - 3); 
+	} catch (e) {
+		//rep = "dateparse " + e;
+	} 
+} 
+if (rep == "01/01/70"){
+	rep = "(never)";
+}else{
+	rep = timeSince(new Date(rep));
+}
+return "Updated " + rep;}]]></xp:this.value>
+		</xp:text>
 	</xp:panel>
 </xp:view>

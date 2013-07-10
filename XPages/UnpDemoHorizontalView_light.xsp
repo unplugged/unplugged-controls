@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:unp="http://unplugged.teamstudio.com">
+
+	<xp:this.resources>
+		<!-- <xp:styleSheet href="/unplugged-light.css"></xp:styleSheet> -->
+		<xp:styleSheet href="/unplugged-light.css"></xp:styleSheet>
+	</xp:this.resources>
+	<unp:unpHeader search="database" searchPage="UnpDemoHorizontalViewSearch.xsp"
+		viewsButton="true" headerHomeLink="/UnpMain.xsp" title="Horizontal View"
+		appVersion="v1.6.0" appDescription="Horizontal Viewer">
+	</unp:unpHeader>
+	<unp:unpNavigator>
+		<unp:this.menuItem>
+			<unp:menuItem label="Business and Economy">
+			</unp:menuItem>
+			<unp:menuItem label="Business" submenu="sub">
+			</unp:menuItem>
+			<unp:menuItem ajaxloadid="results" ajaxtargetid="results"
+				submenu="sub-sub" label="Business" page="/UnpDemoHorizontalViewBusiness.xsp">
+			</unp:menuItem>
+			<unp:menuItem ajaxloadid="results" ajaxtargetid="results"
+				submenu="sub-sub" label="Sales" page="/UnpDemoHorizontalViewSales.xsp">
+			</unp:menuItem>
+			<unp:menuItem label="Economy" submenu="sub">
+			</unp:menuItem>
+			<unp:menuItem ajaxloadid="results" ajaxtargetid="results"
+				submenu="sub-sub" label="Economy" page="/UnpDemoHorizontalViewEconomy.xsp">
+			</unp:menuItem>
+			<unp:menuItem ajaxloadid="results" ajaxtargetid="results"
+				submenu="sub-sub" label="News" page="/UnpDemoHorizontalViewNews.xsp">
+			</unp:menuItem>
+			<unp:menuItem label="Environment">
+			</unp:menuItem>
+			<unp:menuItem ajaxloadid="results" ajaxtargetid="results"
+				submenu="sub" label="Cause" page="/UnpDemoHorizontalCause.xsp">
+			</unp:menuItem>
+			<unp:menuItem ajaxloadid="results" ajaxtargetid="results"
+				submenu="sub" label="Drought" page="/UnpDemoHorizontalDrought.xsp">
+			</unp:menuItem>
+			<unp:menuItem label="Internet">
+			</unp:menuItem>
+			<unp:menuItem label="Apple" submenu="sub">
+			</unp:menuItem>
+			<unp:menuItem ajaxloadid="results" ajaxtargetid="results"
+				submenu="sub-sub" label="iPad" page="/UnpDemoHorizontaliPad.xsp">
+			</unp:menuItem>
+			<unp:menuItem ajaxloadid="results" ajaxtargetid="results"
+				submenu="sub-sub" label="iPhone" page="/UnpDemoHorizontaliPhone.xsp">
+			</unp:menuItem>
+			<unp:menuItem label="Other" submenu="sub">
+			</unp:menuItem>
+			<unp:menuItem ajaxloadid="results" ajaxtargetid="results"
+				submenu="sub-sub" label="Apps" page="/UnpDemoHorizontalApps.xsp">
+			</unp:menuItem>
+			<unp:menuItem ajaxloadid="results" ajaxtargetid="results"
+				submenu="sub-sub" label="Social Media" page="/UnpDemoHorizontalSocialMedia.xsp">
+			</unp:menuItem>
+		</unp:this.menuItem>
+	</unp:unpNavigator>
+	<div id="content">
+		<unp:unpScrollableArea>
+			<xp:this.facets>
+				<unp:unpHorizontalView xp:key="facet_1"
+					dialogxpage="UnpDemoHorizontalViewDialog" sourcediv="results"
+					primaryview="Documents" filterview="Documents Filter"
+					toplevelcategory="All" title="Media Library"
+					subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque arcu tellus, ullamcorper et tortor commodo, volutpat facilisis arcu. Donec eleifend nisl sed erat scelerisque sollicitudin.">
+				</unp:unpHorizontalView>
+			</xp:this.facets>
+		</unp:unpScrollableArea>
+	</div>
+	<unp:unpTabbedFooter synctype="alldbs">
+		<unp:this.tab>
+			<unp:tab label="Library" page="/UnpDemoHorizontalView_light.xsp"
+				icon="unp/icon-library.png" iconselected="unp/icon-library.png">
+			</unp:tab>
+			<unp:tab label="Favorites" page="/UnpDemoHorizontalViewFavorites_light.xsp"
+				icon="unp/icon-favorite.png" iconselected="unp/icon-favorite.png">
+			</unp:tab>
+		</unp:this.tab>
+	</unp:unpTabbedFooter>
+</xp:view>

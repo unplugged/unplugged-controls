@@ -172,7 +172,7 @@ return out;}]]></xp:this.styleClass>
 				</ul>
 				<div class="summaryDataRow"></div>
 				<xp:div id="pullUpHolder">
-					<xp:this.rendered><![CDATA[#{javascript:compositeData.refreshmethod == "pull" && applicationScope.unpluggedserver == true}]]></xp:this.rendered>
+					<xp:this.rendered><![CDATA[#{javascript:compositeData.refreshmethod == "pull" && applicationScope.unpluggedserver == true && viewScope.rowcount >= compositeData.numberofrows}]]></xp:this.rendered>
 					<div id="pullUp">
 						<span class="pullUpIcon"></span>
 						<span class="pullUpLabel">
@@ -181,7 +181,7 @@ return out;}]]></xp:this.styleClass>
 					</div>
 				</xp:div>
 				<xp:div id="loadmorelink">
-					<xp:this.rendered><![CDATA[#{javascript:compositeData.refreshmethod != "none"}]]></xp:this.rendered>
+					<xp:this.rendered><![CDATA[#{javascript:compositeData.refreshmethod != "none" && viewScope.rowcount >= compositeData.numberofrows}]]></xp:this.rendered>
 					<xp:this.styleClass><![CDATA[#{javascript:if (compositeData.refreshmethod != "button" && applicationScope.unpluggedserver == true){
 	return "loadmorelink hidden";
 }else{
@@ -191,7 +191,7 @@ return out;}]]></xp:this.styleClass>
 						styleClass="loadmorebutton">
 						<xp:this.attrs>
 							<xp:attr name="onclick">
-								<xp:this.value><![CDATA[#{javascript:"loadmore('" + compositeData.dbName + "', '" + compositeData.viewName + "', '" + compositeData.summaryColumn + "', '" + compositeData.detailColumn + "', '" + compositeData.categoryfilter + "', '" + compositeData.xpageDoc + "', '" + compositeData.refreshmethod + "', '" + compositeData.photoColumn + "', '" + compositeData.collapseRows + "', '" + compositeData.wrapsummarytext + "')"}]]></xp:this.value>
+								<xp:this.value><![CDATA[#{javascript:"loadmore('" + compositeData.dbName + "', '" + compositeData.viewName + "', '" + compositeData.summaryColumn + "', '" + compositeData.detailColumn + "', '" + compositeData.categoryfilter + "', '" + compositeData.xpageDoc + "', '" + compositeData.refreshmethod + "', '" + compositeData.photoColumn + "', '" + compositeData.collapseRows + "', '" + compositeData.wrapsummarytext + "', '" + compositeData.ajaxload + "')"}]]></xp:this.value>
 							</xp:attr>
 						</xp:this.attrs>
 					</xp:button>

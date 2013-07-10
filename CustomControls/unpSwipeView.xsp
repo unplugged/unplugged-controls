@@ -45,8 +45,8 @@ for(var i=0; i<attachmentList.length; i++){
   });*/
   images += arraySeparator + "{"
   images += "'img': '" + imageFile + "',"
-  images += "'width': '300',"
-  images += "'height': '250',"
+  //images += "'width': '300',"
+  //images += "'height': '250',"
   images += "'desc': '" + attachmentList[i].getName() + "'" 
   images += "}" 
   
@@ -104,8 +104,8 @@ for (i=0; i<3; i++) {
 	el = document.createElement('img');
 	el.className = 'loading';
 	el.src = slides[page].img;
-	el.width = slides[page].width;
-	el.height = slides[page].height;
+	//el.width = slides[page].width;
+	//el.height = slides[page].height;
 	el.onload = function () { this.className = ''; }
 	gallery.masterPages[i].appendChild(el);
 
@@ -126,8 +126,8 @@ gallery.onFlip(function () {
 			el = gallery.masterPages[i].querySelector('img');
 			el.className = 'loading';
 			el.src = slides[upcoming].img;
-			el.width = slides[upcoming].width;
-			el.height = slides[upcoming].height;
+			//el.width = slides[upcoming].width;
+			//el.height = slides[upcoming].height;
 			
 			el = gallery.masterPages[i].querySelector('span');
 			el.innerHTML = slides[upcoming].desc;

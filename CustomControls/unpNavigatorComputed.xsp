@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<div id="menu" class="iscrollmenu">
+		<div id="menuPane" class="offScreen" style="height: 100%;">
+
+			<ul id="menuitems">
+
+				<xp:repeat id="repeat1" rows="30" disableOutputTag="true"
+					var="menuItem" indexVar="menuIndex">
+
+					<xp:this.value><![CDATA[#{javascript:viewScope.menuItemIndex = 1;
+			return compositeData.computedmenuitems;}]]></xp:this.value>
+
+					<!-- main options -->
+					<xp:panel tagName="li">
+						<xp:this.styleClass><![CDATA[#{javascript:if (menuItem.disabled){
+	return "viewMenuItemDisabled";
+}else{
+	return "";
+}}]]></xp:this.styleClass>
+						<xp:link escape="true"
+							text="#{javascript:menuItem.label}" id="link1" value="#"
+							disableTheme="true">
+							<span class="chevron" />
+							<xp:this.attrs>
+								<xp:attr name="onClick"
+									value="return false">
+								</xp:attr>
+							</xp:this.attrs>
+						</xp:link>
+
+						<!-- submenu - level 1 -->
+						<xp:panel tagName="ul">
+							<xp:this.rendered><![CDATA[#{javascript:menuItem.hasSubMenu}]]></xp:this.rendered>
+
+							<xp:repeat id="repeat2" rows="30"
+								var="subMenu1" repeatControls="false" disableOutputTag="true"
+								value="#{javascript:menuItem.subMenu}">
+								<xp:panel tagName="li">
+									<xp:this.styleClass><![CDATA[#{javascript:if (subMenu1.disabled){
+	return "viewMenuItemDisabled";
+}else{
+	return "";
+}}]]></xp:this.styleClass>
+									<xp:link escape="true"
+										text="#{javascript:subMenu1.label}" id="link2" value="#"
+										disableTheme="true">
+										<span class="chevron" />
+										<xp:this.attrs>
+											<xp:attr name="onClick"
+												value="return false">
+											</xp:attr>
+										</xp:this.attrs>
+									</xp:link>
+
+									<!-- submenu - level 2 -->
+									<xp:panel tagName="ul">
+										<xp:this.rendered><![CDATA[#{javascript:subMenu1.hasSubMenu}]]></xp:this.rendered>
+
+										<xp:repeat id="repeat3"
+											rows="30" var="subMenu2" repeatControls="false"
+											disableOutputTag="true"
+											value="#{javascript:subMenu1.subMenu}">
+											<xp:panel tagName="li">
+												<xp:this.styleClass><![CDATA[#{javascript:if (subMenu2.disabled){
+	return "viewMenuItemDisabled";
+}else{
+	return "";
+}}]]></xp:this.styleClass>
+												<xp:link escape="true"
+													text="#{javascript:subMenu2.label}" id="link3" value="#"
+													disableTheme="true">
+													<span
+														class="chevron" />
+													<xp:this.attrs>
+														<xp:attr
+															name="onclick"
+															rendered="#{javascript:!subMenu2.disabled}">
+															<xp:this.value><![CDATA[#{javascript:return "loadPage('" + getDbPath() + subMenu2.page + " #" + subMenu2.ajaxloadid + "', '" + subMenu2.ajaxtargetid + "', " + viewScope.menuItemIndex + "); return false;";}]]></xp:this.value>
+														</xp:attr>
+													</xp:this.attrs>
+												</xp:link>
+											</xp:panel>
+										</xp:repeat>
+
+									</xp:panel>
+
+								</xp:panel>
+							</xp:repeat>
+
+						</xp:panel>
+
+					</xp:panel>
+				</xp:repeat>
+
+			</ul>
+
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#menuitems ul').hide();
+			$('#menuitems li a').click(
+				function() {
+					var openMe = $(this).next();
+					var liSiblings = $(this).parent().siblings();
+					liSiblings.children("a").removeClass("open");
+					var mySiblings = liSiblings.find('ul');
+					if (openMe.is(':visible')) {
+						$(this).removeClass('open');
+						openMe.slideUp('normal');
+					} else {
+						$(this).addClass('open');
+						mySiblings.slideUp('normal');
+						openMe.slideDown('normal');
+					}
+					fixNavigatorBottomCorners();
+				}
+			);
+			
+		});
+
+</script>
+
+</xp:view>

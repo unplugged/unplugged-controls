@@ -52,21 +52,23 @@
 		<xp:image styleClass="companyLogo" url="/unp/unplugged_logo.png"
 			id="companyLogo">
 		</xp:image>
-		<xp:panel styleClass="backButton">
-			<xp:this.rendered><![CDATA[#{javascript:if(isEmpty(compositeData.backButtonText)){
+		<div class="backButtonHolder">
+			<xp:text tagName="div" id="backlink" styleClass="backButton">
+				<xp:this.rendered><![CDATA[#{javascript:if(isEmpty(compositeData.backButtonText)){
 	return false;
 }
 else{ return true;
 }}]]></xp:this.rendered>
-			<xp:text tagName="span" id="backlink" styleClass="backlabel"
-				value="#{javascript:compositeData.backButtonText}">
 				<xp:this.attrs>
 					<xp:attr name="onclick">
 						<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='" + compositeData.backButtonURL + "';"}]]></xp:this.value>
 					</xp:attr>
+					<xp:attr name="data-title">
+						<xp:this.value><![CDATA[#{javascript:compositeData.backButtonText}]]></xp:this.value>
+					</xp:attr>
 				</xp:this.attrs>
 			</xp:text>
-		</xp:panel>
+		</div>
 		<xp:panel styleClass="viewsButton">
 			<xp:this.rendered><![CDATA[#{javascript:if (compositeData.backButtonText != "" && compositeData.backButtonText != null){
 	return false;
@@ -77,8 +79,7 @@ else{ return true;
 			</xp:label>
 		</xp:panel>
 
-		<xp:label id="title"
-			value="#{javascript:compositeData.title}">
+		<xp:label id="title" value="#{javascript:compositeData.title}">
 			<xp:this.attrs>
 				<xp:attr name="href" value="versionPopup"></xp:attr>
 			</xp:this.attrs>
@@ -141,7 +142,7 @@ else{ return true;
 			</xp:text>
 		</div>
 		<div class="button" onclick="closeDialog('versionPopup')" style="margin-left: 25%;">
-				OK
+			OK
 		</div>
 	</div>
 	<div id="underlayversionPopup" class="underlay"></div></xp:view>
