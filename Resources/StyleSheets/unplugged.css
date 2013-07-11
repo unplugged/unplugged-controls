@@ -848,7 +848,7 @@ body {
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
-.viewMenuItemDisabled{
+.viewMenuItemDisabled div.menulink{
 	opacity: 0.2;
 }
 
@@ -2109,7 +2109,7 @@ span.title {
 }
 
 .navScrollArea ul li.viewMenuItemSelected {
-	background-color: #3773F1-color !important;
+	background-color: #0078F4 !important;
 	background: url('unp/right-arrow-trans-white-large.png') no-repeat 96%
 		center;
 	border: 1px solid #000000;
@@ -2350,7 +2350,7 @@ background-color: -webkit-linear-gradient(#808080, #464646);
 
 #menuitems > li > ul > li > ul > li > a.open
 {
-	background-color: #3773F1-color;
+	background-color: #0078F4;
 	color: #ffffff /*{d-bup-color}*/;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
 	border: 1px solid #000000;
