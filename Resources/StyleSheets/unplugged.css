@@ -511,8 +511,8 @@ body {
 		z-index: 15;
 		position: fixed;
 		top: 10px;
-		right: 88px;
-		width: 100px;
+		right: 95px;
+		width: 150px;
 	}
 	.hiddensearch {
 		display: block;

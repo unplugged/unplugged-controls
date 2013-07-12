@@ -76,8 +76,14 @@ the specific language governing permissions and limitations under the License
 		.debugbutton {
 			width: auto !important;
 			display: inline;
-			padding-left: 4px;
-			padding-right: 4px;
+			padding-left: 6px;
+			padding-right: 6px;
+		}
+		.debugbuttonsmall {
+			width: auto !important;
+			display: inline;
+			padding-left: 12px;
+			padding-right: 12px;
 		}
 		
 	</style>
@@ -96,14 +102,14 @@ the specific language governing permissions and limitations under the License
 					</xp:eventHandler>
 				</xp:button>
 			
-				<xp:button id="btnCollapse" rendered="#{javascript:!dBar.isCollapsed()}" styleClass="button debugbutton">
+				<xp:button id="btnCollapse" rendered="#{javascript:!dBar.isCollapsed()}" styleClass="button debugbuttonsmall">
 					<xp:this.value><![CDATA[<]]></xp:this.value>
 					<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
 						<xp:this.action><![CDATA[#{javascript:dBar.setCollapsed(true);}]]></xp:this.action>
 					</xp:eventHandler>
 				</xp:button>
 				
-				<xp:button id="btnExpand" rendered="#{javascript:dBar.isCollapsed()}" styleClass="button debugbutton">
+				<xp:button id="btnExpand" rendered="#{javascript:dBar.isCollapsed()}" styleClass="button debugbuttonsmall">
 					<xp:this.value><![CDATA[>]]></xp:this.value>
 					<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
 						<xp:this.action><![CDATA[#{javascript:dBar.setCollapsed(false);}]]></xp:this.action>
