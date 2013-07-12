@@ -462,7 +462,7 @@ body {
 		max-width: 122px;
 	}
 	span.title {
-		margin-top: 12px;
+		margin-top: 14px;
 		/*margin-right: 100px;*/
 		width: 300px;
 	}
@@ -490,7 +490,7 @@ body {
 	    right: 100px;
 	  	margin-left: auto !important;
 	  	margin-right: auto !important;
-	    top: 0px;
+	    margin-top: 0px;
 	}
  li.title {
   top: 14px;
