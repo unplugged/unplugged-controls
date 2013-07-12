@@ -2363,3 +2363,6 @@ background-color: -webkit-linear-gradient(#808080, #464646);
 	height: 17px;
 	margin-top:2px;
 }
+.dialogbuttons {
+  padding-top: 10px;
+}
