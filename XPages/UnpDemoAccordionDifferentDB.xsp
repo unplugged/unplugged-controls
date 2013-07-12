@@ -18,7 +18,7 @@ the specific language governing permissions and limitations under the License
 		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
 	</xp:this.resources>
 	<unp:unpHeader search="none" searchPage="UnpSearch.xsp" headerHomeLink="/UnpMain.xsp"
-		viewsButton="false" title="Accordion Demo (Different DB)" backButtonText="Back"
+		viewsButton="false" title="Accordion (Different DB)" backButtonText="Back"
 		backButtonURL="UnpMain.xsp">
 	</unp:unpHeader>
 	<div id="content">
