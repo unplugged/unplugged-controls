@@ -4,9 +4,9 @@
 	<xp:this.resources>
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 	</xp:this.resources>
-	<unp:unpHeader search="none" searchPage="UnpSearch.xsp" headerHomeLink="/UnpMain.xsp"
-		viewsButton="true" backButtonText="Home" backButtonURL="UnpMain.xsp"
-		title="CSS Controls">
+	<unp:unpHeader search="none" searchPage="UnpSearch.xsp"
+		headerHomeLink="/UnpMain.xsp" viewsButton="true" backButtonText="Back"
+		backButtonURL="UnpMain.xsp" title="CSS Controls">
 	</unp:unpHeader>
 
 	<unp:unpScrollableArea>
