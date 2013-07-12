@@ -457,7 +457,7 @@ body {
 	.companyLogo {
 		display: block !important;
 		position: absolute;
-		top: 17px;
+		top: 15px;
 		left: 12px;
 		max-width: 122px;
 	}
