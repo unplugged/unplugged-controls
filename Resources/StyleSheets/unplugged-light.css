@@ -262,6 +262,7 @@ body {
 
 .footerTabtext {
 	color: #768FA4;
+ line-height: 10px;
 }
 
 .tabSelected {
