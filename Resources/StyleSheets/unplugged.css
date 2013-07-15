@@ -1346,6 +1346,9 @@ to {
 	float: left;
 	clear: left;
 	border-right: 1px solid transparent;
+ white-space: nowrap;
+ overflow: hidden;
+ text-overflow:ellipsis;
 }
 
 #formholder.editmode label {
