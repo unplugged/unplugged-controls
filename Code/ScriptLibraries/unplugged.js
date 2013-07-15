@@ -63,6 +63,13 @@ $(window)
 						
 					}
 					
+					$(".footerTabtext").each(function(){
+						if ($(this).height() > 15){
+							$(this).parent().css("position", "relative");
+							$(this).parent().css("top", "-7px");
+						}
+					});
+					
 					initHorizontalView();
 					initDeleteable();
 					initAutoComplete();
