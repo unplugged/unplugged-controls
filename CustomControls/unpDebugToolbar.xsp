@@ -22,7 +22,8 @@ the specific language governing permissions and limitations under the License
 			margin-top: 10px; 
 			border-bottom: 3px solid #444444; 
 			background: #dddddd; 
-			text-shadow:none;}
+			text-shadow:none;
+		}
 			
 		div.dBar .header {
 			background:#444444;
@@ -91,7 +92,7 @@ the specific language governing permissions and limitations under the License
 	<xp:panel id="dBar" styleClass="dBar" rendered="#{javascript:dBar.isEnabled()}">
 
 		<div class="header">
-			<span class="title">Unplugged Debug Toolbar</span>
+			<h1>Unplugged Debug Toolbar</h1>
 			
 			<div style="float:right">
 			
