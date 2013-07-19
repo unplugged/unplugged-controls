@@ -8,7 +8,7 @@
  * KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License
  */
-
+var bLoaded = false;
 $(window)
 		.load(
 				function() {
@@ -73,7 +73,22 @@ $(window)
 					initHorizontalView();
 					initDeleteable();
 					initAutoComplete();
+					
+					if (!bLoaded && getURLParameter("starttime")){
+						var starttime = parseInt(getURLParameter("starttime"), 10);
+						var endtime = Date.now();
+						if (unpluggedserver){
+							alert("Page load took " + (endtime - starttime) + "ms");
+						}else{
+							console.log("Page load took " + (endtime - starttime) + "ms");
+						}
+						bLoaded = true;
+					}
 				});
+
+function getURLParameter(name) {
+    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+}
 
 $(window).scroll( function() {
 	if ($(window).scrollTop() + $(window).height() == $(document).height()) {
@@ -670,7 +685,7 @@ function openHViewDialog(xpage, source, unid){
 function expandMenuItem(menuitem){
 	$(".viewMenuItemSub").hide();
 	$(".viewMenuItemSubSub").hide();
-	$(".navScrollArea .viewMenuItem img").prop("src", "unp/right-arrow-trans-white-large.png");
+	//$(".navScrollArea .viewMenuItem img").prop("src", "unp/right-arrow-trans-white-large.png");
 	if ($(menuitem).hasClass("viewMenuItemSub")){
 		//We need to toggle a sub-sub menu
 		var bFinishedCategory = false;
@@ -680,10 +695,10 @@ function expandMenuItem(menuitem){
 				return false;
 			}else if($(this).hasClass("viewMenuItemSub")){
 				if ($(this).is(':visible')){
-					$(menuitem).find("img").prop("src", "unp/right-arrow-trans-white-large.png");
+					//$(menuitem).find("img").prop("src", "unp/right-arrow-trans-white-large.png");
 					bimg = true;
 				}else{
-					$(menuitem).find("img").prop("src", "unp/down-arrow-trans-white-large.png");
+					//$(menuitem).find("img").prop("src", "unp/down-arrow-trans-white-large.png");
 					bimg = true;
 				}
 				$(this).toggle();
@@ -692,10 +707,10 @@ function expandMenuItem(menuitem){
 				if ($(this).hasClass("viewMenuItemSubSub") && !bFinishedCategory){
 					if (i==0){
 						if ($(this).is(':visible')){
-							$(menuitem).find("img").prop("src", "unp/right-arrow-trans-white-large.png");
+							//$(menuitem).find("img").prop("src", "unp/right-arrow-trans-white-large.png");
 							bimg = true;
 						}else{
-							$(menuitem).find("img").prop("src", "unp/down-arrow-trans-white-large.png");
+							//$(menuitem).find("img").prop("src", "unp/down-arrow-trans-white-large.png");
 							bimg = true;
 						}
 					}
@@ -710,10 +725,10 @@ function expandMenuItem(menuitem){
 			}
 			if($(this).hasClass("viewMenuItemSub")){
 				if ($(this).is(':visible')){
-					$(menuitem).find("img").prop("src", "unp/right-arrow-trans-white-large.png");
+					//$(menuitem).find("img").prop("src", "unp/right-arrow-trans-white-large.png");
 					bimg = true;
 				}else{
-					$(menuitem).find("img").prop("src", "unp/down-arrow-trans-white-large.png");
+					//$(menuitem).find("img").prop("src", "unp/down-arrow-trans-white-large.png");
 					bimg = true;
 				}
 				$(this).toggle();
@@ -728,10 +743,10 @@ function expandMenuItem(menuitem){
 				if ($(this).hasClass("viewMenuItemSub")){
 					if (i==0){
 						if ($(this).is(':visible')){
-							$(menuitem).find("img").prop("src", "unp/right-arrow-trans-white-large.png");
+							//$(menuitem).find("img").prop("src", "unp/right-arrow-trans-white-large.png");
 							bimg = true;
 						}else{
-							$(menuitem).find("img").prop("src", "unp/down-arrow-trans-white-large.png");
+							//$(menuitem).find("img").prop("src", "unp/down-arrow-trans-white-large.png");
 							bimg = true;
 						}
 					}

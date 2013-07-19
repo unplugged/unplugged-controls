@@ -2218,8 +2218,8 @@ span.title {
 
 .navScrollArea ul li.viewMenuItemSelected {
 	background-color: #0078F4 !important;
-	background: url('unp/right-arrow-trans-white-large.png') no-repeat 96%
-		center;
+	/*background: url('unp/right-arrow-trans-white-large.png') no-repeat 96%
+		center;*/
 	border: 1px solid #000000;
 }
 
