@@ -53,7 +53,7 @@ return list;}]]></xp:this.value>
 				<xp:panel tagName="li" styleClass="categoryRow">
 					<xp:this.attrs>
 						<xp:attr name="onClick">
-							<xp:this.value><![CDATA[#{javascript:"fetchDetails(this,'" + @ReplaceSubstring(compositeData.viewName, "\\","\\\\") + "','" + rowData + "', '" + compositeData.xpage + "', '" + compositeData.dbName + "')"}]]></xp:this.value>
+							<xp:this.value><![CDATA[#{javascript:"fetchDetails(this,'" + @ReplaceSubstring(compositeData.viewName, "\\","\\\\") + "','" + rowData + "', '" + @ReplaceSubstring(compositeData.xpage, "/", "") + "', '" + compositeData.dbName + "')"}]]></xp:this.value>
 						</xp:attr>
 					</xp:this.attrs>
 					<xp:text escape="true" id="computedField2" value="#{rowData}"
@@ -80,7 +80,7 @@ return out;}]]></xp:this.styleClass>
 							styleClass="accLoadMoreButton">
 							<xp:this.attrs>
 								<xp:attr name="onclick">
-									<xp:this.value><![CDATA[#{javascript:"fetchMoreDetails(this,'" + @ReplaceSubstring(compositeData.viewName, "\\","\\\\") + "','" + rowData + "', '" + compositeData.xpage + "', '" + compositeData.dbName + "');"}]]></xp:this.value>
+									<xp:this.value><![CDATA[#{javascript:"fetchMoreDetails(this,'" + @ReplaceSubstring(compositeData.viewName, "\\","\\\\") + "','" + rowData + "', '" + @ReplaceSubstring(compositeData.xpage, "/", "") + "', '" + compositeData.dbName + "');"}]]></xp:this.value>
 								</xp:attr>
 							</xp:this.attrs>
 						</xp:button>
@@ -89,7 +89,7 @@ return out;}]]></xp:this.styleClass>
 				<xp:text tagName="script" escape="false">
 					<xp:this.rendered><![CDATA[#{javascript:compositeData.expandfirstcategory == "yes" && viewScope.rowcount == 1}]]></xp:this.rendered>
 					<xp:this.value><![CDATA[#{javascript:"$(document).ready(function() {" + 
-"fetchDetails($('.categoryRow').first(),'" + @ReplaceSubstring(compositeData.viewName, "\\","\\\\") + "','" + rowData + "', '" + compositeData.xpage + "', '" + compositeData.dbName + "')" + 
+"fetchDetails($('.categoryRow').first(),'" + @ReplaceSubstring(compositeData.viewName, "\\","\\\\") + "','" + rowData + "', '" + @ReplaceSubstring(compositeData.xpage, "/", "") + "', '" + compositeData.dbName + "')" + 
 "});"}]]></xp:this.value>
 				</xp:text>
 			</xp:repeat>

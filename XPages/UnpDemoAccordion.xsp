@@ -27,7 +27,7 @@ the specific language governing permissions and limitations under the License
 		<unp:unpScrollableArea>
 			<xp:this.facets>
 				<unp:unpAccordion xp:key="facet_1"
-					viewName="EmployessCatByDept" xpage="Employee.xsp" insetData="true"
+					viewName="EmployessCatByDept" xpage="/Employee.xsp" insetData="true"
 					expandfirstcategory="yes">
 				</unp:unpAccordion>
 			</xp:this.facets>
