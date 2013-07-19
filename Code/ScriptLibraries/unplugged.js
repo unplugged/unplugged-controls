@@ -480,20 +480,22 @@ function jumpToLetter(letterelement, event) {
 }
 
 function openDialog(id) {
-	$("#underlay" + id).css('display', 'block');
-	$("#" + id).css('display', 'block');
-	var boxes = $("div");
-	boxes.click( function() {
-		var el = $(id);
-		var max = 0;
-		boxes.each( function() {
-			var z = parseInt($(this).css("z-index"), 10);
-			max = Math.max(max, z);
+	if (id != null && id != "#"){
+		$("#underlay" + id).css('display', 'block');
+		$("#" + id).css('display', 'block');
+		var boxes = $("div");
+		boxes.click( function() {
+			var el = $(id);
+			var max = 0;
+			boxes.each( function() {
+				var z = parseInt($(this).css("z-index"), 10);
+				max = Math.max(max, z);
+			});
+			el.css("z-index", max + 1);
 		});
-		el.css("z-index", max + 1);
-	});
-	initiscroll();
-	initHorizontalView();
+		initiscroll();
+		initHorizontalView();
+	}
 }
 
 function closeDialog(id) {
