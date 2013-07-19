@@ -23,7 +23,7 @@ the specific language governing permissions and limitations under the License
 		viewsButton="false" title="Accordion" backButtonText="Back"
 		backButtonURL="UnpMain.xsp">
 	</unp:unpHeader>
-	<div id="content">
+	<div id="content" class="left-aligned">
 		<unp:unpScrollableArea>
 			<xp:this.facets>
 				<unp:unpAccordion xp:key="facet_1"
