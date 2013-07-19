@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='80257B470037E1BA'>
-<noteinfo noteid='35e' unid='5CE61E9CBB15C3B380257B470037F1C7' sequence='3'>
+<noteinfo noteid='35e' unid='5CE61E9CBB15C3B380257B470037F1C7' sequence='6'>
 <created><datetime dst='true'>20130408T111103,75+01</datetime></created>
-<modified><datetime dst='true'>20130528T080325,36+01</datetime></modified>
-<revised><datetime dst='true'>20130528T080325,35+01</datetime></revised>
-<lastaccessed><datetime dst='true'>20130528T080325,36+01</datetime></lastaccessed>
+<modified><datetime dst='true'>20130716T092745,99+01</datetime></modified>
+<revised><datetime dst='true'>20130716T092745,98+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20130716T092745,99+01</datetime></lastaccessed>
 <addedtofile><datetime dst='true'>20130408T111107,52+01</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
@@ -32,8 +32,11 @@ hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
 <item name='BadgeID' placeholder='true'>
 <rawitemdata type='0'>
 </rawitemdata></item>
-<item name='$Fields'><textlist><text>BadgeID</text><text>UnpURL</text><text
->ImgURL</text><text>Title</text></textlist></item>
+<item name='LoadTimeMode' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$Fields'><textlist><text>LoadTimeMode</text><text>BadgeID</text><text
+>UnpURL</text><text>ImgURL</text><text>Title</text></textlist></item>
 <item name='$Body' sign='true'>
 <rawitemdata type='1'>
 gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -50,6 +53,9 @@ AAAAAAAAAQAACgAAAAAAAAAABgAAAAAAVW5wVVJMYg4BAIQAAAAAAAAAAADeBgAAiv+F/wgAAQAA
 CoECgwQBAIX/EQABAAAKQmFkZ2VJRDogAN0GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiv8s
 AIoAAAUAMAAAAAAAAAAAAQAACgAAAAAAAAAABwAAAAAAQmFkZ2VJRABiDgEAhAAAAAAAAAAAAN4G
-AACK/4X/CAABAAAK
+AACK/4X/CAABAAAKgQKDBAEAhf8YAAEAAApMb2FkIFRpbWUgTW9kZTog3QYAAIr//v9QAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAACw/xQAAAAEIAAAAAAAAAAAAAAAAIr/OACKQgEFAiACAAAAAAAAAgEAAAoA
+AAAAAAAAAAwAAAAHAExvYWRUaW1lTW9kZQEAAwBZZXMA3gYAAIr/hf8IAAEAAAo=
 </rawitemdata></item></note>
 
