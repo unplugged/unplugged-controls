@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="754a" sequence="4" unid="D2FEB9EFCDD8EC3580257BC1003A368A">
+<created><datetime dst="true">20130808T113550,50+01</datetime></created>
+<modified><datetime dst="true">20130808T165949,58+01</datetime></modified>
+<revised><datetime dst="true">20130808T165949,57+01</datetime></revised>
+<lastaccessed><datetime dst="true">20130808T165949,58+01</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20130808T113550,51+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$Flags"><text>345CgQ</text></item>
+<item name="$FlagsExt"><text>D</text></item>
+
+<item name="$FileModDT" sign="true"><datetime dst="true">20130808T113432,00+01</datetime></item>
+
+
+
+<item name="$FileNames" sign="true"><text>qunit-1.12.js</text></item>
+<item name="$TITLE" sign="true"><text>unp/qunit-1.12.js</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item></note>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="filter" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="7542" sequence="28" unid="AB0941409854CE0580257BC1002B0941">
+<created><datetime dst="true">20130808T085004,17+01</datetime></created>
+<modified><datetime dst="true">20130808T165947,98+01</datetime></modified>
+<revised><datetime dst="true">20130808T165947,97+01</datetime></revised>
+<lastaccessed><datetime dst="true">20130808T165947,98+01</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20130808T085004,19+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>unpperformance.js</text></item>
+<item name="$Flags"><text>h534Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+</note>

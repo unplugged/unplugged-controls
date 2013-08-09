@@ -74,16 +74,6 @@ $(window)
 					initDeleteable();
 					initAutoComplete();
 					
-					if (!bLoaded && getURLParameter("starttime")){
-						var starttime = parseInt(getURLParameter("starttime"), 10);
-						var endtime = Date.now();
-						if (unpluggedserver){
-							alert("Page load took " + (endtime - starttime) + "ms");
-						}else{
-							console.log("Page load took " + (endtime - starttime) + "ms");
-						}
-						bLoaded = true;
-					}
 				});
 
 function getURLParameter(name) {

@@ -18,6 +18,7 @@
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 		<xp:styleSheet href="/unpDialog.css"></xp:styleSheet>
 	</xp:this.resources>
+	<div id="qunit" class="panel"></div>
 	<unp:unpHeader search="database" viewsButton="true" headerHomeLink="/UnpMain.xsp"
 		title="Employees" searchPage="UnpDemoWidgetsSearch.xsp">
 	</unp:unpHeader>
@@ -67,4 +68,8 @@
 	<unp:unpFooter newDocTarget="EmployeeEdit.xsp" synctype="currentdb"
 		newDocLoadType="ajax">
 	</unp:unpFooter>
+	<link rel="stylesheet" type="text/css" href="unp/qunit-1.12.css"></link>
+	<script type="text/javascript" src="unp/qunit-1.12.js"></script>
+	<script type="text/javascript" src="unpperformance.js"></script>
+	
 </xp:view>
