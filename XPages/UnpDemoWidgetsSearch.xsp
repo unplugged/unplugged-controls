@@ -13,7 +13,8 @@ the specific language governing permissions and limitations under the License
 	<unp:unpScrollableArea>
 		<xp:this.facets>
 			<unp:unpSearchResults insetData="true" xp:key="facet_1"
-				detailColumn="DOB" summaryColumn="Name" viewName="Search" xpageDoc="Employee.xsp">
+				detailColumn="DOB" summaryColumn="Name" viewName="Search"
+				xpageDoc="Employee.xsp" numberofrows="40">
 				<unp:this.viewsearch><![CDATA[#{javascript:param.get("query")}]]></unp:this.viewsearch>
 				<unp:this.title><![CDATA[#{javascript:"Search results for \"" + param.get("query") + "\""}]]></unp:this.title>
 			</unp:unpSearchResults>
