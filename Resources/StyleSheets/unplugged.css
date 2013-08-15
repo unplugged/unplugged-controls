@@ -2118,6 +2118,15 @@ span.title {
 		padding-top: 10px;	
 	}
 }
+@media screen and (max-width: 999px) {
+	  .tabfootertext {
+	    display: none !important;
+	  }
+	.hviewresults {
+		padding-left: 10px; 
+		padding-top: 10px;	
+	}
+}
 @media screen and (max-width: 700px) {
 	.hviewresults {
 		padding-left: 10px; 
