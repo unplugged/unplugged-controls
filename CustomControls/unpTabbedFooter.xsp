@@ -44,9 +44,14 @@ if (("/" + getCurrentXPage()) == menuItem.page){
 }}]]></xp:this.styleClass>
 						<xp:this.attrs>
 							<xp:attr name="onclick">
-								<xp:this.value><![CDATA[#{javascript:
-	return "openPage('" + getDbPath() + menuItem.page + "', '" + menuItem.ajaxtargetid + "')";
-}]]></xp:this.value>
+								<xp:this.value><![CDATA[#{javascript:var js = "";
+if (!isEmpty(menuItem.callback)){
+	js += menuItem.callback;
+}
+if (!isEmpty(menuItem.page)){
+	js += "openPage('" + getDbPath() + menuItem.page + "', '" + menuItem.ajaxtargetid + "')";
+}
+return js;}]]></xp:this.value>
 							</xp:attr>
 						</xp:this.attrs>
 						<xp:image id="image2">

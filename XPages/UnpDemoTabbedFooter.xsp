@@ -27,7 +27,7 @@
 				page="/UnpMain.xsp" iconselected="icons/house_selected.png">
 			</unp:tab>
 			<unp:tab icon="icons/id_card.png" label="All Employees"
-				page="/UnpDemoTabbedFooter.xsp"
+				page="/UnpDemoTabbedFooter.xsp" callback="alert('Hello there!');"
 				iconselected="icons/id_card_selected.png">
 			</unp:tab>
 			<unp:tab icon="icons/id_card.png" label="Finance Employees"
