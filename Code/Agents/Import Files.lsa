@@ -1,10 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note class='filter' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='80257B470037E1BA'>
+<<<<<<< HEAD
 <noteinfo noteid='52d2' unid='CC426AB105AEA5D580257B8600385B46' sequence='35'>
 <created><datetime dst='true'>20130610T111533,82+01</datetime></created>
 <modified><datetime dst='true'>20130809T164048,59+01</datetime></modified>
 <revised><datetime dst='true'>20130809T164048,58+01</datetime></revised>
 <lastaccessed><datetime dst='true'>20130809T164048,59+01</datetime></lastaccessed>
+=======
+<noteinfo noteid='52d2' unid='CC426AB105AEA5D580257B8600385B46' sequence='36'>
+<created><datetime dst='true'>20130610T111533,82+01</datetime></created>
+<modified><datetime dst='true'>20130812T090921,44+01</datetime></modified>
+<revised><datetime dst='true'>20130812T090921,43+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20130812T090921,44+01</datetime></lastaccessed>
+>>>>>>> No Changes
 <addedtofile><datetime dst='true'>20130610T111533,84+01</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
@@ -236,5 +244,5 @@ B4SFiwIjMRphABpiABpjAF4wAoCABSOTm6UaZAA6JP0aZQBeIAJeIAIGgaUaZgBKIAI1UAkTABpn
 ACmcAEZQCZsjGmgAN1AJ7f8aaQAaagAdBwAcAAAAAAAKAAAACABzAAMAvgkKAAAACACgAAMAvgkC
 AAAAEQAYAAAAAAD//wEAAwALAAAADwA4ABEAmAAWAAoAAAA=
 </rawitemdata></item>
-<item name='$AssistVersion'><datetime dst='true'>20130612T130953,33+01</datetime></item></note>
+<item name='$AssistVersion'><datetime dst='true'>20130812T090921,05+01</datetime></item></note>
 

@@ -1,42 +1,47 @@
 <?xml version='1.0' encoding='utf-8'?>
-<!DOCTYPE form SYSTEM 'xmlschemas/domino_8_5_3.dtd'>
-<form name='Database' xmlns='http://www.lotus.com/dxl' version='8.5' maintenanceversion='3.0'
- replicaid='80257AA1002D0DF3' publicaccess='false' designerversion='8.5.3'
- renderpassthrough='true'>
-<noteinfo noteid='5612' unid='01DE33A468B1E4FC80257AD200437B27' sequence='5'>
-<created><datetime>20121212T121704,39+00</datetime></created>
-<modified><datetime>20130219T091453,29+00</datetime></modified>
-<revised><datetime>20130219T091453,28+00</datetime></revised>
-<lastaccessed><datetime>20130219T091453,29+00</datetime></lastaccessed>
-<addedtofile><datetime>20121212T121704,59+00</datetime></addedtofile></noteinfo>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='80257B470037E1BA'>
+<noteinfo noteid='366' unid='29ED82AB8B68E36F80257B470037F1CE' sequence='9'>
+<created><datetime dst='true'>20130408T111103,82+01</datetime></created>
+<modified><datetime dst='true'>20130812T090920,72+01</datetime></modified>
+<revised><datetime dst='true'>20130812T090920,71+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20130812T090920,72+01</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20130408T111107,60+01</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
-<body><richtext>
-<pardef id='1'/>
-<par def='1'>Title: <field type='text' kind='editable' name='Title'/><compositedata
- type='98' prevtype='65418' nexttype='222' afterparcount='7' containertype='65418'
- aftercontainercount='1' afterbegincount='3'>
-Yg4BAIQAAAAAAAAAAAA=
-</compositedata></par>
-<par def='1'>Img URL: <field type='text' kind='editable' name='ImgURL'/><compositedata
- type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
- aftercontainercount='1' afterbegincount='3'>
-Yg4BAIQAAAAAAAAAAAA=
-</compositedata></par>
-<par def='1'>Flagged: <field usenotesstyle='false' height='0.2500in' width='1in'
- multiline='true' borderstyle='inset' lookupeachchar='false' lookupaddressonrefresh='false'
- type='keyword' kind='editable' name='Flagged'><keywords helperbutton='false'
- columns='1' ui='combobox'><textlist><text>true</text><text>false</text></textlist></keywords><code
- event='defaultvalue'><formula>"false"</formula></code></field></par>
-<par def='1'>Unp URL: <field type='text' kind='editable' name='UnpURL'/><compositedata
- type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
- aftercontainercount='1' afterbegincount='3'>
-Yg4BAIQAAAAAAAAAAAA=
-</compositedata></par>
-<par def='1'>BadgeID: <field type='text' kind='editable' name='BadgeID'/><compositedata
- type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
- aftercontainercount='1' afterbegincount='3'>
-Yg4BAIQAAAAAAAAAAAA=
-</compositedata></par></richtext></body>
-<item name='$$ScriptName' summary='false' sign='true'><text>Database</text></item></form>
+<item name='$TITLE' sign='true'><text>Database</text></item>
+<item name='$DesignerVersion'><text>8.5.3</text></item>
+<item name='$Body' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8PAAEAAApUaXRsZTogAN0G
+AACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiv8pAIoAAAUAMAAAAAAAAAAAAQAACgAAAAAAAAAA
+BQAAAAAAVGl0bGUAYg4BAIQAAAAAAAAAAADeBgAAiv+BAoMEAQCF/xEAAQAACkltZyBVUkw6IADd
+BgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIr/KgCKAAAFADAAAAAAAAAAAAEAAAoAAAAAAAAA
+AAYAAAAAAEltZ1VSTGIOAQCEAAAAAAAAAAAA3gYAAIr/gQKDBAEAhf8RAAEAAApGbGFnZ2VkOiAA
+3QYAAPf/9/8kAAEAAIAAAKAFaAEAAAAAAAAAAGQAAAAAAAAAAAAAAAAA/v9QAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACw/xQAAAAEQIAAAAAAAAAAAAAAAIr/TQCKAgAFACAAAAAAAAAAAAEAAAoSAAAAAAAA
+AAcAAAAQABIAAAAQAAEABQBmYWxzZQADAEZsYWdnZWQCAAQABQB0cnVlZmFsc2UAANIICQAAAAAA
+0ggJAP///wDeBgAA9/+BAoMEAQCF/xEAAQAAClVucCBVUkw6IADdBgAAiv/+/1AAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAIr/KgCKAAAFADAAAAAAAAAAAAEAAAoAAAAAAAAAAAYAAAAAAFVucFVSTGIOAQCE
+AAAAAAAAAAAA3gYAAIr/gQKDBAEAhf8RAAEAAApCYWRnZUlEOiAA3QYAAIr//v9QAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAACK/ysAigAABQAwAAAAAAAAAAABAAAKAAAAAAAAAAAHAAAAAABCYWRnZUlEAGIO
+AQCEAAAAAAAAAAAA3gYAAIr/
+</rawitemdata></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>Database</text></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$Info' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text/></item>
+<item name='$Fields'><textlist><text>Title</text><text>ImgURL</text><text
+>Flagged</text><text>UnpURL</text><text>BadgeID</text></textlist></item></note>
 
