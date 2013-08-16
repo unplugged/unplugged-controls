@@ -362,7 +362,12 @@ function initiscroll() {
 	// Register the letter click events
 	$(".atozletter").click( function(event) {
 		event.stopPropagation();
-		jumpToLetter($(this), event);
+		if ($(this).hasClass("switchletterlist")){
+			$(".atozpicker").toggle();
+			$(".numberpicker").toggle();
+		}else{
+			jumpToLetter($(this), event);
+		}
 		return false;
 	});
 	if (unpluggedserver) {
