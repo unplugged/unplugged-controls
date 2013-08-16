@@ -1,18 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='80257B470037E1BA'>
-<<<<<<< HEAD
-<noteinfo noteid='58ba' unid='83028B09E5B6015880257B86003D659C' sequence='18'>
-<created><datetime dst='true'>20130610T121037,08+01</datetime></created>
-<modified><datetime dst='true'>20130809T164047,28+01</datetime></modified>
-<revised><datetime dst='true'>20130809T164047,27+01</datetime></revised>
-<lastaccessed><datetime dst='true'>20130809T164047,28+01</datetime></lastaccessed>
-=======
 <noteinfo noteid='58ba' unid='83028B09E5B6015880257B86003D659C' sequence='19'>
 <created><datetime dst='true'>20130610T121037,08+01</datetime></created>
 <modified><datetime dst='true'>20130812T090920,80+01</datetime></modified>
 <revised><datetime dst='true'>20130812T090920,79+01</datetime></revised>
 <lastaccessed><datetime dst='true'>20130812T090920,80+01</datetime></lastaccessed>
->>>>>>> No Changes
 <addedtofile><datetime dst='true'>20130610T121037,09+01</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
