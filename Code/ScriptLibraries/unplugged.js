@@ -86,11 +86,14 @@ $(window).scroll( function() {
 	}
 });
 
-window.addEventListener("orientationchange", function() {
+window.addEventListener("orientationchange", setTimeout("changeorientation", 100), false);
+
+function changeorientation(){
+	alert("Orientation change");
 	hideViewsMenu();
 	initiscroll();
 	initHorizontalView();
-}, false);
+}
 
 function allowFormsInIscroll() {
 	[].slice.call(document.querySelectorAll('input, select, button, textarea'))
