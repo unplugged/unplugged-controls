@@ -17,6 +17,12 @@
 	<xp:this.resources>
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 		<xp:styleSheet href="/unpDialog.css"></xp:styleSheet>
+		<xp:script src="/unp/jquery-2.0.3.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/fastclick.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/iScroll.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/jquery.autocomplete.js" clientSide="true"></xp:script>
+		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
 	</xp:this.resources>
 	<div id="qunit" class="panel"></div>
 	<unp:unpHeader search="database" viewsButton="true" headerHomeLink="/UnpMain.xsp"
@@ -60,7 +66,7 @@
 					summaryColumn="Name" title="Employees" viewName="Employees"
 					xpageDoc="Employee.xsp" xp:key="facet_1" numberofrows="20"
 					refreshmethod="pull" position="menu-aligned"
-					collapseRows="No" wrapsummarytext="yes">
+					wrapsummarytext="yes">
 				</unp:unpFlatView>
 			</xp:this.facets>
 		</unp:unpScrollableArea>

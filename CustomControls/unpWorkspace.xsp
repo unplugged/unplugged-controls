@@ -23,12 +23,6 @@
 		<xp:metaData name="apple-mobile-web-app-status-bar-style"
 			content="black">
 		</xp:metaData>
-		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
-		<xp:script src="unp/jquery-2.0.3.min.js" clientSide="true"></xp:script>
-		<xp:script src="unp/fastclick.js" clientSide="true"></xp:script>
-		<xp:script src="unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
-		<xp:script src="unp/iscroll.min.js" clientSide="true"></xp:script>
-		<xp:script src="unp/workspace.js" clientSide="true"></xp:script>
 	</xp:this.resources>
 
 	<xp:panel tagName="section" styleClass="workspace-header"

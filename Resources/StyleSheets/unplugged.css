@@ -2122,10 +2122,6 @@ span.title {
 	  .tabfootertext {
 	    display: none !important;
 	  }
-	.hviewresults {
-		padding-left: 10px; 
-		padding-top: 10px;	
-	}
 }
 @media screen and (max-width: 700px) {
 	.hviewresults {
@@ -2447,7 +2443,6 @@ background-color: -webkit-linear-gradient(#808080, #464646);
   padding-left: 36px;
   font-weight: normal;
 }	
-
 #menuitems > li > a > .chevron,
 #menuitems > li > ul > li > a > .chevron {
 	background: url(unp/right-arrow-trans-white-large.png) no-repeat;

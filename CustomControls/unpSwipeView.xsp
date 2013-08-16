@@ -11,10 +11,6 @@ the specific language governing permissions and limitations under the License
 
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core">
 	
-	<xp:this.resources>
-		<xp:script src="unp/swipeview.js" clientSide="true"></xp:script>
-		<xp:styleSheet href="/unpSwipeView.css"></xp:styleSheet>
-	</xp:this.resources>
    <xp:this.data>
 		<xp:dominoDocument var="docImages"
 			documentId="#{javascript:compositeData.DocUNID;}"

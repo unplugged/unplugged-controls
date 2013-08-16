@@ -16,8 +16,7 @@ the specific language governing permissions and limitations under the License
 			<unp:unpFlatView insetData="true" detailColumn="Description"
 				numberofrows="20" summaryColumn="Name"
 				title="By Department (collapsed)" viewName="Employees"
-				xpageDoc="Employee.xsp" refreshmethod="pull" xp:key="facet_1"
-				collapseRows="Yes">
+				xpageDoc="Employee.xsp" refreshmethod="pull" xp:key="facet_1">
 			</unp:unpFlatView>
 		</xp:this.facets>
 	</unp:unpScrollableArea>

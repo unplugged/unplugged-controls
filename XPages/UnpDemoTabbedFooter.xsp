@@ -4,9 +4,16 @@
 
 	<xp:this.resources>
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
+		<xp:script src="/unp/jquery-2.0.3.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/fastclick.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/iScroll.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/jquery.autocomplete.js" clientSide="true"></xp:script>
+		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
+		<xp:styleSheet href="/unpDialog.css"></xp:styleSheet>
 	</xp:this.resources>
 	<unp:unpHeader search="none" searchPage="UnpSearch.xsp" headerHomeLink="/UnpMain.xsp"
-		viewsButton="false" backButtonText="Home" backButtonURL="/UnpMain.xsp"
+		viewsButton="false"
 		title="Footer tabs">
 	</unp:unpHeader>
 	<div id="content">
@@ -16,7 +23,7 @@
 					summaryColumn="Name" title="Employees" viewName="Employees"
 					xpageDoc="Employee.xsp" xp:key="facet_1" numberofrows="20"
 					refreshmethod="pull" position="left-aligned" photoColumn="Photo"
-					collapseRows="No" wrapsummarytext="yes">
+					wrapsummarytext="yes">
 				</unp:unpFlatView>
 			</xp:this.facets>
 		</unp:unpScrollableArea>

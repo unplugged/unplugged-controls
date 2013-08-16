@@ -32,11 +32,6 @@
 	</xp:this.data>
 	<xp:this.resources>
 		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
-
-		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
-		<xp:script src="/unp/iScroll.min.js" clientSide="true"></xp:script>
-		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
-		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 	</xp:this.resources>
 
 	<div id="results">
@@ -88,16 +83,14 @@ if (compositeData.enableAZPicker == "yes"){
 							rendered="#{javascript:!thisRowData.isCategory()}">
 							<xp:this.attrs>
 								<xp:attr name="onClick">
-									<xp:this.value><![CDATA[#{javascript:if (compositeData.collapseRows == "Yes"){
-	return "showListDetails('" + "rowDetails" + thisRowIndex + "'); event.stopPropagation();";
-}else{
+									<xp:this.value><![CDATA[#{javascript:
 	var url = getDbPath() + "/" + compositeData.xpageDoc + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID();
 	if (compositeData.ajaxload != "No"){
 		return "openDocument('" + url + "', 'content');"
 	}else{
 		return "document.location.href='" + url + "'";
 	}
-}}]]></xp:this.value>
+}]]></xp:this.value>
 								</xp:attr>
 							</xp:this.attrs>
 							<xp:this.styleClass><![CDATA[#{javascript:if (viewScope.rowcount == null){

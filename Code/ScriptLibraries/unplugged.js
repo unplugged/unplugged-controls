@@ -581,29 +581,6 @@ function x$(idTag, param) { // Updated 18 Feb 2012
 	idTag = idTag.replace(/:/gi, "\\:") + (param ? param : "");
 	return ($("#" + idTag));
 }
-// expand/ collapse link
-function showListDetails(id) {
-	var $div = $("." + id);
-	if ($div.text().length == 0) {
-		return;
-	} // no content to show
-	var $image = $div.slideToggle(300, function() {
-		// refresh iscroll
-			if (unpluggedserver) {
-				scrollContent.refresh();
-				try {
-					scrollContent.scrollToElement($div);
-				} catch (e) {
-
-				}
-			}
-		}).siblings("img");
-	if ($image.attr("src") == "unp/arrow-up.png") {
-		$image.attr("src", "unp/arrow-down.png");
-	} else {
-		$image.attr("src", "unp/arrow-up.png");
-	}
-}
 
 function doHViewFilter(language, year, primaryview, filterview, xpage, source, toplevelcategory){
 	if (language == null){

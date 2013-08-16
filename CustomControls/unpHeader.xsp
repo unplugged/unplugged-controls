@@ -26,17 +26,10 @@
 		</xp:metaData>
 		<xp:metaData name="apple-mobile-web-app-capable" content="yes">
 		</xp:metaData>
-		<xp:script src="/unp/jquery-2.0.3.min.js" clientSide="true"></xp:script>
-		<xp:script src="/unp/fastclick.js" clientSide="true"></xp:script>
-		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
-		<xp:script src="/unp/iScroll.min.js" clientSide="true"></xp:script>
-		<xp:script src="/unp/jquery.autocomplete.js" clientSide="true"></xp:script>
-		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
-		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 		<xp:metaData name="viewport"
 			content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1">
 		</xp:metaData>
-		<xp:styleSheet href="/unpDialog.css"></xp:styleSheet>
+		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 	</xp:this.resources>
 
 	<xp:text tagName="script" id="inlinescript">
@@ -80,15 +73,11 @@ else{ return true;
 			</xp:label>
 		</xp:panel>
 
-		<xp:label id="title" value="#{javascript:compositeData.title}">
+		<xp:label id="title" value="#{javascript:compositeData.title}"
+			styleClass="title">
 			<xp:this.attrs>
 				<xp:attr name="href" value="versionPopup"></xp:attr>
 			</xp:this.attrs>
-			<xp:this.styleClass><![CDATA[#{javascript:if (compositeData.appVersion != null && compositeData.appDescription != ""){
-	return "title opendialoglink";
-}else{
-	return "title";
-}}]]></xp:this.styleClass>
 		</xp:label>
 		<xp:panel id="searchbutton" rendered="#{javascript:compositeData.search != 'none'}"
 			styleClass="searchButton">
@@ -133,17 +122,4 @@ else{ return true;
 			<xp:attr name="type" value="text/javascript"></xp:attr>
 		</xp:this.attrs>
 		<xp:this.value><![CDATA[#{javascript:"var searchPage = \"" + compositeData.searchPage + "\";"}]]></xp:this.value>
-	</xp:text>	<div id="versionPopup" class="dialog" style=" display:none;">
-		<xp:panel tagName="h2" id="panel1">
-			<xp:text value="#{javascript:compositeData.appVersion}"></xp:text>
-		</xp:panel>
-		<div id="versionContent">
-			<xp:text value="#{javascript:compositeData.appDescription}"
-				escape="false">
-			</xp:text>
-		</div>
-		<div class="button" onclick="closeDialog('versionPopup')" style="margin-left: 25%;">
-			OK
-		</div>
-	</div>
-	<div id="underlayversionPopup" class="underlay"></div></xp:view>
+	</xp:text></xp:view>

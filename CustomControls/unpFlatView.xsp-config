@@ -189,20 +189,6 @@ No</editor-parameter>
       <large-icon>/icons/defaultLogo.png</large-icon>
     </icon>
     <property>
-      <property-name>collapseRows</property-name>
-      <property-class>string</property-class>
-      <display-name>collapseRows</display-name>
-      <property-extension>
-        <designer-extension>
-          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
-          <editor-parameter>Yes&#xd;
-No</editor-parameter>
-          <default-value>No</default-value>
-        </designer-extension>
-      </property-extension>
-      <description>Optional parameter. If you select yes then the standard 2 rows of data per document will switch into a single expandable row per document. </description>
-    </property>
-    <property>
       <property-name>wrapsummarytext</property-name>
       <property-class>string</property-class>
       <property-extension>
