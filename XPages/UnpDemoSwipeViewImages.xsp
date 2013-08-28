@@ -12,17 +12,7 @@ the specific language governing permissions and limitations under the License
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core"
 	xmlns:xc="http://www.ibm.com/xsp/custom" xmlns:unp="http://unplugged.teamstudio.com">
 	<xp:this.resources>
-		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
-		<xp:script src="/unp/jquery-2.0.3.min.js" clientSide="true"></xp:script>
-		<xp:script src="/unp/fastclick.js" clientSide="true"></xp:script>
-		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
-		<xp:script src="/unp/iScroll.min.js" clientSide="true"></xp:script>
-		<xp:script src="/unp/jquery.autocomplete.js" clientSide="true"></xp:script>
-		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
-		<xp:styleSheet href="/unpDialog.css"></xp:styleSheet>
-		<xp:script src="unp/swipeview.js" clientSide="true"></xp:script>
-		<xp:styleSheet href="/unpSwipeView.css"></xp:styleSheet>
 	</xp:this.resources>
 
 	<unp:unpSwipeView formName="Employee" closeXPage="UnpMain.xsp">

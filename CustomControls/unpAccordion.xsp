@@ -24,6 +24,9 @@ sessionScope.put('ajaxLoad', compositeData.ajaxload);}]]></xp:this.script>
 }
 }]]></xp:this.beforeRenderResponse>
 
+	<xp:this.resources>
+		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
+	</xp:this.resources>
 	<xp:panel>
 		<xp:this.styleClass><![CDATA[#{javascript:var out = new Array();
 if(compositeData.insetData) {
@@ -53,12 +56,13 @@ return list;}]]></xp:this.value>
 							<xp:this.value><![CDATA[#{javascript:"fetchDetails(this,'" + @ReplaceSubstring(compositeData.viewName, "\\","\\\\") + "','" + rowData + "', '" + @ReplaceSubstring(compositeData.xpage, "/", "") + "', '" + compositeData.dbName + "')"}]]></xp:this.value>
 						</xp:attr>
 					</xp:this.attrs>
-					<xp:text escape="true" id="computedField2" value="#{rowData}"
-						styleClass="catLabel">
+					<xp:text escape="true" id="computedField2"
+						value="#{rowData}" styleClass="catLabel">
 					</xp:text>
 				</xp:panel>
 				<div class="summaryDataRow">
-					<xp:panel tagName="ul" style="padding:0px; margin: 0px;">
+					<xp:panel tagName="ul"
+						style="padding:0px; margin: 0px;">
 
 						<xp:this.styleClass><![CDATA[#{javascript:if (viewScope.rowcount == null){
 	viewScope.rowcount = 1;
@@ -72,9 +76,10 @@ if (viewScope.rowcount == viewScope.categorycount){
 return out;}]]></xp:this.styleClass>
 					</xp:panel>
 					<div class="summaryDataRowHolder"></div>
-					<xp:div id="accLoadmorelink" styleClass="accLoadMoreLink hidden">
-						<xp:button value="Load More..." id="accLoadmorebutton"
-							styleClass="accLoadMoreButton">
+					<xp:div id="accLoadmorelink"
+						styleClass="accLoadMoreLink hidden">
+						<xp:button value="Load More..."
+							id="accLoadmorebutton" styleClass="accLoadMoreButton">
 							<xp:this.attrs>
 								<xp:attr name="onclick">
 									<xp:this.value><![CDATA[#{javascript:"fetchMoreDetails(this,'" + @ReplaceSubstring(compositeData.viewName, "\\","\\\\") + "','" + rowData + "', '" + @ReplaceSubstring(compositeData.xpage, "/", "") + "', '" + compositeData.dbName + "');"}]]></xp:this.value>

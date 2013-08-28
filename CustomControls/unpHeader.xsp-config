@@ -117,16 +117,6 @@ database</editor-parameter>
       <large-icon>/icons/defaultLogo.png</large-icon>
     </icon>
     <property>
-      <property-name>appVersion</property-name>
-      <property-class>string</property-class>
-      <display-name>The current version of the application</display-name>
-    </property>
-    <property>
-      <property-name>appDescription</property-name>
-      <property-class>string</property-class>
-      <display-name>A description of the current application</display-name>
-    </property>
-    <property>
       <property-name>headerHomeLink</property-name>
       <property-class>string</property-class>
       <property-extension>

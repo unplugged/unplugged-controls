@@ -10,14 +10,14 @@ the specific language governing permissions and limitations under the License
  -->
 
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core">
-	
-   <xp:this.data>
+
+	<xp:this.data>
 		<xp:dominoDocument var="docImages"
 			documentId="#{javascript:compositeData.DocUNID;}"
 			action="openDocument"
 			formName="#{javascript:compositeData.formName}">
 		</xp:dominoDocument>
-   </xp:this.data>
+	</xp:this.data>
 	<xp:this.beforePageLoad>
 		<xp:executeScript>
 			<xp:this.script><![CDATA[#{javascript:var images = new Array;
@@ -56,6 +56,10 @@ viewScope.put("images", images);
 }]]></xp:this.script>
 		</xp:executeScript>
 	</xp:this.beforePageLoad>
+	<xp:this.resources>
+		<xp:script src="unp/swipeview.js" clientSide="true"></xp:script>
+		<xp:styleSheet href="/unpSwipeView.css"></xp:styleSheet>
+	</xp:this.resources>
 	<div id="wrapper"></div>
 	<ul id="nav">
 		<li id="prev" onclick="gallery.prev()">-</li>
@@ -68,11 +72,10 @@ viewScope.put("images", images);
 		<li id="next" onclick="gallery.next()">+</li>
 	</ul>
 	<div id="closeButton">
-	<xp:link escape="true" id="link1"
-		value="#{javascript:compositeData.closeXpage;}">
-		<xp:label value="Close" id="label1">
-		</xp:label>
-	</xp:link>
+		<xp:link escape="true" id="link1"
+			value="#{javascript:compositeData.closeXpage;}">
+			<xp:label value="Close" id="label1"></xp:label>
+		</xp:link>
 	</div>
 	<div id="swipepreviousbutton" onclick="gallery.prev()">
 		<xp:image url="/unp%2Fglyphicons_210_left_arrow@2x.png"

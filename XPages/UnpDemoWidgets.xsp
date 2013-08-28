@@ -17,16 +17,9 @@
 	<xp:this.resources>
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 		<xp:styleSheet href="/unpDialog.css"></xp:styleSheet>
-		<xp:script src="/unp/jquery-2.0.3.min.js" clientSide="true"></xp:script>
-		<xp:script src="/unp/fastclick.js" clientSide="true"></xp:script>
-		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
-		<xp:script src="/unp/iScroll.min.js" clientSide="true"></xp:script>
-		<xp:script src="/unp/jquery.autocomplete.js" clientSide="true"></xp:script>
-		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
 	</xp:this.resources>
 	<unp:unpHeader search="database" viewsButton="true" headerHomeLink="/UnpMain.xsp"
-		title="Employees" searchPage="UnpDemoWidgetsSearch.xsp" appVersion="v1.4.0 (April 2013)">
-		<unp:this.appDescription><![CDATA[#{javascript:"<p>Our goal with this project is to create a highly-optimised set of XPages mobile controls with<br />a) close-to-native performance<br />b) attractive aesthetics and <br />c) compatible with the Teamstudio Unplugged mobile offline XPages engine running on iOS and Android devices</p><p>We wanted to make it as easy as possible for (reasonably experienced) XPage developers who don’t have much or any mobile development experience to create attractive Unplugged mobile apps.</p><p>Using these controls, we've also provided 3 application templates  (Doc Library, Journal, Teamroom) that are compatible with the original Lotus Domino application templates.  We are targeting both smartphone and tablet users, for iOS (iOS 5.01 and higher) and Android devices (Android 3.0 and higher).  </p><p>It is our intention to publish periodic updates to these controls to OpenNTF.</p><p>**Update: All Doc is now on the Wiki at: https://github.com/unplugged/unplugged-controls/wiki</p><p>IMPORTANT: When running the sample application on your server, open the 'HomeLinks' view and ensure it is empty. Then open the 'Databases' view, select all documents and run the agent 'Generate Home Workspace'. </p><p>This will create the documents required to populate the home page with icons.</p>"}]]></unp:this.appDescription>
+		title="Employees" searchPage="UnpDemoWidgetsSearch.xsp">
 	</unp:unpHeader>
 	<unp:unpNavigator>
 		<unp:this.menuItem>
@@ -59,6 +52,10 @@
 			<unp:menuItem label="Employees By Year"
 				page="/UnpDemoWidgetsByYear.xsp" ajaxtargetid="content"
 				ajaxloadid="contentwrapper">
+			</unp:menuItem>
+			<unp:menuItem ajaxloadid="contentwrapper"
+				ajaxtargetid="content" submenu="no" disabled="no" label="About"
+				page="/UnpAbout.xsp">
 			</unp:menuItem>
 		</unp:this.menuItem>
 	</unp:unpNavigator>
