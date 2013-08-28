@@ -214,6 +214,7 @@ function saveDocument(formid, unid, viewxpagename, formname, parentunid, dbname)
 			url : url,
 			data : data,
 			cache : false,
+			encoding:"UTF-8",
 			beforeSend : function() {
 				console.log("About to open URL");
 			}
