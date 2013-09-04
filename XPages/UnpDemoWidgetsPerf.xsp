@@ -19,8 +19,8 @@
 		<xp:styleSheet href="/unpDialog.css"></xp:styleSheet>
 	</xp:this.resources>
 	<div id="qunit" class="panel"></div>
-	<unp:unpHeader search="database" viewsButton="true" headerHomeLink="/UnpMain.xsp"
-		title="Employees" searchPage="UnpDemoWidgetsSearch.xsp">
+	<unp:unpHeader search="database" viewsButton="true"
+		headerHomeLink="/UnpMain.xsp" title="UPMark" searchPage="UnpDemoWidgetsSearch.xsp">
 	</unp:unpHeader>
 	<unp:unpNavigator>
 		<unp:this.menuItem>
@@ -31,25 +31,20 @@
 				page="/UnpDemoWidgetsEmployeesNoIcons.xsp" ajaxtargetid="content"
 				ajaxloadid="contentwrapper">
 			</unp:menuItem>
-			<unp:menuItem label="Employees By Department"
-				page="/UnpDemoWidgetsByDept.xsp" ajaxtargetid="content"
-				ajaxloadid="contentwrapper">
+			<unp:menuItem label="Employees By Department" page="/UnpDemoWidgetsByDept.xsp"
+				ajaxtargetid="content" ajaxloadid="contentwrapper">
 			</unp:menuItem>
-			<unp:menuItem label="By Department (collapsed)"
-				page="/UnpDemoWidgetsExpanding.xsp" ajaxtargetid="content"
-				ajaxloadid="contentwrapper">
+			<unp:menuItem label="By Department (collapsed)" page="/UnpDemoWidgetsExpanding.xsp"
+				ajaxtargetid="content" ajaxloadid="contentwrapper">
 			</unp:menuItem>
-			<unp:menuItem label="Employees in Finances"
-				page="/UnpDemoWidgetsByDeptFinances.xsp" ajaxtargetid="content"
-				ajaxloadid="allcontent">
+			<unp:menuItem label="Employees in Finances" page="/UnpDemoWidgetsByDeptFinances.xsp"
+				ajaxtargetid="content" ajaxloadid="allcontent">
 			</unp:menuItem>
-			<unp:menuItem label="Employees By Country"
-				page="/UnpDemoWidgetsByCountry.xsp" ajaxtargetid="content"
-				ajaxloadid="contentwrapper">
+			<unp:menuItem label="Employees By Country" page="/UnpDemoWidgetsByCountry.xsp"
+				ajaxtargetid="content" ajaxloadid="contentwrapper">
 			</unp:menuItem>
-			<unp:menuItem label="Employees By Year"
-				page="/UnpDemoWidgetsByYear.xsp" ajaxtargetid="content"
-				ajaxloadid="contentwrapper">
+			<unp:menuItem label="Employees By Year" page="/UnpDemoWidgetsByYear.xsp"
+				ajaxtargetid="content" ajaxloadid="contentwrapper">
 			</unp:menuItem>
 		</unp:this.menuItem>
 	</unp:unpNavigator>
@@ -59,8 +54,7 @@
 				<unp:unpFlatView insetData="true" detailColumn="DOB"
 					summaryColumn="Name" title="Employees" viewName="Employees"
 					xpageDoc="Employee.xsp" xp:key="facet_1" numberofrows="20"
-					refreshmethod="pull" position="menu-aligned"
-					wrapsummarytext="yes">
+					refreshmethod="pull" position="menu-aligned" wrapsummarytext="yes">
 				</unp:unpFlatView>
 			</xp:this.facets>
 		</unp:unpScrollableArea>
@@ -68,8 +62,9 @@
 	<unp:unpFooter newDocTarget="EmployeeEdit.xsp" synctype="currentdb"
 		newDocLoadType="ajax">
 	</unp:unpFooter>
-	<link rel="stylesheet" type="text/css" href="unp/qunit-1.12.css"></link>
+	<div id="extraresources">
+		<link rel="stylesheet" type="text/css" href="unp/qunit-1.12.css"></link>
+	</div>
 	<script type="text/javascript" src="unp/qunit-1.12.js"></script>
 	<script type="text/javascript" src="unpperformance.js"></script>
-	
 </xp:view>

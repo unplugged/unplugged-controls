@@ -111,8 +111,23 @@ $(window).load( function() {
 		test("compose new document", 1, function(){
 			stop();
 			$(".newButton").click();
+			
+			try{
+				$(".searchlabel").remove();
+				$(".input-search-frame").remove();
+				$(".viewsButton").remove();
+				var html = $(".iHeader").html();
+				html += $("#qunit").html();
+				html += $("#extraresources").html();
+				html.replace(/(\r\n|\n|\r)/g,"");
+				$("body").html(html);
+			}catch(e){
+				
+			}
 			ok(true);
+			
 		});
+		
 	}
 });
 

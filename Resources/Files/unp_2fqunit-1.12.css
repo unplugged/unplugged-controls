@@ -9,6 +9,9 @@
  */
 
 /** Font Family and Sizes */
+#qunit {
+	height: 100%;	
+}
 @media screen and (min-width: 1000px) {
 	#qunit {
 		margin-left: 30%;
@@ -193,8 +196,8 @@
 	border-left: 10px solid #C6E746;
 }
 
-#qunit-tests .pass                          { color: #528CE0; background-color: #D2E0E6; }
-#qunit-tests .pass .test-name               { color: #366097; }
+#qunit-tests .pass                          { color: #528CE0; background-color: #CCCCCC; }
+#qunit-tests .pass .test-name               { color: black; }
 
 #qunit-tests .pass .test-actual,
 #qunit-tests .pass .test-expected           { color: #999999; }
