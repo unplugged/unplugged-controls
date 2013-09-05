@@ -35,36 +35,27 @@
 				page="/UnpDemoNavigatorPage2.xsp" ajaxloadid="newcontent"
 				ajaxtargetid="results">
 			</unp:menuItem>
-			<unp:menuItem icon="/icons/id_tag.png" label="Test Page 3"
-				page="/UnpDemoNavigatorPage3.xsp">
+			<unp:menuItem icon="/icons/id_tag.png" label="Test Page 3">
 			</unp:menuItem>
-			<unp:menuItem icon="/icons/ipod.png" label="Test Page 4"
-				page="/UnpDemoNavigatorPage4.xsp">
+			<unp:menuItem icon="/icons/ipod.png" label="Test Page 4">
 			</unp:menuItem>
-			<unp:menuItem icon="/icons/key.png" label="Test Page 5"
-				page="/UnpDemoNavigatorPage5.xsp">
+			<unp:menuItem icon="/icons/key.png" label="Test Page 5">
 			</unp:menuItem>
-			<unp:menuItem icon="/icons/keyboard.png" label="Test Page 6"
-				page="/UnpDemoNavigatorPage6.xsp">
+			<unp:menuItem icon="/icons/keyboard.png" label="Test Page 6">
 			</unp:menuItem>
-			<unp:menuItem icon="/icons/lightbulb.png" label="Test Page 7"
-				page="/UnpDemoNavigatorPage7.xsp">
+			<unp:menuItem icon="/icons/lightbulb.png" label="Test Page 7">
 			</unp:menuItem>
-			<unp:menuItem icon="/icons/lock.png" label="Test Page 8"
-				page="/UnpDemoNavigatorPage8.xsp">
+			<unp:menuItem icon="/icons/lock.png" label="Test Page 8">
 			</unp:menuItem>
-			<unp:menuItem icon="/icons/magnet.png" label="Test Page 9"
-				page="/UnpDemoNavigatorPage9.xsp">
+			<unp:menuItem icon="/icons/magnet.png" label="Test Page 9">
 			</unp:menuItem>
-			<unp:menuItem icon="/icons/male.png" label="Test Page 10"
-				page="/UnpDemoNavigatorPage10.xsp">
+			<unp:menuItem icon="/icons/male.png" label="Test Page 10">
 			</unp:menuItem>
-			<unp:menuItem icon="/icons/map_marker.png" label="Test Page 11"
-				page="/UnpDemoNavigatorPage11.xsp">
+			<unp:menuItem icon="/icons/map_marker.png" label="Test Page 11">
 			</unp:menuItem>
 		</unp:this.menuItem>
 	</unp:unpNavigator>
-	<div id="results" style="padding-top:10px;padding-left: 15px;padding-right: 10px;">
+	<div id="results" style="padding-top:8px;padding-left: 15px;padding-right: 10px;">
 		<div id="newcontent">
 			<unp:unpScrollableArea>
 				<xp:this.facets>
