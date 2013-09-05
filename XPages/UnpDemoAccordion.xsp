@@ -20,15 +20,14 @@ the specific language governing permissions and limitations under the License
 		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
 	</xp:this.resources>
 
-	<unp:unpHeader search="none" searchPage="UnpSearch.xsp" headerHomeLink="/UnpMain.xsp"
-		viewsButton="false" title="Accordion" backButtonText="Back"
-		backButtonURL="UnpMain.xsp">
+	<unp:unpHeader search="none" searchPage="UnpSearch.xsp"
+		headerHomeLink="/UnpMain.xsp" viewsButton="false" title="Accordion">
 	</unp:unpHeader>
 	<div id="content" class="left-aligned">
 		<unp:unpScrollableArea>
 			<xp:this.facets>
 				<unp:unpAccordion xp:key="facet_1"
-					viewName="EmployessCatByDept" xpage="/Employee.xsp" insetData="true"
+					viewName="EmployessCatByDept" insetData="true"
 					expandfirstcategory="yes">
 				</unp:unpAccordion>
 			</xp:this.facets>
