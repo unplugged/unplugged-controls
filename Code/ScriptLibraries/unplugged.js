@@ -357,6 +357,10 @@ function initAutoComplete() {
 	// }
 }
 
+var touchmovehandler = function(e) {
+	e.preventDefault()
+}
+
 var scrollContent;
 var scrollMenu;
 function initiscroll() {
@@ -372,9 +376,9 @@ function initiscroll() {
 		return false;
 	});
 	if (unpluggedserver) {
-		document.addEventListener('touchmove', function(e) {
-			e.preventDefault()
-		});
+		if (!getURLParameter("starttime")){
+			document.addEventListener('touchmove', touchmovehandler);
+		}
 		// Initialise any iScroll that needs it
 		try {
 			pullUpEl = document.getElementById('pullUp');

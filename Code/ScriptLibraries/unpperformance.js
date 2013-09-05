@@ -121,6 +121,9 @@ $(window).load( function() {
 				html += $("#extraresources").html();
 				html.replace(/(\r\n|\n|\r)/g,"");
 				$("body").html(html);
+				$("#qunit").height("100%");
+				$("#qunit").css("overflow", "scroll");
+				document.removeEventListener('touchmove', touchmovehandler);
 			}catch(e){
 				
 			}
