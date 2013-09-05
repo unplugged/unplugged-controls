@@ -18,7 +18,7 @@
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 	</xp:this.resources>
 	<unp:unpHeader search="none" viewsButton="false" title="Teamroom"
-		headerHomeLink="/UnpMain.xsp" backButtonText="Back" backButtonURL="UnpMain.xsp">
+		headerHomeLink="/UnpMain.xsp">
 	</unp:unpHeader>
 
 	<div id="content">
