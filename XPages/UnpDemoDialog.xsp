@@ -23,8 +23,8 @@ the specific language governing permissions and limitations under the License
 		title="Employees">
 	</unp:unpHeader>
 	<p style="padding: 40px;">
-		<a href='#' onclick="openDialog('dialogPopup')" class="opendialoglink" style="font-size:14pt;text-align:center; color: white;">Open Dialog
-		</a>
+		<input type="button" href='#' onclick="openDialog('dialogPopup')" class="button" value="Open Dialog">
+		</input>
 	</p>
 	<unp:unpDialog callback="myCallBackFunction" title="Demo Dialog">
 		<xp:this.facets>
