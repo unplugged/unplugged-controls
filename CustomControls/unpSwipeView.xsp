@@ -57,6 +57,9 @@ viewScope.put("images", images);
 		</xp:executeScript>
 	</xp:this.beforePageLoad>
 	<xp:this.resources>
+		<xp:script src="/unp/jquery-2.0.3.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/fastclick.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
 		<xp:script src="unp/swipeview.js" clientSide="true"></xp:script>
 		<xp:styleSheet href="/unpSwipeView.css"></xp:styleSheet>
 	</xp:this.resources>
@@ -72,10 +75,16 @@ viewScope.put("images", images);
 		<li id="next" onclick="gallery.next()">+</li>
 	</ul>
 	<div id="closeButton">
-		<xp:link escape="true" id="link1"
-			value="#{javascript:compositeData.closeXpage;}">
-			<xp:label value="Close" id="label1"></xp:label>
-		</xp:link>
+		<xp:panel tagName="a" id="link1">
+			<xp:this.attrs>
+				<xp:attr name="onclick">
+					<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='" + compositeData.closeXPage + "';"}]]></xp:this.value>
+				</xp:attr>
+				<xp:attr name="href" value="#">
+				</xp:attr>
+			</xp:this.attrs>
+			Close
+		</xp:panel>
 	</div>
 	<div id="swipepreviousbutton" onclick="gallery.prev()">
 		<xp:image url="/unp%2Fglyphicons_210_left_arrow@2x.png"

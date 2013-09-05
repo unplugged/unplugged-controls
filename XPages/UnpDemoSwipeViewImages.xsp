@@ -15,7 +15,7 @@ the specific language governing permissions and limitations under the License
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 	</xp:this.resources>
 
-	<unp:unpSwipeView formName="Employee" closeXPage="UnpMain.xsp">
+	<unp:unpSwipeView formName="Employee" closeXPage="UnpDemoSwipeView.xsp">
 		<unp:this.DocUNID><![CDATA[#{javascript:param.get("documentId");}]]></unp:this.DocUNID>
 	</unp:unpSwipeView>
 </xp:view>

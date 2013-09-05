@@ -132,6 +132,8 @@ body {
 	transition-property:opacity;
 	opacity:1;
 	pointer-events:none;
+	max-height: 95%;
+	max-width: 95%;
 }
 
 #swipeview-slider span {
@@ -240,6 +242,7 @@ body {
   height:100%;
   padding-top:4px;
   text-decoration:none;
+  text-align: center;
 }
 #closeButton > a > span{
  margin-left:7.0px;
