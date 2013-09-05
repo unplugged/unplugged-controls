@@ -1928,6 +1928,16 @@ span.title {
 	cursor: pointer;
 }
 
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) { 
+	#footerTabBar {
+		position: absolute;
+		right: 0px;
+	}	
+}
+
 #swipepreviousbutton {
 	position: absolute;
 	top: 50%;
@@ -1950,7 +1960,7 @@ span.title {
 	margin-left: 0% !important;
 }
 
-.atozpicker {
+.atozpicker, .numberpicker {
 	display: none;
 	position: fixed;
 	top: 81px;
@@ -1991,8 +2001,8 @@ span.title {
 	}
 }
 
-@media screen and (min-height: 401px) and (max-height: 700px) {
-	.atozpicker {
+@media screen and (min-height: 401px) and (max-height: 700px) and (orientation : portrait) {
+	.atozpicker, .numberpicker {
 		top: 40px;
 	}
 	.atozletter {
@@ -2012,8 +2022,33 @@ span.title {
 	}
 }
 
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) {
+	.atozpicker, .numberpicker {
+		top: 35px;
+	}
+	.atozletter {
+		display: block;
+		font-size: 10px;
+		font-weight: normal;
+		padding-top: 0px;
+		padding-bottom: 2px;
+	}
+	.fourthletter {
+	  display: block;
+	}
+	.otherletter {
+	  display: block;
+	}
+	.atozletter-divider {
+    display: none;
+	}
+}
+
 @media screen and (max-height: 400px) {
-	.atozpicker {
+	.atozpicker, .numberpicker {
 		top: 35px;
 	}
 	.atozletter {

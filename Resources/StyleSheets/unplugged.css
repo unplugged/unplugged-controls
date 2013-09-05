@@ -1928,6 +1928,16 @@ span.title {
 	cursor: pointer;
 }
 
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) { 
+	#footerTabBar {
+		position: absolute;
+		right: 0px;
+	}	
+}
+
 #swipepreviousbutton {
 	position: absolute;
 	top: 50%;
@@ -1991,7 +2001,7 @@ span.title {
 	}
 }
 
-@media screen and (min-height: 401px) and (max-height: 700px) {
+@media screen and (min-height: 401px) and (max-height: 700px) and (orientation : portrait) {
 	.atozpicker, .numberpicker {
 		top: 40px;
 	}
@@ -2030,7 +2040,7 @@ and (orientation : portrait) {
 	  display: block;
 	}
 	.otherletter {
-	  display: none;
+	  display: block;
 	}
 	.atozletter-divider {
     display: none;
