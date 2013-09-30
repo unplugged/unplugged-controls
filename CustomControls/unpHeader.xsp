@@ -28,6 +28,7 @@
 		<xp:script src="/unp/jquery.autocomplete.js" clientSide="true"></xp:script>
 		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
 		<xp:styleSheet href="/unpDialog.css"></xp:styleSheet>
+		<xp:styleSheet href="/unp/glyphicons.css"></xp:styleSheet>
 		<xp:metaData name="apple-mobile-web-app-status-bar-style"
 			content="black-translucent">
 		</xp:metaData>
@@ -93,7 +94,7 @@ else{ return true;
 		<xp:panel id="homebutton" styleClass="homeButton">
 			<xp:this.attrs>
 				<xp:attr name="onclick">
-					<xp:this.value><![CDATA[#{javascript:if (isUnpluggedServer() && (compositeData.headerHomeLink == null || compositeData.headerHomeLink == "")){
+					<xp:this.value><![CDATA[#{javascript:if (isUnpluggedServer() && isEmpty(compositeData.headerHomeLink)){
 	return "$.blockUI();window.location.href=\"/unpws.unp/\";";
 }else{
 	return "$.blockUI();window.location.href=\"/" + @ReplaceSubstring(database.getFilePath(), "\\", "/") + compositeData.headerHomeLink + "\";";
