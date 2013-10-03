@@ -85,6 +85,12 @@ function initHideFooter(){
 		$('input').on('blur', function(){
 			$(".footer").show();
 		});
+		$('textarea').on('focus', function(){
+			$(".footer").hide();
+		});
+		$('textarea').on('blur', function(){
+			$(".footer").show();
+		});
 	}catch(e){
 		
 	}
