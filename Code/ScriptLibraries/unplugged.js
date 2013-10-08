@@ -77,19 +77,16 @@ $(window)
 					$(document).ajaxStop(initHideFooter);
 				});
 
+var footerpadding = "";
 function initHideFooter(){
 	try{
-		$('input').on('focus', function(){
+		$(':input, textarea, select').on('focus', function(){
 			$(".footer").hide();
 		});
-		$('input').on('blur', function(){
+		$(':input, textarea, select').on('blur', function(){
 			$(".footer").show();
-		});
-		$('textarea').on('focus', function(){
-			$(".footer").hide();
-		});
-		$('textarea').on('blur', function(){
-			$(".footer").show();
+			$("body").css("padding-bottom", footerpadding);
+			window.scrollTo(0, 1);
 		});
 	}catch(e){
 		
