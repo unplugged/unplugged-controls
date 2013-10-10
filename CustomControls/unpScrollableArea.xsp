@@ -16,8 +16,7 @@ the specific language governing permissions and limitations under the License
 		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 	</xp:this.resources>
 	<div id="contentwrapper">
-		<xp:div id="contentwrapper" styleClass="iscrollcontent"
-			style="width: 100%; height: 100%;">
+		<xp:div id="contentwrapper" styleClass="iscrollcontent">
 			<xp:callback facetName="facet_1" id="callback1"></xp:callback>
 		</xp:div>
 	</div>

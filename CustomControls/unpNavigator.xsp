@@ -19,7 +19,7 @@
 		<xp:styleSheet href="/unp/glyphicons.css"></xp:styleSheet>
 	</xp:this.resources>
 	<div id="menu" class="iscrollmenu">
-		<div id="menuPane" class="offScreen" style="height: 100%;position:absolute;overflow:scroll;-webkit-overflow-scrolling: touch;">
+		<div id="menuPane" class="offScreen">
 			<xp:panel styleClass="navScrollArea" id="navScrollArea"
 				style="height: 100%;">
 				<ul id="menuitems">
@@ -57,15 +57,16 @@ return out;}]]></xp:this.styleClass>
 								</xp:attr>
 							</xp:this.attrs>
 							<xp:panel id="menulink" tagName="div" styleClass="menulink">
-								<xp:panel tagName="i" id="icon">
+								<xp:image
+									url="#{javascript:menuItem.icon}" id="image2"
+									styleClass="iconleft">
 									<xp:this.rendered><![CDATA[#{javascript:if (viewScope.menuItemIndex == null){
 	viewScope.menuItemIndex = 0;
 }else{
 	viewScope.menuItemIndex = viewScope.menuItemIndex + 1;
 }
 menuItem.icon != null && menuItem.icon != ""}]]></xp:this.rendered>
-									<xp:this.styleClass><![CDATA[#{javascript:"glyphicons " + menuItem.icon}]]></xp:this.styleClass>
-								</xp:panel>
+								</xp:image>
 								<xp:text id="menutext" styleClass="menutext"
 									value="#{javascript:menuItem.label;}">
 								</xp:text>
