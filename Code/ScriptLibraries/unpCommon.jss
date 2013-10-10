@@ -53,6 +53,14 @@ function isUnpluggedServer(){
 	return applicationScope.unpluggedserver;
 }
 
+function isAndroid(){
+	if (context.getUserAgent().getUserAgent().indexOf("Android") > -1){
+		return true;
+	}else{
+		return false;
+	}
+}
+
 function $A( object ){
 	if( typeof object === 'undefined' || object === null ){ return []; }
 	if( typeof object === 'string' ){ return [ object ]; }

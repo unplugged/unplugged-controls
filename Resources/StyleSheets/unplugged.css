@@ -7,7 +7,6 @@
  * on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
  * the specific language governing permissions and limitations under the License
  */
-
 body {
 	background-color: #464646;
 	padding-top: 0px;
@@ -61,156 +60,172 @@ body {
 	text-indent: -9999px;
 }
 
-.backButtonHolder{
-	padding-top: 15px;	
+.backButtonHolder {
+	padding-top: 15px;
 }
+
 .backButton {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  position: relative;
-  overflow: visible;
-  margin: 0;
-  padding: 0;
-  min-width: 20px;
-  height: 26px;
-  border: 0;
-  background: none;
-  cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle; *
+	vertical-align: auto;
+	zoom: 1; *
+	display: inline;
+	position: relative;
+	overflow: visible;
+	margin: 0;
+	padding: 0;
+	min-width: 20px;
+	height: 26px;
+	border: 0;
+	background: none;
+	cursor: pointer;
 }
+
 .backButton:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-box-shadow: 1px 2px 1px -2px rgba(0, 0, 0, 0.4) inset, -1px 4px 2px -4px rgba(0, 0, 0, 0.4) inset;
-  -moz-box-shadow: 1px 2px 1px -2px rgba(0, 0, 0, 0.4) inset, -1px 4px 2px -4px rgba(0, 0, 0, 0.4) inset;
-  box-shadow: 1px 2px 1px -2px rgba(0, 0, 0, 0.4) inset, -1px 4px 2px -4px rgba(0, 0, 0, 0.4) inset;
-  background-color: #111111;
-  background-image: -webkit-gradient(linear, 100% 0%, 0% 100%, color-stop(0%, #444444), color-stop(100%, #111111));
-  background-image: -webkit-linear-gradient(top right, #444444, #111111);
-  background-image: -moz-linear-gradient(top right, #444444, #111111);
-  background-image: -o-linear-gradient(top right, #444444, #111111);
-  background-image: linear-gradient(top right, #444444, #111111);
-  -webkit-background-size: 20px 18px;
-  -moz-background-size: 20px 18px;
-  -o-background-size: 20px 18px;
-  background-size: 20px 18px;
-  -webkit-transform: rotate(-45deg) scale(0.86) skew(-9deg, -9deg);
-  -moz-transform: rotate(-45deg) scale(0.86) skew(-9deg, -9deg);
-  -ms-transform: rotate(-45deg) scale(0.86) skew(-9deg, -9deg);
-  -o-transform: rotate(-45deg) scale(0.86) skew(-9deg, -9deg);
-  transform: rotate(-45deg) scale(0.86) skew(-9deg, -9deg);
-  -webkit-transform-origin: 50% 50%;
-  -moz-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  -o-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  -webkit-border-radius: 0 6px 0 6px;
-  -moz-border-radius: 0 6px 0 6px;
-  -ms-border-radius: 0 6px 0 6px;
-  -o-border-radius: 0 6px 0 6px;
-  border-radius: 0 6px 0 6px;
-  -moz-border-radius-topright: 8px 5px;
-  -webkit-border-top-right-radius: 8px 5px;
-  border-top-right-radius: 8px 5px;
-  -moz-border-radius-bottomleft: 5px 8px;
-  -webkit-border-bottom-left-radius: 5px 8px;
-  border-bottom-left-radius: 5px 8px;
-  position: relative;
-  top: 0;
-  left: 16px;
-  width: 22px;
-  height: 22px;
-  content: "";
-  border-width: 0 0 1px 1px;
-  border-color: transparent transparent transparent #aaaaaa;
-  border-style: solid;
-  background-position: -2px 0;
-  background-repeat: no-repeat;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-box-shadow: 1px 2px 1px -2px rgba(0, 0, 0, 0.4) inset, -1px 4px
+		2px -4px rgba(0, 0, 0, 0.4) inset;
+	-moz-box-shadow: 1px 2px 1px -2px rgba(0, 0, 0, 0.4) inset, -1px 4px 2px
+		-4px rgba(0, 0, 0, 0.4) inset;
+	box-shadow: 1px 2px 1px -2px rgba(0, 0, 0, 0.4) inset, -1px 4px 2px -4px
+		rgba(0, 0, 0, 0.4) inset;
+	background-color: #111111;
+	background-image: -webkit-gradient(linear, 100% 0%, 0% 100%, color-stop(0%, #444444),
+		color-stop(100%, #111111) );
+	background-image: -webkit-linear-gradient(top right, #444444, #111111);
+	background-image: -moz-linear-gradient(top right, #444444, #111111);
+	background-image: -o-linear-gradient(top right, #444444, #111111);
+	background-image: linear-gradient(top right, #444444, #111111);
+	-webkit-background-size: 20px 18px;
+	-moz-background-size: 20px 18px;
+	-o-background-size: 20px 18px;
+	background-size: 20px 18px;
+	-webkit-transform: rotate(-45deg) scale(0.86) skew(-9deg, -9deg);
+	-moz-transform: rotate(-45deg) scale(0.86) skew(-9deg, -9deg);
+	-ms-transform: rotate(-45deg) scale(0.86) skew(-9deg, -9deg);
+	-o-transform: rotate(-45deg) scale(0.86) skew(-9deg, -9deg);
+	transform: rotate(-45deg) scale(0.86) skew(-9deg, -9deg);
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	-o-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle; *
+	vertical-align: auto;
+	zoom: 1; *
+	display: inline;
+	-webkit-border-radius: 0 6px 0 6px;
+	-moz-border-radius: 0 6px 0 6px;
+	-ms-border-radius: 0 6px 0 6px;
+	-o-border-radius: 0 6px 0 6px;
+	border-radius: 0 6px 0 6px;
+	-moz-border-radius-topright: 8px 5px;
+	-webkit-border-top-right-radius: 8px 5px;
+	border-top-right-radius: 8px 5px;
+	-moz-border-radius-bottomleft: 5px 8px;
+	-webkit-border-bottom-left-radius: 5px 8px;
+	border-bottom-left-radius: 5px 8px;
+	position: relative;
+	top: 0;
+	left: 16px;
+	width: 22px;
+	height: 22px;
+	content: "";
+	border-width: 0 0 1px 1px;
+	border-color: transparent transparent transparent #aaaaaa;
+	border-style: solid;
+	background-position: -2px 0;
+	background-repeat: no-repeat;
 }
+
 .backButton:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-color: #111111;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #111111));
-  background-image: -webkit-linear-gradient(top, #444444, #111111);
-  background-image: -moz-linear-gradient(top, #444444, #111111);
-  background-image: -o-linear-gradient(top, #444444, #111111);
-  background-image: linear-gradient(top, #444444, #111111);
-  -webkit-background-size: 26px 26px;
-  -moz-background-size: 26px 26px;
-  -o-background-size: 26px 26px;
-  background-size: 26px 26px;
-  -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4) inset, -1px 1px 1px -1px rgba(0, 0, 0, 0.4) inset;
-  -moz-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4) inset, -1px 1px 1px -1px rgba(0, 0, 0, 0.4) inset;
-  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4) inset, -1px 1px 1px -1px rgba(0, 0, 0, 0.4) inset;
-  text-shadow: 0 -1px 0 black;
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  position: relative;
-  top: 0;
-  left: 2px;
-  margin: 0;
-  padding: 5px 10px 5px 5px;
-  width: auto;
-  height: 26px;
-  color: white;
-  content: attr(data-title);
-  text-decoration: none;
-  white-space: nowrap;
-  line-height: 16px;
-  border-width: 0 0 1px 0;
-  border-color: #aaaaaa;
-  border-style: solid;
-  font-weight: 500;
-  font-size: 12px;
-  font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: #111111;
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444),
+		color-stop(100%, #111111) );
+	background-image: -webkit-linear-gradient(top, #444444, #111111);
+	background-image: -moz-linear-gradient(top, #444444, #111111);
+	background-image: -o-linear-gradient(top, #444444, #111111);
+	background-image: linear-gradient(top, #444444, #111111);
+	-webkit-background-size: 26px 26px;
+	-moz-background-size: 26px 26px;
+	-o-background-size: 26px 26px;
+	background-size: 26px 26px;
+	-webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4) inset, -1px 1px
+		1px -1px rgba(0, 0, 0, 0.4) inset;
+	-moz-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4) inset, -1px 1px 1px
+		-1px rgba(0, 0, 0, 0.4) inset;
+	box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4) inset, -1px 1px 1px -1px
+		rgba(0, 0, 0, 0.4) inset;
+	text-shadow: 0 -1px 0 black;
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle; *
+	vertical-align: auto;
+	zoom: 1; *
+	display: inline;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+	position: relative;
+	top: 0;
+	left: 2px;
+	margin: 0;
+	padding: 5px 10px 5px 5px;
+	width: auto;
+	height: 26px;
+	color: white;
+	content: attr(data-title);
+	text-decoration: none;
+	white-space: nowrap;
+	line-height: 16px;
+	border-width: 0 0 1px 0;
+	border-color: #aaaaaa;
+	border-style: solid;
+	font-weight: 500;
+	font-size: 12px;
+	font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
-.backButton:hover:after {
-  background-color: black;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #000000), color-stop(100%, #373737));
-  background-image: -webkit-linear-gradient(top, #000000, #373737);
-  background-image: -moz-linear-gradient(top, #000000, #373737);
-  background-image: -o-linear-gradient(top, #000000, #373737);
-  background-image: linear-gradient(top, #000000, #373737);
-  -webkit-background-size: 26px 26px;
-  -moz-background-size: 26px 26px;
-  -o-background-size: 26px 26px;
-  background-size: 26px 26px;
+
+.backButton:hover :after {
+	background-color: black;
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #000000),
+		color-stop(100%, #373737) );
+	background-image: -webkit-linear-gradient(top, #000000, #373737);
+	background-image: -moz-linear-gradient(top, #000000, #373737);
+	background-image: -o-linear-gradient(top, #000000, #373737);
+	background-image: linear-gradient(top, #000000, #373737);
+	-webkit-background-size: 26px 26px;
+	-moz-background-size: 26px 26px;
+	-o-background-size: 26px 26px;
+	background-size: 26px 26px;
 }
-.backButton:hover:before {
-  background-color: black;
-  background-image: -webkit-gradient(linear, 100% 0%, 0% 100%, color-stop(0%, #000000), color-stop(100%, #373737));
-  background-image: -webkit-linear-gradient(top right, #000000, #373737);
-  background-image: -moz-linear-gradient(top right, #000000, #373737);
-  background-image: -o-linear-gradient(top right, #000000, #373737);
-  background-image: linear-gradient(top right, #000000, #373737);
-  -webkit-background-size: 20px 18px;
-  -moz-background-size: 20px 18px;
-  -o-background-size: 20px 18px;
-  background-size: 20px 18px;
+
+.backButton:hover :before {
+	background-color: black;
+	background-image: -webkit-gradient(linear, 100% 0%, 0% 100%, color-stop(0%, #000000),
+		color-stop(100%, #373737) );
+	background-image: -webkit-linear-gradient(top right, #000000, #373737);
+	background-image: -moz-linear-gradient(top right, #000000, #373737);
+	background-image: -o-linear-gradient(top right, #000000, #373737);
+	background-image: linear-gradient(top right, #000000, #373737);
+	-webkit-background-size: 20px 18px;
+	-moz-background-size: 20px 18px;
+	-o-background-size: 20px 18px;
+	background-size: 20px 18px;
 }
 
 .backlabel {
@@ -241,7 +256,7 @@ body {
 
 .footerTabtext {
 	color: #CCCCCC;
- line-height: 10px;
+	line-height: 10px;
 }
 
 .tabSelected {
@@ -276,8 +291,8 @@ body {
 }
 
 @media screen and (min-width: 700px) {
-	.backButtonHolder{
-		padding-top:10px !important;
+	.backButtonHolder {
+		padding-top: 10px !important;
 	}
 	.backButton {
 		-webkit-appearance: none;
@@ -301,11 +316,15 @@ body {
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
-		-webkit-box-shadow: 1px 2px 1px -2px rgba(0, 0, 0, 0.4) inset, -1px 4px 2px -4px rgba(0, 0, 0, 0.4) inset;
-		-moz-box-shadow: 1px 2px 1px -2px rgba(0, 0, 0, 0.4) inset, -1px 4px 2px -4px rgba(0, 0, 0, 0.4) inset;
-		box-shadow: 1px 2px 1px -2px rgba(0, 0, 0, 0.4) inset, -1px 4px 2px -4px rgba(0, 0, 0, 0.4) inset;
+		-webkit-box-shadow: 1px 2px 1px -2px rgba(0, 0, 0, 0.4) inset, -1px 4px
+			2px -4px rgba(0, 0, 0, 0.4) inset;
+		-moz-box-shadow: 1px 2px 1px -2px rgba(0, 0, 0, 0.4) inset, -1px 4px 2px
+			-4px rgba(0, 0, 0, 0.4) inset;
+		box-shadow: 1px 2px 1px -2px rgba(0, 0, 0, 0.4) inset, -1px 4px 2px -4px
+			rgba(0, 0, 0, 0.4) inset;
 		background-color: #111111;
-		background-image: -webkit-gradient(linear, 100% 0%, 0% 100%, color-stop(0%, #444444), color-stop(100%, #111111));
+		background-image: -webkit-gradient(linear, 100% 0%, 0% 100%, color-stop(0%, #444444),
+			color-stop(100%, #111111) );
 		background-image: -webkit-linear-gradient(top right, #444444, #111111);
 		background-image: -moz-linear-gradient(top right, #444444, #111111);
 		background-image: -o-linear-gradient(top right, #444444, #111111);
@@ -356,7 +375,8 @@ body {
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 		background-color: #111111;
-		background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444), color-stop(100%, #111111));
+		background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #444444),
+			color-stop(100%, #111111) );
 		background-image: -webkit-linear-gradient(top, #444444, #111111);
 		background-image: -moz-linear-gradient(top, #444444, #111111);
 		background-image: -o-linear-gradient(top, #444444, #111111);
@@ -365,9 +385,12 @@ body {
 		-moz-background-size: 26px 26px;
 		-o-background-size: 26px 26px;
 		background-size: 36px 36px;
-		-webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4) inset, -1px 1px 1px -1px rgba(0, 0, 0, 0.4) inset;
-		-moz-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4) inset, -1px 1px 1px -1px rgba(0, 0, 0, 0.4) inset;
-		box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4) inset, -1px 1px 1px -1px rgba(0, 0, 0, 0.4) inset;
+		-webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4) inset, -1px 1px
+			1px -1px rgba(0, 0, 0, 0.4) inset;
+		-moz-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4) inset, -1px 1px 1px
+			-1px rgba(0, 0, 0, 0.4) inset;
+		box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.4) inset, -1px 1px 1px -1px
+			rgba(0, 0, 0, 0.4) inset;
 		text-shadow: 0 -1px 0 black;
 		display: -moz-inline-stack;
 		display: inline-block;
@@ -395,18 +418,20 @@ body {
 		border-style: solid;
 		font-weight: 500;
 		font-size: 14px;
-		font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold",
+			"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	}
 }
+
 @media screen and (max-width: 700px) {
-	.backButtonHolder{
-		padding-top: 9px;	
+	.backButtonHolder {
+		padding-top: 9px;
 	}
 	.backlabel {
 		font-size: 12px;
 		line-height: 32px;
 	}
-	.homeButton{
+	.homeButton {
 		width: 36px;
 	}
 }
@@ -569,9 +594,9 @@ body {
 		/*margin-right: 100px;*/
 		width: 300px;
 	}
- li.title{
-  margin-top: 12px;
- }
+	li.title {
+		margin-top: 12px;
+	}
 }
 
 @media screen and (min-width: 701px) {
@@ -585,20 +610,18 @@ body {
 	.companyLogo {
 		display: none;
 	}
-	span.title {
-		/*margin-top: 14px;*/
-		/*margin-right: 120px;*/
-	    position: absolute;
-	    left: 100px;
-	    right: 100px;
-	  	margin-left: auto !important;
-	  	margin-right: auto !important;
-	    margin-top: 0px;
-     top: 15px;
+	span.title { /*margin-top: 14px;*/ /*margin-right: 120px;*/
+		position: absolute;
+		left: 100px;
+		right: 100px;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		margin-top: 0px;
+		top: 15px;
 	}
- li.title {
-  top: 14px;
- }
+	li.title {
+		top: 14px;
+	}
 	.workspace .title {
 		margin-right: 0;
 	}
@@ -632,12 +655,12 @@ body {
 		height: 45px;
 	}
 	span.title {
-	  	position: absolute;
-	  	top: 0px;
-	  	left: 70px;
-	  	right: 70px;
-	  	margin-left: auto;
-	  	margin-right: auto;
+		position: absolute;
+		top: 0px;
+		left: 70px;
+		right: 70px;
+		margin-left: auto;
+		margin-right: auto;
 		font-size: 16px;
 		margin-top: 10px;
 		/*margin-right: 65px;
@@ -648,15 +671,15 @@ body {
 		overflow: hidden;
 		white-space: nowrap;
 	}
- li.title {
-  font-size: 16px;
-  margin-top: 10px;
-  text-overflow: ellipsis;
-  text-align: center;
-  display: block;
-  overflow: hidden;
-  white-space: nowrap;
- }
+	li.title {
+		font-size: 16px;
+		margin-top: 10px;
+		text-overflow: ellipsis;
+		text-align: center;
+		display: block;
+		overflow: hidden;
+		white-space: nowrap;
+	}
 	.workspace .title {
 		margin-right: 0;
 	}
@@ -952,7 +975,7 @@ body {
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
-.viewMenuItemDisabled div.menulink{
+.viewMenuItemDisabled div.menulink {
 	opacity: 0.2;
 }
 
@@ -963,7 +986,7 @@ body {
 	border-top-right-radius: 8px;
 }
 
-.navScrollArea ul li:last-child, .navroundedbottom {
+.navScrollArea ul li:last-child,.navroundedbottom {
 	border-radius: 0 0 8px 8px;
 }
 
@@ -1295,7 +1318,6 @@ to {
 	display: block;
 	font-size: 16px;
 	padding-left: 2%;
-	
 	line-height: 24px;
 	height: 44px;
 	background: #fff;
@@ -1346,9 +1368,9 @@ to {
 	float: left;
 	clear: left;
 	border-right: 1px solid transparent;
- white-space: nowrap;
- overflow: hidden;
- text-overflow:ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 #formholder.editmode label {
@@ -1391,7 +1413,8 @@ to {
 
 /** END unpForm **/ /* WORKSPACE */ /* Top Info */
 .wsscroll {
-	height: 100%;
+	top: 60px;
+	bottom: 60px;
 	left: 0px;
 }
 
@@ -1822,7 +1845,7 @@ span.deleteicon input {
 	border: 1px solid silver;
 	background-color: Window;
 	overflow: hidden;
- box-shadow: 10px 10px 5px #888888;
+	box-shadow: 10px 10px 5px #888888;
 }
 
 .ac-ul {
@@ -1928,14 +1951,12 @@ span.title {
 	cursor: pointer;
 }
 
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 568px) 
-and (orientation : portrait) { 
+@media only screen and (min-device-width : 320px) and (max-device-width
+	: 568px) and (orientation : portrait) {
 	#footerTabBar {
 		position: absolute;
 		right: 0px;
-	}	
+	}
 }
 
 #swipepreviousbutton {
@@ -1960,7 +1981,7 @@ and (orientation : portrait) {
 	margin-left: 0% !important;
 }
 
-.atozpicker, .numberpicker {
+.atozpicker,.numberpicker {
 	display: none;
 	position: fixed;
 	top: 81px;
@@ -2001,8 +2022,9 @@ and (orientation : portrait) {
 	}
 }
 
-@media screen and (min-height: 401px) and (max-height: 700px) and (orientation : portrait) {
-	.atozpicker, .numberpicker {
+@media screen and (min-height: 401px) and (max-height: 700px) and
+	(orientation : portrait) {
+	.atozpicker,.numberpicker {
 		top: 40px;
 	}
 	.atozletter {
@@ -2022,11 +2044,9 @@ and (orientation : portrait) {
 	}
 }
 
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 568px) 
-and (orientation : portrait) {
-	.atozpicker, .numberpicker {
+@media only screen and (min-device-width : 320px) and (max-device-width
+	: 568px) and (orientation : portrait) {
+	.atozpicker,.numberpicker {
 		top: 35px;
 	}
 	.atozletter {
@@ -2037,18 +2057,18 @@ and (orientation : portrait) {
 		padding-bottom: 2px;
 	}
 	.fourthletter {
-	  display: block;
+		display: block;
 	}
 	.otherletter {
-	  display: block;
+		display: block;
 	}
 	.atozletter-divider {
-    display: none;
+		display: none;
 	}
 }
 
 @media screen and (max-height: 400px) {
-	.atozpicker, .numberpicker {
+	.atozpicker,.numberpicker {
 		top: 35px;
 	}
 	.atozletter {
@@ -2135,43 +2155,44 @@ and (orientation : portrait) {
 	-webkit-mask-position: 0px 30px;
 }
 
-.swiper-scroll-container .swiper-slide {
-	/*width: 10000px !important;*/
+.swiper-scroll-container .swiper-slide { /*width: 10000px !important;*/
 	height: 100px;
 	padding-left: 5px;
 	padding-top: 5px;
 }
 
 .hviewresults {
-	padding-left: 30px; 
-	padding-top: 10px;	
+	padding-left: 30px;
+	padding-top: 10px;
 }
 
 @media screen and (max-width: 1000px) {
 	.hviewresults {
-		padding-left: 10px; 
-		padding-top: 10px;	
+		padding-left: 10px;
+		padding-top: 10px;
 	}
 }
+
 @media screen and (max-width: 999px) {
-	  .tabfootertext {
-	    display: none !important;
-	  }
+	.tabfootertext {
+		display: none !important;
+	}
 }
+
 @media screen and (max-width: 700px) {
 	.hviewresults {
-		padding-left: 10px; 
-		padding-top: 10px;	
+		padding-left: 10px;
+		padding-top: 10px;
 	}
 }
 
 @media screen and (max-width: 400px) {
-  .tabfootertext {
-    display: none !important;
-  }
+	.tabfootertext {
+		display: none !important;
+	}
 	.hviewresults {
-		padding-left: 5px; 
-		padding-top: 10px;	
+		padding-left: 5px;
+		padding-top: 10px;
 	}
 }
 
@@ -2203,7 +2224,6 @@ and (orientation : portrait) {
 	margin-top: 5px;
 	background-color: #3C3C3C;
 	-webkit-border-top-left-radius: 8px;
-
 }
 
 .hviewfilters {
@@ -2433,15 +2453,16 @@ ul.dropdown-menu li {
 	white-space: nowrap;
 }
 
-#menuitems > li:first-child > a:first-child {
+#menuitems>li:first-child>a:first-child {
 	border-top-left-radius: 8px;
 	-moz-border-top-left-radius: 8px;
-	-webkit-border-top-left-radius: 8px;	
-		border-top-right-radius: 8px;
+	-webkit-border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
 	-moz-border-top-right-radius: 8px;
-	-webkit-border-top-right-radius: 8px;	
+	-webkit-border-top-right-radius: 8px;
 }
-#menuitems, #menuitems ul {
+
+#menuitems,#menuitems ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -2462,60 +2483,60 @@ ul.dropdown-menu li {
 	border: 1px solid #111111;
 	-webkit-tap-highlight-color: #387bbe;
 	padding: 10px 12px;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);	
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 /*submenu*/
-#menuitems > li > ul > li > a {
-background-color: -webkit-linear-gradient(#808080, #464646);
-  border: 1px solid #222;
-  padding-left: 24px;
+#menuitems>li>ul>li>a {
+	background-color: -webkit-linear-gradient(#808080, #464646);
+	border: 1px solid #222;
+	padding-left: 24px;
 }
-/*subsubmenu*/
-#menuitems > li > ul > li > ul > li > a {
-	background-color: #000000;
-  border: 1px solid #000000;
-  padding-left: 36px;
-  font-weight: normal;
-}	
 
-#menuitems > li > a > .chevron,
-#menuitems > li > ul > li > a > .chevron {
+/*subsubmenu*/
+#menuitems>li>ul>li>ul>li>a {
+	background-color: #000000;
+	border: 1px solid #000000;
+	padding-left: 36px;
+	font-weight: normal;
+}
+
+#menuitems>li>a>.chevron,#menuitems>li>ul>li>a>.chevron {
 	background: url(unp/right-arrow-trans-white-large.png) no-repeat;
 	opacity: 0.2;
 	float: right;
 	width: 11px;
 	height: 17px;
-	margin-top:2px;
+	margin-top: 2px;
 }
 
-#menuitems > li > a.open > .chevron, 
-#menuitems > li > ul > li > a.open > .chevron {
+#menuitems>li>a.open>.chevron,#menuitems>li>ul>li>a.open>.chevron {
 	background: url(unp/down-arrow-trans-white-large.png) no-repeat;
 	width: 16px;
 	margin-top: 6px;
 }
 
-#menuitems > li > ul > li > ul > li > a.open
-{
+#menuitems>li>ul>li>ul>li>a.open {
 	background-color: #0078F4;
 	color: #ffffff /*{d-bup-color}*/;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
 	border: 1px solid #000000;
 }
-#menuitems > li > ul > li > ul > li > a.open > .chevron {
+
+#menuitems>li>ul>li>ul>li>a.open>.chevron {
 	background: url(unp/right-arrow-trans-white-large.png) no-repeat;
-	opacity: 1;	
+	opacity: 1;
 	float: right;
 	width: 11px;
 	height: 17px;
-	margin-top:2px;
-}
-.dialogbuttons {
-  padding-top: 10px;
+	margin-top: 2px;
 }
 
-.iscrollcontent{
+.dialogbuttons {
+	padding-top: 10px;
+}
+
+.iscrollcontent {
 	position: fixed;
 	right: 0px;
 	left: 0px;
@@ -2526,14 +2547,14 @@ background-color: -webkit-linear-gradient(#808080, #464646);
 	-webkit-overflow-scrolling: touch;
 }
 
-#menuPane{
+#menuPane, .wsscroll {
 	position: fixed;
 	overflow-x: none;
 	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
 }
 
-.notoppadscroll{
+.notoppadscroll {
 	position: fixed;
 	right: 0px;
 	left: 0px;
@@ -2564,4 +2585,22 @@ background-color: -webkit-linear-gradient(#808080, #464646);
 	overflow-x: none;
 	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
+}
+
+@media screen and (min-width: 701px) {
+	.iscrollcontent {
+		top: 60px;
+		bottom: 60px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.iscrollcontent {
+		top: 45px;
+		bottom: 45px;
+	}
+	.wsscroll {
+		top: 45px;
+		bottom: 45px;
+	}
 }

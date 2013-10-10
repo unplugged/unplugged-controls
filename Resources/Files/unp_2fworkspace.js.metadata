@@ -1,8 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><fileresource designerversion="8.5.3" maintenanceversion="3.0" name="unp/workspace.js" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="55ea" sequence="3" unid="87132289B1D3177C80257AD200335461">
-<created><datetime>20121212T092039,37+00</datetime></created>
-<modified><datetime>20121212T092041,14+00</datetime></modified>
-<revised><datetime>20121212T092041,13+00</datetime></revised>
-<lastaccessed><datetime>20121212T092041,14+00</datetime></lastaccessed>
-<addedtofile><datetime>20121212T092039,38+00</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby></fileresource>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="342" sequence="13" unid="CDDCBB80D7DC6DC680257B470037F1AA">
+<created><datetime dst="true">20130408T111103,46+01</datetime></created>
+<modified><datetime dst="true">20131010T141004,85+01</datetime></modified>
+<revised><datetime dst="true">20131010T141004,84+01</datetime></revised>
+<lastaccessed><datetime dst="true">20131010T141004,85+01</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20130408T111107,12+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>unp/workspace.js</text></item>
+<item name="$FileModDT" sign="true"><datetime dst="true">20130930T131633,42+01</datetime></item>
+<item name="$Flags"><text>g345QC</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>unp_2fworkspace.js</text></item></note>

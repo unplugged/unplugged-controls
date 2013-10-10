@@ -33,8 +33,12 @@
 		</xp:metaData>
 		<xp:metaData name="apple-mobile-web-app-capable" content="yes">
 		</xp:metaData>
-		<xp:metaData name="viewport"
-			content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi">
+		<xp:metaData name="viewport">
+			<xp:this.content><![CDATA[#{javascript:if (isAndroid()){
+	return "width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1";
+}else{
+	return "width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi";
+}}]]></xp:this.content>
 		</xp:metaData>
 		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 	</xp:this.resources>

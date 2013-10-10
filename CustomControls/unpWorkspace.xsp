@@ -20,9 +20,6 @@
 		<xp:script src="unp/fastclick.js" clientSide="true"></xp:script>
 		<xp:script src="unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
 		<xp:script src="unp/workspace.js" clientSide="true"></xp:script>
-		<xp:metaData name="viewport"
-			content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		</xp:metaData>
 		<xp:metaData name="apple-mobile-web-app-capable" content="yes">
 		</xp:metaData>
 		<xp:metaData name="apple-mobile-web-app-status-bar-style"

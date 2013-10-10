@@ -33,4 +33,5 @@ the specific language governing permissions and limitations under the License
 			</xp:this.facets>
 		</unp:unpScrollableArea>
 	</div>
+	<unp:unpFooter newDocLoadType="ajax" synctype="none"></unp:unpFooter>
 </xp:view>

@@ -77,13 +77,17 @@ $(window)
 					$(document).ajaxStop(initHideFooter);
 				});
 
+var oldiscrollbottom = "";
 function initHideFooter() {
 	try {
 		$(':input, textarea, select').on('focus', function() {
 			$(".footer").hide();
+			oldiscrollbottom = $(".iscrollcontent").css("bottom");
+			$(".iscrollcontent").css("bottom", "0px");
 		});
 		$(':input, textarea, select').on('blur', function() {
 			$(".footer").show();
+			$("iscrollbottom").css("bottom", oldiscrollbottom);
 			window.scrollTo(0, 1);
 		});
 	} catch (e) {

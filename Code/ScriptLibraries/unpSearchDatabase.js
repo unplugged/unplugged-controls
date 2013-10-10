@@ -45,8 +45,10 @@ $(document).ready(function() {
 	$('.searchButton').click(function (event){
 		if($("#input-search").hasClass("hiddensearch")){
 			$("#input-search").removeClass("hiddensearch").addClass("input-search");
+			$(".iscrollcontent").css("top", "90px");
 		}else{
 			$("#input-search").removeClass("input-search").addClass("hiddensearch");
+			$(".iscrollcontent").removeAttr("style");
 		}
 		$('.input-search:first').focus();
 	});
