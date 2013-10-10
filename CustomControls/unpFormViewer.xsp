@@ -36,22 +36,36 @@ if (out.length > 0){
 		<div id="formholder">
 			<h2>
 				<xp:panel tagName="img" id="titleicon" styleClass="titleicon">
-					<xp:this.rendered><![CDATA[#{javascript:if (compositeData.titleiconfield != "" && compositeData.titleiconfield != null){
-	if (document1.getDocument().getFirstItem(compositeData.titleiconfield) != null){
-		return true;
+					<xp:this.rendered><![CDATA[#{javascript:try{
+	if (compositeData.titleiconfield != "" && compositeData.titleiconfield != null){
+		if (document1.getDocument().getFirstItem(compositeData.titleiconfield) != null){
+			return true;
+		}else{
+			return false;
+		}
 	}else{
 		return false;
 	}
-}else{
+}catch(e){
 	return false;
 }}]]></xp:this.rendered>
 					<xp:this.attrs>
 						<xp:attr name="src">
-							<xp:this.value><![CDATA[#{javascript:var rtitem:NotesRichTextItem = document1.getDocument().getFirstItem(compositeData.titleiconfield);
-var objects = rtitem.getEmbeddedObjects();
-for(var i=0; i<objects.length; i++){
-	return getDbPath() + "/0/" + document1.getDocument().getUniversalID() + "/$FILE/" + objects[i].getName();
-}}]]></xp:this.value>
+							<xp:this.value><![CDATA[#{javascript:try{
+	if (!document1.getDocument().hasItem(compositeData.titleiconfield)){
+		return "";
+	}
+	var rtitem:NotesRichTextItem = document1.getDocument().getFirstItem(compositeData.titleiconfield);
+	var objects = rtitem.getEmbeddedObjects();
+	if (objects != null){
+		if (objects.length == 0){
+			return "";
+		}
+		for(var i=0; i<objects.length; i++){
+			return getDbPath() + "/0/" + document1.getDocument().getUniversalID() + "/$FILE/" + objects[i].getName();
+		}
+	}
+}catch(e){return "";}}]]></xp:this.value>
 						</xp:attr>
 					</xp:this.attrs>
 				</xp:panel>
