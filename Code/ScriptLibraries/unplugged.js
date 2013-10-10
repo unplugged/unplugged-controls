@@ -77,7 +77,6 @@ $(window)
 					$(document).ajaxStop(initHideFooter);
 				});
 
-var footerpadding = "";
 function initHideFooter(){
 	try{
 		$(':input, textarea, select').on('focus', function(){
@@ -392,92 +391,33 @@ function initiscroll() {
 		}
 		return false;
 	});
-	if (unpluggedserver) {
-		if (!getURLParameter("starttime")){
-			document.addEventListener('touchmove', touchmovehandler);
-		}
-		// Initialise any iScroll that needs it
-		try {
-			pullUpEl = document.getElementById('pullUp');
-			pullUpOffset = pullUpEl.offsetHeight;
-		} catch (e) {
-		}
-		try {
-			scrollContent.destroy();
-			delete scrollContent;
-		} catch (e) {
-		}
-
-		try {
-			scrollMenu.destroy();
-			delete scrollMenu;
-		} catch (e) {
-		}
-		try {
-			scrollMenu = new iScroll('menu', {
-				bounce : true,
-				momentum : false
-			});
-		} catch (e) {
-		}
-		
-		$(".iscrollcontent")
-				.each(
-						function() {
-							scrollContent = new iScroll(
-									$(this).attr("id"),
-									{
-										useTransition : true,
-										onRefresh : function() {
-											if (pullUpEl) {
-												if (pullUpEl.className
-														.match('loading')) {
-													pullUpEl.className = '';
-													pullUpEl
-															.querySelector('.pullUpLabel').innerHTML = 'Pull up to load more...';
-												}
-											}
-										},
-										onScrollMove : function() {
-											if (pullUpEl) {
-												if (this.y < (this.maxScrollY - 5)
-														&& !pullUpEl.className
-																.match('flip')) {
-													pullUpEl.className = 'flip';
-													pullUpEl
-															.querySelector('.pullUpLabel').innerHTML = 'Release to refresh...';
-													this.maxScrollY = this.maxScrollY;
-												} else if (this.y > (this.maxScrollY + 5)
-														&& pullUpEl.className
-																.match('flip')) {
-													pullUpEl.className = '';
-													pullUpEl
-															.querySelector('.pullUpLabel').innerHTML = 'Pull up to load more...';
-													this.maxScrollY = pullUpOffset;
-												}
-											}
-											$(".acResults").hide();
-										},
-										onScrollEnd : function() {
-											if (pullUpEl) {
-												if (pullUpEl.className
-														.match('flip')) {
-													pullUpEl.className = 'loading';
-													pullUpEl
-															.querySelector('.pullUpLabel').innerHTML = 'Loading...';
-													$(".loadmorebutton")
-															.click();
-												}
-											}
-										}
-									});
-							$(".atozpicker").show();
-							return false;
-						});
-		$(".atozpicker").show();
-	} else {
-		$(".atozpicker").show();
+	if (!getURLParameter("starttime")){
+		document.addEventListener('touchmove', touchmovehandler);
 	}
+	// Initialise any iScroll that needs it
+	try {
+		pullUpEl = document.getElementById('pullUp');
+		pullUpOffset = pullUpEl.offsetHeight;
+	} catch (e) {
+	}
+	$('.iscrollcontent')
+	.bind(
+			'scroll',
+			function() {
+				if ($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+					if (pullUpEl) {
+						pullUpEl.className = 'flip';
+						pullUpEl
+								.querySelector('.pullUpLabel').innerHTML = 'Release to refresh...';
+						if (pullUpEl.className.match('flip')) {
+							pullUpEl.className = 'loading';
+							pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Loading...';
+							$(".loadmorebutton").click();
+						}
+					}
+				}
+			})
+	$(".atozpicker").show();
 }
 
 function jumpToLetter(letterelement, event) {

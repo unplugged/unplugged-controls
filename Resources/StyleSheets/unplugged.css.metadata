@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" replicaid="80257B470037E1BA" version="9.0">
-<noteinfo noteid="684a" sequence="144" unid="2E8E68D354A6FBF980257B8F004AC314">
+<noteinfo noteid="684a" sequence="148" unid="2E8E68D354A6FBF980257B8F004AC314">
 <created><datetime dst="true">20130619T143636,04+01</datetime></created>
-<modified><datetime dst="true">20130905T084645,65+01</datetime></modified>
-<revised><datetime dst="true">20130905T084645,64+01</datetime></revised>
-<lastaccessed><datetime dst="true">20130905T084645,65+01</datetime></lastaccessed>
+<modified><datetime dst="true">20131010T110803,64+01</datetime></modified>
+<revised><datetime dst="true">20131010T110803,63+01</datetime></revised>
+<lastaccessed><datetime dst="true">20131010T110803,64+01</datetime></lastaccessed>
 <addedtofile><datetime dst="true">20130619T143636,06+01</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
 <item name="$TITLE" sign="true"><text>unplugged.css</text></item>
-<item name="$DesignerVersion"><text>8</text></item>
 <item name="$FileModDT" sign="true"><datetime dst="true">20130905T084645,64+01</datetime></item>
-<item name="$FileNames" sign="true"><text>unplugged.css</text></item>
-
-
-<item name="$FileModDT" sign="true"><datetimelist><datetime>20130905T084645,00+00</datetime></datetimelist></item>
-
-
+<item name="$FileModDT" sign="true"><datetime>20130905T084645,00+00</datetime></item>
 <item name="$Flags"><text>=34QC</text></item>
-<item name="$FlagsExt" sign="true"><text>D</text></item></note>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+
+
+<item name="$FileNames" sign="true"><text>unplugged.css</text></item></note>
