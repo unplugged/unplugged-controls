@@ -186,6 +186,7 @@ function loadmore(dbName, viewName, summarycol, detailcol, category, xpage,
 }
 
 function openDocument(url, target) {
+	
 	// $.blockUI();
 	// document.location.href = url;
 	var thisArea = $("#" + target);
@@ -195,6 +196,9 @@ function openDocument(url, target) {
 				if (firedrequests != null) {
 					firedrequests = new Array();
 				}
+				
+				unp.storePageRequest(url);
+				
 				initiscroll();
 				if (url.indexOf("editDocument") > -1
 						|| url.indexOf("newDocument") > -1) {
@@ -301,13 +305,24 @@ function hideViewsMenu() {
 }
 
 var firedrequests;
-function loadPage(url, target, menuitem) {
+function loadPage(url, target, menuitem, pushState) {
+	
+	var _pushState = true;
+	if (arguments.length >= 4) {
+		_pushState = pushState;
+	}
+	
 	var thisArea = $("#" + target);
 	thisArea.load(url, function() {
 
 		if (firedrequests != null) {
 			firedrequests = new Array();
 		}
+		
+		if (_pushState) {
+			unp.storePageRequest(url);
+		}
+		
 		initiscroll();
 		initHorizontalView();
 		initDeleteable();
@@ -756,4 +771,33 @@ function dropdownToggle(element) {
 	} else {
 		$(".dropdown-menu").toggle();
 	}
+}
+
+//create unp namespace object (if not created before)
+if (!unp) {
+
+	var unp = {
+			
+		_firstLoad : true,
+		
+		storePageRequest : function(url) {
+			
+			this._firstLoad = false;
+			
+			if (url.indexOf("#")>-1) {
+				url = url.substring(0, url.indexOf(" #"));
+			}
+			history.pushState(null, "", url);
+			console.log("pushed " + url);
+		
+		}
+			
+	}
+	
+	$(window).bind("popstate", function() {
+		if (!unp._firstLoad) {
+		   loadPage(location.href + " #contentwrapper", 'content', null, false, false);
+		}
+	});
+	
 }

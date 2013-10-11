@@ -92,7 +92,7 @@ if (compositeData.editxpagewithajax != "no"){
 					tagName="li">
 					<xp:this.attrs>
 						<xp:attr name="onclick">
-							<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='" + compositeData.closexpagename + "';"}]]></xp:this.value>
+							<xp:this.value><![CDATA[#{javascript:"history.back()"}]]></xp:this.value>
 						</xp:attr>
 					</xp:this.attrs>
 					<span class="formbuttonlabel">Close</span>
