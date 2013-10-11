@@ -329,12 +329,14 @@ function loadPage(url, target, menuitem, pushState) {
 		initAutoComplete();
 		return false;
 	});
-	var menuitems = $("#menuitems li");
-	menuitems.removeClass("viewMenuItemSelected");
-	menuitems.addClass("viewMenuItem");
-	$(".menuitem" + menuitem).removeClass("viewMenuItem");
-	$(".menuitem" + menuitem).addClass("viewMenuItemSelected");
-	hideViewsMenu();
+	if (_pushState){
+		var menuitems = $("#menuitems li");
+		menuitems.removeClass("viewMenuItemSelected");
+		menuitems.addClass("viewMenuItem");
+		$(".menuitem" + menuitem).removeClass("viewMenuItem");
+		$(".menuitem" + menuitem).addClass("viewMenuItemSelected");
+		hideViewsMenu();
+	}
 }
 
 function openPage(url, target) {
