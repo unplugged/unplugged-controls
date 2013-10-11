@@ -172,6 +172,12 @@ function loadmore(dbName, viewName, summarycol, detailcol, category, xpage,
 				scrollContent.refresh();
 			} catch (e) {
 			}
+			
+			if ($("#pullUp").hasClass('loading')) {
+				$("#pullUp").removeClass("loading");
+				$(".pullUpLabel").text("Pull up to load more...");
+			}
+			
 			return false;
 		});
 	} catch (e) {
@@ -205,6 +211,9 @@ function openDocument(url, target) {
 				initDeleteable();
 				initAutoComplete();
 				initHorizontalView();
+				if ($("#input-search").hasClass("input-search")){
+					$(".iscrollcontent").css("top", "90px");
+				}
 				return false;
 			});
 }
