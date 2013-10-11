@@ -68,7 +68,7 @@ return out;}]]></xp:this.value>
 						tagName="li">
 						<xp:this.attrs>
 							<xp:attr name="onclick">
-								<xp:this.value><![CDATA[#{javascript:return "$.blockUI(); window.location.href='" + compositeData.closexpagename + "';";}]]></xp:this.value>
+								<xp:this.value><![CDATA[#{javascript:return "history.back()";}]]></xp:this.value>
 							</xp:attr>
 						</xp:this.attrs>
 						<span class="formbuttonlabel">Cancel</span>
