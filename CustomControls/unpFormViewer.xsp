@@ -20,6 +20,9 @@
 	<xp:this.data>
 		<xp:dominoDocument var="document1"
 			formName="#{javascript:compositeData.formname}">
+			<xp:this.databaseName><![CDATA[#{javascript:if (compositeData.dbName != null){
+	return compositeData.dbName;
+}}]]></xp:this.databaseName>
 		</xp:dominoDocument>
 	</xp:this.data>
 
