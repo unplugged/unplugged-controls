@@ -6,6 +6,60 @@ It is our intention to publish periodic updates to these controls to OpenNTF.
 
 ## Changes
 
+### v1.8.0 (18th October 2013)
+####This version is intended for use with Unplugged 3.x only. If you are still running Unplugged 2.x please download version 1.7 of the Controls Library###
+- Removed iScroll
+- Added history support so that you can use browser back functionality
+- Added databaseName support to unpFormViewer
+
+
+### v1.7.0 (10th September 2013)
+- UPMark Benchmarking to create a common performance benchmark for the Controls Library, we are working hard on performance optimisation for an upcoming release
+- Make Search Results count configurable
+- Remove About dialog from Header, new design pattern is to add a navigator item called About
+- Fix various layout issues
+- Support opening in full mode from tabbed footer links
+- Support execution of JS before footer tab link is opened
+
+### v1.6.0 (19th July 2013)
+- Make colours configurable.
+This change is split over v1.6 and v1.7 (to be released in September). For the moment a second stylesheet is now available for use in place of the standard one.
+- Make UnpNavigatgor support expandable entries. A new custom property "submenu" is available to flag a menu item as top level, sub or sub-sub
+- Added Sync button to footer tabs control
+- Home button in header bar made larger for tablets
+- Improved layout of footer tabs control
+- Added support for a disabled workspace item in the workspace control
+- Flat view can now support up to 3 lines of text wrapping in the summary column
+- Improved Search bar behaviour, search box now expands when selected
+- Added support for relative links in the Workspace control
+- Added option to allow the Accordion view to automatically open the first category
+- Added support for disabled items in the Navigator control
+- Re-styled the back button to be more "iOS-like"
+- Fixed bug with labels not displaying properly in form editor control
+- Added FastClick support to speed up response times generally
+- Upgraded jQuery to use v2.0
+- Improved layout of Debug Toolbar buttons
+- Fixed scrolling / layout issues with Dialog control
+- Improved layout of Swipe View Control
+- Stopped wrapping of long labels in Form Editor control for small devices (phones)
+- Various other minor bug fixes
+
+### v1.5.0 (4th June 2013)
+- Fixed bug with display of view categories in unpFlatView control caused by release of Unplugged 2.4
+- UnpFormViewer now supports display of an icon or image in the header bar
+- Added new isEmpty() function for use in Server Side JavaScript
+- Added new navigation buttons to UnpSwipeView control
+- Fixed layout bug with UnpFormViewer control in Landscape mode with no navigator
+- Added new A-Z view navigator control
+- Changed database title of Controls Library database
+- Fixed bug with UnpDemoNavigator pages
+- Added support to override the default action of the Home button in UnpHeader
+- Fixed bug with blank categories in UnpAccordion
+- Fixed rounded corners bug with UnpAccordion
+- Added new Unplugged Logo
+- Added support for Disabled workspace icons in UnpWorkspace
+- Added new UnpTabbedFooter control
+
 ### v1.4.0 (29th April 2013)
 - Reduce use of dependent CSS selectors
 - Add "About" dialog box. Accessed by tapping the title in the header bar. Populated by completing appVersion and appDescription custom properties. Leave blank to disable.
