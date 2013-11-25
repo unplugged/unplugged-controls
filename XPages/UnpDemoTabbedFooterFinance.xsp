@@ -26,15 +26,15 @@
 	<unp:unpTabbedFooter>
 		<unp:this.tab>
 			<unp:tab icon="icons/house.png" label="Home"
-				page="/UnpMain.xsp" iconselected="icons/house_selected.png">
+				page="/UnpMain.xsp">
 			</unp:tab>
 			<unp:tab icon="icons/id_card.png" label="All Employees"
 				page="/UnpDemoTabbedFooter.xsp"
-				iconselected="icons/id_card_selected.png">
+				>
 			</unp:tab>
 			<unp:tab icon="icons/id_card.png" label="Finance Employees"
 				page="/UnpDemoTabbedFooterFinance.xsp"
-				iconselected="icons/id_card_selected.png">
+				>
 			</unp:tab>
 		</unp:this.tab>
 	</unp:unpTabbedFooter>

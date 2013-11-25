@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="8156" sequence="1" unid="F5EDE14C188BBDE580257C2A003A1D33">
+<created><datetime>20131121T103445,63+00</datetime></created>
+<modified><datetime>20131121T103459,49+00</datetime></modified>
+<revised><datetime>20131121T103459,48+00</datetime></revised>
+<lastaccessed><datetime>20131121T103459,49+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103459,49+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$FileModDT" sign="true"><datetime dst="true">20131014T172928,00+01</datetime></item>
+<item name="$ImageNames" sign="true"><text>icons.png</text></item>
+<item name="$EditFilePath" sign="true"><text>C:\Users\whitemx\AppData\Local\Temp\notes95E17C\~icons.png</text></item>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$TITLE" sign="true"><text>unp/plugins/icons.png</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+</note>

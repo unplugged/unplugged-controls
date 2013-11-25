@@ -10,10 +10,11 @@ the specific language governing permissions and limitations under the License
  -->
 
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom" xmlns:unp="http://unplugged.teamstudio.com">
+	<div id="contentwrapper">
 	<unp:unpScrollableArea>
 		<xp:this.facets>
 			<unp:unpFormViewer showbuttons="true"
-				closexpagename="UnpDemoFlatView.xsp" editxpagename="EmployeeEdit.xsp"
+				editxpagename="EmployeeEdit.xsp"
 				formname="Employee" title="Employee" xp:key="facet_1"
 				titleiconfield="photo1">
 				<xp:this.facets>
@@ -88,4 +89,5 @@ the specific language governing permissions and limitations under the License
 			</unp:unpFormViewer>
 		</xp:this.facets>
 	</unp:unpScrollableArea>
+	</div>
 </xp:view>

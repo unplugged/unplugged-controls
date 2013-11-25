@@ -1,0 +1,503 @@
+/* ICONS */
+
+.hviewicon {
+	width: 52px;
+	height: 62px;
+	background-repeat: no-repeat;
+	background-image: url('unp/mediasync-documents.png');
+	margin-left: 44px;
+
+	&.icon-docx {
+		background-position: 0px 0px;
+	}
+	
+	&.icon-pdf {
+		background-position: -52px 0px;
+	}
+	
+	&.icon-xlsx {
+		background-position: -104px 0px;
+	}
+	
+	&.icon-pptx {
+		background-position: -156px 0px;
+	}
+	
+	&.icon-mov {
+		background-position: -208px 0px;
+	}
+	
+	&.icon-jpg {
+		background-position: -260px 0px;
+	}
+
+	.badge {
+		float: right;
+		display: inline;
+		padding: 2px 4px;
+		font-size: 11.844px;
+		font-weight: bold;
+		line-height: 14px;
+		white-space: nowrap;
+		vertical-align: baseline;
+		padding-right: 9px;
+		padding-left: 9px;
+		-webkit-border-radius: 9px;
+		-moz-border-radius: 9px;
+		border-radius: 9px;
+		height: 22px;
+		width: 22px;
+		background-repeat: no-repeat;
+	}
+	
+	.badge-favorite {
+		float: left;
+		background-image: url('unp/icon-favorite.png');
+	}
+	
+	.badge-downloaded {
+		float: right;
+		background-image: url('unp/icon-plane.png');
+	}
+	
+	.badge-downloading {
+		float: right;
+		background-image: url('unp/icon-loading.png');
+	}
+}
+
+
+/* DOCUMENT LISTS */
+
+.hviewresults {
+	padding-left: 30px; 
+	padding-top: 10px;	
+
+	@media screen and (max-width: 1000px) {
+		padding-left: 10px; 
+		padding-top: 10px;	
+	}
+	@media screen and (max-width: 700px) {
+		padding-left: 10px; 
+		padding-top: 10px;	
+	}	
+	@media screen and (max-width: 400px) {
+		padding-left: 5px; 
+		padding-top: 10px;	
+	}
+	
+	.tabfootertext {
+		@media screen and (max-width: 999px) { display: none !important; }
+		@media screen and (max-width: 400px) { display: none !important; }
+	}
+
+	/* Heading */
+	
+	h1.hview-h1 {
+		color: @h1-hview-h1-color;
+		font-size: 24px;
+		font-weight: bold;
+		margin: 10px 10px 10px 0;
+	}
+	
+	h2.hview-h2 {
+		font-size: 15px;
+		line-height: 20px;
+		font-weight: normal;
+		color: #999999;
+		margin: 0 10px 20px 0;
+	}
+
+	/* Row Heading */
+
+	.hviewcategory {
+		display: block;
+		color: @hviewcategory-color;
+		font-weight: bold;
+		font-size: 16px;
+		padding-top: 8px;
+		padding-bottom: 5px;
+		padding-left: 14px;
+		border-top: @hviewcategory-border-top;
+		//border-left: @hviewcategory-border-left;
+		//border-right: @hviewcategory-border-right;
+		margin-top: 10px;
+		background-color: @hviewcategory-background-color;
+		-webkit-border-top-left-radius: 8px;	
+		
+		-webkit-mask-image: -webkit-linear-gradient(left, #000000 80%, rgba(0, 0, 0, 0));
+		-webkit-mask-position: 0px 30px;
+	}
+	
+	/* Swiper */
+	
+	.swiper-container {
+		margin: 0 auto;
+		position: relative;
+		overflow: hidden;
+		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+		-ms-backface-visibility: hidden;
+		-o-backface-visibility: hidden;
+		backface-visibility: hidden;
+		/* Fix of Webkit flickering */
+		z-index: 1;
+		//border-left: @hviewcategory-border-left;
+		//border-right: @hviewcategory-border-right;			
+	}
+
+	.swiper-scroll-container {
+		background-color: @swiper-scroll-container-background-color;
+		-webkit-border-bottom-left-radius: 8px;
+		width: 100%;
+		height: 100px;
+		-webkit-mask-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) );
+		-webkit-mask-position: 0px 30px;
+
+		.swiper-slide {
+			/*width: 10000px !important;*/
+			height: 100px;
+			padding-left: 5px;
+			padding-top: 5px;
+			float: left;
+		}
+
+		.swiper-wrapper {
+			position: relative;
+			width: 100%;
+			-webkit-transition-property: -webkit-transform, left, top;
+			-webkit-transition-duration: 0s;
+			-webkit-transform: translate3d(0px, 0, 0);
+			-webkit-transition-timing-function: ease;
+			-moz-transition-property: -moz-transform, left, top;
+			-moz-transition-duration: 0s;
+			-moz-transform: translate3d(0px, 0, 0);
+			-moz-transition-timing-function: ease;
+			-o-transition-property: -o-transform, left, top;
+			-o-transition-duration: 0s;
+			-o-transform: translate3d(0px, 0, 0);
+			-o-transition-timing-function: ease;
+			-o-transform: translate(0px, 0px);
+			-ms-transition-property: -ms-transform, left, top;
+			-ms-transition-duration: 0s;
+			-ms-transform: translate3d(0px, 0, 0);
+			-ms-transition-timing-function: ease;
+			transition-property: transform, left, top;
+			transition-duration: 0s;
+			transform: translate3d(0px, 0, 0);
+			transition-timing-function: ease;
+			
+		
+		}
+	}	
+	/* IE10 Windows Phone 8 Fixes */
+	.swiper-wp8-horizontal {
+		-ms-touch-action: pan-y;
+	}	
+	.swiper-wp8-vertical {
+		-ms-touch-action: pan-x;
+	}
+	
+
+	/* Items */
+
+	.hviewitem {
+		width: 140px;
+		height: 100px;
+		float: left;
+		cursor: pointer;
+
+		.hviewtitle {
+			display: block;
+			color: @hviewtitle-color;
+			font-size: 14px;
+			padding-top: 5px;
+			width: 100%;
+			text-align: center;
+		}	
+	}
+	
+	.hviewcombo {
+		margin-right: 3px
+	}
+
+	.hviewloadmorebutton {
+		width: 60px;
+		height: 62px;
+		//border: 1px solid #E2E2E3;
+		//background-color: #FFFFFF;
+		text-align: center;
+		border-radius: @button-border-radius;
+		box-shadow: @button-box-shadow;
+		color: @button-default-label-color;
+		font-weight: @button-font-weight;
+		background: @button-default-background;
+		border: 1px solid @button-default-border-color;
+		text-shadow: @button-text-shadow;
+		padding-top: 0;
+	}
+
+	/* Filters */
+	
+	.hviewfilters {
+		//padding-top: 5px;
+		float: right;
+		margin-right: 6px;
+		margin-top: -5px;
+
+		.btn-group {
+			position: relative;
+			display: inline-block;
+			white-space: nowrap;
+			vertical-align: middle;
+			padding-right: 7px;
+
+			a.dropdown-toggle,
+			a.dropdown-toggle:hover {
+				float: right;
+				font-size: 12px;
+				position: relative;
+				padding: 0 12px;
+				line-height: 32px;
+				margin-right: 3px;
+				text-decoration: none;
+				cursor: pointer;
+				padding-right: 30px;				
+				border-radius: @button-border-radius;
+				box-shadow: @button-box-shadow;
+				color: @button-default-label-color;
+				font-weight: @button-font-weight;
+				background: @button-default-background;
+				border: 1px solid @button-default-border-color;
+				text-shadow: @button-text-shadow;				
+				background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%);
+		
+				span {
+					//color: #0078C8;
+					padding-left: 5px;
+					//padding-right: 8px;
+				}		
+				
+				img { display: none; }
+				
+				&:after {
+					//content: '\E224';
+					content:'';
+					position: absolute;
+					//right: 8px;
+					right: 11px;
+					top: 50%;
+					margin-top: -6px;
+					display: inline-block;
+					//font: 12px/1 'Glyphicons Regular';
+					font: 12px/1 'FontAwesome';
+					font-style: normal;
+					font-weight: @button-font-weight;
+					color: @button-default-label-color;
+					text-shadow: @button-text-shadow;
+					vertical-align: middle;
+					text-transform: none;
+					-webkit-font-smoothing: antialiased;	
+					-webkit-transform: rotate(90deg);				
+				}
+			}
+
+			ul.dropdown-menu {
+				position: absolute;
+				top: 100%;
+				right: 10px;
+				z-index: 1000;
+				display: none;
+				float: left;
+				min-width: 160px;
+				padding: 0;
+				margin: 2px 0 0;
+				list-style: none;
+				background-color: white;
+				border: 1px solid rgba(0, 0, 0, 0.2);
+				border-radius: @button-border-radius;
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+				background-clip: padding-box;
+				overflow: hidden;
+				
+				li {
+					padding: 0 15px;
+					clear: both;
+					font-weight: bold;
+					line-height: 44px;
+					color: #333333;
+					white-space: nowrap;
+					cursor: pointer;
+					border-bottom: 1px solid #EEE;
+					font-size: 12px;
+					
+					&:last-child {
+						border-bottom: 0;
+					}
+					
+					&:hover,
+					&:active {
+						background-color: #0078f4;
+						color: white;
+					}
+				}	
+			}
+		}		
+	}
+}
+
+/* MODAL */
+
+#underlayhviewPopup {
+	width: 100%;
+	margin: auto;
+	background-color: black;
+	opacity: 0.8;
+}
+
+#hviewPopup {
+	background-color: #EEE;
+	width: 400px;
+	margin: 100px auto;
+	//top: 50%;
+
+	/* Smartphones (portrait) */
+	
+	@media only screen and (max-width : 500px) {
+		width: 300px;
+		top: 50px;
+		margin-top: 0px;
+	}
+	
+	/* Header */
+		
+	#hviewitemheader {
+		border-bottom: 1px solid #DDDDDD;
+		
+		.hviewicon {
+			float: left;
+			margin-left: 0px;
+		}
+
+		.hviewclosebutton {
+			float: right;
+			width: 22px;
+			height: 22px;
+			background-image:url('unp/icon-close.png');
+			z-index: 1000;
+			cursor: pointer;
+			opacity: 0.7;
+		}
+		.hviewclosebutton:hover {
+			opacity: 1;
+		}
+
+		#hviewmetadata {
+			padding-bottom: 5px;
+			margin-left: 60px;
+			color: #999999;	
+			margin-bottom: 5px;
+
+			.hviewmetatitle {
+				font-size: 18px;
+				font-weight: bold;
+				color: #333333;
+				display: block;
+			}
+	
+			> div {
+				padding-top: 6px;
+				
+				&:nth-child(2),
+				&:nth-child(4) {
+					float: right;
+					clear: right;
+				}
+			}
+		}
+		
+	}
+
+	/* Body */
+	
+	#hviewitembody {
+		padding-top: 10px;
+
+		.downloadnowbutton {
+			background-color: @button-success-background;
+			color: @button-success-label-color;
+			border: 1px solid @button-success-border-color;
+			filter: none;
+			width: 100%;
+			height: 45px;			
+			img { display: none; }
+		}
+		
+		.togglefavorite {
+			background-color: @button-default-background;
+			color: @button-default-label-color;
+			border: 1px solid @button-default-border-color;
+			margin-top: 10px;
+			width: 60%;
+			float: left;
+			filter: none;		
+			font-size: 15px;
+			img { display: none; }
+		}
+		
+		.emailfilebutton {
+			background-color: @button-default-background;
+			color: @button-default-label-color;
+			border: 1px solid @button-default-border-color;
+			float: right;
+			margin-top: 10px;
+			width: 37%;
+			filter: none;	
+			font-size: 15px;		
+			img { display: none; }
+		}
+		
+		.emailsendbutton {
+			background-color: @button-success-background;
+			color: @button-success-label-color;
+			border: 1px solid @button-success-border-color;
+			width: 60%;
+			filter: none;
+			float: left;
+			img { display: none; }
+		}
+		
+		.emailcancelbutton {
+			background-color: @button-danger-background;
+			color: @button-danger-label-color;
+			border: 1px solid @button-danger-border-color;
+			width: 37%;
+			float: right;
+			filter: none;
+			img { display: none; }
+		}
+		
+		#emailholder {
+			//margin-top: 10px;	
+		}
+		
+		#emailaddress{
+			height: 36px;
+			font-size: 17px;
+			border-radius: @button-border-radius;
+			border: 1px solid #C9C9C9;
+			padding: 0 10px;
+			box-sizing: border-box;
+			display: block;
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		
+		.timetodownload {
+			width: 100%;
+			text-align: center;
+			color: #999999;
+			padding: 5px;
+		}	
+	}
+}

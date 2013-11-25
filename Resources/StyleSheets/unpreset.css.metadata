@@ -1,8 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><stylesheetresource charset="UTF-8" designerversion="8.5.3" maintenanceversion="3.0" name="unpreset.css" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="55e2" sequence="6" unid="6459673F2F8AF50880257AD2003332A3">
-<created><datetime>20121212T091912,99+00</datetime></created>
-<modified><datetime>20121212T091934,24+00</datetime></modified>
-<revised><datetime>20121212T091934,23+00</datetime></revised>
-<lastaccessed><datetime>20121212T091934,24+00</datetime></lastaccessed>
-<addedtofile><datetime>20121212T091913,00+00</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby></stylesheetresource>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="7f8a" sequence="1" unid="2C1EEA8FB893451880257C2A0039F3E2">
+<created><datetime>20131121T103259,86+00</datetime></created>
+<modified><datetime>20131121T103300,99+00</datetime></modified>
+<revised><datetime>20131121T103300,98+00</datetime></revised>
+<lastaccessed><datetime>20131121T103300,99+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103300,99+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>unpreset.css</text></item>
+<item name="$MimeCharSet"><text>UTF-8</text></item>
+<item name="$FileModDT" sign="true"><datetime dst="true">20130610T134559,71+01</datetime></item>
+<item name="$Flags"><text>=34QC</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>unpreset.css</text></item></note>

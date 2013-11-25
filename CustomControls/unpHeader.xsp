@@ -11,26 +11,29 @@
 		License
 	-->
 
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:unp="http://unplugged.teamstudio.com">
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:unp="http://unplugged.teamstudio.com">
 	<style>
 		body { padding-top: 0px !important; } @media screen and
 		(min-width: 701px) { body { padding-top: 60px !important; } }
-		@media
-		screen and (max-width: 700px) { body { padding-top: 45px
-		!important; }
-		}
+		@media screen and (max-width: 700px) { body { padding-top: 45px
+		!important; } }
 	</style>
 	<xp:this.resources>
 		<xp:script src="/unp/jquery-2.0.3.min.js" clientSide="true"></xp:script>
 		<xp:script src="/unp/fastclick.js" clientSide="true"></xp:script>
 		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
-		<xp:script src="/unp/jquery.autocomplete.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/jquery.autocomplete.js"
+			clientSide="true">
+		</xp:script>
+		<xp:styleSheet href="/unp/font-awesome.css"></xp:styleSheet>
 		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
 		<xp:styleSheet href="/unpDialog.css"></xp:styleSheet>
 		<xp:metaData name="apple-mobile-web-app-status-bar-style"
 			content="black-translucent">
 		</xp:metaData>
-		<xp:metaData name="apple-mobile-web-app-capable" content="yes">
+		<xp:metaData name="apple-mobile-web-app-capable"
+			content="yes">
 		</xp:metaData>
 		<xp:metaData name="viewport">
 			<xp:this.content><![CDATA[#{javascript:if (getiOSVersion() > 6){
@@ -42,7 +45,8 @@
 		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 	</xp:this.resources>
 
-	<xp:text tagName="script" id="inlinescript">
+	<xp:text tagName="script" id="inlinescript"
+		rendered="#{javascript:!isAjax()}">
 
 		<xp:this.value><![CDATA[#{javascript:if(isUnpluggedServer()){
 	return "var unpluggedserver = true;";
@@ -52,12 +56,13 @@
 }]]></xp:this.value>
 	</xp:text>
 
-	<xp:panel styleClass="iHeader black">
+	<xp:panel styleClass="iHeader black" rendered="#{javascript:!isAjax()}">
 		<xp:image styleClass="companyLogo" url="/unp/unplugged_logo.png"
 			id="companyLogo">
 		</xp:image>
 		<div class="backButtonHolder">
-			<xp:text tagName="div" id="backlink" styleClass="backButton">
+			<xp:panel tagName="div" id="backlink"
+				styleClass="backButton">
 				<xp:this.rendered><![CDATA[#{javascript:if(isEmpty(compositeData.backButtonText)){
 	return false;
 }
@@ -71,7 +76,11 @@ else{ return true;
 						<xp:this.value><![CDATA[#{javascript:compositeData.backButtonText}]]></xp:this.value>
 					</xp:attr>
 				</xp:this.attrs>
-			</xp:text>
+				<span class="icon"></span>
+				<xp:text tagName="span" styleClass="label"
+					value="#{javascript:compositeData.backButtonText}">
+				</xp:text>
+			</xp:panel>
 		</div>
 		<xp:panel styleClass="viewsButton">
 			<xp:this.rendered><![CDATA[#{javascript:if (compositeData.backButtonText != "" && compositeData.backButtonText != null){
@@ -79,19 +88,18 @@ else{ return true;
 }else{
 	return compositeData.viewsButton;
 }}]]></xp:this.rendered>
-			<xp:label value="Views" id="viewslabel" styleClass="viewslabel">
-			</xp:label>
+			<span class="icon"></span>
+			<span class="label">Views</span>
 		</xp:panel>
 
 		<xp:label id="title" value="#{javascript:compositeData.title}"
 			styleClass="title">
-			<xp:this.attrs>
-				<xp:attr name="href" value="versionPopup"></xp:attr>
-			</xp:this.attrs>
 		</xp:label>
-		<xp:panel id="searchbutton" rendered="#{javascript:compositeData.search != 'none'}"
+		<xp:panel id="searchbutton"
+			rendered="#{javascript:compositeData.search != 'none'}"
 			styleClass="searchButton">
-			<span class="searchlabel"></span>
+			<span class="icon"></span>
+			<span class="label">Search</span>
 		</xp:panel>
 		<xp:panel id="homebutton" styleClass="homeButton">
 			<xp:this.attrs>
@@ -104,13 +112,15 @@ else{ return true;
 }]]></xp:this.value>
 				</xp:attr>
 			</xp:this.attrs>
-			<span class="homelabel"></span>
+			<span class="icon"></span>
+			<span class="label">Home</span>
 		</xp:panel>
 
 	</xp:panel>
-	<xp:div id="input-search-frame" styleClass="input-search-frame"
-		rendered="#{javascript:compositeData.search != 'none'}">
-		<input placeholder="Search..." id="input-search" class="hiddensearch">
+	<xp:div id="input-search-frame" styleClass="input-search-frame">
+		<xp:this.rendered><![CDATA[#{javascript:compositeData.search != 'none' && !isAjax();}]]></xp:this.rendered>
+		<input placeholder="Search..." id="input-search"
+			class="hiddensearch">
 		</input>
 	</xp:div>
 	<xp:panel id="searchscript" tagName="script">
@@ -124,12 +134,13 @@ else{ return true;
 }}]]></xp:this.value>
 			</xp:attr>
 		</xp:this.attrs>
-		<xp:this.rendered><![CDATA[#{javascript:compositeData.search != "none"}]]></xp:this.rendered>
+		<xp:this.rendered><![CDATA[#{javascript:compositeData.search != "none" && !isAjax()}]]></xp:this.rendered>
 	</xp:panel>
 	<xp:text id="searchvars" tagName="script" escape="false">
-		<xp:this.rendered><![CDATA[#{javascript:compositeData.search == "database"}]]></xp:this.rendered>
+		<xp:this.rendered><![CDATA[#{javascript:compositeData.search == "database" && !isAjax()}]]></xp:this.rendered>
 		<xp:this.attrs>
 			<xp:attr name="type" value="text/javascript"></xp:attr>
 		</xp:this.attrs>
 		<xp:this.value><![CDATA[#{javascript:"var searchPage = \"" + compositeData.searchPage + "\";"}]]></xp:this.value>
-	</xp:text></xp:view>
+	</xp:text>
+</xp:view>

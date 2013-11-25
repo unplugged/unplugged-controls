@@ -1,0 +1,237 @@
+.button {
+	height: 36px;
+	cursor: pointer;
+	border-radius: @button-border-radius;
+	box-shadow: @button-box-shadow;
+	line-height: 36px;
+	font-size: 17px;
+	color: @button-default-label-color;
+	background-color: @button-default-background;
+	text-shadow: @button-text-shadow;
+	font-weight: @button-font-weight;
+	background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%);
+	display: inline-block;
+	border: 1px solid @button-default-border-color;
+	padding: 0 15px;
+	
+	i:before { color: @button-default-label-color; }
+}
+
+/* DIALOG */
+
+.savebutton {
+	color: @button-success-label-color;
+	background: @button-success-background;
+	border: 1px solid @button-success-border-color;
+}
+
+.cancelbutton {
+	color: @button-danger-label-color;
+	background: @button-danger-background;
+	border: 1px solid @button-danger-border-color;
+}
+
+/* FORMS */
+
+&.editButton,
+&.cancelButton,
+&.proceedButton,
+&.saveButton {	
+	.label {
+		height: 36px;
+		border-radius: @button-border-radius;
+		cursor: pointer;
+		box-shadow: @button-box-shadow;
+		padding: 0;
+		text-shadow: @button-text-shadow;
+		font-weight: @button-font-weight;
+		line-height: 36px;
+		font-size: 16px;
+		text-align: center;
+		display: block;
+	}
+}
+
+&.editButton {
+	.label {
+		color: @button-default-label-color;
+		border: 1px solid @button-default-border-color;
+		background-color: @button-default-background;
+		background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%);
+	}	
+}
+
+&.cancelButton {	
+	.label {
+		color: @button-danger-label-color;
+		border: 1px solid @button-danger-border-color;
+		background-color: @button-danger-background;
+		background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%);
+	}		
+}
+
+&.proceedButton,
+&.saveButton {		
+	.label {
+		color: @button-success-label-color;
+		border: 1px solid @button-success-border-color;
+		background-color: @button-success-background;
+		background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%);
+	}	
+}
+
+
+
+/* NAVBAR/FOOTER BUTTONS */
+
+.viewsButton,
+.homeButton,
+.searchButton,
+.syncButton,
+.newButton,
+.settingsButton,
+.backButton {
+	position: absolute;
+	min-width: 36px;
+	height: 36px;
+	box-shadow: @button-box-shadow;
+	cursor: pointer;
+	border-radius: @button-border-radius;
+	top: 10px;
+	line-height: 36px;
+	font-size: 17px;
+	color: @button-default-label-color;
+	background-color: @button-default-background;
+	text-shadow: @button-text-shadow;
+	font-weight: @button-font-weight;
+	background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%);
+
+	@media screen and (max-width: 700px) {
+		top: 5px;
+		height: 34px;
+	}
+
+	.label {
+		display: block;
+		padding: 0 12px 0 36px;
+		@media screen and (max-width: 700px) { display: none; }
+	}
+	
+	.icon:before {
+		position:absolute;
+		left:8px;
+		//top:8px;
+		top: 6px;
+		display:inline-block;
+		//font:20px/1em 'Glyphicons Regular';
+		font: 24px/1em 'FontAwesome';
+		font-style:normal;
+		font-weight:400;
+		vertical-align:middle;
+		text-transform:none;
+		-webkit-font-smoothing:antialiased;			
+		
+		@media screen and (max-width: 700px) {
+			top: 5px;
+		}				
+	}
+}
+
+.homeButton,
+.newButton,
+.settingsButton {
+	right: 10px;
+	@media screen and (max-width: 700px) {
+		right: 4px;
+	}
+}
+
+.viewsButton,
+.syncButton,
+.backButton {
+	left: 10px;
+	@media screen and (max-width: 700px) {
+		left: 4px;
+	}
+}
+
+.viewsButton {	
+	.icon:before {	
+		//content: "\E159"; 
+		content: '';
+	}
+}
+
+.homeButton {
+	.icon:before { 
+		//content: "\E021"; 
+		content: '';
+	}
+	@media screen and (max-width: 700px) {
+		width: 36px;
+	}	
+}
+
+.searchButton {
+	right: 56px;
+	.icon:before { 
+		//content: "\E028"; 
+		content: '';
+	}	
+
+	@media screen and (min-width: 701px) {
+		display: none;
+	}		
+	@media screen and (max-width: 700px) {
+		right: 45px;
+	}
+}
+
+.syncButton {
+	background-color: @button-success-background;
+	color: @button-success-label-color;
+	.icon:before { 
+		//content: "\E082"; 
+		content: '';
+	}	
+}
+
+.newButton {	
+	.icon:before { 
+		//content: "\E236"; 
+		content: '';
+	}	
+}
+
+.settingsButton {
+	.icon:before { 
+		//content: "\E137"; 
+		content: '';
+	}	
+}
+
+.backButton {
+	.icon:before { 
+		//content: "\E225";
+		content: ''; 
+	}	
+}
+
+.viewsButton,
+.searchButton,
+.backButton {
+	@media screen and (min-width: 1001px) {
+		display: none;
+	}
+}
+
+/*
+@media screen and (max-width: 700px) {
+	.homeButton,
+	.searchButton,
+	.viewsButton {
+		background: none;
+		box-shadow: none;
+	}
+}
+*/

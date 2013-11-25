@@ -7,8 +7,7 @@
  * on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
  * the specific language governing permissions and limitations under the License
  */
-
-html, body { height:100%; }
+html, body, form { height:100%; }
 body {
 	padding:0;
 	margin:0;
@@ -26,6 +25,9 @@ body {
 	color:#eee;
 	font-family:helvetica;
 	font-size:12px;
+	
+	/* Jack changes */
+	background: black;
 }
 
 #wrapper {
@@ -49,6 +51,9 @@ body {
 	-ms-border-radius:10px;
 	-o-border-radius:10px;
 	border-radius:10px;
+	
+	/* Jack */
+	padding: 0 3px;
 }
 
 #nav li {
@@ -61,21 +66,26 @@ body {
 	-ms-border-radius:7px;
 	-o-border-radius:7px;
 	border-radius:7px;
-	background:rgba(255,255,255,0.1);
+	background:rgba(255,255,255,0.2);
 	overflow:hidden;
 	padding:0;
 	margin:3px 11px 0 0;
 	text-align:center;
+	cursor: pointer;
 }
 
 #nav li#prev {
 	margin-left:5px;
 	background:transparent;
+	/* Jack */
+	display: none;
 }
 
 #nav li#next {
 	margin-right:0;
 	background:transparent;
+	/* Jack */
+	display: none;
 }
 
 #nav li.selected {
@@ -109,7 +119,7 @@ body {
 
 #swipeview-slider img {
 	display:block;
-	border:5px solid #eee;
+	border:5px solid #eee; 
 	-webkit-box-shadow:0 2px 6px #000;
 	-moz-box-shadow:0 2px 6px #000;
 	-ms-box-shadow:0 2px 6px #000;
@@ -134,6 +144,17 @@ body {
 	pointer-events:none;
 	max-height: 95%;
 	max-width: 95%;
+	
+	/* Jack changes */
+	border: 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-ms-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;	
+	max-height: 85%;
+	max-width: 95%;
+	margin-top: -30px;
 }
 
 #swipeview-slider span {
@@ -175,6 +196,16 @@ body {
 	-o-transform:translate(0,100%);
 	-o-transform:translate(0,100%) translateZ(0);
 	transform:translate(0,100%) translateZ(0);
+	
+	/* Jack changes */
+	-webkit-border-radius:0;
+	-moz-border-radius:0;
+	-ms-border-radius:0;
+	-o-border-radius:0;
+	border-radius:0;	
+	border-top: 0;
+	font-weight: 200;
+	background: transparent;
 }
 
 #swipeview-slider .swipeview-active span {
@@ -233,6 +264,10 @@ body {
   height: 30px;
   background-color:black;
   border-radius:8px;
+  
+  /* Jack */
+  top: 13px;
+  font-weight: 200;
 }
 #closeButton > a{
   display:block;
@@ -243,7 +278,62 @@ body {
   padding-top:4px;
   text-decoration:none;
   text-align: center;
+  
+  /* Jack */
+  color: #e22828;
+}
+
+#closeButton > a:hover { 
+  /* Jack */
+  color: #ff7878;
 }
 #closeButton > a > span{
  margin-left:7.0px;
+}
+
+
+
+
+/* Jack */
+
+#swipepreviousbutton {
+	position: absolute;
+	bottom: 13px;
+	left: 13px;
+}
+
+#swipepreviousbutton img {
+	opacity: 0;
+}
+
+#swipepreviousbutton:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-style: solid;
+	border-width: 15px 22px;
+	border-color: transparent #666 transparent transparent;
+	margin-left: -22px;
+}
+
+#swipenextbutton {
+	position: absolute;
+	bottom: 13px;
+	right: 13px;
+}
+
+#swipenextbutton img {
+	opacity: 0;
+}
+
+#swipenextbutton:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 0;
+	border-style: solid;
+	border-width: 15px 22px;
+	border-color: transparent transparent transparent #666;
+	margin-right: -22px;
 }

@@ -26,7 +26,6 @@
 		&lt;ul&gt;&#xd;
 			&lt;li&gt;unp/jquery-2.0.3.min.js&lt;/li&gt;&#xd;
 			&lt;li&gt;unp/jquery.blockui.min.js&lt;/li&gt;&#xd;
-			&lt;li&gt;unp/iscroll.min.js&lt;/li&gt;&#xd;
 			&lt;li&gt;unplugged.js&lt;/li&gt;&#xd;
 			&lt;li&gt;unplugged.css&lt;/li&gt;&#xd;
 			&lt;li&gt;unp/right-arrow-trans-white-large.png&lt;/li&gt;&#xd;
@@ -107,6 +106,10 @@ no</editor-parameter>
             <default-value>no</default-value>
           </designer-extension>
         </property-extension>
+      </property>
+      <property>
+        <property-name>callback</property-name>
+        <property-class>string</property-class>
       </property>
     </property-type>
     <icon>

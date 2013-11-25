@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" replicaid="80257B470037E1BA" version="9.0">
-<noteinfo noteid="5ffe" sequence="2" unid="A305953E6BC9020880257B8D0029EF69">
-<created><datetime dst="true">20130617T083802,65+01</datetime></created>
-<modified><datetime dst="true">20130617T083918,85+01</datetime></modified>
-<revised><datetime dst="true">20130617T083918,84+01</datetime></revised>
-<lastaccessed><datetime dst="true">20130617T083918,85+01</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20130617T083802,71+01</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="80fa" sequence="1" unid="A70B54208AF65BF980257C2A003A1D1C">
+<created><datetime>20131121T103445,40+00</datetime></created>
+<modified><datetime>20131121T103454,55+00</datetime></modified>
+<revised><datetime>20131121T103454,54+00</datetime></revised>
+<lastaccessed><datetime>20131121T103454,55+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103454,55+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
 <item name="$Flags"><text>D34CiQ</text></item>
@@ -12,10 +12,9 @@
 <item name="$ImagesWide" sign="true"><number>1</number></item>
 <item name="$ImagesHigh" sign="true"><number>1</number></item>
 <item name="$ImagesColorize" sign="true"><number>0</number></item>
-
-
-<item name="$MimeType" sign="true"><text>image/png</text></item>
 <item name="$FileModDT" sign="true"><datetime dst="true">20130614T170708,00+01</datetime></item>
 <item name="$ImageNames" sign="true"><text>icon-close@2x.png</text></item>
-<item name="$TITLE" sign="true"><textlist><text>unp/icon-close@2x.png</text></textlist></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item></note>
+<item name="$TITLE" sign="true"><text>unp/icon-close@2x.png</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+</note>

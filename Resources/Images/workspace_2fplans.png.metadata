@@ -1,65 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="plans.png" maintenanceversion="3.0" name="workspace/plans.png" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="63e2" sequence="7" unid="4AD786ECD5E1852280257AFB004F2F2E">
-<created><datetime>20130122T142454,22+00</datetime></created>
-<modified><datetime>20130321T101752,37+00</datetime></modified>
-<revised><datetime>20130321T101752,36+00</datetime></revised>
-<lastaccessed><datetime>20130321T101752,37+00</datetime></lastaccessed>
-<addedtofile><datetime>20130122T142454,33+00</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="81e2" sequence="1" unid="5672DACA861B5DBB80257C2A003A1D56">
+<created><datetime>20131121T103445,98+00</datetime></created>
+<modified><datetime>20131121T103507,18+00</datetime></modified>
+<revised><datetime>20131121T103507,17+00</datetime></revised>
+<lastaccessed><datetime>20131121T103507,18+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103507,18+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
-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
-QskfxwL2/xFzxVxw7LS7AAAAAElFTkSuQmCC
-</jpeg>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>workspace/plans.png</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$ImageNames" sign="true"><text>plans.png</text></item>
 <item name="$FileModDT" sign="true"><datetime dst="true">20091018T135535,00+01</datetime></item>
-</imageresource>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+</note>

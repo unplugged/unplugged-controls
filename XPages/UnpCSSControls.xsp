@@ -8,7 +8,7 @@
 		headerHomeLink="/UnpMain.xsp" viewsButton="true" backButtonText="Back"
 		backButtonURL="UnpMain.xsp" title="CSS Controls">
 	</unp:unpHeader>
-
+	<div id="contentwrapper">
 	<unp:unpScrollableArea>
 		<xp:this.facets>
 			<xp:panel xp:key="facet_1">
@@ -51,6 +51,6 @@
 			</xp:panel>
 		</xp:this.facets>
 	</unp:unpScrollableArea>
-
+	</div>
 	<unp:unpFooter newDocLoadType="ajax" synctype="currentdb"></unp:unpFooter>
 </xp:view>

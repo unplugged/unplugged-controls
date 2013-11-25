@@ -1,98 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="defaultLogo.png" maintenanceversion="3.0" name="unp/defaultLogo.png" noquery="true" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="55f6" sequence="2" unid="0D519C75F28C21F280257AD2003435F3">
-<created><datetime>20121212T093016,83+00</datetime></created>
-<modified><datetime>20121212T093029,28+00</datetime></modified>
-<revised><datetime>20121212T093029,27+00</datetime></revised>
-<lastaccessed><datetime>20121212T093029,28+00</datetime></lastaccessed>
-<addedtofile><datetime>20121212T093016,86+00</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="809e" sequence="1" unid="A5E56C31213D994680257C2A003A1D05">
+<created><datetime>20131121T103445,17+00</datetime></created>
+<modified><datetime>20131121T103449,43+00</datetime></modified>
+<revised><datetime>20131121T103449,42+00</datetime></revised>
+<lastaccessed><datetime>20131121T103449,43+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103449,43+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
-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
-</jpeg>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>unp/defaultLogo.png</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$ImageNames" sign="true"><text>defaultLogo.png</text></item>
+<item name="$FileModDT" sign="true"><datetime>20121212T092849,00+00</datetime></item>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
 
-<item name="$FileModDT" sign="true"><datetime>20121212T092849,00+00</datetime></item></imageresource>
+</note>

@@ -1,38 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="about.png" maintenanceversion="3.0" name="unp/about.png" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="55f2" sequence="2" unid="BB28DA455B81E6B080257AD2003435F2">
-<created><datetime>20121212T093016,82+00</datetime></created>
-<modified><datetime>20121212T093024,01+00</datetime></modified>
-<revised><datetime>20121212T093024,00+00</datetime></revised>
-<lastaccessed><datetime>20121212T093024,01+00</datetime></lastaccessed>
-<addedtofile><datetime>20121212T093016,84+00</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="807e" sequence="1" unid="59DB9000AFE1264480257C2A003A1CFD">
+<created><datetime>20131121T103445,09+00</datetime></created>
+<modified><datetime>20131121T103447,80+00</datetime></modified>
+<revised><datetime>20131121T103447,79+00</datetime></revised>
+<lastaccessed><datetime>20131121T103447,80+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103447,80+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
-iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
-bWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
-bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
-eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEz
-NDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
-dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
-dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEu
-MC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVz
-b3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1N
-Ok9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo3NENBQTYzN0JGMjA2ODExODhDNkU3QzJGNjA0
-MTNFNSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGMUIzNjQ0ODhCOTQxMUUwQkI1OUJBRTA0
-OUZEREFDRCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGMUIzNjQ0NzhCOTQxMUUwQkI1OUJB
-RTA0OUZEREFDRCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9z
-aCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjIzQTYwMzIx
-RkMyMDY4MTE4NzFGRTY0NEMwMjc0MkMxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjc0Q0FB
-NjM3QkYyMDY4MTE4OEM2RTdDMkY2MDQxM0U1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpS
-REY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+YIvjDQAAAd1JREFUeNqUVE1LAlEU
-1WoRKQoSCG50U7gL/QcV1G9QM9wEwkA7QWkjoSs3FrRWXIR/ocUgLrIQEcWEIjchSDkUfjY2Mzjd
-O02DTu8NdOHwfO+ec2buu94xybJs0sEOiAFYwED+iYG6j6l5ja+FziQ8n88/ZINQ82EjoxRN3Ov1
-xoTjFMkoQjOJx+M1oF0xDHNPSEd+fVYADlEUL02U8Hg8RRAwXq83r8+hDnIOZTMej8+M7kSSJCyr
-COuAlEc9+qxNp9OQ1WpdetJsNpMqlcpruVzmXC6XORAIHNhsNjvpjVEPS3oFTNz6ZLPZ7Hc6nbtu
-t3sRjUZTwWCwRCtd0xuVBd06x2ZkMpk92ThW8Y6+aFl4m1M0AsM0jYN6pWntdvuNRGg0GhwQ3Pi0
-yWTC0YxQr7S/Wq22SLUDoQW8l+Fw6LFYLJu0O6rVam3lh9/vD5HKY1n2GstKJBLbYPoO3RFIZfl8
-vrB28clk8lZPEgRhimPAcdxJPp8vjUYjXs9BHeq1EYHYLxQKT/I/IpfLPaLuz9BCHONckUpYDMyr
-83dE/YxA7DqdzmI2m32o1+t9nudFFOOKezzHPPL0nxHzkisemM0bsBwCdgBbgHWcGsAz/ukBN6D5
-XOAr67cAAwBrcysH5X50UQAAAABJRU5ErkJggg==
-</jpeg>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>unp/about.png</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$ImageNames" sign="true"><text>about.png</text></item>
+<item name="$FileModDT" sign="true"><datetime>20121212T092908,00+00</datetime></item>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
 
-<item name="$FileModDT" sign="true"><datetime>20121212T092908,00+00</datetime></item></imageresource>
+</note>

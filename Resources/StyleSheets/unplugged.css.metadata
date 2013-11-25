@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" replicaid="80257B470037E1BA" version="9.0">
-<noteinfo noteid="684a" sequence="148" unid="2E8E68D354A6FBF980257B8F004AC314">
-<created><datetime dst="true">20130619T143636,04+01</datetime></created>
-<modified><datetime dst="true">20131010T110803,64+01</datetime></modified>
-<revised><datetime dst="true">20131010T110803,63+01</datetime></revised>
-<lastaccessed><datetime dst="true">20131010T110803,64+01</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20130619T143636,06+01</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="7f96" sequence="3" unid="1FC6251FD86C325D80257C2A0039F624">
+<created><datetime>20131121T103305,64+00</datetime></created>
+<modified><datetime>20131121T103311,38+00</datetime></modified>
+<revised><datetime>20131121T103311,37+00</datetime></revised>
+<lastaccessed><datetime>20131121T103311,38+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103305,66+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$Flags"><text>34C=Q</text></item>
+<item name="$FileNames" sign="true"><text>unplugged-dark.css</text></item>
+
+
+
+
+
+<item name="$FileModDT" sign="true"><datetime>20131120T103822,93+00</datetime></item>
 <item name="$TITLE" sign="true"><text>unplugged.css</text></item>
-<item name="$FileModDT" sign="true"><datetime dst="true">20130905T084645,64+01</datetime></item>
-<item name="$FileModDT" sign="true"><datetime>20130905T084645,00+00</datetime></item>
-<item name="$Flags"><text>=34QC</text></item>
-<item name="$FlagsExt" sign="true"><text>D</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-
-
-
-<item name="$FileNames" sign="true"><text>unplugged.css</text></item></note>
+<item name="$DesignerVersion" sign="true"><text>8.5.3</text></item></note>

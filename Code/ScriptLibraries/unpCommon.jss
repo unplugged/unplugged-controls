@@ -25,6 +25,24 @@ function getCurrentXPage(){
 	return viewScope.currentxpage;
 }
 
+function matchCurrentURL(compare){
+	var url = rightBack(context.getUrl().toString(), "/");
+	if (url == rightBack(compare, "/")){
+		return true;
+	}else{
+		return false;
+	}
+}
+
+function rightBack(sourceStr, keyStr){
+	try{
+		arr = sourceStr.split(keyStr);
+		return (sourceStr.indexOf(keyStr) == -1 | keyStr=='') ? '' : arr.pop()
+	}catch(e){
+		return "";
+	}
+}
+
 /*
  * Returns the current db path in the format "/dir/mydb.nsf"
  */
@@ -70,6 +88,16 @@ function isIOS(){
 	}
 }
 
+function isPhone(){
+	var useragent = context.getUserAgent().getUserAgent();
+	if ((useragent.indexOf("iPhone") > -1 && useragent.indexOf("Mobile") > -1) || 
+			(useragent.indexOf("Android") > -1)){
+		return true;
+	}else{
+		return false;
+	}
+}
+
 function getiOSVersion(){
 	if (!isIOS()){
 		return 0;
@@ -78,6 +106,23 @@ function getiOSVersion(){
 	useragent = rightBack(useragent, "/");
 	useragent = @Left(useragent, useragent.length - 4);
 	return parseInt(useragent, 10) - 4;
+}
+
+function isAjax(){
+	if (requestScope.isajax == null){
+		var rnd = context.getUrlParameter("rnd");
+		var history = context.getUrlParameter("history");
+		if (history == "true"){
+			requestScope.isajax = false;	
+		}else{
+			if (rnd == "" || rnd == null || rnd == "undefined"){
+				requestScope.isajax = false;
+			}else{
+				requestScope.isajax = true;
+			}
+		}
+	}
+	return requestScope.isajax;
 }
 
 function $A( object ){
@@ -108,7 +153,7 @@ function timeSince(datetime){
     var interval = Math.floor(seconds / 31536000);
 
     if (interval > 1) {
-        return interval + " years ago";
+        return interval + " yrs ago";
     }
     interval = Math.floor(seconds / 2592000);
     if (interval > 1) {
@@ -120,21 +165,21 @@ function timeSince(datetime){
     }
     interval = Math.floor(seconds / 3600);
     if (interval > 1) {
-        return interval + " hours ago";
+        return interval + " hrs ago";
     }
     interval = Math.floor(seconds / 60);
     if (interval > 1) {
-        return interval + " minutes ago";
+        return interval + " mins ago";
     }
     if (interval == 1){
     	return interval + " minute ago";	
     }
-    return "less than a minute ago";
+    return "just now";
 }
 
 function getFavorites(){
 	var favorites = session.getEnvironmentString("ro.favorites." + @LowerCase(@ReplaceSubstring(database.getFilePath(), "\\", "")), true) + ",";
-	if (favorites == null || favorites == ""){
+	if (favorites == null || favorites == "" || favorites == ","){
 		return new Array();
 	}else if(favorites.indexOf(",") > -1){
 		return $A(favorites.split(","));
@@ -143,6 +188,7 @@ function getFavorites(){
 	}
 }
 function setFavorites(favoritesarray){
+	//print("Setting favorites: " + @Implode(favoritesarray));
 	session.setEnvironmentVar("ro.favorites." + @LowerCase(@ReplaceSubstring(database.getFilePath(), "\\", "")), @Implode(@Trim(favoritesarray), ","), true);
 	sessionScope.favorites = null;
 }
@@ -159,9 +205,4 @@ function getDownloaded(){
 function setDownloaded(downloadedarray){
 	session.setEnvironmentVar("ro.downloaded." + @LowerCase(@ReplaceSubstring(database.getFilePath(), "\\", "")), @Implode(@Trim(downloadedarray), ","), true);
 	sessionScope.downloaded = null;
-}
-
-function rightBack(sourceStr, keyStr){
-	arr = sourceStr.split(keyStr);
-	return (sourceStr.indexOf(keyStr) == -1 | keyStr=='') ? '' : arr.pop()
 }

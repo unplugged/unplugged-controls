@@ -1,48 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="house.png" maintenanceversion="3.0" name="icons/house.png" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="3232" sequence="6" unid="E63DC1315DC5219380257AAA0040475E">
-<created><datetime>20121102T114205,74+00</datetime></created>
-<modified><datetime>20130115T082029,73+00</datetime></modified>
-<revised><datetime>20130115T082029,72+00</datetime></revised>
-<lastaccessed><datetime>20130115T082029,73+00</datetime></lastaccessed>
-<addedtofile><datetime>20121102T114206,92+00</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="804a" sequence="1" unid="BC0AADEC38656F8280257C2A003A1CF0">
+<created><datetime>20131121T103444,96+00</datetime></created>
+<modified><datetime>20131121T103445,18+00</datetime></modified>
+<revised><datetime>20131121T103445,17+00</datetime></revised>
+<lastaccessed><datetime>20131121T103445,18+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103445,18+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
-iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
-bWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
-bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
-eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0
-MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
-dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
-dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEu
-MC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVz
-b3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1N
-Ok9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo2RDY4NTFDQjA5MjA2ODExOEMxNEE5MjM2Njg3
-REM3QyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0QzFDN0E0RTg5RjkxMUUxQkNENzlCMkUy
-MUQ4Qjg1NSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0QzFDN0E0RDg5RjkxMUUxQkNENzlC
-MkUyMUQ4Qjg1NSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgTWFjaW50
-b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OTQ2RDU4
-RDc2QzIxNjgxMTg3MUY4N0RFODAyNTA3QjMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NkQ2
-ODUxQ0IwOTIwNjgxMThDMTRBOTIzNjY4N0RDN0MiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRm
-OlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7mq7tJAAAEL0lEQVR42qxVa2hb
-dRS/Nzdt3m2sbdJkSN6v5nFzm4lDBTeVla7r1nZ163ywDYcVxC8iPqmMWYasggrih02xModMUdgY
-sokfRDdq03Uu6ZpX261t6voScdamed17Pf+0mZf0Js1wh/xyT8495/7O6/6Df/3dOaxcGR7yOz1e
-b3skHL707pGen7C7EAHDMFg5GPIPAgm1hyCEwgan67G3e448ejdERFtH54Ykw1eG3G4P2YH0kWBg
-UiaXSzVarcVqs2cu//JzvKyKaJrGSgFISKfL3Y700Oh1GemlToyPxehEYjljdzQ8+errb20pq6Kd
-u9uLVhL47SrlcLp2IT0SGsWoRt+bAoGgQqVWbwsGA2cVVdUi0C1GsyUxOHD5VkmiHa27eUmCgWs+
-yHgn0mPh0Arl23wUSIQsy2I4jgtUKvUTI8Frp6uqlVWgWw0m8z/+XwdmixI17WhdR3I9GPBZbY4W
-pI/Hwn96Kd97BEFUIpI8EGltnaoJZnYCyGrvr62z6Y3Gv6/4B+d4Z5TNZjEuIEuf2WpryWYzbDQS
-mvN4G98XEISIBtJCCCsqpB4P2Q9+w5l0mjFbbK2Hu19y8hJlMlksD8juQaPJ2pJMpvCxaGSaJKkP
-CAEh8g8MPDI/v4hzceDpvTiyi0Rihcvl/jIajQQgTmGyWDsOPt/tKCTCj/V9lFNikdBDZqu9Caqq
-mJm+GSQp6jOJRKpA9xYW/sCNBp0NVBEnNtXV2Rb99IvTLPpx+/Zft0aCIy/o9IZmaPPcWDT6zan+
-k9H/KoJ2hUOjW3RGc1MikaibujE+5HKTJ0WVYgVDw8wAyGeTpl4BqOQgl0TeRyGv0trt9o8nb0z8
-mEql9HqT+an9zx2y3CGKRcMP6w3G7SuJZf1MfPJ7p9v9uUgsqqYZeI/ygHdIpaoTFwI9gOtXrVTq
-TRZzb3x66mI6nbLrjeZ9e585YMoRaTSbtiZTSSw+NfmVo8HZL5ZIa2jIkAu0JDX3KcWFyBEV+NbU
-1Dp1Ot1rv8enz6Ot1ukMXW2dXUrh4uLCRGJ5KeQhvRekUpkKZV8oaM0VclkKVAXHvLRKtN4f1n4z
-tK/75sRYzwM6w7ZkcmVJqKrXnJmdSatlMrmWLwjJ/OzM9p7e4z9wbX2972CHDr/4eLGYeo126/Fj
-Ry/t2rNv6sL5s7RwNWM2V3YxaXB6Lhba+j78BMu3rpSc+/ZM7tDF0df+Zw+qyUbfHHbvBX/jlZdX
-ty4/g/ya8gEOVylc8UKs2UvG5mW1dSyTW89i0tzcnISLDyDhmBMQc7VUHFdyRCzMiCnRa5ghqhyt
-M8sxS5gN5rOOiIHTGB2SxYn475WK4a8IiJiNidhyEyhe0dr/UDFZm8P/JyqzIuyeECEUrYjmb12p
-GF4iOEayWfgIBISQzwkeiJhWCtebKUHEMDR63p3f/wowAEvH+QAsJVdrAAAAAElFTkSuQmCC
-</jpeg>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>icons/house.png</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$ImageNames" sign="true"><text>house.png</text></item>
 <item name="$FileModDT" sign="true"><datetime>20121102T113951,00+00</datetime></item>
-</imageresource>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+</note>

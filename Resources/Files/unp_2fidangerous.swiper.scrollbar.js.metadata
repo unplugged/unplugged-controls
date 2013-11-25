@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" replicaid="80257B470037E1BA" version="9.0">
-<noteinfo noteid="5bc6" sequence="2" unid="098FE50FFDA8946B80257B87003AB854">
-<created><datetime dst="true">20130611T114122,76+01</datetime></created>
-<modified><datetime dst="true">20130611T114128,53+01</datetime></modified>
-<revised><datetime dst="true">20130611T114128,52+01</datetime></revised>
-<lastaccessed><datetime dst="true">20130611T114128,53+01</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20130611T114122,80+01</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="7fc6" sequence="1" unid="839AA7BD081EF25F80257C2A003A08D5">
+<created><datetime>20131121T103353,49+00</datetime></created>
+<modified><datetime>20131121T103355,70+00</datetime></modified>
+<revised><datetime>20131121T103355,69+00</datetime></revised>
+<lastaccessed><datetime>20131121T103355,70+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103355,70+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
 <item name="$Flags"><text>345CgQ</text></item>
 <item name="$FlagsExt"><text>D</text></item>
-
 <item name="$FileModDT" sign="true"><datetime dst="true">20130611T114112,00+01</datetime></item>
+<item name="$TITLE" sign="true"><text>unp/idangerous.swiper.scrollbar.js</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
 
-<item name="$FileNames" sign="true"><text>idangerous.swiper.scrollbar.js</text></item>
-<item name="$TITLE" sign="true"><textlist><text>unp/idangerous.swiper.scrollbar.js</text></textlist></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item></note>
+
+<item name="$FileNames" sign="true"><text>unp_2fidangerous.swiper.scrollbar.js</text></item></note>

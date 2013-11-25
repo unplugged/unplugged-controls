@@ -38,13 +38,13 @@ var apps_scroll;
  */
 
 function ready () {	
-	//if (unpluggedserver){
+	if (unpluggedserver){
 		// Scroll content
-	//	var content = document.querySelector('#wscontent > div.wsscroll');
-	//	if (content) {
-	//		content_scroll = new iScroll(content);
-	//	}
-	//}
+		var content = document.querySelector('#wscontent > div.wsscroll');
+		if (content) {
+			//content_scroll = new iScroll(content);
+		}
+	}
 	// Free some memory
 	//document.removeEventListener('DOMContentLoaded', ready, false);
 }

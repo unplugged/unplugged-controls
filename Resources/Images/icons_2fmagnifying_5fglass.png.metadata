@@ -1,49 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="magnifying_glass.png" maintenanceversion="3.0" name="icons/magnifying_glass.png" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="326a" sequence="6" unid="802A20A32F9709C780257AAA0040476C">
-<created><datetime>20121102T114205,88+00</datetime></created>
-<modified><datetime>20130115T082029,91+00</datetime></modified>
-<revised><datetime>20130115T082029,90+00</datetime></revised>
-<lastaccessed><datetime>20130115T082029,91+00</datetime></lastaccessed>
-<addedtofile><datetime>20121102T114207,20+00</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="8072" sequence="1" unid="3E03892A36CEDF1C80257C2A003A1CFA">
+<created><datetime>20131121T103445,06+00</datetime></created>
+<modified><datetime>20131121T103447,18+00</datetime></modified>
+<revised><datetime>20131121T103447,17+00</datetime></revised>
+<lastaccessed><datetime>20131121T103447,18+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103447,18+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
-iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
-bWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
-bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
-eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0
-MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
-dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
-dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEu
-MC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVz
-b3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1N
-Ok9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo2RDY4NTFDQjA5MjA2ODExOEMxNEE5MjM2Njg3
-REM3QyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0QkVDM0UwNTg5RjkxMUUxQkNENzlCMkUy
-MUQ4Qjg1NSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0QkVDM0UwNDg5RjkxMUUxQkNENzlC
-MkUyMUQ4Qjg1NSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgTWFjaW50
-b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6OTQ2RDU4
-RDc2QzIxNjgxMTg3MUY4N0RFODAyNTA3QjMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NkQ2
-ODUxQ0IwOTIwNjgxMThDMTRBOTIzNjY4N0RDN0MiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRm
-OlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6bQdxEAAAETElEQVR42mJkgIK1
-G7YwEANOHD+qISgoVC4kLGzDzc0tzsXFzfvt29fPX79+ffnu7dsj79+/6+zubL+Bro8Rxli9fjNe
-C44fO8IpKia+VFFR0ZeZmYUFl7q/f//8uX///ubXr15G93V3foeJM8EY////x4mPHD6koKaucUNZ
-WSWQiYmZBZ9akDxIHUh9flGpAoZF//79w4qPHT3Mqa6hcVBAQFAOJvbmzetHFy+cL2JjZlQKDfQV
-5eXiUL16+VIJSBymBqQepK+guJQTZD4LskXYgLCwyCIkS/7euX1rcXJCbJWMjIwIUJofhD3cXRmA
-eO/bt283TJs5p1ZJWSWGCeg1kD6QfqCaUHgcLVmxBsOS0ydPaBibml0BaQLxr1290tbaVD8ZyBTB
-E50/ahuakzQ0tSqhHvh7+tRJQ6Sg+4+B+QUFa4HphRnEfvny5S2gJa1QX/zGg5mbG2ongtSD9IH0
-CwoJVSBZ9BcD8/PzW8DYT588ngJUxkfAEhjmevb0yRRkc+Bx9BdLHHFwconBxIH5ZDM08fwiJr/x
-8vDshOkFmYPw0d9/GJiFmYUTRP/98/e/ian5AyJ9A8b1tVUPQPpg5jAhfPQXA3//8f07iP73/x/j
-qVPHpYHKfkJ9RBDnFhTJgPTBzEFYBHI5Gv786fMLGJuVlc0PqOw7kT76AUwH7sjmIAXdXwz87u2b
-gzC2qKhYHtSQX8RYBFKPbA7coj/AiEPH796/n/jrz5+/ILaAkLBGVn5xE5JFf3DgX1l5RXUg9SB9
-IP0gc+AZtnfSdKyp5/Gjh+tk5eQDYZnv0cMHi188f5a2avmS3+hqwyJjWCUkpWbJySvEwjI5UP/6
-CT0dQSzIcYQOLpw/qwAsKTO5eXiN+fkF5ECZUVZOIYGPX8ApOT275/u3bwsNjU0/nT97mo+Tiyte
-TUOrBKQOWLaCzfv48cOjN69fR6NUE+29k1AsuXHtSpSquubCnz9+fHpw/26kjKz8bD5+fjkGIsGn
-jx8f3b93137FkgWgbMHADJNwcnGHF/XXgZaoqGosBHqfhYWFlZOdg8P53p3b2r9//dbg5uZRA2Vc
-XNXEXyB48vjRRmBJ4r5y2aKXMPMxSoab16/Fqaipz2VgZGRBKhWe6OgbfgIyg65euaTBw8tXzsfH
-bwMMLgl2dnaenz9/fgEG44tPnz4e+fL5UyfQFxg1LAtyWXfrxvU4ZVW1uYyMDCwgPggAk+ZlYOQ7
-CItACmwNLW2QIYnI+lhZWRhaO5vxBiXcohsgn6iALGFigZS6IEveAi15aq6lo/cdJkYuAFsUHh0f
-p6SkAg4uWAX47t3byy+fPzPX1Nb9jqtSJMmisKi4OEU0S96/A/mEepaALZKUlulHt+Tli+fmGlo6
-VLME3Dh59eLFHFjSfPvm9UWQT9Q1tb/ja+lgw4QA85VL5/dIy8r9ATYCgdHy1gdsCaj5RSI+dmg/
-XosAAgwA8IheGB0miqsAAAAASUVORK5CYII=
-</jpeg>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>icons/magnifying_glass.png</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$ImageNames" sign="true"><text>magnifying_glass.png</text></item>
 <item name="$FileModDT" sign="true"><datetime>20121102T113951,00+00</datetime></item>
-</imageresource>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+</note>

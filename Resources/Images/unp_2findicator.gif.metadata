@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" replicaid="80257B470037E1BA" version="9.0">
-<noteinfo noteid="4182" sequence="2" unid="A35638AC7143AFF780257B48002A0C71">
-<created><datetime dst="true">20130409T083916,97+01</datetime></created>
-<modified><datetime dst="true">20130409T083923,97+01</datetime></modified>
-<revised><datetime dst="true">20130409T083923,96+01</datetime></revised>
-<lastaccessed><datetime dst="true">20130409T083923,97+01</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20130409T083916,99+01</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="812e" sequence="1" unid="63339741D1E743A580257C2A003A1D29">
+<created><datetime>20131121T103445,53+00</datetime></created>
+<modified><datetime>20131121T103457,33+00</datetime></modified>
+<revised><datetime>20131121T103457,32+00</datetime></revised>
+<lastaccessed><datetime>20131121T103457,33+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103457,33+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
 <item name="$Flags"><text>34CiQ</text></item>
@@ -12,10 +12,9 @@
 <item name="$ImagesWide" sign="true"><number>1</number></item>
 <item name="$ImagesHigh" sign="true"><number>1</number></item>
 <item name="$ImagesColorize" sign="true"><number>0</number></item>
-
-
-<item name="$MimeType" sign="true"><text>image/gif</text></item>
 <item name="$FileModDT" sign="true"><datetime>20130223T212334,00+00</datetime></item>
 <item name="$ImageNames" sign="true"><text>indicator.gif</text></item>
-<item name="$TITLE" sign="true"><textlist><text>unp/indicator.gif</text></textlist></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item></note>
+<item name="$TITLE" sign="true"><text>unp/indicator.gif</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+</note>

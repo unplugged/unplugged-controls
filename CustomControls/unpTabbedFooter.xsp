@@ -29,15 +29,16 @@
 		}
 		}
 	</style>
-	<xp:panel styleClass="footer black">
+	<xp:panel styleClass="footer black" rendered="#{javascript:!isAjax()}">
 
 		<div id='tabfooter'>
 			<ul id="footerTabBar">
-				<xp:repeat id="repeat1" rows="30" disableOutputTag="true"
-					var="menuItem" value="#{javascript:compositeData.tab;}">
+				<xp:repeat id="repeat1" rows="30"
+					disableOutputTag="true" var="menuItem"
+					value="#{javascript:compositeData.tab;}"
+					indexVar="menuItemIndex">
 					<xp:panel tagName="li">
-						<xp:this.styleClass><![CDATA[#{javascript:
-if (("/" + getCurrentXPage()) == menuItem.page){
+						<xp:this.styleClass><![CDATA[#{javascript:if (((menuItem.page == null || menuItem.page == "") && menuItemIndex == 0) || matchCurrentURL(menuItem.page)){
 	return "menuitem" + viewScope.menuItemIndex + " tabSelected";
 }else{
 	return "menuitem" + viewScope.menuItemIndex + " viewMenuItem";
@@ -54,25 +55,17 @@ if (!isEmpty(menuItem.page)){
 return js;}]]></xp:this.value>
 							</xp:attr>
 						</xp:this.attrs>
-						<xp:image id="image2">
+						<xp:panel tagName="i" id="icon">
 							<xp:this.rendered><![CDATA[#{javascript:if (viewScope.menuItemIndex == null){
 	viewScope.menuItemIndex = 0;
 }else{
 	viewScope.menuItemIndex = viewScope.menuItemIndex + 1;
 }
 menuItem.icon != null && menuItem.icon != ""}]]></xp:this.rendered>
-							<xp:this.styleClass><![CDATA[#{javascript:
-return "background:  url('" + menuItem.icon + "') 50% 0% no-repeat; padding-top: 10px;margin-bottom:5px;"
-}]]>
-							</xp:this.styleClass>
-							<xp:this.url><![CDATA[#{javascript:if (("/" + getCurrentXPage()) == menuItem.page){
-	return menuItem.iconselected;
-}else{
-	return menuItem.icon;
-}}]]></xp:this.url>
-						</xp:image>
-						<br />
-						<xp:text id="menutext" styleClass="footerTabtext"
+							<xp:this.styleClass><![CDATA[#{javascript:"fa fa-fw " + menuItem.icon;}]]></xp:this.styleClass>
+						</xp:panel>
+						<xp:text id="menutext"
+							styleClass="footerTabtext"
 							value="#{javascript:menuItem.label;}">
 						</xp:text>
 					</xp:panel>
@@ -99,18 +92,19 @@ db.replicate("someserver");}]]></xp:this.script>
 				</xp:this.action>
 				<xp:this.script><![CDATA[$.blockUI();]]></xp:this.script>
 			</xp:eventHandler>
-			<span class="synclabel">Sync</span>
+			<span class="icon"></span>
+			<span class="label">Sync</span>
 		</xp:link>
 		<xp:link id="link2" styleClass="syncButton" value="#">
 			<xp:this.rendered><![CDATA[#{javascript:isUnpluggedServer() && compositeData.synctype == "alldbs";}]]></xp:this.rendered>
-			<span class="synclabel">Sync</span>
+			<span class="icon"></span>
+			<span class="label">Sync</span>
 			<xp:eventHandler event="onclick" submit="false">
 				<xp:this.script><![CDATA[syncAllDbs()]]></xp:this.script>
 			</xp:eventHandler>
 		</xp:link>
 
-		<xp:text rendered="#{javascript:isUnpluggedServer()}"
-			styleClass="tabfootertext">
+		<xp:text styleClass="tabfootertext">
 			<xp:this.value><![CDATA[#{javascript:var dbrep = session.getEnvironmentString("ro.last.sync." + @LowerCase(@ReplaceSubstring(database.getFilePath(), "\\", "/")), true);
 var rep = session.getEnvironmentString("ro.last.sync", true); 
 if ("" == rep) {
@@ -144,6 +138,7 @@ if (rep == "01/01/70"){
 	rep = timeSince(new Date(rep));
 }
 return "Updated " + rep;}]]></xp:this.value>
+			<xp:this.rendered><![CDATA[#{javascript:return isUnpluggedServer() && !isPhone();}]]></xp:this.rendered>
 		</xp:text>
 	</xp:panel>
 </xp:view>

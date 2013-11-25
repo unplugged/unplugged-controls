@@ -1,27 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="mag_glass_black.png" maintenanceversion="3.0" name="unp/mag_glass.png" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="532a" sequence="1" unid="4FD55270CD3F6CF380257AD000303172">
-<created><datetime>20121210T084623,86+00</datetime></created>
-<modified><datetime>20121210T084624,25+00</datetime></modified>
-<revised><datetime>20121210T084624,24+00</datetime></revised>
-<lastaccessed><datetime>20121210T084624,25+00</datetime></lastaccessed>
-<addedtofile><datetime>20121210T084624,25+00</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="8136" sequence="1" unid="8733819CBAA29AEE80257C2A003A1D2B">
+<created><datetime>20131121T103445,55+00</datetime></created>
+<modified><datetime>20131121T103457,75+00</datetime></modified>
+<revised><datetime>20131121T103457,74+00</datetime></revised>
+<lastaccessed><datetime>20131121T103457,75+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103457,75+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
-iVBORw0KGgoAAAANSUhEUgAAABwAAAAaCAIAAAArNqveAAAAK3RFWHRDcmVhdGlvbiBUaW1lAFNh
-dCA2IE9jdCAyMDEyIDIwOjA4OjQxIC0wNTAwp+0I1QAAAAd0SU1FB9wKBwAJAzaEvB8AAAAJcEhZ
-cwAATiAAAE4gARZ9md4AAAAEZ0FNQQAAsY8L/GEFAAACmUlEQVR42rWVzUsqYRTGx28URMRWtslN
-iQmZqCAZBC6MIlq7aCH4D7QLdGkIumjp0kWbAjfiQs0Kom34ERWiRGmoGw1KRKXU+9zeeLk3x5ny
-cs9i5pmZc35z3jPnPcMw/8EErHc1Go3L5TKbzbOzszMzM81ms1arZbPZdDrdarV+DBWLxR6PZ3t7
-WyaTjXv3+/14PB6NRt/f378LValUgUBAr9dzJ1IsFv1+/8vLCz8UOR4cHFDiw8PD4eHh3d0d1otq
-GAyGnZ0dnU5Hubu7u5PyFVGFVa+trUG8vb0dHR0Fg8HHx8dut4s7OFar1WQyKRAIFhcXhUIhCo0k
-crkcFxS5+Hw+kej3ZSQSOT4+Hg6HX1xxJ5/Pt9ttm82Gy4WFhUwm0+l0xqFCctrc3JRIJBA3Nzf4
-FBwFxVP4QMB/fX2d1ecTury8TEQikWD4jPrQKHaoVqslolAo8EKpD41ihyqVSiI4GoUa9aFR7FCU
-nwi0Ki+U+tAodujT0xMRS0tLvFDqQ6PYoVdXV0RsbW3xQqkPjWKHnp+fo+chjEbjxsYGBxFP4cN8
-7BFEsfp8Nj96WKFQYLdAWyyW0Wh0e3uL41/vFwrdbrfX6yV7BMSTkxMuKOz6+ho47D/EoAHtdvvr
-6ys+Ra/XU6vVVqt1b2/P6XQSImxubq5er2NEjEOnmVLUBoMBRsTFxcXETJmPcXl2dob9Nz8/TzP6
-00gdkSNKQQqysrKCHqhUKhOh5OWY8KlUCgtHjFQqlcvlz8/PpVIJUyocDp+engLhcDg4uOy/E15b
-XV2lU42ksr+/f3l5yZ7pNw3j9Uu+0OVyGb+y6aGsXJPJFIvFGNr80xnWi1Vj7eSSzvXpM6X53t/f
-YxrglxMKhRqNxj8CJ9ov+sg77goFTcgAAAAASUVORK5CYII=
-</jpeg>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>unp/mag_glass.png</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$ImageNames" sign="true"><text>mag_glass_black.png</text></item>
 <item name="$FileModDT" sign="true"><datetime dst="true">20121006T200904,00-04</datetime></item>
-</imageresource>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+</note>

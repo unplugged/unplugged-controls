@@ -22,6 +22,7 @@
 	</unp:unpHeader>
 
 	<div id="content">
+		<div id="contentwrapper">
 		<unp:unpScrollableArea>
 			<xp:this.facets>
 				<unp:unpFlatView insetData="true" title=" By Date"
@@ -32,6 +33,7 @@
 				</unp:unpFlatView>
 			</xp:this.facets>
 		</unp:unpScrollableArea>
+		</div>
 	</div>
 	<unp:unpFooter synctype="currentdb"></unp:unpFooter>
 </xp:view>

@@ -1,11 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="sync_button.gif" maintenanceversion="3.0" name="unp/sync_button.gif" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="5362" sequence="1" unid="82191F0BD40278A880257AD000303180">
-<created><datetime>20121210T084624,00+00</datetime></created>
-<modified><datetime>20121210T084624,90+00</datetime></modified>
-<revised><datetime>20121210T084624,89+00</datetime></revised>
-<lastaccessed><datetime>20121210T084624,90+00</datetime></lastaccessed>
-<addedtofile><datetime>20121210T084624,90+00</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="8192" sequence="1" unid="EDBF1ECB13EBDB5D80257C2A003A1D42">
+<created><datetime>20131121T103445,78+00</datetime></created>
+<modified><datetime>20131121T103502,85+00</datetime></modified>
+<revised><datetime>20131121T103502,84+00</datetime></revised>
+<lastaccessed><datetime>20131121T103502,85+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103502,85+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>unp/sync_button.gif</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$ImageNames" sign="true"><text>sync_button.gif</text></item>
 <item name="$FileModDT" sign="true"><datetime dst="true">20121006T125525,00-04</datetime></item>
-</imageresource>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+</note>

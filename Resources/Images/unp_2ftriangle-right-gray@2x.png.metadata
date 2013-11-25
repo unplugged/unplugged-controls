@@ -1,36 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="triangle-right-gray@2x.png" maintenanceversion="3.0" name="unp/triangle-right-gray@2x.png" noquery="true" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="5aba" sequence="2" unid="DAD1FA289EE6AC6080257ADB004117F5">
-<created><datetime>20121221T115059,73+00</datetime></created>
-<modified><datetime>20121221T115114,09+00</datetime></modified>
-<revised><datetime>20121221T115114,08+00</datetime></revised>
-<lastaccessed><datetime>20121221T115114,09+00</datetime></lastaccessed>
-<addedtofile><datetime>20121221T115059,75+00</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="81a6" sequence="1" unid="F3FA003E2167285280257C2A003A1D47">
+<created><datetime>20131121T103445,83+00</datetime></created>
+<modified><datetime>20131121T103503,93+00</datetime></modified>
+<revised><datetime>20131121T103503,92+00</datetime></revised>
+<lastaccessed><datetime>20131121T103503,93+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103503,93+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
-iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
-bWFnZVJlYWR5ccllPAAAA7FpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
-bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
-eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0
-NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
-dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
-dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wUmlnaHRzPSJodHRwOi8vbnMuYWRvYmUuY29tL3hh
-cC8xLjAvcmlnaHRzLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9t
-bS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3Vy
-Y2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcFJpZ2h0
-czpNYXJrZWQ9IkZhbHNlIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InV1aWQ6QjE4ODdCQTQz
-RDBFRTExMUI2QUFDNkJCMkM3QjBEODQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODJENzJB
-RDU0MENCMTFFMkE4NkZGMDZGN0JCNkREOTUiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODJE
-NzJBRDQ0MENCMTFFMkE4NkZGMDZGN0JCNkREOTUiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhv
-dG9zaG9wIENTNiAoTWFjaW50b3NoKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5j
-ZUlEPSJ4bXAuaWlkOjdDRUQzQjBBMEMyMDY4MTE4MDgzOEU2MzVBNDgwMEE3IiBzdFJlZjpkb2N1
-bWVudElEPSJ1dWlkOkIxODg3QkE0M0QwRUUxMTFCNkFBQzZCQjJDN0IwRDg0Ii8+IDwvcmRmOkRl
-c2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+u4/m
-9QAAAThJREFUeNqck7FOg1AYha96J2Ih7MADsOLAE5AwNR2IYQEm2Owr+Ah9EmNj0264Ku5Kd0Nn
-2SSxeG5zSUhDxf4n+QKX5Jx7OfzwNE0fGGN34JMRdAlm4B3MwRUlQGgCFuAVOJSATsL8IsOuKQFC
-XL7OB5hSAjoZ4FFiUgI6TXslc0oAk30sZD83lIChkieUACZnZS5fa0YJOOgCwqXlBGNr23YRx/FS
-07TtWQG6ru+CIHhyHGeH5fe/T8A5b1zXzcMwLHD/g0cFyLMsa0YDDMMocdyNZVk1lhVYwVj1x3ZQ
-iqLUnuetfd/fYtmIHcXOMO+P5/64pD1KekuSJFdVVRhLsIaxZid+nH5JFUpayZK+wAbG8s9+xkoa
-Ldg0zTKKopMljc5F27b38ps+D5U0KgTcAhUwCr8CDACBgJKfi9xAcwAAAABJRU5ErkJggg==
-</jpeg>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>unp/triangle-right-gray@2x.png</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$ImageNames" sign="true"><text>triangle-right-gray@2x.png</text></item>
+<item name="$FileModDT" sign="true"><datetime>20121221T115030,00+00</datetime></item>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
 
-<item name="$FileModDT" sign="true"><datetime>20121221T115030,00+00</datetime></item></imageresource>
+</note>

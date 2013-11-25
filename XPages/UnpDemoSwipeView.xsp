@@ -22,6 +22,7 @@ the specific language governing permissions and limitations under the License
 		backButtonURL="UnpMain.xsp">
 	</unp:unpHeader>
 	<div id="content">
+		<div id="contentwrapper">
 		<unp:unpScrollableArea>
 			<xp:this.facets>
 				<unp:unpFlatView insetData="true" detailColumn="DOB"
@@ -33,6 +34,7 @@ the specific language governing permissions and limitations under the License
 				</unp:unpFlatView>
 			</xp:this.facets>
 		</unp:unpScrollableArea>
+		</div>
 	</div>
 </xp:view>
 

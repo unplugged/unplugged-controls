@@ -1,0 +1,204 @@
+@media screen and (min-width: 1001px) {
+	.iscrollcontent > div {
+		margin-left: 30%;
+	}
+}
+
+#menuPane {
+	z-index: 11;
+	padding-top: 24px;
+	background: transparent;
+	position: absolute;
+	left: -700px;
+	display: block;	
+	border-right: 1px solid @menuPane-border-color;
+	padding:0;
+
+	@media screen and (max-width: 400px) {		
+		top: 40px;
+		bottom: 45px;
+	}
+	
+	@media screen and (max-width: 700px) {
+		top: 40px;
+		bottom: 45px;
+	}
+	
+	@media screen and (min-width: 701px) {
+		top: 60px;
+		bottom: 60px;
+	}
+	
+	@media screen and (min-width: 1001px) {
+		left: 0px !important;
+		width: 30%;
+	}
+	
+	hr {
+		display: none;
+	}
+}
+
+.navScrollArea {
+	top: 60px;
+	bottom: 60px;
+	height: 100%;
+	width: auto;
+	background: @body-background-color;
+
+	@media screen and (max-width: 700px) {
+		top: 45px;
+		bottom: 45px;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+ul#menuitems {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	margin: @menuPane-padding;
+
+	// Menu items
+	
+	li {
+		min-width: 250px;
+	}
+	
+	a, .menulink {	
+		position: relative;
+		display: block;
+		text-align: left;
+		background: @menuitems-background;
+		display: block;
+		line-height: 24px;
+		padding: 10px 15px;
+		//-webkit-tap-highlight-color: #387bbe;
+		border-bottom: 1px solid @menuitems-border-divider;
+		border-left: 1px solid @menuitems-border-outer;
+		border-right: 1px solid @menuitems-border-outer;
+		cursor: pointer;
+		box-shadow: @menuitems-box-shadow;
+		color: @menuitems-color;
+		text-shadow: @menuitems-text-shadow;
+		text-decoration: none;
+		font-size: @menuitems-font-size;
+		font-weight: @menuitems-font-weight;			
+		
+		// Arrow
+		
+		&:after {
+			//content:'\E224';
+			content: '';
+			position:absolute;
+			right: 12px;
+			top: 50%;
+			margin-top: -8px;
+			display:inline-block;
+			//font:16px/1 'Glyphicons Regular';
+			font:16px/1 'FontAwesome';
+			font-style:normal;
+			font-weight:400;
+			color:@menuitems-color;
+			text-shadow: @menuitems-text-shadow;
+			opacity: 0.2;
+			*display:inline;
+			*zoom:1;
+			vertical-align:middle;
+			text-transform:none;
+			-webkit-font-smoothing:antialiased;					
+		}						
+
+		// Icon
+		
+		i {
+			float: left;
+			margin-right: 12px;
+			color: @menuitems-color;
+			font-size: 24px;
+		}
+	}
+
+	> li:first-child {
+		a, .menulink {
+			-webkit-border-top-left-radius: @menuitems-border-radius;
+			-webkit-border-top-right-radius: @menuitems-border-radius;
+			border-top: 1px solid @menuitems-border-outer;
+		}
+	}
+
+	> li:last-child {
+		a, .menulink {
+			-webkit-border-bottom-left-radius: @menuitems-border-radius;
+			-webkit-border-bottom-right-radius: @menuitems-border-radius;
+			border-bottom: 1px solid @menuitems-border-outer;
+		}
+	}
+	
+	// Subnavigation
+	
+	ul {
+		list-style: none;
+		padding: 0;
+	}	
+	
+	a.open:after,
+	&.viewMenuItem.expanded .menulink:after {
+		-webkit-transform: rotate(90deg);
+		right: 15px;
+	}
+	
+	> li > ul > li > a,
+	&.viewMenuItemSub .menulink {
+		//display: none;
+		background-color: @menuitems-sub-background;
+		border-bottom: 1px solid @menuitems-sub-border;
+		padding-left: 38px;
+	}
+	&.viewMenuItemSub { display: none; }
+			
+	// Subsub Navigation
+	
+	> li > ul > li > ul > li > a,
+	&.viewMenuItemSubSub .menulink {
+		background-color: @menuitems-subsub-background;
+		border: 1px solid @menuitems-subsub-border;
+		padding-left: 76px;
+		font-weight: normal;
+	}
+	&.viewMenuItemSubSub { display: none; }
+	
+	// Selected item	
+	
+	a.active,
+	&.viewMenuItemSelected {
+		border-bottom: 1px solid @menuitems-selected-border;
+		background: @menuitems-selected-background;
+		color: @menuitems-selected-color;
+
+		i:before {
+			color: @menuitems-selected-color;
+		}
+	}	
+	
+	a.active:after,
+	&.viewMenuItemSelected .menulink:after {
+		color: @menuitems-selected-color;
+		opacity: 1;			
+	}	
+	
+	
+	// Disabled item
+	
+	&.viewMenuItemDisabled .menulink {
+		opacity: 0.2;
+	}	
+
+	> li {
+		
+							
+
+	
+	}
+}

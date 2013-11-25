@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" replicaid="80257B470037E1BA" version="9.0">
-<noteinfo noteid="50ba" sequence="3" unid="516C0CB77279E34D80257B790039BEFD">
-<created><datetime dst="true">20130528T113044,45+01</datetime></created>
-<modified><datetime dst="true">20130528T113319,40+01</datetime></modified>
-<revised><datetime dst="true">20130528T113319,39+01</datetime></revised>
-<lastaccessed><datetime dst="true">20130528T113319,40+01</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20130528T113044,47+01</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="804e" sequence="1" unid="8408BDB4CD5EA7EA80257C2A003A1CF1">
+<created><datetime>20131121T103444,97+00</datetime></created>
+<modified><datetime>20131121T103445,36+00</datetime></modified>
+<revised><datetime>20131121T103445,35+00</datetime></revised>
+<lastaccessed><datetime>20131121T103445,36+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103445,36+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
 <item name="$FlagsExt"><text>D</text></item>
@@ -12,10 +12,9 @@
 <item name="$ImagesHigh" sign="true"><number>1</number></item>
 <item name="$ImagesColorize" sign="true"><number>0</number></item>
 <item name="$TITLE" sign="true"><text>icons/id_card_selected.png</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-
-<item name="$MimeType" sign="true"><text>image/png</text></item>
 <item name="$FileModDT" sign="true"><datetime dst="true">20130528T113259,00+01</datetime></item>
 <item name="$Flags"><text>34CiQ</text></item>
-<item name="$ImageNames" sign="true"><text>id_card_selected.png</text></item></note>
+<item name="$ImageNames" sign="true"><text>id_card_selected.png</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+</note>

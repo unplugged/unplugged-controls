@@ -1,8 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><fileresource designerversion="8.5.3" maintenanceversion="3.0" name="unp/swipeview.js" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="44ba" sequence="4" unid="9FA48447C966EF3E80257AAF005AB039">
-<created><datetime>20121107T163033,53+00</datetime></created>
-<modified><datetime>20121210T164750,58+00</datetime></modified>
-<revised><datetime>20121210T164750,57+00</datetime></revised>
-<lastaccessed><datetime>20121210T164750,58+00</datetime></lastaccessed>
-<addedtofile><datetime>20121107T163033,57+00</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby></fileresource>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="8006" sequence="1" unid="C35B023EBE4A5FCC80257C2A003A08E5">
+<created><datetime>20131121T103353,65+00</datetime></created>
+<modified><datetime>20131121T103359,03+00</datetime></modified>
+<revised><datetime>20131121T103359,02+00</datetime></revised>
+<lastaccessed><datetime>20131121T103359,03+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103359,03+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>unp/swipeview.js</text></item>
+<item name="$FileModDT" sign="true"><datetime dst="true">20130610T134603,63+01</datetime></item>
+<item name="$Flags"><text>g345QC</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>unp_2fswipeview.js</text></item></note>

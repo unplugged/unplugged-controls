@@ -26,7 +26,7 @@ the specific language governing permissions and limitations under the License
 			<xp:this.styleClass><![CDATA[#{javascript:if(compositeData.insetData) {return "bordered";}}]]>
 			</xp:this.styleClass>
 			<div id="flatView">
-				<ul id="flatViewRowSet" style="padding-top: 14px;">
+				<ul id="flatViewRowSet">
 					<li id="title">
 						<xp:label id="label3">
 							<xp:this.value><![CDATA[#{javascript:compositeData.title;
@@ -45,7 +45,7 @@ if (sessionScope.rowcount != null){
 						<xp:panel tagName="li" id="datarow" styleClass="data-row">
 							<xp:this.attrs>
 								<xp:attr name="onClick">
-									<xp:this.value><![CDATA[#{javascript:"openDocument('" + getDbPath() + "/" + compositeData.xpageDoc + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID() + "', 'content');"}]]></xp:this.value>
+									<xp:this.value><![CDATA[#{javascript:"openDocument('" + getDbPath() + "/" + compositeData.xpageDoc + "?action=openDocument&documentId=" + thisRowData.getUniversalID() + "', 'content');"}]]></xp:this.value>
 								</xp:attr>
 							</xp:this.attrs>
 							<xp:image url="/unp/right-arrow-circle.png" id="image1"

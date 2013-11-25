@@ -60,7 +60,7 @@ try {
 	<unp:unpHeader search="none" searchPage="UnpSearch.xsp"
 		headerHomeLink="/UnpMain.xsp" viewsButton="false" title="Debug Toolbar">
 	</unp:unpHeader>
-
+	<div id="contentwrapper">
 	<unp:unpScrollableArea>
 		<xp:this.facets>
 			<xp:panel xp:key="facet_1" styleClass="left-aligned">
@@ -68,6 +68,7 @@ try {
 			</xp:panel>
 		</xp:this.facets>
 	</unp:unpScrollableArea>
+	</div>
 
 
 	<unp:unpFooter synctype="currentdb"></unp:unpFooter>

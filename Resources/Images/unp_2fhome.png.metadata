@@ -1,26 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="home.png" maintenanceversion="3.0" name="unp/home.png" publicaccess="false" readonly="true" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="5312" sequence="1" unid="6ACC0FBBCBE7C9B580257AD00030316C">
-<created><datetime>20121210T084623,80+00</datetime></created>
-<modified><datetime>20121210T084623,98+00</datetime></modified>
-<revised><datetime>20121210T084623,97+00</datetime></revised>
-<lastaccessed><datetime>20121210T084623,98+00</datetime></lastaccessed>
-<addedtofile><datetime>20121210T084623,98+00</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="80be" sequence="1" unid="55B19CBFB719D81B80257C2A003A1D0D">
+<created><datetime>20131121T103445,25+00</datetime></created>
+<modified><datetime>20131121T103451,27+00</datetime></modified>
+<revised><datetime>20131121T103451,26+00</datetime></revised>
+<lastaccessed><datetime>20131121T103451,27+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103451,27+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
-iVBORw0KGgoAAAANSUhEUgAAABsAAAAcCAMAAACnDzTfAAABO1BMVEUNDQ4bHR8AAAAAAAAAAAAa
-HB4AAAAbHR8YGhwAAAAaGx0ODxAAAAAAAAAXGBoAAAAbHR8ZGhwaHB4WFxkAAAAaHB4SFBUYGRsA
-AAAAAAAAAAAAAAAbHR8bHR/k5OTa2trd3d3g4OCRkZGOjo7Nzc1kZGaWlpbV1dXFxcXQ0NDU1NRj
-ZGVlZmjq6upkZmfn6Oh5eXnX19fh4eGbm5ugoKBgYmNdXl50dHR7e3ttbW1qamrj4+ONjY3l5eXn
-5+dhY2Tf3999fX1WV1d2dnaFhYWampo3ODrOzs6ZmZl6ent3d3eJiYk3ODl6enpfYWLY2NjGxsZ+
-fn6YmJhvcHE2ODmBgoKAgIBeX2GTk5PAwMBkZWZnaGhJSktiY2Tu7u64uLjIyMiCgoKQkJDMzMyH
-h4eVlZXExMSlpaWLi4uYRngQAAAAHXRSTlMAkTARA8EdVtEJy3w2E2Esk6U4bS2TgdwEIiQMq5xj
-dnoAAAFSSURBVHhedclVduNAFIThbklmhnCu2MjMzBBkhuHZ/wrSltuOR2N/T1XnR+tMxya0Bb5+
-v8ZbUjzxlohvjDiZataaqeSGiJ8avCRJfOPpv4gDfE2cq/EBXcSxrCQsSNnYPxG/tsXMkth+XYu4
-JQrRL4LYWkVcEDKRdRmhQCM+O4+qP9ap0fMzLbrvQ5EPvUjo3o2Q92Wkhn/rhdXRixft3F48bnJx
-u4MMk6tc/o9ePnc1MSCnGWCQ1xsAmJ3IYnTBOEeMg7JSV+Tg4oDLaEEEPPwi5OcbALh5lufnAdAC
-KN+J+tBmZ+y2YX1+lFWb/SVm4OAQ56Bn1fo/iT5wZHP0rNrdN+IOdEcDnUuiA7qjgfRpuVw+pU3b
-6WWzFku96bRH23yWilbafCfdarVaoa1CdvfERxu7uweERzseIPZ2Wdr22QM/wxweaefokGH8B+w+
-mZ/2z23R5b+pSAAAAABJRU5ErkJggg==
-</jpeg>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>unp/home.png</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$ImageNames" sign="true"><text>home.png</text></item>
 <item name="$FileModDT" sign="true"><datetime dst="true">20110401T150719,00+01</datetime></item>
-</imageresource>
+<item name="$Flags"><text>34CiQ&amp;</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+</note>

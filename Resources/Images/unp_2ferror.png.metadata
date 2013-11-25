@@ -1,43 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="error.png" maintenanceversion="3.0" name="unp/error.png" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="55fe" sequence="2" unid="A5DB206D6E8B751080257AD2003463F4">
-<created><datetime>20121212T093214,60+00</datetime></created>
-<modified><datetime>20121212T093218,86+00</datetime></modified>
-<revised><datetime>20121212T093218,85+00</datetime></revised>
-<lastaccessed><datetime>20121212T093218,86+00</datetime></lastaccessed>
-<addedtofile><datetime>20121212T093214,62+00</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="80aa" sequence="1" unid="664CD2980854011280257C2A003A1D08">
+<created><datetime>20131121T103445,20+00</datetime></created>
+<modified><datetime>20131121T103450,02+00</datetime></modified>
+<revised><datetime>20131121T103450,01+00</datetime></revised>
+<lastaccessed><datetime>20131121T103450,02+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103450,02+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
-iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
-bWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
-bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
-eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEz
-NDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
-dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
-dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEu
-MC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVz
-b3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1N
-Ok9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo3NENBQTYzN0JGMjA2ODExODhDNkU3QzJGNjA0
-MTNFNSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGMUIzNjQ0QzhCOTQxMUUwQkI1OUJBRTA0
-OUZEREFDRCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGMUIzNjQ0QjhCOTQxMUUwQkI1OUJB
-RTA0OUZEREFDRCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9z
-aCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjk3NzIzQzMy
-QkMyMTY4MTE4NzFGRTY0NEMwMjc0MkMxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjc0Q0FB
-NjM3QkYyMDY4MTE4OEM2RTdDMkY2MDQxM0U1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpS
-REY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+lU0yfAAAAw5JREFUeNqsVe1LU1EY
-/93pnDr3opupOVdDc5U5Xysn2owWmcuQQELCXqTA7IXKiCLKCjIpg8gC6Q/ok9WHlIi++G1hUoIv
-ZEGZZJhimmlTI2/PXSyvd3f3DvMHP3ae55yz5/ye5znnMux3BAVGhzzLKhRk2aB7/BTvyNVNe7vI
-Lw8uiBwJ+edPo8nzFdNks+ODGKmuQiP584I6ITshTYK52Ikrc6OYIZv10TOM6ZxMXKD5uOUIUtL7
-El38AD52tsNN8065GAqwXCRxMnqkHN6PovVWZIjNZ9uwqbQYW8gySSsZD0xC2Ycu9NOYDcQeN17T
-up1LUsJEY93Z49hqMSNVSm2aFVkHKlBEliWwkm/iJJQP9WGAxqwc33eil9bvDhxkzJ8EW/0lPKAx
-66N942INnM2fP1WNO+RPFU+X8NIZoFCp4DhSiVK+P0WQDKF9pga76Cc9uJoAmY1XkWuMQTzfbxb0
-jzVl8b6klUiuO+dt5zTJIIwRoVoNCirL4RIGtyaLKBGsqTkkrkaYrqx7DSjQaWEQLqR3y1+JACuM
-MN2+hu00zBBVwsRClZiAwj0u7BBrVUuSQMlq8ZY+uBcuVZj3gir800Uq7l6HQx0BrdjmxHggSv13
-Ex0GUZHiQWL0iGu6gc1kZS8KwsRBQzkvLNlGhZO4eOZEaRU+VpTBRbXNJyuUX5P0pno4w1WIlHoe
-fG0rVg8+SLG++SYKaZjjvRZEfY4NR92tqFMqocIywTODqTV21A0N4z6nZMOty3AGE2DfMToV1ePE
-RfkgEeGI4mrMZYmh3J0c7UFDmBIRUpv66IObVrRgj3QDsQbpQBOTGI1ei1qFIw9GuQDejopf+FPu
-YlIXyUKvRSy9HIbQnn5MsvOYZxj/d4wPnQb41AF0vAHsuUCI4l/rB8TcL3h+TOG34uMgXj1vx4tg
-ikl5hsMOkPKg8KgNbbNz6Ayh8VhLK9SmBEySNDW1cTidUrnUrpqZxc8vwxh4+ATPqmrRTC43w36m
-jjF5U8W9nlZiDFH5H907S+Q+e2+5fuEcfwQYAJSOocaVzAhcAAAAAElFTkSuQmCC
-</jpeg>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>unp/error.png</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$ImageNames" sign="true"><text>error.png</text></item>
+<item name="$FileModDT" sign="true"><datetime>20121212T093208,00+00</datetime></item>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
 
-<item name="$FileModDT" sign="true"><datetime>20121212T093208,00+00</datetime></item></imageresource>
+</note>

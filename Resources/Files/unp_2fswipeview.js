@@ -69,6 +69,8 @@ var SwipeView = (function (window, document) {
 				loop: true
 			};
 		
+			$("body").addClass("swipe-view");
+			
 			// User defined options
 			for (i in options) this.options[i] = options[i];
 			

@@ -1,64 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="sync@2x.png" maintenanceversion="3.0" name="unp/sync@2x.png" noquery="true" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="5ab2" sequence="2" unid="D005A345DBB1C10980257AD9005A3599">
-<created><datetime>20121219T162519,61+00</datetime></created>
-<modified><datetime>20121219T162551,47+00</datetime></modified>
-<revised><datetime>20121219T162551,46+00</datetime></revised>
-<lastaccessed><datetime>20121219T162551,47+00</datetime></lastaccessed>
-<addedtofile><datetime>20121219T162519,64+00</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="819a" sequence="1" unid="9F61EF339EEB41A480257C2A003A1D44">
+<created><datetime>20131121T103445,80+00</datetime></created>
+<modified><datetime>20131121T103503,29+00</datetime></modified>
+<revised><datetime>20131121T103503,28+00</datetime></revised>
+<lastaccessed><datetime>20131121T103503,29+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103503,29+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
-iVBORw0KGgoAAAANSUhEUgAAACQAAAAmCAYAAACsyDmTAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
-bWFnZVJlYWR5ccllPAAAA7FpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
-bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
-eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0
-NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
-dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
-dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wUmlnaHRzPSJodHRwOi8vbnMuYWRvYmUuY29tL3hh
-cC8xLjAvcmlnaHRzLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9t
-bS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3Vy
-Y2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcFJpZ2h0
-czpNYXJrZWQ9IkZhbHNlIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InV1aWQ6QjE4ODdCQTQz
-RDBFRTExMUI2QUFDNkJCMkM3QjBEODQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NkMwQUVD
-NDc0MDc5MTFFMkE4NkZGMDZGN0JCNkREOTUiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NkMw
-QUVDNDY0MDc5MTFFMkE4NkZGMDZGN0JCNkREOTUiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhv
-dG9zaG9wIENTNiAoTWFjaW50b3NoKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5j
-ZUlEPSJ4bXAuaWlkOkZCQUJGNUEzMzEyMDY4MTE4MjJBRjg1MEM3RTg4MkY0IiBzdFJlZjpkb2N1
-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
-AElFTkSuQmCC
-</jpeg>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>unp/sync@2x.png</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$ImageNames" sign="true"><text>sync@2x.png</text></item>
+<item name="$FileModDT" sign="true"><datetime>20121219T161943,00+00</datetime></item>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
 
-<item name="$FileModDT" sign="true"><datetime>20121219T161943,00+00</datetime></item></imageresource>
+</note>

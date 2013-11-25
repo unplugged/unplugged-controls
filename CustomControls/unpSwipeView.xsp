@@ -24,14 +24,22 @@ the specific language governing permissions and limitations under the License
 var imageFile = "";
 var caption = "";
 var arraySeparator = "[";
-
-var attachmentList = docImages.getAttachmentList();
+var attachmentList = null;
+if (isUnpluggedServer()){
+	attachmentList = docImages.getAttachmentList();
+}else{
+	attachmentList = $A(session.evaluate("@AttachmentNames", docImages.getDocument()));
+}
 var thisUNID = docImages.getDocument().getUniversalID();
 
 for(var i=0; i<attachmentList.length; i++){
 
   var imageDocID = compositeData.imageDocId;
-  imageFile = "0/" + docImages.getDocument().getUniversalID() + "/$FILE/" + attachmentList[i].getName();
+  var imagename = attachmentList[i];
+  if (isUnpluggedServer()){
+  	imagename = imagename.getName();
+  }
+  imageFile = "0/" + docImages.getDocument().getUniversalID() + "/$FILE/" + imagename;
   
   /*images.push({
      img: imageFile,
@@ -43,7 +51,7 @@ for(var i=0; i<attachmentList.length; i++){
   images += "'img': '" + imageFile + "',"
   //images += "'width': '300',"
   //images += "'height': '250',"
-  images += "'desc': '" + attachmentList[i].getName() + "'" 
+  images += "'desc': '" + imagename + "'" 
   images += "}" 
   
   arraySeparator = ",";
@@ -61,7 +69,7 @@ viewScope.put("images", images);
 		<xp:script src="/unp/fastclick.js" clientSide="true"></xp:script>
 		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
 		<xp:script src="unp/swipeview.js" clientSide="true"></xp:script>
-		<xp:styleSheet href="/unpSwipeView.css"></xp:styleSheet>
+		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 	</xp:this.resources>
 	<div id="wrapper"></div>
 	<ul id="nav">
@@ -83,7 +91,8 @@ viewScope.put("images", images);
 				<xp:attr name="href" value="#">
 				</xp:attr>
 			</xp:this.attrs>
-			Close
+			<span class="icon"></span>
+			<span class="label">Close</span>
 		</xp:panel>
 	</div>
 	<div id="swipepreviousbutton" onclick="gallery.prev()">

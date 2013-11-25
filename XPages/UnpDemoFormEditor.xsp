@@ -21,10 +21,11 @@
 	<unp:unpHeader search="none" searchPage="UnpSearch.xsp" headerHomeLink="/UnpMain.xsp"
 		viewsButton="false" title="Form View (No Navigator)">
 	</unp:unpHeader>
+	<div id="contentwrapper">
 	<unp:unpScrollableArea>
 		<xp:this.facets>
 			<unp:unpFormEditor showbuttons="yes"
-				closexpagename="UnpDemoWidgets.xsp" viewxpagename="Employee.xsp"
+				viewxpagename="Employee.xsp"
 				formname="Employee" title="Employee" xp:key="facet_1" position="left-aligned">
 				<xp:this.facets>
 					<xp:panel xp:key="facet_1">
@@ -136,7 +137,7 @@
 			</unp:unpFormEditor>
 		</xp:this.facets>
 	</unp:unpScrollableArea>
-
+	</div>
 	<unp:unpFooter newDocLoadType="ajax" synctype="currentdb"></unp:unpFooter>
 
 </xp:view>

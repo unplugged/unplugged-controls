@@ -22,6 +22,7 @@ the specific language governing permissions and limitations under the License
 		backButtonURL="UnpMain.xsp">
 	</unp:unpHeader>
 	<div id="content">
+		<div id="contentwrapper">
 		<unp:unpScrollableArea>
 			<xp:this.facets>
 				<unp:unpAccordion xp:key="facet_1" dbName="teamstudio/widgets/teamroom.nsf" viewName="(UnpDocumentsByCategory)"
@@ -29,5 +30,6 @@ the specific language governing permissions and limitations under the License
 				</unp:unpAccordion>
 			</xp:this.facets>
 		</unp:unpScrollableArea>
+		</div>
 	</div>
 </xp:view>

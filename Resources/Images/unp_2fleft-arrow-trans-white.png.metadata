@@ -1,16 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="left-arrow-trans-white.png" maintenanceversion="3.0" name="unp/left-arrow-trans-white.png" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="5326" sequence="1" unid="37A37D2759EE878880257AD000303171">
-<created><datetime>20121210T084623,85+00</datetime></created>
-<modified><datetime>20121210T084624,20+00</datetime></modified>
-<revised><datetime>20121210T084624,19+00</datetime></revised>
-<lastaccessed><datetime>20121210T084624,20+00</datetime></lastaccessed>
-<addedtofile><datetime>20121210T084624,20+00</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="8132" sequence="1" unid="D6A08E80E8CA332580257C2A003A1D2A">
+<created><datetime>20131121T103445,54+00</datetime></created>
+<modified><datetime>20131121T103457,54+00</datetime></modified>
+<revised><datetime>20131121T103457,53+00</datetime></revised>
+<lastaccessed><datetime>20131121T103457,54+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103457,54+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
-iVBORw0KGgoAAAANSUhEUgAAAA8AAAASCAMAAAHER0SrAAAAB3RJTUUH3AoJDSEsKA/LjAAAAAlw
-SFlzAABOIAAATiABFn2Z3gAAAARnQU1BAACxjwv8YQUAAAASUExURQD/ADMzM5mZmczMzGZmZv//
-/4i2ZwkAAAABdFJOUwBA5thmAAAAR0lEQVR42o2NURIAIQhCSeT+V66Z1cx+2vejIiiwGPjgWYXE
-9lRaQUVcxItwSC1gsmzCN56XFt4mk1gKJXlb5o9DuQ7Q8YMJYQYArgEuWxcAAAAASUVORK5CYII=
-</jpeg>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>unp/left-arrow-trans-white.png</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$ImageNames" sign="true"><text>left-arrow-trans-white.png</text></item>
 <item name="$FileModDT" sign="true"><datetime dst="true">20121009T093408,00-04</datetime></item>
-</imageresource>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+</note>

@@ -1,18 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="homeIcon1.png" maintenanceversion="3.0" name="unp/homeIcon.png" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="531a" sequence="1" unid="A7F3876474382D0A80257AD00030316E">
-<created><datetime>20121210T084623,82+00</datetime></created>
-<modified><datetime>20121210T084624,06+00</datetime></modified>
-<revised><datetime>20121210T084624,05+00</datetime></revised>
-<lastaccessed><datetime>20121210T084624,06+00</datetime></lastaccessed>
-<addedtofile><datetime>20121210T084624,06+00</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="80ca" sequence="1" unid="9664266FC6F760D580257C2A003A1D10">
+<created><datetime>20131121T103445,28+00</datetime></created>
+<modified><datetime>20131121T103451,96+00</datetime></modified>
+<revised><datetime>20131121T103451,95+00</datetime></revised>
+<lastaccessed><datetime>20131121T103451,96+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103451,96+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
-iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAIAAACA18GRAAAAK3RFWHRDcmVhdGlvbiBUaW1lAFNh
-dCA2IE9jdCAyMDEyIDIwOjA3OjA4IC0wNTAwRzQYcQAAAAd0SU1FB9wKBwAHJA0NJPoAAAAJcEhZ
-cwAATiAAAE4gARZ9md4AAAAEZ0FNQQAAsY8L/GEFAAAAgElEQVR42u3Q0QnAIAxFURO6mgMJjiF0
-oC5XUQhirXkR2i/vVyjhVHXu566SukYIJLP3fvilxgh0ljrFdi6BQgjt0Aadq4Nyeaine4tBCOEY
-h1SOTdCcIyskyZo8P61BQ46WoSc3uKM1ueMB7iH/U6xcSknmGONkk1ULb1vb+rIbRlhgC+P4kbcA
-AAAASUVORK5CYII=
-</jpeg>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>unp/homeIcon.png</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$ImageNames" sign="true"><text>homeIcon1.png</text></item>
 <item name="$FileModDT" sign="true"><datetime dst="true">20121006T200738,00-04</datetime></item>
-</imageresource>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+</note>

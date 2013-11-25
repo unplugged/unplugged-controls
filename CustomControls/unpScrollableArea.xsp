@@ -14,9 +14,11 @@ the specific language governing permissions and limitations under the License
 		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
 		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
 		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
+		<xp:styleSheet href="/iscroll.css"></xp:styleSheet>
 	</xp:this.resources>
-	<div id="contentwrapper">
-		<xp:div id="contentwrapper" styleClass="iscrollcontent">
+	<div id="scrollcontentwrapper">
+		<xp:div id="contentwrapper" styleClass="iscrollcontent"
+			style="">
 			<xp:callback facetName="facet_1" id="callback1"></xp:callback>
 		</xp:div>
 	</div>

@@ -77,8 +77,12 @@ if (compositeData.enableAZPicker == "yes"){
 						<xp:panel tagName="li" id="categoryrow"
 							styleClass="categoryRowFixed condensed" disableTheme="true"
 							rendered="#{javascript:thisRowData.isCategory()}">
-							<xp:text
-								value="#{javascript:thisRowData.getColumnValues().elementAt(0)}">
+							<xp:text>
+								<xp:this.value><![CDATA[#{javascript:var index = 0;
+if (!isEmpty(compositeData.categoryindex)){
+	index = parseInt(compositeData.categoryindex, 10);
+}
+return thisRowData.getColumnValues().elementAt(index);}]]></xp:this.value>
 							</xp:text>
 						</xp:panel>
 						<xp:panel tagName="li" id="datarow"
@@ -86,7 +90,7 @@ if (compositeData.enableAZPicker == "yes"){
 							<xp:this.attrs>
 								<xp:attr name="onClick">
 									<xp:this.value><![CDATA[#{javascript:
-	var url = getDbPath() + "/" + compositeData.xpageDoc + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID();
+	var url = getDbPath() + "/" + compositeData.xpageDoc + "?action=openDocument&documentId=" + thisRowData.getUniversalID();
 	if (compositeData.ajaxload != "No"){
 		return "openDocument('" + url + "', 'content');"
 	}else{
@@ -106,6 +110,11 @@ if (viewScope.rowcount == 1 && isEmpty(compositeData.title)){
 }
 if (compositeData.collapseRows == "Yes"){
 	out += " collapse-row";
+}
+if (compositeData.enableAZPicker == "yes"){
+	out += " picker";
+}else{
+	out += " no-picker";
 }
 return out;}]]></xp:this.styleClass>
 							<xp:image
@@ -127,18 +136,7 @@ return out;}]]></xp:this.styleClass>
 	return "rowphoto";
 }}]]></xp:this.styleClass>
 							</xp:image>
-							<xp:image id="image1">
-								<xp:this.styleClass><![CDATA[#{javascript:if(isEmpty(compositeData.detailColumn) || compositeData.collapseRows == "Yes"){ 
-	return 'singleLineIcon';
-} else {
-	return 'multiLineIcon';
-}}]]></xp:this.styleClass>
-								<xp:this.url><![CDATA[#{javascript:if (compositeData.collapseRows == "Yes"){
-	return "/unp/arrow-down.png";
-}else{
-	return "/unp/right-arrow-circle.png";
-}}]]></xp:this.url>
-							</xp:image>
+
 							<xp:label id="label2"
 								value="#{javascript:thisRowData.getColumnValue(compositeData.summaryColumn);}">
 								<xp:this.styleClass><![CDATA[#{javascript:var out = "viewlistsummary";

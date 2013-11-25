@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" replicaid="80257B470037E1BA" version="9.0">
-<noteinfo noteid="5fe2" sequence="2" unid="0E8494BE5BAB14CE80257B8D0029EF60">
-<created><datetime dst="true">20130617T083802,56+01</datetime></created>
-<modified><datetime dst="true">20130617T083945,26+01</datetime></modified>
-<revised><datetime dst="true">20130617T083945,25+01</datetime></revised>
-<lastaccessed><datetime dst="true">20130617T083945,26+01</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20130617T083802,57+01</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="80de" sequence="1" unid="987A385DF038E56980257C2A003A1D15">
+<created><datetime>20131121T103445,33+00</datetime></created>
+<modified><datetime>20131121T103453,07+00</datetime></modified>
+<revised><datetime>20131121T103453,06+00</datetime></revised>
+<lastaccessed><datetime>20131121T103453,07+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103453,07+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
 <item name="$Flags"><text>D34CiQ</text></item>
@@ -12,10 +12,9 @@
 <item name="$ImagesWide" sign="true"><number>1</number></item>
 <item name="$ImagesHigh" sign="true"><number>1</number></item>
 <item name="$ImagesColorize" sign="true"><number>0</number></item>
-
-
-<item name="$MimeType" sign="true"><text>image/png</text></item>
 <item name="$FileModDT" sign="true"><datetime dst="true">20130614T170708,00+01</datetime></item>
 <item name="$ImageNames" sign="true"><text>icon-button-favorite.png</text></item>
-<item name="$TITLE" sign="true"><textlist><text>unp/icon-button-favorite.png</text></textlist></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item></note>
+<item name="$TITLE" sign="true"><text>unp/icon-button-favorite.png</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+</note>

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" replicaid="80257B470037E1BA" version="9.0">
-<noteinfo noteid="1d6" sequence="8" unid="BFD72FA6AD28469280257B470037F0A2">
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="1d6" sequence="76" unid="BFD72FA6AD28469280257B470037F0A2">
 <created><datetime dst="true">20130408T111100,82+01</datetime></created>
-<modified><datetime dst="true">20130524T091829,24+01</datetime></modified>
-<revised><datetime dst="true">20130524T091829,23+01</datetime></revised>
-<lastaccessed><datetime dst="true">20130524T091829,24+01</datetime></lastaccessed>
+<modified><datetime>20131121T104823,63+00</datetime></modified>
+<revised><datetime>20131121T104823,62+00</datetime></revised>
+<lastaccessed><datetime>20131121T104823,63+00</datetime></lastaccessed>
 <addedtofile><datetime dst="true">20130408T111101,86+01</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
@@ -15,6 +15,6 @@
 
 
 
+<item name="$FileNames" sign="true"><text>UnpDemoAccordion.xsp</text></item>
 
-
-<item name="$FileNames" sign="true"><text>UnpDemoAccordion.xsp</text></item></note>
+</note>

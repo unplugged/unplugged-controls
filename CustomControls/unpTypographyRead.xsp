@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:unp="http://unplugged.teamstudio.com"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+	<div class="fontsizebuttonspanel">
+		<ul class="fontsizebuttons buttons">
+			<li class="button increasetext" onclick="increaseFontSize(this)">
+				<i class="fa text_bigger" />
+				<label>Larger Text</label>
+			</li>
+			<li class="button decreasetext" onclick="decreaseFontSize(this)">
+				<i class="fa text_smaller" />
+				<label>Smaller Text</label>
+			</li>
+		</ul>
+		<div class="typographyreadcontent">
+			<xp:callback facetName="typographyfacet" id="typographycallback"></xp:callback>
+		</div>
+	</div>
+</xp:view>

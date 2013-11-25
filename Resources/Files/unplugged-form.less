@@ -1,0 +1,362 @@
+.customform {
+	padding-bottom: 40px;
+
+	> div {
+		overflow: hidden;
+	}
+}
+
+.titleicon {
+	display: inline;
+	max-height: 44px;
+	margin-right: 13px;
+	border-radius: @button-border-radius;
+}
+
+#formholder {
+	-webkit-box-sizing: border-box;
+	position: relative;
+	-webkit-border-radius: @content-border-radius;
+	margin: @content-padding;
+
+	@media screen and (max-width: 1023px) and (min-width: 1020px) {
+		width: 98% !important;
+		margin-left: 1% !important;
+	}
+
+	h2 {
+		padding: 10px 15px;
+		-webkit-border-top-left-radius: @content-border-radius;
+		-webkit-border-top-right-radius: @content-border-radius;
+		background: @table-heading-background;
+		border-bottom: 1px solid @table-heading-border-color;
+		box-shadow: @table-heading-box-shadow;
+
+		span {
+			line-height: 24px;	
+			text-decoration: none;
+			text-overflow: ellipsis;
+			color: @table-heading-color;
+			font-size: @table-heading-font-size;
+			font-weight: @table-heading-font-weight !important;
+			text-transform: @table-heading-text-transform;
+			text-shadow: @table-heading-text-shadow;			
+		}
+
+		.xspTextComputedField {
+			padding: 0;
+			border: 0;
+			background: transparent;
+		}
+		
+	}
+	
+	// Buttons
+	
+	ul.buttons {
+		list-style: 0;
+		margin: 0;
+		background: white;
+		border-bottom: 1px solid #DDD;
+		padding: 15px;
+		overflow: hidden;
+		//border-top: 1px solid #DDD;
+
+		&:last-child {
+			border-radius: 0 0 @content-border-radius @content-border-radius;
+			border-bottom: none;
+		}
+
+		li {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			float: left;
+			height: 36px;
+			list-style-type: none;
+			background: transparent;
+			
+			&.editButton,
+			&.cancelButton,
+			&.proceedButton,
+			&.saveButton {
+				width: 50%;
+			}
+			
+			&.cancelButton {	
+				.label {
+					margin-left: 7px;
+				}		
+			}
+
+			&.editButton,
+			&.proceedButton,
+			&.saveButton {		
+				.label {
+					margin-right: 7px;	
+				}	
+			}
+				
+			&.proceedButton {
+				padding-left: 25% !important;
+			}					
+		}
+	}
+
+	// Fields
+
+	ul.fieldlist {
+		margin-top: 0px;
+		margin-bottom: 0px;
+		margin-left: -40px;
+	
+		li {
+			list-style-type: none;
+			border-bottom: 1px solid #DDD;
+			overflow: hidden;
+			background: white;
+			position: relative;
+		
+			&:last-child {
+				border-bottom: 0;
+				border-radius: 0 0 @content-border-radius @content-border-radius;
+			}
+		}
+	}	
+	
+	&.editmode .fieldlist li:last-child {
+		border-radius: 0;
+	}	
+
+	.xspTextComputedField,
+	.xspLink {
+		display: block;
+		font-size: 16px;
+		padding: 10px 0;
+		padding-left: 30%;
+		line-height: 24px;
+		min-height: 24px;
+		background: #fff;
+	}
+	
+	.body_richtext {
+		//clear: both;
+		background: white;
+		//padding: 30px;
+		font-size: 16px;
+		line-height: 24px;
+		width: auto;
+		height: auto;
+		padding: 10px 0;
+		padding-left: 30%;
+	}
+
+	.xspInputFieldEditBox,
+	.xspListBox,
+	textarea
+		{
+		color: @form-input-color;
+		font-weight: @form-input-font-weight;
+		display: block;
+		font-size: @form-input-font-size;
+		padding-left: 2%;		
+		line-height: 24px;
+		height: 44px;
+		margin: 0;
+		box-sizing: border-box;
+		width: 66%;
+		text-align: left;
+		float: left;
+		border-radius: 0;
+		background: white;
+		border: 0 !important;
+	
+		&:focus {
+			//background-color:yellow;
+		}
+	}
+	
+	.xspListBox {
+		-webkit-appearance: none;
+	}
+	
+	input[type=date] {
+		-webkit-appearance: none;
+	}
+	
+	textarea {
+		overflow: visible;
+		display: block;
+		width: auto;
+		padding: 30px;
+		float: none;
+		min-height: 150px;
+		font-family: @body-font;
+		width: 100%;
+	}
+	
+	label {
+		width: 25%;
+		text-align: right;
+		color: @form-label-color;
+		font-size: @form-label-font-size;
+		font-weight: @form-label-font-weight;
+		padding: 11px 2% 9px 2%;
+		line-height: 24px;
+		height: 24px;
+		background: white;
+		float: left;
+		clear: left;
+		border-right: 1px solid transparent;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow:ellipsis;
+	}
+	
+	&.editmode label {
+		border-color: @table-row-border-color;
+		background: @form-label-background;
+	}
+	
+	label.widelabel {
+		padding-bottom: 10px;
+		text-align: left;
+		width: auto;
+		display: block;
+		float: none;
+		border-right: none;
+		border-bottom: 1px solid @table-row-border-color;
+	}
+	
+	.bordered {
+		padding: 10px 0 0 0;
+	}
+	
+	#flatviewrowset > li:last-child {
+		border-bottom: 1px solid #DDD;
+		border-radius: 0;
+	}
+
+	span.deleteicon {
+		position: relative;
+		display: block;
+
+		input {
+			padding-right: 16px;
+		}	
+
+		span {
+			position: absolute;
+			display: block;
+			top: 10px;
+			right: 12px;
+			width: 24px;
+			height: 24px;
+			//background: url('unp/cross.png') no-repeat;
+			//background-size: 100% auto;
+			cursor: pointer;
+
+			&:after {
+				//content: "\E193";
+				content: '';
+				color: @form-input-color;	
+				opacity: 0.2;
+				position:absolute;
+				top: 50%;
+				left: 50%;
+				margin-top: -9px;
+				margin-left: -9px;
+				display:inline-block;
+				//font:18px/1 'Glyphicons Regular';
+				font:18px/1 'FontAwesome';
+				font-style:normal;
+				font-weight:400;
+				vertical-align:middle;
+				text-transform:none;
+				-webkit-font-smoothing:antialiased;			
+			}
+		}	
+	}	
+}
+
+
+/* Typography Edit View */
+
+.typographyeditmode {
+	padding: 0 !important;
+}
+
+.cke_chrome {
+	border: 0;
+	box-shadow: none;
+	
+	.cke_inner {
+		background: transparent;
+	}
+	
+	.cke_top {
+		border: 0;
+		box-shadow: none;
+		padding: 8px;
+		border-bottom: 1px solid @table-row-border-color;
+		background: @form-label-background;		
+		
+		.cke_toolbar {
+			float: right;
+			
+			.cke_toolgroup {
+				margin: 0;
+				//border: 0;
+				//box-shadow: none;
+				//background: transparent;
+
+				.cke_button {
+					/*border-radius: @button-border-radius;
+					box-shadow: @button-box-shadow;
+					text-shadow: @button-text-shadow;
+					font-weight: @button-font-weight;
+					color: @button-default-label-color;
+					background: @button-default-background;
+					border: 1px solid @button-default-border-color;
+					//display: block;
+					//width: auto;
+					height: 24px;
+					cursor: pointer;
+					padding: 0;
+					line-height: 24px;
+					font-size: 16px;
+					text-align: center;*/
+				}				
+			}
+		}
+	}
+	
+	.cke_contents {
+		border-color: 1px solid #DDD;
+	}
+}
+
+body.cke_editable {
+	font-family: @body-font;
+	background: white;	
+	margin: 0;
+	color: @form-input-color;
+	padding: 30px;
+
+	p {
+		font-size: 16px;
+		line-height: 24px;
+		margin: 0;
+		margin-bottom: 20px;
+	}		
+}
+
+// Tweaks for Forms > Edit Mode
+// Moves Bold button into 'Details' label
+.fieldlist .cke_top {
+	position: absolute;
+	right: 0;
+	top: 0;
+	border: 0;
+	background: transparent;
+}

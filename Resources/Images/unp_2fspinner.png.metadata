@@ -1,43 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="spinner.png" maintenanceversion="3.0" name="unp/spinner.png" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="560a" sequence="2" unid="23ABC2B200CD2F8280257AD20036F519">
-<created><datetime>20121212T100016,89+00</datetime></created>
-<modified><datetime>20121212T100021,74+00</datetime></modified>
-<revised><datetime>20121212T100021,73+00</datetime></revised>
-<lastaccessed><datetime>20121212T100021,74+00</datetime></lastaccessed>
-<addedtofile><datetime>20121212T100016,91+00</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="818e" sequence="1" unid="694B5048D7F2064D80257C2A003A1D41">
+<created><datetime>20131121T103445,77+00</datetime></created>
+<modified><datetime>20131121T103502,65+00</datetime></modified>
+<revised><datetime>20131121T103502,64+00</datetime></revised>
+<lastaccessed><datetime>20131121T103502,65+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103502,65+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
-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
-</jpeg>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>unp/spinner.png</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$ImageNames" sign="true"><text>spinner.png</text></item>
+<item name="$FileModDT" sign="true"><datetime>20121212T100004,00+00</datetime></item>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
 
-<item name="$FileModDT" sign="true"><datetime>20121212T100004,00+00</datetime></item></imageresource>
+</note>

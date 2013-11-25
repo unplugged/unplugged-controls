@@ -48,15 +48,16 @@
 
 #dialogPopup, #versionPopup, #hviewPopup {
 	-webkit-box-sizing: border-box;
-	position: absolute;
+	position: fixed;
 	z-index: 9999;
 	background: #fff;
 	-webkit-border-radius: 10px;
 	-webkit-box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.2);
-	left: 10px;
-	top: 10px;
+	left: 100px;
+	top: 70px;
 	right: 10px;
 	padding: 10px;
+	
 }
 
 #dialogPopup h2, #versionPopup h2, #hviewPopup h2 {
@@ -124,6 +125,7 @@
 
 #dialogContent {
 	overflow: scroll;	
+	-webkit-overflow-scrolling: touch;
 }
 
 @media screen and (min-width: 1001px) {
@@ -157,7 +159,7 @@ and (min-width : 320px) {
 
 .underlay{
 	display:none;
-	position:absolute;
+	position: fixed;
 	top:0;
 	left:0;
 	width:100%;
@@ -169,151 +171,4 @@ and (min-width : 320px) {
 	z-index: 100;
 }
 
-#hviewmetadata {
-	padding-bottom: 5px;
-	border-bottom: 1px solid #DDDDDD;
-	margin-left: 60px;
-	color: #999999;	
-	margin-bottom: 5px;
-}
-#hviewmetadata div {
-	padding-top: 10px;
-}
-#hviewitemheader .hviewicon{
-	float: left;
-	margin-left: 0px;
-}
-.hviewmetadata {
-	float: right;
-}
-.hviewclosebutton {
-	float: right;
-}
-#hviewPopup{
-	background-color: #ECECED;
-	width: 400px;
-	margin: auto;
-	top: 50%;
-	margin-top: -100px;
-}
 
-.hviewclosebutton {
-	width: 22px;
-	height: 22px;
-	background-image:url('unp/icon-close.png');
-	z-index: 1000;
-}
-.hviewmetatitle {
-	font-size: 1.4em;
-	font-weight: bold;
-	color: #333333;
-}
-.downloadnowbutton, .downloadnowbutton:hover {
-	width: 100%;
-	background-color: #52A63A;
-	background-image: none;
-	background-image: none;
-	background-image: none;
-	background-image: none;
-	background-image: none;
-	background-image: none;
-	background-repeat: no-repeat;
-	filter: none;
-	border: 0px;
-}
-.togglefavorite, .togglefavorite:hover {
-	margin-top: 10px;
-	width: 60%;
-	background-color: #F4A645;	
-	background-image: none;
-	background-image: none;
-	background-image: none;
-	background-image: none;
-	background-image: none;
-	background-image: none;
-	background-repeat: no-repeat;
-	filter: none;
-	border: 0px;
-}
-.emailfilebutton, .emailfilebutton:hover {
-	float: right;
-	margin-top: 10px;
-	width: 35%;
-	background-color: #909FB3;
-	background-image: none;
-	background-image: none;
-	background-image: none;
-	background-image: none;
-	background-image: none;
-	background-image: none;
-	background-repeat: no-repeat;
-	filter: none;
-	right: 5px;
-	position: absolute;
-	border: 0px;
-}
-.emailsendbutton, .emailsendbutton:hover {
-	width: 60%;
-	background-color: #909FB3;
-	background-image: none;
-	background-image: none;
-	background-image: none;
-	background-image: none;
-	background-image: none;
-	background-image: none;
-	background-repeat: no-repeat;
-	filter: none;
-	border: 0px;
-	margin-left: 5px;
-	margin-top: 5px;
-	display: inline;
-}
-.emailcancelbutton, .emailcancelbutton:hover{
-	width: 34%;
-	display: inline;
-	background-color: #E76E72;
-	background-image: none;
-	background-image: none;
-	background-image: none;
-	background-image: none;
-	background-image: none;
-	background-image: none;
-	background-repeat: no-repeat;
-	filter: none;
-	border: 0px;
-	margin-left: 5px;
-	margin-top: 5px;
-}
-#emailholder {
-	margin-top: 10px;	
-}
-
-#emailaddress{
-	height: 36px;
-	font-size: 1.3em;
-	width: 100%;
-	border-radius: 6px;
-	border: 1px solid #C9C9C9;
-	padding: 3px;
-}
-.timetodownload {
-	width: 100%;
-	text-align: center;
-	color: #999999;
-	padding: 5px;
-}
-#underlayhviewPopup{
-	width: 100%;
-	margin: auto;
-	background-color: #909EB2;
-	opacity: 0.8;
-}
-/* Smartphones (portrait) ----------- */
-@media only screen 
-and (max-width : 500px) {
-	#hviewPopup {
-		width: 300px;
-		top: 50px;
-		margin-top: 0px
-	}
-}

@@ -1,12 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="ajax-loader-1.gif" maintenanceversion="3.0" name="unp/spinner_squares_circle.gif" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="535e" sequence="1" unid="FC44E077E2D8BF0D80257AD00030317F">
-<created><datetime>20121210T084623,99+00</datetime></created>
-<modified><datetime>20121210T084624,86+00</datetime></modified>
-<revised><datetime>20121210T084624,85+00</datetime></revised>
-<lastaccessed><datetime>20121210T084624,86+00</datetime></lastaccessed>
-<addedtofile><datetime>20121210T084624,86+00</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="818a" sequence="1" unid="011781436478025680257C2A003A1D40">
+<created><datetime>20131121T103445,76+00</datetime></created>
+<modified><datetime>20131121T103502,43+00</datetime></modified>
+<revised><datetime>20131121T103502,42+00</datetime></revised>
+<lastaccessed><datetime>20131121T103502,43+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103502,43+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>unp/spinner_squares_circle.gif</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$ImageNames" sign="true"><text>ajax-loader-1.gif</text></item>
+<item name="$FileModDT" sign="true"><datetime>20121114T133612,00+00</datetime></item>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
 
-<item name="$MimeType" sign="true"><text>image/gif</text></item>
-<item name="$FileModDT" sign="true"><datetime>20121114T133612,00+00</datetime></item></imageresource>
+</note>

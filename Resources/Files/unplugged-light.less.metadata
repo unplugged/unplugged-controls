@@ -1,19 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" replicaid="80257B470037E1BA" version="9.0">
-<noteinfo noteid="6842" sequence="20" unid="3DBF7AA0C88776DD80257B8F0045BECB">
-<created><datetime dst="true">20130619T134148,27+01</datetime></created>
-<modified><datetime dst="true">20130708T150257,13+01</datetime></modified>
-<revised><datetime dst="true">20130708T150257,12+01</datetime></revised>
-<lastaccessed><datetime dst="true">20130708T150257,13+01</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20130619T134148,31+01</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="802a" sequence="1" unid="6C5EDDFFDA93F04C80257C2A003A08EE">
+<created><datetime>20131121T103353,74+00</datetime></created>
+<modified><datetime>20131121T103401,08+00</datetime></modified>
+<revised><datetime>20131121T103401,07+00</datetime></revised>
+<lastaccessed><datetime>20131121T103401,08+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103401,08+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <item name="$TITLE"><text>unplugged-light.less</text></item>
 <item name="$FlagsExt"><text>D</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-<item name="$FileModDT" sign="true"><datetime dst="true">20130708T150220,00+01</datetime></item>
-
-
-
 <item name="$Flags"><text>345CgQ</text></item>
-<item name="$FileNames" sign="true"><text>unplugged-light.less</text></item></note>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+<item name="$FileNames"><textlist><text>unplugged-light.less</text></textlist></item>
+
+
+<item name="$FileModDT"><datetime>20131120T103825,10+00</datetime></item></note>

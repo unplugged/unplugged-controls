@@ -24,6 +24,7 @@ the specific language governing permissions and limitations under the License
 		headerHomeLink="/UnpMain.xsp" viewsButton="false" title="Accordion">
 	</unp:unpHeader>
 	<div id="content" class="left-aligned">
+		<div id="contentwrapper">
 		<unp:unpScrollableArea>
 			<xp:this.facets>
 				<unp:unpAccordion xp:key="facet_1"
@@ -32,6 +33,7 @@ the specific language governing permissions and limitations under the License
 				</unp:unpAccordion>
 			</xp:this.facets>
 		</unp:unpScrollableArea>
+		</div>
 	</div>
 	<unp:unpFooter newDocLoadType="ajax" synctype="none"></unp:unpFooter>
 </xp:view>

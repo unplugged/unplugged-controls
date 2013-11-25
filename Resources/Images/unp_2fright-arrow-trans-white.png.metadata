@@ -1,16 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="right-arrow-trans-white.png" maintenanceversion="3.0" name="unp/right-arrow-trans-white.png" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="534e" sequence="1" unid="25252B99DE05405B80257AD00030317B">
-<created><datetime>20121210T084623,95+00</datetime></created>
-<modified><datetime>20121210T084624,67+00</datetime></modified>
-<revised><datetime>20121210T084624,66+00</datetime></revised>
-<lastaccessed><datetime>20121210T084624,67+00</datetime></lastaccessed>
-<addedtofile><datetime>20121210T084624,67+00</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="8172" sequence="1" unid="EA5E7E3DD23C3A7580257C2A003A1D3A">
+<created><datetime>20131121T103445,70+00</datetime></created>
+<modified><datetime>20131121T103501,07+00</datetime></modified>
+<revised><datetime>20131121T103501,06+00</datetime></revised>
+<lastaccessed><datetime>20131121T103501,07+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103501,07+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
-iVBORw0KGgoAAAANSUhEUgAAAAkAAAALCAYAAAHaXpeNAAAAB3RJTUUH3AoeAAIpI9q0FwAAAAlw
-SFlzAABOIAAATiABFn2Z3gAAAARnQU1BAACxjwv8YQUAAABaSURBVHjadU4JCsAwCDPF/3/ZkbKw
-tLpAhTSHoqqCWCHwh6wgjSAhAyVQ3h4S+WSG90GtHBkf4M1y4DzljbWu5eod2c7823LE3HDXuFD2
-+q4YkFd6DOQQbG0ProYkGHYir54AAAAASUVORK5CYII=
-</jpeg>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>unp/right-arrow-trans-white.png</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$ImageNames" sign="true"><text>right-arrow-trans-white.png</text></item>
 <item name="$FileModDT" sign="true"><datetime>20121029T190256,00-05</datetime></item>
-</imageresource>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+</note>

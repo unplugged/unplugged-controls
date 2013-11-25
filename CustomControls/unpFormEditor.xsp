@@ -14,7 +14,7 @@
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
 	<xp:this.resources>
 		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
-		<xp:script src="/unp/jquery.autocomplete.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/jquery.autocomplete.js" clientSide="true"></xp:script>
 		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
 		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 	</xp:this.resources>
@@ -62,7 +62,8 @@ out += ");"
 return out;}]]></xp:this.value>
 							</xp:attr>
 						</xp:this.attrs>
-						<span class="formbuttonlabel">Save</span>
+						<span class="icon"></span>
+						<span class="label">Save</span>
 					</xp:panel>
 					<xp:panel id="closebutton" styleClass="cancelButton"
 						tagName="li">
@@ -71,7 +72,8 @@ return out;}]]></xp:this.value>
 								<xp:this.value><![CDATA[#{javascript:return "history.back()";}]]></xp:this.value>
 							</xp:attr>
 						</xp:this.attrs>
-						<span class="formbuttonlabel">Cancel</span>
+						<span class="icon"></span>
+						<span class="label">Cancel</span>
 					</xp:panel>
 				</xp:panel>
 			</xp:div>

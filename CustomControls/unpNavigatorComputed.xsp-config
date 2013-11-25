@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+  <faces-config-extension>
+    <namespace-uri>http://unplugged.teamstudio.com</namespace-uri>
+    <default-prefix>unp</default-prefix>
+  </faces-config-extension>
+  <composite-component>
+    <component-type>unpNavigatorComputed</component-type>
+    <composite-name>unpNavigatorComputed</composite-name>
+    <composite-file>/unpNavigatorComputed.xsp</composite-file>
+    <composite-extension>
+      <designer-extension>
+        <in-palette>true</in-palette>
+        <category>Unplugged</category>
+      </designer-extension>
+    </composite-extension>
+    <icon>
+      <small-icon>/icons/defaultLogoSmall.png</small-icon>
+      <large-icon>/icons/defaultLogo.png</large-icon>
+    </icon>
+    <property>
+      <property-name>computedmenuitems</property-name>
+      <property-class>object</property-class>
+    </property>
+  </composite-component>
+</faces-config>

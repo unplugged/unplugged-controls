@@ -18,8 +18,8 @@
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 		<xp:styleSheet href="/unpDialog.css"></xp:styleSheet>
 	</xp:this.resources>
-	<unp:unpHeader search="database" viewsButton="true" headerHomeLink="/UnpMain.xsp"
-		title="Employees" searchPage="UnpDemoWidgetsSearch.xsp">
+	<unp:unpHeader search="database" viewsButton="true"
+		headerHomeLink="/UnpMain.xsp" title="Employees" searchPage="UnpDemoWidgetsSearch.xsp">
 	</unp:unpHeader>
 	<unp:unpNavigator>
 		<unp:this.menuItem>
@@ -33,39 +33,36 @@
 			<unp:menuItem ajaxloadid="contentwrapper" disabled="yes"
 				ajaxtargetid="content" submenu="no" label="Disabled Menu Item">
 			</unp:menuItem>
-			<unp:menuItem label="Employees By Department"
-				page="/UnpDemoWidgetsByDept.xsp" ajaxtargetid="content"
-				ajaxloadid="contentwrapper">
+			<unp:menuItem label="Employees By Department" page="/UnpDemoWidgetsByDept.xsp"
+				ajaxtargetid="content" ajaxloadid="contentwrapper">
 			</unp:menuItem>
-			<unp:menuItem label="Finance Employees"
-				page="/UnpDemoWidgetsByDeptFinances.xsp" ajaxtargetid="content"
-				ajaxloadid="allcontent">
+			<unp:menuItem label="Finance Employees" page="/UnpDemoWidgetsByDeptFinances.xsp"
+				ajaxtargetid="content" ajaxloadid="allcontent">
 			</unp:menuItem>
-			<unp:menuItem label="Employees By Country"
-				page="/UnpDemoWidgetsByCountry.xsp" ajaxtargetid="content"
-				ajaxloadid="contentwrapper">
+			<unp:menuItem label="Employees By Country" page="/UnpDemoWidgetsByCountry.xsp"
+				ajaxtargetid="content" ajaxloadid="contentwrapper">
 			</unp:menuItem>
-			<unp:menuItem label="Employees By Year"
-				page="/UnpDemoWidgetsByYear.xsp" ajaxtargetid="content"
-				ajaxloadid="contentwrapper">
+			<unp:menuItem label="Employees By Year" page="/UnpDemoWidgetsByYear.xsp"
+				ajaxtargetid="content" ajaxloadid="contentwrapper">
 			</unp:menuItem>
-			<unp:menuItem ajaxloadid="contentwrapper"
-				ajaxtargetid="content" submenu="no" disabled="no" label="About"
-				page="/UnpAbout.xsp">
+			<unp:menuItem ajaxloadid="contentwrapper" ajaxtargetid="content"
+				submenu="no" disabled="no" label="About" page="/UnpAbout.xsp">
 			</unp:menuItem>
 		</unp:this.menuItem>
 	</unp:unpNavigator>
 	<div id="content">
-		<unp:unpScrollableArea>
-			<xp:this.facets>
-				<unp:unpFlatView insetData="true" detailColumn="DOB"
-					summaryColumn="Name" title="Employees" viewName="Employees"
-					xpageDoc="Employee.xsp" xp:key="facet_1" numberofrows="20"
-					refreshmethod="pull" position="menu-aligned" photoColumn="Photo"
-					wrapsummarytext="yes">
-				</unp:unpFlatView>
-			</xp:this.facets>
-		</unp:unpScrollableArea>
+		<div id="contentwrapper">
+			<unp:unpScrollableArea>
+				<xp:this.facets>
+					<unp:unpFlatView insetData="true" detailColumn="DOB"
+						summaryColumn="Name" title="Employees" viewName="Employees"
+						xpageDoc="Employee.xsp" xp:key="facet_1" numberofrows="20"
+						refreshmethod="pull" position="menu-aligned" photoColumn="Photo"
+						wrapsummarytext="yes">
+					</unp:unpFlatView>
+				</xp:this.facets>
+			</unp:unpScrollableArea>
+		</div>
 	</div>
 	<unp:unpFooter newDocTarget="EmployeeEdit.xsp" synctype="currentdb"
 		newDocLoadType="ajax">

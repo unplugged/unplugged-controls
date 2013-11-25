@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" replicaid="80257B470037E1BA" version="9.0">
-<noteinfo noteid="19e" sequence="9" unid="4C781F548934A05480257B470037F080">
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="19e" sequence="42" unid="4C781F548934A05480257B470037F080">
 <created><datetime dst="true">20130408T111100,48+01</datetime></created>
-<modified><datetime dst="true">20130513T111707,02+01</datetime></modified>
-<revised><datetime dst="true">20130513T111707,01+01</datetime></revised>
-<lastaccessed><datetime dst="true">20130513T111707,02+01</datetime></lastaccessed>
+<modified><datetime>20131121T104823,75+00</datetime></modified>
+<revised><datetime>20131121T104823,74+00</datetime></revised>
+<lastaccessed><datetime>20131121T104823,75+00</datetime></lastaccessed>
 <addedtofile><datetime dst="true">20130408T111101,02+01</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
@@ -15,6 +15,6 @@
 
 
 
+<item name="$FileNames" sign="true"><text>UnpDemoSwipeView.xsp</text></item>
 
-
-<item name="$FileNames" sign="true"><text>UnpDemoSwipeView.xsp</text></item></note>
+</note>

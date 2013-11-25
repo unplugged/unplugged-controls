@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" replicaid="80257B470037E1BA" version="9.0">
-<noteinfo noteid="26e" sequence="6" unid="E271F1CE1675D6EA80257B470037F118">
-<created><datetime dst="true">20130408T111102,00+01</datetime></created>
-<modified><datetime dst="true">20130523T102007,41+01</datetime></modified>
-<revised><datetime dst="true">20130523T102007,40+01</datetime></revised>
-<lastaccessed><datetime dst="true">20130523T102007,41+01</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20130408T111103,94+01</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="81b2" sequence="1" unid="1CC54B1DCBD6E87C80257C2A003A1D4A">
+<created><datetime>20131121T103445,86+00</datetime></created>
+<modified><datetime>20131121T103504,58+00</datetime></modified>
+<revised><datetime>20131121T103504,57+00</datetime></revised>
+<lastaccessed><datetime>20131121T103504,58+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103504,58+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
 <item name="$TITLE" sign="true"><text>unp/unplugged_logo.png</text></item>
@@ -12,10 +12,9 @@
 <item name="$ImagesHigh" sign="true"><number>1</number></item>
 <item name="$ImagesColorize" sign="true"><number>0</number></item>
 <item name="$FlagsExt" sign="true"><text>D</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-
-<item name="$MimeType" sign="true"><text>image/png</text></item>
 <item name="$FileModDT" sign="true"><datetime dst="true">20130523T101902,00+01</datetime></item>
 <item name="$Flags"><text>34CiQ</text></item>
-<item name="$ImageNames" sign="true"><text>unplugged_logo_transparent.png</text></item></note>
+<item name="$ImageNames" sign="true"><text>unplugged_logo_transparent.png</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+</note>

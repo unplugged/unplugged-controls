@@ -1,57 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="search@2x.png" maintenanceversion="3.0" name="unp/search@2x.png" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="5a9e" sequence="2" unid="7192D96844FDF20080257AD900598E78">
-<created><datetime>20121219T161811,76+00</datetime></created>
-<modified><datetime>20121219T161819,92+00</datetime></modified>
-<revised><datetime>20121219T161819,91+00</datetime></revised>
-<lastaccessed><datetime>20121219T161819,92+00</datetime></lastaccessed>
-<addedtofile><datetime>20121219T161811,78+00</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="817a" sequence="1" unid="B595031182EA951180257C2A003A1D3C">
+<created><datetime>20131121T103445,72+00</datetime></created>
+<modified><datetime>20131121T103501,55+00</datetime></modified>
+<revised><datetime>20131121T103501,54+00</datetime></revised>
+<lastaccessed><datetime>20131121T103501,55+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103501,55+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
-iVBORw0KGgoAAAANSUhEUgAAACQAAAAmCAYAAACsyDmTAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
-bWFnZVJlYWR5ccllPAAAA7FpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
-bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
-eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0
-NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
-dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
-dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wUmlnaHRzPSJodHRwOi8vbnMuYWRvYmUuY29tL3hh
-cC8xLjAvcmlnaHRzLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9t
-bS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3Vy
-Y2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcFJpZ2h0
-czpNYXJrZWQ9IkZhbHNlIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InV1aWQ6QjE4ODdCQTQz
-RDBFRTExMUI2QUFDNkJCMkM3QjBEODQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NEZCNjVE
-OEE0MDdGMTFFMkE4NkZGMDZGN0JCNkREOTUiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NkMw
-QUVDNEE0MDc5MTFFMkE4NkZGMDZGN0JCNkREOTUiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhv
-dG9zaG9wIENTNiAoTWFjaW50b3NoKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5j
-ZUlEPSJ4bXAuaWlkOkZGQUJGNUEzMzEyMDY4MTE4MjJBRjg1MEM3RTg4MkY0IiBzdFJlZjpkb2N1
-bWVudElEPSJ1dWlkOkIxODg3QkE0M0QwRUUxMTFCNkFBQzZCQjJDN0IwRDg0Ii8+IDwvcmRmOkRl
-c2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+qOBE
-uwAABepJREFUeNrEWGtsVEUUnn21S3ehkJRGWwQEAra0omJARCLBIlqIQUupMYCJAf0BrYk/wBB/
-GKLAD0Vp1QQxJiKgoQ81RqT0QSuWQmW7fUArFPqgQoUF2t127+7ex67fKbe43b1797YFPTdf7mPm
-nvlm5pwzZ8YYCASYBpkGZMpIB5IAE+ABuoFG4ARQAlxnIxCdTjf8AxFSwVKgMqBdBOA7IDWK3rsI
-kwgVJwLfD7Xi9/sDkiQFBEEI8LwQ8Pn4u6B3QRAHy1EtmNgHgGmkhHQKH+cAR4EZaICJfonRXavo
-9XpmMuiHpuJ3YDVwS+uU6UPKZwEniQwvSowXxRGRIcFoMp8gMlGS6PUZoBKI19yhoOdJQDlGbDIv
-CFBMCgOjBhESSA9jj+JDIWDQQsgY9LwPZKb5oETJ1qDc02Cvry4tLbVXV1X3dHZ2cLNnz7ZmZq58
-eOmyZfNTUlIWYbqGNSpCkcQLzBxjWo7XrcCuqF4n29By9OQ4DFTR0JobG09seuvNwqaGhv5Iilat
-WpW459O9b0yZMmWukl3FmoycbJ9/aXH7k+QtnNcXhiNFxYdRbR2QAzwJPACMk0c3DngIeBp4zWw2
-bzhbb69R0iOIInlfvha3TyWXdXu8Yaipra2UyTwFxEZx3/FAhsVieb29s6tNSR/acaGuWY0QGXUW
-eZSCzXCbNm48gkcbfjwN+NTmHuU0nRVut/vS7l07D8jWPUwkyU+kl6t6Gc/zGeSqoVJXV1fZcv68
-HQ21anXZwJ0un/py37667u7ulrBOShTT/M+qEoJ7pihNwbGjv9Sh3M5GKDKps/X19Q1KegcG3I+r
-EjLoDZOVCi5fbq+BAp6NQvDfrds3Hc0RAmeyKiEpwmp/8eKFVjYGsVqtHUrfRUmMUQ2MMLSALiwY
-MLZ///6YsRBKS0uLVeorL4h+1RHyuAduKYX+hQsXzhkLoalTp6Yq6XW5XA5VQtcdjitKq5Eoitlj
-IWSxWlcq6b3W09OhSqitra1RaX00Gk0UEJNHyWelwWhKV9LbWG8/o0ro8MGDx5CCBUL/RFQ14+Er
-rat0kFCKm48RDmPDcW7njh3v/6ZKqLi4qLm9o90W2hkfFMJ9X8Dj17RsaCQzD6hFbJshIdiG6qyt
-rS3r6+u7Fi0f6vrko49LMEhhGrzewTC0QU7g50Yhswz4EXHG4vXxYVPl9Xj7t7+77We83VAlhFHg
-Dhz45tTpM6d/RSwddvGSyLBSU71FQJOc2m4GVgDz5XVpG0B2USH6/dMHPB52Z3TCr3Xr17sCUbY5
-g/kQwtCk+Pj4l/6w2d9LTEycFVrJgBw5zhw7mNdEEsoQPSAfKeWlUDfeMs6BO43kOdWcGqR6nU5n
-89o1WXswx1cVVmnW7/YwpBCM0lsR2QF9o7sXSd0AhzLOGzX/pvRYzrHTomWMxJTIPf9Iaur0kpIf
-8h5MSkph91hoNCxx45hRr3fINncu4q6Dtl+4Vf3Z0nL1icfm7S4vKyuSRIkfTY4PA3aSEYd+p+ji
-xkjD1oZGKl1t10GkvLiVer3enuysV37Kenn11rM223FME6eFC+fhesvLy4qWLFm8NS8v90PocYXW
-8VMK8i+pCrSZHm2jyOTFdq7cA0NCQoJpc+7baQsWLJiTlJycjDQ13mAwxCD4+fr7+/uuXOnqrK6q
-av3is4ILtLvFP9Qxlp3z6sz8/ILtsWbzBKXps1ruTt9zeG+OSCjopziZ2Az5cCGa0OHDBcpe5A1A
-xtqcnJl7VUnFDZHKwHuTTsvpByoa5N1GIjBR3nXQdFMyTtubXuBvwBEcZ/Af1c3Iys6eWVDweURS
-E0AKoYVILdZpPI4Zi2eNhFSZnt1nQYf7cCsrLiy8nJu7eacPhq50AuNyc4MbgPtOSG7QOZyUxxnq
-oxR1bt7udf4nhEJJ5W3ZsgshwUnWEozyiorjTOtJ172CfDSzZsWLme/YGprsPTduei51dF399tDh
-QwglWffdqCMYerycKZhDimx69j+IPH2lAC3kAkDvNqD1HwEGADOYK937jlY8AAAAAElFTkSuQmCC
-</jpeg>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>unp/search@2x.png</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$ImageNames" sign="true"><text>search@2x.png</text></item>
+<item name="$FileModDT" sign="true"><datetime>20121219T161755,00+00</datetime></item>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
 
-<item name="$FileModDT" sign="true"><datetime>20121219T161755,00+00</datetime></item></imageresource>
+</note>

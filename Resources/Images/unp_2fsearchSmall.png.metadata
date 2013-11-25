@@ -1,31 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="search.png" maintenanceversion="3.0" name="unp/searchSmall.png" publicaccess="false" readonly="true" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="535a" sequence="1" unid="CCA605C1FC17A31080257AD00030317E">
-<created><datetime>20121210T084623,98+00</datetime></created>
-<modified><datetime>20121210T084624,81+00</datetime></modified>
-<revised><datetime>20121210T084624,80+00</datetime></revised>
-<lastaccessed><datetime>20121210T084624,81+00</datetime></lastaccessed>
-<addedtofile><datetime>20121210T084624,81+00</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="8182" sequence="1" unid="BC262B5A369603EF80257C2A003A1D3E">
+<created><datetime>20131121T103445,74+00</datetime></created>
+<modified><datetime>20131121T103501,99+00</datetime></modified>
+<revised><datetime>20131121T103501,98+00</datetime></revised>
+<lastaccessed><datetime>20131121T103501,99+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103501,99+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
-iVBORw0KGgoAAAANSUhEUgAAABAAAAAVCAYAAABPPm7SAAADy0lEQVR42pVTbUybVRS+pW9bpg6B
-8tHSQlsKDAVKwZmpwPjcNIuZ06jzj8Y5v8YP4z8WTXSoLBuMbZlxuDImQsJHIAzoNmSwEDsRGbS0
-G1AGCWOzG5Sg3RpYsvLxeO4bs8zsDz7JfW/ec899zjnPOZfp4xMfLm2cQRel0hxISk7pT0vP+NNk
-zvSlmTJubXomdTBarS3XxBqM3O/RJX4M8YkSVUzsPnKcOXS4AtdGRzE7Owuv14vbd+7APXEdx098
-j1ST+TYRvfUYARmL8wu348rwMDiWl5exurICjtXVVQQCAXDY7Q4UbX8FFOzzhwSUtiHFZJ6/MjSE
-tbU1LC0tYX5+Hl2/dOOHk1Xo6LBizjuHxcVFkfTqtVGYzM/9pYnVp3ACHr3icPkRMarf74fT5cKb
-b78DlVozvjEk9KxKrZ3ZuesNOEZG+LnoV3HkKOheMxFIGAnmGrbbxUOPxwPuLFMEn2CMKZkIiVKQ
-B5fueHUnpqdviH6jpBHpsUjZR7CUNPPCBIl0z38Pra1tvL5fJUFBQewR0D+LUmsvNTQ2wufzcWF5
-oBWVJm4LJ/CPjY3h7l0fKo8eA7XxODGz0LBwJggC30knPSN7+bdlZVhYWMCtmzd5mTxYASf42+EY
-gZeEqjnzEze2c3HiEzYxnd4o7vxfrYk7d8pSjbm5WUxNTfEM1si2lWvgvnixh+qbFmvLKyxajohS
-79YZEpjBmMT4HhkdsysrJzfgcjlFv8uXf+OduB+ri9cwakd9aek3uD4xgcnJSVzo6kJWTt4DyuRn
-ZaSqmGo/k5Wd+8BqPSeeu91ufPX1AVD0NiKXMFWMNtuc+TxaWlowQq3ietgdDlhO16Bk/xc0Cz9i
-iGaE7Hwnv1aYMzYvRUSrX6C7jEmlUhYSGnYsN78QDQ2NGBj4ndYAnE4nxsfHcJXmor+/H319fRgc
-/ANlBw9xoV3hykgWroz4t02EkKfDys2Zm3lUImqA1WpFZ2cnTWIHzl84j+7ubvT09MBms2HbyzsC
-MVr961zg/yB4wxOvRUapbKnpGYG8giLw9VJ2Lt7fsxedRNTe3o5Lvb2wVFeDOnMjTm+kFB6HQhBk
-W+SKDe/JFcHvyuSKD0htz3c0A2fb2tDU1IReItmz90Mu5EG2HlB5n23NK8DpmhrU1dWhubkZpywW
-GBOTZ9ZFQKMsp8dj++jjT1BfX4fa2lqcrKpC8rOpfrZePPnUxpy09EyUlOxHZWUlPt1XDBLRsW4C
-/r6odV+ScJ6EpOT7Gq3OTXOQzwj/h4T0lW2TCsJuqSB7USaTsX8AuHMVSIdFuyIAAAAASUVORK5C
-YII=
-</jpeg>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>unp/searchSmall.png</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$ImageNames" sign="true"><text>search.png</text></item>
 <item name="$FileModDT" sign="true"><datetime dst="true">20110519T090738,00+01</datetime></item>
-</imageresource>
+<item name="$Flags"><text>34CiQ&amp;</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+</note>

@@ -120,3 +120,5 @@ var dBar = {
 	}
 		
 }
+
+dBar.init( true );

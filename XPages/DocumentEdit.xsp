@@ -10,10 +10,11 @@ the specific language governing permissions and limitations under the License
  -->
 
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom" xmlns:unp="http://unplugged.teamstudio.com">
+	<div id="contentwrapper">
 	<unp:unpScrollableArea>
 		<xp:this.facets>
 			<unp:unpFormEditor showbuttons="true"
-				closexpagename="UnpMain.xsp" viewxpagename="Document.xsp"
+				viewxpagename="Document.xsp"
 				formname="MainTopic" title="Document" xp:key="facet_1"
 				dbName="teamstudio/widgets/teamroom.nsf">
 				<xp:this.facets>
@@ -266,5 +267,5 @@ return out;}]]></xp:this.value>
 			</unp:unpFormEditor>
 		</xp:this.facets>
 	</unp:unpScrollableArea>
-
+	</div>
 </xp:view>

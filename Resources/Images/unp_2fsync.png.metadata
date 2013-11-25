@@ -1,40 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="sync.png" maintenanceversion="3.0" name="unp/sync.png" noquery="true" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="55fa" sequence="2" unid="A533AFEA129C25CB80257AD2003435F4">
-<created><datetime>20121212T093016,84+00</datetime></created>
-<modified><datetime>20121212T093033,62+00</datetime></modified>
-<revised><datetime>20121212T093033,61+00</datetime></revised>
-<lastaccessed><datetime>20121212T093033,62+00</datetime></lastaccessed>
-<addedtofile><datetime>20121212T093016,88+00</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="8196" sequence="1" unid="7726ABA5E8358D8080257C2A003A1D43">
+<created><datetime>20131121T103445,79+00</datetime></created>
+<modified><datetime>20131121T103503,07+00</datetime></modified>
+<revised><datetime>20131121T103503,06+00</datetime></revised>
+<lastaccessed><datetime>20131121T103503,07+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103503,07+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
-iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
-bWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
-bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
-eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEz
-NDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
-dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
-dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEu
-MC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVz
-b3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1N
-Ok9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo3NENBQTYzN0JGMjA2ODExODhDNkU3QzJGNjA0
-MTNFNSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGMUIzNjQ0NDhCOTQxMUUwQkI1OUJBRTA0
-OUZEREFDRCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0RjdEQ0QxNjhCNjQxMUUwQkI1OUJB
-RTA0OUZEREFDRCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9z
-aCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkVBMUQyMDZD
-RjAyMDY4MTE4NzFGRTY0NEMwMjc0MkMxIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjc0Q0FB
-NjM3QkYyMDY4MTE4OEM2RTdDMkY2MDQxM0U1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpS
-REY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+ndYTNQAAAk9JREFUeNqMlM+LEmEY
-x2dgSO1QCZXBxtqhSBS8BF0mCJZFjIVO0iE7RSAikX+BBHqIcIMIvHQwaA9KtpGm2w+ow2YtuGxB
-ttrKDp3UFMfEYpTZcfq+kyOzw0z0wofhfZ93Pu/7PvPMS8uyTJm0c+AiOAsEsA0+gi+aOYfBMk3T
-Nygi0rEEvsrmbR2cJ3NFUXwxmUwkRamT3JX/r+2B12pHL5pJsJKUTqfrfr//rc1me4ZpT71e78tE
-IvF5MBiM9Fat6II62G63f7Esu4bQNXAGMNO5x8GlfD5fMxVhlQ0yIEnSJBAIrGL4pEHubOCJ0TlV
-0bw6UCgUOPKVDCTUaDS6ZSQRBEEkHqZer7Mul0uRVqvVN4h9M6oFq9W6g8eq2rfb7UwoFJqrVCod
-RdRqtU6rouFw+M6sqLAAydua2h+Px/csFstlpKPNMAxFeTwefyqV2o7FYlsmuTGk0WhskaM1m82f
-irnX6wW63e5uv9/fwfimBlJ4x0xEB5Cb30SEo3GKqFwu3zFKYi6Xe4/wISMR6uy2Oi+ZTGYVUalU
-eqAV4Ox7kUhkA6GrJrtZQF5EteYcDseioYi0Wq22gscJnWAOLGurPxgMPicfbJ+IBHieF3TOxjRf
-Lf2uo9HoB7zumX1WFOF9EozH45vY5uNisfj9X38rdsv7fL5XeJXVXkF0JpNJ4MxXsM2b6K+D6263
-eykcDs87nc6DqLEjnU5H4DhuiEV+ZLNZspOHkOwqApr+KyJm8nMi8Ghmp+mj00vNAU4BHjTBJ8zT
-Xmwz0R8BBgB4IA0PjleajAAAAABJRU5ErkJggg==
-</jpeg>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>unp/sync.png</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$ImageNames" sign="true"><text>sync.png</text></item>
+<item name="$FileModDT" sign="true"><datetime>20121212T092859,00+00</datetime></item>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
 
-<item name="$FileModDT" sign="true"><datetime>20121212T092859,00+00</datetime></item></imageresource>
+</note>

@@ -1,18 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="8.5.3" imagename="01-refresh-white.png" maintenanceversion="3.0" name="unp/refresh_white.png" publicaccess="false" replicaid="80257AA1002D0DF3" version="8.5" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="533a" sequence="1" unid="4254DD38540967BB80257AD000303176">
-<created><datetime>20121210T084623,90+00</datetime></created>
-<modified><datetime>20121210T084624,43+00</datetime></modified>
-<revised><datetime>20121210T084624,42+00</datetime></revised>
-<lastaccessed><datetime>20121210T084624,43+00</datetime></lastaccessed>
-<addedtofile><datetime>20121210T084624,43+00</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="815e" sequence="1" unid="A436A34FBDD3E4DC80257C2A003A1D35">
+<created><datetime>20131121T103445,65+00</datetime></created>
+<modified><datetime>20131121T103459,93+00</datetime></modified>
+<revised><datetime>20131121T103459,92+00</datetime></revised>
+<lastaccessed><datetime>20131121T103459,93+00</datetime></lastaccessed>
+<addedtofile><datetime>20131121T103459,93+00</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><jpeg>
-iVBORw0KGgoAAAANSUhEUgAAABgAAAAaCAMAAAHtZlxXAAAAB3RJTUUH3AEGEDQa602pZQAAAAlw
-SFlzAABOIAAATiABFn2Z3gAAAARnQU1BAACxjwv8YQUAAAAMUExURcDAwMzMzP///5mZme8rafEA
-AAABdFJOUwBA5thmAAAAjElEQVR42n1RCxaAIAhjeP87J474aNarhG3IRBF/YD9VkTEXJus1UJ0m
-SFSCcjlheM0CLYSGPEOdrFfFSkWNUg5WY35VXguRTUKEW5/01BLUxEprAq16p5DWENaKg9bmdE6z
-uzxR7cN5877TbSg/wzrxheHTNomdcehgAuBlOTfaYeoBj51nHWycb/4A2H8Bgb1la/8AAAAASUVO
-RK5CYII=
-</jpeg>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE" sign="true"><text>unp/refresh_white.png</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$ImageNames" sign="true"><text>01-refresh-white.png</text></item>
 <item name="$FileModDT" sign="true"><datetime>20120106T125250,00-05</datetime></item>
-</imageresource>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+</note>

@@ -212,5 +212,14 @@ no</editor-parameter>
         </designer-extension>
       </property-extension>
     </property>
+    <property>
+      <property-name>categoryindex</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <default-value>0</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
   </composite-component>
 </faces-config>
