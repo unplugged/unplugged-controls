@@ -1,0 +1,6 @@
+safe: true
+lsi: false
+pygments: true
+baseurl: /unplugged-tools
+markdown: rdiscount
+permalink: /:categories/:title.html

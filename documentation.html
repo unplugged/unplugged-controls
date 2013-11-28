@@ -1,0 +1,107 @@
+---
+layout: 300-default
+title: Unplugged Controls Documentation
+categories: "300"
+---
+
+<h1>
+    <a name="introduction" class="anchor" href="#introduction">
+      <span class="octicon octicon-link"></span>
+    </a>
+    Introduction
+  </h1>
+
+  <p>These pages contain documentation about each of the custom
+    controls which are provided for use with Teamstudio Unplugged</p>
+
+  <p>The aim of the controls is that you will be able to quickly build
+    a mobile application to deploy onto Teamstudio Unplugged, which runs
+    on
+    iOS and Android devices. We assume that you have used XPages before,
+    but
+    the actual use of the controls is not difficult, so you shouldn't
+    need
+    to have massive experience of mobile or web development to be able
+    to
+    create an application.</p>
+
+	<p>In version 3 of the Controls we have significantly changed how things work, we've got new CSS, new JavaScript, more efficient native scrolling support and had a general overhaul of the controls. So if you're upgrading an application we highly recommend that you replace all of the Controls, Stylesheets, Files etc. It might mean a little work to re-compile your XPages but will make life easier in the long run.</p>
+
+  <p>
+    These controls should work for "normal"
+    <a href="{{ site.baseurl}}/300/MobileWebDevelopment.html">Mobile
+      Web Development</a>
+    as well, so they could be accessed via the web browsers
+    on your iPhone,
+    iPad, or Android device.
+  </p>
+
+  <hr />
+  <p>Detailed usage instructions for each control are available from the menu on each page.</p>
+
+  <hr />
+  <p>
+    <a
+      href="{{ site.baseurl}}/300/UpgradingYourApplication.html">Upgrading
+      your application</a>
+    from a previous version of the controls library can be
+    made easier by following some of our guidelines.
+  </p>
+
+  <hr />
+  <p>
+    We also provide some
+    <a href="{{ site.baseurl}}/300/GenericClasses.html">generic
+      classes which you can use in static HTML</a>
+    .
+  </p>
+
+  <hr />
+  <p>You will be building two types of XPage, firstly the "Main"
+    page
+    which will handle the application layout. All of the other pages are
+    going to be requested via Ajax so we only need to include the
+    content
+    section for those.</p>
+
+  <h1>
+    <a name="building-the-unpmain-xpage" class="anchor"
+      href="#building-the-unpmain-xpage">
+      <span class="octicon octicon-link"></span>
+    </a>
+    Building the UnpMain XPage
+  </h1>
+
+  <p>The main XPage is going to control the display of the page
+    including the header, views list and footer. The XML below show an
+    example of the main page you'll want to create:</p>
+
+<script src="https://gist.github.com/whitemx/7527732.js"></script>
+
+  <p>As well as including Unpheader, UnpNavigator, UnpScrollableArea,
+    UnpFlatView, and UnpFooter controls you will always want to include
+    the
+    unplugged.css file.</p>
+
+  <p>You'll notice the &lt;div&gt; called "content" which is used
+    as a
+    placeholder into which we can load the sub XPages using Ajax.</p>
+
+  <h1>
+    <a name="building-a-sub-xpage" class="anchor" href="#building-a-sub-xpage">
+      <span class="octicon octicon-link"></span>
+    </a>
+    Building
+    a sub XPage
+  </h1>
+
+  <p>Continuing the example above, when the user clicks the
+    By Date
+    link we want to load a new Sub XPage and insert the contents of it into
+    the "content" container. This sub page is simply going to use the
+    UnpScrollableArea and UnpFlatView controls and doesn't need the
+    header
+    or footer as they have already been loaded on the UnpMain XPage.</p>
+
+  <p>This is the XML required for the UnpDate XPage:</p>
+<script src="https://gist.github.com/whitemx/7527744.js"></script>

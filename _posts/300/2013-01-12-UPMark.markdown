@@ -1,0 +1,15 @@
+---
+layout: 300-post
+title:  "UPMark"
+date:   2013-12-01 17:00
+categories: "300"
+---
+
+UP Mark is a suite of tests which we use to measure performance.
+
+We make use of [QUnit](http://qunitjs.com) to perform the tests. We created a simple set of scripts which opens different pages within the Sampler application and measures the time it takes to load each page. The times which the scripts take to execute will vary massively based upon the device being used, whether view indexes have been built etc.
+
+For a reliable test, we recommend that you open the Sampler app on your device, run the UPMark test to completion and then run it again. This will ensure that any view indexes are built and the performance you are seeing is a reliable, consistent experience.
+
+Each individual test has a time taken to execute recorded against it, so if you see an unexpectedly slow result you can track down with a little more detail where the time being taken to load is <a href="{{ site.baseurl }}/300/UnpWorkspace.html">Workspace</a>
+longest.
