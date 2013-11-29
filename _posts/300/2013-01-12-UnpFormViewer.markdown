@@ -19,7 +19,7 @@ Set up a document data binding and make sure it is called document1.
 Drag the control onto your XPage and set the following custom properties:
 
 <dl class="dl-horizontal">
-  <dt>closexpagename</dt><dd>the name of the XPage to open when the user clicks the close button</dd>
+  <dt><strike>closexpagename</strike></dt><dd>removed as of version 3.0 as no longer required</dd>
   <dt>dbName</dt><dd>optional parameter to specify which database the document you want to open is located in. The database path should be delimited with forward slashes (e.g. mydir/mydb.nsf). Leave blank for the same db </dd>
   <dt>editxpagename</dt><dd>the name of the XPage to open when switching into edit mode - Note: If blank the button will not be rendered</dd>
   <dt>editxpagewithajax</dt><dd>yes/no (default yes) option to open the XPage containing [[UnpFormEditor]] control in ajax mode or full page load mode. Note: If using camera functionality in edit mode (to captuure pictures) this will need to be set to full-page as the saveDocument function does not save Rich Text Fields. This also means that you will need to use your own standard buttons in [[UnpFormEditor]] and set showbuttons on that control to "no" </dd>
@@ -37,7 +37,7 @@ The XML below shows an example where we're displaying the Name field for the doc
 
 <script src="https://gist.github.com/whitemx/7527935.js"></script>
 
-You can use [[Generic Classes]] to layout the content of your pages.
+You can use <a href="{{ site.baseurl}}/300/GenericClasses.html">Generic Classes</a> to layout the content of your pages.
 
 # Required Resources
 On the assumption you are using UnpHeader in your application then no extra resources are required.

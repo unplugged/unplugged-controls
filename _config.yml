@@ -1,6 +1,6 @@
 safe: true
 lsi: false
 pygments: true
-baseurl: /unplugged-tools
+baseurl: /unplugged-controls
 markdown: rdiscount
 permalink: /:categories/:title.html
