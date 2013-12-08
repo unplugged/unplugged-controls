@@ -13,7 +13,7 @@ The custom themes can completely change the look and feel of your Unplugged Cont
 ![Alternate Light Theme](http://teamstudio.s3.amazonaws.com/images/theme-light.PNG)
 ![iOS7 Theme](http://teamstudio.s3.amazonaws.com/images/theme-ios7.PNG)
 
-To create your own theme, visit the [Restyler website](#) and register an account. You can then create a new theme and save it. 
+To create your own theme, visit the [Restyler website](http://restyler.teamstudio.com/) and register an account. You can then create a new theme and save it. 
 
 ![Restyler Customise Page](http://teamstudio.s3.amazonaws.com/images/restyler-customise.png)
 

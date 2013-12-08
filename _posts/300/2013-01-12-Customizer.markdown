@@ -5,13 +5,13 @@ date:   2013-12-01 17:00
 categories: "300"
 ---
 
-# Customize Design using the Re-styler
+# Customize Design using the [Re-styler](http://restyler.teamstudio.com/)
 
 ![Unplugged Re-styler](http://teamstudio.s3.amazonaws.com/images/restyler.png)
 
 Unplugged Controls 3.0 has been rebuilt so that the appearance of the user interface can be easily customized according to a company's branding or preferences.
 
-This customization is done using the online [Unplugged Re-styler App](#), which allows you to set key CSS values to adapt the design. We'll cover a few of the main customization options here, using the built-in themes as examples of how to achieve different appearances. This should give you an idea of what's possible, and how to start customizing the Controls for yourself.
+This customization is done using the online [Unplugged Re-styler App](http://restyler.teamstudio.com/), which allows you to set key CSS values to adapt the design. We'll cover a few of the main customization options here, using the built-in themes as examples of how to achieve different appearances. This should give you an idea of what's possible, and how to start customizing the Controls for yourself.
 
 ## Colors
 
