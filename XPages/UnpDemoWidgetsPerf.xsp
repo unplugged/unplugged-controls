@@ -16,7 +16,6 @@
 
 	<xp:this.resources>
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
-		<xp:styleSheet href="/unpDialog.css"></xp:styleSheet>
 	</xp:this.resources>
 	<div id="qunit" class="panel"></div>
 	<unp:unpHeader search="database" viewsButton="true"

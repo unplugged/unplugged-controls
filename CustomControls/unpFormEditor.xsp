@@ -46,8 +46,8 @@ if (out.length > 0){
 				</h2>
 				<xp:callback facetName="facet_1" id="callback1"></xp:callback>
 				<xp:panel id="buttons" styleClass="buttons" tagName="ul">
-					<xp:this.rendered><![CDATA[#{javascript:compositeData.showbuttons == "yes"}]]></xp:this.rendered>
 					<xp:panel tagName="li" id="saveButton" styleClass="saveButton">
+						<xp:this.rendered><![CDATA[#{javascript:compositeData.showbuttons == "yes"}]]></xp:this.rendered>
 						<xp:this.attrs>
 							<xp:attr name="onclick">
 								<xp:this.value><![CDATA[#{javascript:var out = "saveDocument('" + getClientId("customform") + "', '" + document1.getDocument().getUniversalID() + 
@@ -67,6 +67,7 @@ return out;}]]></xp:this.value>
 					</xp:panel>
 					<xp:panel id="closebutton" styleClass="cancelButton"
 						tagName="li">
+						<xp:this.rendered><![CDATA[#{javascript:compositeData.showbuttons == "yes"}]]></xp:this.rendered>
 						<xp:this.attrs>
 							<xp:attr name="onclick">
 								<xp:this.value><![CDATA[#{javascript:return "history.back()";}]]></xp:this.value>

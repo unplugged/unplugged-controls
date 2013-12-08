@@ -4,6 +4,10 @@
 	}
 }
 
+#menu {
+	width: 100%;
+}
+
 #menuPane {
 	z-index: 11;
 	padding-top: 24px;
@@ -11,27 +15,26 @@
 	position: absolute;
 	left: -700px;
 	display: block;	
-	border-right: 1px solid @menuPane-border-color;
 	padding:0;
-
-	@media screen and (max-width: 400px) {		
-		top: 40px;
-		bottom: 45px;
-	}
 	
+	-webkit-box-sizing: border-box;
+	width: 100%;
+
 	@media screen and (max-width: 700px) {
 		top: 40px;
 		bottom: 45px;
 	}
 	
 	@media screen and (min-width: 701px) {
-		top: 60px;
+		top: 57px;
 		bottom: 60px;
 	}
 	
 	@media screen and (min-width: 1001px) {
 		left: 0px !important;
 		width: 30%;
+		
+
 	}
 	
 	hr {
@@ -54,16 +57,41 @@
 	}
 }
 
-ul#menuitems {
+#menuitems {
+	position: fixed;
+	width: 30%; 
+	min-width: 250px;
+	-webkit-overflow-scrolling: touch;
+	overflow-x: hidden;
+	overflow-y: scroll;
 	padding: 0;
 	margin: 0;
 	list-style: none;
-	margin: @menuPane-padding;
-
-	// Menu items
+	padding: @menuPane-padding;
+	padding-right: 0;
 	
+	-webkit-box-sizing: border-box;
+	
+	border-right: 1px solid @menuPane-border-color;
+
+	@media screen and (max-width: 700px) {
+		top: 45px;
+		bottom: 45px;
+		width: 95%;
+	}
+	
+	@media screen and (min-width: 701px) {
+		top: 57px;
+		bottom: 60px;
+	}
+
+	// Menu items	
 	li {
-		min-width: 250px;
+		//min-width: 250px;
+		display: block;
+		width: 100%;
+		margin: 0;
+		padding: 0;
 	}
 	
 	a, .menulink {	
@@ -74,6 +102,8 @@ ul#menuitems {
 		display: block;
 		line-height: 24px;
 		padding: 10px 15px;
+		width: 100%;
+		-webkit-box-sizing: border-box;
 		//-webkit-tap-highlight-color: #387bbe;
 		border-bottom: 1px solid @menuitems-border-divider;
 		border-left: 1px solid @menuitems-border-outer;
@@ -103,8 +133,8 @@ ul#menuitems {
 			color:@menuitems-color;
 			text-shadow: @menuitems-text-shadow;
 			opacity: 0.2;
-			*display:inline;
-			*zoom:1;
+			//*display:inline;
+			//*zoom:1;
 			vertical-align:middle;
 			text-transform:none;
 			-webkit-font-smoothing:antialiased;					

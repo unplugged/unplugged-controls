@@ -26,9 +26,8 @@
 		<xp:script src="/unp/jquery.autocomplete.js"
 			clientSide="true">
 		</xp:script>
-		<xp:styleSheet href="/unp/font-awesome.css"></xp:styleSheet>
+		<xp:styleSheet href="unp/font-awesome.css"></xp:styleSheet>
 		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
-		<xp:styleSheet href="/unpDialog.css"></xp:styleSheet>
 		<xp:metaData name="apple-mobile-web-app-status-bar-style"
 			content="black-translucent">
 		</xp:metaData>

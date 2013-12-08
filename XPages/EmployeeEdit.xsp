@@ -53,6 +53,13 @@
 								</xp:inputText>
 							</li>
 							<li>
+								<xp:label value="Number" id="numberlabel" for="number">
+								</xp:label>
+								<xp:inputText id="number" value="#{document1.Number}"
+									type="number" styleClass="xspInputFieldEditBox">
+								</xp:inputText>
+							</li>
+							<li>
 								<xp:label value="Start Month" id="startmonthlabel" for="startmonth">
 								</xp:label>
 								<xp:comboBox id="startmonth" value="#{document1.StartDate}"

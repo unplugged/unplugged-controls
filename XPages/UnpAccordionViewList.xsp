@@ -55,9 +55,6 @@ if (start == ""){
 							}]]></xp:this.value>
 					</xp:attr>
 				</xp:this.attrs>
-				<xp:image url="/unp/right-arrow-circle.png" id="image1"
-					styleClass="multiLineIcon">
-				</xp:image>
 				<xp:label id="label2" styleClass="viewlistsummary">
 					<xp:this.value><![CDATA[#{javascript:thisRowData.getColumnValues()[1];}]]></xp:this.value>
 				</xp:label>

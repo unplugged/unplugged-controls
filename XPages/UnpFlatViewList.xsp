@@ -89,14 +89,6 @@ return out;}]]></xp:this.styleClass>
 }}]]></xp:this.rendered>
 					<xp:this.url><![CDATA[#{javascript:thisRowData.getColumnValue(context.getUrlParameter("photocol"))}]]></xp:this.url>
 				</xp:image>
-				<xp:image id="image1">
-					<xp:this.styleClass><![CDATA[#{javascript:if(context.getUrlParameter("detailcol") == "undefined" || context.getUrlParameter("detailcol") == "null" || context.getUrlParameter("collapserows") == "Yes"){ return 'singleLineIcon';} else {return 'multiLineIcon';}}]]></xp:this.styleClass>
-					<xp:this.url><![CDATA[#{javascript:if (context.getUrlParameter("collapserows") == "Yes"){
-	return "/unp/arrow-down.png";
-}else{
-	return "/unp/right-arrow-circle.png";
-}}]]></xp:this.url>
-				</xp:image>
 				<xp:label id="label2">
 					<xp:this.value><![CDATA[#{javascript:thisRowData.getColumnValue(context.getUrlParameter("summarycol"));}]]></xp:this.value>
 					<xp:this.styleClass><![CDATA[#{javascript:var out = "viewlistsummary";

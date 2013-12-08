@@ -1,21 +1,20 @@
 .iHeader {
 	z-index: 12;
-	-webkit-box-sizing: border-box;
+	//-webkit-box-sizing: border-box;
 	position: fixed;
 	top: 0;
 	left: 0;
-	height: 45px;
 	width: 100%;
 	overflow: hidden;
 	background: @navbar-background;
 	border-bottom: 1px solid @navbar-border-bottom;
 	
 	@media screen and (min-width: 701px) {
-		height: 60px;
+		height: 56px;
 	}
 	
 	@media screen and (max-width: 700px) {
-		height: 45px;
+		height: 44px;
 	}
 
 	// Logo
@@ -92,6 +91,7 @@
 .input-search-frame {
 	position: relative;
 	overflow: hidden;
+	padding-bottom: 1px; // shows box shadow if set
 
 	&:before {
 		//content: "\E028";
@@ -114,7 +114,7 @@
 		z-index: 15;
 		position: fixed;
 		top: 10px;
-		right: 115px;
+		right: 116px;
 		width: 150px;
 	}	
 	@media screen and (max-width: 700px) {

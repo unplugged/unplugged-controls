@@ -45,6 +45,14 @@ the specific language governing permissions and limitations under the License
 								</xp:text>
 							</li>
 							<li>
+								<xp:label value="Number" id="numberlabel"
+									for="number">
+								</xp:label>
+								<xp:text id="number"
+									value="#{document1.Number}">
+								</xp:text>
+							</li>
+							<li>
 								<xp:label value="Start Month"
 									id="startmonthlabel" for="startmonth">
 								</xp:label>

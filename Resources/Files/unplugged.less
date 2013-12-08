@@ -20,6 +20,96 @@
 	font-style:normal;
 }*/
 
+
+/*********************
+
+iscroll.css
+
+**********************/
+
+
+
+body {
+	height: 100%;
+	overflow: hidden;
+	width: 100%;
+	position: fixed;
+}
+
+.iscrollcontent {
+	position: fixed;
+	right: 0px;
+	left: 0px;
+	top: 60px;
+	bottom: 60px;
+	overflow-x: none;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+
+	@media screen and (min-width: 701px) {
+		top: 57px;
+		bottom: 60px;
+	}	
+
+	@media screen and (max-width: 700px) {
+		top: 45px;
+		bottom: 45px;
+	}	
+}
+
+.swiper-container {
+	overflow-x: scroll !important;
+	overflow-y: none !important;
+	-webkit-overflow-scrolling: touch !important;
+}
+
+.notoppadscroll {
+	position: fixed;
+	right: 0px;
+	left: 0px;
+	top: 0px;
+	bottom: 60px;
+	overflow-x: none;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+.bottompadscroll {
+	position: fixed;
+	right: 0px;
+	left: 0px;
+	top: 60px;
+	bottom: 0px;
+	overflow-x: none;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+.nopadscroll {
+	position: fixed;
+	right: 0px;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	overflow-x: none;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+@media screen and (max-width: 700px) {
+	.wsscroll {
+		top: 45px;
+		bottom: 45px;
+	}
+}
+
+/*********************
+
+Jack's Styles from here
+
+**********************/
+
+
 body {
 	background-color: @body-background-color;
 	font-family: @body-font;
@@ -38,6 +128,7 @@ body {
 	}
 }
 
+
 button, 
 input {
 	font-family: @body-font;
@@ -45,6 +136,10 @@ input {
 
 .hidden {
 	display: none !important;
+}
+
+a {
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* Disable Android's default active link styling */
 }
 
 a:hover {
@@ -244,6 +339,10 @@ legend {
 /* SAMPLER APP: Dashboard */
 
 .piechartpanel {
+	padding-bottom: 25px;
+	border-bottom:1px solid #eee;
+	margin-bottom: 20px;
+
 	.legendColorBox {
 		padding: 5px 0;
 	
@@ -264,6 +363,33 @@ legend {
 			font-size: 11px !important;
 			line-height: 15px !important;
 		}
+	}
+}
+
+.barchartspanel {
+	.chartpanelelement {
+		margin-bottom: 20px;
+		border-bottom:1px solid #eee;
+		padding-bottom: 20px;
+		
+		h3 {
+			font-weight: normal;
+		}
+	}
+}
+
+#pie1,#stackchart,.barchart {
+	height: 300px;
+}
+
+.chartpanelelement {
+	float: left;
+	width: 50%;
+}
+
+@media screen and (max-width: 700px) {
+	.chartpanelelement {
+		width: 100%;
 	}
 }
 
@@ -316,7 +442,7 @@ legend {
 }
 
 #bodycopy {
-	padding: 15px 10px;
+	padding: 15px;
 	padding-top: 0;
 	@media screen and (max-width: 400px) { padding: 0; }
 
@@ -355,6 +481,7 @@ legend {
 				position: absolute;
 				left: 6px;
 				top: 5px;
+				@media screen and (max-width: 700px) { top: 4px; }
 			}
 		}	 
 		&.increasetext i:before {
@@ -480,6 +607,28 @@ legend {
 
 
 /* SAMPLER APP: Glyphicons */
+
+/*#glyphicondetails .glyphicons strong {
+	display: block;	
+	top: 50px;
+	font-size: 14px;
+	position: absolute;
+	right: 0px;
+}
+#glyphicondetails span {
+	display: block;	
+	top: 100px;
+	font-size: 14px;
+	position: absolute;
+	right: 0px;
+}
+#glyphicondetails a {
+	width: 100%;	
+}
+#glyphicondetails a.glyphicons:before{
+	font-size: 300px;
+}*/
+
 /*
 .list-fonts {
 	margin: 0 !important;
@@ -638,6 +787,172 @@ legend {
 		}
 	}
 }
+
+#adminCover {
+	position: absolute;
+	z-index: 9998;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.75);
+}
+
+#dialogswitch {
+	-webkit-box-sizing: border-box;
+	position: absolute;
+	width: 48px;
+	height: 42px;
+	top: 8px;
+	left: 200px;
+	border-style: solid;
+	border-width: 1px;
+	overflow: hidden;
+	text-indent: -9999em;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 0
+		rgba(255, 255, 255, 0.15);
+	border-color: #0d0d0d;
+	-webkit-border-radius: 21px;
+	background: url(dialog.png) 50% 50% no-repeat,
+		-webkit-gradient(linear, 0 0, 0 100%, from(#767676),
+		color-stop(0.5, #595959), color-stop(0.5, #4f4f4f), to(#2f2f2f) );
+	-webkit-background-clip: padding-box !important;
+}
+
+.dialog #dialogswitch {
+	background: url(dialog.png) 50% 50% no-repeat,
+		-webkit-gradient(linear, 0 0, 0 100%, from(#611), to(#8a2a2a) );
+	-webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.7), 0 1px 0
+		rgba(255, 255, 255, 0.15);
+}
+
+#dialogPopup, #versionPopup, #hviewPopup {
+	-webkit-box-sizing: border-box;
+	position: fixed;
+	z-index: 9999;
+	background: #fff;
+	-webkit-border-radius: 10px;
+	-webkit-box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.2);
+	left: 100px;
+	top: 70px;
+	right: 10px;
+	padding: 10px;
+	
+}
+
+#dialogPopup h2, #versionPopup h2, #hviewPopup h2 {
+	font-size: 1.5em;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#dialogPopup label, #versionPopup label, #hviewPopup label {
+	display: block;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+#dialogPopup input,#dialogPopup select,#dialogPopup textarea {
+	-webkit-box-sizing: border-box;
+	font-family: helvetica;
+	font-size: 1.4em;
+	margin-bottom: 10px;
+	padding: 6px;
+}
+
+#dialogPopup button, #versionPopup button {
+	-webkit-box-sizing: border-box;
+	font-size: 1.3em;
+	margin-bottom: 10px;
+	opacity: 0.5;
+}
+
+#dialogPopup.modal, #versionPopup.modal, #hviewPopup.modal {
+	width: 90%;
+	height: 90%;
+	margin-left: -250px;
+	margin-top: -60px;
+}
+
+#dialogPopup.modal h2, #versionPopup.modal h2, #hviewPopup.modal h2 {
+	margin-top: 10px;
+}
+
+#dialogCover {
+	position: absolute;
+	z-index: 9998;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.75);
+}
+
+#dialogPopup fieldset {
+	display: block;
+	float: left;
+	width: 48%;
+}
+
+#dialogPopup fieldset>input,#dialogPopup fieldset>select,#dialogPopup fieldset>textarea
+	{
+	width: 100%;
+}
+
+#dialogPopup fieldset:nth-child(even) {
+	float: right;
+}
+
+#dialogContent {
+	overflow: scroll;	
+	-webkit-overflow-scrolling: touch;
+}
+
+@media screen and (min-width: 1001px) {
+ #dialogContent, #versionContent {max-height: 900px;height: 900px;}
+ 
+}
+
+@media screen and (min-width: 701px) {
+ #dialogContent, #versionContent {max-height: 650px;height:650px;}
+}
+
+@media screen and (max-width: 700px) {
+ #dialogContent, #versionContent {max-height: 500px;height: 500px;}
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+ #dialogContent, #versionContent {max-height: 200px;height: 200px;}
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (min-width : 320px) {
+ #dialogContent, #versionContent {
+ 	max-height: 350px;
+ 	height: 350px;
+ }
+}
+
+
+.underlay{
+	display:none;
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:#000;
+	-moz-opacity:0.5;
+	opacity:.50;
+	filter:alpha(opacity=50);
+	z-index: 100;
+}
+
+
+
 
 /*
 ::-webkit-scrollbar {
@@ -1060,4 +1375,3 @@ Not sure what any of it does, but I don't want to move/change it in case I break
 .formpullleft {
 	margin-left: 0% !important;
 }
-

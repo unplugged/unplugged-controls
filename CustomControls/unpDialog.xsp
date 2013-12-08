@@ -15,7 +15,6 @@
 	<xp:this.resources>
 		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
 		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
-		<xp:styleSheet href="/unpDialog.css"></xp:styleSheet>
 		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 	</xp:this.resources>
 	<div id="dialogPopup" class="dialog" style=" display:none;">
