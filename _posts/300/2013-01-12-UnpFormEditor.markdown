@@ -32,14 +32,22 @@ The example XML below shows an example of a simple text field. It is important t
 
 <script src="https://gist.github.com/whitemx/7527852.js"></script>
 
+You can use the Generic Classes to layout the content of your pages.
+
 If you want the field to be mandatory, add a styleClass property of "required".
 If you want the field to include an 'x' so the contents can be deleted, add a styleClass property of "deletable".
 
+#Multi Value Fields
 If you want to store a multi value field (for example using a List Box control), the name of the field will need to be prefixed "multi__" (that is two underscores acting as a delimiter) so an example field might look like:
 
 <script src="https://gist.github.com/whitemx/7527868.js"></script>
 
-You can use the Generic Classes to layout the content of your pages.
+#Numbers
+If you want to store numbers, you have two options, either integers or floats, depending upon the precision with which the numbers need to be stored.
+
+To store an integer, prefix your field name with int_ and to store a float, prefix your field with float_. So examples might look like this:
+
+<script src="https://gist.github.com/whitemx/7897725.js"></script>
 
 #Autocomplete Fields
 To enable auto complete on a field, there are 3 steps required. Firstly, add the CSS class "autocomplete" to the styleClass property of the field.
