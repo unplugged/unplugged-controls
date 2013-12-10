@@ -50,6 +50,24 @@ the specific language governing permissions and limitations under the License
 								</xp:label>
 								<xp:text id="number"
 									value="#{document1.Number}">
+									<xp:this.converter>
+										<xp:convertNumber
+											pattern="#,##0">
+										</xp:convertNumber>
+									</xp:this.converter>
+								</xp:text>
+							</li>
+							<li>
+								<xp:label value="Float" id="floatlabel"
+									for="float">
+								</xp:label>
+								<xp:text id="float"
+									value="#{document1.Float}">
+									<xp:this.converter>
+										<xp:convertNumber
+											pattern=" #,##0.00">
+										</xp:convertNumber>
+									</xp:this.converter>
 								</xp:text>
 							</li>
 							<li>

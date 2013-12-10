@@ -66,6 +66,29 @@ try{
 					resp = "new fieldname = " + fieldname;
 					resp = "value = " + value;
 					value = @Explode(value, ",");
+				}else if(fieldname.indexOf("int_") > -1){
+					//This needs to be an integer value field
+					fieldnames = fieldname.split("int_");
+					resp = "start fieldname = " + fieldname;
+					fieldname = fieldnames[fieldnames.length - 1]
+					resp = "new fieldname = " + fieldname;
+					resp = "value = " + parseInt(value);
+					value = parseInt(value);
+					if (isNaN(value)){
+						value = 0;
+					}
+					print("value = " + value);
+				}else if(fieldname.indexOf("float_") > -1){
+					//This needs to be a float value field
+					fieldnames = fieldname.split("float_");
+					resp = "start fieldname = " + fieldname;
+					fieldname = fieldnames[fieldnames.length - 1]
+					resp = "new fieldname = " + fieldname;		
+					resp = "value = " + parseFloat(value);
+					value = parseFloat(value);
+					if (isNaN(value)){
+						value = 0;
+					}
 				}
 				doc.replaceItemValue(fieldname, value);
 				resp = (fieldname + ": " + value);

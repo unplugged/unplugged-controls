@@ -53,10 +53,21 @@
 								</xp:inputText>
 							</li>
 							<li>
-								<xp:label value="Number" id="numberlabel" for="number">
+								<xp:label value="Number" id="numberlabel" for="int_number">
 								</xp:label>
-								<xp:inputText id="number" value="#{document1.Number}"
-									type="number" styleClass="xspInputFieldEditBox">
+								<xp:inputText id="int_number"
+									value="#{document1.Number}" type="number"
+									styleClass="xspInputFieldEditBox">
+									
+								</xp:inputText>
+							</li>
+							<li>
+								<xp:label value="Float" id="label1" for="float_float">
+								</xp:label>
+								<xp:inputText id="float_float"
+									value="#{document1.Float}" type="number"
+									styleClass="xspInputFieldEditBox">
+									
 								</xp:inputText>
 							</li>
 							<li>
