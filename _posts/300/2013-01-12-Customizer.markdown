@@ -108,3 +108,12 @@ Custom colors can also be set for Positive/Success buttons (e.g. the green Sync 
 | | Dark, rounded menu with clear borders and high contrast icons/text | Lighter menu with softer colors and less contrast | Minimalist menu with monochrome text/icons, obvious seelcted state, and no highlights or shadows |
 
 In each case, the padding & border radius is the same as the content area, which helps them line up, but you could set them differently if you prefer.
+
+##Save and Exit
+When you save your theme, you will have two options.
+
+1) If you sync your Unplugged device to restyler.teamstudio.com (using the same username and password as you created for the website) you will be able to see our Sampler application using your new custom theme.
+
+In the list of themes you can see which theme is active with the green tick.
+
+2) You can choose to download the custom theme from your list of saved themes.
