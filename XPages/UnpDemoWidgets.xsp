@@ -20,35 +20,17 @@
 	<unp:unpHeader search="database" viewsButton="true"
 		headerHomeLink="/UnpMain.xsp" title="Employees" searchPage="UnpDemoWidgetsSearch.xsp">
 	</unp:unpHeader>
-	<unp:unpNavigator>
-		<unp:this.menuItem>
-			<unp:menuItem label="Employees" page="/UnpDemoWidgets.xsp"
-				ajaxtargetid="content" ajaxloadid="contentwrapper">
-			</unp:menuItem>
-			<unp:menuItem label="Employees (Partial no icons)"
-				page="/UnpDemoWidgetsEmployeesNoIcons.xsp" ajaxtargetid="content"
-				ajaxloadid="contentwrapper">
-			</unp:menuItem>
-			<unp:menuItem ajaxloadid="contentwrapper" disabled="yes"
-				ajaxtargetid="content" submenu="no" label="Disabled Menu Item">
-			</unp:menuItem>
-			<unp:menuItem label="Employees By Department" page="/UnpDemoWidgetsByDept.xsp"
-				ajaxtargetid="content" ajaxloadid="contentwrapper">
-			</unp:menuItem>
-			<unp:menuItem label="Finance Employees" page="/UnpDemoWidgetsByDeptFinances.xsp"
-				ajaxtargetid="content" ajaxloadid="allcontent">
-			</unp:menuItem>
-			<unp:menuItem label="Employees By Country" page="/UnpDemoWidgetsByCountry.xsp"
-				ajaxtargetid="content" ajaxloadid="contentwrapper">
-			</unp:menuItem>
-			<unp:menuItem label="Employees By Year" page="/UnpDemoWidgetsByYear.xsp"
-				ajaxtargetid="content" ajaxloadid="contentwrapper">
-			</unp:menuItem>
-			<unp:menuItem ajaxloadid="contentwrapper" ajaxtargetid="content"
-				submenu="no" disabled="no" label="About" page="/UnpAbout.xsp">
-			</unp:menuItem>
-		</unp:this.menuItem>
-	</unp:unpNavigator>
+	<unp:unpNavigatorComputed>
+		<unp:this.computedmenuitems><![CDATA[#{javascript:[
+        {label: "Employees", hasSubMenu: false, page: "/UnpDemoWidgets.xsp", ajaxloadid: "contentwrapper", ajaxtargetid: "content"},
+        {label: "Employees (Partial)", hasSubMenu: false, page: "/UnpDemoWidgetsEmployeesNoIcons.xsp", ajaxloadid: "contentwrapper", ajaxtargetid: "content"},
+        {label: "Employees By Department", hasSubMenu: false, page: "/UnpDemoWidgetsByDept.xsp", ajaxloadid: "contentwrapper", ajaxtargetid: "content"},
+        {label: "Finance Employees", hasSubMenu: false, page: "/UnpDemoWidgetsByDeptFinances.xsp", ajaxloadid: "contentwrapper", ajaxtargetid: "content"},
+        {label: "Employees By Country", hasSubMenu: false, page: "/UnpDemoWidgetsByCountry.xsp", ajaxloadid: "contentwrapper", ajaxtargetid: "content"},
+        {label: "Employees By Year", hasSubMenu: false, page: "/UnpDemoWidgetsByYear.xsp", ajaxloadid: "contentwrapper", ajaxtargetid: "content"},
+        {label: "About", hasSubMenu: false, page: "/UnpAbout.xsp", ajaxloadid: "contentwrapper", ajaxtargetid: "content"}
+]}]]></unp:this.computedmenuitems>
+	</unp:unpNavigatorComputed>
 	<div id="content">
 		<div id="contentwrapper">
 			<unp:unpScrollableArea>
