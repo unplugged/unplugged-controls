@@ -43,7 +43,7 @@ If you want to store a multi value field (for example using a List Box control),
 <script src="https://gist.github.com/whitemx/7527868.js"></script>
 
 #Numbers
-If you want to store numbers, you have two options, either integers or floats, depending upon the precision with which the numbers need to be stored.
+If you want to store numbers, you have two options, either integers or floats, depending upon the precision with which the numbers need to be stored. If the user enters non numeric characters, then a zero will be stored in their place.
 
 To store an integer, prefix your field name with int_ and to store a float, prefix your field with float_. So examples might look like this:
 
