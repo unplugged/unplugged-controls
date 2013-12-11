@@ -90,9 +90,7 @@ return out;}]]></xp:this.styleClass>
 				</div>
 				<xp:text tagName="script" escape="false">
 					<xp:this.rendered><![CDATA[#{javascript:compositeData.expandfirstcategory == "yes" && viewScope.rowcount == 1}]]></xp:this.rendered>
-					<xp:this.value><![CDATA[#{javascript:"$(document).ready(function() {" + 
-"fetchDetails($('.categoryRow').first(),'" + @ReplaceSubstring(compositeData.viewName, "\\","\\\\") + "','" + rowData + "', '" + @ReplaceSubstring(compositeData.xpage, "/", "") + "', '" + compositeData.dbName + "')" + 
-"});"}]]></xp:this.value>
+					<xp:this.value><![CDATA[#{javascript:"$('.categoryRow').first().click()"}]]></xp:this.value>
 				</xp:text>
 			</xp:repeat>
 		</ul>

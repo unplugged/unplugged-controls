@@ -371,6 +371,13 @@ function loadPage(url, target, menuitem, pushState) {
 			initHorizontalView();
 			initDeleteable();
 			initAutoComplete();
+			
+			try{
+				$('.categoryRow').first().click();
+			}catch(e){
+				
+			}
+
 			return false;
 		}
 	});
