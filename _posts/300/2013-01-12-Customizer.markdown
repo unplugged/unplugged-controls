@@ -13,6 +13,8 @@ Unplugged Controls 3.0 has been rebuilt so that the appearance of the user inter
 
 This customization is done using the online [Unplugged Re-styler App](http://restyler.teamstudio.com/), which allows you to set key CSS values to adapt the design. We'll cover a few of the main customization options here, using the built-in themes as examples of how to achieve different appearances. This should give you an idea of what's possible, and how to start customizing the Controls for yourself.
 
+The Restyler site is designed for Designers or Developers have a good knowledge of CSS settings. If this isn't you then a good resource for CSS properties can be found at http://www.w3schools.com/cssref/
+
 ## Colors
 
 ![Dark](http://teamstudio.s3.amazonaws.com/images/phone-people-dark.png)![Light](http://teamstudio.s3.amazonaws.com/images/phone-people-light.png)![iOS 7](http://teamstudio.s3.amazonaws.com/images/phone-people-ios7.png)
