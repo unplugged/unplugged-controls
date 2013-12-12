@@ -5,7 +5,7 @@ date:   2013-12-01 17:00
 categories: "300"
 ---
 
-UP Mark is a suite of tests which we use to measure performance.
+UPMark is a suite of tests which we use to measure performance.
 
 We make use of [QUnit](http://qunitjs.com) to perform the tests. We created a simple set of scripts which opens different pages within the Sampler application and measures the time it takes to load each page. The times which the scripts take to execute will vary massively based upon the device being used, whether view indexes have been built etc.
 
