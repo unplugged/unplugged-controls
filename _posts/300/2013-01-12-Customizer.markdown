@@ -5,7 +5,7 @@ date:   2013-12-01 17:00
 categories: "300"
 ---
 
-# Customize Design using the [Re-styler](http://restyler.teamstudio.com/)
+### Customize Design using the [Re-styler](http://restyler.teamstudio.com/)
 
 ![Unplugged Re-styler](http://teamstudio.s3.amazonaws.com/images/restyler.png)
 
@@ -15,7 +15,7 @@ This customization is done using the online [Unplugged Re-styler App](http://res
 
 *The Restyler site is designed for Designers or Developers have a good knowledge of CSS settings. If this isn't you then a good resource for CSS properties can be found at http://www.w3schools.com/cssref/*
 
-## Fonts
+### Fonts
 
 The Re-styler allows you to choose from a range of fonts, based on what's available in iOS 7. However, the font that will display may depend on the device:
 
@@ -23,7 +23,7 @@ The Re-styler allows you to choose from a range of fonts, based on what's availa
 * On **Android** devices, the range of system fonts is more limited. The font displayed on these devices is likely to be their default font, [Roboto](http://developer.android.com/design/style/typography.html).
 * In a **desktop browser** – e.g. when using the Re-styler app - the chosen font will not display if you don't have it installed on your system. In these cases, Unplugged will fallback to your browser's default sans-serif font.
 
-## Colors
+### Colors
 
 ![Dark](http://teamstudio.s3.amazonaws.com/images/phone-people-dark.png)![Light](http://teamstudio.s3.amazonaws.com/images/phone-people-light.png)![iOS 7](http://teamstudio.s3.amazonaws.com/images/phone-people-ios7.png)
 
@@ -35,7 +35,7 @@ Colors and backgrounds are defined as they are in CSS (with the exception of bac
 4. **Webkit Background Gradients**, e.g. -webkit-linear-gradient(#343434, #121212)
 5. **Transparent**, i.e. transparent
 
-#### Background
+#### Body Background
 
 | | Dark Theme    | Light Theme  | iOS 7 Theme |
 | ------------ | ------------- | ------------ | ------------ |
@@ -71,7 +71,7 @@ You can also edit the Table Row background color, but we'd recommend you leave i
 | **Selected Footer Tab Color** | white | #657893 | #157efb |
 | | Grey icons & text (white when selected) on dark, glossy background | Blue icons & text (darker blue when selected) on white background | Grey icons & text (bright blue when selected) on slightly transparent white background |
 
-## Buttons
+### Buttons
 
 ![Dark](http://teamstudio.s3.amazonaws.com/images/phone-person-dark.png)![Light](http://teamstudio.s3.amazonaws.com/images/phone-person-light.png)![iOS 7](http://teamstudio.s3.amazonaws.com/images/phone-person-ios7.png)
 
@@ -88,7 +88,7 @@ You can also edit the Table Row background color, but we'd recommend you leave i
 Custom colors can also be set for Positive/Success buttons (e.g. the green Sync button in the bottom left) and Negative/Warning buttons (i.e. the red Close button).
 
 
-## Content Layout
+### Content Layout
 
 ![Dark](http://teamstudio.s3.amazonaws.com/images/phone-edit-dark.png)![Light](http://teamstudio.s3.amazonaws.com/images/phone-edit-light.png)![iOS 7](http://teamstudio.s3.amazonaws.com/images/phone-edit-ios7.png)
 
@@ -98,7 +98,7 @@ Custom colors can also be set for Positive/Success buttons (e.g. the green Sync 
 | **Content Border Radius** | 10px  | 10px  | none |
 |  | Equal padding around content; rounded corners  | Equal padding around content; rounded corners  | More padding at top; zero padding on the left/right so content sits flush against sides of container |
 
-## Menu
+### Menu
 
 ![Dark](http://teamstudio.s3.amazonaws.com/images/phone-menu-dark.png)![Light](http://teamstudio.s3.amazonaws.com/images/phone-menu-light.png)![iOS 7](http://teamstudio.s3.amazonaws.com/images/phone-menu-ios7.png)
 
@@ -119,7 +119,8 @@ Custom colors can also be set for Positive/Success buttons (e.g. the green Sync 
 
 In each case, the padding & border radius is the same as the content area, which helps them line up, but you could set them differently if you prefer.
 
-##Save and Exit
+### Save and Exit
+
 When you save your theme, you will have two options.
 
 1) If you sync your Unplugged device to restyler.teamstudio.com (using the same username and password as you created for the website) you will be able to see our Sampler application using your new custom theme.
