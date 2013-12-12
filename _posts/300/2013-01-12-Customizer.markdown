@@ -19,9 +19,9 @@ This customization is done using the online [Unplugged Re-styler App](http://res
 
 The Re-styler allows you to choose from a range of fonts, based on what's available in iOS 7. However, the font that will display may depend on the device:
 
-* On *iOS* devices, the chosen font will display correctly
-* On *Android* devices, the range of system fonts is more limited. The font displayed on these devices is likely to be their default font, [Roboto](http://developer.android.com/design/style/typography.html).
-* In a desktop browser – e.g. when using the Re-styler app - the chosen font will not display if you don't have it installed on your system. In these cases, Unplugged will fallback to your browser's default sans-serif font.
+* On **iOS** devices, the chosen font will display correctly
+* On **Android** devices, the range of system fonts is more limited. The font displayed on these devices is likely to be their default font, [Roboto](http://developer.android.com/design/style/typography.html).
+* In a **desktop browser** – e.g. when using the Re-styler app - the chosen font will not display if you don't have it installed on your system. In these cases, Unplugged will fallback to your browser's default sans-serif font.
 
 ## Colors
 
