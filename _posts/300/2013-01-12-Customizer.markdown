@@ -13,7 +13,15 @@ Unplugged Controls 3.0 has been rebuilt so that the appearance of the user inter
 
 This customization is done using the online [Unplugged Re-styler App](http://restyler.teamstudio.com/), which allows you to set key CSS values to adapt the design. We'll cover a few of the main customization options here, using the built-in themes as examples of how to achieve different appearances. This should give you an idea of what's possible, and how to start customizing the Controls for yourself.
 
-The Restyler site is designed for Designers or Developers have a good knowledge of CSS settings. If this isn't you then a good resource for CSS properties can be found at http://www.w3schools.com/cssref/
+*The Restyler site is designed for Designers or Developers have a good knowledge of CSS settings. If this isn't you then a good resource for CSS properties can be found at http://www.w3schools.com/cssref/*
+
+## Fonts
+
+The Re-styler allows you to choose from a range of fonts, based on what's available in iOS 7. However, the font that will display may depend on the device:
+
+* On *iOS* devices, the chosen font will display correctly
+* On *Android* devices, the range of system fonts is more limited. The font displayed on these devices is likely to be their default font, [Roboto](http://developer.android.com/design/style/typography.html).
+* In a desktop browser – e.g. when using the Re-styler app - the chosen font will not display if you don't have it installed on your system. In these cases, Unplugged will fallback to your browser's default sans-serif font.
 
 ## Colors
 
