@@ -108,7 +108,7 @@ Jack's Styles from here
 
 **********************/
 body {
-  background-color: #f0eff4;
+  background: #f0eff4;
   font-family: "Helvetica Neue", sans-serif;
   padding-top: 0px;
   padding-bottom: 45px;
@@ -136,7 +136,6 @@ input {
 a {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   /* Disable Android's default active link styling */
-
 }
 a:hover {
   text-decoration: none;
@@ -309,7 +308,7 @@ textarea,
   line-height: 36px;
   font-size: 17px;
   color: #2087fc;
-  background-color: transparent;
+  background: transparent;
   text-shadow: none;
   font-weight: normal;
   background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%);
@@ -318,7 +317,6 @@ textarea,
   padding: 0 15px;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   /* Disable Android's default active link styling */
-
 }
 .button i:before {
   color: #2087fc;
@@ -341,7 +339,6 @@ textarea,
 .saveButton {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   /* Disable Android's default active link styling */
-
 }
 .editButton .label,
 .cancelButton .label,
@@ -362,20 +359,20 @@ textarea,
 .editButton .label {
   color: #2087fc;
   border: 1px solid transparent;
-  background-color: transparent;
+  background: transparent;
   background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%);
 }
 .cancelButton .label {
   color: #fc3e39;
   border: 1px solid transparent;
-  background-color: transparent;
+  background: transparent;
   background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%);
 }
 .proceedButton .label,
 .saveButton .label {
   color: #00b31e;
   border: 1px solid transparent;
-  background-color: transparent;
+  background: transparent;
   background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%);
 }
 /* NAVBAR/FOOTER BUTTONS */
@@ -396,13 +393,12 @@ textarea,
   line-height: 36px;
   font-size: 17px;
   color: #2087fc;
-  background-color: transparent;
+  background: transparent;
   text-shadow: none;
   font-weight: normal;
   background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%);
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   /* Disable Android's default active link styling */
-
 }
 @media screen and (max-width: 700px) {
   .viewsButton,
@@ -529,7 +525,7 @@ textarea,
   }
 }
 .syncButton {
-  background-color: transparent;
+  background: transparent;
   color: #00b31e;
 }
 .syncButton .icon:before {
@@ -560,7 +556,8 @@ textarea,
 		box-shadow: none;
 	}
 }
-*//* MENU */
+*/
+/* MENU */
 @media screen and (min-width: 1001px) {
   .iscrollcontent > div {
     margin-left: 30%;
@@ -696,14 +693,26 @@ textarea,
   color: #000000;
   font-size: 24px;
 }
-#menuitems > li:first-child a,
-#menuitems > li:first-child .menulink {
+#menuitems > li:first-child > a,
+#menuitems > li:first-child > .menulink {
   -webkit-border-top-left-radius: 0;
   -webkit-border-top-right-radius: 0;
   border-top: 1px solid transparent;
 }
-#menuitems > li:last-child a,
-#menuitems > li:last-child .menulink {
+#menuitems > li:last-child > a,
+#menuitems > li:last-child > .menulink {
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  border-bottom: 1px solid transparent;
+}
+#menuitems > li:last-child > a.open,
+#menuitems > li:last-child > .menulink.open {
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  border-bottom: 1px solid #d8d8d8;
+}
+#menuitems > li:last-child > ul > li:last-child > a,
+#menuitems > li:last-child > ul > li:last-child > .menulink {
   -webkit-border-bottom-left-radius: 0;
   -webkit-border-bottom-right-radius: 0;
   border-bottom: 1px solid transparent;
@@ -719,7 +728,7 @@ textarea,
 }
 #menuitems > li > ul > li > a,
 #menuitems.viewMenuItemSub .menulink {
-  background-color: #f0eff4;
+  background: #f0eff4;
   border-bottom: 1px solid transparent;
   padding-left: 38px;
 }
@@ -728,7 +737,7 @@ textarea,
 }
 #menuitems > li > ul > li > ul > li > a,
 #menuitems.viewMenuItemSubSub .menulink {
-  background-color: #f0eff4;
+  background: #f0eff4;
   border: 1px solid transparent;
   padding-left: 76px;
   font-weight: normal;
@@ -918,15 +927,6 @@ li#title span,
   text-transform: uppercase;
   text-shadow: none;
 }
-@media screen and (min-width: 1001px) {
-  
-}
-@media screen and (min-width: 701px) {
-  
-}
-@media screen and (max-width: 700px) {
-  
-}
 .categoryRowFixed {
   display: block;
   padding: 10px 15px;
@@ -1049,7 +1049,17 @@ li.data-row .multiLineIcon {
   border-color: transparent;
   border-top-color: #4f4f4f;
 }
-#summaryList .accLoadMoreLink button {
+@media screen and (min-width: 1001px) and (orientation: landscape) {
+  .pullleft,
+  .left-aligned {
+    margin-left: -42.8% !important;
+  }
+  .accpullleft {
+    margin-left: -42.8% !important;
+  }
+}
+.loadmorelink button,
+.accLoadMoreLink button {
   display: block;
   text-decoration: none;
   cursor: pointer;
@@ -1065,14 +1075,14 @@ li.data-row .multiLineIcon {
   font-size: 16px;
   font-weight: normal;
 }
-@media screen and (min-width: 1001px) and (orientation: landscape) {
-  .pullleft,
-  .left-aligned {
-    margin-left: -42.8% !important;
-  }
-  .accpullleft {
-    margin-left: -42.8% !important;
-  }
+.loadmorelink {
+  font-size: 0;
+  /* Clear extra space */
+  margin-top: 10px;
+}
+.loadmorelink button {
+  border-radius: 0;
+  border: 0;
 }
 /* DOCUMENT VIEW/EDIT */
 .customform {
@@ -1346,7 +1356,6 @@ li.data-row .multiLineIcon {
 					line-height: 24px;
 					font-size: 16px;
 					text-align: center;*/
-
 }
 .cke_chrome .cke_contents {
   border-color: 1px solid #DDD;
@@ -1371,7 +1380,8 @@ body.cke_editable p {
   border: 0;
   background: transparent;
 }
-/* WORKSPACE */.wsscroll {
+/* WORKSPACE */
+.wsscroll {
   height: 100%;
   left: 0px;
   width: 100%;
@@ -1651,7 +1661,8 @@ body.cke_editable p {
     display: none;
   }
 }
-/* SWIPE VIEW *//**
+/* SWIPE VIEW */
+/**
  * Copyright 2013 Teamstudio Inc 
  * Licensed under the Apache License, Version 2.0 (the "License"); 
  * you may not use this file except in compliance with the License. You may obtain a copy of the License at
@@ -1681,11 +1692,9 @@ body.swipe-view {
   font-family: helvetica;
   font-size: 12px;
   /* Jack changes */
-
   background: black;
   height: 100%;
   /* Jack */
-
 }
 body.swipe-view form {
   height: 100%;
@@ -1711,7 +1720,6 @@ body.swipe-view #nav {
   -o-border-radius: 10px;
   border-radius: 10px;
   /* Jack */
-
   padding: 0 3px;
 }
 @media screen and (max-width: 400px) {
@@ -1742,14 +1750,12 @@ body.swipe-view #nav li#prev {
   margin-left: 5px;
   background: transparent;
   /* Jack */
-
   display: none;
 }
 body.swipe-view #nav li#next {
   margin-right: 0;
   background: transparent;
   /* Jack */
-
   display: none;
 }
 body.swipe-view #nav li.selected {
@@ -1806,7 +1812,6 @@ body.swipe-view #swipeview-slider img {
   pointer-events: none;
   max-height: 95%;
   /* Jack changes */
-
   border: 0;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -1857,7 +1862,6 @@ body.swipe-view #swipeview-slider span {
   -o-transform: translate(0, 100%) translateZ(0);
   transform: translate(0, 100%) translateZ(0);
   /* Jack changes */
-
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -1912,7 +1916,6 @@ body.swipe-view #closeButton {
   display: block;
   z-index: 101;
   /* Jack */
-
   top: 13px;
   right: 13px;
 }
@@ -1922,7 +1925,7 @@ body.swipe-view #closeButton > a {
   line-height: 36px;
   font-size: 17px;
   color: #fc3e39;
-  background-color: transparent;
+  background: transparent;
   text-shadow: none;
   font-weight: normal;
   background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%);
@@ -1930,11 +1933,9 @@ body.swipe-view #closeButton > a {
   border: 1px solid transparent;
   padding: 0 10px;
   /* Jack */
-
 }
 body.swipe-view #closeButton > a:hover {
   /* Jack */
-
 }
 body.swipe-view #swipepreviousbutton {
   position: absolute;
@@ -1972,7 +1973,8 @@ body.swipe-view #swipenextbutton:after {
   border-color: transparent transparent transparent #666;
   margin-right: -22px;
 }
-/* MEDIA VIEW *//* ICONS */
+/* MEDIA VIEW */
+/* ICONS */
 .hviewicon {
   width: 52px;
   height: 62px;
@@ -2033,17 +2035,11 @@ body.swipe-view #swipenextbutton:after {
   padding-left: 30px;
   padding-top: 10px;
   /* Heading */
-
   /* Row Heading */
-
   /* Swiper */
-
   /* IE10 Windows Phone 8 Fixes */
-
   /* Items */
-
   /* Filters */
-
 }
 @media screen and (max-width: 1000px) {
   .hviewresults {
@@ -2095,8 +2091,10 @@ body.swipe-view #swipenextbutton:after {
   padding-bottom: 5px;
   padding-left: 14px;
   border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
   margin-top: 10px;
-  background-color: transparent;
+  background: transparent;
   -webkit-border-top-left-radius: 8px;
   -webkit-mask-image: -webkit-linear-gradient(left, #000000 80%, rgba(0, 0, 0, 0));
   -webkit-mask-position: 0px 30px;
@@ -2111,11 +2109,12 @@ body.swipe-view #swipenextbutton:after {
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
   /* Fix of Webkit flickering */
-
   z-index: 1;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
 }
 .hviewresults .swiper-scroll-container {
-  background-color: transparent;
+  background: transparent;
   -webkit-border-bottom-left-radius: 8px;
   width: 100%;
   height: 100px;
@@ -2124,7 +2123,6 @@ body.swipe-view #swipenextbutton:after {
 }
 .hviewresults .swiper-scroll-container .swiper-slide {
   /*width: 10000px !important;*/
-
   height: 100px;
   padding-left: 5px;
   padding-top: 5px;
@@ -2293,32 +2291,32 @@ body.swipe-view #swipenextbutton:after {
   background-color: black;
   opacity: 0.8;
 }
-#hviewPopup {
+#hviewPopup.dialog {
   background-color: #EEE;
   width: 400px;
-  margin: 100px auto;
+  margin: 0;
+  top: 100px;
+  left: 50%;
+  margin-left: -200px;
   /* Smartphones (portrait) */
-
   /* Header */
-
   /* Body */
-
 }
 @media only screen and (max-width: 500px) {
-  #hviewPopup {
+  #hviewPopup.dialog {
     width: 300px;
-    top: 50px;
-    margin-top: 0px;
+    top: 60px;
+    margin-left: -150px;
   }
 }
-#hviewPopup #hviewitemheader {
+#hviewPopup.dialog #hviewitemheader {
   border-bottom: 1px solid #DDDDDD;
 }
-#hviewPopup #hviewitemheader .hviewicon {
+#hviewPopup.dialog #hviewitemheader .hviewicon {
   float: left;
   margin-left: 0px;
 }
-#hviewPopup #hviewitemheader .hviewclosebutton {
+#hviewPopup.dialog #hviewitemheader .hviewclosebutton {
   float: right;
   width: 22px;
   height: 22px;
@@ -2327,45 +2325,45 @@ body.swipe-view #swipenextbutton:after {
   cursor: pointer;
   opacity: 0.7;
 }
-#hviewPopup #hviewitemheader .hviewclosebutton:hover {
+#hviewPopup.dialog #hviewitemheader .hviewclosebutton:hover {
   opacity: 1;
 }
-#hviewPopup #hviewitemheader #hviewmetadata {
+#hviewPopup.dialog #hviewitemheader #hviewmetadata {
   padding-bottom: 5px;
   margin-left: 60px;
   color: #999999;
   margin-bottom: 5px;
 }
-#hviewPopup #hviewitemheader #hviewmetadata .hviewmetatitle {
+#hviewPopup.dialog #hviewitemheader #hviewmetadata .hviewmetatitle {
   font-size: 18px;
   font-weight: bold;
   color: #333333;
   display: block;
 }
-#hviewPopup #hviewitemheader #hviewmetadata > div {
+#hviewPopup.dialog #hviewitemheader #hviewmetadata > div {
   padding-top: 6px;
 }
-#hviewPopup #hviewitemheader #hviewmetadata > div:nth-child(2),
-#hviewPopup #hviewitemheader #hviewmetadata > div:nth-child(4) {
+#hviewPopup.dialog #hviewitemheader #hviewmetadata > div:nth-child(2),
+#hviewPopup.dialog #hviewitemheader #hviewmetadata > div:nth-child(4) {
   float: right;
   clear: right;
 }
-#hviewPopup #hviewitembody {
+#hviewPopup.dialog #hviewitembody {
   padding-top: 10px;
 }
-#hviewPopup #hviewitembody .downloadnowbutton {
-  background-color: transparent;
+#hviewPopup.dialog #hviewitembody .downloadnowbutton {
+  background: transparent;
   color: #00b31e;
   border: 1px solid transparent;
   filter: none;
   width: 100%;
   height: 45px;
 }
-#hviewPopup #hviewitembody .downloadnowbutton img {
+#hviewPopup.dialog #hviewitembody .downloadnowbutton img {
   display: none;
 }
-#hviewPopup #hviewitembody .togglefavorite {
-  background-color: transparent;
+#hviewPopup.dialog #hviewitembody .togglefavorite {
+  background: transparent;
   color: #2087fc;
   border: 1px solid transparent;
   margin-top: 10px;
@@ -2374,11 +2372,11 @@ body.swipe-view #swipenextbutton:after {
   filter: none;
   font-size: 15px;
 }
-#hviewPopup #hviewitembody .togglefavorite img {
+#hviewPopup.dialog #hviewitembody .togglefavorite img {
   display: none;
 }
-#hviewPopup #hviewitembody .emailfilebutton {
-  background-color: transparent;
+#hviewPopup.dialog #hviewitembody .emailfilebutton {
+  background: transparent;
   color: #2087fc;
   border: 1px solid transparent;
   float: right;
@@ -2387,32 +2385,32 @@ body.swipe-view #swipenextbutton:after {
   filter: none;
   font-size: 15px;
 }
-#hviewPopup #hviewitembody .emailfilebutton img {
+#hviewPopup.dialog #hviewitembody .emailfilebutton img {
   display: none;
 }
-#hviewPopup #hviewitembody .emailsendbutton {
-  background-color: transparent;
+#hviewPopup.dialog #hviewitembody .emailsendbutton {
+  background: transparent;
   color: #00b31e;
   border: 1px solid transparent;
   width: 60%;
   filter: none;
   float: left;
 }
-#hviewPopup #hviewitembody .emailsendbutton img {
+#hviewPopup.dialog #hviewitembody .emailsendbutton img {
   display: none;
 }
-#hviewPopup #hviewitembody .emailcancelbutton {
-  background-color: transparent;
+#hviewPopup.dialog #hviewitembody .emailcancelbutton {
+  background: transparent;
   color: #fc3e39;
   border: 1px solid transparent;
   width: 37%;
   float: right;
   filter: none;
 }
-#hviewPopup #hviewitembody .emailcancelbutton img {
+#hviewPopup.dialog #hviewitembody .emailcancelbutton img {
   display: none;
 }
-#hviewPopup #hviewitembody #emailaddress {
+#hviewPopup.dialog #hviewitembody #emailaddress {
   height: 36px;
   font-size: 17px;
   border-radius: 4px;
@@ -2423,7 +2421,7 @@ body.swipe-view #swipenextbutton:after {
   width: 100%;
   margin-bottom: 10px;
 }
-#hviewPopup #hviewitembody .timetodownload {
+#hviewPopup.dialog #hviewitembody .timetodownload {
   width: 100%;
   text-align: center;
   color: #999999;
@@ -3161,9 +3159,7 @@ legend {
   font-weight: bold;
   position: fixed;
   /* Tablet */
-
   /* Phone */
-
 }
 @media screen and (min-width: 701px) {
   .atozpicker,
@@ -3189,13 +3185,9 @@ legend {
   cursor: pointer;
   height: 3.7037037%;
   /* 100%/27 */
-
   /* Tablet */
-
   /* Phone */
-
   /* Phone Landscape */
-
 }
 @media screen and (min-width: 701px) {
   .atozletter,
@@ -3214,13 +3206,11 @@ legend {
   .atozletter-divider {
     height: 5.26315789%;
     /* 100%/19 */
-  
   }
 }
 .atozletter-divider {
   display: none;
   /* Phone Landscape */
-
 }
 @media screen and (max-height: 400px) {
   .atozletter-divider {
@@ -3230,7 +3220,6 @@ legend {
 .otherletter {
   display: block;
   /* Phone Landscape */
-
 }
 @media screen and (max-height: 400px) {
   .otherletter {
@@ -3502,7 +3491,6 @@ Not sure what any of it does, but I don't want to move/change it in case I break
   display: -webkit-box;
   -webkit-line-clamp: 3;
   /*num lines*/
-
   -webkit-box-orient: vertical;
   white-space: normal;
   line-height: 22px;

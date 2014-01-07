@@ -119,10 +119,10 @@
 		padding-bottom: 5px;
 		padding-left: 14px;
 		border-top: @hviewcategory-border-top;
-		//border-left: @hviewcategory-border-left;
-		//border-right: @hviewcategory-border-right;
+		border-left: @hviewcategory-border-left;
+		border-right: @hviewcategory-border-right;
 		margin-top: 10px;
-		background-color: @hviewcategory-background-color;
+		background: @hviewcategory-background-color;
 		-webkit-border-top-left-radius: 8px;	
 		
 		-webkit-mask-image: -webkit-linear-gradient(left, #000000 80%, rgba(0, 0, 0, 0));
@@ -142,12 +142,12 @@
 		backface-visibility: hidden;
 		/* Fix of Webkit flickering */
 		z-index: 1;
-		//border-left: @hviewcategory-border-left;
-		//border-right: @hviewcategory-border-right;			
+		border-left: @hviewcategory-border-left;
+		border-right: @hviewcategory-border-right;			
 	}
 
 	.swiper-scroll-container {
-		background-color: @swiper-scroll-container-background-color;
+		background: @swiper-scroll-container-background-color;
 		-webkit-border-bottom-left-radius: 8px;
 		width: 100%;
 		height: 100px;
@@ -355,18 +355,20 @@
 	opacity: 0.8;
 }
 
-#hviewPopup {
+#hviewPopup.dialog {
 	background-color: #EEE;
 	width: 400px;
-	margin: 100px auto;
-	//top: 50%;
+	margin: 0;
+	top: 100px;
+	left: 50%;
+	margin-left: -200px;
 
 	/* Smartphones (portrait) */
 	
 	@media only screen and (max-width : 500px) {
 		width: 300px;
-		top: 50px;
-		margin-top: 0px;
+		top: 60px;
+		margin-left: -150px;
 	}
 	
 	/* Header */
@@ -424,7 +426,7 @@
 		padding-top: 10px;
 
 		.downloadnowbutton {
-			background-color: @button-success-background;
+			background: @button-success-background;
 			color: @button-success-label-color;
 			border: 1px solid @button-success-border-color;
 			filter: none;
@@ -434,7 +436,7 @@
 		}
 		
 		.togglefavorite {
-			background-color: @button-default-background;
+			background: @button-default-background;
 			color: @button-default-label-color;
 			border: 1px solid @button-default-border-color;
 			margin-top: 10px;
@@ -446,7 +448,7 @@
 		}
 		
 		.emailfilebutton {
-			background-color: @button-default-background;
+			background: @button-default-background;
 			color: @button-default-label-color;
 			border: 1px solid @button-default-border-color;
 			float: right;
@@ -458,7 +460,7 @@
 		}
 		
 		.emailsendbutton {
-			background-color: @button-success-background;
+			background: @button-success-background;
 			color: @button-success-label-color;
 			border: 1px solid @button-success-border-color;
 			width: 60%;
@@ -468,7 +470,7 @@
 		}
 		
 		.emailcancelbutton {
-			background-color: @button-danger-background;
+			background: @button-danger-background;
 			color: @button-danger-label-color;
 			border: 1px solid @button-danger-border-color;
 			width: 37%;
