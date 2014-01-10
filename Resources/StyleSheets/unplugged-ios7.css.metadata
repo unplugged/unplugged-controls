@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
-<noteinfo noteid="8cb6" sequence="1" unid="2F578C96EE07D85480257C5900426110">
-<created><datetime>20140107T120502,24+00</datetime></created>
-<modified><datetime>20140107T120502,50+00</datetime></modified>
-<revised><datetime>20140107T120502,49+00</datetime></revised>
-<lastaccessed><datetime>20140107T120502,50+00</datetime></lastaccessed>
-<addedtofile><datetime>20140107T120502,50+00</datetime></addedtofile></noteinfo>
-<updatedby><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Unplugged User/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name><name>CN=Unplugged User/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<item name="$TITLE"><textlist><text>unplugged-ios7.css</text></textlist></item>
-<item name="$Flags"><text>34C=Q</text></item>
-<item name="$DesignerVersion"><text>6</text></item>
-<item name="$FileNames"><textlist><text>unplugged-ios7.css</text></textlist></item>
+<noteinfo noteid="8cf6" sequence="1" unid="20B20CFA95A112A380257C5C002F2FED">
+<created><datetime>20140110T083524,61+00</datetime></created>
+<modified><datetime>20140110T083524,67+00</datetime></modified>
+<revised><datetime>20140110T083524,66+00</datetime></revised>
+<lastaccessed><datetime>20140110T083524,67+00</datetime></lastaccessed>
+<addedtofile><datetime>20140110T083524,67+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$TITLE"><text>unplugged-ios7.css</text></item>
+<item name="$Flags"><text>D34C=Q</text></item>
+<item name="$FlagsExt"><text>D</text></item>
+
+<item name="$FileModDT" sign="true"><datetime>20140110T083412,00+00</datetime></item>
 
 
 
 
-
-<item name="$FileModDT"><datetime>20140107T101916,87+00</datetime></item></note>
+<item name="$FileNames" sign="true"><text>unplugged-ios7.css</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item></note>

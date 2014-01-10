@@ -104,6 +104,14 @@ the specific language governing permissions and limitations under the License
 								</xp:text>
 							</li>
 							<li>
+								<xp:label value="Radio"
+									id="label1" for="radio">
+								</xp:label>
+								<xp:text id="radio"
+									value="#{document1.radio}">
+								</xp:text>
+							</li>
+							<li>
 								<xp:text id="description" tagName="div"
 									value="#{document1.Description}" escape="false"
 									styleClass="body_richtext">
