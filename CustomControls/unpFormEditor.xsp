@@ -54,6 +54,8 @@ if (out.length > 0){
 "', '" + compositeData.viewxpagename + "', '" + compositeData.formname + "'"
 if (context.getUrlParameter("parentunid") != ""){
 	out += ", '" + context.getUrlParameter("parentunid") + "'";
+}else{
+	out += ", 'null'";
 }
 if (compositeData.dbName != null){
 	out += ", '" + compositeData.dbName + "'";

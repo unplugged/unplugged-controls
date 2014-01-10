@@ -13,10 +13,10 @@ the specific language governing permissions and limitations under the License
 	<div id="contentwrapper">
 	<unp:unpScrollableArea>
 		<xp:this.facets>
-			<unp:unpFormEditor showbuttons="true"
-				viewxpagename="Document.xsp"
-				formname="MainTopic" title="Document" xp:key="facet_1"
-				dbName="teamstudio/widgets/teamroom.nsf">
+			<unp:unpFormEditor showbuttons="yes"
+				viewxpagename="Document.xsp" formname="MainTopic" title="Document"
+				xp:key="facet_1" dbName="teamstudio/widgets/teamroom.nsf"
+				position="menu-aligned">
 				<xp:this.facets>
 					<xp:panel xp:key="facet_1">
 						<ul class="fieldlist">
