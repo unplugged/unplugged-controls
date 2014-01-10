@@ -79,14 +79,18 @@ menuItem.icon != null && menuItem.icon != ""}]]></xp:this.rendered>
 				refreshMode="complete">
 				<xp:this.action>
 					<xp:actionGroup>
-
 						<xp:executeScript>
 							<xp:this.script><![CDATA[#{javascript:db = session.getCurrentDatabase();
 var date = new Date();
 session.setEnvironmentVar("ro.last.sync." + @LowerCase(@ReplaceSubstring(db.getFilePath(), "\\", "")), @Text(date.getTime()), true);
 db.replicate("someserver");}]]></xp:this.script>
 						</xp:executeScript>
-						<xp:openPage name="/UnpMain.xsp" target="openDocument">
+						<xp:openPage target="openDocument">
+							<xp:this.name><![CDATA[#{javascript:if (compositeData.postSyncTarget == null || compositeData.postSyncTarget == ""){
+	return "/UnpMain.xsp";
+}else{
+	return compositeData.postSyncTarget;
+}}]]></xp:this.name>
 						</xp:openPage>
 					</xp:actionGroup>
 				</xp:this.action>
@@ -99,11 +103,16 @@ db.replicate("someserver");}]]></xp:this.script>
 			<xp:this.rendered><![CDATA[#{javascript:isUnpluggedServer() && compositeData.synctype == "alldbs";}]]></xp:this.rendered>
 			<span class="icon"></span>
 			<span class="label">Sync</span>
-			<xp:eventHandler event="onclick" submit="false">
-				<xp:this.script><![CDATA[syncAllDbs()]]></xp:this.script>
-			</xp:eventHandler>
+			<xp:this.attrs>
+				<xp:attr name="onclick">
+					<xp:this.value><![CDATA[#{javascript:if (compositeData.postSyncTarget != null && compositeData.postSyncTarget != ""){
+	return "syncAllDbs('" + compositeData.postSyncTarget + "')";
+}else{
+	return "syncAllDbs()";
+}}]]></xp:this.value>
+				</xp:attr>
+			</xp:this.attrs>
 		</xp:link>
-
 		<xp:text styleClass="tabfootertext">
 			<xp:this.value><![CDATA[#{javascript:var dbrep = session.getEnvironmentString("ro.last.sync." + @LowerCase(@ReplaceSubstring(database.getFilePath(), "\\", "/")), true);
 var rep = session.getEnvironmentString("ro.last.sync", true); 

@@ -623,7 +623,7 @@ function fetchMoreDetails(obj, viewName, catName, xpage, dbname) {
 	accordionLoadMore(objRow, viewName, catName, xpage, dbname);
 }
 
-function syncAllDbs() {
+function syncAllDbs(postSyncTarget) {
 	$.blockUI( {
 		centerY : 0,
 		css : {
@@ -634,7 +634,11 @@ function syncAllDbs() {
 	});
 	$.get("UnpSyncAll.xsp", function(data) {
 		$.unblockUI();
-		location.reload();
+		if (postSyncTarget){
+			location.reload();
+		}else{
+			window.location.href = postSyncTarget;
+		}
 	});
 }
 

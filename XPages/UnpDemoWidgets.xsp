@@ -45,7 +45,7 @@
 			</unp:unpScrollableArea>
 		</div>
 	</div>
-	<unp:unpFooter newDocTarget="EmployeeEdit.xsp" synctype="currentdb"
-		newDocLoadType="ajax">
+	<unp:unpFooter newDocTarget="EmployeeEdit.xsp" synctype="alldbs"
+		newDocLoadType="ajax" postSyncTarget="/UnpMain.xsp">
 	</unp:unpFooter>
 </xp:view>

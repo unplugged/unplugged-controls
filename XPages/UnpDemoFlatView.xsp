@@ -32,5 +32,5 @@ the specific language governing permissions and limitations under the License
 		</unp:unpScrollableArea>
 		</div>
 	</div>
-	<unp:unpFooter synctype="currentdb"></unp:unpFooter>
+	<unp:unpFooter synctype="alldbs" postSyncTarget="/UnpMain.xsp"></unp:unpFooter>
 </xp:view>

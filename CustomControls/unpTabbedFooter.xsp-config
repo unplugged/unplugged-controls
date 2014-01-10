@@ -80,5 +80,9 @@ alldbs</editor-parameter>
         </designer-extension>
       </property-extension>
     </property>
+    <property>
+      <property-name>postSyncTarget</property-name>
+      <property-class>string</property-class>
+    </property>
   </composite-component>
 </faces-config>
