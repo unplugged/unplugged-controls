@@ -20,14 +20,13 @@
 	</xp:this.resources>
 	<div id="menu" class="iscrollmenu">
 		<div id="menuPane" class="offScreen">
-			<xp:panel styleClass="navScrollArea" id="navScrollArea"
-				style="height: 100%;" rendered="#{javascript:!isAjax()}">
-				<ul id="menuitems">
-					<xp:repeat id="repeat1" rows="999"
-						disableOutputTag="true" var="menuItem">
-						<xp:this.value><![CDATA[#{javascript:compositeData.menuItem;}]]></xp:this.value>
-						<xp:panel id="viewMenuItem" tagName="li">
-							<xp:this.styleClass><![CDATA[#{javascript:var out = "";
+
+			<ul id="menuitems">
+				<xp:repeat id="repeat1" rows="999" disableOutputTag="true"
+					var="menuItem">
+					<xp:this.value><![CDATA[#{javascript:compositeData.menuItem;}]]></xp:this.value>
+					<xp:panel id="viewMenuItem" tagName="li">
+						<xp:this.styleClass><![CDATA[#{javascript:var out = "";
 if (("/" + getCurrentXPage()) == menuItem.page){
 	out += "menuitem" + viewScope.menuItemIndex + " viewMenuItemSelected";
 }else{
@@ -42,9 +41,9 @@ if (menuItem.disabled == "yes"){
 	out += " viewMenuItemDisabled"
 }
 return out;}]]></xp:this.styleClass>
-							<xp:this.attrs>
-								<xp:attr name="onclick">
-									<xp:this.value><![CDATA[#{javascript:var out = "";
+						<xp:this.attrs>
+							<xp:attr name="onclick">
+								<xp:this.value><![CDATA[#{javascript:var out = "";
 if (typeof menuItem.page != "undefined" && menuItem.page != "" && menuItem.page != null){
 	if (menuItem.ajaxloadid != null && menuItem.ajaxloadid != ""){
 		out = "loadPage('" + getDbPath() + menuItem.page + "?rnd=' + Date.now() + ' #" + menuItem.ajaxloadid + "', '" + menuItem.ajaxtargetid + "', " + viewScope.menuItemIndex + ");";
@@ -58,32 +57,30 @@ if (menuItem.callback != "undefined" && menuItem.callback != null && menuItem.ca
 	out += menuItem.callback;
 }
 return out;}]]></xp:this.value>
-									<xp:this.rendered><![CDATA[#{javascript:menuItem.disabled != "yes"}]]></xp:this.rendered>
-								</xp:attr>
-							</xp:this.attrs>
-							<xp:this.style><![CDATA[#{javascript:if (menuItem.submenu == "sub" || menuItem.submenu == "sub-sub"){
+								<xp:this.rendered><![CDATA[#{javascript:menuItem.disabled != "yes"}]]></xp:this.rendered>
+							</xp:attr>
+						</xp:this.attrs>
+						<xp:this.style><![CDATA[#{javascript:if (menuItem.submenu == "sub" || menuItem.submenu == "sub-sub"){
 	"display: none;"
 }}]]></xp:this.style>
-							<xp:panel id="menulink" tagName="div"
-								styleClass="menulink">
-								<xp:panel tagName="i" id="icon">
-									<xp:this.rendered><![CDATA[#{javascript:if (viewScope.menuItemIndex == null){
+						<xp:panel id="menulink" tagName="div" styleClass="menulink">
+							<xp:panel tagName="i" id="icon">
+								<xp:this.rendered><![CDATA[#{javascript:if (viewScope.menuItemIndex == null){
 	viewScope.menuItemIndex = 0;
 }else{
 	viewScope.menuItemIndex = viewScope.menuItemIndex + 1;
 }
 menuItem.icon != null && menuItem.icon != ""}]]></xp:this.rendered>
-									<xp:this.styleClass><![CDATA[#{javascript:"fa fa-fw " + menuItem.icon}]]></xp:this.styleClass>
-								</xp:panel>
-								<xp:text id="menutext"
-									styleClass="menutext" value="#{javascript:menuItem.label;}">
-								</xp:text>
-
+								<xp:this.styleClass><![CDATA[#{javascript:"fa fa-fw " + menuItem.icon}]]></xp:this.styleClass>
 							</xp:panel>
+							<xp:text id="menutext" styleClass="menutext"
+								value="#{javascript:menuItem.label;}">
+							</xp:text>
+
 						</xp:panel>
-					</xp:repeat>
-				</ul>
-			</xp:panel>
+					</xp:panel>
+				</xp:repeat>
+			</ul>
 			<br />
 			<br />
 			<br />
