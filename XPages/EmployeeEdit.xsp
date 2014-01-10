@@ -125,7 +125,7 @@
 								</li>
 								<li>
 									<xp:label value="Radio Buttons" for="radio"></xp:label>
-									<xp:radioGroup id="radio" value="#{document1.radio}">
+									<xp:radioGroup id="radio" value="#{document1.radio}" styleClass="xspRadioButton">
 										<xp:selectItem itemLabel="aaaa" itemValue="aaaa">
 										</xp:selectItem>
 										<xp:selectItem itemLabel="bbbb" itemValue="bbbb">

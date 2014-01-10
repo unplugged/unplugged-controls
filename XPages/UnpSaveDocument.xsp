@@ -23,7 +23,7 @@ try{
 	resp = "Started";
 	var doc = null;
 	resp = "Getting doc";
-	if (context.getUrlParameter("dbname") != "" && context.getUrlParameter("dbname") != "null"){
+	if (context.getUrlParameter("dbname") != "" && context.getUrlParameter("dbname") != "null" && context.getUrlParameter("dbname") != null){
 		try{
 			var dbother:NotesDatabase = session.getDatabase(database.getServer(), context.getUrlParameter("dbname"));
 			doc = dbother.getDocumentByUNID(context.getUrlParameter("unid"));
@@ -31,7 +31,7 @@ try{
 			resp = "Error getting doc from another database";
 		}
 		if (doc == null){
-			resp = "Creating doc in other db";
+			resp = "Creating doc in other db (" + context.getUrlParameter("dbname") + ")";
 			doc = dbother.createDocument();
 			doc.replaceItemValue("Form", context.getUrlParameter("formname"));
 		}	
