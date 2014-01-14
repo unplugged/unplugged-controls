@@ -89,13 +89,19 @@ return thisRowData.getColumnValues().elementAt(index);}]]></xp:this.value>
 							rendered="#{javascript:!thisRowData.isCategory()}">
 							<xp:this.attrs>
 								<xp:attr name="onClick">
-									<xp:this.value><![CDATA[#{javascript:
-	var url = getDbPath() + "/" + compositeData.xpageDoc + "?action=openDocument&documentId=" + thisRowData.getUniversalID();
-	if (compositeData.ajaxload != "No"){
-		return "openDocument('" + url + "', 'content');"
-	}else{
-		return "document.location.href='" + url + "'";
+									<xp:this.value><![CDATA[#{javascript:var dbPath = getDbPath();
+if (!isEmpty(compositeData.xpageDocdbName)){
+	dbPath = compositeData.xpageDocdbName;
+	if (@Left(dbPath, 1) != "/"){
+		dbPath = "/" + dbPath;
 	}
+}
+var url = dbPath + "/" + compositeData.xpageDoc + "?action=openDocument&documentId=" + thisRowData.getUniversalID();
+if (compositeData.ajaxload != "No"){
+	return "openDocument('" + url + "', 'content');"
+}else{
+	return "document.location.href='" + url + "'";
+}
 }]]></xp:this.value>
 								</xp:attr>
 							</xp:this.attrs>

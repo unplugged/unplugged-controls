@@ -117,6 +117,10 @@ return xpageDoc.indexOf(".xsp") &gt;= 0;</validation-formula>
       <description>XPage to open the document</description>
     </property>
     <property>
+      <property-name>xpageDocdbName</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
       <property-name>insetData</property-name>
       <property-class>boolean</property-class>
       <display-name>Inset Accordion</display-name>

@@ -26,10 +26,12 @@
 		<unp:unpScrollableArea>
 			<xp:this.facets>
 				<unp:unpFlatView insetData="true" title=" By Date"
-					detailColumn="Categories" summaryColumn="Topic" viewName="(UnpDocumentsByDate)"
-					xpageDoc="Document.xsp" xp:key="facet_1" numberofrows="5"
-					refreshmethod="pull" position="left-aligned" ajaxload="Yes"
-					dbName="teamstudio/widgets/Teamroom.nsf">
+					detailColumn="Categories" summaryColumn="Topic"
+					viewName="(UnpDocumentsByDate)" xpageDoc="Document.xsp"
+					xp:key="facet_1" numberofrows="5" refreshmethod="pull"
+					position="left-aligned" ajaxload="Yes"
+					dbName="teamstudio/widgets/Teamroom.nsf"
+					xpageDocdbName="teamstudio/widgets/Teamroom.nsf">
 				</unp:unpFlatView>
 			</xp:this.facets>
 		</unp:unpScrollableArea>
