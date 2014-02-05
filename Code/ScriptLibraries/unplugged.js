@@ -257,6 +257,12 @@ function saveDocument(formid, unid, viewxpagename, formname, parentunid, dbname)
 	} catch (e) {
 	}
 	var data = $(".customform :input").serialize();
+	$('.customform input[type=checkbox]').each(function() {     
+	    if (!this.checked) {
+	        data += '&' + this.name + '=off';
+	    }
+	});
+
 	var url = 'UnpSaveDocument.xsp?unid=' + unid + "&formname=" + formname
 			+ "&rnd=" + Math.floor(Math.random() * 1001);
 	if (parentunid) {
