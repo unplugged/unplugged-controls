@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note default='true' class='icon' xmlns='http://www.lotus.com/dxl' version='9.0'
- replicaid='80257B470037E1BA'>
-<noteinfo noteid='11a' unid='0C17FBCBEB39971380257B470037E1BD' sequence='13'>
+ maintenanceversion='1.0' replicaid='80257B470037E1BA'>
+<noteinfo noteid='11a' unid='0C17FBCBEB39971380257B470037E1BD' sequence='29'>
 <created><datetime dst='true'>20130408T111022,69+01</datetime></created>
-<modified><datetime dst='true'>20130523T144924,28+01</datetime></modified>
-<revised><datetime dst='true'>20130523T144924,27+01</datetime></revised>
-<lastaccessed><datetime dst='true'>20130523T144924,28+01</datetime></lastaccessed>
+<modified><datetime>20140217T120125,84+00</datetime></modified>
+<revised><datetime>20140217T120125,83+00</datetime></revised>
+<lastaccessed><datetime>20140217T120125,84+00</datetime></lastaccessed>
 <addedtofile><datetime dst='true'>20130408T111022,71+01</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
@@ -25,8 +25,7 @@ L2ZvgAAACMZmZmZmZmZmZmZmbIAAAACMZmZmZmZmZmZmZsgAAAAACMZmZmZmZmZmZmyAAAAAAACM
 AAAAUEECICABAAD/////+A4DgA==
 </rawitemdata></item>
 <item name='$Daos'><text>0</text></item>
+<item name='$TITLE'><text>Unplugged Controls</text></item>
 <item name='$Flags'><text>J</text></item>
-<item name='$FlagsNoRefresh'><text>rv</text></item>
-<item name='$TITLE'><text>Unplugged Controls
-</text></item></note>
+<item name='$FlagsNoRefresh'><text>rv</text></item></note>
 
