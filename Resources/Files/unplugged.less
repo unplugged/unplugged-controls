@@ -46,6 +46,10 @@ body {
 	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
 
+	&.dialogactive {
+		z-index: 999; /* Display above menu (e.g. overlays/modals) */
+	}
+
 	@media screen and (min-width: 701px) {
 		top: 57px;
 		bottom: 60px;

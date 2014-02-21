@@ -49,6 +49,10 @@ body {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
+.iscrollcontent.dialogactive {
+  z-index: 999;
+  /* Display above menu (e.g. overlays/modals) */
+}
 @media screen and (min-width: 701px) {
   .iscrollcontent {
     top: 57px;
@@ -304,6 +308,7 @@ textarea,
   height: 36px;
   cursor: pointer;
   border-radius: 4px;
+  -webkit-border-radius: 4px;
   box-shadow: none;
   line-height: 36px;
   font-size: 17px;
@@ -311,10 +316,10 @@ textarea,
   background: transparent;
   text-shadow: none;
   font-weight: normal;
-  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%);
   display: inline-block;
   border: 1px solid transparent;
   padding: 0 15px;
+  -webkit-appearance: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   /* Disable Android's default active link styling */
 }
@@ -360,20 +365,17 @@ textarea,
   color: #2087fc;
   border: 1px solid transparent;
   background: transparent;
-  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%);
 }
 .cancelButton .label {
   color: #fc3e39;
   border: 1px solid transparent;
   background: transparent;
-  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%);
 }
 .proceedButton .label,
 .saveButton .label {
   color: #00b31e;
   border: 1px solid transparent;
   background: transparent;
-  background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%);
 }
 /* NAVBAR/FOOTER BUTTONS */
 .viewsButton,

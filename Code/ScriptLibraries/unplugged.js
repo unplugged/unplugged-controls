@@ -262,7 +262,6 @@ function saveDocument(formid, unid, viewxpagename, formname, parentunid, dbname)
 	        data += '&' + this.name + '=off';
 	    }
 	});
-
 	var url = 'UnpSaveDocument.xsp?unid=' + unid + "&formname=" + formname
 			+ "&rnd=" + Math.floor(Math.random() * 1001);
 	if (parentunid) {
@@ -538,6 +537,7 @@ function openDialog(id) {
 	if (id != null && id != "#") {
 		$("#underlay" + id).css('display', 'block');
 		$("#" + id).css('display', 'block');
+		$(".iscrollcontent").addClass("dialogactive");
 		var boxes = $("div");
 		boxes.click( function() {
 			var el = $(id);
@@ -555,6 +555,7 @@ function openDialog(id) {
 
 function closeDialog(id) {
 	$("#" + id).css('display', 'none');
+	$(".iscrollcontent").removeClass("dialogactive");
 	$("#underlay" + id).css('display', 'none');
 	initiscroll();
 	initHorizontalView();
@@ -629,7 +630,7 @@ function fetchMoreDetails(obj, viewName, catName, xpage, dbname) {
 	accordionLoadMore(objRow, viewName, catName, xpage, dbname);
 }
 
-function syncAllDbs(postSyncTarget) {
+function syncAllDbs() {
 	$.blockUI( {
 		centerY : 0,
 		css : {
@@ -640,11 +641,7 @@ function syncAllDbs(postSyncTarget) {
 	});
 	$.get("UnpSyncAll.xsp", function(data) {
 		$.unblockUI();
-		if (postSyncTarget){
-			location.reload();
-		}else{
-			window.location.href = postSyncTarget;
-		}
+		location.reload();
 	});
 }
 

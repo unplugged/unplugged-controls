@@ -2,6 +2,7 @@
 	height: 36px;
 	cursor: pointer;
 	border-radius: @button-border-radius;
+	-webkit-border-radius: @button-border-radius;
 	box-shadow: @button-box-shadow;
 	line-height: 36px;
 	font-size: 17px;
@@ -9,10 +10,11 @@
 	background: @button-default-background;
 	text-shadow: @button-text-shadow;
 	font-weight: @button-font-weight;
-	background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%);
+	//background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%);
 	display: inline-block;
 	border: 1px solid @button-default-border-color;
 	padding: 0 15px;
+	-webkit-appearance: none;
 	
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* Disable Android's default active link styling */
 	
@@ -61,7 +63,7 @@
 		color: @button-default-label-color;
 		border: 1px solid @button-default-border-color;
 		background: @button-default-background;
-		background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%);
+		//background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%);
 	}	
 }
 
@@ -70,7 +72,7 @@
 		color: @button-danger-label-color;
 		border: 1px solid @button-danger-border-color;
 		background: @button-danger-background;
-		background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%);
+		//background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%);
 	}		
 }
 
@@ -80,7 +82,7 @@
 		color: @button-success-label-color;
 		border: 1px solid @button-success-border-color;
 		background: @button-success-background;
-		background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%);
+		//background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%);
 	}	
 }
 
