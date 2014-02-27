@@ -561,7 +561,7 @@ function closeDialog(id) {
 	initHorizontalView();
 }
 
-function accordionLoadMore(obj, viewName, catName, xpage, dbname) {
+function accordionLoadMore(obj, viewName, catName, xpage, dbname, photocol) {
 
 	var thisArea = $(obj).nextAll(".summaryDataRow:first").children(
 			".accordionRowSet");
@@ -570,7 +570,7 @@ function accordionLoadMore(obj, viewName, catName, xpage, dbname) {
 	var thisUrl = "UnpAccordionViewList.xsp?chosenView="
 			+ encodeURIComponent(viewName) + "&catFilter="
 			+ encodeURIComponent(catName) + "&xpageDoc=" + xpage + "&start="
-			+ pos + "&dbname=" + dbname;
+			+ pos + "&dbname=" + dbname + "&photocol=" + photocol;
 
 	var tempHolder = $(obj).nextAll(".summaryDataRow:first").children(
 			".summaryDataRowHolder");
@@ -605,7 +605,7 @@ function accordionLoadMore(obj, viewName, catName, xpage, dbname) {
 	}
 }
 
-function fetchDetails(obj, viewName, catName, xpage, dbname) {
+function fetchDetails(obj, viewName, catName, xpage, dbname, photocol) {
 	$('.accordionRowSet').empty();
 	$('.accLoadMoreLink').hide();
 
@@ -620,14 +620,14 @@ function fetchDetails(obj, viewName, catName, xpage, dbname) {
 				.hide();
 	} else {
 		$('.categoryRow').removeClass("accordianExpanded");
-		accordionLoadMore(obj, viewName, catName, xpage, dbname);
+		accordionLoadMore(obj, viewName, catName, xpage, dbname, photocol);
 	}
 }
 
-function fetchMoreDetails(obj, viewName, catName, xpage, dbname) {
+function fetchMoreDetails(obj, viewName, catName, xpage, dbname, photocol) {
 
 	var objRow = $(obj).parent().parent().prev();
-	accordionLoadMore(objRow, viewName, catName, xpage, dbname);
+	accordionLoadMore(objRow, viewName, catName, xpage, dbname, photocol);
 }
 
 function syncAllDbs() {

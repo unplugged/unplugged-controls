@@ -125,5 +125,9 @@ no</editor-parameter>
       <property-name>filtercategory</property-name>
       <property-class>string</property-class>
     </property>
+    <property>
+      <property-name>photoColumn</property-name>
+      <property-class>string</property-class>
+    </property>
   </composite-component>
 </faces-config>
