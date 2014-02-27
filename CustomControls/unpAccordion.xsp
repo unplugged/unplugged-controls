@@ -47,13 +47,22 @@ if (out.length > 0){
 if (compositeData.dbName != null){
 	db = [@DbName()[0], compositeData.dbName];
 }
-var list = @Unique(@DbColumn(db, compositeData.viewName, 1));
+var list;
+if (isEmpty(compositeData.filtercategory)){
+	list = @Unique(@DbColumn(db, compositeData.viewName, 1));
+}else{
+	list = @Unique(@DbLookup(db, compositeData.viewName, compositeData.filtercategory, 2));
+}
 viewScope.categorycount = list.length;
 return list;}]]></xp:this.value>
 				<xp:panel tagName="li" styleClass="categoryRow">
 					<xp:this.attrs>
 						<xp:attr name="onClick">
-							<xp:this.value><![CDATA[#{javascript:"fetchDetails(this,'" + @ReplaceSubstring(compositeData.viewName, "\\","\\\\") + "','" + rowData + "', '" + @ReplaceSubstring(compositeData.xpage, "/", "") + "', '" + compositeData.dbName + "')"}]]></xp:this.value>
+							<xp:this.value><![CDATA[#{javascript:if (isEmpty(compositeData.filtercategory)){
+	return "fetchDetails(this,'" + @ReplaceSubstring(compositeData.viewName, "\\","\\\\") + "','" + rowData + "', '" + @ReplaceSubstring(compositeData.xpage, "/", "") + "', '" + compositeData.dbName + "')";
+}else{
+	return "fetchDetails(this,'" + @ReplaceSubstring(compositeData.viewName, "\\","\\\\") + "','" + rowData + "~" + compositeData.filtercategory + "', '" + @ReplaceSubstring(compositeData.xpage, "/", "") + "', '" + compositeData.dbName + "')";
+}}]]></xp:this.value>
 						</xp:attr>
 					</xp:this.attrs>
 					<xp:text escape="true" id="computedField2"

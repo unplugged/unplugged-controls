@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-Copyright 2013 Teamstudio Inc 
-Licensed under the Apache License, Version 2.0 (the "License"); 
-you may not use this file except in compliance with the License. You may obtain a copy of the License at
-http://www.apache.org/licenses/LICENSE-2.0 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed 
-on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
-the specific language governing permissions and limitations under the License
- -->
+	<!--
+		Copyright 2013 Teamstudio Inc Licensed under the Apache License,
+		Version 2.0 (the "License"); you may not use this file except in
+		compliance with the License. You may obtain a copy of the License at
+		http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+		applicable law or agreed to in writing, software distributed under the
+		License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or implied. See the License for
+		the specific language governing permissions and limitations under the
+		License
+	-->
 
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core">
 	<xp:this.data>
 		<xp:dominoView var="viewList">
-
-			<xp:this.categoryFilter><![CDATA[#{javascript:param.get("catFilter");}]]></xp:this.categoryFilter>
 			<xp:this.viewName><![CDATA[#{javascript:param.get("chosenView");}]]></xp:this.viewName>
 			<xp:this.databaseName><![CDATA[#{javascript:var dbname = param.get("dbname");
 if (dbname != "" && dbname != "null" && dbname != "undefined"){
 	return dbname;
 }}]]></xp:this.databaseName>
+			<xp:this.keys><![CDATA[#{javascript:var filter = param.get("catFilter");
+if (filter.indexOf("~") > -1){
+	filter = [@Right(filter, "~"), @Left(filter, "~")];
+}
+return filter;}]]></xp:this.keys>
 		</xp:dominoView>
 	</xp:this.data>
 
@@ -56,13 +61,23 @@ if (start == ""){
 					</xp:attr>
 				</xp:this.attrs>
 				<xp:label id="label2" styleClass="viewlistsummary">
-					<xp:this.value><![CDATA[#{javascript:thisRowData.getColumnValues()[1];}]]></xp:this.value>
+					<xp:this.value><![CDATA[#{javascript:var filter = param.get("catFilter");
+if (filter.indexOf("~") > -1){
+	thisRowData.getColumnValues()[2];
+}else{
+	thisRowData.getColumnValues()[1];
+}}]]></xp:this.value>
 				</xp:label>
-				<xp:text tagName="div" id="detail" styleClass="viewlistdetail">
-					<xp:this.value><![CDATA[#{javascript:if(thisRowData.getColumnValues().length > 2){
-  return thisRowData.getColumnValues()[2];
+				<xp:text tagName="div" id="detail"
+					styleClass="viewlistdetail">
+					<xp:this.value><![CDATA[#{javascript:var filter = param.get("catFilter");
+var index = 2;
+if (filter.indexOf("~") > -1){
+	index = 3;
 }
-else{
+if(thisRowData.getColumnValues().length > index){
+  return thisRowData.getColumnValues()[index];
+}else{
   return "";
 }}]]></xp:this.value>
 				</xp:text>
