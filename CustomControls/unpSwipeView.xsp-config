@@ -69,5 +69,9 @@
       <small-icon>/icons/defaultLogoSmall.png</small-icon>
       <large-icon>/icons/defaultLogo.png</large-icon>
     </icon>
+    <property>
+      <property-name>dbName</property-name>
+      <property-class>string</property-class>
+    </property>
   </composite-component>
 </faces-config>

@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-Copyright 2013 Teamstudio Inc 
-Licensed under the Apache License, Version 2.0 (the "License"); 
-you may not use this file except in compliance with the License. You may obtain a copy of the License at
-http://www.apache.org/licenses/LICENSE-2.0 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed 
-on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
-the specific language governing permissions and limitations under the License
- -->
+	<!--
+		Copyright 2013 Teamstudio Inc Licensed under the Apache License,
+		Version 2.0 (the "License"); you may not use this file except in
+		compliance with the License. You may obtain a copy of the License at
+		http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+		applicable law or agreed to in writing, software distributed under the
+		License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or implied. See the License for
+		the specific language governing permissions and limitations under the
+		License
+	-->
 
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core">
-
 	<xp:this.data>
 		<xp:dominoDocument var="docImages"
-			documentId="#{javascript:compositeData.DocUNID;}"
-			action="openDocument"
+			documentId="#{javascript:compositeData.DocUNID;}" action="openDocument"
 			formName="#{javascript:compositeData.formName}">
+			<xp:this.databaseName><![CDATA[#{javascript:if (isEmpty(compositeData.dbName)){
+	return database.getFilePath();
+}else{
+	return compositeData.dbName;
+}}]]></xp:this.databaseName>
 		</xp:dominoDocument>
 	</xp:this.data>
 	<xp:this.beforePageLoad>
@@ -39,7 +44,7 @@ for(var i=0; i<attachmentList.length; i++){
   if (isUnpluggedServer()){
   	imagename = imagename.getName();
   }
-  imageFile = "0/" + docImages.getDocument().getUniversalID() + "/$FILE/" + imagename;
+  imageFile = "/" + @ReplaceSubstring(docImages.getParentDatabase().getFilePath(), "\\", "/") + "/0/" + docImages.getDocument().getUniversalID() + "/$FILE/" + imagename;
   
   /*images.push({
      img: imageFile,
@@ -96,13 +101,11 @@ viewScope.put("images", images);
 		</xp:panel>
 	</div>
 	<div id="swipepreviousbutton" onclick="gallery.prev()">
-		<xp:image url="/unp%2Fglyphicons_210_left_arrow@2x.png"
-			id="image1">
+		<xp:image url="/unp%2Fglyphicons_210_left_arrow@2x.png" id="image1">
 		</xp:image>
 	</div>
 	<div id="swipenextbutton" onclick="gallery.next()">
-		<xp:image url="/unp%2Fglyphicons_211_right_arrow@2x.png"
-			id="image2">
+		<xp:image url="/unp%2Fglyphicons_211_right_arrow@2x.png" id="image2">
 		</xp:image>
 	</div>
 	<xp:scriptBlock id="script1">
