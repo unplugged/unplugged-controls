@@ -64,7 +64,9 @@ $(window)
 					}
 
 					unp.initiscroll();
-					$("#menupane").addClass("offScreen");
+					$("#menuPane").removeClass("onScreen").addClass("offScreen");
+					$("#menuPane").width("0px");
+					
 					$('.viewsButton').unbind('click');
 					$('.viewsButton').click( function(event) {
 						unp.toggleViewsMenu();
@@ -338,8 +340,9 @@ unp.validate = function() {
 	return valid;
 }
 
-unp.toggleViewsMenu = function() {
-	if ($("#menuPane").hasClass("offScreen")) {
+unp.toggleViewsMenu = function(forcehide) {
+	console.log($("#menuPane").width());
+	if ($("#menuPane").hasClass("offScreen") && !forcehide) {
 		$("#menuPane").removeClass("offScreen").addClass("onScreen");
 		$("#menuPane").animate( {
 			"left" : "+=700px"
@@ -348,31 +351,20 @@ unp.toggleViewsMenu = function() {
 				$("#menuitems").css("position", "fixed");
 			}
 		});
+		$("#menuPane").width("100%");
 	} else {
 		$("#menuPane").removeClass("onScreen").addClass("offScreen");
-		$("#menuPane").animate( {
-			"left" : "-=700px"
-		}, "fast", function(){
-			if (unp.isAndroid()){
-				$("#menuitems").css("position", "relative");
-			}			
-		});
+		$("#menuPane").animate( {"left" : "-=700px"});
+		$("#menuPane").width("0px");
 	}
 }
 
 unp.hideViewsMenu = function() {
 	if (!$("#menuPane").hasClass("offScreen")) {
 		$("#menuPane").removeClass("onScreen").addClass("offScreen");
-
-		$("#menuPane").animate( {
-			"left" : "-=700px"
-		}, "fast", function(){
-			if (unp.isAndroid()){
-				$("#menuitems").css("position", "relative");
-			}
-		});
+		$("#menuPane").animate( {"left" : "-=700px"}, "fast");
+		$("#menuPane").width("0px");
 	}
-	// $("#content").fadeIn();
 }
 
 var firedrequests;
