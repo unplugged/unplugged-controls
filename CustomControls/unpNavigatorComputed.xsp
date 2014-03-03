@@ -37,7 +37,7 @@
 								<xp:this.attrs>
 									<xp:attr name="onclick">
 										<xp:this.value><![CDATA[#{javascript:if (!menuItem.disabled && menuItem.ajaxloadid != null && menuItem.ajaxloadid != ""){
-		return "loadPage('" + getDbPath() + menuItem.page + "?rnd=' + Date.now()+ ' #" + menuItem.ajaxloadid + "', '" + menuItem.ajaxtargetid + "', " + viewScope.menuItemIndex + "); return false;";
+		return "unp.loadPage('" + getDbPath() + menuItem.page + "?rnd=' + Date.now()+ ' #" + menuItem.ajaxloadid + "', '" + menuItem.ajaxtargetid + "', " + viewScope.menuItemIndex + "); return false;";
 	}else{
 		return "window.location.href='" + getDbPath() + menuItem.page + "'";
 	}}]]></xp:this.value>
@@ -82,7 +82,7 @@
 											<xp:this.attrs>
 												<xp:attr name="onclick">
 													<xp:this.value><![CDATA[#{javascript:if (!subMenu1.disabled && subMenu1.ajaxloadid != null && subMenu1.ajaxloadid != ""){
-		return "loadPage('" + getDbPath() + subMenu1.page + "?rnd=' + Date.now()+ ' #" + subMenu1.ajaxloadid + "', '" + subMenu1.ajaxtargetid + "', " + viewScope.menuItemIndex + "); return false;";
+		return "unp.loadPage('" + getDbPath() + subMenu1.page + "?rnd=' + Date.now()+ ' #" + subMenu1.ajaxloadid + "', '" + subMenu1.ajaxtargetid + "', " + viewScope.menuItemIndex + "); return false;";
 	}else{
 		return "window.location.href='" + getDbPath() + subMenu1.page + "'";
 	}}]]></xp:this.value>
@@ -125,7 +125,7 @@
 															<xp:attr
 																name="onclick">
 																<xp:this.value><![CDATA[#{javascript:if(!subMenu2.disabled && subMenu2.ajaxloadid != null && subMenu2.ajaxloadid != ""){
-		return "loadPage('" + getDbPath() + subMenu2.page + "?rnd=' + Date.now()+ ' #" + subMenu2.ajaxloadid + "', '" + subMenu2.ajaxtargetid + "', " + viewScope.menuItemIndex + "); return false;";
+		return "unp.loadPage('" + getDbPath() + subMenu2.page + "?rnd=' + Date.now()+ ' #" + subMenu2.ajaxloadid + "', '" + subMenu2.ajaxtargetid + "', " + viewScope.menuItemIndex + "); return false;";
 	}else{
 		return "window.location.href='" + getDbPath() + subMenu2.page + "';";
 	}}]]></xp:this.value>
@@ -172,7 +172,7 @@
 		$(this).addClass("active");
 		$(this).removeClass("open");
 		}
-		fixNavigatorBottomCorners();
+		unp.fixNavigatorBottomCorners();
 		});
 		$("#menuitems ul li a.active").parent().parent().show();
 		});

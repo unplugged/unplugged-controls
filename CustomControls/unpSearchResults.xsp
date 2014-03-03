@@ -45,7 +45,7 @@ if (sessionScope.rowcount != null){
 						<xp:panel tagName="li" id="datarow" styleClass="data-row">
 							<xp:this.attrs>
 								<xp:attr name="onClick">
-									<xp:this.value><![CDATA[#{javascript:"openDocument('" + getDbPath() + "/" + compositeData.xpageDoc + "?action=openDocument&documentId=" + thisRowData.getUniversalID() + "', 'content');"}]]></xp:this.value>
+									<xp:this.value><![CDATA[#{javascript:"unp.openDocument('" + getDbPath() + "/" + compositeData.xpageDoc + "?action=openDocument&documentId=" + thisRowData.getUniversalID() + "', 'content');"}]]></xp:this.value>
 								</xp:attr>
 							</xp:this.attrs>
 							<xp:image url="/unp/right-arrow-circle.png" id="image1"
@@ -90,7 +90,7 @@ else {return true;}}]]></xp:this.rendered>
 						styleClass="loadmorebutton">
 						<xp:this.attrs>
 							<xp:attr name="onclick">
-								<xp:this.value><![CDATA[#{javascript:"loadmore('" + compositeData.dbName + "', '" + compositeData.viewName + "', '" + compositeData.summaryColumn + "', '" + compositeData.detailColumn + "', '" + compositeData.categoryfilter + "', '" + compositeData.xpageDoc + "', '" + compositeData.refreshmethod + "')"}]]></xp:this.value>
+								<xp:this.value><![CDATA[#{javascript:"unp.loadmore('" + compositeData.dbName + "', '" + compositeData.viewName + "', '" + compositeData.summaryColumn + "', '" + compositeData.detailColumn + "', '" + compositeData.categoryfilter + "', '" + compositeData.xpageDoc + "', '" + compositeData.refreshmethod + "')"}]]></xp:this.value>
 							</xp:attr>
 						</xp:this.attrs>
 					</xp:button>

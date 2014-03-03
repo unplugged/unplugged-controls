@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="95be" sequence="1" unid="29296214F47F768B80257C9000539C7B">
+<created><datetime>20140303T151315,47+00</datetime></created>
+<modified><datetime>20140303T151318,95+00</datetime></modified>
+<revised><datetime>20140303T151318,94+00</datetime></revised>
+<lastaccessed><datetime>20140303T151318,95+00</datetime></lastaccessed>
+<addedtofile><datetime>20140303T151318,95+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$FlagsExt" sign="true"><text>D</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+
+
+<item name="$MimeType" sign="true"><text>image/png</text></item>
+<item name="$FileModDT" sign="true"><datetime>20131208T041246,00+00</datetime></item>
+<item name="$ImageNames" sign="true"><text>unp_2ficon-button-download.png</text></item>
+<item name="$TITLE" sign="true"><text>unp/icon-button-download.png</text></item>
+<item name="$DesignerVersion" sign="true"><text>8.5.3</text></item></note>

@@ -98,7 +98,7 @@ if (!isEmpty(compositeData.xpageDocdbName)){
 }
 var url = dbPath + "/" + compositeData.xpageDoc + "?action=openDocument&documentId=" + thisRowData.getUniversalID();
 if (compositeData.ajaxload != "No"){
-	return "openDocument('" + url + "', 'content');"
+	return "unp.openDocument('" + url + "', 'content');"
 }else{
 	return "document.location.href='" + url + "'";
 }
@@ -190,7 +190,7 @@ return out;}]]></xp:this.styleClass>
 						styleClass="loadmorebutton">
 						<xp:this.attrs>
 							<xp:attr name="onclick">
-								<xp:this.value><![CDATA[#{javascript:"loadmore('" + compositeData.dbName + "', '" + compositeData.viewName + "', '" + compositeData.summaryColumn + "', '" + compositeData.detailColumn + "', '" + compositeData.categoryfilter + "', '" + compositeData.xpageDoc + "', '" + compositeData.refreshmethod + "', '" + compositeData.photoColumn + "', '" + compositeData.collapseRows + "', '" + compositeData.wrapsummarytext + "', '" + compositeData.ajaxload + "')"}]]></xp:this.value>
+								<xp:this.value><![CDATA[#{javascript:"unp.loadmore('" + compositeData.dbName + "', '" + compositeData.viewName + "', '" + compositeData.summaryColumn + "', '" + compositeData.detailColumn + "', '" + compositeData.categoryfilter + "', '" + compositeData.xpageDoc + "', '" + compositeData.refreshmethod + "', '" + compositeData.photoColumn + "', '" + compositeData.collapseRows + "', '" + compositeData.wrapsummarytext + "', '" + compositeData.ajaxload + "')"}]]></xp:this.value>
 							</xp:attr>
 						</xp:this.attrs>
 					</xp:button>

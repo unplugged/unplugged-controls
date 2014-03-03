@@ -59,9 +59,9 @@ return list;}]]></xp:this.value>
 					<xp:this.attrs>
 						<xp:attr name="onClick">
 							<xp:this.value><![CDATA[#{javascript:if (isEmpty(compositeData.filtercategory)){
-	return "fetchDetails(this,'" + @ReplaceSubstring(compositeData.viewName, "\\","\\\\") + "','" + rowData + "', '" + @ReplaceSubstring(compositeData.xpage, "/", "") + "', '" + compositeData.dbName + "', '" + compositeData.photoColumn + "')";
+	return "unp.fetchDetails(this,'" + @ReplaceSubstring(compositeData.viewName, "\\","\\\\") + "','" + rowData + "', '" + @ReplaceSubstring(compositeData.xpage, "/", "") + "', '" + compositeData.dbName + "', '" + compositeData.photoColumn + "')";
 }else{
-	return "fetchDetails(this,'" + @ReplaceSubstring(compositeData.viewName, "\\","\\\\") + "','" + rowData + "~" + compositeData.filtercategory + "', '" + @ReplaceSubstring(compositeData.xpage, "/", "") + "', '" + compositeData.dbName + "', '" + compositeData.photoColumn + "')";
+	return "unp.fetchDetails(this,'" + @ReplaceSubstring(compositeData.viewName, "\\","\\\\") + "','" + rowData + "~" + compositeData.filtercategory + "', '" + @ReplaceSubstring(compositeData.xpage, "/", "") + "', '" + compositeData.dbName + "', '" + compositeData.photoColumn + "')";
 }}]]></xp:this.value>
 						</xp:attr>
 					</xp:this.attrs>
@@ -91,7 +91,7 @@ return out;}]]></xp:this.styleClass>
 							id="accLoadmorebutton" styleClass="accLoadMoreButton">
 							<xp:this.attrs>
 								<xp:attr name="onclick">
-									<xp:this.value><![CDATA[#{javascript:"fetchMoreDetails(this,'" + @ReplaceSubstring(compositeData.viewName, "\\","\\\\") + "','" + rowData + "', '" + @ReplaceSubstring(compositeData.xpage, "/", "") + "', '" + compositeData.dbName + "', '" + compositeData.photoColumn + "');"}]]></xp:this.value>
+									<xp:this.value><![CDATA[#{javascript:"unp.fetchMoreDetails(this,'" + @ReplaceSubstring(compositeData.viewName, "\\","\\\\") + "','" + rowData + "', '" + @ReplaceSubstring(compositeData.xpage, "/", "") + "', '" + compositeData.dbName + "', '" + compositeData.photoColumn + "');"}]]></xp:this.value>
 								</xp:attr>
 							</xp:this.attrs>
 						</xp:button>

@@ -3,8 +3,8 @@ $(window).load( function() {
 		start();
 	});
 	var message;
-	if (!bLoaded && getURLParameter("starttime")) {
-		var starttime = parseInt(getURLParameter("starttime"), 10);
+	if (!bLoaded && unp.getURLParameter("starttime")) {
+		var starttime = parseInt(unp.getURLParameter("starttime"), 10);
 		var endtime = Date.now();
 		bLoaded = true;
 		endtime = Date.now();

@@ -34,7 +34,7 @@ $(document).ready(function() {
 			if (typeof attr !== 'undefined' && attr !== false) {
 			    target = attr;
 			}
-			openDocument(searchPage + "?query=" + escape(searchterm.toLowerCase()), target);
+			unp.openDocument(searchPage + "?query=" + escape(searchterm.toLowerCase()), target);
 			$(this).blur();
 			$(".searchButton").focus();
 		}

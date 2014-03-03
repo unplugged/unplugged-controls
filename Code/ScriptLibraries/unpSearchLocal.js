@@ -43,7 +43,7 @@ $(document).ready(function() {
 			$(".loadmorelink").css("display", "");
 		}
 		try {
-			initiscroll();
+			unp.initiscroll();
 		}catch(e){
 			try{
 				scrollContent.destroy();

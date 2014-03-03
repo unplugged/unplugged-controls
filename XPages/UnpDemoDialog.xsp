@@ -26,7 +26,7 @@
 		backButtonURL="UnpMain.xsp" title="Employees">
 	</unp:unpHeader>
 	<p style="padding: 40px;">
-		<input type="button" href='#' onclick="openDialog('dialogPopup')"
+		<input type="button" href='#' onclick="unp.openDialog('dialogPopup')"
 			class="button" value="Open Dialog">
 		</input>
 	</p>

@@ -50,7 +50,7 @@ if (out.length > 0){
 						<xp:this.rendered><![CDATA[#{javascript:compositeData.showbuttons == "yes"}]]></xp:this.rendered>
 						<xp:this.attrs>
 							<xp:attr name="onclick">
-								<xp:this.value><![CDATA[#{javascript:var out = "saveDocument('" + getClientId("customform") + "', '" + document1.getDocument().getUniversalID() + 
+								<xp:this.value><![CDATA[#{javascript:var out = "unp.saveDocument('" + getClientId("customform") + "', '" + document1.getDocument().getUniversalID() + 
 "', '" + compositeData.viewxpagename + "', '" + compositeData.formname + "'"
 if (context.getUrlParameter("parentunid") != ""){
 	out += ", '" + context.getUrlParameter("parentunid") + "'";

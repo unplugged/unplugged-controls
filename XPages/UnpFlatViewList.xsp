@@ -56,7 +56,7 @@ if (start == ""){
 					<xp:attr name="onClick">
 						<xp:this.value><![CDATA[#{javascript:try{
 	if (context.getUrlParameter("collapserows") == "Yes"){
-		return "showListDetails('" + getClientId("detail") + "'); event.stopPropagation();";
+		return "unp.showListDetails('" + getClientId("detail") + "'); event.stopPropagation();";
 	}else{
 		if (viewScope.rowcount == null){
 			viewScope.rowcount = 1;
@@ -64,7 +64,7 @@ if (start == ""){
 			viewScope.rowcount = viewScope.rowcount + 1;
 		}
 		if (context.getUrlParameter("ajaxload") != "No"){
-			return "openDocument('" + getDbPath() + "/" + context.getUrlParameter("xpage") + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID() + "', 'content');";
+			return "unp.openDocument('" + getDbPath() + "/" + context.getUrlParameter("xpage") + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID() + "', 'content');";
 		}else{
 			return "document.location.href='" + getDbPath() + "/" + context.getUrlParameter("xpage") + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID() + "'";
 		}

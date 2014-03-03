@@ -95,7 +95,7 @@ return out;}]]></xp:this.value>
 if (currentyear == ""){
         currentyear = "All";
 }
-"doHViewFilter('" + @Right(language, "|") + "', null, '" + compositeData.primaryview + "', '" + compositeData.filterview + "', '" + compositeData.dialogxpage + "', '" + compositeData.sourcediv + "', '" + compositeData.toplevelcategory + "')"}]]></xp:this.value>
+"unp.doHViewFilter('" + @Right(language, "|") + "', null, '" + compositeData.primaryview + "', '" + compositeData.filterview + "', '" + compositeData.dialogxpage + "', '" + compositeData.sourcediv + "', '" + compositeData.toplevelcategory + "')"}]]></xp:this.value>
                                                                         </xp:attr>
                                                                 </xp:this.attrs>
                                                         </xp:text>
@@ -136,7 +136,7 @@ return out;}]]></xp:this.value>
 if (currentlang == ""){
         currentlang = "All";
 }
-"doHViewFilter(null, '" + @Right(year, "|") + "', '" + compositeData.primaryview + "', '" + compositeData.filterview + "', '" + compositeData.dialogxpage + "', '" + compositeData.sourcediv + "', '" + compositeData.toplevelcategory + "')"}]]></xp:this.value>
+"unp.doHViewFilter(null, '" + @Right(year, "|") + "', '" + compositeData.primaryview + "', '" + compositeData.filterview + "', '" + compositeData.dialogxpage + "', '" + compositeData.sourcediv + "', '" + compositeData.toplevelcategory + "')"}]]></xp:this.value>
                                                                         </xp:attr>
                                                                 </xp:this.attrs>
                                                         </xp:text>
@@ -215,7 +215,7 @@ if (compositeData.favoritesonly != "yes"){
 rowData.getUniversalID()}">
                                                                                         </xp:attr>
                                                                                         <xp:attr name="onclick">
-                                                                                                <xp:this.value><![CDATA[#{javascript:"openHViewDialog('" + compositeData.dialogxpage + "', '" + compositeData.sourcediv + "', '" + rowData.getUniversalID() + "')"}]]></xp:this.value>
+                                                                                                <xp:this.value><![CDATA[#{javascript:"unp.openHViewDialog('" + compositeData.dialogxpage + "', '" + compositeData.sourcediv + "', '" + rowData.getUniversalID() + "')"}]]></xp:this.value>
                                                                                         </xp:attr>
                                                                                 </xp:this.attrs>
                                                                                 <xp:panel id="hviewicon">
@@ -257,7 +257,7 @@ rowData.getUniversalID()}">
                                                                                         styleClass="hviewloadmorebutton">
                                                                                         <xp:this.attrs>
                                                                                                 <xp:attr name="onclick">
-                                                                                                        <xp:this.value><![CDATA[#{javascript:"loadMoreHorizontal(this, '" + category + "', '" + compositeData.primaryview + "', '" + compositeData.filterview + "', '" + compositeData.dialogxpage + "', '" + compositeData.sourcediv + "')";}]]></xp:this.value>
+                                                                                                        <xp:this.value><![CDATA[#{javascript:"unp.loadMoreHorizontal(this, '" + category + "', '" + compositeData.primaryview + "', '" + compositeData.filterview + "', '" + compositeData.dialogxpage + "', '" + compositeData.sourcediv + "')";}]]></xp:this.value>
                                                                                                 </xp:attr>
                                                                                         </xp:this.attrs>
                                                                                 </xp:button>

@@ -51,7 +51,7 @@ if (start == ""){
 								  viewScope.accRowcount = viewScope.accRowcount + 1;
 								}
 								if(sessionScope.get("ajaxLoad") != "No"){
-									return "openDocument('" + param.get("xpageDoc") + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID() + "', 'content');"
+									return "unp.openDocument('" + param.get("xpageDoc") + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID() + "', 'content');"
 								}
 								else{						
 									var url = getDbPath() + "/" + param.get("xpageDoc") + "?action=openDocument&documentId=" + thisRowData.getDocument().getUniversalID();

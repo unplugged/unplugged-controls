@@ -83,7 +83,7 @@ if (out.length > 0){
 						<xp:attr name="onclick">
 							<xp:this.value><![CDATA[#{javascript:var url = compositeData.editxpagename + "?action=editDocument&documentId=" + document1.getDocument().getUniversalID();
 if (compositeData.editxpagewithajax != "no"){
-	return "openDocument('" + url + "', 'content');";
+	return "unp.openDocument('" + url + "', 'content');";
 }else{
 	return "$.blockUI();window.location.href='" + url + "';";
 }}]]></xp:this.value>
@@ -110,7 +110,7 @@ if (compositeData.editxpagewithajax != "no"){
 				<xp:panel tagName="li" styleClass="proceedButton">
 					<xp:this.attrs>
 						<xp:attr name="onclick">
-							<xp:this.value><![CDATA[#{javascript:"openDocument('" + compositeData.newresponsexpagename + "?action=newDocument&parentunid=" + document1.getDocument().getUniversalID() + "', 'content');"}]]></xp:this.value>
+							<xp:this.value><![CDATA[#{javascript:"unp.openDocument('" + compositeData.newresponsexpagename + "?action=newDocument&parentunid=" + document1.getDocument().getUniversalID() + "', 'content');"}]]></xp:this.value>
 						</xp:attr>
 					</xp:this.attrs>
 					<span class="icon"></span>

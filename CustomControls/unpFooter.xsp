@@ -67,9 +67,9 @@ db.replicate("someserver");}]]></xp:this.script>
 			<xp:this.attrs>
 				<xp:attr name="onclick">
 					<xp:this.value><![CDATA[#{javascript:if (compositeData.postSyncTarget != null && compositeData.postSyncTarget != ""){
-	return "syncAllDbs('" + compositeData.postSyncTarget + "')";
+	return "unp.syncAllDbs('" + compositeData.postSyncTarget + "')";
 }else{
-	return "syncAllDbs()";
+	return "unp.syncAllDbs()";
 }}]]></xp:this.value>
 				</xp:attr>
 			</xp:this.attrs>
@@ -114,7 +114,7 @@ return "Updated: " + rep;}]]></xp:this.value>
 			<xp:this.attrs>
 				<xp:attr name="onclick">
 					<xp:this.value><![CDATA[#{javascript:if (compositeData.newDocLoadType != "full"){
-	return "openDocument('" + compositeData.newDocTarget + "?action=newDocument', 'content');";
+	return "unp.openDocument('" + compositeData.newDocTarget + "?action=newDocument', 'content');";
 }else{
 	return "$.blockUI();window.location.href='" + compositeData.newDocTarget + "?action=newDocument';";
 }}]]></xp:this.value>

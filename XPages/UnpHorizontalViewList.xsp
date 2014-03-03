@@ -52,7 +52,7 @@ if (start == "" || start == "-1"){
 						<xp:this.value><![CDATA[#{javascript:rowData.getDocument().getUniversalID()}]]></xp:this.value>
 					</xp:attr>
 					<xp:attr name="onclick">
-						<xp:this.value><![CDATA[#{javascript:"openHViewDialog('" + context.getUrlParameter("xpage") + "', '" + context.getUrlParameter("source") + "', '" + rowData.getDocument().getUniversalID() + "')"}]]></xp:this.value>
+						<xp:this.value><![CDATA[#{javascript:"unp.openHViewDialog('" + context.getUrlParameter("xpage") + "', '" + context.getUrlParameter("source") + "', '" + rowData.getDocument().getUniversalID() + "')"}]]></xp:this.value>
 					</xp:attr>
 				</xp:this.attrs>
 				<xp:panel id="hviewicon">
