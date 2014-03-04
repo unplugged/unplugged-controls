@@ -72,7 +72,11 @@ return out;}]]></xp:this.value>
 						<xp:this.rendered><![CDATA[#{javascript:compositeData.showbuttons == "yes"}]]></xp:this.rendered>
 						<xp:this.attrs>
 							<xp:attr name="onclick">
-								<xp:this.value><![CDATA[#{javascript:return "history.back()";}]]></xp:this.value>
+								<xp:this.value><![CDATA[#{javascript:if (isEmpty(compositeData.closexpagename)){
+	return "history.back()";
+}else{
+	return "$.blockUI(); window.location.href='" + compositeData.closexpagename + "';";
+}}]]></xp:this.value>
 							</xp:attr>
 						</xp:this.attrs>
 						<span class="icon"></span>
