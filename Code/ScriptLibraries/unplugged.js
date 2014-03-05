@@ -59,9 +59,6 @@ $(window)
 
 					$(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
 					unp.allowFormsInIscroll();
-					if (unp.isAndroid()){
-						$("#menuitems").css("position", "relative");
-					}
 
 					unp.initiscroll();
 					$("#menuPane").removeClass("onScreen").addClass("offScreen");
