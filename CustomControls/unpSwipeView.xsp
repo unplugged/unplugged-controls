@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<!--
+<!--
 		Copyright 2013 Teamstudio Inc Licensed under the Apache License,
 		Version 2.0 (the "License"); you may not use this file except in
 		compliance with the License. You may obtain a copy of the License at
@@ -12,17 +12,25 @@
 	-->
 
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:this.resources>
+		<xp:script src="/unp/jquery-2.0.3.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/fastclick.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
+		<xp:script src="unp/swipeview.js" clientSide="true"></xp:script>
+		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
+	</xp:this.resources>
 	<xp:this.data>
 		<xp:dominoDocument var="docImages"
 			documentId="#{javascript:compositeData.DocUNID;}" action="openDocument"
 			formName="#{javascript:compositeData.formName}">
-			<xp:this.databaseName><![CDATA[#{javascript:if (isEmpty(compositeData.dbName)){
+			<xp:this.databaseName><![CDATA[#{javascript:if (compositeData.dbName == null || compositeData.dbName == ""){
 	return database.getFilePath();
 }else{
 	return compositeData.dbName;
 }}]]></xp:this.databaseName>
 		</xp:dominoDocument>
 	</xp:this.data>
+	
 	<xp:this.beforePageLoad>
 		<xp:executeScript>
 			<xp:this.script><![CDATA[#{javascript:var images = new Array;
@@ -36,7 +44,11 @@ if (isUnpluggedServer()){
 	attachmentList = $A(session.evaluate("@AttachmentNames", docImages.getDocument()));
 }
 var thisUNID = docImages.getDocument().getUniversalID();
-
+var dbPath = compositeData.dbName;
+if (dbPath == null || dbPath == ""){
+	dbPath = database.getFilePath();
+}
+dbPath = @ReplaceSubstring(dbPath, "\\", "/");
 for(var i=0; i<attachmentList.length; i++){
 
   var imageDocID = compositeData.imageDocId;
@@ -44,7 +56,8 @@ for(var i=0; i<attachmentList.length; i++){
   if (isUnpluggedServer()){
   	imagename = imagename.getName();
   }
-  imageFile = "/" + @ReplaceSubstring(docImages.getParentDatabase().getFilePath(), "\\", "/") + "/0/" + docImages.getDocument().getUniversalID() + "/$FILE/" + imagename;
+  
+  imageFile = "/" + dbPath + "/0/" + docImages.getDocument().getUniversalID() + "/$FILE/" + imagename;
   
   /*images.push({
      img: imageFile,
@@ -69,13 +82,6 @@ viewScope.put("images", images);
 }]]></xp:this.script>
 		</xp:executeScript>
 	</xp:this.beforePageLoad>
-	<xp:this.resources>
-		<xp:script src="/unp/jquery-2.0.3.min.js" clientSide="true"></xp:script>
-		<xp:script src="/unp/fastclick.js" clientSide="true"></xp:script>
-		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
-		<xp:script src="unp/swipeview.js" clientSide="true"></xp:script>
-		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
-	</xp:this.resources>
 	<div id="wrapper"></div>
 	<ul id="nav">
 		<li id="prev" onclick="gallery.prev()">-</li>
