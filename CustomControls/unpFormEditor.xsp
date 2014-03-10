@@ -45,6 +45,8 @@ if (out.length > 0){
 					</xp:text>
 				</h2>
 
+				<xp:callback facetName="facet_1" id="callback1"></xp:callback>
+
 				<xp:panel id="buttons" styleClass="buttons" tagName="ul">
 					<xp:panel tagName="li" id="saveButton" styleClass="saveButton">
 						<xp:this.rendered><![CDATA[#{javascript:compositeData.showbuttons == "yes"}]]></xp:this.rendered>
@@ -83,7 +85,7 @@ return out;}]]></xp:this.value>
 						<span class="label">Cancel</span>
 					</xp:panel>
 				</xp:panel>
-				<xp:callback facetName="facet_1" id="callback1"></xp:callback>
+				
 			</xp:div>
 		</div>
 	</xp:panel>
