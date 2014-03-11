@@ -12,10 +12,12 @@ The recording of the March 6th User Group Meeting is now available to watch
 Question from the last meeting:
 <br/>
 1) What's the benefit to the xagent style value getter vs computed value in the type ahead?
+<br/>
 The benefit is that it works :-) the computed type ahead is a dojo control and is not supported in the Unplugged product (in the XPages widgets form - native dojo is supported). The controls must work on Unplugged first (as Teamstudio are sponsors) and then a mobile web browser.
 Also, and this may be a somewhat weak argument, but by passing this off you can substitute the logic with whatever you want (JSON, text HTML content etc) without touvhing hte original XPage (classic UI/data split). 
 <br/>
 2) Why should the CSS aggregator be switched off (xsp.properties 'Use optimized CSS and JS at runtime' box) when using hte controls outside of the Unplugged product - in a mobile web browser?
+<br/>
 The reason I mentioned this is that if this is on then the glyphIcons we use as images do not display. On the Unplugged product this is not an issue as the CSS files etc are already stored on device and performance is not an issue.
 By allowing Domino to change and aggregate these files the order may not be properly specified (which I think is the case) and therefore the 'images' for the elements are somehow overwritten.
 I guess we could look into the as a bug/feature request and add the CSS files we need last in via CSJS as in this <a href="http://stackoverflow.com/questions/15876739/xpage-with-computed-css-file">StackOverflow post</a>.
