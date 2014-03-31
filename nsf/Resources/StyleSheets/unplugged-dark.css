@@ -2913,6 +2913,11 @@ legend {
 .fontawesome.panel ~ #dialogPopup .dialogbuttons > div:last-child .button {
   margin-left: 0;
 }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .fontawesome.panel ~ #dialogPopup {
+    top: 0px;
+  }
+}
 /* SAMPLER APP: Glyphicons */
 /*#glyphicondetails .glyphicons strong {
 	display: block;	
