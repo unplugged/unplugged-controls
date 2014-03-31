@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
+<noteinfo noteid="934e" sequence="1" unid="3F40DEAF14E2324880257C8500571413">
+<created><datetime>20140220T155107,71+00</datetime></created>
+<modified><datetime>20140220T155108,88+00</datetime></modified>
+<revised><datetime>20140220T155108,87+00</datetime></revised>
+<lastaccessed><datetime>20140220T155108,88+00</datetime></lastaccessed>
+<addedtofile><datetime>20140220T155108,88+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<item name="$TITLE"><text>unplugged-header.less</text></item>
+<item name="$Flags"><text>345CgQ</text></item>
+<item name="$FlagsExt"><text>D</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+<item name="$FileNames"><textlist><text>unplugged-header.less</text></textlist></item>
+
+
+<item name="$FileModDT"><datetime>20140220T150315,12+00</datetime></item></note>

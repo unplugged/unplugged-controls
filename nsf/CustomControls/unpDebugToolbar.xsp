@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+		Copyright 2013 Teamstudio Inc Licensed under the Apache License,
+		Version 2.0 (the "License"); you may not use this file except in
+		compliance with the License. You may obtain a copy of the License at
+		http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+		applicable law or agreed to in writing, software distributed under the
+		License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or implied. See the License for
+		the specific language governing permissions and limitations under the
+		License
+	-->
+
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:this.resources>
+		<xp:script src="/unpDebugToolbar.jss" clientSide="false"></xp:script>
+	</xp:this.resources>
+
+	<xp:this.beforePageLoad><![CDATA[#{javascript:try{
+	dBar.init( (compositeData.defaultCollapsed=="true" ? true : false) );
+}catch(e){
+	print("Error in beforePageLoad");
+}
+	}]]></xp:this.beforePageLoad>
+	
+	<style type="text/css">
+		div.dBar {
+		margin-top: 10px;
+		border-bottom: 3px solid #444444;
+		background: #dddddd;
+		text-shadow:none;
+		}
+
+		div.dBar .header {
+		background:#444444;
+		padding: 5px;
+		color: #ffffff;
+		text-align: middle;
+		}
+		div.dBar span.title {
+		font-weight: bold;
+		font-size: 14px;
+		}
+		div.dBar table {
+		width: 100%;
+		border-collapse: collapse;
+		}
+		div.dBar table.grid th {
+		font-weight:bold;
+		border: 0;
+		padding: 1px 2px;
+		background: #bbbbbb;
+		}
+		div.dBar table.grid td {
+		border: 1px solid #CECECE;
+		padding: 1px 2px;
+		}
+		div.dBar table.grid td.error {
+		color: red;
+		}
+		div.dBar table.grid td.warning {
+		color: #E0AD06;
+		}
+		div.dBar table.grid td.debug {
+		font-style: italic;
+		}
+		div.dBar div.section {
+		padding: 0;
+		clear: both;
+		}
+		div.dBar div.title {
+		background:#bbbbbb;
+		padding:5px;
+		font-weight: bold;
+		border-bottom: 1px solid #000000;
+		}
+		div.dBar .content {
+		margin: 7px 5px;
+		}
+		div.dBar button {
+		margin: 4px;
+		}
+		.debugbutton {
+		width: auto !important;
+		display: inline;
+		padding-left: 6px;
+		padding-right: 6px;
+		}
+		.debugbuttonsmall {
+		width: auto !important;
+		display: inline;
+		padding-left: 12px;
+		padding-right: 12px;
+		}
+		
+	</style>
+
+	<xp:panel id="restoreDBar" styleClass="dBar"
+		rendered="#{javascript:try{!dBar.isEnabled()}catch(e){return false;}}">
+
+		<div class="header">
+			<h1>Unplugged Debug Toolbar</h1>
+
+			<div style="float:right">
+
+				<xp:button value="restore" id="button6" styleClass="button debugbutton">
+					<xp:eventHandler immediate="true" event="onclick"
+						submit="true" refreshMode="complete">
+						<xp:this.action><![CDATA[#{javascript:dBar.setEnabled(true)}]]></xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+			</div>
+		</div>
+	</xp:panel>
+
+	<xp:panel id="dBar" styleClass="dBar"
+		rendered="#{javascript:try{dBar.isEnabled()}catch(e){return true;}}">
+
+		<div class="header">
+			<h1>Unplugged Debug Toolbar</h1>
+
+			<div style="float:right">
+
+				<xp:button value="remove" id="btnRemoveToolbar"
+					styleClass="button debugbutton">
+					<xp:eventHandler immediate="true" event="onclick"
+						submit="true" refreshMode="complete">
+						<xp:this.action><![CDATA[#{javascript:dBar.setEnabled(false)}]]></xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+
+				<xp:button id="btnCollapse" rendered="#{javascript:try{!dBar.isCollapsed()}catch(e){return true;}}"
+					styleClass="button debugbuttonsmall">
+					<xp:this.value><![CDATA[<]]></xp:this.value>
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action><![CDATA[#{javascript:dBar.setCollapsed(true);}]]></xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+
+				<xp:button id="btnExpand" rendered="#{javascript:try{dBar.isCollapsed()}catch(e){return true;}}"
+					styleClass="button debugbuttonsmall">
+					<xp:this.value><![CDATA[>]]></xp:this.value>
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action><![CDATA[#{javascript:dBar.setCollapsed(false);}]]></xp:this.action>
+					</xp:eventHandler>
+				</xp:button>
+
+			</div>
+			<br style="clear:both" />
+
+		</div>
+
+		<xp:div rendered="#{javascript:try{!dBar.isCollapsed()}catch(e){return true;}}" id="dBarContent">
+
+			<!-- actions -->
+			<div class="section">
+				<div class="title">Actions</div>
+
+				<div class="content">
+
+					<xp:button value="startpage" id="button2" styleClass="button debugbutton">
+						<xp:eventHandler immediate="true" event="onclick"
+							submit="true" refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage name="/UnpMain.xsp"></xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+
+					<xp:button value="back" id="button5" styleClass="button debugbutton">
+						<xp:eventHandler event="onclick" submit="false">
+							<xp:this.script><![CDATA[history.back();]]></xp:this.script>
+						</xp:eventHandler>
+					</xp:button>
+
+					<xp:button value="workspace" id="button4" styleClass="button debugbutton">
+						<xp:eventHandler immediate="true" event="onclick"
+							submit="true" refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage name="/unpws.unp/"></xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+
+					<xp:button value="reload" id="button7" styleClass="button debugbutton">
+						<xp:eventHandler immediate="true" event="onclick"
+							submit="true" refreshMode="complete">
+							<xp:this.action><![CDATA[#{javascript://context.reloadPage();		//not implemented	
+	context.redirectToPage( context.getUrl().toString() );}]]></xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+
+					<xp:button value="sync" id="button3" styleClass="button debugbutton">
+						<xp:eventHandler immediate="true" event="onclick"
+							submit="true" refreshMode="complete">
+
+							<xp:this.action><![CDATA[#{javascript:dBar.debug("sync: start");
+		
+		var dbCurrent = session.getCurrentDatabase();
+		dbCurrent.replicate("");
+
+							dBar.debug("sync: done");
+							
+							//reload the current page (required to show updates)
+							context.redirectToPage( context.getUrl().toString() );
+							}]]></xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+					
+					<xp:button value="clear favorites" styleClass="button debugbutton" id="button8">
+
+					<xp:eventHandler event="onclick" submit="true"
+						refreshMode="complete">
+						<xp:this.action><![CDATA[#{javascript:setFavorites(new Array())}]]></xp:this.action>
+					</xp:eventHandler></xp:button>
+
+				</div>
+			</div>
+
+			<!-- messages -->
+			<div class="section">
+				<div class="title">
+					Messages
+
+					<div style="float:right">
+						<xp:button value="clear" id="button1" styleClass="button debugbutton">
+							<xp:eventHandler immediate="true" event="onclick"
+								submit="true" refreshMode="partial" refreshId="dBar" execMode="partial"
+								execId="dBar">
+								<xp:this.action><![CDATA[#{javascript:dBar.clearMessages()}]]></xp:this.action>
+							</xp:eventHandler>
+						</xp:button>
+					</div>
+					<br style="clear:both" />
+
+				</div>
+
+				<div class="content">
+
+					<xp:text rendered="#{javascript:try{dBar.getMessages().length==0}catch(e){return true;}}"
+						value="No messages found" />
+
+					<table class="grid">
+						<tbody>
+							<xp:repeat id="repeat1" rows="200" var="msg">
+								<xp:this.value><![CDATA[#{javascript:try{dBar.getMessages();}catch(e){return null;}}]]></xp:this.value>
+								<tr style="vertical-align:top">
+
+									<td style="white-space:nowrap">
+										<xp:text escape="true" disableTheme="true"
+											value="#{javascript:msg.date}">
+											<xp:this.converter>
+												<xp:convertDateTime pattern="HH:mm:ss"></xp:convertDateTime>
+											</xp:this.converter>
+										</xp:text>
+									</td>
+									<xp:td styleClass="#{javascript:msg.type}">
+										<xp:text escape="true" disableTheme="true"
+											value="#{javascript:msg.text}"></xp:text>
+									</xp:td>
+								</tr>
+							</xp:repeat>
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+
+			<!-- environment -->
+			<div class="section">
+				<div class="title">Environment</div>
+
+				<div class="content">
+					<table class="grid">
+						<tbody>
+
+							<tr>
+								<td>app title:</td>
+								<td>
+									<xp:text escape="true" disableTheme="true"
+										value="#{javascript:database.getTitle()}">
+									</xp:text>
+								</td>
+							</tr>
+
+							<tr>
+								<td>documents:</td>
+								<td>
+									<xp:text escape="true" disableTheme="true"
+										value="#{javascript:database.getAllDocuments().getCount()}">
+									</xp:text>
+								</td>
+							</tr>
+
+							<tr>
+								<td>user:</td>
+								<td>
+									<xp:text escape="true" disableTheme="true"
+										value="#{javascript:@UserName()}">
+									</xp:text>
+								</td>
+							</tr>
+							<tr>
+								<td>url:</td>
+								<td>
+									<xp:text escape="true" disableTheme="true"
+										value="#{javascript:context.getUrl().toString()}">
+									</xp:text>
+								</td>
+							</tr>
+
+						</tbody>
+					</table>
+
+				</div>
+			</div>
+
+			<!-- scope variables -->
+			<div class="section">
+				<div class="title">Scope variables</div>
+
+				<div class="content">
+
+					<table class="grid">
+						<tbody>
+
+							<!-- applicationScope -->
+							<tr>
+								<th colspan="2">applicationScope</th>
+							</tr>
+							<xp:repeat id="repAppScope" rows="250" var="entry">
+
+								<xp:this.value><![CDATA[#{javascript:var k = applicationScope.keySet();
+var it = k.iterator();
+
+var entries = [];
+
+while (it.hasNext() ) {
+	var key = it.next();
+	entries.push( {"key":  key, "value" : applicationScope.get(key) });
+}
+	
+return entries;}]]></xp:this.value>
+								<tr>
+									<td>
+										<xp:text disableTheme="true" value="#{javascript:entry.key}"></xp:text>
+									</td>
+									<td>
+										<xp:text disableTheme="true" value="#{javascript:entry.value}">
+										</xp:text>
+									</td>
+								</tr>
+							</xp:repeat>
+
+							<!-- sessionScope -->
+							<tr>
+								<th colspan="2">sessionScope</th>
+							</tr>
+							<xp:repeat id="repSessScope" rows="250" var="entry">
+
+								<xp:this.value><![CDATA[#{javascript:var k = sessionScope.keySet();
+var it = k.iterator();
+
+var entries = [];
+
+while (it.hasNext() ) {
+	var key = it.next();
+	entries.push( {"key":  key, "value" : sessionScope.get(key) });
+}
+	
+return entries;}]]></xp:this.value>
+								<tr>
+									<td>
+										<xp:text disableTheme="true" value="#{javascript:entry.key}"></xp:text>
+									</td>
+									<td>
+										<xp:text disableTheme="true" value="#{javascript:entry.value}">
+										</xp:text>
+									</td>
+								</tr>
+
+							</xp:repeat>
+
+							<!-- viewScope -->
+							<tr>
+								<th colspan="2">viewScope</th>
+							</tr>
+							<xp:repeat id="repViewScope" rows="250" var="entry">
+
+								<xp:this.value><![CDATA[#{javascript:var k = viewScope.keySet();
+var it = k.iterator();
+
+var entries = [];
+
+while (it.hasNext() ) {
+	var key = it.next();
+	entries.push( {"key":  key, "value" : viewScope.get(key) });
+}
+	
+return entries;}]]></xp:this.value>
+								<tr>
+									<td>
+										<xp:text disableTheme="true" value="#{javascript:entry.key}"></xp:text>
+									</td>
+									<td>
+										<xp:text disableTheme="true" value="#{javascript:entry.value}"></xp:text>
+									</td>
+								</tr>
+
+							</xp:repeat>
+
+							<!-- requestScope -->
+							<tr>
+								<th colspan="2">requestScope</th>
+							</tr>
+							<xp:repeat id="repReqScope" rows="250" var="entry">
+
+								<xp:this.value><![CDATA[#{javascript:var k = requestScope.keySet();
+var it = k.iterator();
+
+var entries = [];
+
+while (it.hasNext() ) {
+	var key = it.next();
+	entries.push( {"key":  key, "value" : requestScope.get(key) });
+}
+	
+return entries;}]]></xp:this.value>
+								<tr>
+									<td>
+										<xp:text disableTheme="true" value="#{javascript:entry.key}"></xp:text>
+									</td>
+									<td>
+										<xp:text disableTheme="true" value="#{javascript:entry.value}">
+										</xp:text>
+									</td>
+								</tr>
+
+							</xp:repeat>
+						</tbody>
+					</table>
+
+				</div>
+			</div>
+
+		</xp:div>
+
+	</xp:panel>
+
+</xp:view>

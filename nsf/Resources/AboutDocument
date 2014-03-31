@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE helpaboutdocument SYSTEM 'xmlschemas/domino_8_5_3.dtd'>
+<helpaboutdocument xmlns='http://www.lotus.com/dxl' version='8.5' maintenanceversion='3.0'
+ replicaid='80257AA1002D0DF3' publicaccess='false' designerversion='8.5.3'
+ default='true' renderpassthrough='true'>
+<noteinfo noteid='60ce' unid='C9A2F4F0852C2EAE80257AE800573124' sequence='2'>
+<created><datetime>20130103T155222,12+00</datetime></created>
+<modified><datetime>20130103T155224,35+00</datetime></modified>
+<revised><datetime>20130103T155224,34+00</datetime></revised>
+<lastaccessed><datetime>20130103T155224,35+00</datetime></lastaccessed>
+<addedtofile><datetime>20130103T155222,18+00</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<body><richtext>
+<pardef id='1' leftmargin='1in' rightmargin='100%'/>
+<par def='1'><run><font name='Courier New' pitch='fixed' truetype='true' familyid='30'
+ color='#4040c2'/>/**</run></par>
+<par def='1'><run><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>*</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>Copyright</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>2013</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font style='underline' name='Courier New' pitch='fixed' truetype='true'
+ familyid='30' color='#4040c2'/>Teamstudio</run><run><font name='Courier New'
+ pitch='fixed' truetype='true' familyid='30'/> </run><run><font name='Courier New'
+ pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>Inc</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run></par>
+<par def='1'><run><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>*</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>Licensed</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>under</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>the</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font style='underline' name='Courier New' pitch='fixed' truetype='true'
+ familyid='30' color='#4040c2'/>Apache</run><run><font name='Courier New'
+ pitch='fixed' truetype='true' familyid='30'/> </run><run><font name='Courier New'
+ pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>License,</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>Version</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>2.0</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>(the</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>"License");</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run></par>
+<par def='1'><run><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>*</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>you</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>may</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>not</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>use</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>this</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>file</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>except</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>in</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>compliance</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>with</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>the</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>License.</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>You</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>may</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>obtain</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>a</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>copy</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>of</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>the</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>License</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>at</run></par>
+<par def='1'><run><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>*</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>http://www.apache.org/licenses/LICENSE</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#8f8f8f'/>-</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>2.0</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run></par>
+<par def='1'><run><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>*</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>Unless</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>required</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>by</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>applicable</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>law</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>or</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>agreed</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>to</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>in</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>writing,</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>software</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>distributed</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>under</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>the</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>License</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>is</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>distributed</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run></par>
+<par def='1'><run><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>*</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>on</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>an</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>"AS</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>IS"</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>BASIS,</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>WITHOUT</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>WARRANTIES</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>OR</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>CONDITIONS</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>OF</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>ANY</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>KIND,</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>either</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>express</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>or</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>implied.</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>See</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>the</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>License</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>for</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run></par>
+<par def='1'><run><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>*</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>the</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>specific</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>language</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>governing</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>permissions</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>and</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>limitations</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>under</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>the</run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>License</run></par>
+<par def='1'><run><font name='Courier New' pitch='fixed' truetype='true' familyid='30'/> </run><run
+><font name='Courier New' pitch='fixed' truetype='true' familyid='30' color='#4040c2'/>*/</run></par></richtext></body></helpaboutdocument>
+

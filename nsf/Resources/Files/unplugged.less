@@ -1,0 +1,1381 @@
+/**
+ * Copyright 2013 Teamstudio Inc 
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * you may not use this file except in compliance with the License. You may obtain a copy of the License at
+ * http://www.apache.org/licenses/LICENSE-2.0 
+ * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed 
+ * on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
+ * the specific language governing permissions and limitations under the License
+ */
+
+/*
+@font-face {
+	font-family:'Glyphicons Regular';
+	src: url('glyphicons-regular.eot');
+	src: url('glyphicons-regular.eot?#iefix') format('embedded-opentype'), 
+		 url('glyphicons-regular.woff') format('woff'), 
+		 url('glyphicons-regular.ttf') format('truetype'), 
+		 url('glyphicons-regular.svg#glyphiconsregular') format('svg');
+	font-weight:400;
+	font-style:normal;
+}*/
+
+
+/*********************
+
+iscroll.css
+
+**********************/
+
+
+
+body {
+	height: 100%;
+	overflow: hidden;
+	width: 100%;
+	position: fixed;
+}
+
+.iscrollcontent {
+	position: fixed;
+	right: 0px;
+	left: 0px;
+	top: 60px;
+	bottom: 60px;
+	overflow-x: none;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+
+	&.dialogactive {
+		z-index: 999; /* Display above menu (e.g. overlays/modals) */
+	}
+
+	@media screen and (min-width: 701px) {
+		top: 57px;
+		bottom: 60px;
+	}	
+
+	@media screen and (max-width: 700px) {
+		top: 45px;
+		bottom: 45px;
+	}	
+}
+
+.swiper-container {
+	overflow-x: scroll !important;
+	overflow-y: none !important;
+	-webkit-overflow-scrolling: touch !important;
+}
+
+.notoppadscroll {
+	position: fixed;
+	right: 0px;
+	left: 0px;
+	top: 0px;
+	bottom: 60px;
+	overflow-x: none;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+.bottompadscroll {
+	position: fixed;
+	right: 0px;
+	left: 0px;
+	top: 60px;
+	bottom: 0px;
+	overflow-x: none;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+.nopadscroll {
+	position: fixed;
+	right: 0px;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	overflow-x: none;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+
+@media screen and (max-width: 700px) {
+	.wsscroll {
+		top: 45px;
+		bottom: 45px;
+	}
+}
+
+/*********************
+
+Jack's Styles from here
+
+**********************/
+
+
+body {
+	background: @body-background-color;
+	font-family: @body-font;
+	padding-top: 0px;
+	padding-bottom: 45px;
+	-webkit-text-size-adjust: none !important;
+	
+	@media screen and (min-width: 701px) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	
+	@media screen and (max-width: 700px) {
+		padding-top: 45px;
+		padding-bottom: 45px;
+	}
+}
+
+
+button, 
+input {
+	font-family: @body-font;
+}
+
+.hidden {
+	display: none !important;
+}
+
+a {
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* Disable Android's default active link styling */
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* Disable text/object selection except where we need it */
+* {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+}
+
+input, 
+textarea,
+.cke_editable *,
+.richtexteditor * {
+	-webkit-user-select: auto;
+}
+
+
+
+/* HEADER */
+@import 'unplugged-header.less';
+
+/* BUTTONS */
+@import 'unplugged-buttons.less';
+
+/* MENU */
+@import 'unplugged-menu.less';
+
+/* FOOTER */
+@import 'unplugged-footer.less';
+
+/* TABLE VIEW */
+@import 'unplugged-table.less';
+
+/* DOCUMENT VIEW/EDIT */
+@import 'unplugged-form.less';
+
+/* WORKSPACE */ 
+@import 'unplugged-workspace.less';
+
+/* SWIPE VIEW */ 
+@import 'unplugged-swipeview.less';
+
+/* MEDIA VIEW */ 
+@import 'unplugged-media.less';
+
+
+
+
+
+
+.ajax_loader {
+	position: relative;
+	background: url("unp/spinner_squares_circle.gif") no-repeat center center transparent;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+}
+
+
+
+
+/** PULL DOWN **/
+
+#pullDown,
+#pullUp {
+	height: 40px;
+	line-height: 40px;
+	padding: 5px 10px;
+	font-weight: bold;
+	font-size: 14px;
+	color: #DDD;
+}
+
+#pullDown .pullDownIcon,
+#pullUp .pullUpIcon {
+	display: block;
+	float: left;
+	width: 40px;
+	height: 40px;
+	background: url(unp/pull-icon@2x.png) 0 0 no-repeat;
+	-webkit-background-size: 40px 80px;
+	background-size: 40px 80px;
+	-webkit-transition-property: -webkit-transform;
+	-webkit-transition-duration: 250ms;
+}
+
+#pullDown .pullDownIcon {
+	-webkit-transform: rotate(0deg) translateZ(0);
+}
+
+#pullUp .pullUpIcon {
+	-webkit-transform: rotate(-180deg) translateZ(0);
+}
+
+#pullDown.flip .pullDownIcon {
+	-webkit-transform: rotate(-180deg) translateZ(0);
+}
+
+#pullUp.flip .pullUpIcon {
+	-webkit-transform: rotate(0deg) translateZ(0);
+}
+
+#pullDown.loading .pullDownIcon,
+#pullUp.loading .pullUpIcon {
+	background-position: 0 100%;
+	-webkit-transform: rotate(0deg) translateZ(0);
+	-webkit-transition-duration: 0ms;
+	-webkit-animation-name: loading;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+
+
+
+
+
+
+
+
+/* CONTENT AREA */
+
+.panel,
+fieldset {
+	background: #fff;
+	color: #333;
+	font-size: 16px;
+	line-height: 24px;
+	text-overflow: ellipsis;
+	display: block;
+	border-radius: @content-border-radius;
+	margin: @content-padding;
+	padding: 15px 20px;
+	overflow: hidden;
+	border: 0;
+	position: relative;
+
+	h1 {
+		line-height: 1.2;	
+		text-decoration: none;
+		text-overflow: ellipsis;
+		color: @content-heading-color;
+		font-size: @content-heading-font-size;
+		font-weight: @content-heading-font-weight;
+		margin-bottom: 15px;		
+	}
+
+
+	h2 {
+		line-height: 1.2;	
+		text-decoration: none;
+		text-overflow: ellipsis;
+		color: @content-subheading-color;
+		font-size: @content-subheading-font-size;
+		font-weight: @content-subheading-font-weight;
+		margin-bottom: 15px;
+		
+		.xspTextComputedField {
+			color: @content-subheading-color;
+			font-size: @content-subheading-font-size;
+			font-weight: @content-subheading-font-weight;				
+		}
+	}
+	
+	h3 {
+		line-height: 1.2;	
+		text-decoration: none;
+		text-overflow: ellipsis;
+		color: @content-subheading-color;
+		font-size: @content-subheading-font-size;
+		font-weight: @content-subheading-font-weight;
+		margin-bottom: 15px;		
+	}
+}
+
+legend {
+	background: #fff;
+	color: #333;
+	border: 1px solid #EEE;
+	padding: 2px;
+	font-size: 12px;
+	text-overflow: ellipsis;
+	display: block;
+	white-space: nowrap;
+	border-radius: @content-border-radius;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+
+
+/* SAMPLER APP: Dashboard */
+
+.piechartpanel {
+	padding-bottom: 25px;
+	border-bottom:1px solid #eee;
+	margin-bottom: 20px;
+
+	.legendColorBox {
+		padding: 5px 0;
+	
+		> div[style] {
+			border: 0 !important;
+			
+			> div[style] {
+				border-width: 6px !important;
+				width: 0 !important;
+			}
+		}
+	}
+	.legendLabel {
+		padding: 5px;
+	}
+	.pieLabel {
+		> div {
+			font-size: 11px !important;
+			line-height: 15px !important;
+		}
+	}
+}
+
+.barchartspanel {
+	.chartpanelelement {
+		margin-bottom: 20px;
+		border-bottom:1px solid #eee;
+		padding-bottom: 20px;
+		
+		h3 {
+			font-weight: normal;
+		}
+	}
+}
+
+#pie1,#stackchart,.barchart {
+	height: 300px;
+}
+
+.chartpanelelement {
+	float: left;
+	width: 50%;
+}
+
+@media screen and (max-width: 700px) {
+	.chartpanelelement {
+		width: 100%;
+	}
+}
+
+
+
+/* SAMPLER APP: Typography Read view */
+
+#typography {
+	padding: 15px;
+	padding-bottom: 0;
+	@media screen and (max-width: 400px) { padding: 0; }
+}
+
+#typography  {	
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: bold;
+		margin-top: 0;
+		margin-bottom: 20px;
+		background: transparent;
+		border: 0;
+		padding: 0;
+		box-shadow: none;
+		text-shadow: none;
+		color: #333;
+	}		
+	h1 {
+		font-size: 40px;
+		line-height: 1.2;
+	}		
+	h2 {
+		font-size: 36px;
+		line-height: 1.2;
+	}		
+	h3 {
+		font-size: 30px;
+		line-height: 1.2;
+	}		
+	h4 {
+		font-size: 24px;
+		line-height: 1.2;
+	}		
+	h5 {
+		font-size: 20px;
+		line-height: 1.2;
+	}		
+	h6 {
+		font-size: 16px;
+		line-height: 1.2;
+	}
+}
+
+#bodycopy {
+	padding: 15px;
+	padding-top: 0;
+	@media screen and (max-width: 400px) { padding: 0; }
+
+	p {
+		font-size: 16px;
+		line-height: 24px;
+		margin-bottom: 20px;
+		color: #333;
+	}
+
+} 
+
+.fontsizebuttons {
+	position: absolute;
+	right: 117px;
+	top: 10px;
+	z-index: 999;
+	margin: 0;
+
+	.button {
+		min-width: 36px;
+		padding: 0;
+		margin-left: 10px;
+		height: 36px;
+		border: none;
+		&:first-child { margin-left: 0; }
+
+		label {
+			display: none;
+		}	
+		i {
+			margin: 0;
+			font-size: 24px;
+			position: relative;
+			&:before {
+				position: absolute;
+				left: 6px;
+				top: 5px;
+				@media screen and (max-width: 700px) { top: 4px; }
+			}
+		}	 
+		&.increasetext i:before {
+			content: '';
+		}
+		&.decreasetext i:before {
+			content: '';
+		}		
+	}
+
+	@media screen and (max-width: 700px) { 
+		right: 45px;
+		top: 5px;
+		
+		.button {
+			height: 34px; 	
+			margin-left: 5px;		
+		}
+	}
+	
+}
+
+
+
+/* SAMPLER APP: FontAwesome */
+
+
+.fontawesome.panel {
+	div {
+		width: 20%;
+		@media screen and (max-width: 700px) { width: 25%; }
+		@media screen and (max-width: 400px) { width: 33.3333333%; }	
+		float: left;
+		text-align: center;
+		border: 1px solid #EEE;
+		box-sizing: border-box;
+		margin-right: -1px;
+		margin-bottom: -1px;
+		font-size: 13px;
+		white-space: nowrap;
+		overflow: hidden;
+		position: relative;
+		padding-top: 50px;
+		padding-bottom: 5px;
+		cursor: pointer;
+		
+		i {
+			display: block;
+			font-size: 36px;
+			position: absolute;
+			left: 50%;
+			margin-left: -23px;
+			top: 10px;
+		}
+		
+		span {
+			display: none;
+		}
+		
+		&:hover {
+			border-color: #666;
+			z-index: 9;
+		}
+	}
+}
+
+.fontawesome.panel ~ #dialogPopup {
+	width: 280px;
+	left: 50%;
+	right: auto;
+	margin-left: -140px;
+	top: 100px;
+	
+	#dialogContent {
+		height: auto;
+		overflow: visible;
+
+		#fontawesomedetails > div {
+			text-align: center;
+			padding-top: 100px;
+			font-weight: bold;
+	
+			i {		
+				margin: 0 auto;
+				display: block;
+				text-align: center;
+				top: 25px;
+				position: absolute;
+				left: 0;
+				width: 100%;
+				font-size: 100px;
+			}
+			
+			i:before {
+				font-size: 160px;
+				text-align: center;
+				display: block;
+				width: 100%;
+				
+			}
+			
+			span {
+				font-weight: normal;
+				display: block;
+				color: #999;
+				margin-top: 5px;
+				line-height: 20px;
+				font-size: 13px;
+			}
+		}
+	}
+	
+	.dialogbuttons {
+		// Hide Cancel Button
+		> div:first-child {display: none;}
+		// Make OK Button full width
+		> div:last-child {
+			width: 100%;
+			.button { margin-left: 0; }
+		}
+	}	
+}
+
+
+/* SAMPLER APP: Glyphicons */
+
+/*#glyphicondetails .glyphicons strong {
+	display: block;	
+	top: 50px;
+	font-size: 14px;
+	position: absolute;
+	right: 0px;
+}
+#glyphicondetails span {
+	display: block;	
+	top: 100px;
+	font-size: 14px;
+	position: absolute;
+	right: 0px;
+}
+#glyphicondetails a {
+	width: 100%;	
+}
+#glyphicondetails a.glyphicons:before{
+	font-size: 300px;
+}*/
+
+/*
+.list-fonts {
+	margin: 0 !important;
+	padding: 0 !important;
+	border-top: 1px solid #EEE;
+	border-left: 1px solid #EEE;
+	
+	a {
+		width: 20% !important;
+		@media screen and (max-width: 700px) { width: 25% !important; }
+		@media screen and (max-width: 400px) { width: 33% !important; }
+		margin: 0 0 0 -1px !important;
+		top:0;
+		text-align: center;
+		float: left;
+		padding: 42px 0 12px 0 !important;
+		border-bottom: 1px solid #EEE;
+		border-right: 1px solid #EEE;		
+		
+		&:before {
+			width: 100%;
+			text-align: center;
+			top: 12px;
+		}
+		
+		strong {
+			display: block;
+			text-align: center;
+			white-space: nowrap;
+			font-size: 13px;
+			font-weight: normal;
+			overflow: visible !important;
+		}
+		
+		span {
+			display: none !important;
+		}
+	}
+}
+
+.list-fonts ~ #dialogPopup {
+	width: 280px;
+	left: 50%;
+	right: auto;
+	margin-left: -140px;
+	
+	#dialogContent {
+		height: auto;
+		overflow: visible;
+	}
+	
+	#glyphicondetails a.glyphicons {		
+		width: 200px;
+		margin: 0 auto;
+		display: block;
+		text-align: center;
+		padding-top: 190px;
+		top: 0;
+		
+		strong {
+			position: static;
+		}
+		
+		span {
+			position: static;
+			color: #999;
+		}
+	}
+	
+	#glyphicondetails a.glyphicons::before {
+		font-size: 160px;
+		text-align: center;
+		display: block;
+		width: 100%;
+		
+	}
+	
+	.dialogbuttons {
+		// Hide Cancel Button
+		> div:first-child {display: none;}
+		// Make OK Button full width
+		> div:last-child {
+			width: 100%;
+			.button { margin-left: 0; }
+		}
+	}	
+}*/
+
+
+/* DIALOG */
+
+#dialogPopup {
+	border-radius: @content-border-radius;
+	box-shadow: none;
+	max-width: 600px;
+	padding: 0;
+	margin: 0 auto;
+	
+	h2 {
+		margin-top: 20px;
+		margin-bottom: 0;
+	}
+
+	#dialogContent {
+		font-size: 16px;
+		padding: 15px 20px;
+		max-height: 350px;
+		@media screen and (max-width: 400px) { max-height: 200px; }
+	}
+	
+	.dialogbuttons {
+		padding: 10px;
+		overflow: hidden;
+	
+		> div {
+			width: 50%;
+			float: left;
+
+			.button {
+				border-radius: @button-border-radius;
+				box-shadow: @button-box-shadow;
+				text-shadow: @button-text-shadow;
+				font-weight: @button-font-weight;
+				color: @button-default-label-color;
+				background: @button-default-background;
+				border: 1px solid @button-default-border-color;
+				display: block;
+				width: auto;
+				height: 36px;
+				cursor: pointer;
+				padding: 0;
+				line-height: 36px;
+				font-size: 16px;
+				text-align: center;
+
+				&.cancelbutton {
+					color: @button-danger-label-color;
+					background: @button-danger-background;
+					border: 1px solid @button-danger-border-color;					
+				}
+				
+				&.savebutton {
+					color: @button-success-label-color;
+					background: @button-success-background;
+					border: 1px solid @button-success-border-color;					
+				}			
+			}
+
+			&:first-child .button {
+				margin-right: 5px;
+			}
+			
+			&:last-child .button {
+				margin-left: 5px;
+			}
+		}
+	}
+}
+
+#adminCover {
+	position: absolute;
+	z-index: 9998;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.75);
+}
+
+#dialogswitch {
+	-webkit-box-sizing: border-box;
+	position: absolute;
+	width: 48px;
+	height: 42px;
+	top: 8px;
+	left: 200px;
+	border-style: solid;
+	border-width: 1px;
+	overflow: hidden;
+	text-indent: -9999em;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 0
+		rgba(255, 255, 255, 0.15);
+	border-color: #0d0d0d;
+	-webkit-border-radius: 21px;
+	background: url(dialog.png) 50% 50% no-repeat,
+		-webkit-gradient(linear, 0 0, 0 100%, from(#767676),
+		color-stop(0.5, #595959), color-stop(0.5, #4f4f4f), to(#2f2f2f) );
+	-webkit-background-clip: padding-box !important;
+}
+
+.dialog #dialogswitch {
+	background: url(dialog.png) 50% 50% no-repeat,
+		-webkit-gradient(linear, 0 0, 0 100%, from(#611), to(#8a2a2a) );
+	-webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.7), 0 1px 0
+		rgba(255, 255, 255, 0.15);
+}
+
+#dialogPopup, #versionPopup, #hviewPopup {
+	-webkit-box-sizing: border-box;
+	position: fixed;
+	z-index: 9999;
+	background: #fff;
+	-webkit-border-radius: 10px;
+	-webkit-box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.2);
+	left: 10px;
+	top: 70px;
+	right: 10px;
+	padding: 10px;
+	
+}
+
+#dialogPopup h2, #versionPopup h2, #hviewPopup h2 {
+	font-size: 1.5em;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#dialogPopup label, #versionPopup label, #hviewPopup label {
+	display: block;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+#dialogPopup input,#dialogPopup select,#dialogPopup textarea {
+	-webkit-box-sizing: border-box;
+	font-family: helvetica;
+	font-size: 1.4em;
+	margin-bottom: 10px;
+	padding: 6px;
+}
+
+#dialogPopup button, #versionPopup button {
+	-webkit-box-sizing: border-box;
+	font-size: 1.3em;
+	margin-bottom: 10px;
+	opacity: 0.5;
+}
+
+#dialogPopup.modal, #versionPopup.modal, #hviewPopup.modal {
+	width: 90%;
+	height: 90%;
+	margin-left: -250px;
+	margin-top: -60px;
+}
+
+#dialogPopup.modal h2, #versionPopup.modal h2, #hviewPopup.modal h2 {
+	margin-top: 10px;
+}
+
+#dialogCover {
+	position: absolute;
+	z-index: 9998;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.75);
+}
+
+#dialogPopup fieldset {
+	display: block;
+	float: left;
+	width: 48%;
+}
+
+#dialogPopup fieldset>input,#dialogPopup fieldset>select,#dialogPopup fieldset>textarea
+	{
+	width: 100%;
+}
+
+#dialogPopup fieldset:nth-child(even) {
+	float: right;
+}
+
+#dialogContent {
+	overflow: scroll;	
+	-webkit-overflow-scrolling: touch;
+}
+
+@media screen and (min-width: 1001px) {
+ #dialogContent, #versionContent {max-height: 900px;height: 900px;}
+ 
+}
+
+@media screen and (min-width: 701px) {
+ #dialogContent, #versionContent {max-height: 650px;height:650px;}
+}
+
+@media screen and (max-width: 700px) {
+ #dialogContent, #versionContent {max-height: 500px;height: 500px;}
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+ #dialogContent, #versionContent {max-height: 200px;height: 200px;}
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (min-width : 320px) {
+ #dialogContent, #versionContent {
+ 	max-height: 350px;
+ 	height: 350px;
+ }
+}
+
+
+.underlay{
+	display:none;
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:#000;
+	-moz-opacity:0.5;
+	opacity:.50;
+	filter:alpha(opacity=50);
+	z-index: 100;
+}
+
+
+
+
+/*
+::-webkit-scrollbar {
+    height: 12px;
+	width: 12px;
+	background: #000;
+    }
+::-webkit-scrollbar-thumb {
+    background: #393812;
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+::-webkit-scrollbar-corner {
+    background: #000;
+}*/
+
+
+/* A to Z PICKER */
+
+.atozpicker, 
+.numberpicker {
+	display: none;
+	right: 10px;
+	opacity: 0.6;
+	z-index: 100;
+	width: 5px;
+	text-align: left;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 10px;
+	font-weight: bold;
+	position: fixed;
+	
+	/* Tablet */
+	@media screen and (min-width: 701px) {
+		top: 70px;
+		bottom: 60px;	
+	}
+	
+	/* Phone */
+	@media screen and (max-width: 700px) {
+		top: 44px;
+		bottom: 34px;
+	}		
+}
+
+.atozletter, 
+.atozletter-divider {
+	list-style-image: none;
+	list-style-type: none;
+	padding-left: 15px;
+	margin-left: -35px;
+	font-weight: bold;
+	cursor: pointer;
+	height: 3.7037037%; /* 100%/27 */
+	
+	/* Tablet */
+	@media screen and (min-width: 701px) {
+		font-size: 12px;	
+	}
+	
+	/* Phone */
+	@media screen and (max-width: 700px) {
+		font-size: 10px;
+	}		
+	
+	/* Phone Landscape */
+	@media screen and (max-height: 400px) {
+		height: 5.26315789%; /* 100%/19 */
+	}	
+}
+
+.atozletter-divider {
+	display: none;
+	
+	/* Phone Landscape */
+	@media screen and (max-height: 400px) {
+		display: block;
+	}
+}
+
+.otherletter {
+	display: block;
+	
+	/* Phone Landscape */
+	@media screen and (max-height: 400px) {
+		display: none;
+	}	
+}
+
+
+
+/* UPMark */
+
+.panel#intro {
+	padding: 20px;
+	
+	p {
+		margin-bottom: 15px;
+	}
+}
+
+#qunit {
+	padding: 20px;
+	font-family: @body-font;
+	
+	p {
+		margin-bottom: 15px;
+	}
+}
+
+#qunit-header {
+	display: none;
+}
+
+#qunit-banner {
+	display: none;
+}
+
+#qunit-testrunner-toolbar {
+	display: none;
+}
+
+#qunit-userAgent {
+	background-color: transparent;
+	font-size: 14px;
+	text-shadow: none;
+	padding: 0;
+	color: #333;
+	line-height: 24px;
+	font-weight: bold;
+	color: #333;
+	font-family: @body-font;
+	margin-bottom: 15px;
+}
+
+#qunit-testresult {
+	font-family: @body-font;
+	font-size: 18px;
+	background-color: transparent;
+	padding: 0;
+	font-weight: bold;
+}
+
+#qunit-tests {
+	font-size: 14px;
+	font-weight: bold;
+	font-family: @body-font;
+	
+	> li {
+		background-color: transparent;
+		border: 0;
+		list-style-position: inside;
+		margin-bottom: 1px;
+		padding: 5px 10px;
+		border-radius: 0;
+		
+		&.pass {
+			background: #eee;
+		}
+		
+		a {
+			color: #aaa;
+			font-weight: normal;
+		}
+	}
+}
+
+
+
+/*
+@media screen and (min-height: 401px) and (max-height: 700px) and (orientation : portrait) {
+	.atozpicker, .numberpicker {
+		top: 40px;
+	}
+	.atozletter {
+		display: block;
+		font-size: 12px;
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+	.fourthletter {
+		display: block;
+	}
+	.otherletter {
+		display: block;
+	}
+	.atozletter-divider {
+		display: none;
+	}
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) {
+	.atozpicker, .numberpicker {
+		top: 35px;
+	}
+	.atozletter {
+		display: block;
+		font-size: 10px;
+		//font-weight: normal;
+		padding-top: 0px;
+		padding-bottom: 2px;
+	}
+	.fourthletter {
+	  display: block;
+	}
+	.otherletter {
+	  display: block;
+	}
+	.atozletter-divider {
+    display: none;
+	}
+}
+
+@media screen and (max-height: 400px) {
+	.atozpicker, .numberpicker {
+		top: 35px;
+	}
+	.atozletter {
+		display: block;
+		font-size: 10px;
+		//font-weight: normal;
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+	.fourthletter {
+		display: block;
+	}
+	.otherletter {
+		display: none;
+	}
+	.atozletter-divider {
+		display: block;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		height: 9px;
+	}
+}*/
+
+
+
+/* DEBUG TOOLBAR */
+
+/*div.dBar {
+margin-top: 10px;
+border-bottom: 3px solid #444444;
+background: #dddddd;
+text-shadow:none;
+}
+
+div.dBar .header {
+background:#444444;
+padding: 5px;
+color: #ffffff;
+text-align: middle;
+}
+div.dBar span.title {
+font-weight: bold;
+font-size: 14px;
+}
+div.dBar table {
+width: 100%;
+border-collapse: collapse;
+}
+div.dBar table.grid th {
+font-weight:bold;
+border: 0;
+padding: 1px 2px;
+background: #bbbbbb;
+}
+div.dBar table.grid td {
+border: 1px solid #CECECE;
+padding: 1px 2px;
+}
+div.dBar table.grid td.error {
+color: red;
+}
+div.dBar table.grid td.warning {
+color: #E0AD06;
+}
+div.dBar table.grid td.debug {
+font-style: italic;
+}
+div.dBar div.section {
+padding: 0;
+clear: both;
+}
+div.dBar div.title {
+background:#bbbbbb;
+padding:5px;
+font-weight: bold;
+border-bottom: 1px solid #000000;
+}
+div.dBar .content {
+margin: 7px 5px;
+}
+div.dBar button {
+margin: 4px;
+}
+.debugbutton {
+width: auto !important;
+display: inline;
+padding-left: 6px;
+padding-right: 6px;
+}
+.debugbuttonsmall {
+width: auto !important;
+display: inline;
+padding-left: 12px;
+padding-right: 12px;
+}*/
+
+
+
+
+/*********************
+
+OLD CSS STARTS HERE
+
+Not sure what any of it does, but I don't want to move/change it in case I break anything!
+
+**********************/
+
+
+
+/**Autocomplete**/
+.acResults {
+	padding: 0px;
+	border: 1px solid silver;
+	background-color: Window;
+	overflow: hidden;
+ box-shadow: 10px 10px 5px #888888;
+}
+
+.ac-ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-position: outside;
+	list-style: none;
+}
+
+.ac-li {
+	color: #0051bb;
+	display: block;
+	font-size: 16px;
+	padding-left: 2%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	right: 7%;
+	line-height: 24px;
+	background: #fff;
+	border: 1px solid #e5e5e5 #e5e5e5;
+	margin: 0;
+	box-sizing: border-box;
+	width: 100%;
+	cursor: pointer;
+	text-align: left;
+	background: transparent;
+	float: left;
+	background: white;
+}
+
+.ac-li:hover {
+	background-color: #f5f5f5;
+}
+
+.acLoading {
+	background: url('unp/indicator.gif') right center no-repeat;
+}
+
+.acSelect {
+	background-color: Highlight;
+	color: HighlightText;
+}
+
+/**End Autocomplete**/
+#loading {
+	background: url('unp/spinner_squares_circle.gif') center center no-repeat;
+	background-color: #000000;
+	opacity: 0.4;
+	width: 140px;
+	height: 30px;
+	display: none;
+}
+
+.two-lines {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	/*num lines*/
+	-webkit-box-orient: vertical;
+	white-space: normal;
+	line-height: 22px;
+}
+
+.formtitle {
+	display: inline !important;
+}
+
+#swipepreviousbutton {
+	position: absolute;
+	top: 50%;
+	font-size: 4em;
+	font-weight: bold;
+	left: 1%;
+	cursor: pointer;
+}
+
+#swipenextbutton {
+	position: absolute;
+	top: 50%;
+	font-size: 4em;
+	font-weight: bold;
+	right: 1%;
+	cursor: pointer;
+}
+
+.formpullleft {
+	margin-left: 0% !important;
+}

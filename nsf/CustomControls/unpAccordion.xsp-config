@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+  <faces-config-extension>
+    <namespace-uri>http://unplugged.teamstudio.com</namespace-uri>
+    <default-prefix>unp</default-prefix>
+  </faces-config-extension>
+  <composite-component>
+    <component-type>unpAccordion</component-type>
+    <composite-name>unpAccordion</composite-name>
+    <composite-file>/unpAccordion.xsp</composite-file>
+    <composite-extension>
+      <designer-extension>
+        <in-palette>true</in-palette>
+        <render-markup>&lt;?xml version="1.0" encoding="UTF-8"?&gt; &#xd;
+&lt;xp:view xmlns:xp="http://www.ibm.com/xsp/core"&gt; &#xd;
+	&lt;div style="border: 2px solid #A9A9A9; padding: 3px; margin: 5px;"&gt;&#xd;
+	&lt;h1&gt;unpAccordion&lt;/h1&gt;&#xd;
+	&lt;div&gt;&#xd;
+		To use this custom control make sure you have set the Custom Properties.&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;div&gt;&#xd;
+		The 'viewName' is the name of the categorized view you want displayed.&#xd;
+The view must have only the first column categorized and then have a maximum of 2 other columns with the data you wish to be displayed. The second (flat) column will be displayed in larger blue font while the third column will be displayed in small black font (These styles can be changed in the CSS file).&#xd;
+&#xd;
+The default position is 'menu-aligned' as this control would normally be used with a View List Control and will be set to 2/3 right in landscape mode on a tablet. Use 'Position = left-aligned' if no View List control is used and this will be rendered across the whole screen.&#xd;
+&lt;/div&gt;&#xd;
+&lt;hr /&gt;&#xd;
+	&lt;div&gt; &#xd;
+		View Name = &lt;%=this.viewName %&gt;&#xd;
+		&lt;br /&gt;&#xd;
+		XPage to Open = &lt;%=this.xpage %&gt;&#xd;
+		&lt;br /&gt;&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;hr /&gt;&#xd;
+	&lt;div&gt;&#xd;
+		To use this custom control, make sure that you have copied across the following design elements to your database:&lt;br /&gt;&#xd;
+		&lt;ul&gt;&#xd;
+			&lt;li&gt;unp/jquery-2.0.3.min.js&lt;/li&gt;&#xd;
+			&lt;li&gt;unp/jquery.blockUI.js&lt;/li&gt;&#xd;
+			&lt;li&gt;unpCommon.jss&lt;/li&gt;&#xd;
+			&lt;li&gt;unplugged.js&lt;/li&gt;&#xd;
+			&lt;li&gt;unplugged.css&lt;/li&gt;&#xd;
+			&lt;li&gt;unp/right-arrow-circle.png&lt;/li&gt;&#xd;
+			&lt;li&gt;UnpAccordionViewList.xsp (XPage)&lt;/li&gt;&#xd;
+&#xd;
+		&lt;/ul&gt;&#xd;
+	&lt;/div&gt;&#xd;
+&lt;/div&gt;&#xd;
+&lt;/xp:view&gt;</render-markup>
+        <category>Unplugged</category>
+      </designer-extension>
+    </composite-extension>
+    <property>
+      <property-name>dbName</property-name>
+      <property-class>string</property-class>
+      <description>Optional parameter if you want to use a view from a different database (make sure you use forward slashes eg mydir/mydb.nsf)</description>
+    </property>
+    <property>
+      <property-name>viewName</property-name>
+      <property-class>string</property-class>
+      <display-name>Categorized view name</display-name>
+      <description>Categorized view, where only the first column is categorized</description>
+    </property>
+    <property>
+      <property-name>xpage</property-name>
+      <property-class>string</property-class>
+      <display-name>target xpage</display-name>
+      <description>Xpage that contains the doc data when the view entry is tapped</description>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.PagePicker</editor>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>position</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <editor-parameter>left-aligned&#xd;
+menu-aligned</editor-parameter>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>insetData</property-name>
+      <property-class>boolean</property-class>
+      <display-name>insetData</display-name>
+      <property-extension>
+        <designer-extension>
+          <default-value>true</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <icon>
+      <small-icon>/icons/defaultLogoSmall.png</small-icon>
+      <large-icon>/icons/defaultLogo.png</large-icon>
+    </icon>
+    <property>
+      <property-name>ajaxload</property-name>
+      <property-class>string</property-class>
+      <display-name>ajaxload</display-name>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <editor-parameter>Yes&#xd;
+No</editor-parameter>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>expandfirstcategory</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <editor-parameter>yes&#xd;
+no</editor-parameter>
+          <default-value>no</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>filtercategory</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>photoColumn</property-name>
+      <property-class>string</property-class>
+    </property>
+  </composite-component>
+</faces-config>

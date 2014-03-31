@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!--
+		Copyright 2013 Teamstudio Inc Licensed under the Apache License,
+		Version 2.0 (the "License"); you may not use this file except in
+		compliance with the License. You may obtain a copy of the License at
+		http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+		applicable law or agreed to in writing, software distributed under the
+		License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or implied. See the License for
+		the specific language governing permissions and limitations under the
+		License
+	-->
+
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" pageTitle="Unplugged"
+	createForm="false" disableTheme="true">
+
+	<xp:this.resources>
+		<xp:script src="unp/jquery-2.0.3.min.js" clientSide="true"></xp:script>
+		<xp:script src="unp/fastclick.js" clientSide="true"></xp:script>
+		<xp:script src="unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
+		<xp:script src="unp/workspace.js" clientSide="true"></xp:script>
+		<xp:metaData name="apple-mobile-web-app-capable" content="yes">
+		</xp:metaData>
+	</xp:this.resources>
+
+	<xp:panel tagName="section" styleClass="workspace-header"
+		style="-webkit-transition: -webkit-transform 0ms cubic-bezier(0.33, 0.66, 0.66, 1); -webkit-transform-origin: 0px 0px; -webkit-transform: translate(0px, 0px) translateZ(0px);">
+		<xp:this.rendered><![CDATA[#{javascript:(compositeData.alertlevel != "" && compositeData.alertlevel != null) ||
+(compositeData.headerinfo != null)}]]></xp:this.rendered>
+		<xp:panel tagName="ul" styleClass="user-info">
+			<xp:repeat value="#{compositeData.headerinfo}" var="headeritem"
+				disableOutputTag="true">
+				<xp:text escape="false" value="#{javascript:headeritem}" id="headeritem"
+					styleClass="headeritem" tagName="li">
+				</xp:text>
+			</xp:repeat>
+		</xp:panel>
+		<xp:panel tagName="ul" styleClass="alert-status">
+			<xp:text tagName="li" value="#{compositeData.alertlevelhighlabel}">
+				<xp:this.styleClass><![CDATA[#{javascript:var out = "workspace-header-li high";
+if (compositeData.alertlevel == "high"){
+	out += " active";
+}
+return out;}]]></xp:this.styleClass>
+			</xp:text>
+			<xp:text tagName="li" value="#{compositeData.alertlevelelevatedlabel}">
+				<xp:this.styleClass><![CDATA[#{javascript:var out = "workspace-header-li elevated";
+if (compositeData.alertlevel == "elevated"){
+	out += " active";
+}
+return out;}]]></xp:this.styleClass>
+			</xp:text>
+			<xp:text tagName="li" value="#{compositeData.alertlevelnormallabel}">
+				<xp:this.styleClass><![CDATA[#{javascript:var out = "normal";
+if (compositeData.alertlevel == "normal"){
+	out += " active";
+}
+return out;}]]></xp:this.styleClass>
+			</xp:text>
+		</xp:panel>
+	</xp:panel>
+
+	<section id="wscontent">
+		<div class="wsscroll">
+			<ul class="workspace-items">
+				<xp:repeat id="chiclets" value="#{dbs}" var="chiclet">
+					<xp:panel tagName="li">
+						<xp:this.styleClass><![CDATA[#{javascript:var sout = "workspace-item";
+if (compositeData.disabledbadges != "" && compositeData.disabledbadges != null && @IsMember(chiclet.getColumnValue(compositeData.badgeidcol), compositeData.disabledbadges)){
+	sout += "-disabled";
+}
+return sout;}]]></xp:this.styleClass>
+						<xp:panel tagName="a">
+							<xp:this.attrs>
+								<xp:attr name="onclick">
+									<xp:this.value><![CDATA[#{javascript:if (compositeData.disabledbadges != "" && compositeData.disabledbadges != null && @IsMember(chiclet.getColumnValue(compositeData.badgeidcol), compositeData.disabledbadges)){
+	return "";
+}else{
+	if (chiclet.getColumnValue("LoadTimeMode") == "Yes"){
+		return "$.blockUI();window.location.href='" + chiclet.getColumnValue(compositeData.linkurlcol) + "?starttime=' + Date.now();";
+	}else{
+		return "$.blockUI();window.location.href='" + chiclet.getColumnValue(compositeData.linkurlcol) + "';";
+	}
+}}]]></xp:this.value>
+								</xp:attr>
+								<xp:attr name="href" value="#"></xp:attr>
+							</xp:this.attrs>
+							<xp:text tagName="span" id="badge"
+								styleClass="badge">
+								<xp:this.rendered><![CDATA[#{javascript:if (chiclet.getColumnValue(compositeData.badgeidcol) != ""){
+	return true;
+}else{
+	return false;
+}}]]></xp:this.rendered>
+								<xp:this.attrs>
+									<xp:attr name="badgeid"
+										value="#{javascript:chiclet.getColumnValue(compositeData.badgeidcol)}">
+									</xp:attr>
+								</xp:this.attrs>
+							</xp:text>
+							<xp:text tagName="span" id="chicletimg"
+								styleClass="chicletimg">
+								<xp:this.style><![CDATA[#{javascript:"background: url(" + chiclet.getColumnValue(compositeData.imgurlcol) + ") no-repeat scroll 0 0 transparent;"}]]></xp:this.style>
+							</xp:text>
+							<!-- <xp:image
+								url="#{javascript:db.getColumnValue(compositeData.imgurlcol)}">
+								</xp:image> -->
+							<xp:text tagName="span"
+								value="#{javascript:chiclet.getColumnValue(compositeData.labelcol);}" />
+						</xp:panel>
+					</xp:panel>
+				</xp:repeat>
+			</ul>
+		</div>
+	</section>
+
+	<style>
+		body {
+		padding-bottom: 80px !important;
+		}
+	</style>
+
+
+</xp:view>

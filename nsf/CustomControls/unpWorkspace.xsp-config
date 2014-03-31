@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+  <faces-config-extension>
+    <namespace-uri>http://unplugged.teamstudio.com</namespace-uri>
+    <default-prefix>unp</default-prefix>
+  </faces-config-extension>
+  <composite-component>
+    <component-type>unpWorkspace</component-type>
+    <composite-name>unpWorkspace</composite-name>
+    <composite-file>/unpWorkspace.xsp</composite-file>
+    <composite-extension>
+      <designer-extension>
+        <in-palette>true</in-palette>
+        <render-markup>&lt;?xml version="1.0" encoding="UTF-8"?&gt; &#xd;
+&lt;xp:view xmlns:xp="http://www.ibm.com/xsp/core"&gt; &#xd;
+	&lt;div style="border: 2px solid #A9A9A9; padding: 3px; margin: 5px;"&gt;&#xd;
+	&lt;h1&gt;unpWorkspace&lt;/h1&gt;&#xd;
+	&lt;div&gt;&#xd;
+		To use this custom control make sure you have set the Custom Properties.&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;div&gt;&lt;strong&gt;Don't forget to add &lt;i&gt;unplugged.css&lt;/i&gt; as a resource to your XPage&lt;/strong&gt;&lt;/div&gt;&#xd;
+	&lt;hr /&gt;&#xd;
+	&lt;div&gt;&#xd;
+		To use this custom control, make sure that you have copied across the following design elements to your database:&lt;br /&gt;&#xd;
+		&lt;ul&gt;&#xd;
+			&lt;li&gt;unplugged.css&lt;/li&gt;&#xd;
+			&lt;li&gt;unp/workspace.js&lt;/li&gt;&#xd;
+			&lt;li&gt;unp/jquery-2.0.3.min.js&lt;/li&gt;&#xd;
+			&lt;li&gt;unp/jquery.blockUI.min.js&lt;/li&gt;&#xd;
+		&lt;/ul&gt;&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;/div&gt;&#xd;
+&lt;/xp:view&gt;</render-markup>
+        <category>Unplugged</category>
+      </designer-extension>
+    </composite-extension>
+    <property>
+      <property-name>badgeidcol</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>linkurlcol</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>imgurlcol</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>labelcol</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>disabledbadges</property-name>
+      <property-class>string</property-class>
+      <display-name>An array of disabled BadgeIDs</display-name>
+    </property>
+    <property>
+      <property-name>alertlevel</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <editor-parameter>high&#xd;
+elevated&#xd;
+normal</editor-parameter>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>headerinfo</property-name>
+      <property-class>java.util.Collection</property-class>
+      <property-extension>
+        <property-item-class>string</property-item-class>
+        <collection-property>true</collection-property>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>alertlevelhighlabel</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <default-value>High</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>alertlevelelevatedlabel</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <default-value>Elevated</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>alertlevelnormallabel</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <default-value>Normal</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <icon>
+      <small-icon>/icons/defaultLogoSmall.png</small-icon>
+      <large-icon>/icons/defaultLogo.png</large-icon>
+    </icon>
+  </composite-component>
+</faces-config>

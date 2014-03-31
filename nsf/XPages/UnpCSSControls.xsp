@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom" xmlns:unp="http://unplugged.teamstudio.com">
+
+	<xp:this.resources>
+		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
+	</xp:this.resources>
+	<unp:unpHeader search="none" searchPage="UnpSearch.xsp"
+		headerHomeLink="/UnpMain.xsp" viewsButton="true" backButtonText="Back"
+		backButtonURL="UnpMain.xsp" title="CSS Controls">
+	</unp:unpHeader>
+	<div id="contentwrapper">
+	<unp:unpScrollableArea>
+		<xp:this.facets>
+			<xp:panel xp:key="facet_1">
+
+				<div class="panel">
+					This is a panel (or div) with &#160;
+					<strong> .panel </strong>
+					&#160; class assigned
+				</div>
+
+				<fieldset>
+					<legend>This is a fieldset</legend>
+					The contents are treated the same as the panel above
+				</fieldset>
+				
+				<div class="panel left-aligned">
+					This panel will always be left-aligned
+				</div>
+				
+
+				<div style="padding-top:5px;">
+					<input type="button" class="button" value="Generic Button (.button)" />
+				</div>
+
+				<div style="padding-top:5px;">
+					<input type="button" class="button savebutton"
+						value="Save Button (.button .savebutton)" />
+				</div>
+
+				<div style="padding-top:5px;">
+					<input type="button" class="button editbutton"
+						value="Edit Button (.button .editbutton)" />
+				</div>
+
+				<div style="padding-top:5px;">
+					<input type="button" class="button cancelbutton"
+						value="Cancel Button (.button .cancelbutton)" />
+				</div>
+
+			</xp:panel>
+		</xp:this.facets>
+	</unp:unpScrollableArea>
+	</div>
+	<unp:unpFooter newDocLoadType="ajax" synctype="currentdb"></unp:unpFooter>
+</xp:view>

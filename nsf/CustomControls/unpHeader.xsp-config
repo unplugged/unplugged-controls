@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+  <faces-config-extension>
+    <namespace-uri>http://unplugged.teamstudio.com</namespace-uri>
+    <default-prefix>unp</default-prefix>
+  </faces-config-extension>
+  <composite-component>
+    <component-type>unpHeader</component-type>
+    <composite-name>unpHeader</composite-name>
+    <composite-file>/unpHeader.xsp</composite-file>
+    <composite-extension>
+      <designer-extension>
+        <in-palette>true</in-palette>
+        <render-markup>&lt;?xml version="1.0" encoding="UTF-8"?&gt; &#xd;
+&lt;xp:view xmlns:xp="http://www.ibm.com/xsp/core"&gt; &#xd;
+	&lt;div style="border: 2px solid #A9A9A9; padding: 3px; margin: 5px;"&gt;&#xd;
+	&lt;h1&gt;unpHeader&lt;/h1&gt;&#xd;
+	&lt;div&gt;&#xd;
+		To use this custom control make sure you have set the Custom Properties. If you set the "viewsButton" property to true then the "backButtonText" must be blank for the Views Button to show.&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;div&gt;&lt;strong&gt;Don't forget to add &lt;i&gt;unplugged.css&lt;/i&gt; as a resource to your XPage&lt;/strong&gt;&lt;/div&gt;&#xd;
+	&lt;div&gt;&#xd;
+		If you enable the views button then you must also make use of the unpViewsList Custom Control.&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;div&gt;&#xd;
+		If you set the search to be "database" you must also set the name of the page to open when searching the database, default is UnpSearch.xsp&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;hr /&gt;&#xd;
+	&lt;div&gt; &#xd;
+		Header Bar with Title &lt;strong&gt;&lt;%=this.title %&gt;&lt;/strong&gt;&lt;br /&gt;&#xd;
+		&lt;br /&gt;&#xd;
+		Show Views Button = &lt;%=this.viewsButton %&gt;&#xd;
+		&lt;br /&gt;&#xd;
+		The Back Button label is set to &lt;strong&gt;&lt;%=this.backButtonText %&gt;&lt;/strong&gt; and will take the user to &lt;strong&gt;&lt;%=this.backButtonURL %&gt;&lt;/strong&gt;&lt;br /&gt;&#xd;
+		&lt;br /&gt;&#xd;
+		Search function = &lt;strong&gt;&lt;%=this.search %&gt;&lt;/strong&gt;&lt;br /&gt;&#xd;
+		&lt;br /&gt;&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;hr /&gt;&#xd;
+	&lt;div&gt;&#xd;
+		To use this custom control, make sure that you have copied across the following design elements to your database:&lt;br /&gt;&#xd;
+		&lt;ul&gt;&#xd;
+			&lt;li&gt;unplugged.css&lt;/li&gt;&#xd;
+			&lt;li&gt;unplugged.js&lt;/li&gt;&#xd;
+			&lt;li&gt;unpSearchLocal.js&lt;/li&gt;&#xd;
+			&lt;li&gt;unpSearchDatabase.js&lt;/li&gt;&#xd;
+			&lt;li&gt;unp/jquery-2.0.3.min.js&lt;/li&gt;&#xd;
+			&lt;li&gt;unp/unplugged_logo.png&lt;/li&gt;&#xd;
+			&lt;li&gt;unp/search.png&lt;/li&gt;&#xd;
+			&lt;li&gt;unp/blackBackButton.png&lt;/li&gt;&#xd;
+			&lt;li&gt;unp/home@2x.png&lt;/li&gt;&#xd;
+			&lt;li&gt;unp/menu@2x.png&lt;/li&gt;&#xd;
+			&lt;li&gt;unp/icon_19.png&lt;/li&gt;&#xd;
+		&lt;/ul&gt;&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;/div&gt;&#xd;
+&lt;/xp:view&gt;</render-markup>
+        <category>Unplugged</category>
+      </designer-extension>
+    </composite-extension>
+    <property>
+      <property-name>backButtonText</property-name>
+      <property-class>string</property-class>
+      <display-name>Text for back button</display-name>
+      <property-extension>
+        <designer-extension>
+          <validation-formula/>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>backButtonURL</property-name>
+      <property-class>string</property-class>
+      <display-name>URL for back button</display-name>
+    </property>
+    <property>
+      <property-name>search</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <default-value>none</default-value>
+          <editor-parameter>none&#xd;
+local&#xd;
+database</editor-parameter>
+        </designer-extension>
+        <required>true</required>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>searchPage</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <default-value>UnpSearch.xsp</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>title</property-name>
+      <property-class>string</property-class>
+      <display-name>title of page</display-name>
+    </property>
+    <property>
+      <property-name>viewsButton</property-name>
+      <property-class>boolean</property-class>
+      <display-name>View Button</display-name>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.std.Boolean</editor>
+          <default-value>false</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <icon>
+      <small-icon>/icons/defaultLogoSmall.png</small-icon>
+      <large-icon>/icons/defaultLogo.png</large-icon>
+    </icon>
+    <property>
+      <property-name>headerHomeLink</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.xsp.extlib.designer.tooling.editor.XPageControlIDEditor</editor>
+        </designer-extension>
+      </property-extension>
+    </property>
+  </composite-component>
+</faces-config>

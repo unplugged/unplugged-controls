@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+  <faces-config-extension>
+    <namespace-uri>http://unplugged.teamstudio.com</namespace-uri>
+    <default-prefix>unp</default-prefix>
+  </faces-config-extension>
+  <composite-component>
+    <component-type>unpSearchResults</component-type>
+    <composite-name>unpSearchResults</composite-name>
+    <composite-file>/unpSearchResults.xsp</composite-file>
+    <composite-extension>
+      <designer-extension>
+        <in-palette>true</in-palette>
+        <render-markup>&lt;?xml version="1.0" encoding="UTF-8"?&gt; &#xd;
+&lt;xp:view xmlns:xp="http://www.ibm.com/xsp/core"&gt; &#xd;
+	&lt;div style="border: 2px solid #A9A9A9; padding: 3px; margin: 5px;"&gt;&#xd;
+	&lt;h1&gt;unpSearchResults&lt;/h1&gt;&#xd;
+	&lt;div&gt;&#xd;
+		To use this custom control make sure you have set the Custom Properties.&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;div&gt;&lt;strong&gt;Don't forget to add &lt;i&gt;unplugged.css&lt;/i&gt; as a resource to your XPage&lt;/strong&gt;&lt;/div&gt;&#xd;
+	&lt;hr /&gt;&#xd;
+	&lt;div&gt; &#xd;
+		Title &lt;strong&gt;&lt;%=this.title %&gt;&lt;/strong&gt;&lt;br /&gt;&#xd;
+		&lt;br /&gt;&#xd;
+		View Name = &lt;%=this.viewName %&gt;&#xd;
+		&lt;br /&gt;&#xd;
+		Summary Column = &lt;%=this.summaryColumn %&gt;&#xd;
+		&lt;br /&gt;&#xd;
+		Detail Column = &lt;%=this.detailColumn %&gt;&#xd;
+		&lt;br /&gt;&#xd;
+		XPage to Open = &lt;%=this.xpageDoc %&gt;&#xd;
+		&lt;br /&gt;&#xd;
+		Inset Data = &lt;%=this.insetData %&gt;&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;hr /&gt;&#xd;
+	&lt;div&gt;&#xd;
+		To use this custom control, make sure that you have copied across the following design elements to your database:&lt;br /&gt;&#xd;
+		&lt;ul&gt;&#xd;
+			&lt;li&gt;unp/jquery-2.0.3.min.js&lt;/li&gt;&#xd;
+			&lt;li&gt;unp/jquery.blockUI.js&lt;/li&gt;&#xd;
+			&lt;li&gt;unplugged.js&lt;/li&gt;&#xd;
+			&lt;li&gt;unpCommon.jss&lt;/li&gt;&#xd;
+			&lt;li&gt;unplugged.css&lt;/li&gt;&#xd;
+			&lt;li&gt;unp/right-arrow-circle.png&lt;/li&gt;&#xd;
+		&lt;/ul&gt;&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;/div&gt;&#xd;
+&lt;/xp:view&gt;</render-markup>
+        <category>Unplugged</category>
+      </designer-extension>
+    </composite-extension>
+    <property>
+      <property-name>viewName</property-name>
+      <property-class>string</property-class>
+      <display-name>view</display-name>
+      <property-extension>
+        <required>true</required>
+        <designer-extension>
+          <editor>com.ibm.xsp.extlib.designer.tooling.editor.ViewNameEditor</editor>
+        </designer-extension>
+      </property-extension>
+      <description>Alias of Categorized View - first column only must be categorized </description>
+    </property>
+    <property>
+      <property-name>summaryColumn</property-name>
+      <property-class>string</property-class>
+      <display-name>Summary Row</display-name>
+      <property-extension>
+        <required>true</required>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>detailColumn</property-name>
+      <property-class>string</property-class>
+      <display-name>Details Row (Optional)</display-name>
+      <description>Secondary data displayed under summary. Enter name of column in view. </description>
+      <property-extension>
+        <designer-extension>
+          <default-value/>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>xpageDoc</property-name>
+      <property-class>string</property-class>
+      <display-name>Target XPage</display-name>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.xsp.extlib.designer.tooling.editor.XPageControlIDEditor</editor>
+          <validation-formula>//Add .xsp extension !! &#xd;
+return xpageDoc.indexOf(".xsp") &gt;= 0;</validation-formula>
+        </designer-extension>
+        <required>true</required>
+      </property-extension>
+      <description>XPage to open the document</description>
+    </property>
+    <property>
+      <property-name>insetData</property-name>
+      <property-class>boolean</property-class>
+      <display-name>Inset Accordion</display-name>
+      <property-extension>
+        <designer-extension>
+          <default-value>false</default-value>
+        </designer-extension>
+      </property-extension>
+      <description>Check true if you want the accordion set inset with a border matching the background color</description>
+    </property>
+    <property>
+      <property-name>title</property-name>
+      <property-class>string</property-class>
+      <display-name>Title of view data</display-name>
+    </property>
+    <property>
+      <property-name>viewsearch</property-name>
+      <property-class>string</property-class>
+    </property>
+    <icon>
+      <small-icon>/icons/defaultLogoSmall.png</small-icon>
+      <large-icon>/icons/defaultLogo.png</large-icon>
+    </icon>
+    <property>
+      <property-name>numberofrows</property-name>
+      <property-class>int</property-class>
+      <property-extension>
+        <designer-extension>
+          <default-value>20</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
+  </composite-component>
+</faces-config>

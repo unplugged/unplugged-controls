@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+  <faces-config-extension>
+    <namespace-uri>http://unplugged.teamstudio.com</namespace-uri>
+    <default-prefix>unp</default-prefix>
+  </faces-config-extension>
+  <composite-component>
+    <component-type>unpFormViewer</component-type>
+    <composite-name>unpFormViewer</composite-name>
+    <composite-file>/unpFormViewer.xsp</composite-file>
+    <composite-extension>
+      <designer-extension>
+        <in-palette>true</in-palette>
+        <render-markup>&lt;?xml version="1.0" encoding="UTF-8"?&gt; &#xd;
+&lt;xp:view xmlns:xp="http://www.ibm.com/xsp/core"&gt; &#xd;
+	&lt;div style="border: 2px solid #A9A9A9; padding: 3px; margin: 5px;"&gt;&#xd;
+	&lt;h1&gt;unpFormViewer&lt;/h1&gt;&#xd;
+	&lt;hr /&gt;&#xd;
+	&lt;div&gt; &#xd;
+		Form Name: &lt;strong&gt;&lt;%=this.formname %&gt;&lt;/strong&gt;&lt;br /&gt;&#xd;
+		Title: &lt;strong&gt;&lt;%=this.title %&gt;&lt;/strong&gt;&lt;br /&gt;&#xd;
+		Show Buttons: &lt;strong&gt;&lt;%=this.showbuttons %&gt;&lt;/strong&gt;&lt;br /&gt;&#xd;
+		Edit XPage: &lt;strong&gt;&lt;%=this.editxpagename %&gt;&lt;/strong&gt;&lt;br /&gt;&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;div&gt;&lt;strong&gt;Don't forget to add &lt;i&gt;unplugged.css&lt;/i&gt; as a resource to your XPage&lt;/strong&gt;&lt;/div&gt;&#xd;
+	&lt;hr /&gt;&#xd;
+	&lt;xp:callback facetName="facet_1" id="callback1"&gt;&lt;/xp:callback&gt;&#xd;
+	&lt;hr /&gt;&#xd;
+	&lt;div&gt;&#xd;
+		To use this custom control, make sure that you have copied across the following design elements to your database:&lt;br /&gt;&#xd;
+		&lt;ul&gt;&#xd;
+			&lt;li&gt;unp/jquery-2.0.3.min.js&lt;/li&gt;&#xd;
+			&lt;li&gt;unp/jquery.blockUI.js&lt;/li&gt;&#xd;
+			&lt;li&gt;unplugged.js&lt;/li&gt;&#xd;
+			&lt;li&gt;unplugged.css&lt;/li&gt;&#xd;
+		&lt;/ul&gt;&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;/div&gt;&#xd;
+&lt;/xp:view&gt;</render-markup>
+        <category>Unplugged</category>
+      </designer-extension>
+    </composite-extension>
+    <property>
+      <property-name>dbName</property-name>
+      <property-class>string</property-class>
+      <description>Optional parameter if you want to use data from a different database (make sure you use forward slashes eg mydir/mydb.nsf)</description>
+    </property>
+    <property>
+      <property-name>formname</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>title</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>titleiconfield</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <editor-parameter>yes&#xd;
+no</editor-parameter>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>showbuttons</property-name>
+      <property-class>boolean</property-class>
+      <property-extension>
+        <designer-extension>
+          <default-value>true</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>editxpagename</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>newresponsexpagename</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>editxpagewithajax</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <editor-parameter>yes&#xd;
+no</editor-parameter>
+          <default-value>yes</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <icon>
+      <small-icon>/icons/defaultLogoSmall.png</small-icon>
+      <large-icon>/icons/defaultLogo.png</large-icon>
+    </icon>
+    <property>
+      <property-name>position</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <editor-parameter>menu-aligned&#xd;
+left-aligned</editor-parameter>
+          <default-value>menu-aligned</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
+  </composite-component>
+</faces-config>

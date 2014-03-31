@@ -1,0 +1,111 @@
+.footer {
+	position: fixed;
+	z-index: 500;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 0px;
+	border-top: 1px solid @footer-border-top;
+	background: @footer-background;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+	
+	@media screen and (min-width: 701px) {
+		height: 60px;
+	}
+	@media screen and (max-width: 700px) {
+		height: 45px;
+	}
+
+	// Footer Label
+	> span {
+		display: block;
+		color: @footer-span-color;
+		font-size: 12px;
+		font-weight: bold;
+		text-align: center;
+		
+		@media screen and (min-width: 701px) {
+			margin-top: 21px;
+		}
+		@media screen and (max-width: 700px) {
+			margin-top: 16px;
+		}
+	}
+}
+
+.tabfootertext {
+	position: absolute;
+	top: 0px;
+	left: 100px;
+	width: 150px;
+	color: #999999;
+}
+
+#tabfooter {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	text-align: center;
+}
+
+#footerTabBar {
+	-webkit-padding-start: 0px;
+	margin: auto;
+	display: inline-block;
+	@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) { 
+		position: absolute;
+		right: 0px;
+	}	
+
+	li {
+		display: block;
+		float: left;
+		width: 100px;		
+		cursor: pointer;
+		position: relative;		
+
+		.footerTabtext {
+			color: @footerTabtext-color;
+			font-size: @footerTabtext-font-size;
+			font-weight: @footerTabtext-font-weight;
+			line-height: 10px;
+			white-space: nowrap;
+			display: block;
+			padding-top: 40px;
+			@media screen and (max-width: 700px) { padding-top: 32px; }
+		}
+
+		// New icons	
+		i {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			text-align: center;
+
+			&:before {
+				color: @footerTabtext-color;
+				position:absolute;
+				left:0;
+				top:10px;
+				@media screen and (max-width: 700px) { top: 3px; }
+				display:block;
+				width: 100%;
+				text-align: center;		
+				font-size: 28px;			
+			}
+		}	
+		
+		&.tabSelected {
+			padding-bottom: 10px;
+
+			.footerTabtext {
+				color: @tabSelected-footerTabtext-color;
+			}		
+			
+			i:before {
+				color: @tabSelected-footerTabtext-color;
+			}
+		}
+	}
+}

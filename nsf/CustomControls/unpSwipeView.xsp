@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+		Copyright 2013 Teamstudio Inc Licensed under the Apache License,
+		Version 2.0 (the "License"); you may not use this file except in
+		compliance with the License. You may obtain a copy of the License at
+		http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+		applicable law or agreed to in writing, software distributed under the
+		License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or implied. See the License for
+		the specific language governing permissions and limitations under the
+		License
+	-->
+
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:this.resources>
+		<xp:script src="/unp/jquery-2.0.3.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/fastclick.js" clientSide="true"></xp:script>
+		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
+		<xp:script src="unp/swipeview.js" clientSide="true"></xp:script>
+		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
+	</xp:this.resources>
+	<xp:this.data>
+		<xp:dominoDocument var="docImages"
+			documentId="#{javascript:compositeData.DocUNID;}" action="openDocument"
+			formName="#{javascript:compositeData.formName}">
+			<xp:this.databaseName><![CDATA[#{javascript:if (compositeData.dbName == null || compositeData.dbName == ""){
+	return database.getFilePath();
+}else{
+	return compositeData.dbName;
+}}]]></xp:this.databaseName>
+		</xp:dominoDocument>
+	</xp:this.data>
+	
+	<xp:this.beforePageLoad>
+		<xp:executeScript>
+			<xp:this.script><![CDATA[#{javascript:var images = new Array;
+var imageFile = "";
+var caption = "";
+var arraySeparator = "[";
+var attachmentList = null;
+if (isUnpluggedServer()){
+	attachmentList = docImages.getAttachmentList();
+}else{
+	attachmentList = $A(session.evaluate("@AttachmentNames", docImages.getDocument()));
+}
+var thisUNID = docImages.getDocument().getUniversalID();
+var dbPath = compositeData.dbName;
+if (dbPath == null || dbPath == ""){
+	dbPath = database.getFilePath();
+}
+dbPath = @ReplaceSubstring(dbPath, "\\", "/");
+for(var i=0; i<attachmentList.length; i++){
+
+  var imageDocID = compositeData.imageDocId;
+  var imagename = attachmentList[i];
+  if (isUnpluggedServer()){
+  	imagename = imagename.getName();
+  }
+  
+  imageFile = "/" + dbPath + "/0/" + docImages.getDocument().getUniversalID() + "/$FILE/" + imagename;
+  
+  /*images.push({
+     img: imageFile,
+     width: 300,
+     height: 250,
+     desc: 'caption' 
+  });*/
+  images += arraySeparator + "{"
+  images += "'img': '" + imageFile + "',"
+  //images += "'width': '300',"
+  //images += "'height': '250',"
+  images += "'desc': '" + imagename + "'" 
+  images += "}" 
+  
+  arraySeparator = ",";
+}
+
+images+="]";
+
+viewScope.put("images", images);
+
+}]]></xp:this.script>
+		</xp:executeScript>
+	</xp:this.beforePageLoad>
+	<div id="wrapper"></div>
+	<ul id="nav">
+		<li id="prev" onclick="gallery.prev()">-</li>
+		<li class="selected" onclick="gallery.goToPage(0)"></li>
+		<li onclick="gallery.goToPage(1)"></li>
+		<li onclick="gallery.goToPage(2)"></li>
+		<li onclick="gallery.goToPage(3)"></li>
+		<li onclick="gallery.goToPage(4)"></li>
+		<li onclick="gallery.goToPage(5)"></li>
+		<li id="next" onclick="gallery.next()">+</li>
+	</ul>
+	<div id="closeButton">
+		<xp:panel tagName="a" id="link1">
+			<xp:this.attrs>
+				<xp:attr name="onclick">
+					<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='" + compositeData.closeXPage + "';"}]]></xp:this.value>
+				</xp:attr>
+				<xp:attr name="href" value="#">
+				</xp:attr>
+			</xp:this.attrs>
+			<span class="icon"></span>
+			<span class="label">Close</span>
+		</xp:panel>
+	</div>
+	<div id="swipepreviousbutton" onclick="gallery.prev()">
+		<xp:image url="/unp%2Fglyphicons_210_left_arrow@2x.png" id="image1">
+		</xp:image>
+	</div>
+	<div id="swipenextbutton" onclick="gallery.next()">
+		<xp:image url="/unp%2Fglyphicons_211_right_arrow@2x.png" id="image2">
+		</xp:image>
+	</div>
+	<xp:scriptBlock id="script1">
+		<xp:this.value>
+			<![CDATA[
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+var	gallery,
+	el,
+	i,
+	page,
+	dots = document.querySelectorAll('#nav li'),
+	slides = #{javascript:viewScope.get('images');};
+
+gallery = new SwipeView('#wrapper', { numberOfPages: slides.length });
+
+// Load initial data
+for (i=0; i<3; i++) {
+	page = i==0 ? slides.length-1 : i-1;
+	el = document.createElement('img');
+	el.className = 'loading';
+	el.src = slides[page].img;
+	//el.width = slides[page].width;
+	//el.height = slides[page].height;
+	el.onload = function () { this.className = ''; }
+	gallery.masterPages[i].appendChild(el);
+
+	el = document.createElement('span');
+	el.innerHTML = slides[page].desc;
+	gallery.masterPages[i].appendChild(el)
+}
+
+gallery.onFlip(function () {
+	var el,
+		upcoming,
+		i;
+
+	for (i=0; i<3; i++) {
+		upcoming = gallery.masterPages[i].dataset.upcomingPageIndex;
+
+		if (upcoming != gallery.masterPages[i].dataset.pageIndex) {
+			el = gallery.masterPages[i].querySelector('img');
+			el.className = 'loading';
+			el.src = slides[upcoming].img;
+			//el.width = slides[upcoming].width;
+			//el.height = slides[upcoming].height;
+			
+			el = gallery.masterPages[i].querySelector('span');
+			el.innerHTML = slides[upcoming].desc;
+		}
+	}
+	
+	document.querySelector('#nav .selected').className = '';
+	dots[gallery.pageIndex+1].className = 'selected';
+});
+
+gallery.onMoveOut(function () {
+	gallery.masterPages[gallery.currentMasterPage].className = gallery.masterPages[gallery.currentMasterPage].className.replace(/(^|\s)swipeview-active(\s|$)/, '');
+});
+
+gallery.onMoveIn(function () {
+	var className = gallery.masterPages[gallery.currentMasterPage].className;
+	/(^|\s)swipeview-active(\s|$)/.test(className) || (gallery.masterPages[gallery.currentMasterPage].className = !className ? 'swipeview-active' : className + ' swipeview-active');
+});
+]]>
+		</xp:this.value>
+	</xp:scriptBlock>
+</xp:view>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!--
+		Copyright 2013 Teamstudio Inc Licensed under the Apache License,
+		Version 2.0 (the "License"); you may not use this file except in
+		compliance with the License. You may obtain a copy of the License at
+		http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+		applicable law or agreed to in writing, software distributed under the
+		License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or implied. See the License for
+		the specific language governing permissions and limitations under the
+		License
+	-->
+
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<style>
+		body {
+		padding-bottom: 45px !important;
+		}
+		@media screen and
+		(min-width: 701px) {
+		body {
+		padding-bottom: 60px !important;
+		}
+		}
+		@media
+		screen and (max-width: 700px) {
+		body {
+		padding-bottom: 45px !important;
+		}
+		}
+	</style>
+	<xp:panel styleClass="footer black" rendered="#{javascript:!isAjax()}">
+
+		<div id='tabfooter'>
+			<ul id="footerTabBar">
+				<xp:repeat id="repeat1" rows="30"
+					disableOutputTag="true" var="menuItem"
+					value="#{javascript:compositeData.tab;}"
+					indexVar="menuItemIndex">
+					<xp:panel tagName="li">
+						<xp:this.styleClass><![CDATA[#{javascript:if (((menuItem.page == null || menuItem.page == "") && menuItemIndex == 0) || matchCurrentURL(menuItem.page)){
+	return "menuitem" + viewScope.menuItemIndex + " tabSelected";
+}else{
+	return "menuitem" + viewScope.menuItemIndex + " viewMenuItem";
+}}]]></xp:this.styleClass>
+						<xp:this.attrs>
+							<xp:attr name="onclick">
+								<xp:this.value><![CDATA[#{javascript:var js = "";
+if (!isEmpty(menuItem.callback)){
+	js += menuItem.callback;
+}
+if (!isEmpty(menuItem.page)){
+	js += "unp.openPage('" + getDbPath() + menuItem.page + "', '" + menuItem.ajaxtargetid + "')";
+}
+return js;}]]></xp:this.value>
+							</xp:attr>
+						</xp:this.attrs>
+						<xp:panel tagName="i" id="icon">
+							<xp:this.rendered><![CDATA[#{javascript:if (viewScope.menuItemIndex == null){
+	viewScope.menuItemIndex = 0;
+}else{
+	viewScope.menuItemIndex = viewScope.menuItemIndex + 1;
+}
+menuItem.icon != null && menuItem.icon != ""}]]></xp:this.rendered>
+							<xp:this.styleClass><![CDATA[#{javascript:"fa fa-fw " + menuItem.icon;}]]></xp:this.styleClass>
+						</xp:panel>
+						<xp:text id="menutext"
+							styleClass="footerTabtext"
+							value="#{javascript:menuItem.label;}">
+						</xp:text>
+					</xp:panel>
+
+				</xp:repeat>
+			</ul>
+		</div>
+		<xp:link id="link1" styleClass="syncButton" value="#">
+			<xp:this.rendered><![CDATA[#{javascript:isUnpluggedServer() && compositeData.synctype == "currentdb";}]]></xp:this.rendered>
+			<xp:eventHandler event="onclick" submit="true"
+				refreshMode="complete">
+				<xp:this.action>
+					<xp:actionGroup>
+						<xp:executeScript>
+							<xp:this.script><![CDATA[#{javascript:db = session.getCurrentDatabase();
+var date = new Date();
+session.setEnvironmentVar("ro.last.sync." + @LowerCase(@ReplaceSubstring(db.getFilePath(), "\\", "")), @Text(date.getTime()), true);
+db.replicate("someserver");}]]></xp:this.script>
+						</xp:executeScript>
+						<xp:openPage target="openDocument">
+							<xp:this.name><![CDATA[#{javascript:if (compositeData.postSyncTarget == null || compositeData.postSyncTarget == ""){
+	return "/UnpMain.xsp";
+}else{
+	return compositeData.postSyncTarget;
+}}]]></xp:this.name>
+						</xp:openPage>
+					</xp:actionGroup>
+				</xp:this.action>
+				<xp:this.script><![CDATA[$.blockUI();]]></xp:this.script>
+			</xp:eventHandler>
+			<span class="icon"></span>
+			<span class="label">Sync</span>
+		</xp:link>
+		<xp:link id="link2" styleClass="syncButton" value="#">
+			<xp:this.rendered><![CDATA[#{javascript:isUnpluggedServer() && compositeData.synctype == "alldbs";}]]></xp:this.rendered>
+			<span class="icon"></span>
+			<span class="label">Sync</span>
+			<xp:this.attrs>
+				<xp:attr name="onclick">
+					<xp:this.value><![CDATA[#{javascript:if (compositeData.postSyncTarget != null && compositeData.postSyncTarget != ""){
+	return "unp.syncAllDbs('" + compositeData.postSyncTarget + "')";
+}else{
+	return "unp.syncAllDbs()";
+}}]]></xp:this.value>
+				</xp:attr>
+			</xp:this.attrs>
+		</xp:link>
+		<xp:text styleClass="tabfootertext">
+			<xp:this.value><![CDATA[#{javascript:var dbrep = session.getEnvironmentString("ro.last.sync." + @LowerCase(@ReplaceSubstring(database.getFilePath(), "\\", "/")), true);
+var rep = session.getEnvironmentString("ro.last.sync", true); 
+if ("" == rep) {
+	rep = session.getEnvironmentString("ro.last.replicate", true); 
+} 
+if ("" ==	rep) { 
+	rep = "(never)"; 
+} else {
+	if (dbrep != ""){
+		try{
+			var irep = parseInt(rep);
+			var idbrep = parseInt(dbrep);
+			if (idbrep > irep){
+				rep = dbrep;
+			}
+		}catch(e){
+			//rep = "localdate " + e;
+		}
+	}
+	try { 
+		var date = new Date(parseInt(rep)); 
+		rep = @Text(date);
+		rep = @Left(@Trim(rep), @Trim(rep).length - 3); 
+	} catch (e) {
+		//rep = "dateparse " + e;
+	} 
+} 
+if (rep == "01/01/70"){
+	rep = "(never)";
+}else{
+	rep = timeSince(new Date(rep));
+}
+return "Updated " + rep;}]]></xp:this.value>
+			<xp:this.rendered><![CDATA[#{javascript:return isUnpluggedServer() && !isPhone();}]]></xp:this.rendered>
+		</xp:text>
+	</xp:panel>
+</xp:view>

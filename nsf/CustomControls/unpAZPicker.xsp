@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:panel tagName="ul" id="atozpicker" styleClass="atozpicker">
+		<xp:repeat var="letter" indexVar="letterindex"
+			disableOutputTag="true">
+			<xp:this.value><![CDATA[#{javascript:['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','#']}]]></xp:this.value>
+			<xp:text id="letter" tagName="li">
+				<xp:this.value><![CDATA[#{javascript:
+letter}]]></xp:this.value>
+				<xp:this.styleClass><![CDATA[#{javascript:if (viewScope.letterindex == null){
+	viewScope.letterindex = 3;
+}else{
+	viewScope.letterindex += 1;
+}
+if (letter == "#"){
+	return "atozletter otherletter switchletterlist";
+}else if (letter == "A" || letter == "D" || letter == "G" || letter == "I" || letter == "L" || letter == "O" || letter == "R" || letter == "T" || letter == "W" || letter == "Z"){
+	return "atozletter fourthletter";
+}else{
+	return "atozletter otherletter";
+}}]]></xp:this.styleClass>
+			</xp:text>
+			<xp:text id="divider" tagName="li" escape="false"
+				rendered="#{javascript:viewScope.letterindex % 3 == 0}" styleClass="atozletter-divider">
+				<xp:this.value><![CDATA[#{javascript:"&#8226;"}]]></xp:this.value>
+			</xp:text>
+		</xp:repeat>
+	</xp:panel>
+	<xp:panel tagName="ul" id="numberpicker" styleClass="numberpicker" style="display: none;">
+		<xp:repeat var="number" indexVar="numberindex"
+			disableOutputTag="true">
+			<xp:this.value><![CDATA[#{javascript:['1','2','3','4','5','6','7','8','9','0','A']}]]></xp:this.value>
+			<xp:text id="computedField1" tagName="li">
+				<xp:this.value><![CDATA[#{javascript:
+number}]]></xp:this.value>
+				<xp:this.styleClass><![CDATA[#{javascript:var out = "atozletter";
+if (number == "A"){
+	out += " switchletterlist";
+}
+return out;}]]></xp:this.styleClass>
+			</xp:text>
+		</xp:repeat>
+	</xp:panel>
+	<style>
+		.multiLineIcon{display: none;}
+	</style>
+</xp:view>

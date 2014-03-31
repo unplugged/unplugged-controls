@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright 2013 Teamstudio Inc 
+Licensed under the Apache License, Version 2.0 (the "License"); 
+you may not use this file except in compliance with the License. You may obtain a copy of the License at
+http://www.apache.org/licenses/LICENSE-2.0 
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed 
+on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
+the specific language governing permissions and limitations under the License
+ -->
+
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom" xmlns:unp="http://unplugged.teamstudio.com">
+
+	<xp:this.data>
+		<xp:dominoView var="dbs" viewName="Databases"></xp:dominoView>
+	</xp:this.data>
+	<xp:this.resources>
+		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
+	</xp:this.resources>
+	<unp:unpHeader search="none" searchPage="UnpSearch.xsp" headerHomeLink="/UnpMain.xsp"
+		viewsButton="false" title="Continuity">
+	</unp:unpHeader>
+	<unp:unpWorkspace imgurlcol="ImgUrl" labelcol="Title"
+		linkurlcol="UnpUrl" alertlevel="elevated" alertlevelhighlabel="High" alertlevelelevatedlabel="Elevated"
+		alertlevelnormallabel="Normal" badgeidcol="BadgeID">
+		<unp:this.headerinfo>
+			<xp:value>
+				#{javascript:&quot;&lt;strong&gt;&quot; +
+				@Name(&quot;[CN]&quot;, @UserName()) +
+				&quot;&lt;/strong&gt;&quot;}
+					</xp:value>
+			<xp:value>BCM Local Coordinator</xp:value>
+			<xp:value>
+				&lt;strong&gt;Org Unit:&lt;/strong&gt; Zetafire
+					</xp:value>
+		</unp:this.headerinfo>
+	</unp:unpWorkspace>
+	<unp:unpFooter settingsurl="/unpws.unp/UnpAbout.xsp"
+		synctype="currentdb">
+	</unp:unpFooter>
+	<script>
+		$(window).load( function() {
+			setBadge("Updates", "7");
+		});
+	</script>
+</xp:view>

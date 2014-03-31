@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+  <faces-config-extension>
+    <namespace-uri>http://unplugged.teamstudio.com</namespace-uri>
+    <default-prefix>unp</default-prefix>
+  </faces-config-extension>
+  <composite-component>
+    <component-type>unpSwipeView</component-type>
+    <composite-name>unpSwipeView</composite-name>
+    <composite-file>/unpSwipeView.xsp</composite-file>
+    <composite-extension>
+      <designer-extension>
+        <in-palette>true</in-palette>
+        <render-markup>&lt;?xml version="1.0" encoding="UTF-8"?&gt; &#xd;
+&lt;xp:view xmlns:xp="http://www.ibm.com/xsp/core"&gt; &#xd;
+	&lt;div style="border: 2px solid #A9A9A9; padding: 3px; margin: 5px;"&gt;&#xd;
+	&lt;h1&gt;unpSwipeView&lt;/h1&gt;&#xd;
+	&lt;div&gt;&#xd;
+		To use this custom control make sure you create a Document datasource with the var name = docImages&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;div&gt;&lt;strong&gt;Don't forget to add &lt;i&gt;unplugged.css&lt;/i&gt; as a resource to your XPage&lt;/strong&gt;&lt;/div&gt;&#xd;
+	&lt;div&gt;&#xd;
+		Currently, this version only supports retrieving image attachments (from RTF's) from one Notes document. This is planned to be expanded so multiple doc datasources can be given and images displayed in one gallery regardless of the originating source docs.&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;div&gt;&#xd;
+		The suggested way to use this is to have a button/link (could use thumbnail images) on an XPage that directs the user to this new XPage that only containing this control. The rendering and useage of this viewer is intended for full screen use.&#xd;
+	&lt;/div&gt;&#xd;
+&lt;hr /&gt;&#xd;
+	&lt;div&gt; &#xd;
+		DocUNID &lt;strong&gt;&lt;%=this.DocUNID %&gt;&lt;/strong&gt;&lt;br /&gt;&#xd;
+		&lt;br /&gt;&#xd;
+		Form Name = &lt;%=this.formName %&gt;&#xd;
+		&lt;br /&gt;&#xd;
+	&lt;/div&gt;&#xd;
+	&lt;hr /&gt;&#xd;
+	&lt;div&gt;&#xd;
+		To use this custom control, make sure that you have copied across the following design elements to your database:&lt;br /&gt;&#xd;
+		&lt;ul&gt;&#xd;
+			&lt;li&gt;unpSwipeView.css&lt;/li&gt;&#xd;
+			&lt;li&gt;unpSwipeView.js&lt;/li&gt;&#xd;
+		&lt;/ul&gt;&#xd;
+	&lt;/div&gt;&#xd;
+&lt;/div&gt;&#xd;
+&lt;/xp:view&gt;</render-markup>
+        <category>Unplugged</category>
+      </designer-extension>
+    </composite-extension>
+    <property>
+      <property-name>DocUNID</property-name>
+      <property-class>string</property-class>
+      <display-name>UNID of document</display-name>
+      <property-extension>
+        <required>true</required>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>formName</property-name>
+      <property-class>string</property-class>
+      <display-name>Name of form containg RTF attachments</display-name>
+      <property-extension>
+        <required>true</required>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>closeXPage</property-name>
+      <property-class>string</property-class>
+    </property>
+    <icon>
+      <small-icon>/icons/defaultLogoSmall.png</small-icon>
+      <large-icon>/icons/defaultLogo.png</large-icon>
+    </icon>
+    <property>
+      <property-name>dbName</property-name>
+      <property-class>string</property-class>
+    </property>
+  </composite-component>
+</faces-config>
