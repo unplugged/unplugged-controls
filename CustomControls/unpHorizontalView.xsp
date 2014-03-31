@@ -62,7 +62,7 @@ return viewname;}]]></xp:this.viewName>
                                 <xp:this.rendered><![CDATA[#{javascript:compositeData.favoritesonly != "yes" && (sessionScope.urlquery == "" || sessionScope.urlquery == null)}]]></xp:this.rendered>
 
                                 <div class="btn-group">
-                                        <a id="dropdownlink" class="dropdown-toggle" onclick="dropdownToggle(this)">
+                                        <a id="dropdownlink" class="dropdown-toggle" onclick="unp.dropdownToggle(this)">
                                                 Language:
                                                 <xp:text tagName="span" styleClass="dropdownlabel languagelabel">
                                                         <xp:this.value><![CDATA[#{javascript:var lang=sessionScope.urllanguagefilter;
@@ -103,7 +103,7 @@ if (currentyear == ""){
                                         </ul>
                                 </div>
                                 <div class="btn-group">
-                                        <a id="yeardropdownlink" class="dropdown-toggle" onclick="dropdownToggle(this)">
+                                        <a id="yeardropdownlink" class="dropdown-toggle" onclick="unp.dropdownToggle(this)">
                                                 Year:
                                                 <xp:text tagName="span" styleClass="dropdownlabel yearlabel">
                                                         <xp:this.value><![CDATA[#{javascript:var yearfilter=sessionScope.urlyearfilter;
