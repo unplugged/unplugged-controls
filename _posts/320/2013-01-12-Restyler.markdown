@@ -1,0 +1,24 @@
+---
+layout: 310-post
+title:  "Restyler"
+date:   2013-12-01 17:00
+categories: "310"
+---
+
+The Retyler is a website which allows you to create custom themes and access them in two ways.
+
+The custom themes can completely change the look and feel of your Unplugged Controls application without a single code change on your part, for example, our Sampler application has three different themes:
+
+![Default Dark Theme](http://teamstudio.s3.amazonaws.com/images/theme-dark.PNG)
+![Alternate Light Theme](http://teamstudio.s3.amazonaws.com/images/theme-light.PNG)
+![iOS7 Theme](http://teamstudio.s3.amazonaws.com/images/theme-ios7.PNG)
+
+To create your own theme, visit the [Restyler website](http://restyler.teamstudio.com/) and register an account. You can then create a new theme and save it. 
+
+![Restyler Customise Page](http://teamstudio.s3.amazonaws.com/images/restyler-customise.png)
+
+When it's saved, if you're syncing with the Teamstudio Demo Server with your Unplugged app, then change the account name and password to match the account you just created on the Restyler website and then sync your device. You will see a "My Custom Theme" link which shows you a customised workspace and also a custom version of the Sampler app which demonstrate your theme.
+
+You can also download a version of the Sampler app with your custom theme installed by going to the "My Saved Themes" page on the Restyler website and clicking the download button on the relevant theme. This will download an NSF with the theme you created stored as a Stylesheet resource called "unplugged.css". You can then use this in your own custom applications in place of our standard unplugged.css file.
+
+When we release new versions of the Controls you may need to regenerate your custom theme to take advantage of the new controls functionality.
