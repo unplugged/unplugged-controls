@@ -24,6 +24,25 @@ title: Unplugged Controls
     to
     create an application.</p>
 
+
+  <h2>What's new in 3.2?</h2>
+
+  <ul>
+<li>Moved all JavaScript into "unp." namespace. Existing custom calls to our generic functions will need to be updated</li>
+<li>Added Photo support to unpAccordion control</li>
+<li>Restored closeXPageName property to unpFormViewer, by default it will be blank but by populating it, the default back functionality will be overridden</li>
+<li>Added Save and Cancel Buttons to Text Edit panel in Sampler application</li>
+<li>Fixed Load More... issue in Horizontal View control</li>
+<li>Fixed bug when displaying images in Swipe View in landscape in large Android tablets</li>
+<li>Fixed text zoom bug in Text Reading Panel</li>
+<li>Fixed dialog not centering properly in some situations</li>
+<li>Fixed dialog not floating above all layers in some situations</li>
+<li>Fixed CSS Controls in some custom themes</li>
+<li>Improved functionality when saving documents into other databases</li>
+<li>Fixed bug with filtering data in Horizontal View control</li>
+<li>Fixed display of Font Awesome icons in landscape on small screens (e.g. iPhone)</li>
+</ul>
+
   <p>In version 3 of the Controls we have significantly changed how things work, we've got new CSS, new JavaScript, more efficient native scrolling support and had a general overhaul of the Controls. So if you're upgrading an application we highly recommend that you replace all of the Controls, Stylesheets, Files etc. It might mean a little work to re-compile your XPages but will make life easier in the long run.</p>
 
   <p>We have also released a new Restyler tool which will allow you to create your own custom themes by changing colours, fonts and other CSS settings without having to make any code changes. For more details, please visit the <a href="http://restyler.teamstudio.com/">Restyler website</a>.
