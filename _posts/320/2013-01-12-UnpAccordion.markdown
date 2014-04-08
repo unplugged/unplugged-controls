@@ -1,8 +1,8 @@
 ---
-layout: 310-post
+layout: 320-post
 title:  "UnpAccordion"
 date:   2013-12-01 17:00
-categories: "310"
+categories: "320"
 ---
 
 The Accordion control is used to display a categorised view of data. A category can be exapnded by tapping it and the documents will be revealed. This is a great way of showing data in a more organised way.

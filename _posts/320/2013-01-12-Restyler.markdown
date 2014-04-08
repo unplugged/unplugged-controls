@@ -1,8 +1,8 @@
 ---
-layout: 310-post
+layout: 320-post
 title:  "Restyler"
 date:   2013-12-01 17:00
-categories: "310"
+categories: "320"
 ---
 
 The Retyler is a website which allows you to create custom themes and access them in two ways.

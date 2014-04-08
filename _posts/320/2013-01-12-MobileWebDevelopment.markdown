@@ -1,8 +1,8 @@
 ---
-layout: 310-post
+layout: 320-post
 title:  "Mobile Web Development"
 date:   2013-12-01 17:00
-categories: "310"
+categories: "320"
 ---
 
 The controls in this project are primarily designed to work with Teamstudio Unplugged, however they should also work for mobile web browsers as well (Safari on iOS and Chrome on Android). 
