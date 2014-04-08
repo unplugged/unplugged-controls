@@ -1,8 +1,8 @@
 ---
-layout: 310-post
+layout: 320-post
 title:  "FontAwesome"
 date:   2013-12-01 17:00
-categories: "310"
+categories: "320"
 ---
 
 Rather than including icon image files, we make use of the [Font Awesome](http://fontawesome.io) (version 4.0.3) icon font. This allows us to offer several hundred icons without increasing the size of the database or affecting performance.

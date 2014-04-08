@@ -1,8 +1,8 @@
 ---
-layout: 310-post
+layout: 320-post
 title:  "Generic Classes"
 date:   2013-12-01 17:00
-categories: "310"
+categories: "320"
 ---
 
 When using the unpFormViewer and unpFormEditor controls you can make use of the following CSS classes for buttons, fieldsets and panels;
