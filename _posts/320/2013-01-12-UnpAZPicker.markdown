@@ -1,8 +1,8 @@
 ---
-layout: 310-post
+layout: 320-post
 title:  "UnpAZPicker"
 date:   2013-12-01 17:00
-categories: "310"
+categories: "320"
 ---
 
 This control displays single letters down the right side of a View for quick searching, it integrates as an add on when using the UnpFlatView control.

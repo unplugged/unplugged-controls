@@ -1,8 +1,8 @@
 ---
-layout: 310-post
+layout: 320-post
 title:  "UnpFooter"
 date:   2013-12-01 17:00
-categories: "310"
+categories: "320"
 ---
 
 A simple footer bar which will display three things. Bottom left is a Sync button which will replicate the current application. In the center is the last date / time the application was replicated. The button on the bottom right will create a new document using the name of the XPage specified in the Custom Properties.
