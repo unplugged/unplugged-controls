@@ -15,6 +15,10 @@ The remaining space on the footer displays custom text and/or icons that will na
 # Usage
 Drag the custom control onto your XPage and set the synctype property to point to either 'none', 'currentDB' or 'alldbs' to allow syncing the current db only (default) or all dbs on device. If set to 'none' then the sync button will not appear. 
 Create 'tabs' to include tappable areas in the footer for navigation purposes. Within each 'tab' you can set the icon, text, icon when tapped and the page to navigate to. Navigation via the tabbed footer is always performed in a full page load method allowing the footer/tabs to be displayed in a context sensitive manner if needed (via scoped vars).
+<br/>
+The postSyncTarget allows the developer to set a separate XPage to display to the user once a sync is complete.
+<br/>
+A 'callback' property is included so an additional client side Javascriptt function can be executed either instead of navigation or as well as navigating to another XPage.
 
 <script src="https://gist.github.com/whitemx/7528015.js"></script>
 
