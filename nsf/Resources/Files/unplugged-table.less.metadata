@@ -1,16 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
-<noteinfo noteid="9366" sequence="1" unid="E210344AC426633580257C8500571419">
-<created><datetime>20140220T155107,77+00</datetime></created>
-<modified><datetime>20140220T155110,43+00</datetime></modified>
-<revised><datetime>20140220T155110,42+00</datetime></revised>
-<lastaccessed><datetime>20140220T155110,43+00</datetime></lastaccessed>
-<addedtofile><datetime>20140220T155110,43+00</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257CD2006E18DF" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="30e" sequence="5" unid="124A51FDAA9EAB2A80257CD2006E630E">
+<created><datetime dst="true">20140508T210543,18+01</datetime></created>
+<modified><datetime dst="true">20140519T104309,29+01</datetime></modified>
+<revised><datetime dst="true">20140519T104309,28+01</datetime></revised>
+<lastaccessed><datetime dst="true">20140519T104309,29+01</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20140508T210543,18+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
 <item name="$TITLE"><text>unplugged-table.less</text></item>
-<item name="$Flags"><text>345CgQ</text></item>
 <item name="$FlagsExt"><text>D</text></item>
 <item name="$DesignerVersion"><text>8.5.3</text></item>
-<item name="$FileNames"><textlist><text>unplugged-table.less</text></textlist></item>
+<item name="$FileNames" sign="true"><text>unplugged-table.less</text></item>
 
+<item name="$FileModDT" sign="true"><datetime dst="true">20140519T104258,13+01</datetime></item>
 
-<item name="$FileModDT"><datetime>20140220T150315,66+00</datetime></item></note>
+<item name="$Flags"><text>345CgQ</text></item></note>

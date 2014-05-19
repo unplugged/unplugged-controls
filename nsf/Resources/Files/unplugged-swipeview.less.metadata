@@ -1,16 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
-<noteinfo noteid="9362" sequence="1" unid="A59D2563D36B243580257C8500571418">
-<created><datetime>20140220T155107,76+00</datetime></created>
-<modified><datetime>20140220T155110,16+00</datetime></modified>
-<revised><datetime>20140220T155110,15+00</datetime></revised>
-<lastaccessed><datetime>20140220T155110,16+00</datetime></lastaccessed>
-<addedtofile><datetime>20140220T155110,16+00</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257CD2006E18DF" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="312" sequence="5" unid="D460CFE8E2F0A11B80257CD2006E6316">
+<created><datetime dst="true">20140508T210543,26+01</datetime></created>
+<modified><datetime dst="true">20140519T104318,98+01</datetime></modified>
+<revised><datetime dst="true">20140519T104318,97+01</datetime></revised>
+<lastaccessed><datetime dst="true">20140519T104318,98+01</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20140508T210543,26+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
 <item name="$TITLE"><text>unplugged-swipeview.less</text></item>
-<item name="$Flags"><text>345CgQ</text></item>
 <item name="$FlagsExt"><text>D</text></item>
+<item name="$FileModDT"><datetime>20140220T150315,59+00</datetime></item>
 <item name="$DesignerVersion"><text>8.5.3</text></item>
-<item name="$FileNames"><textlist><text>unplugged-swipeview.less</text></textlist></item>
 
 
-<item name="$FileModDT"><datetime>20140220T150315,59+00</datetime></item></note>
+<item name="$FileNames" sign="true"><text>unplugged-swipeview.less</text></item>
+<item name="$EditFilePath"><text>C:\Users\Matt\AppData\Local\Temp\notes95E17C\~unplugged-swipeview.less</text></item>
+<item name="$Flags"><text>345CgQ</text></item></note>
