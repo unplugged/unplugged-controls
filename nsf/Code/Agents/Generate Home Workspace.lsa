@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note class='filter' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
- replicaid='80257B470037E1BA'>
-<noteinfo noteid='3c6' unid='8407E5C14C78EDFC80257B470037F35A' sequence='19'>
-<created><datetime dst='true'>20130408T111107,78+01</datetime></created>
-<modified><datetime dst='true'>20140331T080627,85+01</datetime></modified>
-<revised><datetime dst='true'>20140331T080627,84+01</datetime></revised>
-<lastaccessed><datetime dst='true'>20140331T080627,85+01</datetime></lastaccessed>
-<addedtofile><datetime>20140217T120054,16+00</datetime></addedtofile></noteinfo>
+ replicaid='80257CD2006E18DF'>
+<noteinfo noteid='446' unid='9301B8A06BF1098F80257CD2006E65D8' sequence='2'>
+<created><datetime dst='true'>20140508T210550,32+01</datetime></created>
+<modified><datetime dst='true'>20140508T210550,36+01</datetime></modified>
+<revised><datetime dst='true'>20140508T210550,35+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20140508T210550,36+01</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20140508T210550,34+01</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
 <item name='$TITLE' sign='true'><text>Generate Home Workspace</text></item>
@@ -33,7 +33,7 @@ gQYAAAAA
 <item name='$DesignerVersion'><text>8.5.3</text></item>
 <item name='$AssistRunInfo' summary='true'>
 <rawitemdata type='3'>
-BgABAAAACAAemAAAAAAAAAUAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+BgABAAAACABCBAAAAAAAAAUAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAxdNRAJ57JYC64TcAR3slgAAAAAAAAAAAAAAAAAAAAAAAAAAAqqqqqqqq
 qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
 qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
