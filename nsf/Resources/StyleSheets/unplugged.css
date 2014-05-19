@@ -1064,7 +1064,7 @@ li.data-row .multiLineIcon {
   border-color: transparent;
   border-top-color: #333333;
 }
-@media screen and (min-width: 1001px) and (orientation: landscape) {
+@media screen and (min-width: 1001px) {
   .pullleft,
   .left-aligned {
     margin-left: -42.8% !important;
