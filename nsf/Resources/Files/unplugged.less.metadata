@@ -1,18 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257CD2006E18DF" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="306" sequence="5" unid="6ED11D03D677B3C280257CD2006E62FD">
+<?xml version="1.0" encoding="UTF-8"?><fileresource designerversion="8.5.3" maintenanceversion="1.0" name="unplugged.less" publicaccess="false" replicaid="80257CD2006E18DF" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="306" sequence="7" unid="6ED11D03D677B3C280257CD2006E62FD">
 <created><datetime dst="true">20140508T210543,01+01</datetime></created>
-<modified><datetime dst="true">20140519T104320,98+01</datetime></modified>
-<revised><datetime dst="true">20140519T104320,97+01</datetime></revised>
-<lastaccessed><datetime dst="true">20140519T104320,98+01</datetime></lastaccessed>
+<modified><datetime dst="true">20140522T112655,72+01</datetime></modified>
+<revised><datetime dst="true">20140522T112655,71+01</datetime></revised>
+<lastaccessed><datetime dst="true">20140522T112655,72+01</datetime></lastaccessed>
 <addedtofile><datetime dst="true">20140508T210543,01+01</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
-<item name="$TITLE"><text>unplugged.less</text></item>
-<item name="$FlagsExt"><text>D</text></item>
-<item name="$FileModDT" sign="true"><datetime>20140303T095548,00+00</datetime></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-
-<item name="$FileNames" sign="true"><text>unplugged.less</text></item>
-<item name="$EditFilePath"><text>C:\Users\Matt\AppData\Local\Temp\notes95E17C\~unplugged.less</text></item>
-<item name="$Flags"><text>345CgQ</text></item></note>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby></fileresource>

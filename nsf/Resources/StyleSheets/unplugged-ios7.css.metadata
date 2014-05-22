@@ -1,20 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
-<noteinfo noteid="9836" sequence="1" unid="1A1307D67700C10480257CAC004C8FBC">
-<created><datetime dst="true">20140331T145615,32+01</datetime></created>
-<modified><datetime dst="true">20140331T145615,35+01</datetime></modified>
-<revised><datetime dst="true">20140331T145615,34+01</datetime></revised>
-<lastaccessed><datetime dst="true">20140331T145615,35+01</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20140331T145615,35+01</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
-<item name="$TITLE"><text>unplugged-ios7.css</text></item>
-<item name="$Flags"><text>D34C=Q</text></item>
-<item name="$FlagsExt"><text>D</text></item>
-
-<item name="$FileModDT" sign="true"><datetime dst="true">20140331T145205,00+01</datetime></item>
-
-
-
-
-<item name="$FileNames" sign="true"><text>unplugged-ios7.css</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item></note>
+<?xml version="1.0" encoding="UTF-8"?><stylesheetresource designerversion="8.5.3" maintenanceversion="1.0" name="unplugged-ios7.css" noquery="true" publicaccess="false" replicaid="80257CD2006E18DF" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="512" sequence="1" unid="F6FC3BF102D6676480257CE0003AA697">
+<created><datetime dst="true">20140522T114037,35+01</datetime></created>
+<modified><datetime dst="true">20140522T114037,39+01</datetime></modified>
+<revised><datetime dst="true">20140522T114037,38+01</datetime></revised>
+<lastaccessed><datetime dst="true">20140522T114037,39+01</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20140522T114037,39+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby></stylesheetresource>

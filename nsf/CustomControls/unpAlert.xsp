@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!--
+		Copyright 2013 Teamstudio Inc Licensed under the Apache License,
+		Version 2.0 (the "License"); you may not use this file except in
+		compliance with the License. You may obtain a copy of the License at
+		http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+		applicable law or agreed to in writing, software distributed under the
+		License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or implied. See the License for
+		the specific language governing permissions and limitations under the
+		License
+	-->
+
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:this.resources>
+		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
+		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
+		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
+		<xp:styleSheet href="/alert.css"></xp:styleSheet>
+	</xp:this.resources>
+	<div id="alertPopup" class="alertPopup" style=" display:none;">
+		<xp:panel tagName="h2" id="title">
+			<xp:text value="#{javascript:compositeData.title}"></xp:text>
+		</xp:panel>
+		<div id="alertContent">
+			<xp:panel tagName="h4" id="panel1">
+				<xp:text value="#{javascript:compositeData.content}"></xp:text>
+			</xp:panel>
+		</div>
+			<div>
+				<div class="button closebutton" onclick="unp.closeDialog('alertPopup')">
+					<span class="icon"></span>
+					<span class="label">Continue</span>
+				</div>
+			</div>
+		</div>
+	<div id="underlaydialogPopup" class="underlay"></div>
+</xp:view>
