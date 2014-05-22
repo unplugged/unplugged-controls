@@ -73,11 +73,17 @@ if (start == ""){
 					<xp:this.url><![CDATA[#{javascript:thisRowData.getColumnValue(context.getUrlParameter("photocol"))}]]></xp:this.url>
 				</xp:image>
 				<xp:label id="label2" styleClass="viewlistsummary">
-					<xp:this.value><![CDATA[#{javascript:var filter = param.get("catFilter");
-if (filter.indexOf("~") > -1){
-	thisRowData.getColumnValues()[2];
+					<xp:this.value><![CDATA[#{javascript:
+var summarycol = param.get("summarycol");
+if (summarycol == "null"){
+	var filter = param.get("catFilter");
+	if (filter.indexOf("~") > -1){
+		thisRowData.getColumnValues()[2];
+	}else{
+		thisRowData.getColumnValues()[1];
+	}
 }else{
-	thisRowData.getColumnValues()[1];
+	thisRowData.getColumnValues()[parseInt(summarycol, 10)];
 }}]]></xp:this.value>
 				</xp:label>
 				<xp:text tagName="div" id="detail"
@@ -86,6 +92,10 @@ if (filter.indexOf("~") > -1){
 var index = 2;
 if (filter.indexOf("~") > -1){
 	index = 3;
+}
+var datacol = param.get("datacol");
+if (datacol != "null"){
+	index = parseInt(datacol, 10);
 }
 if(thisRowData.getColumnValues().length > index){
   return thisRowData.getColumnValues()[index];

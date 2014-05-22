@@ -558,7 +558,7 @@ unp.closeDialog = function(id) {
 	unp.initHorizontalView();
 }
 
-unp.accordionLoadMore = function(obj, viewName, catName, xpage, dbname, datacol, photocol) {
+unp.accordionLoadMore = function(obj, viewName, catName, xpage, dbname, summarycol, datacol, photocol) {
 	var thisArea = $(obj).nextAll(".summaryDataRow:first").children(
 			".accordionRowSet");
 	var pos = $(thisArea).find('li').length;
@@ -566,7 +566,8 @@ unp.accordionLoadMore = function(obj, viewName, catName, xpage, dbname, datacol,
 	var thisUrl = "UnpAccordionViewList.xsp?chosenView="
 			+ encodeURIComponent(viewName) + "&catFilter="
 			+ encodeURIComponent(catName) + "&xpageDoc=" + xpage + "&start="
-			+ pos + "&dbname=" + dbname + "&photocol=" + photocol + "&datacol=" + datacol;
+			+ pos + "&dbname=" + dbname + "&photocol=" + photocol + "&datacol="
+			+ datacol + "&summarycol=" + summarycol;
 
 	var tempHolder = $(obj).nextAll(".summaryDataRow:first").children(
 			".summaryDataRowHolder");
@@ -601,7 +602,7 @@ unp.accordionLoadMore = function(obj, viewName, catName, xpage, dbname, datacol,
 	}
 }
 
-unp.fetchDetails = function(obj, viewName, catName, xpage, dbname, datacol, photocol) {
+unp.fetchDetails = function(obj, viewName, catName, xpage, dbname, summarycol, datacol, photocol) {
 	$('.accordionRowSet').empty();
 	$('.accLoadMoreLink').hide();
 
@@ -616,14 +617,14 @@ unp.fetchDetails = function(obj, viewName, catName, xpage, dbname, datacol, phot
 				.hide();
 	} else {
 		$('.categoryRow').removeClass("accordianExpanded");
-		unp.accordionLoadMore(obj, viewName, catName, xpage, dbname, datacol, photocol);
+		unp.accordionLoadMore(obj, viewName, catName, xpage, dbname, summarycol, datacol, photocol);
 	}
 }
 
-unp.fetchMoreDetails = function(obj, viewName, catName, xpage, dbname, datacol, photocol) {
+unp.fetchMoreDetails = function(obj, viewName, catName, xpage, dbname, summarycol, datacol, photocol) {
 
 	var objRow = $(obj).parent().parent().prev();
-	unp.accordionLoadMore(objRow, viewName, catName, xpage, dbname, datacol, photocol);
+	unp.accordionLoadMore(objRow, viewName, catName, xpage, dbname, summarycol, datacol, photocol);
 }
 
 unp.syncAllDbs = function() {

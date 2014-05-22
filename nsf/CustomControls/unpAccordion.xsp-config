@@ -129,5 +129,23 @@ no</editor-parameter>
       <property-name>photoColumn</property-name>
       <property-class>string</property-class>
     </property>
+    <property>
+      <property-name>summaryColumn</property-name>
+      <property-class>int</property-class>
+      <property-extension>
+        <designer-extension>
+          <default-value/>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>dataColumn</property-name>
+      <property-class>int</property-class>
+      <property-extension>
+        <designer-extension>
+          <default-value/>
+        </designer-extension>
+      </property-extension>
+    </property>
   </composite-component>
 </faces-config>
