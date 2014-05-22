@@ -76,7 +76,7 @@ db.replicate("someserver");}]]></xp:this.script>
 			<span class="icon"></span>
 			<span class="label">Sync</span>
 		</xp:link>
-		<xp:text rendered="#{javascript:isUnpluggedServer()}">
+		<xp:text>
 			<xp:this.value><![CDATA[#{javascript:var dbrep = session.getEnvironmentString("ro.last.sync." + @LowerCase(@ReplaceSubstring(database.getFilePath(), "\\", "/")), true);
 var rep = session.getEnvironmentString("ro.last.sync", true); 
 if ("" == rep) {
@@ -108,7 +108,7 @@ if (rep == "01/01/70"){
 	rep = "(never)";
 }
 return "Updated: " + rep;}]]></xp:this.value>
-		</xp:text>
+		<xp:this.rendered><![CDATA[#{javascript:isUnpluggedServer() && compositeData.synctype != "none"}]]></xp:this.rendered></xp:text>
 		<xp:panel tagName="div" id="newButton" styleClass="newButton"
 			rendered="#{javascript:compositeData.newDocTarget != null;}">
 			<xp:this.attrs>
