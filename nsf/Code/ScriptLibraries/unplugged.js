@@ -109,10 +109,12 @@ $(window)
 					unp.initHideFooter();
 					unp.initRichText();
 					unp.initReaderButtons();
+					unp.initCalendar();
 					$(document).ajaxStop( function() {
 						unp.initHideFooter();
 						unp.initRichText();
 						unp.initReaderButtons();
+						unp.initCalendar();
 					});
 				});
 
@@ -556,7 +558,7 @@ unp.closeDialog = function(id) {
 	unp.initHorizontalView();
 }
 
-unp.accordionLoadMore = function(obj, viewName, catName, xpage, dbname, photocol) {
+unp.accordionLoadMore = function(obj, viewName, catName, xpage, dbname, datacol, photocol) {
 	var thisArea = $(obj).nextAll(".summaryDataRow:first").children(
 			".accordionRowSet");
 	var pos = $(thisArea).find('li').length;
@@ -564,7 +566,7 @@ unp.accordionLoadMore = function(obj, viewName, catName, xpage, dbname, photocol
 	var thisUrl = "UnpAccordionViewList.xsp?chosenView="
 			+ encodeURIComponent(viewName) + "&catFilter="
 			+ encodeURIComponent(catName) + "&xpageDoc=" + xpage + "&start="
-			+ pos + "&dbname=" + dbname + "&photocol=" + photocol;
+			+ pos + "&dbname=" + dbname + "&photocol=" + photocol + "&datacol=" + datacol;
 
 	var tempHolder = $(obj).nextAll(".summaryDataRow:first").children(
 			".summaryDataRowHolder");
@@ -599,7 +601,7 @@ unp.accordionLoadMore = function(obj, viewName, catName, xpage, dbname, photocol
 	}
 }
 
-unp.fetchDetails = function(obj, viewName, catName, xpage, dbname, photocol) {
+unp.fetchDetails = function(obj, viewName, catName, xpage, dbname, datacol, photocol) {
 	$('.accordionRowSet').empty();
 	$('.accLoadMoreLink').hide();
 
@@ -614,14 +616,14 @@ unp.fetchDetails = function(obj, viewName, catName, xpage, dbname, photocol) {
 				.hide();
 	} else {
 		$('.categoryRow').removeClass("accordianExpanded");
-		unp.accordionLoadMore(obj, viewName, catName, xpage, dbname, photocol);
+		unp.accordionLoadMore(obj, viewName, catName, xpage, dbname, datacol, photocol);
 	}
 }
 
-unp.fetchMoreDetails = function(obj, viewName, catName, xpage, dbname, photocol) {
+unp.fetchMoreDetails = function(obj, viewName, catName, xpage, dbname, datacol, photocol) {
 
 	var objRow = $(obj).parent().parent().prev();
-	unp.accordionLoadMore(objRow, viewName, catName, xpage, dbname, photocol);
+	unp.accordionLoadMore(objRow, viewName, catName, xpage, dbname, datacol, photocol);
 }
 
 unp.syncAllDbs = function() {
@@ -1055,3 +1057,18 @@ EventListener.prototype.remove = function () {
 if (typeof window !== 'undefined') { window.bouncefix = bouncefix; }
 
 })(window, document);
+
+
+unp.initCalendar = function(){
+	try{
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,basicWeek,basicDay'
+			}
+		});
+	}catch(e){
+		
+	}
+}
