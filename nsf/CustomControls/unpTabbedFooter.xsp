@@ -33,10 +33,9 @@
 
 		<div id='tabfooter'>
 			<ul id="footerTabBar">
-				<xp:repeat id="repeat1" rows="30"
-					disableOutputTag="true" var="menuItem"
-					value="#{javascript:compositeData.tab;}"
-					indexVar="menuItemIndex">
+				<xp:repeat id="repeat1" disableOutputTag="true"
+					var="menuItem" value="#{javascript:compositeData.tab;}"
+					indexVar="menuItemIndex" rows="30">
 					<xp:panel tagName="li">
 						<xp:this.styleClass><![CDATA[#{javascript:if (((menuItem.page == null || menuItem.page == "") && menuItemIndex == 0) || matchCurrentURL(menuItem.page)){
 	return "menuitem" + viewScope.menuItemIndex + " tabSelected";
@@ -50,7 +49,7 @@ if (!isEmpty(menuItem.callback)){
 	js += menuItem.callback;
 }
 if (!isEmpty(menuItem.page)){
-	js += "unp.openPage('" + getDbPath() + menuItem.page + "', '" + menuItem.ajaxtargetid + "')";
+	js += "unp.openPage('" + getDbPath() + menuItem.page + "')";
 }
 return js;}]]></xp:this.value>
 							</xp:attr>
