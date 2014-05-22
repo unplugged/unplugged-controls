@@ -1,6 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
- replicaid='80257CD2006E18DF'>
+<view name='CSS' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='80257CD2006E18DF' showinmenu='false' publicaccess='false' designerversion='8.5.3'
+ unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator' headers='beveled'
+ opencollapsed='false' showresponsehierarchy='true' showmargin='true' shrinkrows='false'
+ extendlastcolumn='false' showhierarchies='false' unreadcolor='black' rowlinecount='1'
+ headerlinecount='1' rowspacing='1' bgcolor='white' totalscolor='black' headerbgcolor='white'
+ boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
+ allowcustomizations='true' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
+ uniquekeys='false'>
 <noteinfo noteid='256' unid='AA29BA9C765C4C5980257CD2006E61B6' sequence='2'>
 <created><datetime dst='true'>20140508T210539,74+01</datetime></created>
 <modified><datetime dst='true'>20140508T210539,77+01</datetime></modified>
@@ -8,32 +15,16 @@
 <lastaccessed><datetime dst='true'>20140508T210539,77+01</datetime></lastaccessed>
 <addedtofile><datetime dst='true'>20140508T210539,75+01</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>CSS</text></item>
-<item name='$Index' sign='true'><text/></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-XgAFADAALAAEAAgACwAJAAQAZmlsZW5hbWVEZXNjcmlwdGlvbiRDb25mbGljdCRSRUYEAAQAAAAc
-AAUABABGb3JtAQADAENTUwAKAgQABAADAAcADAAFAAkzUzRTAA==
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-BgAAAABE
-</rawitemdata></item>
-<item name='$ViewFormat' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQACAAIACAAAAFZDAAAIAAgAAAAAAGUAAQAACgAAAAAAAAAAAAICAAAAVkMAAAsAAAAAAAAAPgEB
-AAAKAAAAAAAAAAAAAgIAAABmaWxlbmFtZUZpbGVOYW1lRGVzY3JpcHRpb24mAAEAAAABAQAJAQAA
-CgEBDgoAAAEArSsBAAEAAQAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//
-AAAAAAAAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAAAAAAAAAA
-AAAAQgAAAAAAAQD///8ABQD///8AAQAAAAAAAAAAAAAAAAABAP///wABAP///wAAAAEAAAAAAAEA
-AAAAAAEAAAAAAAAACAAAAAAAAQA=
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$DesignerVersion'><text>8.5.3</text></item>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><code event='selection'><formula
+>SELECT ((Form = "CSS"))</formula></code>
+<column hidedetailrows='false' itemname='filename' width='12.6250' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='FileName'><font size='9pt' style='bold'/></columnheader></column>
+<column hidedetailrows='false' itemname='Description' width='39.7500' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+><font size='9pt' style='bold'/></columnheader></column>
 <item name='$SelQuery' sign='true'>
 <rawitemdata type='f'>
 gQYAAAAAif8PAAAAAAABAAMAQ1NTAA==
-</rawitemdata></item>
-<item name='$Flags'><text>Y</text></item></note>
+</rawitemdata></item></view>
 

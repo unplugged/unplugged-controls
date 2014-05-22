@@ -1,6 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
- replicaid='80257CD2006E18DF'>
+<view name='HomeLinks' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.0'
+ replicaid='80257CD2006E18DF' showinmenu='false' publicaccess='false' designerversion='8.5.3'
+ unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator' headers='beveled'
+ opencollapsed='false' showresponsehierarchy='true' showmargin='true' shrinkrows='false'
+ extendlastcolumn='false' showhierarchies='false' unreadcolor='black' rowlinecount='1'
+ headerlinecount='1' rowspacing='1' bgcolor='white' totalscolor='black' headerbgcolor='white'
+ boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
+ allowcustomizations='true' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
+ uniquekeys='false'>
 <noteinfo noteid='22e' unid='8635537856F814F580257CD2006E6181' sequence='2'>
 <created><datetime dst='true'>20140508T210539,21+01</datetime></created>
 <modified><datetime dst='true'>20140508T210539,24+01</datetime></modified>
@@ -8,49 +15,30 @@
 <lastaccessed><datetime dst='true'>20140508T212045,47+01</datetime></lastaccessed>
 <addedtofile><datetime dst='true'>20140508T210539,22+01</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>HomeLinks</text></item>
-<item name='$Index' sign='true'><text/></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-YAECAHIAAgAkMQUABgBJbWdVUkwBAAQALm5zZkcCrwBSABAABQAGAEltZ1VSTK4AQgABAAEALwCL
-AAAAAAAAAAAA8D8QAWsCAQABAFwAAQABAC8AhAMiAgEAAQAvACICBQAGAEltZ1VSTCICrgAEALUD
-AwACAHIAAgAkMAUABgBVbnBVUkwBAAQALm5zZkcCrwBSABAABQAGAFVucFVSTK4AQgABAAEALwCL
-AAAAAAAAAAAA8D8QAWsCAQABAFwAAQABAC8AhAMiAgEAAQAvACICBQAGAFVucFVSTCICrgAEALUD
-AwAFAEgARAAIAAUAAgAHAAIABwAMAAkABABUaXRsZSQxRmxhZ2dlZCQwQmFkZ2VJRExvYWRUaW1l
-TW9kZSRDb25mbGljdCRSRUYEAAQAAAAgAAUABABGb3JtAQAIAEhvbWVMaW5rCgIEAAQAAwAHAA4A
-CAAJTDFTNFM1Uw==
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-EgABAABEAGYAAAAFAFRpdGxl
-</rawitemdata></item>
-<item name='$ViewFormat' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQAGAAMACAAAAFZDAQAFAAUAAAAAAFAAAQAACgAAAAAAAAAAAAICAAAAVkMAAAIABgCeAAAAUAAB
-AAAKAAAAAAAAAAAAAgIAAABWQwAABwAHAAAAAABQAAEAAAoAAAAAAAAAAAACAgAAAFZDAAACAAYA
-ngAAAFAAAQAACgAAAAAAAAAAAAICAAAAVkMAAAcABwAAAAAAUAABAAAKAAAAAAAAAAAAAgIAAABW
-QwAADAAMAAAAAABQAAEAAAoAAAAAAAAAAAACAgAAAFRpdGxlVGl0bGUkMUltZ1VybJ4AAgByAAIA
-JDEFAAYASW1nVVJMAQAEAC5uc2ZHAq8AUgAQAAUABgBJbWdVUkyuAEIAAQABAC8AiwAAAAAAAAAA
-APA/EAFrAgEAAQBcAAEAAQAvAIQDIgIBAAEALwAiAgUABgBJbWdVUkwiAq4ABAC1AwMABwAqACMA
-CTZTOVMxMVMxMlMxM1MxOVMyM1MyNVMyN1MyOFMyOVMzMFMARmxhZ2dlZEZsYWdnZWQkMFVucFVy
-bJ4AAgByAAIAJDAFAAYAVW5wVVJMAQAEAC5uc2ZHAq8AUgAQAAUABgBVbnBVUkyuAEIAAQABAC8A
-iwAAAAAAAAAAAPA/EAFrAgEAAQBcAAEAAQAvAIQDIgIBAAEALwAiAgUABgBVbnBVUkwiAq4ABAC1
-AwMABwAqACMACTZTOVMxMVMxMlMxM1MxOVMyM1MyNVMyN1MyOFMyOVMzMFMAQmFkZ2VJREJhZGdl
-SURMb2FkVGltZU1vZGVMb2FkVGltZU1vZGUmAAEAAAABAQAJAQAACgEBAAoAAAEArSsBAAEAAQAA
-AAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEB
-AAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAQAJAAAAAAAAAAAA
-AAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAAAAAQA
-AAAAAP//AAAAAAAAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAA
-AAAAAAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAEIA
-AAAAAAEA////AAUA////AAEAAAAAAAAAAAAAAAAAAQD///8AAQD///8AAAABAAAAAAABAAAAAAAB
-AAAAAAAAAAgAAAAAAAEA
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text>Y</text></item>
-<item name='$DesignerVersion'><text>8.5.3</text></item>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby><code event='selection'><formula
+>SELECT ((Form = "HomeLink"))</formula></code>
+<column sort='ascending' hidedetailrows='false' itemname='Title' width='10'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><columnheader title='Title'><font size='9pt' style='bold'/></columnheader></column>
+<column hidedetailrows='false' itemname='$1' width='10' resizable='true' separatemultiplevalues='false'
+ sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='ImgUrl'><font size='9pt' style='bold'/></columnheader><code event='value'><formula
+>@If(@Contains(ImgURL; ".nsf"); ImgURL; "/" + @ReplaceSubstring(@Subset(@DbName; -1); "\\"; "/") + "/" + ImgURL)</formula></code></column>
+<column hidedetailrows='false' itemname='Flagged' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='Flagged'><font size='9pt' style='bold'/></columnheader></column>
+<column hidedetailrows='false' itemname='$0' width='10' resizable='true' separatemultiplevalues='false'
+ sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='UnpUrl'><font size='9pt' style='bold'/></columnheader><code event='value'><formula
+>@If(@Contains(UnpURL; ".nsf"); UnpURL; "/" + @ReplaceSubstring(@Subset(@DbName; -1); "\\"; "/") + "/" + UnpURL)</formula></code></column>
+<column hidedetailrows='false' itemname='BadgeID' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='BadgeID'><font size='9pt' style='bold'/></columnheader></column>
+<column hidedetailrows='false' itemname='LoadTimeMode' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='LoadTimeMode'><font size='9pt' style='bold'/></columnheader></column>
 <item name='$SelQuery' sign='true'>
 <rawitemdata type='f'>
 gQYAAAAAif8UAAAAAAABAAgASG9tZUxpbms=
-</rawitemdata></item></note>
+</rawitemdata></item></view>
 
