@@ -112,6 +112,15 @@ the specific language governing permissions and limitations under the License
 								</xp:text>
 							</li>
 							<li>
+								<xp:label value="Checkbox"
+									id="label2" for="checkbox">
+								</xp:label>
+								<xp:text id="checkbox"
+									value="#{document1.checkbox}">
+								</xp:text>
+							</li>
+
+							<li>
 								<xp:text id="description" tagName="div"
 									value="#{document1.Description}" escape="false"
 									styleClass="body_richtext">

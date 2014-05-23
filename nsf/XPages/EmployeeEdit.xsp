@@ -125,13 +125,28 @@
 								</li>
 								<li>
 									<xp:label value="Radio Buttons" for="radio"></xp:label>
-									<xp:radioGroup id="radio" value="#{document1.radio}" styleClass="xspRadioButton">
+									<xp:radioGroup id="radio" value="#{document1.radio}"
+										styleClass="xspRadioButton">
 										<xp:selectItem itemLabel="aaaa" itemValue="aaaa">
 										</xp:selectItem>
 										<xp:selectItem itemLabel="bbbb" itemValue="bbbb">
 										</xp:selectItem>
 										<xp:selectItem itemLabel="cccc" itemValue="cccc"></xp:selectItem>
 									</xp:radioGroup>
+								</li>
+								<li>
+									<xp:label value="Checkbox" for="checkbox"></xp:label>
+									<div class="switch">
+										<xp:checkBox text="aaaa" id="checkbox"
+											checkedValue="aaaa" uncheckedValue="xxxx" value="#{document1.checkbox}">
+											<xp:this.attrs>
+												<xp:attr name="uncheckedValue" value="xxxx">
+												</xp:attr>
+												<xp:attr name="checkedValue" value="aaaa">
+												</xp:attr>
+											</xp:this.attrs>
+										</xp:checkBox>
+									</div>
 								</li>
 								<li>
 									<xp:label value="Details" id="detailslabel" for="description"

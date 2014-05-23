@@ -10,19 +10,18 @@
  */
 
 var unp = {
-	_firstLoad : true, 
+	_firstLoad : true,
 	_oldiscrollbottom : ""
 }
 
 $(window).bind(
-	"popstate",
-	function() {
-		if (!unp._firstLoad) {
-			unp.loadPage(location.href + " #contentwrapper", 'content',
-					null, false, false);
-		}
-	}
-);
+		"popstate",
+		function() {
+			if (!unp._firstLoad) {
+				unp.loadPage(location.href + " #contentwrapper", 'content',
+						null, false, false);
+			}
+		});
 
 unp.storePageRequest = function(url) {
 
@@ -61,9 +60,10 @@ $(window)
 					unp.allowFormsInIscroll();
 
 					unp.initiscroll();
-					$("#menuPane").removeClass("onScreen").addClass("offScreen");
+					$("#menuPane").removeClass("onScreen")
+							.addClass("offScreen");
 					$("#menuPane").width("0px");
-					
+
 					$('.viewsButton').unbind('click');
 					$('.viewsButton').click( function(event) {
 						unp.toggleViewsMenu();
@@ -118,7 +118,6 @@ $(window)
 					});
 				});
 
-
 unp.initReaderButtons = function() {
 	if ($(".fontsizebuttons").length > 0) {
 		$(".input-search-frame").hide();
@@ -144,12 +143,12 @@ unp.initHideFooter = function() {
 	}
 }
 
-unp.isAndroid = function(){
+unp.isAndroid = function() {
 	return /android/i.test(navigator.userAgent.toLowerCase());
 }
 
 unp.initRichText = function() {
-	//Placeholder for future improvements
+	// Placeholder for future improvements
 }
 
 unp.htmlDecode = function(input) {
@@ -165,8 +164,8 @@ unp.getURLParameter = function(name) {
 			|| null;
 }
 
-window.addEventListener("orientationchange", setTimeout("unp.changeorientation",
-		100), false);
+window.addEventListener("orientationchange", setTimeout(
+		"unp.changeorientation", 100), false);
 
 unp.changeorientation = function() {
 	unp.hideViewsMenu();
@@ -192,8 +191,8 @@ unp.stopViewSpinner = function() {
 	$("#loadmorespinner").hide();
 }
 
-unp.loadmore = function(dbName, viewName, summarycol, detailcol, category, xpage,
-		refreshmethod, photocol, collapserows, wrapsummarycol, ajaxload) {
+unp.loadmore = function(dbName, viewName, summarycol, detailcol, category,
+		xpage, refreshmethod, photocol, collapserows, wrapsummarycol, ajaxload) {
 	try {
 		$(".loadmorelink").hide();
 		$("#loadmorespinner").show();
@@ -250,44 +249,68 @@ unp.loadmore = function(dbName, viewName, summarycol, detailcol, category, xpage
 
 unp.openDocument = function(url, target) {
 	var thisArea = $("#" + target);
-	thisArea.load(url.replace(" ", "%20") + " #contentwrapper",
-			function(data, status, xhr) {
-				if (status=="error") {
-					alert("An error occurred:\n\n" + xhr.status + " " + xhr.statusText + "\n\n" + $(data).text());
-					return false;
-				}else{
-					if (firedrequests != null) {
-						firedrequests = new Array();
-					}
-	
-					unp.storePageRequest(url);
-	
-					unp.initiscroll();
-					if (url.indexOf("editDocument") > -1
-							|| url.indexOf("newDocument") > -1) {
-						unp.allowFormsInIscroll();
-					}
-					unp.initDeleteable();
-					unp.initAutoComplete();
-					unp.initHorizontalView();
-					if ($("#input-search").hasClass("input-search")) {
-						$(".iscrollcontent").css("top", "90px");
-					}
-					return false;
-				}
-			});
+	thisArea.load(url.replace(" ", "%20") + " #contentwrapper", function(data,
+			status, xhr) {
+		if (status == "error") {
+			alert("An error occurred:\n\n" + xhr.status + " " + xhr.statusText
+					+ "\n\n" + $(data).text());
+			return false;
+		} else {
+			if (firedrequests != null) {
+				firedrequests = new Array();
+			}
+
+			unp.storePageRequest(url);
+
+			unp.initiscroll();
+			if (url.indexOf("editDocument") > -1
+					|| url.indexOf("newDocument") > -1) {
+				unp.allowFormsInIscroll();
+			}
+			unp.initDeleteable();
+			unp.initAutoComplete();
+			unp.initHorizontalView();
+			if ($("#input-search").hasClass("input-search")) {
+				$(".iscrollcontent").css("top", "90px");
+			}
+			return false;
+		}
+	});
 }
 
-unp.saveDocument = function(formid, unid, viewxpagename, formname, parentunid, dbname) {
+unp.replaceSubstring = function(inputString, fromString, toString) {
+	if (inputString.indexOf(fromString) > -1){
+		var newval = inputString.split(fromString);
+		return newval[0] + toString + newval[1];
+	}else{
+		return inputString;
+	}
+}
+
+unp.saveDocument = function(formid, unid, viewxpagename, formname, parentunid,
+		dbname) {
 	try {
 		scrollContent.scrollTo(0, -60, 0);
 	} catch (e) {
 	}
 	var data = $(".customform :input").serialize();
-	$('.customform input[type=checkbox]').each(function() {     
-	    if (!this.checked) {
-	        data += '&' + this.name + '=off';
-	    }
+	$('.customform input[type=checkbox]').each( function() {
+		var val;
+		if (!this.checked) {
+			val = "off";
+			if ($(this).attr('uncheckedValue')) {
+				val = $(this).attr('uncheckedValue');
+			}
+			data += '&' + encodeURIComponent(this.name) + '=' + val;
+		} else {
+			val = "on";
+			if ($(this).attr('checkedValue')) {
+				val = $(this).attr('checkedValue');
+			}
+			var newval = encodeURIComponent(this.name) + '=' + val;
+			var oldval = encodeURIComponent(this.name) + '=on'
+			data = unp.replaceSubstring(data, oldval, newval);
+		}
 	});
 	var url = 'UnpSaveDocument.xsp?unid=' + unid + "&formname=" + formname
 			+ "&rnd=" + Math.floor(Math.random() * 1001);
@@ -345,15 +368,17 @@ unp.toggleViewsMenu = function(forcehide) {
 		$("#menuPane").removeClass("offScreen").addClass("onScreen");
 		$("#menuPane").animate( {
 			"left" : "+=700px"
-		}, "fast", function(){
-			if (unp.isAndroid()){
+		}, "fast", function() {
+			if (unp.isAndroid()) {
 				$("#menuitems").css("position", "fixed");
 			}
 		});
 		$("#menuPane").width("100%");
 	} else {
 		$("#menuPane").removeClass("onScreen").addClass("offScreen");
-		$("#menuPane").animate( {"left" : "-=700px"});
+		$("#menuPane").animate( {
+			"left" : "-=700px"
+		});
 		$("#menuPane").width("0px");
 	}
 }
@@ -361,7 +386,9 @@ unp.toggleViewsMenu = function(forcehide) {
 unp.hideViewsMenu = function() {
 	if (!$("#menuPane").hasClass("offScreen")) {
 		$("#menuPane").removeClass("onScreen").addClass("offScreen");
-		$("#menuPane").animate( {"left" : "-=700px"}, "fast");
+		$("#menuPane").animate( {
+			"left" : "-=700px"
+		}, "fast");
 		$("#menuPane").width("0px");
 	}
 }
@@ -376,28 +403,29 @@ unp.loadPage = function(url, target, menuitem, pushState) {
 
 	var thisArea = $("#" + target);
 	thisArea.load(url, function(data, status, xhr) {
-		if (status=="error") {
-			alert("An error occurred:\n\n" + xhr.status + " " + xhr.statusText + "\n\n" + $(data).text());
+		if (status == "error") {
+			alert("An error occurred:\n\n" + xhr.status + " " + xhr.statusText
+					+ "\n\n" + $(data).text());
 			return false;
-		}else{
-	
+		} else {
+
 			if (firedrequests != null) {
 				firedrequests = new Array();
 			}
-	
+
 			if (_pushState) {
 				unp.storePageRequest(url);
 			}
-	
+
 			unp.initiscroll();
 			unp.initHorizontalView();
 			unp.initDeleteable();
 			unp.initAutoComplete();
-			
-			try{
+
+			try {
 				$('.categoryRow').first().click();
-			}catch(e){
-				
+			} catch (e) {
+
 			}
 
 			return false;
@@ -435,9 +463,9 @@ unp.initHorizontalView = function() {
 	try {
 		$(".swiper-container").each( function() {
 			// First we need to re-size the swipe area
-			var items = $(this).find(".hviewitem").length;
-			$(this).find(".swiper-slide").width((items * 140));
-		})
+				var items = $(this).find(".hviewitem").length;
+				$(this).find(".swiper-slide").width((items * 140));
+			})
 	} catch (e) {
 
 	}
@@ -471,10 +499,10 @@ unp.initiscroll = function() {
 		}
 		return false;
 	});
-	
+
 	bouncefix.add(document.getElementById("menuitems"));
 	bouncefix.add(document.querySelector('.iscrollcontent'));
-	
+
 	try {
 		pullUpEl = document.getElementById('pullUp');
 		pullUpOffset = pullUpEl.offsetHeight;
@@ -505,29 +533,28 @@ unp.jumpToLetter = function(letterelement, event) {
 	}, 0);
 	var letter = letterelement.text();
 	var list = $("li.categoryRowFixed").each(
-		function() {
-			var summary = $(this).find("span").text();
-			var firstletter = summary.substring(0, 1);
-			if (firstletter == letter) {
-				console.log("we need to jump to " + firstletter
-						+ " because it's equal to " + letter);
-				$('.iscrollcontent').animate( {
-					scrollTop : $(this).offset().top - 60
-				}, 500);
-				return false;
-			} else if (firstletter > letter) {
-				console.log("we need to jump to " + firstletter
-						+ " because it's greater than " + letter);
-				$('.iscrollcontent').animate( {
-					scrollTop : $(this).offset().top - 120
-				}, 500);
-				return false;
-			} else {
-				console.log("we don't need to jump to " + firstletter
-						+ " because it's less than " + letter);
-			}
-		}
-	);
+			function() {
+				var summary = $(this).find("span").text();
+				var firstletter = summary.substring(0, 1);
+				if (firstletter == letter) {
+					console.log("we need to jump to " + firstletter
+							+ " because it's equal to " + letter);
+					$('.iscrollcontent').animate( {
+						scrollTop : $(this).offset().top - 60
+					}, 500);
+					return false;
+				} else if (firstletter > letter) {
+					console.log("we need to jump to " + firstletter
+							+ " because it's greater than " + letter);
+					$('.iscrollcontent').animate( {
+						scrollTop : $(this).offset().top - 120
+					}, 500);
+					return false;
+				} else {
+					console.log("we don't need to jump to " + firstletter
+							+ " because it's less than " + letter);
+				}
+			});
 }
 
 unp.openDialog = function(id) {
@@ -558,7 +585,8 @@ unp.closeDialog = function(id) {
 	unp.initHorizontalView();
 }
 
-unp.accordionLoadMore = function(obj, viewName, catName, xpage, dbname, summarycol, datacol, photocol) {
+unp.accordionLoadMore = function(obj, viewName, catName, xpage, dbname,
+		summarycol, datacol, photocol) {
 	var thisArea = $(obj).nextAll(".summaryDataRow:first").children(
 			".accordionRowSet");
 	var pos = $(thisArea).find('li').length;
@@ -602,7 +630,8 @@ unp.accordionLoadMore = function(obj, viewName, catName, xpage, dbname, summaryc
 	}
 }
 
-unp.fetchDetails = function(obj, viewName, catName, xpage, dbname, summarycol, datacol, photocol) {
+unp.fetchDetails = function(obj, viewName, catName, xpage, dbname, summarycol,
+		datacol, photocol) {
 	$('.accordionRowSet').empty();
 	$('.accLoadMoreLink').hide();
 
@@ -617,14 +646,17 @@ unp.fetchDetails = function(obj, viewName, catName, xpage, dbname, summarycol, d
 				.hide();
 	} else {
 		$('.categoryRow').removeClass("accordianExpanded");
-		unp.accordionLoadMore(obj, viewName, catName, xpage, dbname, summarycol, datacol, photocol);
+		unp.accordionLoadMore(obj, viewName, catName, xpage, dbname,
+				summarycol, datacol, photocol);
 	}
 }
 
-unp.fetchMoreDetails = function(obj, viewName, catName, xpage, dbname, summarycol, datacol, photocol) {
+unp.fetchMoreDetails = function(obj, viewName, catName, xpage, dbname,
+		summarycol, datacol, photocol) {
 
 	var objRow = $(obj).parent().parent().prev();
-	unp.accordionLoadMore(objRow, viewName, catName, xpage, dbname, summarycol, datacol, photocol);
+	unp.accordionLoadMore(objRow, viewName, catName, xpage, dbname, summarycol,
+			datacol, photocol);
 }
 
 unp.syncAllDbs = function() {
@@ -647,7 +679,8 @@ function x$(idTag, param) { // Updated 18 Feb 2012
 	return ($("#" + idTag));
 }
 
-unp.doHViewFilter = function(language, year, primaryview, filterview, xpage, source, toplevelcategory) {
+unp.doHViewFilter = function(language, year, primaryview, filterview, xpage,
+		source, toplevelcategory) {
 	if (language == null) {
 		language = $(".languagelabel").text();
 	}
@@ -678,7 +711,8 @@ unp.doHViewFilter = function(language, year, primaryview, filterview, xpage, sou
 	$(".yearlabel").text(year);
 }
 
-unp.loadMoreHorizontal = function(button, category, primaryview, filterview, xpage, source) {
+unp.loadMoreHorizontal = function(button, category, primaryview, filterview,
+		xpage, source) {
 	var language = $(".languagelabel").text().replace(" ", "%20");
 	var year = $(".yearlabel").text().replace(" ", "%20");
 	var categoryrep = category.replace(" ", "-");
@@ -714,11 +748,10 @@ unp.openHViewDialog = function(xpage, source, unid) {
 	}
 	var url = xpage + "?action=openDocument&documentId=" + unid;
 	$("#hviewitemcontent").load(url.replace(" ", "%20") + " #" + source,
-		function() {
-			unp.openDialog("hviewPopup");
-			return false;
-		}
-	);
+			function() {
+				unp.openDialog("hviewPopup");
+				return false;
+			});
 }
 
 unp.expandMenuItem = function(menuitem) {
@@ -731,22 +764,22 @@ unp.expandMenuItem = function(menuitem) {
 		var bFinishedCategory = false;
 		$(menuitem).show();
 		$(menuitem).nextAll().each(
-			function(i) {
-				if (!$(this).hasClass("viewMenuItemSubSub")
-						&& !$(this).hasClass("viewMenuItemSub")) {
-					return false;
-				} else if ($(this).hasClass("viewMenuItemSub")) {
-					//$(this).toggle();
-					bFinishedCategory = true;
-				} else {
-					if ($(this).hasClass("viewMenuItemSubSub")
-							&& !bFinishedCategory) {
-						$(this).toggle();
+				function(i) {
+					if (!$(this).hasClass("viewMenuItemSubSub")
+							&& !$(this).hasClass("viewMenuItemSub")) {
+						return false;
+					} else if ($(this).hasClass("viewMenuItemSub")) {
+						// $(this).toggle();
+						bFinishedCategory = true;
+					} else {
+						if ($(this).hasClass("viewMenuItemSubSub")
+								&& !bFinishedCategory) {
+							$(this).toggle();
+						}
 					}
-				}
-			}
-		);
-		// Now we need to make sure that any previous sub categories are shown as well
+				});
+		// Now we need to make sure that any previous sub categories are shown
+		// as well
 		$(menuitem).prevAll().each(
 				function(i) {
 					if (!$(this).hasClass("viewMenuItemSub")
@@ -762,24 +795,23 @@ unp.expandMenuItem = function(menuitem) {
 		var bClickedFirst = true;
 		var bFoundSubSub = false;
 		$(menuitem).nextAll().each(
-			function(i) {
-				if (!$(this).hasClass("viewMenuItemSub")
-						&& !$(this).hasClass("viewMenuItemSubSub")) {
-					bFoundSubSub = true;
-					return false;
-				} else {
-					if ($(this).hasClass("viewMenuItemSub")) {
-						if (!bFoundSubSub){
-							if (!bClickedFirst) {
-								$(this).click();
-								bClickedFirst = true;
+				function(i) {
+					if (!$(this).hasClass("viewMenuItemSub")
+							&& !$(this).hasClass("viewMenuItemSubSub")) {
+						bFoundSubSub = true;
+						return false;
+					} else {
+						if ($(this).hasClass("viewMenuItemSub")) {
+							if (!bFoundSubSub) {
+								if (!bClickedFirst) {
+									$(this).click();
+									bClickedFirst = true;
+								}
+								$(this).toggle();
 							}
-							$(this).toggle();
 						}
 					}
-				}
-			}
-		);
+				});
 	}
 	if ($(menuitem).hasClass("expanded")) {
 		$(".viewMenuItem").removeClass("expanded");
@@ -792,7 +824,8 @@ unp.expandMenuItem = function(menuitem) {
 
 unp.fixNavigatorBottomCorners = function() {
 	$(".navroundedbottom").removeClass("navroundedbottom");
-	$(".navScrollArea .viewMenuItem").not(':hidden').last().addClass("navroundedbottom");
+	$(".navScrollArea .viewMenuItem").not(':hidden').last().addClass(
+			"navroundedbottom");
 	$("#menuitems li a").removeClass("navroundedbottom");
 	$("#menuitems li a").not(':hidden').last().addClass("navroundedbottom");
 }
@@ -830,9 +863,9 @@ unp.hviewEmailCancel = function(xpage, unid) {
 }
 
 unp.dropdownToggle = function(element) {
-	if (element.text.indexOf("Language") > -1){
+	if (element.text.indexOf("Language") > -1) {
 		$("#yeardropdownlink").next().hide();
-	}else if(element.text.indexOf("Year") > -1){
+	} else if (element.text.indexOf("Year") > -1) {
 		$("#dropdownlink").next().hide();
 	}
 	if (element != null) {
@@ -844,232 +877,243 @@ unp.dropdownToggle = function(element) {
 
 unp.increaseFontSize = function(button) {
 	$(".typographyreadcontent").find("*").each(
-		function() {
-			$(this).css("font-size",
-					(parseInt($(this).css("font-size"), 10) + 2) + "px");
-			if (parseInt($(this).css("line-height"), 10) <= parseInt(
-					$(this).css("font-size"), 10)) {
-				$(this).css(
-						"line-height",
-						(parseInt($(this).css("line-height"), 10) + 2) + "px");
-			}
-		}
-	);
+			function() {
+				$(this).css("font-size",
+						(parseInt($(this).css("font-size"), 10) + 2) + "px");
+				if (parseInt($(this).css("line-height"), 10) <= parseInt(
+						$(this).css("font-size"), 10)) {
+					$(this).css(
+							"line-height",
+							(parseInt($(this).css("line-height"), 10) + 2)
+									+ "px");
+				}
+			});
 }
 unp.decreaseFontSize = function(button) {
 	$(".typographyreadcontent").find("*").each(
-		function() {
-			var tagName = $(this).prop("tagName");
-			var fontSize = parseInt($(this).css("font-size"), 10);
-			var minFontSize = 4;
-			if (tagName == "H1"){
-				minFontSize = 28;
-			}else if(tagName == "H2"){
-				minFontSize = 24;
-			}else if(tagName == "H3"){
-				minFontSize = 18;
-			}else if(tagName == "H4"){
-				minFontSize = 12;
-			}else if(tagName == "H5"){
-				minFontSize = 8;
-			}
-			if (fontSize - 2 >= minFontSize){
-				$(this).css("font-size", (fontSize - 2) + "px");
-				if (parseInt($(this).css("line-height"), 10) > 24) {
-					$(this).css("line-height", (parseInt($(this).css("line-height"), 10) - 2) + "px");
+			function() {
+				var tagName = $(this).prop("tagName");
+				var fontSize = parseInt($(this).css("font-size"), 10);
+				var minFontSize = 4;
+				if (tagName == "H1") {
+					minFontSize = 28;
+				} else if (tagName == "H2") {
+					minFontSize = 24;
+				} else if (tagName == "H3") {
+					minFontSize = 18;
+				} else if (tagName == "H4") {
+					minFontSize = 12;
+				} else if (tagName == "H5") {
+					minFontSize = 8;
 				}
-			}
+				if (fontSize - 2 >= minFontSize) {
+					$(this).css("font-size", (fontSize - 2) + "px");
+					if (parseInt($(this).css("line-height"), 10) > 24) {
+						$(this).css(
+								"line-height",
+								(parseInt($(this).css("line-height"), 10) - 2)
+										+ "px");
+					}
+				}
+			});
+}
+
+/*
+ * ! v0.0.3 Copyright (c) 2013 Jarid Margolin bouncefix.js is open sourced under
+ * the MIT license.
+ */
+
+;
+( function(window, document) {
+
+	// Define module
+	var bouncefix = {
+		Fix : Fix,
+		cache : {}
+	};
+
+	//
+	// Add/Create new instance
+	//
+	bouncefix.add = function(className) {
+		if (!this.cache[className]) {
+			this.cache[className] = new this.Fix(className);
 		}
-	);
-}
+	};
 
-/*!
- * v0.0.3
- * Copyright (c) 2013 Jarid Margolin
- * bouncefix.js is open sourced under the MIT license.
- */ 
+	//
+	// Delete/Remove instance
+	//
+	bouncefix.remove = function(className) {
+		if (this.cache[className]) {
+			this.cache[className].remove();
+			delete this.cache[className];
+		}
+	};
+	//
+	// Class Constructor - Called with new BounceFix(el)
+	// Responsible for setting up required instance
+	// variables, and listeners.
+	//
+	function Fix(className) {
+		// If there is no element, then do nothing
+		if (!className) {
+			return false;
+		}
+		this.className = className;
 
-;(function (window, document) {
+		// The engine
+		this.startListener = new EventListener(document, {
+			evt : 'touchstart',
+			handler : this.touchStart,
+			context : this
+		}).add();
 
-// Define module
-var bouncefix = {
-  Fix: Fix,
-  cache: {}
-};  
+		// Cleanup
+		this.endListener = new EventListener(document, {
+			evt : 'touchend',
+			handler : this.touchEnd,
+			context : this
+		}).add();
+	}
 
-//
-// Add/Create new instance
-//
-bouncefix.add = function (className) {
-  if (!this.cache[className]) {
-    this.cache[className] = new this.Fix(className);
-  }
-};
+	//
+	// touchstart handler
+	//
+	Fix.prototype.touchStart = function(evt) {
+		this.target = utils.getTargetedEl(evt.target, this.className);
+		if (this.target) {
+			// If scrollable, adjust
+			if (utils.isScrollable(this.target)) {
+				return utils.scrollToEnd(this.target);
+			}
+			// Else block touchmove
+			this.endListener = new EventListener(this.target, {
+				evt : 'touchmove',
+				handler : this.touchMove,
+				context : this
+			}).add();
+		}
+	};
 
-//
-// Delete/Remove instance
-//
-bouncefix.remove = function (className) {
-  if (this.cache[className]) {
-    this.cache[className].remove();
-    delete this.cache[className];
-  }
-};
-//
-// Class Constructor - Called with new BounceFix(el)
-// Responsible for setting up required instance
-// variables, and listeners.
-//
-function Fix(className) {
-  // If there is no element, then do nothing  
-  if(!className) { return false; }
-  this.className = className;
+	//
+	// If this event is called, we block scrolling
+	// by preventing default behavior.
+	//
+	Fix.prototype.touchMove = function(evt) {
+		evt.preventDefault();
+	};
 
-  // The engine
-  this.startListener = new EventListener(document, {
-    evt: 'touchstart',
-    handler: this.touchStart,
-    context: this
-  }).add();
+	//
+	// On touchend we need to remove and listeners
+	// we may have added.
+	//
+	Fix.prototype.touchEnd = function(evt) {
+		if (this.moveListener) {
+			this.moveListener.remove();
+		}
+	};
 
-  // Cleanup
-  this.endListener = new EventListener(document, {
-    evt: 'touchend',
-    handler: this.touchEnd,
-    context: this
-  }).add();
-}
+	//
+	// touchend handler
+	//
+	Fix.prototype.remove = function() {
+		this.startListener.remove();
+		this.endListener.remove();
+	};
+	// Define module
+	var utils = {};
 
-//
-// touchstart handler
-//
-Fix.prototype.touchStart = function (evt) {
-  this.target = utils.getTargetedEl(evt.target, this.className);
-  if (this.target) {
-    // If scrollable, adjust
-    if (utils.isScrollable(this.target)) { return utils.scrollToEnd(this.target); }
-    // Else block touchmove
-    this.endListener = new EventListener(this.target, {
-      evt: 'touchmove',
-      handler: this.touchMove,
-      context: this
-    }).add();
-  }
-};
+	//
+	// Search nodes to find target el. Return if exists
+	//
+	utils.getTargetedEl = function(el, className) {
+		while (true) {
+			if (el.classList.contains(className)) {
+				break;
+			}
+			if ((el = el.parentElement)) {
+				continue;
+			}
+			break;
+		}
+		return el;
+	};
 
-//
-// If this event is called, we block scrolling
-// by preventing default behavior.
-//
-Fix.prototype.touchMove = function (evt) {
-  evt.preventDefault(); 
-};
+	//
+	// Return true or false depending on if content
+	// is scrollable
+	//
+	utils.isScrollable = function(el) {
+		return (el.scrollHeight > el.offsetHeight);
+	};
 
-//
-// On touchend we need to remove and listeners
-// we may have added.
-//
-Fix.prototype.touchEnd = function (evt) {
-  if (this.moveListener) {
-    this.moveListener.remove();
-  }
-};
+	//
+	// Keep scrool from hitting end bounds
+	//
+	utils.scrollToEnd = function(el) {
+		var curPos = el.scrollTop, height = el.offsetHeight, scroll = el.scrollHeight;
 
-//
-// touchend handler
-//
-Fix.prototype.remove = function () {
-  this.startListener.remove();
-  this.endListener.remove();
-};
-// Define module
-var utils = {};
+		// If at top, bump down 1px
+		if (curPos <= 0) {
+			el.scrollTop = 1;
+		}
 
-//
-// Search nodes to find target el. Return if exists
-//
-utils.getTargetedEl = function (el, className) {
-  while (true) {
-    if (el.classList.contains(className)) { break; }
-    if ((el = el.parentElement)) { continue; }
-    break;
-  }
-  return el;
-};
+		// If at bottom, bump up 1px
+		if (curPos + height >= scroll) {
+			el.scrollTop = scroll - height - 1;
+		}
+	};
+	//
+	// Class used to work with addEventListener. Allows
+	// context to be specified on handler, and provides
+	// a method for easy removal.
+	//
+	function EventListener(el, opts) {
+		// Make args available to instance
+		this.evt = opts.evt;
+		this.el = el;
+		// Default
+		this.handler = opts.handler;
+		// If context passed call with context
+		if (opts.context) {
+			this.handler = function(evt) {
+				opts.handler.call(opts.context, evt);
+			};
+		}
+	}
 
-//
-// Return true or false depending on if content
-// is scrollable
-//
-utils.isScrollable = function (el) {
-  return (el.scrollHeight > el.offsetHeight);
-};
+	//
+	// Add EventListener on instance el
+	//
+	EventListener.prototype.add = function() {
+		this.el.addEventListener(this.evt, this.handler, false);
+	};
 
-//
-// Keep scrool from hitting end bounds
-//
-utils.scrollToEnd = function (el) {
-  var curPos = el.scrollTop,
-      height = el.offsetHeight,
-      scroll = el.scrollHeight;
-  
-  // If at top, bump down 1px
-  if(curPos <= 0) { el.scrollTop = 1; }
+	//
+	// Removes EventListener on instance el
+	//
+	EventListener.prototype.remove = function() {
+		this.el.removeEventListener(this.evt, this.handler);
+	};
 
-  // If at bottom, bump up 1px
-  if(curPos + height >= scroll) {
-    el.scrollTop = scroll - height - 1;
-  }
-};
-//
-// Class used to work with addEventListener. Allows
-// context to be specified on handler, and provides
-// a method for easy removal.
-//
-function EventListener(el, opts) {
-  // Make args available to instance
-  this.evt = opts.evt;
-  this.el = el;
-  // Default
-  this.handler = opts.handler;
-  // If context passed call with context
-  if (opts.context) {
-    this.handler = function (evt) {
-      opts.handler.call(opts.context, evt);
-    };
-  }
-}
-
-//
-// Add EventListener on instance el
-//
-EventListener.prototype.add = function () {
-  this.el.addEventListener(this.evt, this.handler, false);
-};
-
-//
-// Removes EventListener on instance el
-//
-EventListener.prototype.remove = function () {
-  this.el.removeEventListener(this.evt, this.handler);
-};
-
-// Expose to window
-if (typeof window !== 'undefined') { window.bouncefix = bouncefix; }
+	// Expose to window
+	if (typeof window !== 'undefined') {
+		window.bouncefix = bouncefix;
+	}
 
 })(window, document);
 
-
-unp.initCalendar = function(){
-	try{
-		$('#calendar').fullCalendar({
-			header: {
-				left: 'prev,next today',
-				center: 'title',
-				right: 'month,basicWeek,basicDay'
+unp.initCalendar = function() {
+	try {
+		$('#calendar').fullCalendar( {
+			header : {
+				left : 'prev,next today',
+				center : 'title',
+				right : 'month,basicWeek,basicDay'
 			}
 		});
-	}catch(e){
-		
+	} catch (e) {
+
 	}
 }
