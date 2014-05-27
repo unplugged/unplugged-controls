@@ -24,19 +24,19 @@ $(window).bind(
 		});
 
 unp.storePageRequest = function(url) {
-
-	this._firstLoad = false;
-
-	if (url.indexOf("#") > -1) {
-		url = url.substring(0, url.indexOf(" #"));
+	if (url.indexOf('action=editDocument') == -1){
+		this._firstLoad = false;
+	
+		if (url.indexOf("#") > -1) {
+			url = url.substring(0, url.indexOf(" #"));
+		}
+		if (url.indexOf("?") == -1) {
+			url += "?";
+		}
+		url += "&history=true";
+		history.pushState(null, "", url);
+		console.log("pushed " + url);
 	}
-	if (url.indexOf("?") == -1) {
-		url += "?";
-	}
-	url += "&history=true";
-	history.pushState(null, "", url);
-	console.log("pushed " + url);
-
 }
 
 $(window)
@@ -247,7 +247,7 @@ unp.loadmore = function(dbName, viewName, summarycol, detailcol, category,
 	}
 }
 
-unp.openDocument = function(url, target) {
+unp.openDocument = function(url, target, ignoreInHistory) {
 	var thisArea = $("#" + target);
 	thisArea.load(url.replace(" ", "%20") + " #contentwrapper", function(data,
 			status, xhr) {
@@ -260,7 +260,9 @@ unp.openDocument = function(url, target) {
 				firedrequests = new Array();
 			}
 
-			unp.storePageRequest(url);
+			if(!ignoreInHistory){
+				unp.storePageRequest(url);
+			}
 
 			unp.initiscroll();
 			if (url.indexOf("editDocument") > -1
@@ -338,7 +340,7 @@ unp.saveDocument = function(formid, unid, viewxpagename, formname, parentunid,
 						unp.openDocument(
 								viewxpagename
 										+ "?action=openDocument&documentId="
-										+ response, "content");
+										+ response, "content", true);
 						unp.initiscroll();
 					} else {
 						alert(response);

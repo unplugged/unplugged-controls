@@ -91,7 +91,6 @@ try{
 					if (isNaN(value)){
 						value = 0;
 					}
-					print("value = " + value);
 				}else if(fieldname.indexOf("float_") > -1){
 					//This needs to be a float value field
 					fieldnames = fieldname.split("float_");

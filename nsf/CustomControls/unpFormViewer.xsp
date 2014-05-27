@@ -83,7 +83,7 @@ if (out.length > 0){
 						<xp:attr name="onclick">
 							<xp:this.value><![CDATA[#{javascript:var url = compositeData.editxpagename + "?action=editDocument&documentId=" + document1.getDocument().getUniversalID();
 if (compositeData.editxpagewithajax != "no"){
-	return "unp.openDocument('" + url + "', 'content');";
+	return "unp.openDocument('" + url + "', 'content', true);";
 }else{
 	return "$.blockUI();window.location.href='" + url + "';";
 }}]]></xp:this.value>
