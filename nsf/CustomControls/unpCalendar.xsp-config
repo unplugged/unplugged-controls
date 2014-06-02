@@ -18,5 +18,33 @@
       <small-icon>/icons/defaultLogoSmall.png</small-icon>
       <large-icon>/icons/defaultLogo.png</large-icon>
     </icon>
+    <property>
+      <property-name>viewname</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>startdatefield</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>enddatefield</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>titlefield</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>viewxpage</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>highlightfield</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>highlighttest</property-name>
+      <property-class>string</property-class>
+    </property>
   </composite-component>
 </faces-config>

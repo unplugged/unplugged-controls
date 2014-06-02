@@ -206,3 +206,9 @@ function setDownloaded(downloadedarray){
 	session.setEnvironmentVar("ro.downloaded." + @LowerCase(@ReplaceSubstring(database.getFilePath(), "\\", "")), @Implode(@Trim(downloadedarray), ","), true);
 	sessionScope.downloaded = null;
 }
+function getISODate(datefield){
+	var date:Date = datefield;
+	return date.getFullYear()+"-"+@Right("0" + (date.getMonth()+1), 2)+"-"+
+			@Right("0"+date.getDate(),2)+"T"+@Right("0"+date.getHours(),2)+":"+
+			@Right("0"+date.getMinutes(),2)+":00";
+}

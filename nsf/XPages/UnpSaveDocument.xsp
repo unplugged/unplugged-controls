@@ -55,6 +55,7 @@ try{
 	}
 	resp = "setting dateformat";
 	var dateformat = /^(19|20)\d\d[- \/.](0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])$/;
+	var isodateformat = /(\d{4})-(\d{2})-(\d{2})T(\d{2})\:(\d{2})\:(\d{2})[+-](\d{2})\:(\d{2})/;
 	try{
 		resp = "getting keyset";
 		var keys = param.keySet().iterator();
@@ -63,7 +64,17 @@ try{
 			var key = keys.next();
 			resp = ("Processing " + key);
 			var value = unescape(param.get(key));
-			if (dateformat.test(value)){
+			print(value);
+			print ("Testing dates...");
+			if(value.length = 19 && value.indexOf("T") == 10){
+				print("This is an isodate");
+				//2014-06-04T16:00:00
+				var date = @Left(value, "T").split("-");
+				var time = @Right(value, "T").split(":");
+				print(date);
+				print(time);
+				value = session.createDateTime(@Date(parseInt(date[0], 10), parseInt(date[1], 10), parseInt(date[2], 10), parseInt(time[0], 10), parseInt(time[1], 10), 0));				
+			}else if (dateformat.test(value)){
 				value = value.split("-");
 				value = session.createDateTime(@Date(parseInt(value[0], 10), parseInt(value[1], 10), parseInt(value[2], 10)));
 			}
@@ -91,6 +102,7 @@ try{
 					if (isNaN(value)){
 						value = 0;
 					}
+					print("value = " + value);
 				}else if(fieldname.indexOf("float_") > -1){
 					//This needs to be a float value field
 					fieldnames = fieldname.split("float_");

@@ -18,29 +18,27 @@
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 	</xp:this.resources>
 	<unp:unpHeader search="database" viewsButton="true"
-		headerHomeLink="/UnpMain.xsp" title="Employees" searchPage="UnpDemoWidgetsSearch.xsp">
+		headerHomeLink="/UnpMain.xsp" title="Calendar">
 	</unp:unpHeader>
 	<unp:unpNavigatorComputed>
 		<unp:this.computedmenuitems><![CDATA[#{javascript:[
-        {label: "Employees", hasSubMenu: false, page: "/UnpDemoWidgets.xsp", ajaxloadid: "contentwrapper", ajaxtargetid: "content"},
-        {label: "Employees (Partial)", hasSubMenu: false, page: "/UnpDemoWidgetsEmployeesNoIcons.xsp", ajaxloadid: "contentwrapper", ajaxtargetid: "content"},
-        {label: "Employees By Department", hasSubMenu: false, page: "/UnpDemoWidgetsByDept.xsp", ajaxloadid: "contentwrapper", ajaxtargetid: "content"},
-        {label: "Finance Employees", hasSubMenu: false, page: "/UnpDemoWidgetsByDeptFinances.xsp", ajaxloadid: "contentwrapper", ajaxtargetid: "content"},
-        {label: "Employees By Country", hasSubMenu: false, page: "/UnpDemoWidgetsByCountry.xsp", ajaxloadid: "contentwrapper", ajaxtargetid: "content"},
-        {label: "Employees By Year", hasSubMenu: false, page: "/UnpDemoWidgetsByYear.xsp", ajaxloadid: "contentwrapper", ajaxtargetid: "content"},
-        {label: "About", hasSubMenu: false, page: "/UnpAbout.xsp", ajaxloadid: "contentwrapper", ajaxtargetid: "content"}
+        {label: "Calendar", hasSubMenu: false, page: "/UnpDemoCalendar.xsp"}
 ]}]]></unp:this.computedmenuitems>
 	</unp:unpNavigatorComputed>
 	<div id="content">
 		<div id="contentwrapper">
 			<unp:unpScrollableArea>
 				<xp:this.facets>
-					<unp:unpCalendar xp:key="facet_1"></unp:unpCalendar>
+					<unp:unpCalendar xp:key="facet_1"
+						enddatefield="EndDate" highlightfield="HighLight"
+						highlighttest="Yes" startdatefield="StartDate" titlefield="Title"
+						viewname="CalendarEntries" viewxpage="UnpDemoCalendarEntry.xsp">
+					</unp:unpCalendar>
 				</xp:this.facets>
 			</unp:unpScrollableArea>
 		</div>
 	</div>
-	<unp:unpFooter newDocTarget="EmployeeEdit.xsp" synctype="alldbs"
+	<unp:unpFooter synctype="alldbs"
 		newDocLoadType="ajax" postSyncTarget="/UnpMain.xsp">
 	</unp:unpFooter>
 </xp:view>

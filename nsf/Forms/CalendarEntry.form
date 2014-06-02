@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<form name='CalendarEntry' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.0' replicaid='80257CD2006E18DF' publicaccess='false'
+ designerversion='8.5.3' renderpassthrough='true'>
+<noteinfo noteid='51e' unid='BABD24583212338880257CE6003712F0' sequence='3'>
+<created><datetime dst='true'>20140528T110133,28+01</datetime></created>
+<modified><datetime dst='true'>20140529T075417,30+01</datetime></modified>
+<revised><datetime dst='true'>20140529T075417,29+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20140529T075417,30+01</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20140528T110133,59+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<body><richtext>
+<pardef id='1'/>
+<par def='1'/>
+<table widthtype='fixedleft' refwidth='7.5889in'><tablecolumn width='3.7944in'/><tablecolumn
+ width='3.7944in'/>
+<tablerow>
+<tablecell>
+<pardef id='3' keepwithnext='true' keeptogether='true'/>
+<par def='3'>Start Date</par></tablecell>
+<tablecell>
+<pardef id='4' keepwithnext='true' keeptogether='true'/>
+<par def='4'><field type='datetime' kind='editable' name='StartDate'><datetimeformat
+ show='date' date='yearmonthday' fourdigityearfor21stcentury='true' zone='never'
+ dateformat='weekdaydaymonthyear' dayformat='twodigitday' monthformat='twodigitmonth'
+ yearformat='fourdigityear' weekdayformat='shortname' dateseparator1=' ' dateseparator2='/'
+ dateseparator3='/' timeseparator=':' timeformat24='true' preference='usersetting'/></field></par></tablecell></tablerow>
+<tablerow>
+<tablecell>
+<par def='3'>End Date</par></tablecell>
+<tablecell>
+<par def='4'><field type='datetime' kind='editable' name='EndDate'><datetimeformat
+ show='date' date='yearmonthday' fourdigityearfor21stcentury='true' zone='never'
+ dateformat='weekdaydaymonthyear' dayformat='twodigitday' monthformat='twodigitmonth'
+ yearformat='fourdigityear' weekdayformat='shortname' dateseparator1=' ' dateseparator2='/'
+ dateseparator3='/' timeseparator=':' timeformat24='true' preference='usersetting'/></field></par></tablecell></tablerow>
+<tablerow>
+<tablecell>
+<par def='3'>Title</par></tablecell>
+<tablecell>
+<par def='4'><field type='text' kind='editable' name='Title'/><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par></tablecell></tablerow>
+<tablerow>
+<tablecell>
+<par def='3'>Details</par></tablecell>
+<tablecell>
+<par def='4'><field type='text' kind='editable' name='Details'/><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par></tablecell></tablerow>
+<tablerow>
+<tablecell>
+<par def='3'>Highlight</par></tablecell>
+<tablecell>
+<par def='4'><field borderstyle='none' lookupeachchar='false' lookupaddressonrefresh='false'
+ type='keyword' allowmultivalues='true' kind='editable' name='highlight' listinputseparators='comma'
+ listdisplayseparator='comma'><keywords helperbutton='false' columns='1' ui='checkbox'><textlist
+><text>Yes</text></textlist></keywords></field></par></tablecell></tablerow></table>
+<par def='1'/></richtext></body>
+<item name='$$ScriptName' summary='false' sign='true'><text>CalendarEntry</text></item></form>
+

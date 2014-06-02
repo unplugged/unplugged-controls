@@ -4,7 +4,10 @@
  * (c) 2013 Adam Shaw
  */
 
-
+#calendar {
+	background-color: #fff;
+	padding: 3px;		
+}
 .fc {
 	direction: ltr;
 	text-align: left;
@@ -17,7 +20,7 @@
 	
 html .fc,
 .fc table {
-	font-size: 1em;
+	font-size: 1.1em;
 	}
 	
 .fc td,
@@ -141,7 +144,7 @@ html .fc,
 .fc-button {
 	position: relative;
 	display: inline-block;
-	padding: 0 .6em;
+	padding: 1em;
 	overflow: hidden;
 	height: 1.9em;
 	line-height: 1.9em;
