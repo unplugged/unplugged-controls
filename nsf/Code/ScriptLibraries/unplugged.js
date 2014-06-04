@@ -1132,6 +1132,10 @@ unp.initCalendar = function() {
 			events: url,
 			timezone: 'local'
 		});
+		$('.fc-button').each(function(){
+			$(this).removeClass();
+			$(this).addClass('button');
+		})
 				
 	} catch (e) {
 
