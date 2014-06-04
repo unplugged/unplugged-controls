@@ -94,16 +94,16 @@ viewScope.put("images", images);
 		<li id="next" onclick="gallery.next()">+</li>
 	</ul>
 	<div id="closeButton">
-		<xp:panel tagName="a" id="link1">
+		<xp:panel tagName="input" id="panel1" styleClass="button">
 			<xp:this.attrs>
 				<xp:attr name="onclick">
 					<xp:this.value><![CDATA[#{javascript:"$.blockUI();window.location.href='" + compositeData.closeXPage + "';"}]]></xp:this.value>
 				</xp:attr>
-				<xp:attr name="href" value="#">
+				<xp:attr name="type" value="button">
+				</xp:attr>
+				<xp:attr name="value" value="Close">
 				</xp:attr>
 			</xp:this.attrs>
-			<span class="icon"></span>
-			<span class="label">Close</span>
 		</xp:panel>
 	</div>
 	<div id="swipepreviousbutton" onclick="gallery.prev()">
