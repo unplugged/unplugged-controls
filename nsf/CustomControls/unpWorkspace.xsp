@@ -23,8 +23,7 @@
 		</xp:metaData>
 	</xp:this.resources>
 
-	<xp:panel tagName="section" styleClass="workspace-header"
-		style="-webkit-transition: -webkit-transform 0ms cubic-bezier(0.33, 0.66, 0.66, 1); -webkit-transform-origin: 0px 0px; -webkit-transform: translate(0px, 0px) translateZ(0px);">
+	<xp:panel tagName="section" styleClass="workspace-header">
 		<xp:this.rendered><![CDATA[#{javascript:(compositeData.alertlevel != "" && compositeData.alertlevel != null) ||
 (compositeData.headerinfo != null)}]]></xp:this.rendered>
 		<xp:panel tagName="ul" styleClass="user-info">
@@ -51,7 +50,7 @@ if (compositeData.alertlevel == "elevated"){
 return out;}]]></xp:this.styleClass>
 			</xp:text>
 			<xp:text tagName="li" value="#{compositeData.alertlevelnormallabel}">
-				<xp:this.styleClass><![CDATA[#{javascript:var out = "normal";
+				<xp:this.styleClass><![CDATA[#{javascript:var out = "workspace-header-li normal";
 if (compositeData.alertlevel == "normal"){
 	out += " active";
 }

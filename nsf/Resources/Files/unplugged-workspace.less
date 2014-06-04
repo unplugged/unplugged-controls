@@ -16,7 +16,7 @@
 /* Header */
 
 .workspace-header {
-	background: #3d3d3d;
+	background: @body-background-color;
 	padding: 14px 16px;
 	overflow: hidden;
 
@@ -28,12 +28,12 @@
 	}
 	
 	li {
-		color: #CCC;
+		color: @menuitems-color;
 		line-height: 20px;
-		text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+		text-shadow: @menuitems-text-shadow;
 		float: left;
 		margin-right: 20px;
-		font-size: 13px;
+		font-size: @menuitems-font-size;
 	}
 	
 	.alert-status {

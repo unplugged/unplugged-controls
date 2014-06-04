@@ -52,6 +52,7 @@ body {
 .iscrollcontent.dialogactive {
   z-index: 999;
   /* Display above menu (e.g. overlays/modals) */
+
 }
 @media screen and (min-width: 701px) {
   .iscrollcontent {
@@ -140,6 +141,7 @@ input {
 a {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   /* Disable Android's default active link styling */
+
 }
 a:hover {
   text-decoration: none;
@@ -322,6 +324,7 @@ textarea,
   -webkit-appearance: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   /* Disable Android's default active link styling */
+
 }
 .button i:before {
   color: #2087fc;
@@ -344,6 +347,7 @@ textarea,
 .saveButton {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   /* Disable Android's default active link styling */
+
 }
 .editButton .label,
 .cancelButton .label,
@@ -401,6 +405,7 @@ textarea,
   background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 100%);
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   /* Disable Android's default active link styling */
+
 }
 @media screen and (max-width: 700px) {
   .viewsButton,
@@ -558,8 +563,7 @@ textarea,
 		box-shadow: none;
 	}
 }
-*/
-/* MENU */
+*//* MENU */
 @media screen and (min-width: 1001px) {
   .iscrollcontent > div {
     margin-left: 30%;
@@ -929,6 +933,15 @@ li#title span,
   text-transform: uppercase;
   text-shadow: none;
 }
+@media screen and (min-width: 1001px) {
+  
+}
+@media screen and (min-width: 701px) {
+  
+}
+@media screen and (max-width: 700px) {
+  
+}
 .categoryRowFixed {
   display: block;
   padding: 10px 15px;
@@ -1051,7 +1064,7 @@ li.data-row .multiLineIcon {
   border-color: transparent;
   border-top-color: #4f4f4f;
 }
-@media screen and (min-width: 1001px) and (orientation: landscape) {
+@media screen and (min-width: 1001px) {
   .pullleft,
   .left-aligned {
     margin-left: -42.8% !important;
@@ -1080,6 +1093,7 @@ li.data-row .multiLineIcon {
 .loadmorelink {
   font-size: 0;
   /* Clear extra space */
+
   margin-top: 10px;
 }
 .loadmorelink button {
@@ -1105,6 +1119,7 @@ li.data-row .multiLineIcon {
   -webkit-border-radius: 0;
   margin: 36px 0;
   /* Switch - from http://codepen.io/joshnh/pen/hjbuH */
+
 }
 @media screen and (max-width: 1023px) and (min-width: 1020px) {
   #formholder {
@@ -1309,6 +1324,7 @@ li.data-row .multiLineIcon {
   /*box-shadow: inset 0 -3px 3px hsla(0,0%,0%,.025),
 		                0 1px 4px hsla(0,0%,0%,.15),
 		                0 4px 4px hsla(0,0%,0%,.1);*/
+
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15), 0 4px 4px rgba(0, 0, 0, 0.1);
   content: '';
   display: block;
@@ -1438,6 +1454,7 @@ li.data-row .multiLineIcon {
 					line-height: 24px;
 					font-size: 16px;
 					text-align: center;*/
+
 }
 .cke_chrome .cke_contents {
   border-color: 1px solid #DDD;
@@ -1462,8 +1479,7 @@ body.cke_editable p {
   border: 0;
   background: transparent;
 }
-/* WORKSPACE */
-.wsscroll {
+/* WORKSPACE */.wsscroll {
   height: 100%;
   left: 0px;
   width: 100%;
@@ -1485,7 +1501,7 @@ body.cke_editable p {
 }
 /* Header */
 .workspace-header {
-  background: #3d3d3d;
+  background: #f0eff4;
   padding: 14px 16px;
   overflow: hidden;
 }
@@ -1496,12 +1512,12 @@ body.cke_editable p {
   float: left;
 }
 .workspace-header li {
-  color: #CCC;
+  color: #000000;
   line-height: 20px;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  text-shadow: none;
   float: left;
   margin-right: 20px;
-  font-size: 13px;
+  font-size: 17px;
 }
 .workspace-header .alert-status {
   float: right;
@@ -1743,8 +1759,7 @@ body.cke_editable p {
     display: none;
   }
 }
-/* SWIPE VIEW */
-/**
+/* SWIPE VIEW *//**
  * Copyright 2013 Teamstudio Inc 
  * Licensed under the Apache License, Version 2.0 (the "License"); 
  * you may not use this file except in compliance with the License. You may obtain a copy of the License at
@@ -1774,9 +1789,11 @@ body.swipe-view {
   font-family: helvetica;
   font-size: 12px;
   /* Jack changes */
+
   background: black;
   height: 100%;
   /* Jack */
+
 }
 body.swipe-view form {
   height: 100%;
@@ -1802,6 +1819,7 @@ body.swipe-view #nav {
   -o-border-radius: 10px;
   border-radius: 10px;
   /* Jack */
+
   padding: 0 3px;
 }
 @media screen and (max-width: 400px) {
@@ -1832,12 +1850,14 @@ body.swipe-view #nav li#prev {
   margin-left: 5px;
   background: transparent;
   /* Jack */
+
   display: none;
 }
 body.swipe-view #nav li#next {
   margin-right: 0;
   background: transparent;
   /* Jack */
+
   display: none;
 }
 body.swipe-view #nav li.selected {
@@ -1894,6 +1914,7 @@ body.swipe-view #swipeview-slider img {
   pointer-events: none;
   max-height: 95%;
   /* Jack changes */
+
   border: 0;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -1944,6 +1965,7 @@ body.swipe-view #swipeview-slider span {
   -o-transform: translate(0, 100%) translateZ(0);
   transform: translate(0, 100%) translateZ(0);
   /* Jack changes */
+
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -1998,6 +2020,7 @@ body.swipe-view #closeButton {
   display: block;
   z-index: 101;
   /* Jack */
+
   top: 13px;
   right: 13px;
 }
@@ -2015,9 +2038,11 @@ body.swipe-view #closeButton > a {
   border: 1px solid transparent;
   padding: 0 10px;
   /* Jack */
+
 }
 body.swipe-view #closeButton > a:hover {
   /* Jack */
+
 }
 body.swipe-view #swipepreviousbutton {
   position: absolute;
@@ -2055,8 +2080,7 @@ body.swipe-view #swipenextbutton:after {
   border-color: transparent transparent transparent #666;
   margin-right: -22px;
 }
-/* MEDIA VIEW */
-/* ICONS */
+/* MEDIA VIEW *//* ICONS */
 .hviewicon {
   width: 52px;
   height: 62px;
@@ -2117,11 +2141,17 @@ body.swipe-view #swipenextbutton:after {
   padding-left: 30px;
   padding-top: 10px;
   /* Heading */
+
   /* Row Heading */
+
   /* Swiper */
+
   /* IE10 Windows Phone 8 Fixes */
+
   /* Items */
+
   /* Filters */
+
 }
 @media screen and (max-width: 1000px) {
   .hviewresults {
@@ -2191,6 +2221,7 @@ body.swipe-view #swipenextbutton:after {
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
   /* Fix of Webkit flickering */
+
   z-index: 1;
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
@@ -2205,6 +2236,7 @@ body.swipe-view #swipenextbutton:after {
 }
 .hviewresults .swiper-scroll-container .swiper-slide {
   /*width: 10000px !important;*/
+
   height: 100px;
   padding-left: 5px;
   padding-top: 5px;
@@ -2381,8 +2413,11 @@ body.swipe-view #swipenextbutton:after {
   left: 50%;
   margin-left: -200px;
   /* Smartphones (portrait) */
+
   /* Header */
+
   /* Body */
+
 }
 @media only screen and (max-width: 500px) {
   #hviewPopup.dialog {
@@ -3088,7 +3123,7 @@ legend {
   background: #fff;
   -webkit-border-radius: 10px;
   -webkit-box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.2);
-  left: 100px;
+  left: 10px;
   top: 70px;
   right: 10px;
   padding: 10px;
@@ -3241,7 +3276,9 @@ legend {
   font-weight: bold;
   position: fixed;
   /* Tablet */
+
   /* Phone */
+
 }
 @media screen and (min-width: 701px) {
   .atozpicker,
@@ -3267,9 +3304,13 @@ legend {
   cursor: pointer;
   height: 3.7037037%;
   /* 100%/27 */
+
   /* Tablet */
+
   /* Phone */
+
   /* Phone Landscape */
+
 }
 @media screen and (min-width: 701px) {
   .atozletter,
@@ -3288,11 +3329,13 @@ legend {
   .atozletter-divider {
     height: 5.26315789%;
     /* 100%/19 */
+  
   }
 }
 .atozletter-divider {
   display: none;
   /* Phone Landscape */
+
 }
 @media screen and (max-height: 400px) {
   .atozletter-divider {
@@ -3302,6 +3345,7 @@ legend {
 .otherletter {
   display: block;
   /* Phone Landscape */
+
 }
 @media screen and (max-height: 400px) {
   .otherletter {
@@ -3573,6 +3617,7 @@ Not sure what any of it does, but I don't want to move/change it in case I break
   display: -webkit-box;
   -webkit-line-clamp: 3;
   /*num lines*/
+
   -webkit-box-orient: vertical;
   white-space: normal;
   line-height: 22px;
@@ -3598,73 +3643,4 @@ Not sure what any of it does, but I don't want to move/change it in case I break
 }
 .formpullleft {
   margin-left: 0% !important;
-}
-/* ALERT */
-.alertPopup {
-  background: white;
-  border-radius: 10px;
-  box-shadow: none;
-  max-width: 600px;
-  padding: 0;
-  margin: 0 auto;
-}
-.alertPopup h2 {
-  margin-top: 10px;
-  margin-bottom: 0;
-}
-.alertPopup #alertContent {
-  font-size: 16px;
-  padding-bottom: 10px;
-  max-height: 350px;
-  text-align: center;
-}
-@media screen and (max-width: 400px) {
-  .alertPopup #alertContent {
-    max-height: 120px;
-  }
-}
-.alertPopup > div .button {
-  border-radius: 6px;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3);
-  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
-  font-weight: bold;
-  color: #eeeeee;
-  background: #636363;
-  border: 1px solid #535353;
-  display: block;
-  width: auto;
-  height: 36px;
-  cursor: pointer;
-  padding: 10px;
-  margin: 0 5 0 5;
-  line-height: 36px;
-  font-size: 16px;
-  text-align: center;
-}
-.alertPopup > div .button.closebutton {
-  color: #ffffff;
-  background: #4d9400;
-  border: 1px solid #3d8400;
-}
-.alertPopup {
-  -webkit-box-sizing: border-box;
-  position: fixed;
-  z-index: 9999;
-  background: #fff;
-  -webkit-border-radius: 10px;
-  -webkit-box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.2);
-  left: 10px;
-  top: 70px;
-  right: 10px;
-  padding: 10px;
-}
-.alertPopup h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  text-align: center;
-}
-.alertPopup label {
-  display: block;
-  font-size: 1.2em;
-  font-weight: bold;
 }
