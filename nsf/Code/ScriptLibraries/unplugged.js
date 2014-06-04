@@ -1109,7 +1109,7 @@ unp.decreaseFontSize = function(button) {
 
 unp.initCalendar = function() {
 	try {
-		var buttons = 'month,basicWeek,basicDay';
+		var buttons = 'basicDay,basicWeek,month';
 		var defaultView = 'month';
 		if ($(window).width() < 400){
 			buttons = '';
