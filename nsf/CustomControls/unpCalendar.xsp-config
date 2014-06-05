@@ -46,5 +46,46 @@
       <property-name>highlighttest</property-name>
       <property-class>string</property-class>
     </property>
+    <property>
+      <property-name>headerbuttonsleft</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <default-value>prev,today,next</default-value>
+        </designer-extension>
+        <required>true</required>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>headerbuttonsrighttablet</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <default-value>agendaDay,agendaWeek,month</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>headerbuttonsrightphone</property-name>
+      <property-class>string</property-class>
+    </property>
+    <property>
+      <property-name>defaultviewtablet</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <default-value>month</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
+    <property>
+      <property-name>defaultviewphone</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <default-value>basicWeek</default-value>
+        </designer-extension>
+      </property-extension>
+    </property>
   </composite-component>
 </faces-config>

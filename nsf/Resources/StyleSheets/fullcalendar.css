@@ -55,6 +55,7 @@ html .fc,
 .fc-header-title {
 	display: inline-block;
 	vertical-align: top;
+	padding-top: 8px;
 	}
 	
 .fc-header-title h2 {
@@ -76,6 +77,9 @@ html .fc,
 .fc-header .fc-button {
 	margin-right: -1px;
 	}
+.fc-header .button {
+	margin-right: 2px;
+}
 	
 .fc-header .fc-corner-right,  /* non-theme */
 .fc-header .ui-corner-right { /* theme */
@@ -179,11 +183,14 @@ html .fc,
 	}
 
 .fc-icon-left-single-arrow:after {
+	font-size: 30px;
 	content: "\02039";
 	font-weight: bold;
+	
 	}
 
 .fc-icon-right-single-arrow:after {
+	font-size: 30px;
 	content: "\0203A";
 	font-weight: bold;
 	}

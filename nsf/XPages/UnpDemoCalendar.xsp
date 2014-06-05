@@ -14,12 +14,18 @@
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom"
 	xmlns:unp="http://unplugged.teamstudio.com">
 
-	<xp:this.resources>
-		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
-	</xp:this.resources>
 	<unp:unpHeader search="database" viewsButton="true"
 		headerHomeLink="/UnpMain.xsp" title="Calendar">
 	</unp:unpHeader>
+	<xp:panel tagName="link" rendered="#{javascript:!isAjax()}">
+		<xp:this.attrs>
+			<xp:attr name="type" value="text/css"></xp:attr>
+			<xp:attr name="rel" value="stylesheet"></xp:attr>
+			<xp:attr name="href" value="unplugged.css">
+			</xp:attr>
+			<xp:attr name="unp-id" value="primarycss"></xp:attr>
+		</xp:this.attrs>
+	</xp:panel>
 	<unp:unpNavigatorComputed>
 		<unp:this.computedmenuitems><![CDATA[#{javascript:[
         {label: "Calendar", hasSubMenu: false, page: "/UnpDemoCalendar.xsp"}
@@ -32,7 +38,10 @@
 					<unp:unpCalendar xp:key="facet_1"
 						enddatefield="EndDate" highlightfield="HighLight"
 						highlighttest="Yes" startdatefield="StartDate" titlefield="Title"
-						viewname="CalendarEntries" viewxpage="UnpDemoCalendarEntry.xsp">
+						viewname="CalendarEntries" viewxpage="UnpDemoCalendarEntry.xsp"
+						headerbuttonsleft="prev,today,next" defaultviewtablet="month"
+						defaultviewphone="basicWeek" headerbuttonsrighttablet="agendaDay,agendaWeek,month"
+						headerbuttonsrightphone="">
 					</unp:unpCalendar>
 				</xp:this.facets>
 			</unp:unpScrollableArea>

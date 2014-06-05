@@ -25,7 +25,12 @@
 'titlefield: "' + compositeData.titlefield + '",\n' + 
 'viewxpage: "' + compositeData.viewxpage + '",\n' + 
 'highlightfield: "' + compositeData.highlightfield + '",\n' + 
-'highlighttest: "' + compositeData.highlighttest + '"\n' + 
+'highlighttest: "' + compositeData.highlighttest + '",\n' +
+'defaultviewtablet: "' + compositeData.defaultviewtablet + '",\n' + 
+'defaultviewphone: "' + compositeData.defaultviewphone + '",\n' + 
+'headerbuttonsleft: "' + compositeData.headerbuttonsleft + '",\n' + 
+'headerbuttonsrighttablet: "' + compositeData.headerbuttonsrighttablet + '",\n' + 
+'headerbuttonsrightphone: "' + compositeData.headerbuttonsrightphone + '"\n' +
 '}'}]]></xp:this.value>
 	</xp:text>
 	<div id='calendar'></div>

@@ -1109,11 +1109,11 @@ unp.decreaseFontSize = function(button) {
 
 unp.initCalendar = function() {
 	try {
-		var buttons = 'agendaDay,agendaWeek,month';
-		var defaultView = 'month';
+		var buttons = calendaroptions.headerbuttonsrighttablet;
+		var defaultView = calendaroptions.defaultviewtablet;
 		if ($(window).width() < 400){
-			buttons = '';
-			defaultView = 'agendaWeek';
+			buttons = calendaroptions.headerbuttonsrightphone;
+			defaultView = calendaroptions.defaultviewphone;
 		}
 		var url = 'UnpCalendarData.xsp?viewname=' + calendaroptions.viewname;
 		url += '&startdatefield=' + calendaroptions.startdatefield;
@@ -1124,19 +1124,31 @@ unp.initCalendar = function() {
 		url += '&highlighttest=' + calendaroptions.highlighttest;
 		$('#calendar').fullCalendar( {
 			header : {
-				left : 'prev,next',
+				left : calendaroptions.headerbuttonsleft,
 				center : 'title',
 				right : buttons
 			}, 
 			defaultView: defaultView, 
 			events: url,
-			timezone: 'local'
+			timezone: 'local', 
+			titleFormat: {
+			    month: 'MMMM YYYY',
+			    week: "MMM D",
+			    day: 'MMM DD'
+			}, 
+			eventAfterAllRender: function(view){
+				//$('.fc-agenda-divider').next().css('height', ($(window).height() - 50) + 'px');
+			}
 		});
+		$('#calendar').fullCalendar('option', 'height', $(window).height() - 50);
 		$('.fc-button').each(function(){
 			$(this).removeClass();
 			$(this).addClass('button');
 		})
-				
+		$('.fc-icon-left-single-arrow').parent().addClass('fa fa-arrow-left');
+		$('.fc-icon-left-single-arrow').remove();
+		$('.fc-icon-right-single-arrow').parent().addClass('fa fa-arrow-right');
+		$('.fc-icon-right-single-arrow').remove();
 	} catch (e) {
 
 	}
