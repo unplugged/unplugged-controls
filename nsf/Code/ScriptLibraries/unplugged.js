@@ -1109,11 +1109,11 @@ unp.decreaseFontSize = function(button) {
 
 unp.initCalendar = function() {
 	try {
-		var buttons = 'basicDay,basicWeek,month';
+		var buttons = 'agendaDay,agendaWeek,month';
 		var defaultView = 'month';
 		if ($(window).width() < 400){
 			buttons = '';
-			defaultView = 'basicWeek';
+			defaultView = 'agendaWeek';
 		}
 		var url = 'UnpCalendarData.xsp?viewname=' + calendaroptions.viewname;
 		url += '&startdatefield=' + calendaroptions.startdatefield;
