@@ -1,16 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><note xmlns="http://www.lotus.com/dxl" class="form" maintenanceversion="1.0" replicaid="80257B470037E1BA" version="9.0">
-<noteinfo noteid="935a" sequence="1" unid="998DD5AB2AA1B70380257C8500571416">
-<created><datetime>20140220T155107,74+00</datetime></created>
-<modified><datetime>20140220T155109,65+00</datetime></modified>
-<revised><datetime>20140220T155109,64+00</datetime></revised>
-<lastaccessed><datetime>20140220T155109,65+00</datetime></lastaccessed>
-<addedtofile><datetime>20140220T155109,65+00</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Matt White/O=Exhilarate</name><name>Anonymous</name><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<item name="$TITLE"><text>unplugged-media.less</text></item>
-<item name="$Flags"><text>345CgQ</text></item>
-<item name="$FlagsExt"><text>D</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-<item name="$FileNames"><textlist><text>unplugged-media.less</text></textlist></item>
-
-
-<item name="$FileModDT"><datetime>20140220T150315,55+00</datetime></item></note>
+<?xml version="1.0" encoding="UTF-8"?><fileresource designerversion="8.5.3" maintenanceversion="1.0" name="unplugged-media.less" publicaccess="false" replicaid="80257CD2006E18DF" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="31a" sequence="4" unid="1D2785A1936B2A1C80257CD2006E6325">
+<created><datetime dst="true">20140508T210543,41+01</datetime></created>
+<modified><datetime dst="true">20140609T152105,22+01</datetime></modified>
+<revised><datetime dst="true">20140609T152105,21+01</datetime></revised>
+<lastaccessed><datetime dst="true">20140609T152105,22+01</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20140508T210543,42+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby></fileresource>
