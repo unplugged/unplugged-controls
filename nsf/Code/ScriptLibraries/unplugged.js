@@ -1136,11 +1136,17 @@ unp.initCalendar = function() {
 			    week: "MMM D",
 			    day: 'MMM DD'
 			}, 
-			eventAfterAllRender: function(view){
-				//$('.fc-agenda-divider').next().css('height', ($(window).height() - 50) + 'px');
+			viewRender: function(view){
+				var h;
+				if (view.name.indexOf('agenda') > -1){
+					h = 2500;
+				}else{
+					h = $(window).height() - 50;
+				}
+				console.log("Setting height to: " + h);
+				$('#calendar').fullCalendar('option', 'height', h);
 			}
 		});
-		$('#calendar').fullCalendar('option', 'height', $(window).height() - 50);
 		$('.fc-button').each(function(){
 			$(this).removeClass();
 			$(this).addClass('button');

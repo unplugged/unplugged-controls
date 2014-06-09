@@ -1,30 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.0" replicaid="80257CD2006E18DF" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="4ee" sequence="2" unid="E519FBD0C05A9E4180257CDD0058A773">
+<?xml version="1.0" encoding="UTF-8"?><fileresource designerversion="8.5.3" maintenanceversion="1.0" name="unp/moment-with-langs.js" publicaccess="false" replicaid="80257CD2006E18DF" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="4ee" sequence="3" unid="E519FBD0C05A9E4180257CDD0058A773">
 <created><datetime dst="true">20140519T170820,35+01</datetime></created>
-<modified><datetime dst="true">20140519T170828,59+01</datetime></modified>
-<revised><datetime dst="true">20140519T170828,58+01</datetime></revised>
-<lastaccessed><datetime dst="true">20140519T170828,59+01</datetime></lastaccessed>
+<modified><datetime dst="true">20140609T085234,61+01</datetime></modified>
+<revised><datetime dst="true">20140609T085234,60+01</datetime></revised>
+<lastaccessed><datetime dst="true">20140609T085234,61+01</datetime></lastaccessed>
 <addedtofile><datetime dst="true">20140519T170820,44+01</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
-<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
-<item name="$Flags"><text>345CgQ</text></item>
-<item name="$FlagsExt"><text>D</text></item>
-
-<item name="$FileModDT" sign="true"><datetime dst="true">20140519T170756,52+01</datetime></item>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<item name="$FileNames" sign="true"><text>moment-with-langs.js</text></item>
-<item name="$TITLE" sign="true"><textlist><text>unp/moment-with-langs.js</text></textlist></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item></note>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby></fileresource>
