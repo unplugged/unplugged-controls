@@ -2872,6 +2872,11 @@ legend {
   margin-left: -140px;
   top: 100px;
 }
+@media screen and (max-width: 700px) {
+  .fontawesome.panel ~ #dialogPopup {
+    top: 50px !important;
+  }
+}
 .fontawesome.panel ~ #dialogPopup #dialogContent {
   height: auto;
   overflow: visible;
@@ -2880,6 +2885,11 @@ legend {
   text-align: center;
   padding-top: 100px;
   font-weight: bold;
+}
+@media screen and (max-width: 700px) {
+  .fontawesome.panel ~ #dialogPopup #dialogContent #fontawesomedetails > div {
+    padding-top: 20px !important;
+  }
 }
 .fontawesome.panel ~ #dialogPopup #dialogContent #fontawesomedetails > div i {
   margin: 0 auto;
@@ -2890,6 +2900,11 @@ legend {
   left: 0;
   width: 100%;
   font-size: 100px;
+}
+@media screen and (max-width: 700px) {
+  .fontawesome.panel ~ #dialogPopup #dialogContent #fontawesomedetails > div i {
+    font-size: 40px !important;
+  }
 }
 .fontawesome.panel ~ #dialogPopup #dialogContent #fontawesomedetails > div i:before {
   font-size: 160px;
