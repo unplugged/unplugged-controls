@@ -115,7 +115,9 @@ $(window)
 						unp.initRichText();
 						unp.initReaderButtons();
 						unp.initCalendar();
+						$('#underlaydialogPopup').bind('touchmove', function(e){e.preventDefault()});
 					});
+					$('#underlaydialogPopup').bind('touchmove', function(e){e.preventDefault()});
 				});
 
 unp.initReaderButtons = function() {
