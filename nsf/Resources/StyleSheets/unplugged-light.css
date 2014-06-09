@@ -3660,3 +3660,72 @@ Not sure what any of it does, but I don't want to move/change it in case I break
 .formpullleft {
   margin-left: 0% !important;
 }
+/* ALERT */
+.alertPopup {
+  background: white;
+  border-radius: 10px;
+  box-shadow: none;
+  max-width: 600px;
+  padding: 0;
+  margin: 0 auto;
+}
+.alertPopup h2 {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.alertPopup #alertContent {
+  font-size: 16px;
+  padding-bottom: 10px;
+  max-height: 350px;
+  text-align: center;
+}
+@media screen and (max-width: 400px) {
+  .alertPopup #alertContent {
+    max-height: 120px;
+  }
+}
+.alertPopup > div .button {
+  border-radius: 6px;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+  color: #eeeeee;
+  background: #636363;
+  border: 1px solid #535353;
+  display: block;
+  width: auto;
+  height: 36px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 5 0 5;
+  line-height: 36px;
+  font-size: 16px;
+  text-align: center;
+}
+.alertPopup > div .button.closebutton {
+  color: #ffffff;
+  background: #4d9400;
+  border: 1px solid #3d8400;
+}
+.alertPopup {
+  -webkit-box-sizing: border-box;
+  position: fixed;
+  z-index: 9999;
+  background: #fff;
+  -webkit-border-radius: 10px;
+  -webkit-box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.2);
+  left: 10px;
+  top: 70px;
+  right: 10px;
+  padding: 10px;
+}
+.alertPopup h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.alertPopup label {
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+}
