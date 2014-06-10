@@ -1,0 +1,73 @@
+---
+layout: 330-post
+title:  "User Group Info"
+date:   2013-12-01 17:00
+categories: "330"
+---
+The next Unplugged Mobile Controls User Group meeting is scheduled for Thursday, May 8th. We will cover:
+<br/><br/>
+<ul><li>Different ways to use the Tabbed Footer control, the UnpDialog and new UnpAlert controls.
+</li><li>
+If time permits we will demo of the methods used in the One View Approvals app to show an abstracted design in one DB pulling data from multiple *source* databases. This allows developers to create mobile versions of their apps without compromising any existing design.
+</li></ul>
+<br/>
+Sign up for next months User Group meeting <a href=" https://teamstudio-event.webex.com/teamstudio-event/onstage/g.php?t=a&d=663566191">here</a>
+<br/><br/>
+<hr/>
+April 10th 2014
+<br/>
+A big thanks to Barbara from SMC for being our guest speaker. The meeting was recorded and you can see her app and a demo of the UnpNavigatorComputed control <a href="http://www.youtube.com/watch?v=nz_ds9W_9-w&list=UUrq2KhBHi-YtrAF1HXQebRA">here</a>
+<br/><br/>
+Next meeting on May 8th - details to follow.
+<hr/>
+March 20th 2014
+<br/>
+Sign up for next months User Group meeting <a href="https://teamstudio-event.webex.com/teamstudio-event/onstage/g.php?t=a&d=667056705">here</a>
+<br/><br/>
+The next Unplugged Mobile Controls User Group meeting is scheduled for Thursday, April 3rd. We will cover:
+<ul>
+<li>Changes to the UnpNavigator and why UnpComputedNavigator should now be used</li>
+<li>Barbara Houchin from SMC will be presenting their mobile Field Service application built using a mix of the Unplugged Controls and JQuery Mobile (with camera integration)</li>
+<li>Q&A</li>
+</ul>
+<hr/>
+March 11th 2014
+<br/>
+The recording of the March 6th User Group Meeting is now available to watch 
+<a href="http://youtu.be/OPDNpK8T_ZQ">here</a>
+<br/>
+Question from the last meeting:
+<br/>
+<br/>
+1) What's the benefit to the xagent style value getter vs computed value in the type ahead?
+<br/>
+The benefit is that it works :-) the computed type ahead is a dojo control and is not supported in the Unplugged product (in the XPages widgets form - native dojo is supported). The controls must work on Unplugged first (as Teamstudio are sponsors) and then a mobile web browser.
+Also, and this may be a somewhat weak argument, but by passing this off you can substitute the logic with whatever you want (JSON, text HTML content etc) without touvhing hte original XPage (classic UI/data split). 
+<br/>
+<br/>
+2) Why should the CSS aggregator be switched off (xsp.properties 'Use optimized CSS and JS at runtime' box) when using hte controls outside of the Unplugged product - in a mobile web browser?
+<br/>
+The reason I mentioned this is that if this is on then the glyphIcons we use as images do not display. On the Unplugged product this is not an issue as the CSS files etc are already stored on device and performance is not an issue.
+By allowing Domino to change and aggregate these files the order may not be properly specified (which I think is the case) and therefore the 'images' for the elements are somehow overwritten.
+I guess we could look into the as a bug/feature request and add the CSS files we need last in via CSJS as in this <a href="http://stackoverflow.com/questions/15876739/xpage-with-computed-css-file">StackOverflow post</a>.
+
+<hr/>
+Feb 27th 2014
+<br/>
+The first ‘virtual’ Unplugged Controls User Group meeting kicks is on Thursday March 6th at 10am EST (3pm GMT).<br/>
+This meeting is focused on the Open Source Unplugged Mobile Controls Project hosted on OpenNTF.<br/>
+<br/>
+These meeting are going to be focused on demonstrating one control each session (a deep dive), demonstrating a production app that uses the controls and then Q and A from the group.
+<br/>
+<br/>
+For the first meeting the details are:
+<ul>
+<li>Brief introduction into resources for using the Unplugged Controls (Videos, support etc) – 5-10 mins</li>
+<li>Deep Dive – The UnpFormEditor Control – 15 to 20 mins</li>
+<li>Real Life Case Study – Athabasca University, a Study Guide application (reference manual) for Students. – 15-20 mins</li>
+<li>Q & A – up to 15 mins </li>
+</ul>
+<br/><br/>
+This meeting will be hosted as a Webex Event please <a href="https://teamstudio-event.webex.com/teamstudio-event/onstage/g.php?t=a&d=664088163">click here</a> to register and use this link to join the meeting on March 6th
+<br/>
+Follow the User Group on Twitter: @Unp_UG

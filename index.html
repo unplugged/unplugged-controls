@@ -1,5 +1,5 @@
 ---
-layout: 320-default
+layout: 330-default
 title: Unplugged Controls
 ---
 
@@ -28,22 +28,28 @@ title: Unplugged Controls
   </p>
 
 
-  <h2>What's new in 3.2?</h2>
+  <h2>What's new in 3.3?</h2>
 
   <ul>
-<li>Moved all JavaScript into "unp." namespace. Existing custom calls to our generic functions will need to be updated</li>
-<li>Added Photo support to unpAccordion control</li>
-<li>Restored closeXPageName property to unpFormViewer, by default it will be blank but by populating it, the default back functionality will be overridden</li>
-<li>Added Save and Cancel Buttons to Text Edit panel in Sampler application</li>
-<li>Fixed Load More... issue in Horizontal View control</li>
-<li>Fixed bug when displaying images in Swipe View in landscape in large Android tablets</li>
-<li>Fixed text zoom bug in Text Reading Panel</li>
-<li>Fixed dialog not centering properly in some situations</li>
-<li>Fixed dialog not floating above all layers in some situations</li>
-<li>Fixed CSS Controls in some custom themes</li>
-<li>Improved functionality when saving documents into other databases</li>
-<li>Fixed bug with filtering data in Horizontal View control</li>
-<li>Fixed display of Font Awesome icons in landscape on small screens (e.g. iPhone)</li>
+<li>New Calendar Control</li>
+<li>New Alert Control</li>
+<li>Fix issue where Flat view didn't align left when no navigator present</li>
+<li>Make display columns for UnpAccordion configurable</li>
+<li>Removed Last Update Time when syncing disabled</li>
+<li>Fix navigation with Close button when editing a document</li>
+<li>Improve display of Close button in Swipe View control</li>
+<li>Fix display of sub header in Workspace for iOS theme</li>
+<li>Fix scrolling bug in Workspace</li>
+<li>Fix scrolling bug for UPMark on small displays</li>
+<li>Fix Workspace font size bug</li>
+<li>Fix sideways scroll bug in Swipe View</li>
+<li>Fix display of dialogs in small screens</li>
+<li>Disable scrolling when dialog displayed</li>
+<li>Fix Close button action after viewing an attachment</li>
+<li>Fixed non-wrapping text on small screens</li>
+<li>Fixed bug with saving document to a different database</li>
+<li>Hid header bar when editing fields to give more screen space</li>
+<li>Merged validation error messages into single alert</li>
 </ul>
 
   <p>In version 3 of the Controls we have significantly changed how things work, we've got new CSS, new JavaScript, more efficient native scrolling support and had a general overhaul of the Controls. So if you're upgrading an application we highly recommend that you replace all of the Controls, Stylesheets, Files etc. It might mean a little work to re-compile your XPages but will make life easier in the long run.</p>
@@ -52,7 +58,7 @@ title: Unplugged Controls
 
   <p>
     These Controls will work for "normal"
-    <a href="{{ site.baseurl}}/320/MobileWebDevelopment.html">Mobile
+    <a href="{{ site.baseurl}}/330/MobileWebDevelopment.html">Mobile
       Web Development</a>
     as well, so they can be accessed via the web browsers
     on your iPhone,
@@ -65,7 +71,7 @@ title: Unplugged Controls
   <hr />
   <p>
     <a
-      href="{{ site.baseurl}}/320/UpgradingYourApplication.html">Upgrading
+      href="{{ site.baseurl}}/330/UpgradingYourApplication.html">Upgrading
       your application</a>
     from a previous version of the Controls Library can be
     made easier by following some of our guidelines.
@@ -74,7 +80,7 @@ title: Unplugged Controls
   <hr />
   <p>
     We also provide some
-    <a href="{{ site.baseurl}}/320/GenericClasses.html">generic
+    <a href="{{ site.baseurl}}/330/GenericClasses.html">generic
       classes which you can use in static HTML</a>
     .
   </p>
