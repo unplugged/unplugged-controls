@@ -34,6 +34,6 @@ For an example of the Calendar in action download the samples database and open 
 <script src="https://gist.github.com/whitemx/906050275af37eab6f8b.js"></script>
 
 # Required Resources
-On the assumption you are using UnpHeader in your application then no extra resources are required.
+On the assumption you are using UnpHeader in your application then the only extra resource required is fullcalendar.css.
 
 If you are not using UnpHeader, then make sure you add all of the resources included in UnpHeader to your UnpMain XPage.
