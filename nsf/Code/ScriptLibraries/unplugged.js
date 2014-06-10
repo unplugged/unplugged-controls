@@ -131,14 +131,26 @@ unp.initReaderButtons = function() {
 unp.initHideFooter = function() {
 	try {
 		$(':input, textarea, select').on('focus', function() {
-			$(".footer").hide();
-			_oldiscrollbottom = $(".iscrollcontent").css("bottom");
-			$(".iscrollcontent").css("bottom", "0px");
+			if ($(this).attr("id") != "input-search"){
+				$(".footer").hide();
+				$(".iHeader").hide();
+				_oldiscrollbottom = $(".iscrollcontent").css("bottom");
+				_oldiscrolltop = $(".iscrollcontent").css("top");
+				_oldsearchtop = $(".input-search-frame").css("top");
+				$(".iscrollcontent").css("bottom", "0px");
+				$(".iscrollcontent").css("top", "0px");
+				$(".input-search-frame").css("top", "-100px");
+			}
 		});
 		$(':input, textarea, select').on('blur', function() {
-			$(".footer").show();
-			$("iscrollbottom").css("bottom", _oldiscrollbottom);
-			window.scrollTo(0, 1);
+			if ($(this).attr("id") != "input-search"){
+				$(".footer").show();
+				$(".iHeader").show();
+				$("iscrollbottom").css("bottom", _oldiscrollbottom);
+				$(".iscrollcontent").css("top", _oldiscrolltop);
+				$(".input-search-frame").css("top", _oldsearchtop);
+				window.scrollTo(0, 1);
+			}
 		});
 	} catch (e) {
 
