@@ -1216,6 +1216,7 @@ li.data-row .multiLineIcon {
   line-height: 24px;
   min-height: 24px;
   background: #fff;
+  word-break: break-word;
 }
 #formholder .body_richtext {
   background: white;
