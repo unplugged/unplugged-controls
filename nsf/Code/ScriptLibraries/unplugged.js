@@ -368,14 +368,20 @@ unp.saveDocument = function(formid, unid, viewxpagename, formname, parentunid,
 
 unp.validate = function() {
 	var valid = true;
+	var msg = "Validation Errors:\n";
 	$(".required").each( function() {
 		if ($(this).val() == "") {
 			var label = $("label[for='" + $(this).attr('id') + "']");
-			alert("Please complete " + label.text());
-			$(this).focus();
+			msg += "Please complete " + label.text() + "\n";
+			if (valid){
+				$(this).focus();
+			}
 			valid = false;
 		}
 	})
+	if (!valid){
+		alert(msg);
+	}
 	return valid;
 }
 
