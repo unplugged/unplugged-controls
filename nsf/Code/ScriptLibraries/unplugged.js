@@ -35,7 +35,7 @@ unp.storePageRequest = function(url) {
 		}
 		url += "&history=true";
 		history.pushState(null, "", url);
-		console.log("pushed " + url);
+		//console.log("pushed " + url);
 	}
 }
 
@@ -346,11 +346,11 @@ unp.saveDocument = function(formid, unid, viewxpagename, formname, parentunid,
 			cache : false,
 			encoding : "UTF-8",
 			beforeSend : function() {
-				console.log("About to open URL");
+				//console.log("About to open URL");
 			}
 		}).done(
 				function(response) {
-					console.log(response.length);
+					//console.log(response.length);
 					if (response.length == 32) {
 						unp.openDocument(
 								viewxpagename
@@ -386,7 +386,7 @@ unp.validate = function() {
 }
 
 unp.toggleViewsMenu = function(forcehide) {
-	console.log($("#menuPane").width());
+	//console.log($("#menuPane").width());
 	if ($("#menuPane").hasClass("offScreen") && !forcehide) {
 		$("#menuPane").removeClass("offScreen").addClass("onScreen");
 		$("#menuPane").animate( {
@@ -446,7 +446,9 @@ unp.loadPage = function(url, target, menuitem, pushState) {
 			unp.initAutoComplete();
 
 			try {
-				$('.categoryRow').first().click();
+				if (unpexpandfirst){
+					$('.categoryRow').first().click();
+				}
 			} catch (e) {
 
 			}
@@ -560,22 +562,22 @@ unp.jumpToLetter = function(letterelement, event) {
 				var summary = $(this).find("span").text();
 				var firstletter = summary.substring(0, 1);
 				if (firstletter == letter) {
-					console.log("we need to jump to " + firstletter
-							+ " because it's equal to " + letter);
+					//console.log("we need to jump to " + firstletter
+					//		+ " because it's equal to " + letter);
 					$('.iscrollcontent').animate( {
 						scrollTop : $(this).offset().top - 60
 					}, 500);
 					return false;
 				} else if (firstletter > letter) {
-					console.log("we need to jump to " + firstletter
-							+ " because it's greater than " + letter);
+					//console.log("we need to jump to " + firstletter
+					//		+ " because it's greater than " + letter);
 					$('.iscrollcontent').animate( {
 						scrollTop : $(this).offset().top - 120
 					}, 500);
 					return false;
 				} else {
-					console.log("we don't need to jump to " + firstletter
-							+ " because it's less than " + letter);
+					//console.log("we don't need to jump to " + firstletter
+					//		+ " because it's less than " + letter);
 				}
 			});
 }
@@ -658,7 +660,7 @@ unp.fetchDetails = function(obj, viewName, catName, xpage, dbname, summarycol,
 	$('.accordionRowSet').empty();
 	$('.accLoadMoreLink').hide();
 
-	console.log('Category: ' + catName);
+	//console.log('Category: ' + catName);
 	if ($(obj).hasClass("accordianExpanded")) {
 		$(obj).nextAll('.summaryDataRow:first').children('.accordionRowSet')
 				.slideUp('fast', function() {
@@ -1163,7 +1165,7 @@ unp.initCalendar = function() {
 				}else{
 					h = $(window).height() - 50;
 				}
-				console.log("Setting height to: " + h);
+				//console.log("Setting height to: " + h);
 				$('#calendar').fullCalendar('option', 'height', h);
 			}
 		});

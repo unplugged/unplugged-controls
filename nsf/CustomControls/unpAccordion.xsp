@@ -27,6 +27,14 @@ sessionScope.put('ajaxLoad', compositeData.ajaxload);}]]></xp:this.script>
 	<xp:this.resources>
 		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
 	</xp:this.resources>
+	<xp:text id="inline" tagName="script" escape="false">
+		<xp:this.value><![CDATA[#{javascript:if (compositeData.expandfirstcategory == "yes"){
+	return "var unpexpandfirst = true;"
+}else{
+	return "var unpexpandfirst = false;"
+}}]]></xp:this.value>
+	</xp:text>
+
 	<xp:panel>
 		<xp:this.styleClass><![CDATA[#{javascript:var out = new Array();
 if(compositeData.insetData) {
