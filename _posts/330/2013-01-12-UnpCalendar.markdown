@@ -33,6 +33,13 @@ For an example of the Calendar in action download the samples database and open 
 
 <script src="https://gist.github.com/whitemx/906050275af37eab6f8b.js"></script>
 
+# Multi Day Events
+There are two ways to display multi day events.
+
+Option 1 is to set the start and end time of the event. So for example 01/03/2014 13:00 and 04/03/2014 13:00 would see the event start at 1pm on 1st March 2014 and finish at 1pm on 4th March.
+
+If you don't want to have the event show up with a start time, then set the times to 00:00 (ie midnight) and make the end date the day after the actual finish. So 01/03/2014 00:00 and 05/03/2014 00:00 would show a multi day event starting on 1st March and finishing on 4th March.
+
 # Required Resources
 On the assumption you are using UnpHeader in your application then the only extra resource required is fullcalendar.css.
 
