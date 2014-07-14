@@ -33,6 +33,9 @@ try{
 			var startDate = doc.getItemValue(context.getUrlParameter('startdatefield')).elementAt(0).toJavaDate();
 			var endDate = doc.getItemValue(context.getUrlParameter('enddatefield')).elementAt(0).toJavaDate();
 			if (startDate.getHours() == 0 && endDate.getHours() == 0){
+				var endDateObj = doc.getItemValue(context.getUrlParameter('enddatefield')).elementAt(0);
+				endDateObj.adjustDay(1);
+				endDate = endDateObj.toJavaDate();
 				entry += "\"start\": " + startDate.getTime() + ", ";
 				entry += "\"end\": " + endDate.getTime() + ", ";
 				entry += "\"allDay\": true, ";
