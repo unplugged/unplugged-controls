@@ -23,7 +23,7 @@
 							<xp:panel tagName="a"
 								id="link5" disableTheme="true">
 								<xp:this.rendered><![CDATA[#{javascript:!menuItem.hasSubMenu}]]></xp:this.rendered>
-								<xp:this.styleClass><![CDATA[#{javascript:if (("/" + getCurrentXPage()) == menuItem.page){
+								<xp:this.styleClass><![CDATA[#{javascript:if (("/" + getCurrentXPage()) == menuItem.page || menuItem.state == "Active"){
 		return "topopen active";
 	}}]]></xp:this.styleClass>
 								<xp:panel tagName="i" id="icon">
@@ -73,7 +73,7 @@
 	}}]]></xp:this.styleClass>
 										<xp:panel tagName="a" id="link4"
 											disableTheme="true">
-											<xp:this.styleClass><![CDATA[#{javascript:if (("/" + getCurrentXPage()) == subMenu1.page){
+											<xp:this.styleClass><![CDATA[#{javascript:if (("/" + getCurrentXPage()) == subMenu1.page || subMenu1.state == "Active"){
 		return "topopen active";
 	}}]]></xp:this.styleClass>
 											<xp:this.rendered><![CDATA[#{javascript:!subMenu1.hasSubMenu}]]></xp:this.rendered>
@@ -116,7 +116,7 @@
 													<xp:panel tagName="a"
 														id="link3"
 														disableTheme="true">
-														<xp:this.styleClass><![CDATA[#{javascript:if (("/" + getCurrentXPage()) == subMenu2.page){
+														<xp:this.styleClass><![CDATA[#{javascript:if (("/" + getCurrentXPage()) == subMenu2.page || subMenu2.state == "Active"){
 		return "topopen active";
 	}}]]></xp:this.styleClass>
 														<xp:text value="#{javascript:subMenu2.label}"></xp:text>
