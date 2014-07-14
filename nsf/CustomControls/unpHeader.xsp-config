@@ -125,5 +125,17 @@ database</editor-parameter>
         </designer-extension>
       </property-extension>
     </property>
+    <property>
+      <property-name>disablefastclick</property-name>
+      <property-class>string</property-class>
+      <property-extension>
+        <designer-extension>
+          <default-value>no</default-value>
+          <editor>com.ibm.workplace.designer.property.editors.comboParameterEditor</editor>
+          <editor-parameter>yes&#xd;
+no</editor-parameter>
+        </designer-extension>
+      </property-extension>
+    </property>
   </composite-component>
 </faces-config>

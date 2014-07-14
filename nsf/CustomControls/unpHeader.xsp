@@ -21,7 +21,6 @@
 	</style>
 	<xp:this.resources>
 		<xp:script src="/unp/jquery-2.0.3.min.js" clientSide="true"></xp:script>
-		<xp:script src="/unp/fastclick.js" clientSide="true"></xp:script>
 		<xp:script src="/unp/jquery.blockUI.min.js" clientSide="true"></xp:script>
 		<xp:script src="/unp/jquery.autocomplete.js"
 			clientSide="true">
@@ -42,9 +41,15 @@
 }}]]></xp:this.content>
 		</xp:metaData>
 		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
-				
-	</xp:this.resources>
 
+	</xp:this.resources>
+	<xp:panel id="fastclick" tagName="script"
+		rendered="#{javascript:compositeData.disablefastclick != 'yes'}">
+		<xp:this.attrs>
+			<xp:attr name="src" value="unp/fastclick.js"></xp:attr>
+			<xp:attr name="type" value="text/javascript"></xp:attr>
+		</xp:this.attrs>
+	</xp:panel>
 	<xp:text tagName="script" id="inlinescript"
 		rendered="#{javascript:!isAjax()}">
 
@@ -56,7 +61,8 @@
 }]]></xp:this.value>
 	</xp:text>
 
-	<xp:panel styleClass="iHeader black" rendered="#{javascript:!isAjax()}">
+	<xp:panel styleClass="iHeader black"
+		rendered="#{javascript:!isAjax()}">
 		<xp:image styleClass="companyLogo" url="/unp/unplugged_logo.png"
 			id="companyLogo">
 		</xp:image>

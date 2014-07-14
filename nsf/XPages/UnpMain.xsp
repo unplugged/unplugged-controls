@@ -21,7 +21,8 @@
 		<xp:styleSheet href="/unplugged.css"></xp:styleSheet>
 	</xp:this.resources>
 	<unp:unpHeader search="none" searchPage="UnpSearch.xsp"
-		viewsButton="false" title="Unplugged Controls">
+		viewsButton="false" title="Unplugged Controls"
+		disablefastclick="no">
 	</unp:unpHeader>
 	<unp:unpScrollableArea>
 		<xp:this.facets>
