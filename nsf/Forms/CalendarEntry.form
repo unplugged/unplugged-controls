@@ -2,11 +2,11 @@
 <form name='CalendarEntry' xmlns='http://www.lotus.com/dxl' version='9.0'
  maintenanceversion='1.0' replicaid='80257CD2006E18DF' publicaccess='false'
  designerversion='8.5.3' renderpassthrough='true'>
-<noteinfo noteid='51e' unid='BABD24583212338880257CE6003712F0' sequence='3'>
+<noteinfo noteid='51e' unid='BABD24583212338880257CE6003712F0' sequence='4'>
 <created><datetime dst='true'>20140528T110133,28+01</datetime></created>
-<modified><datetime dst='true'>20140529T075417,30+01</datetime></modified>
-<revised><datetime dst='true'>20140529T075417,29+01</datetime></revised>
-<lastaccessed><datetime dst='true'>20140529T075417,30+01</datetime></lastaccessed>
+<modified><datetime dst='true'>20140714T074433,76+01</datetime></modified>
+<revised><datetime dst='true'>20140714T074433,75+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20140714T074433,76+01</datetime></lastaccessed>
 <addedtofile><datetime dst='true'>20140528T110133,59+01</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
@@ -22,8 +22,8 @@
 <tablecell>
 <pardef id='4' keepwithnext='true' keeptogether='true'/>
 <par def='4'><field type='datetime' kind='editable' name='StartDate'><datetimeformat
- show='date' date='yearmonthday' fourdigityearfor21stcentury='true' zone='never'
- dateformat='weekdaydaymonthyear' dayformat='twodigitday' monthformat='twodigitmonth'
+ show='datetime' date='yearmonthday' fourdigityearfor21stcentury='true' time='hourminute'
+ zone='never' dateformat='weekdaydaymonthyear' dayformat='twodigitday' monthformat='twodigitmonth'
  yearformat='fourdigityear' weekdayformat='shortname' dateseparator1=' ' dateseparator2='/'
  dateseparator3='/' timeseparator=':' timeformat24='true' preference='usersetting'/></field></par></tablecell></tablerow>
 <tablerow>
@@ -31,8 +31,8 @@
 <par def='3'>End Date</par></tablecell>
 <tablecell>
 <par def='4'><field type='datetime' kind='editable' name='EndDate'><datetimeformat
- show='date' date='yearmonthday' fourdigityearfor21stcentury='true' zone='never'
- dateformat='weekdaydaymonthyear' dayformat='twodigitday' monthformat='twodigitmonth'
+ show='datetime' date='yearmonthday' fourdigityearfor21stcentury='true' time='hourminute'
+ zone='never' dateformat='weekdaydaymonthyear' dayformat='twodigitday' monthformat='twodigitmonth'
  yearformat='fourdigityear' weekdayformat='shortname' dateseparator1=' ' dateseparator2='/'
  dateseparator3='/' timeseparator=':' timeformat24='true' preference='usersetting'/></field></par></tablecell></tablerow>
 <tablerow>

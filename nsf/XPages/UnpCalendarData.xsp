@@ -34,7 +34,7 @@ try{
 			var endDate = doc.getItemValue(context.getUrlParameter('enddatefield')).elementAt(0).toJavaDate();
 			entry += "\"start\": " + startDate.getTime() + ", ";
 			entry += "\"end\": " + endDate.getTime() + ", ";
-			if (startDate.getHours() == endDate.getHours()){
+			if (startDate.getHours() == endDate.getHours() && startDate.getMinutes() == endDate.getMinutes()){
 				entry += "\"allDay\": true, ";
 			}
 			if (doc.getItemValueString(context.getUrlParameter("highlightfield")) == context.getUrlParameter("highlighttest")){
