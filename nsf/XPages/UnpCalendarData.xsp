@@ -32,10 +32,13 @@ try{
 			entry += "\"title\": \"" + doc.getItemValueString(context.getUrlParameter('titlefield')) + "\", ";
 			var startDate = doc.getItemValue(context.getUrlParameter('startdatefield')).elementAt(0).toJavaDate();
 			var endDate = doc.getItemValue(context.getUrlParameter('enddatefield')).elementAt(0).toJavaDate();
-			entry += "\"start\": " + startDate.getTime() + ", ";
-			entry += "\"end\": " + endDate.getTime() + ", ";
-			if (startDate.getHours() == endDate.getHours() && startDate.getMinutes() == endDate.getMinutes()){
+			if (startDate.getHours() == 0 && endDate.getHours() == 0){
+				entry += "\"start\": " + startDate.getTime() + ", ";
+				entry += "\"end\": " + endDate.getTime() + ", ";
 				entry += "\"allDay\": true, ";
+			}else{
+				entry += "\"start\": " + startDate.getTime() + ", ";
+				entry += "\"end\": " + endDate.getTime() + ", ";			
 			}
 			if (doc.getItemValueString(context.getUrlParameter("highlightfield")) == context.getUrlParameter("highlighttest")){
 				entry += "\"color\": \"#c57852\", ";
