@@ -34,7 +34,11 @@ try{
 		filters.push(start[0] + @Right("0" + (parseInt(start[1], 10)+1), 2));
 		filters.push(start[0] + @Right("0" + (parseInt(start[1], 10)+2), 2));
 	}
-	var vw = database.getView(context.getUrlParameter('viewname'));
+	var db = database;
+	if (context.getUrlParameter('dbname') != 'null' && context.getUrlParameter('dbname') != ''){
+		db = session.getDatabase("", context.getUrlParameter('dbname'));
+	}
+	var vw = db.getView(context.getUrlParameter('viewname'));
 	var out = "";
 	for (var iFilter=0; iFilter<filters.length; iFilter++){
 		var coll = vw.getAllDocumentsByKey(filter + filters[iFilter]);

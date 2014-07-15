@@ -38,6 +38,7 @@
 					<unp:unpCalendar xp:key="facet_1"
 						enddatefield="EndDate" highlightfield="HighLight" catfield="Category"
 						highlighttest="Yes" startdatefield="StartDate" titlefield="Title"
+						dbname="UnpSampler.nsf"
 						viewname="CalendarEntries" viewxpage="UnpDemoCalendarEntry.xsp"
 						headerbuttonsleft="prev,today,next" defaultviewtablet="month"
 						defaultviewphone="basicWeek" headerbuttonsrighttablet="agendaDay,agendaWeek,month"

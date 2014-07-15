@@ -22,6 +22,7 @@
 		<xp:this.attrs>
 			<xp:attr name="value">
 				<xp:this.value><![CDATA[#{javascript:'{\n' + 
+'"dbname": "' + compositeData.dbname + '",\n' + 
 '"viewname": "' + compositeData.viewname + '",\n' + 
 '"startdatefield": "' + compositeData.startdatefield + '",\n' + 
 '"enddatefield": "' + compositeData.enddatefield + '",\n' + 
