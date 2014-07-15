@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!--
+		Copyright 2013 Teamstudio Inc Licensed under the Apache License,
+		Version 2.0 (the "License"); you may not use this file except in
+		compliance with the License. You may obtain a copy of the License at
+		http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+		applicable law or agreed to in writing, software distributed under the
+		License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or implied. See the License for
+		the specific language governing permissions and limitations under the
+		License
+	-->
+
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom"
+	xmlns:unp="http://unplugged.teamstudio.com">
+
+	<unp:unpHeader search="database" viewsButton="true"
+		headerHomeLink="/UnpMain.xsp" title="Calendar">
+	</unp:unpHeader>
+	<xp:panel tagName="link" rendered="#{javascript:!isAjax()}">
+		<xp:this.attrs>
+			<xp:attr name="type" value="text/css"></xp:attr>
+			<xp:attr name="rel" value="stylesheet"></xp:attr>
+			<xp:attr name="href" value="unplugged.css">
+			</xp:attr>
+			<xp:attr name="unp-id" value="primarycss"></xp:attr>
+		</xp:this.attrs>
+	</xp:panel>
+	<unp:unpNavigatorComputed>
+		<unp:this.computedmenuitems><![CDATA[#{javascript:var filter = context.getUrlParameter('filter');
+var names = ['Claire Jones', 'Fred Bloggs', 'Jane Doe', 'John Smith', 'Richard Wright'];
+var out = [];
+for (var i=0; i<names.length; i++){
+	var obj = {};
+	obj.label = names[i];
+	obj.hasSubMenu = false;
+	obj.page = '/UnpDemoCalendarFilter.xsp?filter=' + @ReplaceSubstring(names[i], ' ', '%20') + '&';
+	if (names[i] == filter){
+		obj.state = 'Active';
+	}else{
+		obj.state = 'Inactive';
+	}
+	obj.ajaxloadid = "contentwrapper";
+	obj.ajaxtargetid = "content";
+	out.push(obj);
+}
+return out;}]]></unp:this.computedmenuitems>
+	</unp:unpNavigatorComputed>
+	<div id="content">
+		<div id="contentwrapper">
+			<unp:unpScrollableArea>
+				<xp:this.facets>
+					<unp:unpCalendar xp:key="facet_1"
+						enddatefield="EndDate" highlightfield="HighLight"
+						highlighttest="Yes" startdatefield="StartDate" titlefield="Title"
+						viewname="CalendarEntriesCat" viewxpage="UnpDemoCalendarEntry.xsp"
+						headerbuttonsleft="prev,today,next" defaultviewtablet="month"
+						defaultviewphone="basicWeek"
+						headerbuttonsrighttablet="agendaDay,agendaWeek,month"
+						headerbuttonsrightphone="">
+						<unp:this.filter><![CDATA[#{javascript:context.getUrlParameter('filter')}]]></unp:this.filter>
+					</unp:unpCalendar>
+				</xp:this.facets>
+			</unp:unpScrollableArea>
+		</div>
+	</div>
+	<unp:unpFooter synctype="alldbs"
+		newDocLoadType="ajax" postSyncTarget="/UnpMain.xsp">
+	</unp:unpFooter>
+</xp:view>

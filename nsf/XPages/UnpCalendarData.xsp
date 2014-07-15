@@ -8,6 +8,10 @@ response.setContentType("application/json; charset=\"utf-8\"");
 try{
 	var start = context.getUrlParameter("start").split("-");
 	var end = context.getUrlParameter("end").split("-");
+	var filter = context.getUrlParameter('filter');
+	if (filter == 'null'){
+		filter = '';
+	}
 	var startFilter = start[0] + start[1];
 	var filters = [];
 	filters.push(startFilter);
@@ -24,7 +28,7 @@ try{
 	var vw = database.getView(context.getUrlParameter('viewname'));
 	var out = "";
 	for (var iFilter=0; iFilter<filters.length; iFilter++){
-		var coll = vw.getAllDocumentsByKey(filters[iFilter]);
+		var coll = vw.getAllDocumentsByKey(filter + filters[iFilter]);
 		var doc:NotesDocument = coll.getFirstDocument();
 		while(doc != null){
 			var entry = "{";
@@ -33,11 +37,8 @@ try{
 			var startDate = doc.getItemValue(context.getUrlParameter('startdatefield')).elementAt(0).toJavaDate();
 			var endDate = doc.getItemValue(context.getUrlParameter('enddatefield')).elementAt(0).toJavaDate();
 			if (startDate.getHours() == 0 && endDate.getHours() == 0){
-				var endDateObj = doc.getItemValue(context.getUrlParameter('enddatefield')).elementAt(0);
-				endDateObj.adjustDay(1);
-				endDate = endDateObj.toJavaDate();
 				entry += "\"start\": " + startDate.getTime() + ", ";
-				entry += "\"end\": " + endDate.getTime() + ", ";
+				entry += "\"end\": " + (endDate.getTime() + 86400000) + ", ";
 				entry += "\"allDay\": true, ";
 			}else{
 				entry += "\"start\": " + startDate.getTime() + ", ";

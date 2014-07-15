@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='utf-8'?>
+<agent name='GenerateCalendarItemsCat' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.0' replicaid='80257CD2006E18DF' hide='v3' publicaccess='false'
+ designerversion='8.5.3'>
+<noteinfo noteid='4056' unid='B217DDE8B6CD304180257D15005895EC' sequence='13'>
+<created><datetime dst='true'>20140714T170735,48+01</datetime></created>
+<modified><datetime dst='true'>20140714T171621,47+01</datetime></modified>
+<revised><datetime dst='true'>20140714T171621,46+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20140714T171621,47+01</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20140714T170735,50+01</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
+<wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
+<designchange><datetime dst='true'>20140714T171621,46+01</datetime></designchange>
+<trigger type='actionsmenu'/>
+<documentset type='runonce'/><code event='options'><lotusscript>%REM
+	Agent GenerateCalendarItems
+	Created May 28, 2014 by Matt White/Exhilarate
+	Description: Comments for Agent
+%END REM
+Option Public
+Option Declare
+
+
+</lotusscript></code><code event='initialize'><lotusscript>Sub Initialize
+	Dim sess As New NotesSession
+	Dim db As NotesDatabase
+	Dim doc As NotesDocument
+	Dim iYear As Integer
+	Dim iMonth As Integer
+	Dim iDay As Integer
+	Dim words(92) As String
+	Dim names(6) As string
+	Randomize Timer
+	words(0)="Lorem"
+	words(1)="ipsum"
+	words(2)="dolor"
+	words(3)="sit"
+	words(4)="amet,"
+	words(5)="consectetur"
+	words(6)="adipiscing"
+	words(7)="elit."
+	words(8)="Pellentesque"
+	words(9)="eu"
+	words(10)="elit"
+	words(11)="ac"
+	words(12)="enim"
+	words(13)="varius"
+	words(14)="ultrices."
+	words(15)="Aenean"
+	words(16)="purus"
+	words(17)="ligula,"
+	words(18)="placerat"
+	words(19)="at"
+	words(20)="eros"
+	words(21)="eget,"
+	words(22)="posuere"
+	words(23)="posuere"
+	words(24)="tortor."
+	words(25)="Pellentesque"
+	words(26)="habitant"
+	words(27)="morbi"
+	words(28)="tristique"
+	words(29)="senectus"
+	words(30)="et"
+	words(31)="netus"
+	words(32)="et"
+	words(33)="malesuada"
+	words(34)="fames"
+	words(35)="ac"
+	words(36)="turpis"
+	words(37)="egestas."
+	words(38)="Mauris"
+	words(39)="ultrices"
+	words(40)="scelerisque"
+	words(41)="ligula"
+	words(42)="adipiscing"
+	words(43)="placerat."
+	words(44)="Vestibulum"
+	words(45)="ante"
+	words(46)="ipsum"
+	words(47)="primis"
+	words(48)="in"
+	words(49)="faucibus"
+	words(50)="orci"
+	words(51)="luctus"
+	words(52)="et"
+	words(53)="ultrices"
+	words(54)="posuere"
+	words(55)="cubilia"
+	words(56)="Curae;"
+	words(57)="Aliquam"
+	words(58)="erat"
+	words(59)="volutpat."
+	words(60)="Nam"
+	words(61)="mauris"
+	words(62)="enim,"
+	words(63)="ultrices"
+	words(64)="non"
+	words(65)="feugiat"
+	words(66)="sit"
+	words(67)="amet,"
+	words(68)="pharetra"
+	words(69)="a"
+	words(70)="elit."
+	words(71)="Ut"
+	words(72)="sed"
+	words(73)="libero"
+	words(74)="vitae"
+	words(75)="urna"
+	words(76)="porttitor"
+	words(77)="rutrum"
+	words(78)="ornare"
+	words(79)="non"
+	words(80)="lectus."
+	words(81)="Sed"
+	words(82)="a"
+	words(83)="arcu"
+	words(84)="sit"
+	words(85)="amet"
+	words(86)="mi"
+	words(87)="condimentum"
+	words(88)="feugiat"
+	words(89)="in"
+	words(90)="vel"
+	words(91)="nisl."
+	
+	names(1) = "John Smith"
+	names(2) = "Jane Doe"
+	names(3) = "Fred Bloggs"
+	names(4) = "Claire Jones"
+	names(5) = "Richard Wright"
+	
+	Set db = sess.Currentdatabase
+	Dim i As Integer
+	Dim iRnd As integer
+	'Create 10 all day events
+	iYear = 2014
+	For iMonth = 1 To 12
+		For i = 1 To 10
+			Set doc = db.createDocument
+			doc.Form = "CalendarEntryCat"
+			irnd = randomnumber(1, 28)
+			doc.StartDate = CDat(irnd &amp; "/" &amp; iMonth &amp; "/" &amp; iYear)
+			Dim iduration As Integer
+			iduration = RandomNumber(irnd, 28)
+			doc.EndDate = CDat(iDuration &amp; "/" &amp; iMonth &amp; "/" &amp; iYear)
+			Dim iword As Integer
+			Dim strTitle As String
+			strTitle = ""
+			For iword = 0 To randomnumber(3, 15)
+				irnd = randomnumber(1, UBound(words))
+				strtitle = strtitle + words(irnd) + " "
+			Next iword
+			doc.title = strtitle
+			doc.details = strtitle
+			irnd = randomnumber(0, UBound(names))
+			doc.owner = names(irnd)
+			Call doc.Computewithform(false, false)
+			Call doc.Save(true, true)
+		Next i
+		
+		For i = 1 To 10
+			Set doc = db.createDocument
+			doc.Form = "CalendarEntry"
+			irnd = randomnumber(1, 28)
+			Dim ihour
+			ihour = randomnumber(0, 22)
+			doc.StartDate = CDat(irnd &amp; "/" &amp; iMonth &amp; "/" &amp; iYear &amp; " " &amp; ihour &amp; ":00")
+			doc.EndDate = CDat(irnd &amp; "/" &amp; iMonth &amp; "/" &amp; iYear &amp; " " &amp; (ihour + 1) &amp; ":00")
+			strTitle = ""
+			For iword = 0 To randomnumber(3, 15)
+				irnd = randomnumber(1, UBound(words))
+				strtitle = strtitle + words(irnd) + " "
+			Next iword
+			doc.title = strtitle
+			doc.details = strtitle
+			Call doc.Computewithform(False, False)
+			Call doc.Save(True, True)
+		Next
+	Next iMonth
+	
+	
+End Sub
+
+
+</lotusscript></code><code event='RandomNumber'><lotusscript>Public Function RandomNumber(ByVal MaxValue As Long, ByVal MinValue As Long)
+
+  On Error Resume Next
+
+  RandomNumber = Int((MaxValue - MinValue + 1) * Rnd) + MinValue
+
+End Function</lotusscript></code>
+<rundata processeddocs='0' exitcode='0' agentdata='CE928D146963A8D380257D15005965FB'>
+<agentmodified><datetime dst='true'>20140714T171621,47+01</datetime></agentmodified>
+<agentrun><datetime dst='true'>20140714T171628,39+01</datetime></agentrun>
+<runlog>Started running agent 'GenerateCalendarItemsCat' on 14/07/2014 17:16:28
+Ran LotusScript code
+Done running agent 'GenerateCalendarItemsCat' on 14/07/2014 17:16:28
+</runlog></rundata></agent>
+

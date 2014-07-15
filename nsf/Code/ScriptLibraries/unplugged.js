@@ -1131,12 +1131,14 @@ unp.decreaseFontSize = function(button) {
 
 unp.initCalendar = function() {
 	try {
+		var calendaroptions = jQuery.parseJSON($('.calendarconfig').val());
 		var buttons = calendaroptions.headerbuttonsrighttablet;
 		var defaultView = calendaroptions.defaultviewtablet;
 		if ($(window).width() < 400){
 			buttons = calendaroptions.headerbuttonsrightphone;
 			defaultView = calendaroptions.defaultviewphone;
 		}
+		
 		var url = 'UnpCalendarData.xsp?viewname=' + calendaroptions.viewname;
 		url += '&startdatefield=' + calendaroptions.startdatefield;
 		url += '&enddatefield=' + calendaroptions.enddatefield;
@@ -1144,6 +1146,7 @@ unp.initCalendar = function() {
 		url += '&viewxpage=' + calendaroptions.viewxpage;
 		url += '&highlightfield=' + calendaroptions.highlightfield;
 		url += '&highlighttest=' + calendaroptions.highlighttest;
+		url += '&filter=' + calendaroptions.filter;
 		$('#calendar').fullCalendar( {
 			header : {
 				left : calendaroptions.headerbuttonsleft,
@@ -1178,6 +1181,6 @@ unp.initCalendar = function() {
 		$('.fc-icon-right-single-arrow').parent().addClass('fa fa-arrow-right');
 		$('.fc-icon-right-single-arrow').remove();
 	} catch (e) {
-
+		
 	}
 }

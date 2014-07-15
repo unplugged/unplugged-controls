@@ -28,8 +28,10 @@
 		<div id="contentwrapper">
 			<unp:unpScrollableArea>
 				<xp:this.facets>
-					<unp:unpAccordion xp:key="facet_1" viewName="EmployessCatByDept"
-						insetData="true" expandfirstcategory="yes" photoColumn="Photo">
+					<unp:unpAccordion xp:key="facet_1"
+						viewName="EmployessCatByDept" insetData="true"
+						expandfirstcategory="yes" photoColumn="Photo" summaryColumn="2"
+						dataColumn="3">
 					</unp:unpAccordion>
 				</xp:this.facets>
 			</unp:unpScrollableArea>
