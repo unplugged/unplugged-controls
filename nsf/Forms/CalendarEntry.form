@@ -2,11 +2,11 @@
 <form name='CalendarEntry' xmlns='http://www.lotus.com/dxl' version='9.0'
  maintenanceversion='1.0' replicaid='80257CD2006E18DF' publicaccess='false'
  designerversion='8.5.3' renderpassthrough='true'>
-<noteinfo noteid='51e' unid='BABD24583212338880257CE6003712F0' sequence='4'>
+<noteinfo noteid='51e' unid='BABD24583212338880257CE6003712F0' sequence='6'>
 <created><datetime dst='true'>20140528T110133,28+01</datetime></created>
-<modified><datetime dst='true'>20140714T074433,76+01</datetime></modified>
-<revised><datetime dst='true'>20140714T074433,75+01</datetime></revised>
-<lastaccessed><datetime dst='true'>20140714T074433,76+01</datetime></lastaccessed>
+<modified><datetime dst='true'>20140715T104506,40+01</datetime></modified>
+<revised><datetime dst='true'>20140715T104506,39+01</datetime></revised>
+<lastaccessed><datetime dst='true'>20140715T104506,40+01</datetime></lastaccessed>
 <addedtofile><datetime dst='true'>20140528T110133,59+01</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Matt White/O=Exhilarate</name></updatedby>
 <wassignedby><name>CN=Matt White/O=Exhilarate</name></wassignedby>
@@ -60,7 +60,16 @@ Yg4BAIQAAAAAAAAAAAA=
 <par def='4'><field borderstyle='none' lookupeachchar='false' lookupaddressonrefresh='false'
  type='keyword' allowmultivalues='true' kind='editable' name='highlight' listinputseparators='comma'
  listdisplayseparator='comma'><keywords helperbutton='false' columns='1' ui='checkbox'><textlist
-><text>Yes</text></textlist></keywords></field></par></tablecell></tablerow></table>
-<par def='1'/></richtext></body>
+><text>Yes</text></textlist></keywords></field></par></tablecell></tablerow>
+<tablerow>
+<tablecell>
+<par def='3'>Category</par></tablecell>
+<tablecell>
+<par def='4'><field type='text' kind='editable' name='Category'/><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par></tablecell></tablerow></table>
+<par def='1'>							</par></richtext></body>
 <item name='$$ScriptName' summary='false' sign='true'><text>CalendarEntry</text></item></form>
 

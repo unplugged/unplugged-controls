@@ -1147,6 +1147,7 @@ unp.initCalendar = function() {
 		url += '&highlightfield=' + calendaroptions.highlightfield;
 		url += '&highlighttest=' + calendaroptions.highlighttest;
 		url += '&filter=' + calendaroptions.filter;
+		url += '&catfield=' + calendaroptions.catfield;
 		$('#calendar').fullCalendar( {
 			header : {
 				left : calendaroptions.headerbuttonsleft,

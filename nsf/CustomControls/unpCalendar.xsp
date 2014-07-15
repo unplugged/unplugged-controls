@@ -34,7 +34,8 @@
 '"headerbuttonsleft": "' + compositeData.headerbuttonsleft + '",\n' + 
 '"headerbuttonsrighttablet": "' + compositeData.headerbuttonsrighttablet + '",\n' + 
 '"headerbuttonsrightphone": "' + compositeData.headerbuttonsrightphone + '", \n' +
-'"filter": "' + compositeData.filter + '"\n' + 
+'"filter": "' + compositeData.filter + '", \n' +
+'"catfield": "' + compositeData.catfield + '"\n' +  
 '}'}]]></xp:this.value>
 			</xp:attr>
 		</xp:this.attrs>
