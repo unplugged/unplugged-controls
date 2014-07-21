@@ -89,7 +89,7 @@ which is fine if using the default "on" and "off" values. But if you want to use
     </div>
 
 </li>
-```xml
+```
 
 # Required Resources
 On the assumption you are using UnpHeader in your application then no extra resources are required.
