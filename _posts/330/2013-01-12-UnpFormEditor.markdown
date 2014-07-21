@@ -54,6 +54,43 @@ The XPage simply returns a list of options:
 
 <script src="https://gist.github.com/whitemx/7527927.js"></script>
 
+
+#Checkbox and Switch fields
+The "FormsEditMode" XPage in the Sampler app gives the following as an example of a mobile switch control :-
+
+```xml
+<li>
+    <xp:label value="Mobile Enabled" for="mobileenabled"></xp:label>
+    <div class="switch">
+        <xp:checkBox text="" id="mobileenabled"
+            checkedValue="on" uncheckedValue="off"
+            value="#{document2.mobileenabled}" required="false">
+        </xp:checkBox>
+    </div>
+
+</li>
+```
+which is fine if using the default "on" and "off" values. But if you want to use alternate values (e.g. "1" and "0") then the checkedValue and uncheckedValue need to be specified as attributes so the code at the top of unp.SaveDocument can pick them up. E,g,
+```xml
+<li>
+    <xp:label value="Mobile Enabled" for="mobileenabled"></xp:label>
+    <div class="switch">
+        <xp:checkBox text="" id="mobileenabled"
+            value="#{document2.mobileenabled}" required="false">
+            <xp:this.attrs>
+                <xp:attr name="checkedValue"
+                    value="1">
+                </xp:attr>
+                <xp:attr name="uncheckedValue"
+                    value="0">
+                </xp:attr>
+            </xp:this.attrs>            
+        </xp:checkBox>
+    </div>
+
+</li>
+```xml
+
 # Required Resources
 On the assumption you are using UnpHeader in your application then no extra resources are required.
 
