@@ -17,10 +17,10 @@ var unp = {
 $(window).bind(
 		"popstate",
 		function() {
-			//if (!unp._firstLoad) { //Commented out to fix #480
+			if (!unp._firstLoad || document.referrer.toLowerCase().indexOf("$file") > -1) {
 				unp.loadPage(location.href + " #contentwrapper", 'content',
 						null, false, false);
-			//}
+			}
 		});
 
 unp.storePageRequest = function(url) {
