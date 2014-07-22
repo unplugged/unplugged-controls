@@ -582,6 +582,7 @@ unp.jumpToLetter = function(letterelement, event) {
 			});
 }
 
+var unpdialogoptions = {};
 unp.openDialog = function(id) {
 	if (id != null && id != "#") {
 		$("#underlay" + id).css('display', 'block');

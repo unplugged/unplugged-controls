@@ -39,7 +39,7 @@
 						<xp:attr name="onclick">
 							<xp:this.value><![CDATA[#{javascript:var out = "";
 if (compositeData.callback){
-	out += compositeData.callback + "(); "
+	out += compositeData.callback + "(unpdialogoptions); "
 }
 out += "unp.closeDialog('dialogPopup');";
 return out;}]]></xp:this.value>
