@@ -26,11 +26,14 @@
 		backButtonURL="UnpMain.xsp" title="Employees">
 	</unp:unpHeader>
 	<p style="padding: 40px;">
-		<input type="button" href='#' onclick="unp.openDialog('dialogPopup')"
-			class="button" value="Open Dialog">
+		<input type="button" href='#' onclick="unp.openDialog('dialog1')"
+			class="button" value="Open Dialog 1">
+		</input>
+		<input type="button" href='#' onclick="unp.openDialog('dialog2')"
+			class="button" value="Open Dialog 2">
 		</input>
 	</p>
-	<unp:unpDialog callback="myCallBackFunction" title="Demo Dialog">
+	<unp:unpDialog callback="myCallBackFunction" title="Demo Dialog" dialogid='dialog1'>
 		<xp:this.facets>
 			<xp:panel xp:key="facet_1">
 				Lorem ipsum dolor sit amet, consectetur
@@ -170,6 +173,10 @@
 					</xp:panel>
 		</xp:this.facets>
 	</unp:unpDialog>
+	
+	<unp:unpDialog dialogid="dialog2" title="Second Dialog"><xp:this.facets>
+	<xp:panel xp:key="facet_1">This is a second dialog box</xp:panel></xp:this.facets></unp:unpDialog>
+
 	<unp:unpFooter synctype="currentdb"></unp:unpFooter>
 
 	<script>

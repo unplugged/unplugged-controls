@@ -17,7 +17,11 @@
 		<xp:script src="/unplugged.js" clientSide="true"></xp:script>
 		<xp:script src="/unpCommon.jss" clientSide="false"></xp:script>
 	</xp:this.resources>
-	<div id="dialogPopup" class="dialog" style=" display:none;">
+	<xp:panel styleClass="#{javascript:'dialog ' + compositeData.dialogid}"
+		style=" display:none;">
+		<xp:this.attrs>
+			<xp:attr name="id" value="dialogPopup"></xp:attr>
+		</xp:this.attrs>
 		<xp:panel tagName="h2" id="title">
 			<xp:text value="#{javascript:compositeData.title}"></xp:text>
 		</xp:panel>
@@ -26,10 +30,15 @@
 		</div>
 		<div class="dialogbuttons">
 			<div>
-				<div class="button cancelbutton" onclick="unp.closeDialog('dialogPopup')">
+				<xp:panel styleClass="button cancelbutton">
+					<xp:this.attrs>
+						<xp:attr name="onclick">
+							<xp:this.value><![CDATA[#{javascript:"unp.closeDialog('" + compositeData.dialogid + "')"}]]></xp:this.value>
+						</xp:attr>
+					</xp:this.attrs>
 					<span class="icon"></span>
 					<span class="label">Cancel</span>
-				</div>
+				</xp:panel>
 			</div>
 			<div>
 				<xp:panel tagName="div" styleClass="button savebutton">
@@ -41,13 +50,13 @@
 if (compositeData.callback){
 	out += compositeData.callback + "(unpdialogoptions); "
 }
-out += "unp.closeDialog('dialogPopup');";
+out += "unp.closeDialog('" + compositeData.dialogid + "');";
 return out;}]]></xp:this.value>
 						</xp:attr>
 					</xp:this.attrs>
 				</xp:panel>
 			</div>
 		</div>
-	</div>
+	</xp:panel>
 	<div id="underlaydialogPopup" class="underlay"></div>
 </xp:view>

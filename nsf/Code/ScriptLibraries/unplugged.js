@@ -586,7 +586,7 @@ var unpdialogoptions = {};
 unp.openDialog = function(id) {
 	if (id != null && id != "#") {
 		$("#underlay" + id).css('display', 'block');
-		$("#" + id).css('display', 'block');
+		$("." + id).css('display', 'block');
 		$(".iscrollcontent").addClass("dialogactive");
 		var boxes = $("div");
 		boxes.click( function() {
@@ -604,7 +604,7 @@ unp.openDialog = function(id) {
 }
 
 unp.closeDialog = function(id) {
-	$("#" + id).css('display', 'none');
+	$("." + id).css('display', 'none');
 	$(".iscrollcontent").removeClass("dialogactive");
 	$("#underlay" + id).css('display', 'none');
 	unp.initiscroll();
