@@ -280,7 +280,7 @@ try{
                         </div>
                 </div>
         </div>
-        <div id="hviewPopup" class="dialog" style=" display:none;">
+        <div id="hviewPopup" class="dialog hviewPopup" style=" display:none;">
                 <div id="hviewitemcontent">
 
                 </div>
