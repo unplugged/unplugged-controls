@@ -1251,7 +1251,12 @@ li.data-row .multiLineIcon {
 }
 #formholder input[type=date] {
   -webkit-appearance: none;
+  padding-top: 9px;
 }
+#formholder div[pseudo=-webkit-date-and-time-value] {
+  padding-top: 7px;
+}
+
 #formholder textarea {
   overflow: visible;
   display: block;
