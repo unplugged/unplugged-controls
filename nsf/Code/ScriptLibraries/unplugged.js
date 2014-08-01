@@ -585,7 +585,7 @@ unp.jumpToLetter = function(letterelement, event) {
 var unpdialogoptions = {};
 unp.openDialog = function(id) {
 	if (id != null && id != "#") {
-		$("#underlay" + id).css('display', 'block');
+		$(".underlay" + id).css('display', 'block');
 		$("." + id).css('display', 'block');
 		$(".iscrollcontent").addClass("dialogactive");
 		var boxes = $("div");
@@ -606,7 +606,7 @@ unp.openDialog = function(id) {
 unp.closeDialog = function(id) {
 	$("." + id).css('display', 'none');
 	$(".iscrollcontent").removeClass("dialogactive");
-	$("#underlay" + id).css('display', 'none');
+	$(".underlay" + id).css('display', 'none');
 	unp.initiscroll();
 	unp.initHorizontalView();
 }

@@ -58,5 +58,8 @@ return out;}]]></xp:this.value>
 			</div>
 		</div>
 	</xp:panel>
+	<xp:panel id="underlaydialogpopup">
+		<xp:this.styleClass><![CDATA[#{javascript:"underlay underlay" + compositeData.dialogid}]]></xp:this.styleClass>
+	</xp:panel>
 	<div id="underlaydialogPopup" class="underlay"></div>
 </xp:view>
