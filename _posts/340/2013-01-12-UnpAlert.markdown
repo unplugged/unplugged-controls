@@ -1,0 +1,29 @@
+---
+layout: 330-post
+title:  "UnpAlert"
+date:   2013-12-01 17:00
+categories: "330"
+---
+
+# Function
+The Alert control allows you to add a simple alert Dialog box to a page. It will display "over" the rest of the content of the page and will show 1 button: Continue.
+
+![Accordion iPad](http://teamstudio.s3.amazonaws.com/images/tablet-alert.png)
+![Accordion iPhone](http://teamstudio.s3.amazonaws.com/images/phone-alert.png)
+
+If the user clicks the Continue button the dialog will be hidden.
+
+The content of the dialog box is populated by adding the text or fields into the editable area on the XPage that you create. 
+
+If the content of the dialog box is too tall for the page then make sure to use the unpScrollableArea control inside the editable area.
+
+For an example of the Dialog in action download the samples database and open the XPage called UnpDemoDialog
+
+# Usage
+
+<script src="https://gist.github.com/whitemx/df06a4de0e3d2d37b803.js"></script>
+
+# Required Resources
+On the assumption you are using UnpHeader in your application then no extra resources are required.
+
+If you are not using UnpHeader, then make sure you add all of the resources included in UnpHeader to your UnpMain XPage.
