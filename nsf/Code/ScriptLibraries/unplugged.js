@@ -58,6 +58,9 @@ $(window)
 
 					$(document).ajaxStart($.blockUI).ajaxStop($.unblockUI);
 					unp.allowFormsInIscroll();
+					if (unp.isStockAndroid()){ 
+						$("#menuitems").css("position", "relative");
+					}
 
 					unp.initiscroll();
 					$("#menuPane").removeClass("onScreen")
@@ -115,9 +118,9 @@ $(window)
 						unp.initRichText();
 						unp.initReaderButtons();
 						unp.initCalendar();
-						$('.underlay').bind('touchmove', function(e){e.preventDefault()});
+						$('#underlaydialogPopup').bind('touchmove', function(e){e.preventDefault()});
 					});
-					$('.underlay').bind('touchmove', function(e){e.preventDefault()});
+					$('#underlaydialogPopup').bind('touchmove', function(e){e.preventDefault()});
 				});
 
 unp.initReaderButtons = function() {
@@ -159,6 +162,10 @@ unp.initHideFooter = function() {
 
 unp.isAndroid = function() {
 	return /android/i.test(navigator.userAgent.toLowerCase());
+}
+
+unp.isStockAndroid = function() {
+	return unp.isAndroid() && navigator.userAgent.toLowerCase().indexOf("chrome") == -1;
 }
 
 unp.initRichText = function() {
@@ -392,7 +399,7 @@ unp.toggleViewsMenu = function(forcehide) {
 		$("#menuPane").animate( {
 			"left" : "+=700px"
 		}, "fast", function() {
-			if (unp.isAndroid()) {
+			if (unp.isAndroid() && !unp.isStockAndroid()) {
 				$("#menuitems").css("position", "fixed");
 			}
 		});
@@ -585,7 +592,7 @@ unp.jumpToLetter = function(letterelement, event) {
 var unpdialogoptions = {};
 unp.openDialog = function(id) {
 	if (id != null && id != "#") {
-		$(".underlay" + id).css('display', 'block');
+		$("#underlay" + id).css('display', 'block');
 		$("." + id).css('display', 'block');
 		$(".iscrollcontent").addClass("dialogactive");
 		var boxes = $("div");
@@ -606,7 +613,7 @@ unp.openDialog = function(id) {
 unp.closeDialog = function(id) {
 	$("." + id).css('display', 'none');
 	$(".iscrollcontent").removeClass("dialogactive");
-	$(".underlay" + id).css('display', 'none');
+	$("#underlay" + id).css('display', 'none');
 	unp.initiscroll();
 	unp.initHorizontalView();
 }
