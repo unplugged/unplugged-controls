@@ -165,8 +165,8 @@ unp.isAndroid = function() {
 }
 
 unp.isStockAndroid = function() {
-	return unp.isAndroid() && navigator.userAgent.toLowerCase().indexOf("chrome") == -1;
-}
+	var nav = navigator.userAgent.toLowerCase();
+	return unp.isAndroid() && (nav.indexOf("android 4.1") > -1 || nav.indexOf("android 4.2") > -1);}
 
 unp.initRichText = function() {
 	// Placeholder for future improvements
