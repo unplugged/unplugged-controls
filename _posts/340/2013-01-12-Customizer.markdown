@@ -1,8 +1,8 @@
 ---
-layout: 330-post
+layout: 340-post
 title:  "Customizer"
 date:   2013-12-01 17:00
-categories: "330"
+categories: "340"
 ---
 
 # Customize Design using the [Re-styler](http://restyler.teamstudio.com/)

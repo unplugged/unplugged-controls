@@ -1,8 +1,8 @@
 ---
-layout: 330-post
+layout: 340-post
 title:  "Upgrading Your Application"
 date:   2013-12-01 17:00
-categories: "330"
+categories: "340"
 ---
 
 When we release a new version of the Unplugged Controls Library, there's a quite likely chance that you will need to modify your application to use them.

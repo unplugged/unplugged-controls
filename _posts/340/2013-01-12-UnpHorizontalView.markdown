@@ -1,8 +1,8 @@
 ---
-layout: 330-post
+layout: 340-post
 title:  "UnpHorizontalView"
 date:   2013-12-01 17:00
-categories: "330"
+categories: "340"
 ---
 
 This mimics the iTunes Store style of horizontal data display. We created the control to display an icon with a title which can then be clicked to load a dialog which shows more information about the document.

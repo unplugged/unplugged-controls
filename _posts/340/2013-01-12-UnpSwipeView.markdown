@@ -1,8 +1,8 @@
 ---
-layout: 330-post
+layout: 340-post
 title:  "UnpSwipeView"
 date:   2013-12-01 17:00
-categories: "330"
+categories: "340"
 ---
 
 A control to display an seamless image carousel. Internally this control uses the SwipeView JS lib from [cubiq.org](http://cubiq.org/swipeview) (Matteo Spinelli).

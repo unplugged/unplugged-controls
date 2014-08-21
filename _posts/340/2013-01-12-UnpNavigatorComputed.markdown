@@ -1,8 +1,8 @@
 ---
-layout: 330-post
+layout: 340-post
 title:  "UnpNavigatorComputed"
 date:   2013-12-01 17:00
-categories: "330"
+categories: "340"
 ---
 
 This control provides the menu system for your application and works best when used with the related controls [[UnpHeader]] [[UnpFooter]] and [[UnpFlatView]]. It allows you to build a menu dynamically from configuration data or at development time by building a JSON object.

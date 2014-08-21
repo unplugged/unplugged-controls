@@ -1,8 +1,8 @@
 ---
-layout: 330-post
+layout: 340-post
 title:  "UnpTypographyRead"
 date:   2013-12-01 17:00
-categories: "330"
+categories: "340"
 ---
 
 This is a very simple control which is designed to make it easy to read large blocks of static text, if you're publishing a manual, for example, this might be useful.

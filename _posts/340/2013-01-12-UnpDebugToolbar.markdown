@@ -1,8 +1,8 @@
 ---
-layout: 330-post
+layout: 340-post
 title:  "UnpDebugToolbar"
 date:   2013-12-01 17:00
-categories: "330"
+categories: "340"
 ---
 
 (Created By Mark Leusink of [XPages Debug Toolbar](http://www.openntf.org/internal/home.nsf/project.xsp?action=openDocument&name=XPage%20Debug%20Toolbar) fame)

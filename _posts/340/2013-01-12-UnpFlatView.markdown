@@ -1,8 +1,8 @@
 ---
-layout: 330-post
+layout: 340-post
 title:  "UnpFlatView"
 date:   2013-12-01 17:00
-categories: "330"
+categories: "340"
 ---
 
 If you want to display a flat (or non categorized) view then this is the control you will need to use. 
